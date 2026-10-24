@@ -32,9 +32,13 @@
 - [HANDOFF.md](HANDOFF.md) — 전체 총괄 인수인계(10항)
 - [data/checkpoints.json](data/checkpoints.json) — 간단한 기계 판독용 상태 데이터
 
+## 대회별 공식 보고 진입점
+- **KIC:** [`lead/kic/docs/roles/lead/TO_HACKATHON_LEAD.md`](https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/roles/lead/TO_HACKATHON_LEAD.md) — 2026-10-24 KST 직접 확인. KIC 총괄 HEAD `f7f5a25d072d` CI 성공.
+- PayPal/UGREEN: 참가 및 전담 저장소 구성 전. 향후 담당 총괄의 보고 경로를 확인하면 등록.
+
 ## 한 번의 점검 순서
 
-각 대회 총괄의 최신 **원격** `HANDOFF.md` → `STATUS.md` → 보고서/메시지 → 브랜치 SHA/CI → 실제 소스·제출 증거 순으로 확인합니다. 전체 총괄은 대회 간 일정·위험·품질만 조정합니다. 대회별 코드나 브랜치를 대신 수정하지 않습니다.
+KIC는 전용 `TO_HACKATHON_LEAD.md` → 담당 총괄 `HANDOFF.md`/`STATUS.md` → 브랜치 SHA/CI → 실제 소스·제출 증거 순으로 확인합니다. 전체 총괄은 대회 간 일정·위험·품질만 조정합니다. 대회별 코드나 브랜치를 대신 수정하지 않습니다.
 
 ### 출처
 - KIC: https://daker.ai/public/hackathons/kic-ai-agent-competition
