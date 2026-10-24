@@ -7,8 +7,8 @@
     "default_branch": "main",
     "kind": "coordination_docs",
     "auto_update": false,
-    "verified_as_of": "2026-10-24 KST",
-    "last_update_reason": "Verified all three single-worker task dispatchers and updated seven-chat current handoff; preserved old 13-role prompts as historical",
+    "verified_as_of": "2026-10-24 KST (new lead handoff remote check)",
+    "last_update_reason": "Confirmed lead and feature heads; corrected PayPal three AGENTS-only heads and approved UGREEN ProjectReady NAS topic; maintained 7-chat READY dispatch state",
     "first_read": "START_HERE.md",
     "update_protocol": "docs/CONTINUITY_PROTOCOL.md",
     "audit_report": "docs/audits/REPOSITORY_AUDIT_20261024.md",
@@ -17,7 +17,8 @@
     "transition_role_count": 7,
     "chat_count": 7,
     "logical_role_count": 13,
-    "audit_single_worker": "docs/audits/SINGLE_WORKER_DISPATCH_AUDIT_20261024.md"
+    "audit_single_worker": "docs/audits/SINGLE_WORKER_DISPATCH_AUDIT_20261024.md",
+    "observed_center_head_before_update": "797341dab1a6f5931dd3dcb366763e0dd42a3d20"
   },
   "projects": [
     {
@@ -103,9 +104,9 @@
       "lead_head_sha": "b8d12259307e7ca3f893680c4f8d2877f8020ee9",
       "lead_branch": "lead/paypal",
       "feature_head_shas": {
-        "feature/quote-payment": "ba4403d90b2903feef1c604bd0688dd5091fe472",
-        "feature/delivery": "52256c5d1f8d089a4a72a86ec530b51e8698adc1",
-        "feature/subscriptions": "1455640d787737d9281b6977c519812d32043642"
+        "feature/quote-payment": "e5b70e0376628dc9e6237d69234f56648c849ca8",
+        "feature/delivery": "77dc5327b69432d3f64a320dea8a1ae0c2f427ce",
+        "feature/subscriptions": "9d77f9029d9dfb571f14f5d10289f97015ba6f4f"
       },
       "lead_report_path": "docs/roles/lead/TO_HACKATHON_LEAD.md",
       "structure": "main + lead + 3 feature branches, each role docs verified",
@@ -127,12 +128,13 @@
       "active_feature_branch": "feature/quote-payment",
       "single_worker_chat": true,
       "worker_chat_start_path": "docs/dispatch/WORKER_CHAT_PROMPT.md",
-      "worker_report_confirmed": false
+      "worker_report_confirmed": false,
+      "feature_recent_change_type": "AGENTS.md routing documentation only; PPL-001 not started"
     },
     {
       "id": "ugreen",
-      "title": "NAS Project File Management AI Skill",
-      "topic_confirmed": false,
+      "title": "ProjectReady NAS",
+      "topic_confirmed": true,
       "registration": "registered_devpost_success_banner_and_project_dashboard_screenshot",
       "repo": "hibi89/hibi89-ugreen-nas-hackathon",
       "repo_exists": true,
@@ -183,7 +185,8 @@
       "single_worker_chat": true,
       "worker_chat_start_path": "docs/WORKER_START_HERE.md",
       "worker_report_confirmed": false,
-      "integration_contingency_check": "2026-11-14"
+      "integration_contingency_check": "2026-11-14 (legacy review point, not submission target)",
+      "topic_status": "Product direction approved; Uliya SDK/CLI capability and supported checks unverified"
     }
   ]
 }

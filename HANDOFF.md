@@ -102,3 +102,15 @@
 - 실제 분산 락·AI 채팅 자동 전환/실행/통지 기능은 없음. 문서 기반 프로토콜이며 사용자 호출과 원격 검수 필요.
 
 - 구형 `13개 역할별 프롬프트`는 수동 역할 분리 시기의 기록. **새로운 범용 작업자 채팅에는 7개 프롬프트의 KIC/PayPal/UGREEN 순환 작업자 항목만 사용**할 것.
+
+## 인수인계 최신화 — 2026-10-24 KST (통합 상황실 문서 갱신)
+1. **목표·확정 요구:** KIC·PayPal·UGREEN 유효 제출/공식 성과, 한 참가자, 7개 실제 채팅 역할(13개 논리 역할), 각 대회 기능 1개만 활성.
+2. **검증 성과/변경:** 세 lead의 최신 GitHub HEAD/첫 READY 지시와 feature 보고 검수; UGREEN 제품 방향 ProjectReady NAS 사용자 승인 반영; PayPal 세 feature의 운영 AGENTS SHA 갱신. 제품 기능 개발은 0/3 대회.
+3. **테스트:** 연결 GitHub 원격 읽기 및 Markdown/JSON 정합성 확인; 신규 애플리케이션 테스트 0회. 기존 KIC 합성 9 PASS 보고만 유지(본 세션 재실행 안 함). Sandbox/NAS/브라우저 테스트 미실시.
+4. **진행·차단:** KIC-R-001, PPL-001, UGR-001 모두 READY이나 작업자 시작/완료 보고 없음. KIC 제출팀 전환·PayPal Sandbox 접근·UGREEN Kit 내부 확인 대기.
+5. **오류/차이:** 이전 checkpoint PayPal 세 feature HEAD는 AGENTS 운영 수정 이전의 값. 기존 통합 UGREEN 주제 '잠정'은 승인된 최신 대회 총괄 계획과 상충해 정정; 과거 이력은 유지.
+6. **저장소·브랜치:** 상황실 `hibi89/hackathon-command-center-2026@main` 갱신 전 `797341dab1a6f5931dd3dcb366763e0dd42a3d20`; KIC `lead/kic b845170c2b81d438afcf8b2e7179e19af90cd41c`; PayPal `lead/paypal b8d12259307e7ca3f893680c4f8d2877f8020ee9`; UGREEN `lead/ugreen 3f193407b03691e371da3914f7e6710286c22961`. 재개 시 SHA 다시 확인.
+7. **배포:** 전체 상황실은 운영 Markdown/JSON 전용, Production 미적용. 세 작품 실운영 Production 검증 없음.
+8. **원본/보안:** 기능 코드·원본 PDF·계정 자격증명·보안 설정·공개 범위 수정 없음. 프로젝트는 Public, 비밀·PII 게시 금지, 신규 현금 지출 0원.
+9. **다음 작업:** 사용자 각 범용 작업자 채팅에서 현재 단 하나의 READY를 실행 → 해당 대회 총괄이 결과/테스트/HEAD를 검수 → 새 활성 지시 발행. 제출 전 공식 플랫폼의 최종 영수증 별도 확인.
+10. **기록 시점/기준:** 2026-10-24 KST, GitHub 원격 조회 기반. 이 단락 SHA는 **상황실 본 커밋 이전** 값. 새 기준 커밋은 반영 후 실시간 HEAD 재조회 결과를 참조.

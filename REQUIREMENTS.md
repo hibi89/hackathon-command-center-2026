@@ -9,7 +9,7 @@
 ## 대회별 제품과 기능
 - **KIC 확정: ProofInvest** = 산업·기업 리서치 / 공시·재무 교차검증 / 설명 가능한 재무 위험 탐지. 기존 전담 GitHub `hibi89/hibi89-kic-proofinvest` 유지.
 - **PayPal 잠정: AI 프리랜서 계약·결제 에이전트** = AI 견적·PayPal 결제 / 납품·단계 관리 / 구독 청구 예외 처리. API Sandbox 기능성과 심사 적합성 확인 전 주제 확정 금지.
-- **UGREEN 잠정: NAS 파일 관리 AI Skill** = 필수 파일 누락 / 중복·버전 충돌 / 개인정보 노출 위험. 공식 Uliya Skill 개발 표준 및 허용 CLI·권한 확인 전 주제 확정 금지.
+- **UGREEN 확정 제품 방향: ProjectReady NAS** = 납품 요구사항과 허가받은 NAS 파일 증거를 대조해 Ready / Blocked / Needs Review를 근거와 함께 제시하는 단일 Uliya Skill. missing-files / version-conflicts / privacy는 단일 Skill의 역할 분담이며, 실제 Uliya CLI·권한·PII 지원은 미검증이므로 지원 불가 기능을 약속하지 않는다. 공식 Kit 분석과 기술 계약 확정은 별도 게이트.
 
 ## 전체 총괄 최소 지표(대회별)
 - 참가 등록/팀 전환, 주제 확정, 필수 제출물(체크리스트), 실제 작동 기능(0~3), 테스트 성공·실패, 미검증 API/배포/보안, 저장소 URL·브랜치·SHA·CI, 공식 제출, 본선/수상 증빙.

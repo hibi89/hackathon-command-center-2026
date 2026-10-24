@@ -21,7 +21,7 @@
 |---|---|---|---|---|---|
 | [KIC](projects/KIC.md) | 자이언츠파크 팀 생성 화면 확인; **'팀으로 전환' 미검증** | **ProofInvest 확정** | [KIC GitHub](https://github.com/hibi89/hibi89-kic-proofinvest), Python 합성 테스트 9 PASS·CI 성공 | **PDF 예선 미제출** | **상위 12팀** (최종 6팀 수상) |
 | [PayPal](projects/PAYPAL.md) | Devpost 참가자 `My hackathon projects` 화면 확인 | AI 프리랜서 계약·결제 **잠정** | 저장소/5개 브랜치/역할 문서 완료, API/코드 미착수 | 작품 미생성·**미제출** | **정원 지정 없음**, Stage One pass/fail 뒤 Stage Two 본심사 |
-| [UGREEN](projects/UGREEN.md) | Devpost `Thanks for registering!` 성공 화면 확인 | NAS 프로젝트 파일 관리 Skill **잠정** | 저장소/5개 브랜치/역할 문서 완료, Skill SDK 실검증 전 | Round 1 PDF/ZIP **미제출** | **최대 30팀**, 최종 5개 상 |
+| [UGREEN](projects/UGREEN.md) | Devpost `Thanks for registering!` 성공 화면 확인 | **ProjectReady NAS 확정(사용자 승인)**, SDK 지원 범위 미확인 | 저장소/5개 브랜치/역할 문서 완료, Skill SDK 실검증 전 | Round 1 PDF/ZIP **미제출** | **최대 30팀**, 최종 5개 상 |
 
 **목표 우선순위**: ①유효 제출 ②KIC/UGREEN 본선 또는 공식 입증 성과 ③실제 작동 완성품 ④공개 포트폴리오 ⑤판매 가능 상품화 ⑥수상/상금. **PayPal의 Stage Two를 공식 본선 진출 경력이라고 부르지 않는다.** 참가 등록은 최종 제출/수상과 구분한다.
 
@@ -120,3 +120,12 @@
 - 실제 첫 READY 업무: [KIC KIC-R-001](https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/roles/lead/NEXT_TASK.md) (`feature/research`), [PayPal PPL-001](https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/dispatch/ACTIVE_TASK.md) (`feature/quote-payment`), [UGREEN UGR-001](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/dispatcher/CURRENT_TASK.md) (`feature/missing-files`). **READY지만 각 기능 브랜치 착수 보고 없음**. 총괄이 검수하기 전 다른 작업 발행/전환 금지.
 - 일정: KIC 내부 11/10, PayPal 내부 11/11. UGREEN 전담 최신 일정은 **11/10 조기 제출 목표로 앞당겨짐**, 이전 통합 11/14는 예비 확인점으로 관리; 공식 11/16 16:45 그대로.
 - 실제 분산 락·AI 채팅 자동 전환/실행/통지 기능은 없음. 문서 기반 프로토콜이며 사용자 호출과 원격 검수 필요.
+
+## 2026-10-24 KST — 신규 통합 총괄 인수인계 후 원격 재실사
+- 조회한 기존 전체 상황실 HEAD: `797341dab1a6f5931dd3dcb366763e0dd42a3d20` (`main`, 이번 갱신 전). 세 총괄 HEAD: KIC `b845170c2b81d438afcf8b2e7179e19af90cd41c`, PayPal `b8d12259307e7ca3f893680c4f8d2877f8020ee9`, UGREEN `3f193407b03691e371da3914f7e6710286c22961`. 실제 HEAD는 다음 조회 시 다시 확인.
+- **현행 운영은 7개 채팅 역할**(통합 1·대회 총괄 3·대회별 공통 작업자 3); 대회는 동시에 진행하되 각 대회 내부에서 활성 기능 작업 1개만. 사용자 제공 신규 채팅 인수인계는 확인했으나 **AI 채팅 자동 실행/완전한 방 개설 여부는 GitHub만으로 검증 불가**.
+- 첫 활성 지시와 목표 브랜치: **KIC-R-001 READY** → `feature/research`, **PPL-001 READY** → `feature/quote-payment`, **UGR-001 READY** → `feature/missing-files`. 작업자 결과 보고서의 착수·완료 표식 없음. READY는 개발 성공이 아님.
+- PayPal 세 기능 최신 HEAD: quote-payment `e5b70e0376628dc9e6237d69234f56648c849ca8`, delivery `77dc5327b69432d3f64a320dea8a1ae0c2f427ce`, subscriptions `9d77f9029d9dfb571f14f5d10289f97015ba6f4f`. 이전 checkpoint SHA보다 진행됐지만 **각 HEAD 마지막 커밋은 `AGENTS.md` 운영 지침 수정**; 최초 PPL-001 실행 증거로 세지 않음.
+- **UGREEN ProjectReady NAS 사용자 승인 방향**(대회 자체 최신 실행계획)과 **내부 제출 11/10**을 우선. 11/14는 예전 일정의 예비 점검일. 공식 11/16 16:45 KST 마감 변경 없음.
+- 공식 제출 상태 3건 모두 미제출. KIC 팀 전환, PayPal Sandbox, UGREEN 실제 Kit/CLI, 출시·실 API·Production은 미완료/미검증. KIC 기존 합성 9 테스트 성공은 실제 API 성공 아님.
+- 일정/권한/제품 코드/작업지시서/공식 제출은 이번 통합 문서 갱신에서 변경하지 않음. 최신 증거 확인 후 담당 총괄이 검수/지시할 것.

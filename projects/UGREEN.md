@@ -1,4 +1,4 @@
-# UGREEN NAS AI Hackathon — NAS 프로젝트 파일 관리 Skill (잠정)
+# UGREEN NAS AI Hackathon — ProjectReady NAS (제품 방향 확정)
 
 - 공식 페이지: https://ugreenhackathon.devpost.com/
 - 참가: **2026-10-24 KST Devpost 참가 등록 완료 화면 확인** — `Thanks for registering!` 문구 및 `My hackathon projects`/`Create project` 표시. 백엔드·이메일 별도 확인 전.
@@ -10,7 +10,7 @@
 2. 중복 및 버전 충돌 탐지(사용자 승인 없는 삭제/이동 금지).
 3. 개인정보/민감정보의 로컬 노출 위험 감지(무단 외부 전송 금지).
 
-주제는 미확정. 공식 Uliya Skill 규격·CLI·NAS 권한을 먼저 검토하고 개발가능한 최소 범위를 확정한다. 실제 NAS 테스트 없이 작동을 확언하지 않는다.
+사용자가 **ProjectReady NAS 단일 납품 Go/No-Go Skill의 제품 방향과 11/10 내부 조기 제출 목표를 승인**했다. 세 세부 기능은 역할 구분이며 실제 지원 CLI·NAS 권한·PII 탐지 가능성은 **미검증**이다. 실제 NAS 테스트 없이 작동을 확언하지 않는다.
 
 ## Round 1
 - 공식 예선 마감 **2026-11-16 16:45 KST** (11/15 23:45 PST).
@@ -29,7 +29,7 @@
 ## 체크리스트
 - [x] Devpost 참가 등록 후 성공 메시지 및 프로젝트 관리 화면 확인
 - [ ] Skill Developer Package 확보·규격/권한 확인
-- [ ] 주제 확정과 위험 관리
+- [x] ProjectReady NAS 제품 방향 확정 (공식 SDK/기능 가능 범위는 미검증)
 - [ ] 500단어/1MB 제한 영문 PDF
 - [ ] 공식 ZIP 규격·용량·파일 개수 검사
 - [ ] 공식 예선 제출 증거
@@ -64,3 +64,8 @@
 ## 2026-10-24 — UGREEN 자체 세부 일정 확인 대기
 - [총괄 브랜치 기본 일정](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/COMPETITION_SCHEDULE.md)는 공시되었으나 조회 HEAD `1fdcabc12cb5f226ca27ddeb0dbd8c339457c8ea` 기준 새로운 기능별/예선 실행계획은 미확인.
 - 내부 조기 목표 11/14, 공식 11/16 16:45 KST 유지. 총괄의 추가 문서 작성 이후 원격 SHA·제출 규격·일정 충돌 검수 필요.
+
+## 2026-10-24 KST — 전담 총괄 최신 승인안 동기화
+- [전담 실행계획](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/UGREEN_EXECUTION_PLAN_20261024.md)에서 **ProjectReady NAS 단일 Skill** 및 추가 지출 0원·내부 11/10 조기 제출 확정. 이전 11/14 목표와 구형 '주제 잠정' 문구는 과거 기록.
+- 활성 작업은 [UGR-001](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/dispatcher/CURRENT_TASK.md), 상태 READY, target `feature/missing-files`; 공식 Kit 지원 매트릭스 검증이 우선. 작업자 착수/완료 메시지 없음. 최초 feature HEAD `9b3052bf82ad1a8a4844b1aeee699c0b759251dc` 기준 확인.
+- 실제 Skill 구현, 공식 NAS/CLI 실행, PDF/ZIP 제출 증거는 없음. 공식 Round 1 11/16 16:45 KST.

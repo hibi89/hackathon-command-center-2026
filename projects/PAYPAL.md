@@ -66,3 +66,8 @@
 ## 2026-10-24 — PayPal 총괄 기능별 자체 일정 업데이트
 - [lead/paypal 일정 5절](https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/COMPETITION_SCHEDULE.md)에 10/24~26 Sandbox 접근·주제/범위 검증, quote-payment 10/27~11/01, delivery 10/29~11/04, subscriptions 10/30~11/05, 통합 11/06~09, 내부 조기 제출 11/11 권고 기록.
 - 조회 HEAD `a7fb08d141f40455606816bbc15520a0f925134d`; **사용자 승인 전 일정 초안**, API/코드/Devpost 제출 성공 아님.
+
+## 2026-10-24 KST — 최신 단일 작업자 라우터 확인
+- [PayPal v4 실행계획](https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/PAYPAL_EXECUTION_PLAN_20261024.md): 신규 현금 지출 0원/3개 기능을 하나의 출품으로 통합/대회 내 1명씩 순차 진행; 내부 11/11 제출 목표. 구형 병렬 계획은 폐기.
+- 최초 [PPL-001](https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/dispatch/ACTIVE_TASK.md): READY, `feature/quote-payment`; 실제 Sandbox 적합성·설계 A/B·v0 계약 검증이 첫 관문. 후속 feature 임의 착수 금지.
+- 세 feature 최신 HEAD: `e5b70e0376628dc9e6237d69234f56648c849ca8`, `77dc5327b69432d3f64a320dea8a1ae0c2f427ce`, `9d77f9029d9dfb571f14f5d10289f97015ba6f4f`. 각각 가장 최근 변경 파일은 `AGENTS.md`이고 PPL-001 실행 보고는 없음. Sandbox/API/제품 코드/실제 제출 미검증.
