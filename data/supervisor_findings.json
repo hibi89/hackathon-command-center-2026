@@ -3,7 +3,7 @@
   "as_of_date_kst": "2026-10-24",
   "registry_purpose": "Track actual evidenced cross-contest audit corrective actions after requests, not an assertion that all projects passed.",
   "source_charter": "docs/SUPERVISOR_MANDATE.md",
-  "last_audit_performed_under_this_charter": "SUPERVISOR-20261024-LATE-REFRESH",
+  "last_audit_performed_under_this_charter": "SUPERVISOR-20261024-HOME-PREP",
   "findings": [
     {
       "id": "SUP-KIC-001",
@@ -18,14 +18,14 @@
       "reason": "11/08 PDF internally frozen, but ability to submit remains 60%-complete blocked gate.",
       "created_kst": "2026-10-24",
       "status": "BLOCKED_EXTERNAL",
-      "verification": "2026-10-24 CONNECTED_BROWSER_SIGNED_IN_DAKER_APPLICATION_AND_ONE_PERSON_TEAM_UI_REPORTED_BY_LEAD; PHONENUMBER_VERIFICATION_PROMPT; FINAL_UPLOAD_BUTTON_PERMISSIONS_AND_RECEIPT_STILL_UNVERIFIED; KIC_155_CI_PASS",
+      "verification": "2026-10-24_165_CI_PASS; DAKER_APPLIED_ONE_PERSON_TEAM_DISPLAYED_VIA_LEAD_BROWSER; FINAL_PDF_UPLOAD_RIGHTS_AND_PHONE_VERIFICATION_REQUIREMENT_STILL_UNCONFIRMED",
       "verified_after_sha": null,
       "review_trigger": "next_user_requested_supervisor_audit_or_relevant_lead_commit",
       "approval_required": true,
       "dispatched_to": "https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/FROM_HACKATHON_COMMAND.md",
       "dispatched_child_head": "c965a59d2ae7e86aae1a1c10cbd6b0caedb480d5",
       "dispatched_kst": "2026-10-24",
-      "last_reviewed_sha": "aa5dc9c175d1d97b40ebd54d80aacdc7366e9f3b"
+      "last_reviewed_sha": "850b4889769503ff669be31b331318d2c4e7b85f"
     },
     {
       "id": "SUP-PAYPAL-001",
@@ -40,14 +40,14 @@
       "reason": "Official rules require an app integrating PayPal developer platform plus AI, functional demo; D03 remains 0%, D04 real AI 20% unmet.",
       "created_kst": "2026-10-24",
       "status": "BLOCKED_EXTERNAL",
-      "verification": "2026-10-24 PAYPAL_260_OFFLINE_NODE_TESTS_PASS; SANDBOX_TRANSPORT_10SEC_TIMEOUT_FAIL_CLOSED; REAL_SANDBOX_AND_AI_NOT_TESTED",
+      "verification": "2026-10-24_278_CI_PASS_OFFLINE; GEMINI_ADAPTER_PLUS_SINGLE_SQLITE_FILE_AI_RESERVATION_IMPLEMENTED; NO_REAL_PAYPAL_OAUTH_ORDERS_GET_CAPTURE_OR_GEMINI_FREE_TIER_PROOF",
       "verified_after_sha": null,
       "review_trigger": "next_user_requested_supervisor_audit_or_relevant_lead_commit",
       "approval_required": true,
       "dispatched_to": "https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/FROM_HACKATHON_COMMAND.md",
       "dispatched_child_head": "4098eb6663317a1d00c737d23253c5c26cb38c72",
       "dispatched_kst": "2026-10-24",
-      "last_reviewed_sha": "8562b184483bb7735ec35dadf31e3d79c0742a86"
+      "last_reviewed_sha": "dac161b150bb3486f8b4c0871172e750b6dcd278"
     },
     {
       "id": "SUP-UGREEN-001",
@@ -62,14 +62,14 @@
       "reason": "Official Round1 explicitly does not require running NAS, demo, video or official runtime proof; preview artifact is a draft with seven-day retention.",
       "created_kst": "2026-10-24",
       "status": "IN_PROGRESS",
-      "verification": "ROUND1_PDF_ZIP_DRAFT_CI_SUCCESS_40090742706; G18_NEW_LOCAL_CREATOR_SKILL_NOT_YET_IN_CANONICAL_ZIP; RIGHTS_EXACT_FILE_APPROVAL_AND_DEVPOST_RECEIPT_PENDING",
+      "verification": "G20_ACTUAL_USER_ZIP_SHA_VERIFIED; P1_DELEGATION_FIX_IN_REVIEW_BRANCH_7af2cb7_WITH_STATIC_PASS_JSON; LEAD_ACCEPTANCE_NEW_PDF_ZIP_RIGHTS_EXACT_FILE_SIGNOFF_DEVPOST_STILL_PENDING",
       "verified_after_sha": null,
       "review_trigger": "next_user_requested_supervisor_audit_or_relevant_lead_commit",
       "approval_required": true,
       "dispatched_to": "https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/FROM_HACKATHON_COMMAND.md",
       "dispatched_child_head": "ead21d523432c4b2ac17fabaed0da281394b0386",
       "dispatched_kst": "2026-10-24",
-      "last_reviewed_sha": "d52c8d98d8212bafb9e125b10d81709df6485dc8"
+      "last_reviewed_sha": "6a660075edd1de5f01c10a31e304902fbecafe2c"
     },
     {
       "id": "SUP-KIC-002",
@@ -91,7 +91,7 @@
       "dispatched_to": "https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/FROM_HACKATHON_COMMAND.md",
       "dispatched_child_head": "c965a59d2ae7e86aae1a1c10cbd6b0caedb480d5",
       "dispatched_kst": "2026-10-24",
-      "last_reviewed_sha": "aa5dc9c175d1d97b40ebd54d80aacdc7366e9f3b"
+      "last_reviewed_sha": "850b4889769503ff669be31b331318d2c4e7b85f"
     },
     {
       "id": "SUP-PAYPAL-002",
@@ -113,7 +113,7 @@
       "dispatched_to": "https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/FROM_HACKATHON_COMMAND.md",
       "dispatched_child_head": "4098eb6663317a1d00c737d23253c5c26cb38c72",
       "dispatched_kst": "2026-10-24",
-      "last_reviewed_sha": "8562b184483bb7735ec35dadf31e3d79c0742a86"
+      "last_reviewed_sha": "dac161b150bb3486f8b4c0871172e750b6dcd278"
     },
     {
       "id": "SUP-KIC-003",
@@ -135,7 +135,7 @@
       "dispatched_to": "https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/FROM_HACKATHON_COMMAND.md",
       "dispatched_child_head": "c965a59d2ae7e86aae1a1c10cbd6b0caedb480d5",
       "dispatched_kst": "2026-10-24",
-      "last_reviewed_sha": "aa5dc9c175d1d97b40ebd54d80aacdc7366e9f3b"
+      "last_reviewed_sha": "850b4889769503ff669be31b331318d2c4e7b85f"
     },
     {
       "id": "SUP-UGREEN-002",
@@ -157,7 +157,7 @@
       "dispatched_to": "https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/FROM_HACKATHON_COMMAND.md",
       "dispatched_child_head": "ead21d523432c4b2ac17fabaed0da281394b0386",
       "dispatched_kst": "2026-10-24",
-      "last_reviewed_sha": "d52c8d98d8212bafb9e125b10d81709df6485dc8"
+      "last_reviewed_sha": "6a660075edd1de5f01c10a31e304902fbecafe2c"
     },
     {
       "id": "SUP-PAYPAL-003",
@@ -172,14 +172,14 @@
       "reason": "Official rules allow working repo/setup instructions instead of hosted demo. Avoid spending scarce contest time on unnecessary hosting while retaining actual functionality.",
       "created_kst": "2026-10-24",
       "status": "IN_PROGRESS",
-      "verification": "LICENSE_MIT_AND_NODE22_LOCAL_REPRO_ALREADY_VERIFIED; P0_OWNER_ACCOUNT_CHECKLIST_AND_240_CI_PASS; ACTUAL_JUDGE_USABLE_REAL_PAYPAL_AI_DEMO_STILL_NOT_VERIFIED",
+      "verification": "ROOT_MIT_AND_REPRO_GUIDE_VERIFIED_OFFLINE_278; JUDGE_ACCESS_REAL_PROVIDER_REAL_DEMO_VIDEO_AND_SUBMISSION_NOT_VERIFIED",
       "verified_after_sha": null,
       "review_trigger": "next_user_requested_supervisor_audit_or_relevant_lead_commit",
       "approval_required": true,
       "dispatched_to": "https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/FROM_HACKATHON_COMMAND.md",
       "dispatched_child_head": "4098eb6663317a1d00c737d23253c5c26cb38c72",
       "dispatched_kst": "2026-10-24",
-      "last_reviewed_sha": "8562b184483bb7735ec35dadf31e3d79c0742a86"
+      "last_reviewed_sha": "dac161b150bb3486f8b4c0871172e750b6dcd278"
     },
     {
       "id": "SUP-UGREEN-003",
@@ -196,13 +196,13 @@
       "verified_after_sha": "256a766d63eac38a1c6b181d29e3d74e20f9709a",
       "review_trigger": "next_user_requested_supervisor_audit_or_relevant_lead_commit",
       "approval_required": false,
-      "last_reviewed_sha": "d52c8d98d8212bafb9e125b10d81709df6485dc8"
+      "last_reviewed_sha": "6a660075edd1de5f01c10a31e304902fbecafe2c"
     },
     {
       "id": "SUP-UGREEN-004",
       "contest": "UGREEN",
       "priority": "P0",
-      "disposition": "ADD",
+      "disposition": "VERIFY",
       "description": "Obtain actual supported official UGOS Skill Creation Tool generation and check evidence before treating the current four-Markdown Skill ZIP as Round1 eligible; do not substitute static catalog review or synthetic tests.",
       "evidence_url": "https://ugreenhackathon.devpost.com/rules",
       "observed_sha": "6a2cce0bcebb1d6943ff96cf8cfaf0ba7831e504",
@@ -210,14 +210,14 @@
       "acceptance": "Entrant executes verified vendor official Creator in supported tool, records sanitized true generation + validation/check outcome, reviews original/licensing/dataflow claims, builds SHA-reviewed exact candidate PDF+ZIP and approves Devpost submission separately; runtime NAS evidence not required for Round1.",
       "reason": "Official Rule Project Requirements explicitly says create Skill USING official UGOS Skill Creation Tool; latest official-creator Codex runbook in repo is unexecuted, proof NOT_EVIDENCED.",
       "created_kst": "2026-10-24",
-      "status": "BLOCKED_EXTERNAL",
-      "verification": "2026-10-24 G18 PARTICIPANT_CODEX_REPORT_OF_OFFICIAL_CREATOR_GENERATION_AND_STATIC_PASS_ZERO_ERRORS_WARNINGS; NEW_GENERATED_SKILL_MD_REPORTED_SHA_e1b07166; ACTUAL_SOURCE_BYTES_AND_VENDOR_CHECK_LOG_NOT_INSPECTED; RELEASE_AND_DEVPOST_NOT_READY",
+      "status": "IN_PROGRESS",
+      "verification": "G20_REVIEW_ZIP_BYTES_AND_NEW_OFFICIAL_CREATOR_SKILL_SHA_e1b07166_INDEPENDENTLY_VERIFIED; P1_DELEGATION_FIX_REVIEW_7af2cb7_WITH_OFFICIAL_CHECK_STATIC_PASS_JSON_0_ERRORS_WARNINGS_REPORTED; ONLY_LEAD_RELEASE_INTEGRATION_HUMAN_SIGNOFF_AND_OFFICIAL_SUBMISSION_PENDING",
       "verified_after_sha": null,
-      "review_trigger": "entrant_supplies_generated_skill_md_and_all_referenced_markdown_for_independent_sha_content_license_review",
+      "review_trigger": "UGREEN_LEAD_REVIEWS_review/ugreen-official-creator_7af2cb7_WITH_SOURCE_SHA_LICENSE_RELEASE_AND_EXACT_PDF_ZIP; HUMAN_APPROVES_FINAL_ARTIFACT",
       "approval_required": true,
-      "last_reviewed_sha": "d52c8d98d8212bafb9e125b10d81709df6485dc8",
-      "reported_progress": "OFFICIAL_TOOL_CREATION_REPORTED_NOT_INDEPENDENTLY_VERIFIED",
-      "evidence_update_url": "https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/submission/G18_CODEX_CREATOR_RESULT_REPORTED_20261024.md"
+      "last_reviewed_sha": "6a660075edd1de5f01c10a31e304902fbecafe2c",
+      "reported_progress": "SOURCE_RECEIVED_AND_INDEPENDENTLY_REVIEWED; P1_FIXED_IN_REVIEW_BRANCH; LEAD_ACCEPTANCE_PENDING",
+      "evidence_update_url": "https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/review/ugreen-official-creator/docs/submission/G20_P1_CHANGE_REPORT.md"
     },
     {
       "id": "SUP-PAYPAL-004",
@@ -236,7 +236,7 @@
       "verified_after_sha": null,
       "review_trigger": "before_paypal_final_devpost_submission",
       "approval_required": true,
-      "last_reviewed_sha": "8562b184483bb7735ec35dadf31e3d79c0742a86"
+      "last_reviewed_sha": "dac161b150bb3486f8b4c0871172e750b6dcd278"
     }
   ],
   "valid_statuses": [
@@ -264,51 +264,51 @@
   "note": "Empty findings means no registered corrective action yet, not that all three repositories have zero issues. The next user-requested audit must independently check the latest state.",
   "current_snapshot": {
     "date_kst": "2026-10-24",
-    "audit_id": "SUPERVISOR-20261024-LATE-REFRESH",
-    "source_report": "docs/audits/SUPERVISOR_RECHECK_20261024_LATE.md",
-    "scope": "Latest remote lead HEAD and canonical ledgers plus Actions current-head job logs; UGREEN generated local source not supplied; KIC authenticated site evidence is lead-reported; PayPal 260-test at new HEAD independently checked",
+    "audit_id": "SUPERVISOR-20261024-HOME-PREP",
+    "source_report": "docs/audits/SUPERVISOR_HOME_PREP_AUDIT_20261024.md",
+    "scope": "All 3 remote lead HEAD/canonical days/current SHA Actions logs + UGREEN extra review branch contents; no user browser/real external APIs",
     "contests": {
       "kic": {
-        "sha": "aa5dc9c175d1d97b40ebd54d80aacdc7366e9f3b",
+        "sha": "850b4889769503ff669be31b331318d2c4e7b85f",
         "days": 60,
         "done": 29,
         "partial": 0,
         "blocked": 3,
         "not_started": 28,
-        "latest_code_ci": 40090950819,
-        "lead_reported_offline_tests": 155,
-        "submit_permission": "PARTIAL_AUTHENTICATED_READ_ONLY_LEAD_REPORT__FINAL_UPLOAD_RIGHTS_BLOCKED",
+        "latest_code_ci": 40094275466,
+        "lead_reported_offline_tests": 165,
+        "submit_permission": "BLOCKED_FINAL_DAKER_UPLOAD_RIGHTS",
         "official_submitted": false
       },
       "paypal": {
-        "sha": "8562b184483bb7735ec35dadf31e3d79c0742a86",
+        "sha": "dac161b150bb3486f8b4c0871172e750b6dcd278",
         "days": 18,
         "done": 12,
         "partial": 2,
         "blocked": 1,
         "not_started": 3,
-        "current_d15_percent": 20,
-        "latest_code_ci": 40091061070,
-        "lead_reported_offline_tests": 260,
+        "latest_code_ci": 40094382302,
+        "lead_reported_offline_tests": 278,
         "real_sandbox_ai": "NOT_TESTED",
         "official_submitted": false,
-        "judge_source_ref": "DEFAULT_MAIN_DIVERGED_FROM_TESTED_LEAD"
+        "judge_source_ref": "MAIN_LEAD_DIVERGED_NEEDS_EXACT_FINAL_LINK"
       },
       "ugreen": {
-        "sha": "d52c8d98d8212bafb9e125b10d81709df6485dc8",
+        "sha": "6a660075edd1de5f01c10a31e304902fbecafe2c",
+        "review_branch_sha": "7af2cb750b37826fb02a00e2d45cb73f3a85c239",
         "days": 24,
         "done": 2,
         "partial": 12,
         "blocked": 3,
         "not_started": 7,
-        "latest_code_ci": 40090742729,
-        "lead_reported_offline_tests": 211,
-        "official_creator_generation": "PARTICIPANT_REPORTED_STATIC_PASS_SOURCE_UNINSPECTED",
+        "latest_code_ci": 40093085741,
+        "lead_reported_offline_tests": 219,
+        "official_creator_generation": "G20_ZIP_REAL_BYTES_INDEPENDENT_VERIFIED; P1_REVIEW_BRANCH_JSON_STATIC_PASS_REPORTED",
         "official_submitted": false
       }
     },
     "time_measurement": "ALL_UNMEASURED",
-    "note": "Planning rows not product maturity; no real provider or submitted receipt verified"
+    "note": "G20 source SHA independently checked, official checker execution not independently run. P1 on review branch not official final release."
   },
   "official_references": [
     "https://ugreenhackathon.devpost.com/rules",
@@ -396,5 +396,6 @@
       }
     }
   },
-  "last_audit_verified_kst": "2026-10-24 KST; user-requested post-dispatch quality audit"
+  "last_audit_verified_kst": "2026-10-24 KST; user-requested post-dispatch quality audit",
+  "owner_home_checklist": "docs/OWNER_HOME_ACTIONS_20261024.md"
 }

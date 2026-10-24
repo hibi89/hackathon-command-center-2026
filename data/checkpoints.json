@@ -8,7 +8,7 @@
     "kind": "coordination_docs",
     "auto_update": false,
     "verified_as_of": "2026-10-24 KST, cross-repo audit snapshot at 17:19 with later observed commits",
-    "last_update_reason": "Reconcile concurrent child lead heads, authenticated UI read-only report, PayPal bounded sandbox transport, and judge source-link divergence risk.",
+    "last_update_reason": "User requested current worker quality sweep and a durable, minimal owner-only checklist for after returning home; verified UGREEN independent review branch already has P1 corrected source.",
     "first_read": "START_HERE.md",
     "update_protocol": "docs/CONTINUITY_PROTOCOL.md",
     "audit_report": "docs/audits/REPOSITORY_AUDIT_20261024.md",
@@ -46,8 +46,8 @@
     "contest_expansion_requires_user_explicit_decision": true,
     "existing_four_chat_structure_unchanged": true,
     "reinvestment_policy": "optional_personal_reward_after_official_result; any_charge_or_hardware_purchase_requires_fresh_approval",
-    "last_supervisor_sync_report": "docs/audits/SUPERVISOR_RECHECK_20261024_LATE.md",
-    "latest_supervisor_sync_kst": "2026-10-24 KST; post-audit simultaneous-lead follow-up",
+    "last_supervisor_sync_report": "docs/audits/SUPERVISOR_HOME_PREP_AUDIT_20261024.md",
+    "latest_supervisor_sync_kst": "2026-10-24 KST; owner home preparation after three lead/CI reviews",
     "cross_contest_original_capacity": {
       "date_start": "2026-10-25",
       "date_end": "2026-11-11",
@@ -68,47 +68,48 @@
     "supervision_authority_limit": "central_repo_write_only; no_unapproved_child_repo_modification_or_scope_reduction_or_submission_or_spending",
     "supervision_charter_approved_kst": "2026-10-24",
     "last_governance_update_reason": "User defined integrated head as independent oversight chief: audit leads' actual work, add missing critical tasks, identify/stop waste, track corrective actions persistently.",
-    "supervision_last_audit_id": "SUPERVISOR-20261024-LATE-REFRESH",
+    "supervision_last_audit_id": "SUPERVISOR-20261024-HOME-PREP",
     "supervision_open_findings": 7,
-    "supervision_followup_status": "KIC_29_DONE_155_TEST_PASS_DAKER_SIGNED_IN_APPLICATION_COMPLETE_LEAD_REPORT_UPLOAD_RIGHTS_UNKNOWN; PAYPAL_12_DONE_260_TEST_PASS_REAL_PROVIDER_BLOCKED_MAIN_LEAD_DIVERGED; UGREEN_2_DONE_12_PARTIAL_211_TEST_PASS_CREATOR_REPORTED_SOURCE_NOT_AVAILABLE",
+    "supervision_followup_status": "KIC_29_DONE_165_OFFLINE_PASS_AUTH_DAKER_UPLOAD_BLOCKED; PAYPAL_12_DONE_278_OFFLINE_PASS_SANDBOX_GEMINI_BLOCKED; UGREEN_2_DONE_219_OFFLINE_PASS_OFFICIAL_CREATOR_SOURCE_G20_VERIFIED_REVIEW_P1_BRANCH_READY_LEAD_FINAL_REVIEW_PENDING",
     "supervision_snapshot": {
       "date_kst": "2026-10-24",
-      "audit_id": "SUPERVISOR-20261024-LATE-REFRESH",
-      "source_report": "docs/audits/SUPERVISOR_RECHECK_20261024_LATE.md",
+      "audit_id": "SUPERVISOR-20261024-HOME-PREP",
+      "source_report": "docs/audits/SUPERVISOR_HOME_PREP_AUDIT_20261024.md",
       "contests": {
         "kic": {
-          "sha": "aa5dc9c175d1d97b40ebd54d80aacdc7366e9f3b",
+          "sha": "850b4889769503ff669be31b331318d2c4e7b85f",
           "days": 60,
           "done": 29,
           "partial": 0,
           "blocked": 3,
           "not_started": 28,
-          "last_verified_source_ci": 40090950819,
-          "offline_tests_reported": 155,
-          "real_submission_permission": "PARTIAL_AUTHENTICATED_READ_ONLY_LEAD_REPORT_FINAL_UPLOAD_UNVERIFIED"
+          "last_verified_source_ci": 40094275466,
+          "offline_tests_reported": 165,
+          "real_submission_permission": "AUTHENTICATED_APPLICATION_LEAD_OBSERVED_FINAL_UPLOAD_UNVERIFIED"
         },
         "paypal": {
-          "sha": "8562b184483bb7735ec35dadf31e3d79c0742a86",
+          "sha": "dac161b150bb3486f8b4c0871172e750b6dcd278",
           "days": 18,
           "done": 12,
           "partial": 2,
           "blocked": 1,
           "not_started": 3,
-          "last_verified_source_ci": 40091061070,
-          "offline_tests_reported": 260,
+          "last_verified_source_ci": 40094382302,
+          "offline_tests_reported": 278,
           "real_paypal_and_ai": "NOT_TESTED",
-          "judge_source_ref": "MAIN_VS_LEAD_DIVERGED_REQUIRES_ENTRANT_APPROVED_REVIEW"
+          "judge_source_ref": "MAIN_LEAD_DIVERGENCE_UNRESOLVED"
         },
         "ugreen": {
-          "sha": "d52c8d98d8212bafb9e125b10d81709df6485dc8",
+          "sha": "6a660075edd1de5f01c10a31e304902fbecafe2c",
+          "review_branch_sha": "7af2cb750b37826fb02a00e2d45cb73f3a85c239",
           "days": 24,
           "done": 2,
           "partial": 12,
           "blocked": 3,
           "not_started": 7,
-          "last_verified_source_ci": 40090742729,
-          "offline_tests_reported": 211,
-          "official_creator": "PARTICIPANT_REPORTED_STATIC_PASS_SOURCE_UNINSPECTED",
+          "last_verified_source_ci": 40093085741,
+          "offline_tests_reported": 219,
+          "official_creator": "REAL_UPLOADED_ZIP_SHA_INDEPENDENTLY_VERIFIED_G20; P1_CORRECTED_REVIEW_BRANCH_STATIC_PASS_JSON_REPORTED; LEAD_NOT_YET_ACCEPTED",
           "round1_bundle": "DRAFT_NOT_APPROVED"
         }
       },
@@ -117,7 +118,7 @@
     },
     "latest_lead_message_handoff": "docs/LEAD_MESSAGES_HANDOFF_20261024.md",
     "supervisor_message_dispatch_status": "3_OF_3_CHILD_LEAD_BRANCHES_PUBLISHED_AND_CI_PASSED",
-    "next_supervisor_action": "First examine newly generated UGREEN SKILL.md bytes if provided; independently verify KIC signed-in final DAKER upload rights or real authorized PayPal+AI receipts. Before PayPal Devpost submission verify tested GitHub ref link versus default-main divergence. No blind merge.",
+    "next_supervisor_action": "Next time verify latest three lead HEADs, particularly UGREEN review/ugreen-official-creator@7af2cb7 acceptance. User home: KIC DAKER final upload rights view; PayPal Developer Sandbox Business/Personal existence and Gemini Free Tier/model/billing state, no secrets. Then separate scoped execution/submission approvals.",
     "supervisor_dispatch_kst": "2026-10-24",
     "supervisor_dispatched_from": "main",
     "lead_message_dispatch": {
@@ -202,7 +203,8 @@
       "paypal": "ACTUAL_AI_QUOTE_HUMAN_APPROVAL_SANDBOX_PAYMENT_END_TO_END",
       "ugreen": "NAS_FILE_CHANGE_MISSING_VERSION_CONFLICT_DIFFERENTIAL_AUDIT",
       "next_use": "Read on future chief restart/strategy review; only issue new lead ACTIVE tasks after checking present gates and deadline."
-    }
+    },
+    "owner_home_checklist": "docs/OWNER_HOME_ACTIONS_20261024.md"
   },
   "projects": [
     {
