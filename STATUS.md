@@ -94,3 +94,9 @@
 - KIC 5개 HEAD Actions 완료/성공(합성/오프라인에 한정), PayPal·UGREEN 제품 CI 설정/실행 이력 없음. 세 대회 유효 작품 제출/본선 진출은 아직 미완료.
 - 일정: **KIC 11/12 10:00 → PayPal 11/13 05:00(19시간) → UGREEN 11/16 16:45 KST**. 내부 조기 제출 목표 KIC 11/10, PayPal 11/11, UGREEN 11/14는 **공식 마감이 아님**.
 - 신규 AI 채팅은 자기 담당 브랜치 HANDOFF부터 읽고 해당 `docs/COMPETITION_SCHEDULE.md` 확인. 통합 총괄은 계속 일정·위험만 감독하며 원본 소스 수정 금지.
+
+## 2026-10-24 KST — 대회 총괄별 자체 개발 일정 확인 (사용자 지시 이후)
+- **KIC:** [총괄 실행계획](https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/roles/lead/AUDIT_EXECUTION_PLAN_20261024.md) 작성. `lead/kic` 원격 `d081a59c62e5686fac93f9f0ec97e86f79832ccb`. 10/25 PDF 실물 검토→10/26 데이터 계약 승인안→10/27~31 최소 기술 검증→11/01~09 기획서 품질 개선→**11/10 내부 조기 제출**. PDF 제출 우선 전략 A안은 **총괄 권고·사용자 최종 승인 전**. 실제 파일 검수/팀 전환/제출 완료 미검증.
+- **PayPal:** [lead/paypal 자체 기능별 실행 일정](https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/COMPETITION_SCHEDULE.md) 5절 확인. `lead/paypal` 원격 `a7fb08d141f40455606816bbc15520a0f925134d`. 10/24~26 주제/Sandbox 검증, 10/27~11/01 quote-payment, 10/29~11/04 delivery, 10/30~11/05 subscriptions, 11/06~09 통합·테스트, **11/11 내부 조기 제출**. 잠정 3기능·개발 순서는 **사용자 미승인**. Sandbox/영상/Devpost 실제 수행 미확인.
+- **UGREEN:** [기존 3대회 공식 일정표](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/COMPETITION_SCHEDULE.md)는 존재하지만 `lead/ugreen` 원격 `1fdcabc12cb5f226ca27ddeb0dbd8c339457c8ea` 기준 **추가로 작성한 대회 전용 날짜별 세부 실행계획은 아직 확인되지 않음**. 담당 총괄은 규격/CLI 조사→3기능 및 Round 1 PDF·ZIP 일정을 제안하고 자신에게 맡겨진 진행을 보고해야 한다. **11/14 내부 조기 제출 목표** 유지.
+- 사용자가 세 대회 담당 총괄들에게 일정 작성 지시. 통합 총괄은 **승인/제출/개발이 완료되었다고 간주하지 않고** 자체 계획과 3대회 연속 마감 충돌을 교차 검토한다.

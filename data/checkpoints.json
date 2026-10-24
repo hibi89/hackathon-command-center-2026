@@ -8,7 +8,7 @@
     "kind": "coordination_docs",
     "auto_update": false,
     "verified_as_of": "2026-10-24 KST",
-    "last_update_reason": "Published 13 cross-chat independent role prompts; navigation linked from command-center entry files",
+    "last_update_reason": "Compared competition leads' own draft schedules; KIC and PayPal verified, UGREEN detailed plan pending; no approvals implied",
     "first_read": "START_HERE.md",
     "update_protocol": "docs/CONTINUITY_PROTOCOL.md",
     "audit_report": "docs/audits/REPOSITORY_AUDIT_20261024.md",
@@ -25,7 +25,7 @@
       "repo": "hibi89/hibi89-kic-proofinvest",
       "repo_exists": true,
       "main_head_sha": "1300b9b31a5b86792d15ed7a2dce7c24849dbd87",
-      "lead_head_sha": "25fe5f60642ad022343da68ae01535713436dcf9",
+      "lead_head_sha": "d081a59c62e5686fac93f9f0ec97e86f79832ccb",
       "implemented_and_verified_features": 0,
       "planned_features": 3,
       "offline_tests_reported_passed": 9,
@@ -52,7 +52,10 @@
       "schedule_published_branches": 5,
       "schedule_verified_date_kst": "2026-10-24",
       "verified_live_features": 0,
-      "ci_summary": "All five 2026-10-24 branch HEAD GitHub Actions successful (offline/synthetic only)"
+      "ci_summary": "All five 2026-10-24 branch HEAD GitHub Actions successful (offline/synthetic only)",
+      "internal_plan_url": "https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/roles/lead/AUDIT_EXECUTION_PLAN_20261024.md",
+      "internal_plan_status": "proposed_requires_user_approval",
+      "internal_early_submit": "2026-11-10"
     },
     {
       "id": "paypal",
@@ -86,7 +89,7 @@
       "repo_creation_verified": true,
       "repo_visibility": "public",
       "main_head_sha": "b58533ac7e632706a95d807de5ced6497b5e46b0",
-      "lead_head_sha": "62efc0293af5aef6ddd43480f3349f7dba728646",
+      "lead_head_sha": "a7fb08d141f40455606816bbc15520a0f925134d",
       "lead_branch": "lead/paypal",
       "feature_head_shas": {
         "feature/quote-payment": "ba4403d90b2903feef1c604bd0688dd5091fe472",
@@ -102,7 +105,10 @@
       "schedule_verified_date_kst": "2026-10-24",
       "verified_live_features": 0,
       "lead_ci": "not_configured",
-      "ci_summary": "No workflows/runs; product unimplemented"
+      "ci_summary": "No workflows/runs; product unimplemented",
+      "internal_plan_url": "https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/COMPETITION_SCHEDULE.md",
+      "internal_plan_status": "proposed_requires_user_approval",
+      "internal_early_submit": "2026-11-11"
     },
     {
       "id": "ugreen",
@@ -146,7 +152,10 @@
       "schedule_verified_date_kst": "2026-10-24",
       "verified_live_features": 0,
       "lead_ci": "not_configured",
-      "ci_summary": "No workflows/runs; product unimplemented"
+      "ci_summary": "No workflows/runs; product unimplemented",
+      "internal_plan_url": null,
+      "internal_plan_status": "not_yet_verified_beyond_shared_schedule",
+      "internal_early_submit": "2026-11-14"
     }
   ]
 }

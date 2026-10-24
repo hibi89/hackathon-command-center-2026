@@ -62,3 +62,7 @@
 - [역할별 공식 일정 공시](https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/COMPETITION_SCHEDULE.md) 존재; 5/5 브랜치가 동일한 전체 일정표를 보유하며 README에 링크가 있음.
 - 관측 HEAD: `main b58533ac7e632706a95d807de5ced6497b5e46b0`, `lead/paypal 62efc0293af5aef6ddd43480f3349f7dba728646`. 세 feature별 최신 SHA는 [통합 검수 보고서](../docs/audits/REPOSITORY_AUDIT_20261024.md) 참고.
 - 주제·참가/기능·실 API·실서비스·최종 제출의 기존 상태 **변경 없음**. 문서 링크·검증 개선만 완료.
+
+## 2026-10-24 — PayPal 총괄 기능별 자체 일정 업데이트
+- [lead/paypal 일정 5절](https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/COMPETITION_SCHEDULE.md)에 10/24~26 Sandbox 접근·주제/범위 검증, quote-payment 10/27~11/01, delivery 10/29~11/04, subscriptions 10/30~11/05, 통합 11/06~09, 내부 조기 제출 11/11 권고 기록.
+- 조회 HEAD `a7fb08d141f40455606816bbc15520a0f925134d`; **사용자 승인 전 일정 초안**, API/코드/Devpost 제출 성공 아님.

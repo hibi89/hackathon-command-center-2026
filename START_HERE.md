@@ -107,3 +107,9 @@
 - [13개 AI 채팅방별 인수인계 프롬프트](docs/CHAT_TRANSITION_PROMPTS_13.md)에 **13개 독립형 프롬프트**를 모아두었다. 새 채팅을 열고 역할에 맞는 프롬프트 1개 전체를 첫 메시지로 전송한다.
 - 모두 자기 소유 브랜치의 최신 HEAD를 먼저 조회하고 전용 HANDOFF → STATUS → OPERATIONS → 공식 일정·코드·CI를 읽게 한다.
 - 다른 채팅으로 작업 상태가 자동 전송되지 않으므로 GitHub 메시지함·총괄 보고를 직접 조회한다. 과거 SHA와 현재 원격 HEAD가 충돌하면 현재 증거가 우선.
+
+## 2026-10-24 — 대회별 새 세부 일정 확인
+- [KIC 자체 역산 계획](https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/roles/lead/AUDIT_EXECUTION_PLAN_20261024.md): 11/10 내부 조기 제출 목표, **사용자 승인 전**.
+- [PayPal 자체 기능 일정](https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/COMPETITION_SCHEDULE.md) 5절: 11/11 조기 제출 목표, **사용자 승인 전**.
+- [UGREEN 통합 일정](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/COMPETITION_SCHEDULE.md): 11/14 조기 제출 목표, **세부 기능별 자체 계획은 최신 확인 시점 미발견**.
+- 위 계획은 실제 개발 착수·완료·플랫폼 접수의 증거가 아니다. 3총괄의 최신 HEAD를 재조회하고 제출·진척 정보를 확인하여 통합 STATUS/HANDOFF 동기화.

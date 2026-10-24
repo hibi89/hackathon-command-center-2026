@@ -54,3 +54,8 @@
 - [역할별 공식 일정 공시](https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/COMPETITION_SCHEDULE.md) 존재; 5/5 브랜치가 동일한 전체 일정표를 보유하며 README에 링크가 있음.
 - 관측 HEAD: `main 1300b9b31a5b86792d15ed7a2dce7c24849dbd87`, `lead/kic 25fe5f60642ad022343da68ae01535713436dcf9`. 세 feature별 최신 SHA는 [통합 검수 보고서](../docs/audits/REPOSITORY_AUDIT_20261024.md) 참고.
 - 주제·참가/기능·실 API·실서비스·최종 제출의 기존 상태 **변경 없음**. 문서 링크·검증 개선만 완료.
+
+## 2026-10-24 — KIC 총괄 자체 세부 일정 업데이트
+- [AUDIT_EXECUTION_PLAN_20261024.md](https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/roles/lead/AUDIT_EXECUTION_PLAN_20261024.md) 게시 확인. `lead/kic` 조회 HEAD `d081a59c62e5686fac93f9f0ec97e86f79832ccb`.
+- 기획서 중심 A안 65~70% / 소규모 구현 30~35%는 **총괄 제안**. 사용자 확정 아님.
+- 10/25 기획서 실물 확인·11/10 내부 조기 제출. 개발/실API/DAKER 최종 제출은 미확인.

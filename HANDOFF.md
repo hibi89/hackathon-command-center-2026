@@ -87,3 +87,9 @@
 - 새 채팅에는 해당 항목 **하나만 복사**해 첫 메시지로 전송. 원격 HEAD·대회 규정·제출 증거 재검증.
 - PayPal 총괄에는 이번 작성 전 세부 개발 일정 후속 커밋이 있었으므로 특정 SHA를 박제하지 않고 **실제 최신 lead/paypal HEAD**와 고정 보고서를 우선하도록 했다.
 - 이번 작업은 통합 운영 문서만 추가. 각 제품 코드·다른 저장소의 기존 개발 내용 변경 없음. 자동 동기화 구현 아님.
+
+## 2026-10-24 KST — 대회 총괄별 자체 개발 일정 확인 (사용자 지시 이후)
+- **KIC:** [총괄 실행계획](https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/roles/lead/AUDIT_EXECUTION_PLAN_20261024.md) 작성. `lead/kic` 원격 `d081a59c62e5686fac93f9f0ec97e86f79832ccb`. 10/25 PDF 실물 검토→10/26 데이터 계약 승인안→10/27~31 최소 기술 검증→11/01~09 기획서 품질 개선→**11/10 내부 조기 제출**. PDF 제출 우선 전략 A안은 **총괄 권고·사용자 최종 승인 전**. 실제 파일 검수/팀 전환/제출 완료 미검증.
+- **PayPal:** [lead/paypal 자체 기능별 실행 일정](https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/COMPETITION_SCHEDULE.md) 5절 확인. `lead/paypal` 원격 `a7fb08d141f40455606816bbc15520a0f925134d`. 10/24~26 주제/Sandbox 검증, 10/27~11/01 quote-payment, 10/29~11/04 delivery, 10/30~11/05 subscriptions, 11/06~09 통합·테스트, **11/11 내부 조기 제출**. 잠정 3기능·개발 순서는 **사용자 미승인**. Sandbox/영상/Devpost 실제 수행 미확인.
+- **UGREEN:** [기존 3대회 공식 일정표](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/COMPETITION_SCHEDULE.md)는 존재하지만 `lead/ugreen` 원격 `1fdcabc12cb5f226ca27ddeb0dbd8c339457c8ea` 기준 **추가로 작성한 대회 전용 날짜별 세부 실행계획은 아직 확인되지 않음**. 담당 총괄은 규격/CLI 조사→3기능 및 Round 1 PDF·ZIP 일정을 제안하고 자신에게 맡겨진 진행을 보고해야 한다. **11/14 내부 조기 제출 목표** 유지.
+- 사용자가 세 대회 담당 총괄들에게 일정 작성 지시. 통합 총괄은 **승인/제출/개발이 완료되었다고 간주하지 않고** 자체 계획과 3대회 연속 마감 충돌을 교차 검토한다.

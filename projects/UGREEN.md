@@ -60,3 +60,7 @@
 - [역할별 공식 일정 공시](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/COMPETITION_SCHEDULE.md) 존재; 5/5 브랜치가 동일한 전체 일정표를 보유하며 README에 링크가 있음.
 - 관측 HEAD: `main d8cd806cb2b3842a80a571fd09910ec370e2de17`, `lead/ugreen 1fdcabc12cb5f226ca27ddeb0dbd8c339457c8ea`. 세 feature별 최신 SHA는 [통합 검수 보고서](../docs/audits/REPOSITORY_AUDIT_20261024.md) 참고.
 - 주제·참가/기능·실 API·실서비스·최종 제출의 기존 상태 **변경 없음**. 문서 링크·검증 개선만 완료.
+
+## 2026-10-24 — UGREEN 자체 세부 일정 확인 대기
+- [총괄 브랜치 기본 일정](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/COMPETITION_SCHEDULE.md)는 공시되었으나 조회 HEAD `1fdcabc12cb5f226ca27ddeb0dbd8c339457c8ea` 기준 새로운 기능별/예선 실행계획은 미확인.
+- 내부 조기 목표 11/14, 공식 11/16 16:45 KST 유지. 총괄의 추가 문서 작성 이후 원격 SHA·제출 규격·일정 충돌 검수 필요.
