@@ -8,7 +8,7 @@
     "kind": "coordination_docs",
     "auto_update": false,
     "verified_as_of": "2026-10-24 KST",
-    "last_update_reason": "KIC lead report received and independently verified"
+    "last_update_reason": "PayPal Devpost registration evidenced by participant dashboard screenshot"
   },
   "projects": [
     {
@@ -45,7 +45,7 @@
       "id": "paypal",
       "title": "Freelancer Contract and Payment AI Agent",
       "topic_confirmed": false,
-      "registration": "not_registered_user_report",
+      "registration": "registered_devpost_participant_dashboard_screenshot",
       "repo": null,
       "repo_exists": false,
       "implemented_and_verified_features": 0,
@@ -55,7 +55,10 @@
       "production": "not_deployed",
       "submitted": false,
       "submission_deadline_kst": "2026-11-13T05:00:00+09:00",
-      "official_url": "https://paypalaihackathon.devpost.com/"
+      "official_url": "https://paypalaihackathon.devpost.com/",
+      "registration_evidence": "User screenshot after Register shows 'My hackathon projects' and Create project, 2026-10-24 KST",
+      "registration_backend_independently_verified": false,
+      "project_created": false
     },
     {
       "id": "ugreen",
