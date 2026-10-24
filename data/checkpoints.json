@@ -47,7 +47,7 @@
     "existing_four_chat_structure_unchanged": true,
     "reinvestment_policy": "optional_personal_reward_after_official_result; any_charge_or_hardware_purchase_requires_fresh_approval",
     "last_supervisor_sync_report": "docs/audits/SUPERVISOR_FOLLOWUP_20261024.md",
-    "latest_supervisor_sync_kst": "2026-10-24 KST, follow-up snapshot",
+    "latest_supervisor_sync_kst": "2026-10-24 KST, concurrent lead follow-up",
     "cross_contest_original_capacity": {
       "date_start": "2026-10-25",
       "date_end": "2026-11-11",
@@ -69,48 +69,52 @@
     "supervision_charter_approved_kst": "2026-10-24",
     "last_governance_update_reason": "User defined integrated head as independent oversight chief: audit leads' actual work, add missing critical tasks, identify/stop waste, track corrective actions persistently.",
     "supervision_last_audit_id": "SUPERVISOR-20261024-FOLLOWUP",
-    "supervision_open_findings": 8,
-    "supervision_followup_status": "KIC_LEAD_ACKNOWLEDGED_AND_ONE_P2_CLOSED; PAYPAL_D14_CI_PENDING_AND_LICENSE_BLOCKED; UGREEN_RELEASE_PENDING_AND_OFFICIAL_REPORT_STALE",
+    "supervision_open_findings": 7,
+    "supervision_followup_status": "KIC_ROOT_GUIDE_VERIFIED_FIXED_90_PRIOR_TESTS; PAYPAL_D14_60PCT_179_CI_PASS_LICENSE_BLOCKED; UGREEN_G10_ACK_OFFLINE_CODE_CI_PENDING_ROUND1_DRAFT",
     "supervision_snapshot": {
       "date_kst": "2026-10-24",
       "audit_id": "SUPERVISOR-20261024-FOLLOWUP",
       "source_report": "docs/audits/SUPERVISOR_FOLLOWUP_20261024.md",
       "contests": {
         "kic": {
-          "sha": "052b7b4152c3108f2851823f57c4db202a8f5b3f",
+          "sha": "cf5552c840588f28f26b0649fb00ac2098efe71e",
           "done": 16,
           "partial": 0,
           "blocked": 3,
           "not_started": 41,
           "days": 60,
-          "ci_job": 40078759840,
-          "offline_tests_reported": 90
+          "last_verified_code_ci": 40078759840,
+          "latest_source_ci": "NOT_VERIFIED"
         },
         "paypal": {
-          "sha": "d6dd022ab7b095d3a3079d66bb2ea654761a7e66",
+          "sha": "55c0c50a89e094f07e6bc2dec3cb608062aee733",
           "done": 11,
           "partial": 2,
           "blocked": 1,
           "not_started": 4,
           "days": 18,
-          "D14_progress_pct": 20,
-          "ci": "current_D14_unverified"
+          "D14_progress_pct": 60,
+          "last_verified_code_ci": 40079069519,
+          "offline_tests_reported": 179,
+          "license": "OWNER_DECISION_PENDING"
         },
         "ugreen": {
-          "sha": "ead21d523432c4b2ac17fabaed0da281394b0386",
+          "sha": "256a766d63eac38a1c6b181d29e3d74e20f9709a",
           "done": 2,
           "partial": 12,
           "blocked": 3,
           "not_started": 7,
           "days": 24,
-          "offline_tests_reported": 200,
-          "preview_submission_status": "draft_not_approved"
+          "latest_G10_ci": "PENDING",
+          "last_G9_offline_ci": 40078079863,
+          "round1_submission": "NOT_APPROVED_NOT_SUBMITTED"
         }
-      }
+      },
+      "reported_time_context_kst": "KST, concurrent three-lead follow-up; later HEAD may advance"
     },
     "latest_lead_message_handoff": "docs/LEAD_MESSAGES_HANDOFF_20261024.md",
     "supervisor_message_dispatch_status": "3_OF_3_CHILD_LEAD_BRANCHES_PUBLISHED_AND_CI_PASSED",
-    "next_supervisor_action": "Recheck latest heads, PayPal D14 CI/root LICENSE, UGREEN G9 top-level report/release approval, KIC DAKER authenticated rights and final-submit receipt.",
+    "next_supervisor_action": "On next user instruction re-fetch all lead heads; check KIC cf5552c code CI and closeout; PayPal latest head CI and license approval/real Sandbox+AI; UGREEN G10 CI and official release approval/receipt.",
     "supervisor_dispatch_kst": "2026-10-24",
     "supervisor_dispatched_from": "main",
     "lead_message_dispatch": {
@@ -158,7 +162,7 @@
       }
     },
     "supervision_total_findings": 9,
-    "supervision_closed_findings": 1
+    "supervision_closed_findings": 2
   },
   "projects": [
     {
@@ -169,7 +173,7 @@
       "repo": "hibi89/hibi89-kic-proofinvest",
       "repo_exists": true,
       "main_head_sha": "778f18c94048490aa6996973161bc720cf57f758",
-      "lead_head_sha": "052b7b4152c3108f2851823f57c4db202a8f5b3f",
+      "lead_head_sha": "cf5552c840588f28f26b0649fb00ac2098efe71e",
       "implemented_and_verified_features": 0,
       "planned_features": 3,
       "offline_tests_reported_passed": 26,
@@ -269,7 +273,7 @@
       "last_verified_lead_ci_url": "https://github.com/hibi89/hibi89-kic-proofinvest/actions/runs/40078509037",
       "last_verified_lead_ci_sha": "c965a59d2ae7e86aae1a1c10cbd6b0caedb480d5",
       "last_verified_lead_asof_kst": "2026-10-24 17:19 KST approximate snapshot",
-      "latest_supervisor_observation": "SUPERVISOR-20261024-FOLLOWUP: 16/0/3/41 DONE/PARTIAL/BLOCKED/NOT_STARTED; source docs/audits/SUPERVISOR_FOLLOWUP_20261024.md; no final submission",
+      "latest_supervisor_observation": "2026-10-24 updated during concurrent lead development; see docs/audits/SUPERVISOR_FOLLOWUP_20261024.md final addendum",
       "daker_preflight_progress": {
         "date_kst": "2026-10-25",
         "percent_complete": 60,
@@ -291,7 +295,7 @@
       ],
       "supervisor_message_url": "https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/FROM_HACKATHON_COMMAND.md",
       "supervisor_message_acknowledged": true,
-      "supervisor_message_applied": "PARTIAL_KIC_002_CLOSED_DAKER_BLOCKED"
+      "supervisor_message_applied": "PARTIAL_KIC_002_CLOSED_DAKER_BLOCKED; LATEST_NEW_CODE_CI_PENDING"
     },
     {
       "id": "paypal",
@@ -325,7 +329,7 @@
       "repo_creation_verified": true,
       "repo_visibility": "public",
       "main_head_sha": "bed3fa67086caaa63da79810c00b44638f0a7346",
-      "lead_head_sha": "d6dd022ab7b095d3a3079d66bb2ea654761a7e66",
+      "lead_head_sha": "55c0c50a89e094f07e6bc2dec3cb608062aee733",
       "lead_branch": "lead/paypal",
       "feature_head_shas": {
         "feature/quote-payment": "876d7d1b5935b91e6baddea36abdb8e50602c4fb",
@@ -369,7 +373,7 @@
       "last_verified_lead_ci_url": "https://github.com/hibi89/hibi89-paypal-ai-hackathon/actions/runs/40078519603",
       "last_verified_lead_ci_sha": "4098eb6663317a1d00c737d23253c5c26cb38c72",
       "last_verified_lead_asof_kst": "2026-10-24 17:19 KST approximate snapshot",
-      "latest_supervisor_observation": "SUPERVISOR-20261024-FOLLOWUP: 11/2/1/4 DONE/PARTIAL/BLOCKED/NOT_STARTED; source docs/audits/SUPERVISOR_FOLLOWUP_20261024.md; no final submission",
+      "latest_supervisor_observation": "2026-10-24 updated during concurrent lead development; see docs/audits/SUPERVISOR_FOLLOWUP_20261024.md final addendum",
       "daily_progress_latest": {
         "daily_progress_ledger_active": "PPL-D09",
         "D01": 100,
@@ -402,8 +406,8 @@
         "SUP-PAYPAL-003"
       ],
       "supervisor_message_url": "https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/FROM_HACKATHON_COMMAND.md",
-      "supervisor_message_acknowledged": "INFERRED_SCOPE_WORK_NOT_EXPLICIT_ID_REPLY",
-      "supervisor_message_applied": "D14_20_PERCENT_LICENSE_PENDING"
+      "supervisor_message_acknowledged": "INFERRED_SCOPE_WORK_NO_PER_FINDING_REPLY",
+      "supervisor_message_applied": "D14_60_PERCENT_CI_179_PRIOR_SHA_SUCCESS_LICENSE_DECISION_PENDING"
     },
     {
       "id": "ugreen",
@@ -431,7 +435,7 @@
       "repo_creation_verified": true,
       "repo_visibility": "public",
       "main_head_sha": "a361824451c25dc101c8cc4b2a62ed8f017154e4",
-      "lead_head_sha": "ead21d523432c4b2ac17fabaed0da281394b0386",
+      "lead_head_sha": "256a766d63eac38a1c6b181d29e3d74e20f9709a",
       "lead_branch": "lead/ugreen",
       "feature_head_shas": {
         "feature/missing-files": "4e74dc7b187e70ad72e906e042fdbf4c140940f8",
@@ -536,7 +540,7 @@
       "last_verified_lead_ci_url": "https://github.com/hibi89/hibi89-ugreen-nas-hackathon/actions/runs/40078635510",
       "last_verified_lead_ci_sha": "ead21d523432c4b2ac17fabaed0da281394b0386",
       "last_verified_lead_asof_kst": "2026-10-24 17:19 KST approximate snapshot",
-      "latest_supervisor_observation": "SUPERVISOR-20261024-FOLLOWUP: 2/12/3/7 DONE/PARTIAL/BLOCKED/NOT_STARTED; source docs/audits/SUPERVISOR_FOLLOWUP_20261024.md; no final submission",
+      "latest_supervisor_observation": "2026-10-24 updated during concurrent lead development; see docs/audits/SUPERVISOR_FOLLOWUP_20261024.md final addendum",
       "daily_progress_latest": {
         "date": "2026-10-24",
         "day_work": 100,
@@ -563,8 +567,8 @@
         "SUP-UGREEN-003"
       ],
       "supervisor_message_url": "https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/FROM_HACKATHON_COMMAND.md",
-      "supervisor_message_acknowledged": false,
-      "supervisor_message_applied": "NOT_VERIFIED"
+      "supervisor_message_acknowledged": true,
+      "supervisor_message_applied": "G10_LEAD_ACKNOWLEDGED_SUPO_001_002; 003_REPORT_FRESHNESS_VERIFIED_CLOSED; NEW_CODE_CI_PENDING"
     }
   ]
 }
