@@ -32,3 +32,9 @@
 ## 현행 2026-10-24 KST — 4개 채팅 및 직접 개발 보고
 - 각 대회 총괄이 개발자를 겸하므로 **작업자 메시지 중계 단계는 폐지**. 중앙은 대회별 lead 브랜치의 `docs/roles/lead/LEAD_ACTIVE_WORK.md`, `STATUS.md`, `HANDOFF.md`, `TO_HACKATHON_LEAD.md`와 실제 원격 SHA/테스트/공식 제출 증거만 확인.
 - 기존 feature 브랜치는 이전 실행 증거이며 새 소스는 lead에서 직접 변경. 테스트 자체 검수·CI 및 Production/제출 여부를 구분하여 기록. 작업자용 과거 디스패처는 현재 실행 지시 아님.
+
+## 2026-10-24 KST — PayPal 매 작업 종료 일차 100%·남은 시간 보고 고정
+- 사용자 명시 지시: PayPal 개발 총괄은 매 실제 작업을 마칠 때마다 **그날 계획된 검증 완료 기준을 100%로 보고 진행 X%/100%, 남은 예상 Y시간, 남은 안전 확보 Z시간, 실측/미계측, 미완료·이월·증거**를 보고한다. [정식 규약](https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/DAILY_PROGRESS_REPORTING.md) / [PayPal 최신 공식 JSON 원장](https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/data/paypal_daily_progress.json).
+- **원장 현재 기록:** PPL-D01 100%/100%, 남은 예상 0h/안전 0h (quote API 오프라인 부분만 완료); 현재 활성 **PPL-D02 0%/100%, 남은 예상 5h/안전 9h** (영속 DB·CAS·중복 점유/재시작 검증 미착수). 실측 시간 NOT_MEASURED. **전체 3기능/Devpost 완성률을 뜻하지 않는다.**
+- 진행률은 증거가 검증된 체크 항목 가중치 합계이며 실제 시간 소모로 증가하지 않는다. 블로커나 예상시간 초과 때 남은 시간과 이월을 재산정하고 과소견적 하지 않는다. 최근 PayPal 정책/테스트 커밋 `b0557a82a6f9a552e5749b0c41bd8d0074cae4dc`; GitHub Actions run 40064258097의 완료 여부는 확인 후 별도 판정. 이전 오프라인 34개 회귀 테스트 CI 성공은 검증됨.
+- 상위 총괄은 [PayPal LEAD_ACTIVE_WORK](https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/roles/lead/LEAD_ACTIVE_WORK.md)와 [상위 공식 보고](https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/roles/lead/TO_HACKATHON_LEAD.md)에서 가장 최근의 X%·Y/Z시간·TESTED/NOT_TESTED·원격 SHA를 직접 확인해 상황실 일정/위험을 조정한다. 각 대회 원본 변경 시 자동 동기화되지 않음.
