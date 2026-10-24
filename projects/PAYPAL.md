@@ -35,3 +35,11 @@
 
 ## 2026-10-24 등록 증거
 등록 절차 화면 → `Register` 실행 → Devpost PayPal AI Hackathon 내 `My hackathon projects` 페이지 진입. 아직 프로젝트가 없어 `Create project`가 나타남. **참가 등록과 작품 최종 제출은 별개의 단계**. 계정 식별정보/개인정보를 공개 GitHub에 업로드하지 않음.
+
+## 2026-10-24 — 공식 규정/기술 검토 추가
+- 전체 총괄이 **Overview, Rules, Resources, FAQs, Schedule, Updates 및 PayPal Sandbox 공식 안내**를 직접 읽어 필수 요건과 미검증 항목을 분리했다.
+- [공식 규정·심사·기술·설계 A/B 비교 보고서](../docs/research/PAYPAL_OFFICIAL_REVIEW_20261024.md)를 참조한다. **PayPal + AI 모두 핵심 기능**이어야 하고 Sandbox 실제 흐름 검증이 최우선.
+- 심사는 내부 적합성 pass/fail 이후 동일 비중 다섯 기준(기술/디자인/효용/혁신/발표). 별도 본선 참가자 제출일은 없다.
+- 기존 3기능 아이템은 **잠정 유지**. 사용자 승인 전 축소/확정하지 않는다. 총괄 권고는 결제 코어를 우선 실제 검증하고 추가 모듈을 순차 구현하는 B안.
+- 참가 자체는 확인되었으나 **PayPal Developer 계정 실제 로그인·Sandbox API·Devpost 작품 생성·공개 코드·영상·최종 제출은 미검증/미완료**.
+- PayPal은 한국 실계정의 Developer/Sandbox 접근 가능 여부를 사전 확인해야 한다(FAQs는 국가별 가입 불가 가능성을 명시).
