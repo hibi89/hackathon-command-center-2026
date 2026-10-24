@@ -1,3 +1,5 @@
+> **UGREEN 공식 일정/규칙 재검증 — 2026-10-24:** [중앙 공식 이벤트 공시](docs/contests/UGREEN_EVENT_OFFICIAL_FACTS_20261024.md). Devpost 공식 11/15 23:45 **PST** = **11/16 16:45 KST** (Round1), 11/30 23:45 PST = 12/01 16:45 KST (Round2). NAS 실증은 본선 조건. 사용자 Codex 공식 도구 설치·로드 보고는 **실제 Creator 생성 완료 아님**. PDF·ZIP는 검증된 DRAFT이지만 제출 승인/접수 영수증 없음. 스냅샷은 공식 Rules 갱신 시 재검증.
+
 > **2026-10-24 독립 감사 우선순위:** KIC 11/08 PDF 동결 완료→DAKER 11/09 권한 확인/11/10 내부 제출 목표, 공식 11/12 10:00 KST. PayPal D11/D12 오프라인 완료→D13 합성 통합 검수 후 실 Sandbox+AI·기능 데모·LICENSE 우선, 공식 11/13 05:00. UGREEN Round1 PDF/ZIP DRAFT 생성→법적/문구·규격 최종 확인/사용자 승인 제출 우선, 공식 11/16 16:45. **기존 원본 일정은 그대로 보존**. [상세](docs/audits/SUPERVISOR_PROGRESS_REVIEW_20261024_1719.md).
 
 > **통합 총괄 후속 검수 2026-10-24 15:36 KST:** KIC 11/03 PDF 1~4쪽 **100%**, DAKER **60%**, 다음 11/04 0%·**82 PASS**; PayPal D08 **100%**, 다음 D09 0%·**131 PASS+로컬 Chromium**; UGREEN G7 Skill 패키징 사전검사 **오프라인 완료**, **131 PASS**, G1 공식 SDK 여전히 0%/BLOCKED. **출품 3건 모두 미검증/미제출**. 10/25~11/11 원래 일정표 138h 기본/304.5h 보수 확보는 **잔여시간 아님**. [근거·우선순위](docs/audits/TRIPLE_HACKATHON_CAPACITY_AND_READINESS_20261024.md).
