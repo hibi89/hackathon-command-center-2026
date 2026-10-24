@@ -262,6 +262,14 @@
         "errors": 1,
         "previous_pass_sha": "9c34fb844a600c47e9268ab6126ca9e70d785882",
         "source": "docs/audits/SUPERVISOR_LIVE_SYNC_20261024_NIGHT.md"
+      },
+      "paypal_post_audit": {
+        "observed_kst": "2026-10-25 00:07",
+        "sha": "a13b60eb1f5a129b5b0965331977de9ef1adaa2e",
+        "ci_run": 40105474259,
+        "conclusion": "success",
+        "node_tests": 325,
+        "live_sandbox_gemini": "NOT_TESTED"
       }
     }
   },
@@ -444,7 +452,7 @@
       "repo_creation_verified": true,
       "repo_visibility": "public",
       "main_head_sha": "bed3fa67086caaa63da79810c00b44638f0a7346",
-      "lead_head_sha": "8748dbb262a4d5df0f449642ab680a15561881f2",
+      "lead_head_sha": "a13b60eb1f5a129b5b0965331977de9ef1adaa2e",
       "lead_branch": "lead/paypal",
       "feature_head_shas": {
         "feature/quote-payment": "876d7d1b5935b91e6baddea36abdb8e50602c4fb",
@@ -459,7 +467,7 @@
       "schedule_published_branches": 5,
       "schedule_verified_date_kst": "2026-10-24",
       "verified_live_features": 0,
-      "lead_ci": "success; CI 40104444669; details in docs/audits/SUPERVISOR_LIVE_SYNC_20261024_NIGHT.md",
+      "lead_ci": "SUCCESS latest SHA, GitHub Actions 40105474259: 325 Node tests PASS and local Chromium, external API NOT_TESTED",
       "ci_summary": "Remote lead 323/323 Node offline and local Chromium CI success; real Sandbox/Gemini NOT_TESTED. 212/5 main divergence.",
       "internal_plan_url": "https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/PAYPAL_EXECUTION_PLAN_20261024.md",
       "internal_plan_status": "lead_execution_plan_user_approved_as_reported",
@@ -526,14 +534,17 @@
       "latest_remote_audit": {
         "as_of_kst": "2026-10-24",
         "source": "docs/audits/SUPERVISOR_LIVE_SYNC_20261024_NIGHT.md",
-        "head": "8748dbb262a4d5df0f449642ab680a15561881f2",
+        "head": "a13b60eb1f5a129b5b0965331977de9ef1adaa2e",
         "done": 12,
         "partial": 2,
         "blocked": 1,
         "not_started": 3,
         "scheduled_days": 18,
         "official_submission": false,
-        "live_external_verified": false
+        "live_external_verified": false,
+        "latest_ci_run": 40105474259,
+        "latest_ci_conclusion": "success",
+        "latest_test_count": 325
       }
     },
     {

@@ -48,7 +48,7 @@
       "dispatched_to": "https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/FROM_HACKATHON_COMMAND.md",
       "dispatched_child_head": "4098eb6663317a1d00c737d23253c5c26cb38c72",
       "dispatched_kst": "2026-10-24",
-      "last_reviewed_sha": "8748dbb262a4d5df0f449642ab680a15561881f2",
+      "last_reviewed_sha": "a13b60eb1f5a129b5b0965331977de9ef1adaa2e",
       "last_review_report": "docs/audits/SUPERVISOR_LIVE_SYNC_20261024_NIGHT.md"
     },
     {
@@ -240,7 +240,7 @@
       "verified_after_sha": null,
       "review_trigger": "before_paypal_final_devpost_submission",
       "approval_required": true,
-      "last_reviewed_sha": "8748dbb262a4d5df0f449642ab680a15561881f2",
+      "last_reviewed_sha": "a13b60eb1f5a129b5b0965331977de9ef1adaa2e",
       "last_review_report": "docs/audits/SUPERVISOR_LIVE_SYNC_20261024_NIGHT.md"
     },
     {
@@ -365,6 +365,14 @@
       "errors": 1,
       "previous_pass_sha": "9c34fb844a600c47e9268ab6126ca9e70d785882",
       "source": "docs/audits/SUPERVISOR_LIVE_SYNC_20261024_NIGHT.md"
+    },
+    "paypal_post_audit": {
+      "observed_kst": "2026-10-25 00:07",
+      "sha": "a13b60eb1f5a129b5b0965331977de9ef1adaa2e",
+      "ci_run": 40105474259,
+      "conclusion": "success",
+      "node_tests": 325,
+      "live_sandbox_gemini": "NOT_TESTED"
     }
   },
   "official_references": [

@@ -36,3 +36,8 @@
 - 실패 테스트: `test_root_contract_header.RootContractHeaderIntegrityTests.test_future_append_to_contract_body_preserves_header`. `tests/test_root_contract_header.py` 구형 positive fixture는 `ROOT_CONTRACT_NOTICE + ROOT_CONTRACT_TITLE + 'old notes' 3000줄`뿐이라 최신 `scripts/master_progress.py`가 필수로 검사하는 본문 5개 섹션/채팅 복원 명령이 모두 누락됨. 새로운 필수 정책 본문 무결성 검사가 이 샘플을 거부하는 것이 자연스러움.
 - **시정 권고 (KIC 총괄 소유):** 실제 유효한 `KIC_HANDOFF_CONTRACT.md`를 읽고 뒤에 무해한 메모를 붙이는 positive fixture로 교체. 고의 결손/undefined/중복 제목이 거절되는 별도 테스트는 유지. 이후 최신 원격 SHA 전체 오프라인 CI 성공 확인. **해당 코드나 테스트는 중앙이 수정하지 않음.**
 - 사유: 마지막 관찰 직후에도 KIC가 독립적으로 커밋할 수 있으므로 이 SHA는 시점 스냅샷. 이번 감사에서 PayPal/UGREEN 브랜치는 해당 오류와 무관; 외부 API/실제 제출과 관계없음.
+
+## 2026-10-25 00시경 — PayPal 새 커밋 독립 재조회
+
+- PayPal `lead/paypal@a13b60eb1f5a129b5b0965331977de9ef1adaa2e`로 새 코드/인수인계 진전. [GitHub Actions #40105474259](https://github.com/hibi89/hibi89-paypal-ai-hackathon/actions/runs/40105474259) **same SHA SUCCESS**, 로그 **325/325 Node PASS** 및 로컬 Chromium 단계. 직전 본 감사의 `8748dbb2` **323/323**은 과거 시점 기록임.
+- 금번 PayPal 커밋은 보안 회복 상태 문서 갱신; 실 PayPal Sandbox/Gemini/공개 HTTPS/deploy 증거는 별도로 확보되지 않았으므로 본래 P0 차단 유지. D03 차단 및 심사소스 분기 시정 `SUP-PAYPAL-001/004` 종결 아님.
