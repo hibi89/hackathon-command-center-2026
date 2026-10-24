@@ -1,3 +1,5 @@
+> **2026-10-24 최신 수뇌부 후속 검수:** [3대회 독립 점검](docs/audits/SUPERVISOR_FOLLOWUP_20261024.md) · [시정원장](data/supervisor_findings.json). KIC 16/0/3/41(수정된 루트 진행표 확인), PayPal 11/2/1/4(D14 20% / 신규 CI 미검증), UGREEN 2/12/3/7(200 오프라인 PASS/접수 미승인). **9건 지적 중 1건만 완료 검증**. 공식 접수 3개 모두 미완료. **아래 기존 오래된 스냅샷 수치보다 대회별 최신 원격 정본을 우선**한다. 새 채팅은 [CHAT_BOOTSTRAP](CHAT_BOOTSTRAP.md) → [상시 감독 헌장](docs/SUPERVISOR_MANDATE.md) → 이 최신 감사와 세 대회 원장으로 복원.
+
 > **새 채팅방 인수인계 완료 (2026-10-24 KST):** 사용자 명령대로 **KIC·PayPal·UGREEN 총괄 세 저장소 모두** `lead/*/docs/FROM_HACKATHON_COMMAND.md` 수뇌부 직접 전달문과 `CHAT_BOOTSTRAP.md` 상단 필독 경로를 실제 원격 게시했다. **세 담당 저장소 CI 모두 해당 SHA에서 SUCCESS**. [세 팀별 링크·커밋·다음 감독 절차](docs/LEAD_MESSAGES_HANDOFF_20261024.md). 기존 시정 8건은 **전달됨·담당 수용/이행 미검증**, 새 채팅은 원장·답신·실제 테스트를 계속 감사해야 한다. 아래의 기존 상태 수치는 과거 스냅샷이다.
 
 > **2026-10-24 감사 직후 CI 추적:** PayPal D13 `673f47a1e47b` [175/175 Node+로컬 Chromium PASS](https://github.com/hibi89/hibi89-paypal-ai-hackathon/actions/runs/40077804576) **새 HEAD 검증 성공**. 다만 담당 원장 D13은 아직 0% NOT_STARTED라서 **DONE10/18 그대로**. 실 Sandbox/AI는 계속 차단. [감사 보충](docs/audits/SUPERVISOR_PROGRESS_REVIEW_20261024_1719.md).
