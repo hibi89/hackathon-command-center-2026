@@ -1,3 +1,5 @@
+> **[신규 공식 대회정보 2026-10-24]** [KIC 공고·최종순위/인증서/포트폴리오 증빙 기준](../docs/research/KIC_OFFICIAL_RESULTS_RANKING_CERTIFICATES_20261024.md), [KIC 리드 상세 공시](https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/COMPETITION_RANKING_CERTIFICATES_PORTFOLIO_20261024.md). 예선 2026-12-03 **12팀 본선**, 2027-01-11 예정 최종 **6팀 수상**; 전체 참가자 공식 등수 공개/인증서 적용은 미확인, 실제 접수·진출·수상 없음. KIC 리드 당시 29 DONE/3 BLOCKED/28 NOT_STARTED(제품 완성률 아님). 
+
 > **2026-10-24 독립 재검수:** `lead/kic@8e2af4f133e2`, [CI 82 PASS](https://github.com/hibi89/hibi89-kic-proofinvest/actions/runs/40077778024). 날짜별 DONE14/BLOCKED2/NOT_STARTED44; 내부 10쪽 PDF candidate QA/비공개 백업 6파일, 11/09 권한확인 READY. **DAKER 60% 팀장 제출권한 차단**, DART 90% 공식 viewer 확인 차단; 최종 제출 미실행. [감사](../docs/audits/SUPERVISOR_PROGRESS_REVIEW_20261024_1719.md).
 
 > **KIC 일별 작업시간 통합 열람 (2026-10-24 13:29:50 KST)**: [원본 60일 시간표](https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/roles/lead/DAILY_CAPACITY_PLAN_20261024.md) · [통합 총괄 검수 기준](docs/KIC_DAILY_CAPACITY_OVERSIGHT_20261024.md). 원본 `lead/kic`는 KIC 총괄이 매 작업 주요 변경 시 최신화한다. 상위 총괄은 매 점검 시 **당일 작업·예비시간·이월·제출위험**을 반드시 확인한다. 과거 채팅/스냅샷 SHA보다 최신 브랜치가 우선한다. (본 공시는 새 제품 구현/제출 증거가 아님.)
