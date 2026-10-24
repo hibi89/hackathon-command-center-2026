@@ -1,3 +1,5 @@
+> **통합 총괄 최신 원격 검수 — 2026-10-24 14:39 KST:** 세 리드 최신 HEAD 및 CI 로그 확인. KIC 67 PASS(10/31 Risk 입력게이트 100%, DAKER 35%·DART 90% 차단), PayPal Node 102 PASS+로컬 Chromium UI E2E PASS(D03 0%, D04 80%, D05 100%; D06 정본 원장 아직 0%), UGREEN 합성 91 PASS(10/24 오프라인 100%, G1 공식 SDK 10/25 0%/최대 3h). **실 API·NAS/Production/Devpost 미검증**. [근거·원격 SHA·차단·다음 작업](docs/audits/CROSS_REPO_SUPERVISOR_SYNC_20261024.md).
+
 > **현행 승인(2026-10-24): 작업 순서 최적화 허용.** 당일 목표 검증 완료 후 선행 개발 또는 날짜 건너뛰기 가능. **의존성·BLOCKED·실제 증거·달력일 100% 분리** 필수. [상위 규약](docs/WORK_ORDER_FLEX_POLICY_20261024.md). 기존 2026 일정표·0원 예산·4채팅 유지.
 
 > **장기 총괄 범위 확장(2026-10-24):** 이 저장소는 기존 3개뿐 아니라 앞으로 참가하는 **모든 해커톤의 영구 통합 상황실**이다. [운영 헌장](docs/LONG_TERM_HACKATHON_COMMAND.md) · [2027 공식 일정·후보](docs/2027_HACKATHON_WATCHLIST.md) · [후보 JSON](data/future_hackathons.json). **현재 활성 개발 3개/4개 채팅은 그대로**, 2027 후보 2개는 **미등록**. 자동 감시·지출·신규 등록은 실행하지 않음.

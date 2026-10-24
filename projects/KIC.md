@@ -66,3 +66,11 @@
 ## [2026-10-24 KST] 4개 채팅 체계 완료 — KIC 총괄 직접 개발
 - 별도 기능 작업자 채팅 폐기. `lead/kic`가 직접 소스 개발·테스트·자체 검수·통합을 담당하며, 유일한 현재 작업 포인터는 `docs/roles/lead/LEAD_ACTIVE_WORK.md`. 기존 feature 브랜치는 작업 증거를 포함해 원본 보존. 이전 작업 지시서의 READY/IN_PROGRESS는 역사 상태이며 신규 실행권 없음.
 - 최신 확인 총괄 SHA: `ea811b883929502f31aceb5db23b6d7a502fb8c0`. Research 26 로컬 PASS는 작업자 보고이며 총괄 독립 검수/병합 전. 공식 제출 영수증 미확인.
+
+
+## 2026-10-24 14:39 KST — 통합 총괄 최신 원격 감독 스냅샷
+- 리드 원격: [lead/kic@fb5d9f3ad562](https://github.com/hibi89/hibi89-kic-proofinvest/commit/fb5d9f3ad5627323a0c28dfb6574a888d210094f); 최신 [GitHub CI 40066732288](https://github.com/hibi89/hibi89-kic-proofinvest/actions/runs/40066732288) **success**, 해당 오프라인 스코프 테스트 67개 통과.
+- 67/67 오프라인 Python 회귀·합성 CLI 및 수동 공시기록 데모 CI 성공. 10/31 Risk verified-only 입력 게이트 100%, 11/01 실제 Risk 산술 미구현. 외부 공시 인증/DAKER 제출·Production 미검증.
+- 차단/남은 계획시간: DAKER 계정·공식 PPTX: 10/25 과제 35%, 접근 후 순작업 1h+예비 2h; DART 공식 뷰어: 10/30 과제 90%, 접근 후 0.5h+예비 1h. **실제 소요시간 미계측.**
+- 다음 READY/검증 작업: 11/01 Risk 안전 계산(결측·0분모·음수자본) 선행 개발.
+- 중앙 근거: [통합 검수](../docs/audits/CROSS_REPO_SUPERVISOR_SYNC_20261024.md). 원본·공식 제출 상태를 변경하지 않았음.
