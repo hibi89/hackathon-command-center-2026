@@ -8,7 +8,7 @@
     "kind": "coordination_docs",
     "auto_update": false,
     "verified_as_of": "2026-10-24 KST, cross-repo audit snapshot at 17:19 with later observed commits",
-    "last_update_reason": "User instructed supervisor to post direct handoff messages to three contest leads before moving to fresh chat.",
+    "last_update_reason": "User asked chief to publish 3 lead priority messages directly to GitHub, not ask for manual pasting.",
     "first_read": "START_HERE.md",
     "update_protocol": "docs/CONTINUITY_PROTOCOL.md",
     "audit_report": "docs/audits/REPOSITORY_AUDIT_20261024.md",
@@ -46,8 +46,8 @@
     "contest_expansion_requires_user_explicit_decision": true,
     "existing_four_chat_structure_unchanged": true,
     "reinvestment_policy": "optional_personal_reward_after_official_result; any_charge_or_hardware_purchase_requires_fresh_approval",
-    "last_supervisor_sync_report": "docs/audits/SUPERVISOR_QUALITY_CHECK_20261024.md",
-    "latest_supervisor_sync_kst": "2026-10-24 KST lead source+CI quality follow-up",
+    "last_supervisor_sync_report": "docs/audits/CHIEF_DIRECT_DISPATCH_20261024_1912.md",
+    "latest_supervisor_sync_kst": "2026-10-24 19:12",
     "cross_contest_original_capacity": {
       "date_start": "2026-10-25",
       "date_end": "2026-11-11",
@@ -118,7 +118,7 @@
     },
     "latest_lead_message_handoff": "docs/LEAD_MESSAGES_HANDOFF_20261024.md",
     "supervisor_message_dispatch_status": "3_OF_3_CHILD_LEAD_BRANCHES_PUBLISHED_AND_CI_PASSED",
-    "next_supervisor_action": "Priority official eligibility gates: KIC DAKER submit rights, PayPal Sandbox+AI, UGREEN official Creator generation then entrant approval and Devpost. Next time fetch fresh heads.",
+    "next_supervisor_action": "On user-invoked lead work or chief audit, verify each lead reads [ACTIVE] dispatch and replies TO_HACKATHON_LEAD; then audit DAKER, Sandbox+AI, and official Creator evidence.",
     "supervisor_dispatch_kst": "2026-10-24",
     "supervisor_dispatched_from": "main",
     "lead_message_dispatch": {
@@ -166,7 +166,30 @@
       }
     },
     "supervision_total_findings": 10,
-    "supervision_closed_findings": 4
+    "supervision_closed_findings": 4,
+    "supervisor_direct_dispatch": {
+      "date_kst": "2026-10-24 19:12",
+      "state": "DIRECTLY_PUBLISHED_TO_3_LEAD_BRANCHES_BOOTSTRAP_AND_ACTIVE_DIRECTIVE_REMOTE_VERIFIED__LEAD_NEW_ACK_PENDING",
+      "report": "docs/audits/CHIEF_DIRECT_DISPATCH_20261024_1912.md",
+      "projects": {
+        "kic": {
+          "head": "1939724345341f3c5bbeb79778a1323aa8d1c82f",
+          "file": "https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/FROM_HACKATHON_COMMAND.md",
+          "priority": "DAKER_AUTHENTICATED_SUBMIT_RIGHTS_P0"
+        },
+        "paypal": {
+          "head": "ea9cd78a7b4609d55081277509bc0360c2e62374",
+          "file": "https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/FROM_HACKATHON_COMMAND.md",
+          "priority": "REAL_SANDBOX_AND_REAL_AI_P0"
+        },
+        "ugreen": {
+          "head": "5ad578d5d7dca337eb5f3fc4409f6badbef5c595",
+          "file": "https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/FROM_HACKATHON_COMMAND.md",
+          "priority": "REAL_OFFICIAL_CREATOR_GENERATION_P0"
+        }
+      },
+      "automatic_lead_execution": false
+    }
   },
   "projects": [
     {
