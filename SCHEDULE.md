@@ -1,0 +1,42 @@
+# SCHEDULE — 공식 일정 및 내부 운영 목표
+
+**기준일: 2026-10-24 KST**. 모든 시각은 **대한민국 표준시(KST, UTC+09:00)**. `공식`과 `내부` 일정을 혼동하지 말 것. Devpost에 기재된 11월 PST는 KST보다 17시간 느리며, 미국 11월은 서머타임 종료 후 PST(UTC-8) 기준.
+
+## 공식 일정 (검증된 것만)
+
+| KST 날짜/시각 | 대회 | 이벤트 | 유형 | 원문·근거 |
+|---|---|---|---|---|
+| **11/12 (목) 10:00** | KIC | 예선 PDF 제출 마감 | 공식 | [DAKER](https://daker.ai/public/hackathons/kic-ai-agent-competition) |
+| **11/13 (금) 05:00** | PayPal | 완성작 Devpost 제출 마감 | 공식 | [Devpost: 11/12 12:00 PST](https://paypalaihackathon.devpost.com/) |
+| **11/16 (월) 16:45** | UGREEN | Round 1 PDF + ZIP 제출 마감 | 공식 | [Devpost: 11/15 23:45 PST](https://ugreenhackathon.devpost.com/) |
+| 11/12~19 (날짜 범위) | KIC | 참가자 상호 평가 | 공식 | [DAKER](https://daker.ai/public/hackathons/kic-ai-agent-competition) |
+| **11/21 (현지 날짜, 시각 미기재)** | UGREEN | 본선 진출 최대 30팀 발표/초청 이메일 | 공식 | [Devpost](https://ugreenhackathon.devpost.com/) |
+| 11/22~28 (현지 일정) | UGREEN | 본선 팀별 배정된 하루 원격 NAS 테스트 | 공식 | [Devpost](https://ugreenhackathon.devpost.com/) |
+| **12/01 (화) 16:45** | UGREEN | 본선 최종 Skill ZIP + 3분 이내 영상 제출 | 공식 | [Devpost: 11/30 23:45 PST](https://ugreenhackathon.devpost.com/) |
+| 12/02 07:00 ~ 12/16 01:00 | PayPal | 심사 기간 | 공식 | [Devpost 날짜표](https://paypalaihackathon.devpost.com/details/dates) |
+| **12/03 (목), 시각 미기재** | KIC | 예선 결과 발표 | 공식 | [DAKER](https://daker.ai/public/hackathons/kic-ai-agent-competition) |
+| **12/22 (화) 02:00** | PayPal | 수상자 발표 예정 | 공식 | [Devpost: 12/21 09:00 PST](https://paypalaihackathon.devpost.com/details/dates) |
+| **12/22 (화) 10:00** | KIC | 본선 데모 URL/코드/PDF 마감 | 공식 | [DAKER](https://daker.ai/public/hackathons/kic-ai-agent-competition) |
+| **12/29 (화), 시각 미기재** | KIC | 본선 온라인 발표 예정 | 공식·예정 | [DAKER](https://daker.ai/public/hackathons/kic-ai-agent-competition) |
+| **2027/01/11 (월), 시각 미기재** | KIC | 최종 결과 발표 예정 | 공식·예정 | [DAKER](https://daker.ai/public/hackathons/kic-ai-agent-competition) |
+
+## 내부 운영 목표 — 공식 마감이 아님
+
+| 내부 목표(KST) | 대상 | 해야 할 일 |
+|---|---|---|
+| 10/24~26 | PayPal·UGREEN | 참가 등록, 최신 공식 규정과 기술 실행 가능성 확인 |
+| 10/27~31 | PayPal | 최소 AI+PayPal Sandbox 흐름 작동 검증, 저장소/라이선스 설정 |
+| 10/27~11/05 | KIC | 예선 PDF 품질·참고자료·팀 전환 상태 확인 (실코드 확대는 우선순위 낮음) |
+| 11/01~05 | PayPal | 제품 통합/오류 처리/브라우저 시연과 영상 구조 |
+| 11/06~09 | KIC·UGREEN | KIC PDF 최종 검수, UGREEN 예선 ZIP 구조 검사 |
+| **11/10** | KIC | 조기 제출 목표 |
+| **11/11~12** | PayPal | 완성작 조기 제출 목표 및 KIC 접수 확인 |
+| **11/13~15** | UGREEN | 최종 패키지 구조/단어수/용량 검사 후 조기 제출 |
+
+## 자원 충돌 원칙
+- **KIC 11/12 10시 → PayPal 11/13 05시** 간격은 **19시간**에 불과함. KIC는 **11/10 조기 제출**이 운영상 중요.
+- PayPal은 작동 프로그램·코드·영상까지 요구되어 11/13까지의 개발 병목이 가장 클 수 있음.
+- UGREEN은 비교적 늦지만 **허용 SDK/패키지 구조**를 먼저 확인하지 않으면 제출 무효 위험.
+- 시간 위험이 큰 작업부터 처리하되, 기존 대회 총괄에게 영향이 가는 개발 범위 변경은 사용자 승인.
+
+**시간대/일정 변경 가능성**: 공식 페이지를 업데이트 요청 시 재확인. UGREEN 진출 발표/원격 테스트의 현지 날짜를 임의로 KST 자정 기준 확정하지 않는다.
