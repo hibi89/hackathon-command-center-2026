@@ -1,3 +1,5 @@
+> **[통합 총괄용 PayPal 대회 공식정보 — 2026-10-24]** [규정·마감·적격성·제출 필수 요건·공식 교육 영상·Sandbox 자료·현재 P0 차단](../docs/contests/PAYPAL_2026_OFFICIAL_REQUIREMENTS.md)을 먼저 확인. **실 PayPal+AI 통합 필수, 공개 배포 필수 아님, 공개 MIT 소스+작동 데모+3분 미만 YouTube 영상+실제 Devpost Submitted 필수**. 이 아래 과거 수치 대신 PayPal `lead/paypal` 최신 JSON/CI 우선.
+
 > **최신 코드 CI 추가 확인:** D13 합성 3기능 integration `673f47a1e47b` [175 Node PASS + 로컬 Chromium PASS](https://github.com/hibi89/hibi89-paypal-ai-hackathon/actions/runs/40077804576). 그러나 D13 정본 원장 0% NOT_STARTED, 전체 DONE10/18 보존. 실 PayPal/AI 결제·데모 준비 결격 해결된 것은 아님.
 
 > **2026-10-24 독립 재검수:** `lead/paypal@673f47a1e47b`, 마지막 완료 [Node171+Chromium PASS](https://github.com/hibi89/hibi89-paypal-ai-hackathon/actions/runs/40077353161)는 **이전 SHA**이고 D13 최신 커밋 당시 CI 진행중. 날짜별 DONE10/PARTIAL1/BLOCKED1/NOT_STARTED6; D11 webhook/D12 subscription offline, **실 PayPal Sandbox+AI, runnable external integration, LICENSE/Devpost gate 별도**. [감사](../docs/audits/SUPERVISOR_PROGRESS_REVIEW_20261024_1719.md).
