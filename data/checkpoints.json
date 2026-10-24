@@ -8,7 +8,7 @@
     "kind": "coordination_docs",
     "auto_update": false,
     "verified_as_of": "2026-10-24 13:53:35 KST",
-    "last_update_reason": "Track KIC evidence-weighted daily percent and conservative remaining estimated hours from one authoritative lead dashboard",
+    "last_update_reason": "UGREEN lead actual official public SDK ZIP retrieval in ephemeral CI; 29 offline PASS; exact CLI remains blocked; daily 75 percent unchanged",
     "first_read": "START_HERE.md",
     "update_protocol": "docs/CONTINUITY_PROTOCOL.md",
     "audit_report": "docs/audits/REPOSITORY_AUDIT_20261024.md",
@@ -311,7 +311,22 @@
       "round2_remote_nas_one_day_pt": "2026-11-22..2026-11-28, exact assigned date unverified",
       "round2_internal_submission_kst": "2026-11-30T20:00:00+09:00",
       "round2_official_submission_kst": "2026-12-01T16:45:00+09:00",
-      "round2_source_lead_commit": "919424488bd505e23affa3b5c9291d6d6bad1f67"
+      "round2_source_lead_commit": "919424488bd505e23affa3b5c9291d6d6bad1f67",
+      "latest_g1_evidence_url": "https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/roles/lead/G1_ZIP_METADATA_RECOVERY_20261024.md",
+      "latest_daily_progress_url": "https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/roles/lead/DAILY_PROGRESS.md",
+      "latest_lead_report_url": "https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/roles/lead/TO_HACKATHON_LEAD.md",
+      "latest_verified_ugreen_head": "5449606fa3348e2d9d9369f1d12a8e3228e9b330",
+      "g1_official_zip_download_status": "PUBLIC_ZIP_RETRIEVED_AND_METADATA_INSPECTED_IN_EPHEMERAL_GITHUB_RUNNER",
+      "g1_official_zip_sha256": "cf557e5a022e4297892f39768132855154232efdedeb726b2845450ccd70e1b3",
+      "g1_official_zip_entries": 26,
+      "g1_exact_cli_agent_contract_status": "BLOCKED_UNVERIFIED",
+      "g1_offline_tests_passed": 29,
+      "today_progress_percent": 75,
+      "today_remaining_percent": 25,
+      "today_remaining_nominal_budget_hours": 0.4,
+      "today_separate_reserve_budget_hours": 1.5,
+      "today_actual_eta_status": "UNDETERMINABLE_OFFICIAL_SDK_DOCS_ACCESS",
+      "today_time_measured": false
     }
   ]
 }
