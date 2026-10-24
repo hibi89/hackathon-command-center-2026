@@ -188,6 +188,20 @@
         }
       },
       "automatic_lead_execution": false
+    },
+    "conditional_post_baseline_strategy": {
+      "as_of": "2026-10-24 20:20 KST",
+      "status": "ARCHIVED_REFERENCE_ONLY_NOT_ACTIVE_TASK",
+      "path": "docs/strategy/POST_BASELINE_STRETCH_ROADMAP_20261024.md",
+      "priority_order": [
+        "P0_EXTERNAL_SUBMISSION_ELIGIBILITY",
+        "P1_ONE_SCORING_DIFFERENTIATOR_PER_CONTEST",
+        "P2_DEMO_README_EVIDENCE_PORTFOLIO"
+      ],
+      "kic": "EVIDENCE_TRACEABLE_INVESTMENT_RESEARCH_AGENT",
+      "paypal": "ACTUAL_AI_QUOTE_HUMAN_APPROVAL_SANDBOX_PAYMENT_END_TO_END",
+      "ugreen": "NAS_FILE_CHANGE_MISSING_VERSION_CONFLICT_DIFFERENTIAL_AUDIT",
+      "next_use": "Read on future chief restart/strategy review; only issue new lead ACTIVE tasks after checking present gates and deadline."
     }
   },
   "projects": [
