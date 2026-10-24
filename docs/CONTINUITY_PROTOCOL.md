@@ -69,3 +69,7 @@
 - [4개 채팅 현행 정책](docs/FOUR_CHAT_EXECUTION_PROTOCOL.md), [4개 시작 프롬프트](docs/CHAT_TRANSITION_PROMPTS_4.md), [전환 확인](docs/audits/FOUR_CHAT_TRANSITION_AUDIT_20261024.md) 참조. 이전 7개/13개 운영 기록보다 본 최신 결정을 우선.
 - 전환 직전 PayPal PPL-001 feature READY_FOR_REVIEW, 합성 테스트 11 PASS(작업자 보고), Sandbox 실 API BLOCKED_BY_ACCESS. 해당 대회 총괄이 직접 최신 HEAD 및 코드/검수 보고를 확인 후 **중복 구현하지 않고 인계**할 것.
 - KIC/PayPal/UGREEN 소유 저장소를 이 통합 총괄은 수정하지 않는다. 사용자가 대회별 총괄에 개편을 지시했으나 **그 저장소에 실제 반영됐는지는 별도 GitHub 검수 대기**. 제품 배포·공식 제출 상태 변경 주장 없음.
+
+## 고정 단문 복원 및 상시 최신화
+- `[해커톤총괄 깃헙 레포지토리 확인하고 작업하셈]`로 새로운 채팅이 시작되면 [통합 진입](../CHAT_BOOTSTRAP.md)의 역할·HEAD 확인·실행·검수 순서를 따라라.
+- 매 중요 작업 종료/채팅 이전에 STATUS, HANDOFF, START_HERE, checkpoints와 필요 프로젝트 기록을 동기화해 커밋하고 실제 SHA를 확인하라. `CHAT_BOOTSTRAP.md`는 역할/경로/재개 규칙이 바뀔 때 갱신한다. 구형 7개/13개 채팅 운영은 미적용. 무변경 빈 커밋 금지.

@@ -8,7 +8,7 @@
     "kind": "coordination_docs",
     "auto_update": false,
     "verified_as_of": "2026-10-24 KST (new lead handoff remote check)",
-    "last_update_reason": "Four-chat lead-as-builder transition verified across three lead repos; active-work pointers and inherited reports reconciled",
+    "last_update_reason": "Published permanent one-sentence GitHub restoration entrypoint and update contract",
     "first_read": "START_HERE.md",
     "update_protocol": "docs/CONTINUITY_PROTOCOL.md",
     "audit_report": "docs/audits/REPOSITORY_AUDIT_20261024.md",
@@ -26,7 +26,11 @@
     "four_chat_protocol": "docs/FOUR_CHAT_EXECUTION_PROTOCOL.md",
     "audit_four_chat": "docs/audits/FOUR_CHAT_TRANSITION_AUDIT_20261024.md",
     "direct_development_default_branch": "lead/<contest>",
-    "preserved_functional_responsibilities": 13
+    "preserved_functional_responsibilities": 13,
+    "bootstrap_phrase": "[해커톤총괄 깃헙 레포지토리 확인하고 작업하셈]",
+    "bootstrap_entrypoint": "CHAT_BOOTSTRAP.md",
+    "bootstrap_default_role": "integrated_lead_unless_explicit_contest",
+    "bootstrap_update_policy": "on_major_work_completion_or_chat_transition_only"
   },
   "projects": [
     {
