@@ -17,7 +17,7 @@
 
 ## 검증한 GitHub 기준
 - main: 9d0d454154a7393627a840113ab811a5b91f121a
-- lead/kic: 3ea8596edbd17cd3dcbbdadf17d9855010d835d9
+- lead/kic: f7f5a25d072d7049eddfef1577d8b9c2134b8325
 - research: 76f3089212b76b55d6daad9725b989e8586c3752
 - verification: 141dbbaf31487806e5d3d01fc92ecc3667e53ca2
 - risk: 0e4d2cf6526c44626bb09c4fe6d30b490ad15ad0
@@ -25,7 +25,7 @@
 - [lead GitHub Actions 성공](https://github.com/hibi89/hibi89-kic-proofinvest/actions/runs/40050871579)
 - 초기 Python 오프라인 합성 테스트 9건 통과 보고. 실기업 API/통합 Agent/배포/브라우저 미검증.
 - 각 기능 담당 메시지함의 신규 차단/의사결정 요청: 조회 시점 0건.
-- 최신 KIC 총괄 보고: lead/kic/docs/roles/lead/HANDOFF.md, STATUS.md, MESSAGE_REVIEW.md.
+- **최우선 고정 보고서:** [TO_HACKATHON_LEAD.md](https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/roles/lead/TO_HACKATHON_LEAD.md) (소유 브랜치: `lead/kic`). 상세 검증은 같은 브랜치의 `docs/roles/lead/STATUS.md`, `HANDOFF.md`, `MESSAGE_REVIEW.md`와 실제 HEAD/CI로 대조한다.
 
 ## 제출
 - 공식 예선 PDF 10페이지 이내: **2026-11-12 10:00 KST**
@@ -38,3 +38,10 @@
 
 ## 감독 의견
 예선 제출의 핵심은 기획서 품질·공식 형식·접수 성공이다. 실 API 개발의 진도와 예선 제출 완료 여부를 혼동하지 않는다.
+
+## 2026-10-24 KST — KIC 총괄 공식 보고 체계 수신
+- KIC 총괄이 `lead/kic/docs/roles/lead/TO_HACKATHON_LEAD.md`를 전체 총괄용 **고정 보고 창구**로 신설하고 누적 작업 이력·최신 현황·위험·승인 대기·일정을 기록함.
+- GitHub 직접 확인: `lead/kic` HEAD `f7f5a25d072d7049eddfef1577d8b9c2134b8325`; [동일 HEAD 오프라인 CI run 40051624837](https://github.com/hibi89/hibi89-kic-proofinvest/actions/runs/40051624837) **completed/success**. `main` 및 feature 3개 SHA는 위 표와 동일.
+- 전체 PR 목록 직접 조회: 0건. 공식 기획서 PDF 제출·팀 전환은 여전히 확인되지 않음.
+- **상위 총괄 확인이 필요한 안건:** KIC 예선 PDF 제출 가능성(팀 전환·접수 버튼 포함), 11/12~19 상호평가 일정 확보, 공통 데이터 계약 A안과 실제 OpenDART 호출은 담당 총괄의 사용자 승인 대기.
+- 분업: KIC 총괄은 새 지시 전에 세 기능 브랜치의 `TO_KIC_LEAD.md`를 검토하고 `MESSAGE_REVIEW.md`에 기록. 전체 총괄은 KIC 공식 보고서를 읽고 대회 간 일정·위험을 관리하며 기능 구현에는 개입하지 않음.
