@@ -17,11 +17,14 @@
       "acceptance": "Real authenticated entrant/team-leader submission screen and chosen frozen 10-page PDF matched, or explicit documented access blockage; no unapproved team change or submission.",
       "reason": "11/08 PDF internally frozen, but ability to submit remains 60%-complete blocked gate.",
       "created_kst": "2026-10-24",
-      "status": "OPEN",
-      "verification": "CENTRAL_RECOMMENDATION_ONLY_NOT_APPLIED_IN_CHILD_REPOSITORY",
+      "status": "PENDING_LEAD_ACCEPTANCE",
+      "verification": "PUBLISHED_TO_CHILD_LEAD_GITHUB_NOT_YET_ACKNOWLEDGED_OR_IMPLEMENTED",
       "verified_after_sha": null,
       "review_trigger": "next_user_requested_supervisor_audit_or_relevant_lead_commit",
-      "approval_required": true
+      "approval_required": true,
+      "dispatched_to": "https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/FROM_HACKATHON_COMMAND.md",
+      "dispatched_child_head": "c965a59d2ae7e86aae1a1c10cbd6b0caedb480d5",
+      "dispatched_kst": "2026-10-24"
     },
     {
       "id": "SUP-PAYPAL-001",
@@ -35,11 +38,14 @@
       "acceptance": "Real authorized Sandbox OAuth+Orders/Capture/GET or qualifying official platform feature, actual AI response, working integration and repeatable permitted demo/README test evidence; if impossible document blocking evidence and obtain participant decision.",
       "reason": "Official rules require an app integrating PayPal developer platform plus AI, functional demo; D03 remains 0%, D04 real AI 20% unmet.",
       "created_kst": "2026-10-24",
-      "status": "OPEN",
-      "verification": "CENTRAL_RECOMMENDATION_ONLY_NOT_APPLIED_IN_CHILD_REPOSITORY",
+      "status": "PENDING_LEAD_ACCEPTANCE",
+      "verification": "PUBLISHED_TO_CHILD_LEAD_GITHUB_NOT_YET_ACKNOWLEDGED_OR_IMPLEMENTED",
       "verified_after_sha": null,
       "review_trigger": "next_user_requested_supervisor_audit_or_relevant_lead_commit",
-      "approval_required": true
+      "approval_required": true,
+      "dispatched_to": "https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/FROM_HACKATHON_COMMAND.md",
+      "dispatched_child_head": "4098eb6663317a1d00c737d23253c5c26cb38c72",
+      "dispatched_kst": "2026-10-24"
     },
     {
       "id": "SUP-UGREEN-001",
@@ -53,11 +59,14 @@
       "acceptance": "PDF <=1MB and <=500 English answer words, all ten official questions, ZIP<=10MB and permitted Markdown only, frontmatter/disclosures, licensed original content, exact artifacts reviewed, Devpost final receipt with participant approval.",
       "reason": "Official Round1 explicitly does not require running NAS, demo, video or official runtime proof; preview artifact is a draft with seven-day retention.",
       "created_kst": "2026-10-24",
-      "status": "OPEN",
-      "verification": "CENTRAL_RECOMMENDATION_ONLY_NOT_APPLIED_IN_CHILD_REPOSITORY",
+      "status": "PENDING_LEAD_ACCEPTANCE",
+      "verification": "PUBLISHED_TO_CHILD_LEAD_GITHUB_NOT_YET_ACKNOWLEDGED_OR_IMPLEMENTED",
       "verified_after_sha": null,
       "review_trigger": "next_user_requested_supervisor_audit_or_relevant_lead_commit",
-      "approval_required": true
+      "approval_required": true,
+      "dispatched_to": "https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/FROM_HACKATHON_COMMAND.md",
+      "dispatched_child_head": "ead21d523432c4b2ac17fabaed0da281394b0386",
+      "dispatched_kst": "2026-10-24"
     },
     {
       "id": "SUP-KIC-002",
@@ -71,11 +80,14 @@
       "acceptance": "Root guide must either omit fast-aging counts entirely or derive current 14/2/44 and 11/09 from canonical JSON; CI enforce or avoid duplicate status.",
       "reason": "Repeated mismatch observed in two user-requested audits; root summary can misdirect fresh chat.",
       "created_kst": "2026-10-24",
-      "status": "OPEN",
-      "verification": "CENTRAL_RECOMMENDATION_ONLY_NOT_APPLIED_IN_CHILD_REPOSITORY",
+      "status": "PENDING_LEAD_ACCEPTANCE",
+      "verification": "PUBLISHED_TO_CHILD_LEAD_GITHUB_NOT_YET_ACKNOWLEDGED_OR_IMPLEMENTED",
       "verified_after_sha": null,
       "review_trigger": "next_user_requested_supervisor_audit_or_relevant_lead_commit",
-      "approval_required": false
+      "approval_required": false,
+      "dispatched_to": "https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/FROM_HACKATHON_COMMAND.md",
+      "dispatched_child_head": "c965a59d2ae7e86aae1a1c10cbd6b0caedb480d5",
+      "dispatched_kst": "2026-10-24"
     },
     {
       "id": "SUP-PAYPAL-002",
@@ -89,11 +101,14 @@
       "acceptance": "Every DONE item has machine-readable verified commit SHA/CI or explicit provenance field and consistency test; preserve original evidence without claiming new tests.",
       "reason": "Current JSON shows null verified_sha for first eight DONE entries; D11 and D12 are populated.",
       "created_kst": "2026-10-24",
-      "status": "OPEN",
-      "verification": "CENTRAL_RECOMMENDATION_ONLY_NOT_APPLIED_IN_CHILD_REPOSITORY",
+      "status": "PENDING_LEAD_ACCEPTANCE",
+      "verification": "PUBLISHED_TO_CHILD_LEAD_GITHUB_NOT_YET_ACKNOWLEDGED_OR_IMPLEMENTED",
       "verified_after_sha": null,
       "review_trigger": "next_user_requested_supervisor_audit_or_relevant_lead_commit",
-      "approval_required": false
+      "approval_required": false,
+      "dispatched_to": "https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/FROM_HACKATHON_COMMAND.md",
+      "dispatched_child_head": "4098eb6663317a1d00c737d23253c5c26cb38c72",
+      "dispatched_kst": "2026-10-24"
     },
     {
       "id": "SUP-KIC-003",
@@ -107,11 +122,14 @@
       "acceptance": "No new cosmetic PDF revisions unless a real compliance/fact error is evidenced; retain ability to fix true defects and re-QA afterwards.",
       "reason": "Six protected files and frozen byte-identical candidate already established, while actual entry right remains unverified.",
       "created_kst": "2026-10-24",
-      "status": "OPEN",
-      "verification": "CENTRAL_RECOMMENDATION_ONLY_NOT_APPLIED_IN_CHILD_REPOSITORY",
+      "status": "PENDING_LEAD_ACCEPTANCE",
+      "verification": "PUBLISHED_TO_CHILD_LEAD_GITHUB_NOT_YET_ACKNOWLEDGED_OR_IMPLEMENTED",
       "verified_after_sha": null,
       "review_trigger": "next_user_requested_supervisor_audit_or_relevant_lead_commit",
-      "approval_required": false
+      "approval_required": false,
+      "dispatched_to": "https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/FROM_HACKATHON_COMMAND.md",
+      "dispatched_child_head": "c965a59d2ae7e86aae1a1c10cbd6b0caedb480d5",
+      "dispatched_kst": "2026-10-24"
     },
     {
       "id": "SUP-UGREEN-002",
@@ -125,11 +143,14 @@
       "acceptance": "Round1 candidate review advances with honest unverified runtime disclosure; revisit G1 only with new official support/access and without unapproved SDK execution.",
       "reason": "Static probes and 190 offline tests bring less Round1 value than final compliance/entry receipt; actual NAS only available to finalists.",
       "created_kst": "2026-10-24",
-      "status": "OPEN",
-      "verification": "CENTRAL_RECOMMENDATION_ONLY_NOT_APPLIED_IN_CHILD_REPOSITORY",
+      "status": "PENDING_LEAD_ACCEPTANCE",
+      "verification": "PUBLISHED_TO_CHILD_LEAD_GITHUB_NOT_YET_ACKNOWLEDGED_OR_IMPLEMENTED",
       "verified_after_sha": null,
       "review_trigger": "next_user_requested_supervisor_audit_or_relevant_lead_commit",
-      "approval_required": false
+      "approval_required": false,
+      "dispatched_to": "https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/FROM_HACKATHON_COMMAND.md",
+      "dispatched_child_head": "ead21d523432c4b2ac17fabaed0da281394b0386",
+      "dispatched_kst": "2026-10-24"
     },
     {
       "id": "SUP-PAYPAL-003",
@@ -143,11 +164,14 @@
       "acceptance": "Public repository contains open-source LICENSE, reproducible working build instructions, judge-accessible functional demo and justified free credentials/test path; hosted URL only if needed.",
       "reason": "Official rules allow working repo/setup instructions instead of hosted demo. Avoid spending scarce contest time on unnecessary hosting while retaining actual functionality.",
       "created_kst": "2026-10-24",
-      "status": "OPEN",
-      "verification": "CENTRAL_RECOMMENDATION_ONLY_NOT_APPLIED_IN_CHILD_REPOSITORY",
+      "status": "PENDING_LEAD_ACCEPTANCE",
+      "verification": "PUBLISHED_TO_CHILD_LEAD_GITHUB_NOT_YET_ACKNOWLEDGED_OR_IMPLEMENTED",
       "verified_after_sha": null,
       "review_trigger": "next_user_requested_supervisor_audit_or_relevant_lead_commit",
-      "approval_required": true
+      "approval_required": true,
+      "dispatched_to": "https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/FROM_HACKATHON_COMMAND.md",
+      "dispatched_child_head": "4098eb6663317a1d00c737d23253c5c26cb38c72",
+      "dispatched_kst": "2026-10-24"
     }
   ],
   "valid_statuses": [
@@ -234,5 +258,54 @@
     "https://paypalaihackathon.devpost.com/rules"
   ],
   "interpretation": "OPEN means central audit recommendation recorded. This is NOT evidence a child lead received, acknowledged, implemented, or had CI verify it.",
-  "followup_observation": "PayPal D13 source at 673f47a1e47b passed 175/175 tests and Chromium 40077804576, but master progress still 10 DONE, D13 0% NOT_STARTED."
+  "followup_observation": "PayPal D13 source at 673f47a1e47b passed 175/175 tests and Chromium 40077804576, but master progress still 10 DONE, D13 0% NOT_STARTED.",
+  "current_dispatch": {
+    "date_kst": "2026-10-24",
+    "state": "PUBLISHED_TO_ALL_3_LEADS_CI_SUCCESS",
+    "messages": {
+      "kic": {
+        "repo": "hibi89/hibi89-kic-proofinvest",
+        "branch": "lead/kic",
+        "commit": "c965a59d2ae7e86aae1a1c10cbd6b0caedb480d5",
+        "ci": "40078509037",
+        "counts": {
+          "done": 14,
+          "partial": 0,
+          "blocked": 3,
+          "not_started": 43
+        },
+        "next": "2026-11-14 Verification regression; DAKER 11/09 submission authority blocked 60%",
+        "message": "https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/FROM_HACKATHON_COMMAND.md"
+      },
+      "paypal": {
+        "repo": "hibi89/hibi89-paypal-ai-hackathon",
+        "branch": "lead/paypal",
+        "commit": "4098eb6663317a1d00c737d23253c5c26cb38c72",
+        "ci": "40078519603",
+        "counts": {
+          "done": 11,
+          "partial": 1,
+          "blocked": 1,
+          "not_started": 5
+        },
+        "next": "PPL-D14; D03 real Sandbox+AI 0% blocked, D04 real AI partial",
+        "message": "https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/FROM_HACKATHON_COMMAND.md"
+      },
+      "ugreen": {
+        "repo": "hibi89/hibi89-ugreen-nas-hackathon",
+        "branch": "lead/ugreen",
+        "commit": "ead21d523432c4b2ac17fabaed0da281394b0386",
+        "ci": "40078635510",
+        "counts": {
+          "done": 2,
+          "partial": 12,
+          "blocked": 3,
+          "not_started": 7
+        },
+        "next": "UGR-D02 external SDK BLOCKED; prioritize Round1 valid PDF/ZIP/entrant-reviewed submission",
+        "message": "https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/FROM_HACKATHON_COMMAND.md"
+      }
+    }
+  },
+  "next_review": "Read each lead's latest TO_HACKATHON_LEAD and master progress; verify specific corrective actions before marking closed."
 }
