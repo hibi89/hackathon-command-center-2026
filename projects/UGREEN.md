@@ -2,8 +2,8 @@
 
 - 공식 페이지: https://ugreenhackathon.devpost.com/
 - 참가: **2026-10-24 KST Devpost 참가 등록 완료 화면 확인** — `Thanks for registering!` 문구 및 `My hackathon projects`/`Create project` 표시. 백엔드·이메일 별도 확인 전.
-- 전담 GitHub: 미생성(연결 계정 조회 시점)
-- 대회 총괄: AI 역할 운영 예정, 기술 검증 미착수
+- 전담 GitHub: [`hibi89/hibi89-ugreen-nas-hackathon`](https://github.com/hibi89/hibi89-ugreen-nas-hackathon) **2026-10-24 생성·5브랜치 운영 파일 직접 검증** (Public).
+- 대회 총괄 브랜치: `lead/ugreen` 및 [상위 해커톤 총괄 보고서](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/roles/lead/TO_HACKATHON_LEAD.md) 생성. **별도 AI 채팅 역할 아직 배정 전, SDK·실 NAS 미검증**.
 
 ## 후보 기능
 1. 프로젝트별 필수 파일 누락 탐지.
@@ -47,3 +47,11 @@
 - [공식 UGREEN Rules](https://ugreenhackathon.devpost.com/rules)에 예선 상위 **최대 30개 프로젝트**가 Finalists로 선발된다고 명시됨.
 - 본선은 11/21 PT 이메일 통지, 11/22~28 PT 중 지정 1일 무료 원격 NAS 테스트, 12/01 16:45 KST 최종 ZIP/영상 제출, 최종 **5개 수상작**(1·2·3위 각 1개 + Most Creative 2개).
 - 현재는 Devpost 참가 등록 화면만 확인. **예선 PDF·ZIP 제출/본선 진출/수상은 모두 미발생**.
+
+### UGREEN — 2026-10-24 GitHub 5개 브랜치 운영 구조 검증
+- 저장소: [`hibi89/hibi89-ugreen-nas-hackathon`](https://github.com/hibi89/hibi89-ugreen-nas-hackathon) (Public); `main` HEAD `33e8ccf0226f6b108b6922f478004562cd3d53bf`, `lead/ugreen` HEAD `8566f0c70d04d459ad71d088d58e59156387d0f4`.
+- `feature/missing-files` HEAD `fec871916e14aa6d56d8964cad912f2b253aa825`
+- `feature/version-conflicts` HEAD `48ef0bbda3f347b43533ffab4642511444b1dac5`
+- `feature/privacy` HEAD `b4a6dd098d06c41ea3f59ffe79494fa1e0a13d34`
+- 총괄 고정 상위 보고: [`lead/ugreen/docs/roles/lead/TO_HACKATHON_LEAD.md`](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/roles/lead/TO_HACKATHON_LEAD.md).
+- **검증**: GitHub 5/5 브랜치와 각각 필수 운영·인수인계·메시지 문서 전수 확인. **코드/CI/실 API/배포/최종 제출은 없음.** 제품 주제·기능은 사용자 최종 승인 전 잠정. 대회별 AI 총괄 채팅방은 아직 생성됐다는 증거 없음.

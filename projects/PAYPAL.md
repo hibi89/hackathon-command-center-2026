@@ -3,8 +3,8 @@
 - 공식 페이지: https://paypalaihackathon.devpost.com/
 - 공식 일정: https://paypalaihackathon.devpost.com/details/dates
 - 참가: **Devpost 참가 등록 완료로 판단(2026-10-24 KST)** — Register 이후 대회 내 `My hackathon projects` 화면과 `Create project` 버튼 스크린샷 확인. 참가 확인 메일 및 서버 기록은 별도 미검증.
-- 전담 GitHub: 미생성(연결 계정 조회 시점)
-- 대회 총괄: AI 역할 운영 예정, 개발 착수 미확인
+- 전담 GitHub: [`hibi89/hibi89-paypal-ai-hackathon`](https://github.com/hibi89/hibi89-paypal-ai-hackathon) **2026-10-24 생성·5브랜치 운영 파일 직접 검증** (Public).
+- 대회 총괄 브랜치: `lead/paypal` 및 [상위 해커톤 총괄 보고서](https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/roles/lead/TO_HACKATHON_LEAD.md) 생성. **별도 AI 채팅 역할 아직 배정 전, 코드·실 API·배포 미착수**.
 
 ## 잠정 통합 기능
 1. 고객 요구 분석 후 견적/작업 범위를 만들고 승인된 PayPal Sandbox 결제로 연결.
@@ -49,3 +49,11 @@
 - `Stage One` 테마/기술 적합성 **pass/fail** → 통과작 대상 `Stage Two`의 5개 동등 비중 심사. 외부 대회처럼 '12팀 본선' 등 숫자가 있는 방식이 아님.
 - 현재 목표는 **실제 작동 PayPal + AI 프로그램 완성·공개 코드·영상·Devpost 유효 제출** 후 공식 수상 가능성 확보. 등록/출품/수상 성과는 구분한다.
 - PayPal 전담 총괄 저장소·Sandbox 접근 확인은 여전히 시작 전이며 기존 잠정 3기능은 사용자 확정 전이다.
+
+### PayPal — 2026-10-24 GitHub 5개 브랜치 운영 구조 검증
+- 저장소: [`hibi89/hibi89-paypal-ai-hackathon`](https://github.com/hibi89/hibi89-paypal-ai-hackathon) (Public); `main` HEAD `d66757b8d73daa3158897db078430c4cc91a3847`, `lead/paypal` HEAD `f921c483b5785bf8a1f9fd70da8cd983599669c3`.
+- `feature/quote-payment` HEAD `cafdb0a2b2e497944872adc34fb5bb507b9d1d78`
+- `feature/delivery` HEAD `f7336d2746c415938d0325b19798752ba3c4fb4a`
+- `feature/subscriptions` HEAD `8ad5897be995e654d95bffef4f2d03e0691cef33`
+- 총괄 고정 상위 보고: [`lead/paypal/docs/roles/lead/TO_HACKATHON_LEAD.md`](https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/roles/lead/TO_HACKATHON_LEAD.md).
+- **검증**: GitHub 5/5 브랜치와 각각 필수 운영·인수인계·메시지 문서 전수 확인. **코드/CI/실 API/배포/최종 제출은 없음.** 제품 주제·기능은 사용자 최종 승인 전 잠정. 대회별 AI 총괄 채팅방은 아직 생성됐다는 증거 없음.

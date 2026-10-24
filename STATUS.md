@@ -8,7 +8,7 @@
 |---|---|---|---|
 | 참가자 등록 | 참가 신청·팀 생성 화면 확인 / 팀 전환 미확인 | Devpost 참가자용 화면 확인 | **Devpost `Thanks for registering!` 및 참가자용 화면 확인** |
 | 주제 | ProofInvest **확정** | 프리랜서 계약·결제 Agent **잠정** | NAS 파일 관리 Skill **잠정** |
-| GitHub | [기존 저장소](https://github.com/hibi89/hibi89-kic-proofinvest) | 생성 전 | 생성 전 |
+| GitHub | [기존 저장소](https://github.com/hibi89/hibi89-kic-proofinvest) | [저장소 5개 브랜치](https://github.com/hibi89/hibi89-paypal-ai-hackathon/branches) | [저장소 5개 브랜치](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/branches) |
 | 코드·산출물 | Python 합성 스타터 / 예선 PDF v0.1 대화 파일 | 미착수 | 미착수 |
 | 기능 3개 | 개별 기능 완성 **0/3**, 공통 스타터 존재 | 검증된 구현 **0/3** | 검증된 구현 **0/3** |
 | 테스트 | 이전 로컬 9 PASS 보고 / main 최신 CI 성공 | 미실시 | 미실시 |
@@ -26,8 +26,8 @@
 - KIC 총괄의 고정 최우선 보고: [`lead/kic/docs/roles/lead/TO_HACKATHON_LEAD.md`](https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/roles/lead/TO_HACKATHON_LEAD.md). 필요시 같은 브랜치의 `STATUS.md`, `HANDOFF.md`, `MESSAGE_REVIEW.md`와 실제 CI·코드를 교차검증.
 
 ## 전체 총괄의 현재 미해결 사항
-1. PayPal 참가 등록 직후 화면 확인. 다음은 주제 검증과 전담 저장소 구성; 작품 프로젝트 생성 및 제출은 미완료.
-2. UGREEN 참가 등록 확인 완료 → 공식 Skill Developer Package/CLI/권한 확인 → 주제 확정 및 예선 PDF·ZIP 제작.
+1. PayPal 참가 등록·GitHub 5개 브랜치/지침 구축 완료. 다음은 총괄 AI 채팅 인계·주제 검증·Sandbox 실현성 확인, 작품 제출은 미완료.
+2. UGREEN 참가 등록·GitHub 5개 브랜치/지침 구축 완료 → 총괄 AI 채팅 인계·공식 Skill Developer Package/CLI/권한 확인 → 주제 확정 및 예선 PDF·ZIP 제작.
 3. KIC 팀으로 전환, 예선 PDF 최종 검수/제출 여부는 KIC 총괄이 사용자와 확인.
 4. 세 대회 모두 **제출 영수증/공식 성과** 없음.
 
@@ -69,3 +69,19 @@
 - 사용자에게 새 저장소 이름 두 개 안내: `hibi89-paypal-ai-hackathon`, `hibi89-ugreen-nas-hackathon`. **아직 사용자가 생성했다고 확인하지 않음**.
 - GitHub 직접 조회는 각각 `404 Not Found`였으며, 이는 생성되지 않았거나 조회 권한이 없는 상태를 뜻함. 현재 **생성 대기**로 표시. 사용자가 생성하면 기존 상태표 URL/역할 분리를 갱신할 것.
 - 새 저장소는 초기 Private 권고; PayPal 작품 제출 시 공개 코드·루트 LICENSE가 공식 필수. Public 전환은 사용자 승인/요청 후 수행.
+
+### PayPal — 2026-10-24 GitHub 5개 브랜치 운영 구조 검증
+- 저장소: [`hibi89/hibi89-paypal-ai-hackathon`](https://github.com/hibi89/hibi89-paypal-ai-hackathon) (Public); `main` HEAD `d66757b8d73daa3158897db078430c4cc91a3847`, `lead/paypal` HEAD `f921c483b5785bf8a1f9fd70da8cd983599669c3`.
+- `feature/quote-payment` HEAD `cafdb0a2b2e497944872adc34fb5bb507b9d1d78`
+- `feature/delivery` HEAD `f7336d2746c415938d0325b19798752ba3c4fb4a`
+- `feature/subscriptions` HEAD `8ad5897be995e654d95bffef4f2d03e0691cef33`
+- 총괄 고정 상위 보고: [`lead/paypal/docs/roles/lead/TO_HACKATHON_LEAD.md`](https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/roles/lead/TO_HACKATHON_LEAD.md).
+- **검증**: GitHub 5/5 브랜치와 각각 필수 운영·인수인계·메시지 문서 전수 확인. **코드/CI/실 API/배포/최종 제출은 없음.** 제품 주제·기능은 사용자 최종 승인 전 잠정. 대회별 AI 총괄 채팅방은 아직 생성됐다는 증거 없음.
+
+### UGREEN — 2026-10-24 GitHub 5개 브랜치 운영 구조 검증
+- 저장소: [`hibi89/hibi89-ugreen-nas-hackathon`](https://github.com/hibi89/hibi89-ugreen-nas-hackathon) (Public); `main` HEAD `33e8ccf0226f6b108b6922f478004562cd3d53bf`, `lead/ugreen` HEAD `8566f0c70d04d459ad71d088d58e59156387d0f4`.
+- `feature/missing-files` HEAD `fec871916e14aa6d56d8964cad912f2b253aa825`
+- `feature/version-conflicts` HEAD `48ef0bbda3f347b43533ffab4642511444b1dac5`
+- `feature/privacy` HEAD `b4a6dd098d06c41ea3f59ffe79494fa1e0a13d34`
+- 총괄 고정 상위 보고: [`lead/ugreen/docs/roles/lead/TO_HACKATHON_LEAD.md`](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/roles/lead/TO_HACKATHON_LEAD.md).
+- **검증**: GitHub 5/5 브랜치와 각각 필수 운영·인수인계·메시지 문서 전수 확인. **코드/CI/실 API/배포/최종 제출은 없음.** 제품 주제·기능은 사용자 최종 승인 전 잠정. 대회별 AI 총괄 채팅방은 아직 생성됐다는 증거 없음.

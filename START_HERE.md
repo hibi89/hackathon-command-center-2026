@@ -11,7 +11,7 @@
 1. **이 `START_HERE.md` → 루트 `HANDOFF.md` → `STATUS.md` → `AGENTS.md` → `REQUIREMENTS.md` → `SCHEDULE.md` → `RISKS.md` → `projects/*.md` → `data/checkpoints.json`** 읽기.
 2. `main`의 실제 원격 **HEAD SHA**와 보고서의 확인 시점을 대조한다. 과거 채팅보다 원격 GitHub와 공식 제출 증거를 우선한다.
 3. KIC는 [전용 최신 총괄 보고서](https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/roles/lead/TO_HACKATHON_LEAD.md)를 **`lead/kic` 브랜치 지정하여** 읽고, 필요하면 CI 및 기능 브랜치 SHA를 확인한다. `main`의 KIC 역할 문서만 보아서는 안 된다.
-4. PayPal·UGREEN 총괄 저장소는 **이 스냅샷 기준 미생성**. 생성되었는지 GitHub에서 검색 후 확인한다. 없으면 계획·확정 전제로 실제 제작했다고 말하지 않는다.
+4. PayPal·UGREEN은 **2026-10-24 실제 저장소와 5개 브랜치 생성·운영 문서 확인**. PayPal [`lead/paypal/TO_HACKATHON_LEAD.md`](https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/roles/lead/TO_HACKATHON_LEAD.md), UGREEN [`lead/ugreen/TO_HACKATHON_LEAD.md`](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/roles/lead/TO_HACKATHON_LEAD.md)를 브랜치 지정하여 읽고 HEAD/문서 대조. 제품 실 구현/실API/제출 완료로 혼동하지 않는다.
 5. 이력·최신 상태가 다르면 **그 차이를 보고하고 증거로 수정**한다. 이전 채팅을 못 읽어도 루트 문서와 대회별 공식 소스로 후속 작업 가능하도록 한다.
 6. 새 사용자 요청이 `ㄱ`이면 **보류된 다음 실제 작업**을 안전하게 수행하고, 주요 변경 종료 때 [갱신 프로토콜](docs/CONTINUITY_PROTOCOL.md)을 적용한다. 단순 열람 때 형식적인 커밋은 하지 않는다.
 
@@ -20,8 +20,8 @@
 | 대회 | 참가 등록 | 아이템 | 코드/저장소 | 공식 제출 단계 | 공식 본선 규모 |
 |---|---|---|---|---|---|
 | [KIC](projects/KIC.md) | 자이언츠파크 팀 생성 화면 확인; **'팀으로 전환' 미검증** | **ProofInvest 확정** | [KIC GitHub](https://github.com/hibi89/hibi89-kic-proofinvest), Python 합성 테스트 9 PASS·CI 성공 | **PDF 예선 미제출** | **상위 12팀** (최종 6팀 수상) |
-| [PayPal](projects/PAYPAL.md) | Devpost 참가자 `My hackathon projects` 화면 확인 | AI 프리랜서 계약·결제 **잠정** | 전담 저장소 미생성, API/코드 미착수 | 작품 미생성·**미제출** | **정원 지정 없음**, Stage One pass/fail 뒤 Stage Two 본심사 |
-| [UGREEN](projects/UGREEN.md) | Devpost `Thanks for registering!` 성공 화면 확인 | NAS 프로젝트 파일 관리 Skill **잠정** | 전담 저장소 미생성, Skill SDK 실검증 전 | Round 1 PDF/ZIP **미제출** | **최대 30팀**, 최종 5개 상 |
+| [PayPal](projects/PAYPAL.md) | Devpost 참가자 `My hackathon projects` 화면 확인 | AI 프리랜서 계약·결제 **잠정** | 저장소/5개 브랜치/역할 문서 완료, API/코드 미착수 | 작품 미생성·**미제출** | **정원 지정 없음**, Stage One pass/fail 뒤 Stage Two 본심사 |
+| [UGREEN](projects/UGREEN.md) | Devpost `Thanks for registering!` 성공 화면 확인 | NAS 프로젝트 파일 관리 Skill **잠정** | 저장소/5개 브랜치/역할 문서 완료, Skill SDK 실검증 전 | Round 1 PDF/ZIP **미제출** | **최대 30팀**, 최종 5개 상 |
 
 **목표 우선순위**: ①유효 제출 ②KIC/UGREEN 본선 또는 공식 입증 성과 ③실제 작동 완성품 ④공개 포트폴리오 ⑤판매 가능 상품화 ⑥수상/상금. **PayPal의 Stage Two를 공식 본선 진출 경력이라고 부르지 않는다.** 참가 등록은 최종 제출/수상과 구분한다.
 
@@ -46,11 +46,11 @@
 │  ├─ feature/research
 │  ├─ feature/verification
 │  └─ feature/risk
-├─ PayPal 총괄 = 아직 전담 GitHub/역할 브랜치 없음
+├─ PayPal 총괄 = hibi89/hibi89-paypal-ai-hackathon @ lead/paypal (AI 채팅 배정 전)
 │  ├─ 견적·결제 (잠정)
 │  ├─ 납품 거래 (잠정)
 │  └─ 구독 청구 (잠정)
-└─ UGREEN 총괄 = 아직 전담 GitHub/역할 브랜치 없음
+└─ UGREEN 총괄 = hibi89/hibi89-ugreen-nas-hackathon @ lead/ugreen (AI 채팅 배정 전)
    ├─ 파일 누락 (잠정)
    ├─ 중복/버전 (잠정)
    └─ 개인정보 노출 (잠정)
@@ -60,9 +60,9 @@
 
 ## 4. 가장 중요한 미해결 문제·다음 실제 작업
 
-1. **PayPal P0**: 전담 총괄 확보 → PayPal Developer Sandbox 계정 접근 가능 확인 → 두 설계안 비교·승인 → 주문 승인/결제/상태 확인 최소 end-to-end 개발 → 소스·라이선스·영상·Devpost 유효 제출.
+1. **PayPal P0**: 저장소/역할 문서 완료 → 대회 총괄 AI 채팅 지정 → PayPal Developer Sandbox 계정 접근 가능 확인 → 두 설계안 비교·승인 → 주문 승인/결제/상태 확인 최소 end-to-end 개발 → 소스·라이선스·영상·Devpost 유효 제출.
 2. **KIC P0**: 기존 KIC 총괄에게 예선 PDF·'팀으로 전환'·상호평가 참석 필요 여부를 확인. KIC 개발은 침범하지 않음.
-3. **UGREEN P1**: 전담 총괄 및 저장소 → 공식 Skill Developer Package/Uliya CLI/권한 확인 → 아이템 승인 → 영문 PDF 및 규격 ZIP. NAS 하드웨어 구매 불필요.
+3. **UGREEN P1**: 저장소/역할 문서 완료 → 대회 총괄 AI 채팅 지정 → 공식 Skill Developer Package/Uliya CLI/권한 확인 → 아이템 승인 → 영문 PDF 및 규격 ZIP. NAS 하드웨어 구매 불필요.
 4. **공통**: 세 대회 마감 충돌 조율, 제출 증빙 수집, 공개 GitHub의 개인/키/비공개 전략 유출 방지. Public 저장소 가시성은 사용자 승인 없이 변경 금지.
 
 ## 5. 고정 문서 인덱스 및 최신화 계약
@@ -88,3 +88,8 @@
 - PayPal 예정 저장소: `hibi89/hibi89-paypal-ai-hackathon`. 2026-10-24 확인 시 GitHub `404`로 **아직 생성되지 않음**. 프로젝트 주제는 여전히 잠정.
 - UGREEN 예정 저장소: `hibi89/hibi89-ugreen-nas-hackathon`. 2026-10-24 확인 시 GitHub `404`로 **아직 생성되지 않음**. 프로젝트 주제는 여전히 잠정.
 - 사용자가 두 저장소를 만든 뒤 실제 원격 접근·visibility·기본 브랜치를 확인하고, 각 대회 총괄을 별도 채팅방으로 설정하여 역할/인수인계 문서 구조를 논의. 기존 KIC 소스 변경 금지.
+
+## 2026-10-24 KST — 이름 지정 후 실제 생성·검증 완료 (이하 내용이 위의 과거 '생성 예정' 기록보다 최신임)
+- PayPal GitHub `hibi89/hibi89-paypal-ai-hackathon`: 5개 브랜치/역할 문서 및 [상위 보고 창구](https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/roles/lead/TO_HACKATHON_LEAD.md) 완료. `main` `d66757b8d73daa3158897db078430c4cc91a3847`, `lead/paypal` `f921c483b5785bf8a1f9fd70da8cd983599669c3`.
+- UGREEN GitHub `hibi89/hibi89-ugreen-nas-hackathon`: 5개 브랜치/역할 문서 및 [상위 보고 창구](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/roles/lead/TO_HACKATHON_LEAD.md) 완료. `main` `33e8ccf0226f6b108b6922f478004562cd3d53bf`, `lead/ugreen` `8566f0c70d04d459ad71d088d58e59156387d0f4`.
+- 새 대회 총괄 AI 채팅 역할 배정 및 실제 앱 개발/제출은 **미실시**. 두 저장소는 현재 **Public**이며 승인 없는 접근 설정 변경·비밀값 커밋은 하지 않았다.

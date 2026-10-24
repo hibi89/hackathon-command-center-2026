@@ -28,3 +28,8 @@ KIC는 `hibi89/hibi89-kic-proofinvest` 저장소 `lead/kic` 브랜치의 [`docs/
 - 주요 개발 보고, 참가/제출, 규정/일정 변경, 승인·차단 해결, 채팅 인수인계 완료 시 [연속성 프로토콜](docs/CONTINUITY_PROTOCOL.md)에 따라 **관련 프로젝트 기록·STATUS·HANDOFF·START_HERE·JSON을 같은 작업에서 갱신**하고 원격 커밋 검증한다.
 - 공식 본선: KIC **12팀**, UGREEN **최대 30팀**. PayPal은 별도 본선 정원 없이 2단계 내부 심사. 등록/유효제출/본선/수상 혼동 금지.
 - 채팅방 간 자동 공유/실시간 동기화 없음. 시간만 지났다는 이유로 빈 커밋 금지. 사용자 `ㄱ`은 다음 실제 작업 계속 지시.
+
+## PayPal·UGREEN 전담 총괄 보고 고정 경로 (2026-10-24 확인)
+- PayPal: [`hibi89/hibi89-paypal-ai-hackathon` `lead/paypal` `docs/roles/lead/TO_HACKATHON_LEAD.md`](https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/roles/lead/TO_HACKATHON_LEAD.md).
+- UGREEN: [`hibi89/hibi89-ugreen-nas-hackathon` `lead/ugreen` `docs/roles/lead/TO_HACKATHON_LEAD.md`](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/roles/lead/TO_HACKATHON_LEAD.md).
+- 두 저장소의 각 `main`과 총괄 1개·기능 3개 브랜치, 모든 역할 필수 운영 문서 원격 검증 완료. 그러나 제품 코드·실 API/SDK·CI·배포·공식 제출은 아직 없다.

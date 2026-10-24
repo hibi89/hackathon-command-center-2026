@@ -8,7 +8,7 @@
     "kind": "coordination_docs",
     "auto_update": false,
     "verified_as_of": "2026-10-24 KST",
-    "last_update_reason": "Planned repo names assigned; creation not yet confirmed",
+    "last_update_reason": "PayPal and UGREEN repos initialized with 5 branch roles each; documents verified; no product work claimed",
     "first_read": "START_HERE.md",
     "update_protocol": "docs/CONTINUITY_PROTOCOL.md"
   },
@@ -51,11 +51,11 @@
       "title": "Freelancer Contract and Payment AI Agent",
       "topic_confirmed": false,
       "registration": "registered_devpost_participant_dashboard_screenshot",
-      "repo": null,
-      "repo_exists": false,
+      "repo": "hibi89/hibi89-paypal-ai-hackathon",
+      "repo_exists": true,
       "implemented_and_verified_features": 0,
       "planned_features": 3,
-      "main_ci": null,
+      "main_ci": "not_configured",
       "live_api": "unverified",
       "production": "not_deployed",
       "submitted": false,
@@ -75,18 +75,31 @@
       "award_status": "no_award_evidence",
       "results_time_notes": "Dates vs Rules conflict: 2026-12-22 02:00 or 07:00 KST",
       "planned_repo": "hibi89/hibi89-paypal-ai-hackathon",
-      "repo_creation_verified": false
+      "repo_creation_verified": true,
+      "repo_visibility": "public",
+      "main_head_sha": "d66757b8d73daa3158897db078430c4cc91a3847",
+      "lead_head_sha": "f921c483b5785bf8a1f9fd70da8cd983599669c3",
+      "lead_branch": "lead/paypal",
+      "feature_head_shas": {
+        "feature/quote-payment": "cafdb0a2b2e497944872adc34fb5bb507b9d1d78",
+        "feature/delivery": "f7336d2746c415938d0325b19798752ba3c4fb4a",
+        "feature/subscriptions": "8ad5897be995e654d95bffef4f2d03e0691cef33"
+      },
+      "lead_report_path": "docs/roles/lead/TO_HACKATHON_LEAD.md",
+      "structure": "main + lead + 3 feature branches, each role docs verified",
+      "structure_verified_date_kst": "2026-10-24",
+      "lead_chat_assigned": false
     },
     {
       "id": "ugreen",
       "title": "NAS Project File Management AI Skill",
       "topic_confirmed": false,
       "registration": "registered_devpost_success_banner_and_project_dashboard_screenshot",
-      "repo": null,
-      "repo_exists": false,
+      "repo": "hibi89/hibi89-ugreen-nas-hackathon",
+      "repo_exists": true,
       "implemented_and_verified_features": 0,
       "planned_features": 3,
-      "main_ci": null,
+      "main_ci": "not_configured",
       "live_api": "unverified",
       "production": "not_applicable_in_round_1",
       "submitted": false,
@@ -100,7 +113,20 @@
       "official_award_projects": 5,
       "finalist_status": "not_yet_selected",
       "planned_repo": "hibi89/hibi89-ugreen-nas-hackathon",
-      "repo_creation_verified": false
+      "repo_creation_verified": true,
+      "repo_visibility": "public",
+      "main_head_sha": "33e8ccf0226f6b108b6922f478004562cd3d53bf",
+      "lead_head_sha": "8566f0c70d04d459ad71d088d58e59156387d0f4",
+      "lead_branch": "lead/ugreen",
+      "feature_head_shas": {
+        "feature/missing-files": "fec871916e14aa6d56d8964cad912f2b253aa825",
+        "feature/version-conflicts": "48ef0bbda3f347b43533ffab4642511444b1dac5",
+        "feature/privacy": "b4a6dd098d06c41ea3f59ffe79494fa1e0a13d34"
+      },
+      "lead_report_path": "docs/roles/lead/TO_HACKATHON_LEAD.md",
+      "structure": "main + lead + 3 feature branches, each role docs verified",
+      "structure_verified_date_kst": "2026-10-24",
+      "lead_chat_assigned": false
     }
   ]
 }

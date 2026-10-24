@@ -55,3 +55,15 @@
 - **PayPal** 예정: `hibi89/hibi89-paypal-ai-hackathon`; **UGREEN** 예정: `hibi89/hibi89-ugreen-nas-hackathon`. 사용자에게 이름을 안내했지만, 같은 시점 직접 GitHub 조회는 404로 실제 생성은 미확인. 기존 저장소 임의 복제·신규 생성은 수행하지 않음.
 - 사용자 생성 완료 후 각각 원격 저장소·접근·공개 설정 확인 → 대회 총괄 채팅/브랜치 구조 선정 → 담당 총괄에게 공식 규정/잠정 설계·기술 제약 전달. PayPal은 제출 전 코드/라이선스 공개가 공식 요구.
 - 다음 채팅방은 START_HERE→HANDOFF→STATUS 순서로 읽고 증거와 SHA에 맞춰 갱신. 이번 변경은 운영 문서·JSON만 반영, 자동 동기화 없음.
+
+## 2026-10-24 KST — PayPal·UGREEN 전담 GitHub 5브랜치 + 운영 문서 구성 완료
+1. 목표: 기존 KIC와 같은 총괄·기능 AI 협업 구조를 두 대회에 초기화; 사용자 참가자 1명/AI 담당 역할 13개 원칙 유지.
+2. 완료: 사용자가 두 빈 GitHub 저장소를 생성했고, 전체 총괄은 각 `main`에 README/AGENTS/REQUIREMENTS/STATUS/HANDOFF/BRANCH_WORKFLOW/.gitignore를, 각 총괄 브랜치에 HANDOFF/STATUS/OPERATIONS/MESSAGE_REVIEW/TO_HACKATHON_LEAD/INBOX_ROUTER를, 기능 브랜치 3개 각각에 운영·인수인계·메시지 4개 파일을 작성·커밋.
+3. 테스트/검증: GitHub 원격 **각 5개 브랜치/역할 필수 문서 누락 0건** 확인. 실행 프로그램/API/CI/배포 테스트 **0**, 실사용 서비스는 미검증. 제품 완료 주장 금지.
+4. 상태: 두 대회 GitHub 구조·공식 보고 창구 완료, **대회 총괄 AI 채팅 역할 배정과 실제 기능 개발은 미착수**. PayPal Sandbox·UGREEN Skill Developer Package 실 확인/설계 승인 대기.
+5. 오류/제약: 별도 저장소 생성 API 부재로 사용자가 GitHub에서 빈 저장소 생성. 이후 GitHub 초기 문서·브랜치 반영 성공. 현재 Public이므로 시크릿·고객 데이터 금지.
+6. 저장소/브랜치 기준: PayPal `hibi89/hibi89-paypal-ai-hackathon`: main `d66757b8d73daa3158897db078430c4cc91a3847`, lead `f921c483b5785bf8a1f9fd70da8cd983599669c3`; UGREEN `hibi89/hibi89-ugreen-nas-hackathon`: main `33e8ccf0226f6b108b6922f478004562cd3d53bf`, lead `8566f0c70d04d459ad71d088d58e59156387d0f4`. 기능 브랜치 SHA는 `STATUS.md` 참조. 원격 조회 시점 2026-10-24 KST.
+7. Production URL/Vercel: 두 대회 앱 코드 미개발·배포 **미적용**. 총괄 보고서는 GitHub 파일 URL로 열람 가능.
+8. 원본/보안: KIC 기존 저장소 무수정, 두 신규 저장소 최초 빈 상태에서 문서만 작성. 마감 산출물·결제 실계정 데이터/인증값/미공개 원본 업로드 없음. 공개 범위는 사용자 직접 설정 후 변경하지 않음.
+9. 다음 작업: PayPal 총괄 새 채팅에 `lead/paypal` 안내 → 공식 규정/Sandbox 접근 검증과 2개 기술 설계 비교, 사용자 최종 승인 후 구현. 이어서 UGREEN 총괄 새 채팅에 `lead/ugreen` 안내 → 공식 Skill SDK/제출 형식 확인/설계 비교. 기능 담당 AI 채팅은 총괄의 지시로 순차 배정.
+10. 갱신: 2026-10-24 KST, KIC는 직전 확인 상태 유지. 이번 통합 상황실 업데이트 기준 SHA는 완료 후 원격 main HEAD로 확인. `START_HERE`·`STATUS`·`HANDOFF`·`projects/*.md`·JSON을 일치 유지, 자동 실시간 갱신 없음.
