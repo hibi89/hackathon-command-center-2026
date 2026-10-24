@@ -8,7 +8,7 @@
     "kind": "coordination_docs",
     "auto_update": false,
     "verified_as_of": "2026-10-24 KST",
-    "last_update_reason": "UGREEN Devpost registration success banner verified from user screenshot"
+    "last_update_reason": "PayPal official rules, FAQs, resources, judging and Sandbox documentation reviewed"
   },
   "projects": [
     {
@@ -58,7 +58,13 @@
       "official_url": "https://paypalaihackathon.devpost.com/",
       "registration_evidence": "User screenshot after Register shows 'My hackathon projects' and Create project, 2026-10-24 KST",
       "registration_backend_independently_verified": false,
-      "project_created": false
+      "project_created": false,
+      "official_rules_reviewed_as_of_kst": "2026-10-24",
+      "rules_review_path": "docs/research/PAYPAL_OFFICIAL_REVIEW_20261024.md",
+      "judging_model": "theme_api_pass_fail_then_five_equal_weight_criteria",
+      "sandbox_access_verified": false,
+      "submission_requirements_reviewed": true,
+      "strategy_status": "two_options_compared_not_approved"
     },
     {
       "id": "ugreen",
