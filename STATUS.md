@@ -19,11 +19,11 @@
 
 ## KIC GitHub 원격 확인(2026-10-24 KST)
 - 저장소: `hibi89/hibi89-kic-proofinvest` (**Public**), 기본 `main`.
-- 브랜치: `main` **9d0d454154a7393627a840113ab811a5b91f121a**; `lead/kic` **3ea8596edbd17cd3dcbbdadf17d9855010d835d9**; `feature/research` **76f3089212b76b55d6daad9725b989e8586c3752**; `feature/verification` **141dbbaf31487806e5d3d01fc92ecc3667e53ca2**; `feature/risk` **0e4d2cf6526c44626bb09c4fe6d30b490ad15ad0**.
+- 브랜치: `main` **9d0d454154a7393627a840113ab811a5b91f121a**; `lead/kic` **f7f5a25d072d7049eddfef1577d8b9c2134b8325**; `feature/research` **76f3089212b76b55d6daad9725b989e8586c3752**; `feature/verification` **141dbbaf31487806e5d3d01fc92ecc3667e53ca2**; `feature/risk` **0e4d2cf6526c44626bb09c4fe6d30b490ad15ad0**.
 - `main` Actions `40050488506`: **completed/success** (공통 합성 테스트/시연 CI). `lead/kic` `40050871579`: **completed/success**. 세 feature 브랜치 최신 HEAD의 offline-tests 모두 success.
 - 브랜치별 담당자 전용 메시지함 `docs/roles/{research,verification,risk}/TO_KIC_LEAD.md` 존재. 최근 확인 시 메시지함 신규 요청/차단 **0건**.
 - 실제 OpenDART, 통합 Agent, Production URL/브라우저, 공식 최종 제출 완료는 **미검증 또는 미완료**.
-- KIC 총괄의 최신 상세 보고는 `lead/kic/docs/roles/lead/HANDOFF.md`, `STATUS.md`, `MESSAGE_REVIEW.md`를 우선 사용.
+- KIC 총괄의 고정 최우선 보고: [`lead/kic/docs/roles/lead/TO_HACKATHON_LEAD.md`](https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/roles/lead/TO_HACKATHON_LEAD.md). 필요시 같은 브랜치의 `STATUS.md`, `HANDOFF.md`, `MESSAGE_REVIEW.md`와 실제 CI·코드를 교차검증.
 
 ## 전체 총괄의 현재 미해결 사항
 1. PayPal 참가 신청 → 잠정 주제의 구현 가능성/차별화 검수 → 대회 전담 저장소 구성.
@@ -33,3 +33,8 @@
 
 ## 변경 규칙
 기능별 새 커밋/제출 증거를 직접 조회하여 반영한 뒤 작성 시각과 검사 범위를 남긴다. 진척률은 근거 없으면 퍼센트로 표현하지 않는다.
+## KIC 상위 총괄 공식 보고 수신 — 2026-10-24 KST
+- KIC 총괄 최신 HEAD: `f7f5a25d072d7049eddfef1577d8b9c2134b8325`, [해당 커밋 CI 성공](https://github.com/hibi89/hibi89-kic-proofinvest/actions/runs/40051624837).
+- 별도 고정 보고서 `lead/kic/docs/roles/lead/TO_HACKATHON_LEAD.md` 존재 및 전문 직접 열람 확인. 보고서 내용: 전체 개발 이력, 기능별 진행, CI, API/배포 미검증, 승인 요청 및 제출 일정.
+- KIC PR 목록 0건 직접 확인. 기술·기능 진척은 최초 스타터 수준으로 유지. 팀 전환 및 기획서 공식 제출 근거 여전히 없음.
+- 상위 총괄의 후속 KIC 점검 순서: **고정 보고서 → 원격 HEAD/CI → 필요 시 STATUS/HANDOFF/코드 → 통합 일정/위험 업데이트**.
