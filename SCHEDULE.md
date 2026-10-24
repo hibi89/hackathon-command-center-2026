@@ -15,7 +15,7 @@
 | **12/01 (화) 16:45** | UGREEN | 본선 최종 Skill ZIP + 3분 이내 영상 제출 | 공식 | [Devpost: 11/30 23:45 PST](https://ugreenhackathon.devpost.com/) |
 | 12/02 07:00 ~ 12/16 01:00 | PayPal | 심사 기간 | 공식 | [Devpost 날짜표](https://paypalaihackathon.devpost.com/details/dates) |
 | **12/03 (목), 시각 미기재** | KIC | 예선 결과 발표 | 공식 | [DAKER](https://daker.ai/public/hackathons/kic-ai-agent-competition) |
-| **12/22 (화) 02:00** | PayPal | 수상자 발표 예정 | 공식 | [Devpost: 12/21 09:00 PST](https://paypalaihackathon.devpost.com/details/dates) |
+| **12/22 (화) 02:00 (Dates 기준)** | PayPal | 수상자 발표 예정. **Rules는 07:00으로 상충** | 시각 재확인 필요 | [Dates](https://paypalaihackathon.devpost.com/details/dates) / [Rules](https://paypalaihackathon.devpost.com/rules) |
 | **12/22 (화) 10:00** | KIC | 본선 데모 URL/코드/PDF 마감 | 공식 | [DAKER](https://daker.ai/public/hackathons/kic-ai-agent-competition) |
 | **12/29 (화), 시각 미기재** | KIC | 본선 온라인 발표 예정 | 공식·예정 | [DAKER](https://daker.ai/public/hackathons/kic-ai-agent-competition) |
 | **2027/01/11 (월), 시각 미기재** | KIC | 최종 결과 발표 예정 | 공식·예정 | [DAKER](https://daker.ai/public/hackathons/kic-ai-agent-competition) |
@@ -43,3 +43,9 @@
 ## 2026-10-24 KST 진행 현황 메모
 - PayPal·UGREEN의 참가 등록 직후 화면 확인 완료. 공식 **프로젝트/작품 제출 마감일은 변하지 않음**.
 - UGREEN `Create project`는 아직 실행되지 않았고 Round 1 PDF/ZIP은 **미제출**. KIC는 팀 전환/최종 제출 확인 필요.
+
+## 본선 진출 일정의 뜻 — 2026-10-24 공식 검증
+- KIC: **12팀 본선** 12/03 발표 → 12/22 본선 MVP/PDF 마감 → **6팀 수상**. 11/12~19 상호평가 참여 조건·최소 투표 횟수는 최신 운영진 안내를 확인할 것.
+- PayPal: **별도 Finalists 선정 인원/발표 없음**. Stage One pass/fail, Stage Two 본심사는 동일 제출작 심사 순서. 정식 작품 제출 **11/13 05:00**을 최우선 마감으로 유지.
+- UGREEN: **최대 30팀 본선**. 11/21 **미국 PT 기준** 이메일 안내, 팀별 NAS 테스트 일정 통지. 최종 5개 수상작.
+- PayPal 수상 발표 시각 공식 공고 상충: Dates는 **12/21 09:00 PST = 12/22 02:00 KST**, Rules는 **12/21 14:00 PST = 12/22 07:00 KST**. 날짜만 확정적으로 관리하고 시각은 근접 시 재검증.

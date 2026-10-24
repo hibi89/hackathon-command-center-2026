@@ -21,3 +21,9 @@
 - UGREEN: **2026-11-16 16:45 KST** 500 English words 이내·1MB 이하 제안 PDF, 공식 규격 pre-test ZIP(압축/해제 둘 다 10MB 이하, 파일당 1MB 이하, 100개 이하). Round 1은 SKILL.md 및 선택적 참조 Markdown만 허용되는 패키지 계약을 확인. 실제 NAS는 본선에서 검증.
 
 세부 원문과 조건은 `projects/*.md`의 공식 링크에서 재확인한다.
+## 본선 규모·공식 성과 단계 (2026-10-24 규정 대조)
+- KIC: 예선 상위 **12팀 본선**, 그중 최종 **6팀 수상**.
+- UGREEN: 예선 상위 **최대 30팀 본선**, 최종 **5개 수상작**.
+- PayPal: **공식 본선 정원 없음**. Stage One 테마/API 적합성 pass/fail → Stage Two 기술·디자인·효용·혁신·발표 동등 평가. Stage Two를 자동으로 공식 본선 진출 이력이라고 표현하지 않는다.
+- 포트폴리오 단계는 **대회 참가 등록 / 유효 작품 제출 / 공식 발표된 본선 진출(있는 대회) / 공식 수상**으로 분리하고, 증거 없는 수상·본선 이력 금지.
+- 신규 채팅 첫 진입점 [START_HERE.md](START_HERE.md), 작업 종료 후 동시 최신화 [CONTINUITY_PROTOCOL.md](docs/CONTINUITY_PROTOCOL.md).
