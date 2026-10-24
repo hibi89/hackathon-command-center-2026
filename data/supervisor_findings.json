@@ -25,7 +25,7 @@
       "dispatched_to": "https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/FROM_HACKATHON_COMMAND.md",
       "dispatched_child_head": "c965a59d2ae7e86aae1a1c10cbd6b0caedb480d5",
       "dispatched_kst": "2026-10-24",
-      "last_reviewed_sha": "a6aec576f07bd064ba1ef8f97aa249ea25f9c775"
+      "last_reviewed_sha": "18f3b81740b074ac3fcdb9ec1a0090a8ed12d2c8"
     },
     {
       "id": "SUP-PAYPAL-001",
@@ -47,7 +47,7 @@
       "dispatched_to": "https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/FROM_HACKATHON_COMMAND.md",
       "dispatched_child_head": "4098eb6663317a1d00c737d23253c5c26cb38c72",
       "dispatched_kst": "2026-10-24",
-      "last_reviewed_sha": "5d0d058d31e08a04d0b2ec49a3d85e750d557e3d"
+      "last_reviewed_sha": "260ae7fbdd845419ebb626f6ae8eee60a688bf31"
     },
     {
       "id": "SUP-UGREEN-001",
@@ -69,7 +69,7 @@
       "dispatched_to": "https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/FROM_HACKATHON_COMMAND.md",
       "dispatched_child_head": "ead21d523432c4b2ac17fabaed0da281394b0386",
       "dispatched_kst": "2026-10-24",
-      "last_reviewed_sha": "6a2cce0bcebb1d6943ff96cf8cfaf0ba7831e504"
+      "last_reviewed_sha": "bba61a7f5d22e3fb7743b7d778190b2d4aa1b3dc"
     },
     {
       "id": "SUP-KIC-002",
@@ -91,7 +91,7 @@
       "dispatched_to": "https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/FROM_HACKATHON_COMMAND.md",
       "dispatched_child_head": "c965a59d2ae7e86aae1a1c10cbd6b0caedb480d5",
       "dispatched_kst": "2026-10-24",
-      "last_reviewed_sha": "a6aec576f07bd064ba1ef8f97aa249ea25f9c775"
+      "last_reviewed_sha": "18f3b81740b074ac3fcdb9ec1a0090a8ed12d2c8"
     },
     {
       "id": "SUP-PAYPAL-002",
@@ -113,7 +113,7 @@
       "dispatched_to": "https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/FROM_HACKATHON_COMMAND.md",
       "dispatched_child_head": "4098eb6663317a1d00c737d23253c5c26cb38c72",
       "dispatched_kst": "2026-10-24",
-      "last_reviewed_sha": "5d0d058d31e08a04d0b2ec49a3d85e750d557e3d"
+      "last_reviewed_sha": "260ae7fbdd845419ebb626f6ae8eee60a688bf31"
     },
     {
       "id": "SUP-KIC-003",
@@ -135,7 +135,7 @@
       "dispatched_to": "https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/FROM_HACKATHON_COMMAND.md",
       "dispatched_child_head": "c965a59d2ae7e86aae1a1c10cbd6b0caedb480d5",
       "dispatched_kst": "2026-10-24",
-      "last_reviewed_sha": "052b7b4152c3108f2851823f57c4db202a8f5b3f"
+      "last_reviewed_sha": "18f3b81740b074ac3fcdb9ec1a0090a8ed12d2c8"
     },
     {
       "id": "SUP-UGREEN-002",
@@ -157,7 +157,7 @@
       "dispatched_to": "https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/FROM_HACKATHON_COMMAND.md",
       "dispatched_child_head": "ead21d523432c4b2ac17fabaed0da281394b0386",
       "dispatched_kst": "2026-10-24",
-      "last_reviewed_sha": "256a766d63eac38a1c6b181d29e3d74e20f9709a"
+      "last_reviewed_sha": "bba61a7f5d22e3fb7743b7d778190b2d4aa1b3dc"
     },
     {
       "id": "SUP-PAYPAL-003",
@@ -179,7 +179,7 @@
       "dispatched_to": "https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/FROM_HACKATHON_COMMAND.md",
       "dispatched_child_head": "4098eb6663317a1d00c737d23253c5c26cb38c72",
       "dispatched_kst": "2026-10-24",
-      "last_reviewed_sha": "5d0d058d31e08a04d0b2ec49a3d85e750d557e3d"
+      "last_reviewed_sha": "260ae7fbdd845419ebb626f6ae8eee60a688bf31"
     },
     {
       "id": "SUP-UGREEN-003",
@@ -196,7 +196,7 @@
       "verified_after_sha": "256a766d63eac38a1c6b181d29e3d74e20f9709a",
       "review_trigger": "next_user_requested_supervisor_audit_or_relevant_lead_commit",
       "approval_required": false,
-      "last_reviewed_sha": "6a2cce0bcebb1d6943ff96cf8cfaf0ba7831e504"
+      "last_reviewed_sha": "bba61a7f5d22e3fb7743b7d778190b2d4aa1b3dc"
     },
     {
       "id": "SUP-UGREEN-004",
@@ -215,7 +215,7 @@
       "verified_after_sha": null,
       "review_trigger": "owner_supported_codex_official_creator_run_then_next_supervisor_review",
       "approval_required": true,
-      "last_reviewed_sha": "6a2cce0bcebb1d6943ff96cf8cfaf0ba7831e504"
+      "last_reviewed_sha": "bba61a7f5d22e3fb7743b7d778190b2d4aa1b3dc"
     }
   ],
   "valid_statuses": [
@@ -248,32 +248,32 @@
     "scope": "Independent heads, inspected changed actual code, canonical JSON, verified CI jobs, official UGOS Creator eligibility",
     "contests": {
       "kic": {
-        "sha": "a6aec576f07bd064ba1ef8f97aa249ea25f9c775",
+        "sha": "18f3b81740b074ac3fcdb9ec1a0090a8ed12d2c8",
         "days": 60,
-        "done": 22,
+        "done": 23,
         "partial": 0,
         "blocked": 3,
-        "not_started": 35,
-        "verified_ci": 40081727073,
-        "offline_tests_lead_reported": 113,
+        "not_started": 34,
+        "verified_ci": 40082329914,
+        "offline_tests_lead_reported": 117,
         "submissions": 0
       },
       "paypal": {
-        "sha": "5d0d058d31e08a04d0b2ec49a3d85e750d557e3d",
+        "sha": "260ae7fbdd845419ebb626f6ae8eee60a688bf31",
         "days": 18,
         "done": 12,
         "partial": 2,
         "blocked": 1,
         "not_started": 3,
         "d15_percent": 20,
-        "verified_ci": 40081717845,
+        "verified_ci": 40082429683,
         "status_sync_ci": 40081866786,
-        "offline_tests_lead_reported": 193,
+        "offline_tests_lead_reported": 204,
         "mit_license": "USER_APPROVAL_AND_FILE_REPO_RECORDED",
         "submissions": 0
       },
       "ugreen": {
-        "sha": "6a2cce0bcebb1d6943ff96cf8cfaf0ba7831e504",
+        "sha": "bba61a7f5d22e3fb7743b7d778190b2d4aa1b3dc",
         "days": 24,
         "done": 2,
         "partial": 12,
@@ -282,9 +282,11 @@
         "verified_previous_ci": 40080489057,
         "previous_bundle_ci": 40080489067,
         "offline_tests_lead_reported": 204,
-        "new_g13_ci": "NOT_INDEPENDENTLY_VERIFIED",
+        "new_g13_ci": "FIRST_SOURCE_40082152946_FAILURE_204_PASS_1_FAILED_FORMAT_ASSERTION; LATEST_ASSERTION_FIX_CI_NOT_VERIFIED",
         "official_creator": "NOT_EVIDENCED",
-        "submissions": 0
+        "submissions": 0,
+        "g13_bundle_ci": 40082152962,
+        "g13_bundle": "PREVIEW_SUCCESS_1PAGE_5038B_ZIP4_7097B"
       }
     },
     "interpretation": "Calendar progress never equals functional completion; real API, registered SDK/official creator, entrant approval and submission are separate gates."
@@ -343,7 +345,7 @@
       }
     }
   },
-  "next_review": "Verify actual official UGOS Skill Creator generation/check evidence and G13 CI, PayPal real Sandbox+AI integration, KIC DAKER authenticated submit rights. Do not substitute more mock tests for official gates.",
+  "next_review": "Verify latest UGREEN bba61a7 post-correction test CI, real official UGOS Creator generation/check; PayPal real PayPal Sandbox and AI; KIC DAKER entrant/team submission permissions; all actual submissions 0.",
   "previous_snapshot_1719": {
     "date_kst": "2026-10-24",
     "audit_id": "SUPERVISOR-20261024-1719",
