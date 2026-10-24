@@ -276,7 +276,20 @@
       "sdk_wait_excluded": true,
       "early_submission_conditional": true,
       "fallback_submission_gate": "2026-11-14",
-      "effort_plan_warning": "Not a guarantee; KIC/PayPal time excluded; official SDK tool access remains blocked"
+      "effort_plan_warning": "Not a guarantee; KIC/PayPal time excluded; official SDK tool access remains blocked",
+      "round2_conditional_plan_url": "https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/UGREEN_FINALIST_DAILY_PLAN_20261024.md",
+      "round2_status": "NOT_SELECTED__PLANNING_ONLY",
+      "round2_baseline_planned_hours": 32,
+      "round2_separate_reserve_hours": 20.5,
+      "round2_baseline_max_hours": 52.5,
+      "round2_max_with_one_nas_day_hours_range": [
+        54.5,
+        58.5
+      ],
+      "round2_remote_nas_one_day_pt": "2026-11-22..2026-11-28, exact assigned date unverified",
+      "round2_internal_submission_kst": "2026-11-30T20:00:00+09:00",
+      "round2_official_submission_kst": "2026-12-01T16:45:00+09:00",
+      "round2_source_lead_commit": "919424488bd505e23affa3b5c9291d6d6bad1f67"
     }
   ]
 }
