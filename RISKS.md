@@ -1,3 +1,5 @@
+> **UGREEN 일별 투입시간 및 제출 위험 (2026-10-24 KST)**: [날짜별 보수적 계획·예비·완료기준](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/UGREEN_DAILY_EFFORT_PLAN_20261024.md) / [실측 기록](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/roles/lead/WORK_TIME_LOG.md) / [대회 총괄→상위 총괄 보고](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/roles/lead/TO_HACKATHON_LEAD.md). UGREEN만 계획 **34.25h**, 별도 예비 **26.75h**, 모두 쓰면 **최대 61h**. 하루 상한 평일 보통 3h·주말 4h; KIC(11/12)·PayPal(11/13) 공식 마감일 UGREEN 신규 개발 0h. 11/10 조기 제출은 **SDK 접근 차단으로 조건부**, 11/14 대체 게이트, 공식 11/16 16:45 KST. **다른 두 대회 소요시간·외부 SDK 대기시간은 합산되지 않았으므로 3개 대회 전체의 안전성은 별도 재계산 필요.** 하루 상한 초과는 완료로 주장하지 않고 이월·재산정.
+
 # RISKS — 전체 3개 대회 공통 위험 관리
 
 기준: 2026-10-24 KST. 확정되지 않은 장애는 추정/미검증으로 분리한다.

@@ -8,7 +8,7 @@
     "kind": "coordination_docs",
     "auto_update": false,
     "verified_as_of": "2026-10-24 13:29:50 KST",
-    "last_update_reason": "KIC 60-day conservative daily time plan linked to overall command center; single KIC lead source and variance tracking policy",
+    "last_update_reason": "Registered verified UGREEN conservative day-by-day effort plan and capacity in the central schedule and oversight reports",
     "first_read": "START_HERE.md",
     "update_protocol": "docs/CONTINUITY_PROTOCOL.md",
     "audit_report": "docs/audits/REPOSITORY_AUDIT_20261024.md",
@@ -34,7 +34,8 @@
     "bootstrap_verified_paths": 7,
     "bootstrap_verified_date_kst": "2026-10-24",
     "bootstrap_role_count": 4,
-    "kic_daily_capacity_oversight": "docs/KIC_DAILY_CAPACITY_OVERSIGHT_20261024.md"
+    "kic_daily_capacity_oversight": "docs/KIC_DAILY_CAPACITY_OVERSIGHT_20261024.md",
+    "ugreen_time_budget_visible": true
   },
   "projects": [
     {
@@ -261,7 +262,21 @@
       "current_work_pointer": "docs/roles/lead/LEAD_ACTIVE_WORK.md",
       "bootstrap_path": "CHAT_BOOTSTRAP.md",
       "bootstrap_verified": true,
-      "bootstrap_in_main_readme": true
+      "bootstrap_in_main_readme": true,
+      "daily_effort_plan_url": "https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/UGREEN_DAILY_EFFORT_PLAN_20261024.md",
+      "work_time_log_url": "https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/roles/lead/WORK_TIME_LOG.md",
+      "daily_effort_plan_verified_branch": "lead/ugreen",
+      "daily_effort_plan_verified_sha": "0fbc4755f04cee4cbf7d66d0edc376e3cabc4307",
+      "planned_active_hours": 34.25,
+      "separate_reserve_hours": 26.75,
+      "conditional_total_capacity_hours": 61,
+      "daily_cap_weekdays_usual_hours": 3,
+      "daily_cap_weekends_hours": 4,
+      "ugreen_new_development_on_kic_paypal_deadlines": false,
+      "sdk_wait_excluded": true,
+      "early_submission_conditional": true,
+      "fallback_submission_gate": "2026-11-14",
+      "effort_plan_warning": "Not a guarantee; KIC/PayPal time excluded; official SDK tool access remains blocked"
     }
   ]
 }
