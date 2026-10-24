@@ -7,10 +7,10 @@
 | 대회 | 검사한 lead HEAD | 날짜별 정본 (DONE/PARTIAL/BLOCKED/NOT_STARTED) | 검증 경계 |
 |---|---|---|---|
 | KIC | `052b7b4152c3108f2851823f57c4db202a8f5b3f` | **16/0/3/41**, 총60 | 11/15 통화/단위 혼합 fail-closed 코드 `95589dab`, CI [40078759840](https://github.com/hibi89/hibi89-kic-proofinvest/actions/runs/40078759840) python job **completed success**, 리드 보고 90/90 PASS. 최종 handoff/원장 동기화 커밋 `052b7b4` 자체 CI는 별도 미확인. 실 DAKER 참가/팀장 제출권한 60% BLOCKED 및 최종 업로드 NOT_SUBMITTED. |
-| PayPal | `d6dd022ab7b095d3a3079d66bb2ea654761a7e66` | **11/1/1/5**, 총18; D14 20% PARTIAL (정본은 기존 D03 BLOCKED/D04 PARTIAL에 더해 D14 PARTIAL도 있음 — 아래 주의) | 최신 D14 rate-limit/비밀 검사/영문 설명 신규 커밋의 CI **PENDING/미확인**, 앞선 D13 [40077804576](https://github.com/hibi89/hibi89-paypal-ai-hackathon/actions/runs/40077804576) test job SUCCESS, 175 Node+로컬 Chromium 리드 보고. **D14도 PARTIAL이므로 현재 18일 원장 실태를 다시 집계할 때는 11 DONE / 2 PARTIAL / 1 BLOCKED / 4 NOT_STARTED로 계산해야 함**; 렌더된 MASTER가 이전 상태면 최신 JSON 기준 재확인. 실 Sandbox·실 AI·LICENSE·Devpost 접수 미해결. |
+| PayPal | `d6dd022ab7b095d3a3079d66bb2ea654761a7e66` | **11/2/1/4**, 총18; D14 20% PARTIAL | 최신 D14 rate-limit/비밀 검사/영문 설명 신규 커밋의 CI **PENDING/미확인**, 앞선 D13 [40077804576](https://github.com/hibi89/hibi89-paypal-ai-hackathon/actions/runs/40077804576) test job SUCCESS, 175 Node+로컬 Chromium 리드 보고. **D14도 PARTIAL이므로 현재 18일 원장 실태를 다시 집계할 때는 11 DONE / 2 PARTIAL / 1 BLOCKED / 4 NOT_STARTED로 계산해야 함**; 렌더된 MASTER가 이전 상태면 최신 JSON 기준 재확인. 실 Sandbox·실 AI·LICENSE·Devpost 접수 미해결. |
 | UGREEN | `ead21d523432c4b2ac17fabaed0da281394b0386` | **2/12/3/7**, 총24 | G9 200 오프라인 테스트 [40078079863](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/actions/runs/40078079863) test job SUCCESS, PDF/ZIP [40078079879](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/actions/runs/40078079879) preview job SUCCESS. 351/500 English words, PDF 1쪽/4722 bytes, ZIP 4 Markdown/6004 bytes. 출품 승인·저작권/공개/PII 심사 NOT_CLEARED, official NAS/validator NOT_RUN, Devpost NOT_SUBMITTED. |
 
-**PayPal 상태 집계 주의:** 감사 중 `d6dd022`에서 D14가 20% PARTIAL이 되었다. 코드로 JSON을 재집계한 실제 일별 `progress_state`가 원장 표시와 다를 수 있으므로 이후 원격 재검증 전 숫자 자동 고정 금지. 이번 문서의 최신 판정은 `D14 PARTIAL` 자체이며, 완료 11·차단1은 유지한다.
+**PayPal 상태 집계 주의:** 감사 중 `d6dd022`에서 D14가 20% PARTIAL이 되었다. 원장 `progress_state` 재집계는 DONE11/PARTIAL2/BLOCKED1/NOT_STARTED4이며 이전 정적 11/1/1/5는 구형이다. 이후 리드 커밋이 발생하면 다시 계산한다.
 
 ## 중앙 시정 8건 후속 판정
 
