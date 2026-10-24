@@ -27,3 +27,8 @@
 - 전체 총괄이 가장 먼저 읽을 KIC 단일 보고 진입점: [`docs/roles/lead/TO_HACKATHON_LEAD.md`](https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/roles/lead/TO_HACKATHON_LEAD.md).
 - KIC 기능 담당자별 메시지는 `feature/{research,verification,risk}`의 `docs/roles/<role>/TO_KIC_LEAD.md`로 모이며, KIC 총괄만 각 원격 HEAD를 검토해 `lead/kic/docs/roles/lead/MESSAGE_REVIEW.md`에 처리 기록을 남긴다.
 - 전체 총괄은 KIC 메시지함을 직접 수정하지 않고 총괄 공식 보고의 상태·차단·일정 위험을 반영한다. 각 대회 보고서는 최신 작성 시각과 원격 SHA를 비교하며 자동 동기화되는 것으로 간주하지 않는다.
+
+
+## 현행 2026-10-24 KST — 4개 채팅 및 직접 개발 보고
+- 각 대회 총괄이 개발자를 겸하므로 **작업자 메시지 중계 단계는 폐지**. 중앙은 대회별 lead 브랜치의 `docs/roles/lead/LEAD_ACTIVE_WORK.md`, `STATUS.md`, `HANDOFF.md`, `TO_HACKATHON_LEAD.md`와 실제 원격 SHA/테스트/공식 제출 증거만 확인.
+- 기존 feature 브랜치는 이전 실행 증거이며 새 소스는 lead에서 직접 변경. 테스트 자체 검수·CI 및 Production/제출 여부를 구분하여 기록. 작업자용 과거 디스패처는 현재 실행 지시 아님.

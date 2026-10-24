@@ -69,3 +69,8 @@
 - [전담 실행계획](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/UGREEN_EXECUTION_PLAN_20261024.md)에서 **ProjectReady NAS 단일 Skill** 및 추가 지출 0원·내부 11/10 조기 제출 확정. 이전 11/14 목표와 구형 '주제 잠정' 문구는 과거 기록.
 - 활성 작업은 [UGR-001](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/dispatcher/CURRENT_TASK.md), 상태 READY, target `feature/missing-files`; 공식 Kit 지원 매트릭스 검증이 우선. 작업자 착수/완료 메시지 없음. 최초 feature HEAD `9b3052bf82ad1a8a4844b1aeee699c0b759251dc` 기준 확인.
 - 실제 Skill 구현, 공식 NAS/CLI 실행, PDF/ZIP 제출 증거는 없음. 공식 Round 1 11/16 16:45 KST.
+
+
+## [2026-10-24 KST] 4개 채팅 체계 완료 — UGREEN 총괄 직접 개발
+- 별도 기능 작업자 채팅 폐기. `lead/ugreen`가 직접 소스 개발·테스트·자체 검수·통합을 담당하며, 유일한 현재 작업 포인터는 `docs/roles/lead/LEAD_ACTIVE_WORK.md`. 기존 feature 브랜치는 작업 증거를 포함해 원본 보존. 이전 작업 지시서의 READY/IN_PROGRESS는 역사 상태이며 신규 실행권 없음.
+- 최신 확인 총괄 SHA: `ef8e2fcbdae01a871861e0fef67638fa9c72d527`. 공식 공개 SDK 문서 매트릭스는 존재하나 패키지 내부 CLI/Expert Agent와 실제 NAS 실증 차단. 공식 제출 영수증 미확인.

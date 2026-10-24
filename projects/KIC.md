@@ -59,3 +59,8 @@
 - [AUDIT_EXECUTION_PLAN_20261024.md](https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/roles/lead/AUDIT_EXECUTION_PLAN_20261024.md) 게시 확인. `lead/kic` 조회 HEAD `d081a59c62e5686fac93f9f0ec97e86f79832ccb`.
 - 기획서 중심 A안 65~70% / 소규모 구현 30~35%는 **총괄 제안**. 사용자 확정 아님.
 - 10/25 기획서 실물 확인·11/10 내부 조기 제출. 개발/실API/DAKER 최종 제출은 미확인.
+
+
+## [2026-10-24 KST] 4개 채팅 체계 완료 — KIC 총괄 직접 개발
+- 별도 기능 작업자 채팅 폐기. `lead/kic`가 직접 소스 개발·테스트·자체 검수·통합을 담당하며, 유일한 현재 작업 포인터는 `docs/roles/lead/LEAD_ACTIVE_WORK.md`. 기존 feature 브랜치는 작업 증거를 포함해 원본 보존. 이전 작업 지시서의 READY/IN_PROGRESS는 역사 상태이며 신규 실행권 없음.
+- 최신 확인 총괄 SHA: `ea811b883929502f31aceb5db23b6d7a502fb8c0`. Research 26 로컬 PASS는 작업자 보고이며 총괄 독립 검수/병합 전. 공식 제출 영수증 미확인.
