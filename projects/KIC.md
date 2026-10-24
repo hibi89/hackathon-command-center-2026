@@ -68,9 +68,9 @@
 - 최신 확인 총괄 SHA: `ea811b883929502f31aceb5db23b6d7a502fb8c0`. Research 26 로컬 PASS는 작업자 보고이며 총괄 독립 검수/병합 전. 공식 제출 영수증 미확인.
 
 
-## 2026-10-24 14:39 KST — 통합 총괄 최신 원격 감독 스냅샷
-- 리드 원격: [lead/kic@fb5d9f3ad562](https://github.com/hibi89/hibi89-kic-proofinvest/commit/fb5d9f3ad5627323a0c28dfb6574a888d210094f); 최신 [GitHub CI 40066732288](https://github.com/hibi89/hibi89-kic-proofinvest/actions/runs/40066732288) **success**, 해당 오프라인 스코프 테스트 67개 통과.
-- 67/67 오프라인 Python 회귀·합성 CLI 및 수동 공시기록 데모 CI 성공. 10/31 Risk verified-only 입력 게이트 100%, 11/01 실제 Risk 산술 미구현. 외부 공시 인증/DAKER 제출·Production 미검증.
-- 차단/남은 계획시간: DAKER 계정·공식 PPTX: 10/25 과제 35%, 접근 후 순작업 1h+예비 2h; DART 공식 뷰어: 10/30 과제 90%, 접근 후 0.5h+예비 1h. **실제 소요시간 미계측.**
-- 다음 READY/검증 작업: 11/01 Risk 안전 계산(결측·0분모·음수자본) 선행 개발.
-- 중앙 근거: [통합 검수](../docs/audits/CROSS_REPO_SUPERVISOR_SYNC_20261024.md). 원본·공식 제출 상태를 변경하지 않았음.
+## 2026-10-24 14:41 KST — 통합 총괄 최신 원격 감독 스냅샷
+- [lead/kic@f7520dffef9b](https://github.com/hibi89/hibi89-kic-proofinvest/commit/f7520dffef9bebe192b66bec2aff5c685430f2eb) · [GitHub Actions 40067146019 success](https://github.com/hibi89/hibi89-kic-proofinvest/actions/runs/40067146019): 오프라인 67개 테스트 성공.
+- **원본 일별 증거:** 10/31 Risk verified-only 100%; 10/25 DAKER 권한·공식양식 35% (접근 후 1h+예비 2h); 10/30 DART 공식 접수번호 대조 90% (접근 후 0.5h+예비 1h), 10/27 회수 예정.
+- **차단:** 외부 DAKER 계정·공식 양식 및 DART HTTP 502 직접 검증 차단. 실 OpenDART/배포/제출 미검증.
+- **다음 과제:** 11/01 Risk 결측·0분모·음수자본 안전 계산과 회귀 테스트.
+- 시간은 실측이 아니라 원본 예정/잔여 기준. 2026-10-24 14:41 KST 기준 [중앙 감사](../docs/audits/CROSS_REPO_SUPERVISOR_SYNC_20261024.md). 실 결제·배포·공식 제출 증거 없음.
