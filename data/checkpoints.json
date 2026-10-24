@@ -8,7 +8,7 @@
     "kind": "coordination_docs",
     "auto_update": false,
     "verified_as_of": "2026-10-24 KST",
-    "last_update_reason": "PayPal Devpost registration evidenced by participant dashboard screenshot"
+    "last_update_reason": "UGREEN Devpost registration success banner verified from user screenshot"
   },
   "projects": [
     {
@@ -64,7 +64,7 @@
       "id": "ugreen",
       "title": "NAS Project File Management AI Skill",
       "topic_confirmed": false,
-      "registration": "not_registered_user_report",
+      "registration": "registered_devpost_success_banner_and_project_dashboard_screenshot",
       "repo": null,
       "repo_exists": false,
       "implemented_and_verified_features": 0,
@@ -74,7 +74,11 @@
       "production": "not_applicable_in_round_1",
       "submitted": false,
       "submission_deadline_kst": "2026-11-16T16:45:00+09:00",
-      "official_url": "https://ugreenhackathon.devpost.com/"
+      "official_url": "https://ugreenhackathon.devpost.com/",
+      "registration_evidence": "User supplied Devpost screenshot 2026-10-24 KST: 'Thanks for registering!' on UGREEN My hackathon projects page",
+      "registration_backend_independently_verified": false,
+      "project_created": false,
+      "interested_track": "Automate Your Workflow (registration form)"
     }
   ]
 }
