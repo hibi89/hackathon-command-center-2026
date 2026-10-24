@@ -1,5 +1,5 @@
 {
-  "as_of_date_kst": "2026-10-24",
+  "as_of_date_kst": "2026-10-25",
   "owner": "hibi89",
   "meta": {
     "repository": "hibi89/hackathon-command-center-2026",
@@ -8,7 +8,7 @@
     "kind": "coordination_docs",
     "auto_update": false,
     "verified_as_of": "2026-10-24 KST, cross-repo audit snapshot at 17:19 with later observed commits",
-    "last_update_reason": "2026-10-25 early KIC regression after 2026-10-24 night audit; current CI red",
+    "last_update_reason": "KIC latest lead CI repaired and independently verified (234/234); PayPal lead 325 PASS with 214/5 main divergence; UGREEN external checker still blocked",
     "first_read": "START_HERE.md",
     "update_protocol": "docs/CONTINUITY_PROTOCOL.md",
     "audit_report": "docs/audits/REPOSITORY_AUDIT_20261024.md",
@@ -46,8 +46,8 @@
     "contest_expansion_requires_user_explicit_decision": true,
     "existing_four_chat_structure_unchanged": true,
     "reinvestment_policy": "optional_personal_reward_after_official_result; any_charge_or_hardware_purchase_requires_fresh_approval",
-    "last_supervisor_sync_report": "docs/audits/SUPERVISOR_LIVE_SYNC_20261024_NIGHT.md",
-    "latest_supervisor_sync_kst": "2026-10-24 night KST GitHub read",
+    "last_supervisor_sync_report": "docs/audits/SUPERVISOR_CI_RECOVERY_SYNC_20261025.md",
+    "latest_supervisor_sync_kst": "2026-10-25 KST, same-SHA GitHub Actions and branch review",
     "cross_contest_original_capacity": {
       "date_start": "2026-10-25",
       "date_end": "2026-11-11",
@@ -282,7 +282,7 @@
       "repo": "hibi89/hibi89-kic-proofinvest",
       "repo_exists": true,
       "main_head_sha": "778f18c94048490aa6996973161bc720cf57f758",
-      "lead_head_sha": "d53bbd99b56477f81df49694c6311820b5e0f156",
+      "lead_head_sha": "0a488ed626d0c123cd637262e0af5afbfdb26c34",
       "implemented_and_verified_features": 0,
       "planned_features": 3,
       "offline_tests_reported_passed": 26,
@@ -326,7 +326,7 @@
       "lead_migration_verified": true,
       "legacy_dispatch_reference_only_after_migration": true,
       "lead_development_branch": "lead/kic",
-      "reported_offline_unit_tests_passed": 82,
+      "reported_offline_unit_tests_passed": 234,
       "lead_work_branch": "lead/kic",
       "current_work_pointer": "docs/roles/lead/LEAD_ACTIVE_WORK.md",
       "bootstrap_path": "CHAT_BOOTSTRAP.md",
@@ -379,10 +379,10 @@
         "scope": "PDF pages 5-7 after pages 1-4 completed; temp v0.2 not in Library"
       },
       "daily_progress_observed_kic_sha": "32a0c1ae035fcd2d6820c890df218c5829e97212",
-      "last_verified_lead_ci_url": "https://github.com/hibi89/hibi89-kic-proofinvest/actions/runs/40078509037",
-      "last_verified_lead_ci_sha": "c965a59d2ae7e86aae1a1c10cbd6b0caedb480d5",
-      "last_verified_lead_asof_kst": "2026-10-24 17:19 KST approximate snapshot",
-      "latest_supervisor_observation": "2026-10-24 updated during concurrent lead development; see docs/audits/SUPERVISOR_FOLLOWUP_20261024.md final addendum",
+      "last_verified_lead_ci_url": "https://github.com/hibi89/hibi89-kic-proofinvest/actions/runs/40106144873",
+      "last_verified_lead_ci_sha": "0a488ed626d0c123cd637262e0af5afbfdb26c34",
+      "last_verified_lead_asof_kst": "2026-10-25 KST",
+      "latest_supervisor_observation": "KIC root contract test regressions fixed at 0a488ed6, Actions 40106144873 234 PASS; DAKER/DART external remain blocked",
       "daker_preflight_progress": {
         "date_kst": "2026-10-25",
         "percent_complete": 60,
@@ -393,22 +393,23 @@
       "master_progress_path": "docs/roles/lead/MASTER_PROGRESS.md",
       "master_progress_json_path": "docs/roles/lead/MASTER_PROGRESS.json",
       "master_progress_days": 60,
-      "master_progress_done": 16,
+      "master_progress_done": 29,
       "master_progress_partial": 0,
       "master_progress_blocked": 3,
-      "master_progress_not_started": 41,
+      "master_progress_not_started": 28,
       "supervisor_findings_ids": [
         "SUP-KIC-001",
         "SUP-KIC-002",
-        "SUP-KIC-003"
+        "SUP-KIC-003",
+        "SUP-KIC-005"
       ],
       "supervisor_message_url": "https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/FROM_HACKATHON_COMMAND.md",
       "supervisor_message_acknowledged": true,
       "supervisor_message_applied": "PARTIAL_KIC_002_CLOSED_DAKER_BLOCKED; LATEST_NEW_CODE_CI_PENDING",
       "latest_remote_audit": {
-        "as_of_kst": "2026-10-24",
-        "source": "docs/audits/SUPERVISOR_LIVE_SYNC_20261024_NIGHT.md",
-        "head": "d53bbd99b56477f81df49694c6311820b5e0f156",
+        "as_of_kst": "2026-10-25",
+        "source": "docs/audits/SUPERVISOR_CI_RECOVERY_SYNC_20261025.md",
+        "head": "0a488ed626d0c123cd637262e0af5afbfdb26c34",
         "done": 29,
         "partial": 0,
         "blocked": 3,
@@ -416,8 +417,9 @@
         "scheduled_days": 60,
         "official_submission": false,
         "live_external_verified": false,
-        "latest_ci_run": 40105430707,
-        "latest_ci_conclusion": "failure"
+        "latest_ci_run": 40106144873,
+        "latest_ci_conclusion": "success",
+        "latest_test_count": 234
       }
     },
     {
@@ -485,7 +487,7 @@
       "worker_chat_required": false,
       "lead_migration_verified": true,
       "legacy_dispatch_reference_only_after_migration": true,
-      "reported_offline_unit_tests_passed": 175,
+      "reported_offline_unit_tests_passed": 325,
       "lead_development_branch": "lead/paypal",
       "lead_work_branch": "lead/paypal",
       "current_work_pointer": "docs/roles/lead/LEAD_ACTIVE_WORK.md",
@@ -493,10 +495,10 @@
       "bootstrap_verified": true,
       "bootstrap_in_main_readme": true,
       "lead_reported_offline_acceptance": true,
-      "last_verified_lead_ci_url": "https://github.com/hibi89/hibi89-paypal-ai-hackathon/actions/runs/40078519603",
-      "last_verified_lead_ci_sha": "4098eb6663317a1d00c737d23253c5c26cb38c72",
-      "last_verified_lead_asof_kst": "2026-10-24 17:19 KST approximate snapshot",
-      "latest_supervisor_observation": "2026-10-24 updated during concurrent lead development; see docs/audits/SUPERVISOR_FOLLOWUP_20261024.md final addendum",
+      "last_verified_lead_ci_url": "https://github.com/hibi89/hibi89-paypal-ai-hackathon/actions/runs/40105474259",
+      "last_verified_lead_ci_sha": "a13b60eb1f5a129b5b0965331977de9ef1adaa2e",
+      "last_verified_lead_asof_kst": "2026-10-25 KST",
+      "latest_supervisor_observation": "325 PASS, main-lead branch diverged 214 ahead/5 behind, real Sandbox+AI not verified",
       "daily_progress_latest": {
         "daily_progress_ledger_active": "PPL-D09",
         "D01": 100,
@@ -519,10 +521,10 @@
       "master_progress_path": "MASTER_PROGRESS.md",
       "master_progress_json_path": "data/paypal_daily_progress.json",
       "master_progress_days": 18,
-      "master_progress_done": 11,
+      "master_progress_done": 12,
       "master_progress_partial": 2,
       "master_progress_blocked": 1,
-      "master_progress_not_started": 4,
+      "master_progress_not_started": 3,
       "supervisor_findings_ids": [
         "SUP-PAYPAL-001",
         "SUP-PAYPAL-002",
@@ -532,8 +534,8 @@
       "supervisor_message_acknowledged": "INFERRED_SCOPE_WORK_NO_PER_FINDING_REPLY",
       "supervisor_message_applied": "D14_60_PERCENT_CI_179_PRIOR_SHA_SUCCESS_LICENSE_DECISION_PENDING",
       "latest_remote_audit": {
-        "as_of_kst": "2026-10-24",
-        "source": "docs/audits/SUPERVISOR_LIVE_SYNC_20261024_NIGHT.md",
+        "as_of_kst": "2026-10-25",
+        "source": "docs/audits/SUPERVISOR_CI_RECOVERY_SYNC_20261025.md",
         "head": "a13b60eb1f5a129b5b0965331977de9ef1adaa2e",
         "done": 12,
         "partial": 2,
@@ -675,10 +677,10 @@
       "early_g4_report_assembly": "OFFLINE_TESTED_OFFICIAL_INTEGRATION_UNVERIFIED",
       "early_g5_core_edge": "THREE_SYNTHETIC_SCENARIOS_PASS_REAL_SKILL_NOT_RUN",
       "reported_offline_unit_tests_passed": 190,
-      "last_verified_lead_ci_url": "https://github.com/hibi89/hibi89-ugreen-nas-hackathon/actions/runs/40078635510",
-      "last_verified_lead_ci_sha": "ead21d523432c4b2ac17fabaed0da281394b0386",
-      "last_verified_lead_asof_kst": "2026-10-24 17:19 KST approximate snapshot",
-      "latest_supervisor_observation": "2026-10-24 updated during concurrent lead development; see docs/audits/SUPERVISOR_FOLLOWUP_20261024.md final addendum",
+      "last_verified_lead_ci_url": "https://github.com/hibi89/hibi89-ugreen-nas-hackathon/actions/runs/40104218442",
+      "last_verified_lead_ci_sha": "d40b522edb57cea8982e56662cafa14520efc27d",
+      "last_verified_lead_asof_kst": "2026-10-25 KST",
+      "latest_supervisor_observation": "same-SHA plan CI success; actual candidate 770e08c6 official checker not run, legal/submission gate open",
       "daily_progress_latest": {
         "date": "2026-10-24",
         "day_work": 100,
@@ -708,8 +710,8 @@
       "supervisor_message_acknowledged": true,
       "supervisor_message_applied": "G10_LEAD_ACKNOWLEDGED_SUPO_001_002; 003_REPORT_FRESHNESS_VERIFIED_CLOSED; NEW_CODE_CI_PENDING",
       "latest_remote_audit": {
-        "as_of_kst": "2026-10-24",
-        "source": "docs/audits/SUPERVISOR_LIVE_SYNC_20261024_NIGHT.md",
+        "as_of_kst": "2026-10-25",
+        "source": "docs/audits/SUPERVISOR_CI_RECOVERY_SYNC_20261025.md",
         "head": "d40b522edb57cea8982e56662cafa14520efc27d",
         "done": 2,
         "partial": 12,
@@ -717,7 +719,10 @@
         "not_started": 7,
         "scheduled_days": 24,
         "official_submission": false,
-        "live_external_verified": false
+        "live_external_verified": false,
+        "latest_ci_run": 40104218442,
+        "latest_ci_conclusion": "success",
+        "ci_scope": "plan_and_handoff_only; prior offline 224 on different SHA"
       }
     }
   ]

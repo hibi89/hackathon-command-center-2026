@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "as_of_date_kst": "2026-10-24",
+  "as_of_date_kst": "2026-10-25",
   "registry_purpose": "Track actual evidenced cross-contest audit corrective actions after requests, not an assertion that all projects passed.",
   "source_charter": "docs/SUPERVISOR_MANDATE.md",
-  "last_audit_performed_under_this_charter": "SUPERVISOR-20261025-KIC-CI-REGRESSION",
+  "last_audit_performed_under_this_charter": "SUPERVISOR-20261025-CI-RECOVERY-VERIFIED",
   "findings": [
     {
       "id": "SUP-KIC-001",
@@ -236,12 +236,12 @@
       "reason": "GitHub compare main...lead/paypal showed diverged ahead=185, behind=5; bare GitHub repo link opens default main by default and risks leading judges to obsolete source.",
       "created_kst": "2026-10-24",
       "status": "OPEN",
-      "verification": "GitHub compare main...lead/paypal on 2026-10-24: status diverged, lead 212 ahead, 5 behind; correct judged URL/LICENSE/src visibility not verified",
+      "verification": "GitHub remote compare main...lead/paypal on 2026-10-25: diverged, lead 214 ahead / 5 behind; current lead a13b60eb 325 PASS; judged URL/LICENSE/src visibility still NOT_VERIFIED",
       "verified_after_sha": null,
       "review_trigger": "before_paypal_final_devpost_submission",
       "approval_required": true,
       "last_reviewed_sha": "a13b60eb1f5a129b5b0965331977de9ef1adaa2e",
-      "last_review_report": "docs/audits/SUPERVISOR_LIVE_SYNC_20261024_NIGHT.md"
+      "last_review_report": "docs/audits/SUPERVISOR_CI_RECOVERY_SYNC_20261025.md"
     },
     {
       "id": "SUP-KIC-004",
@@ -268,20 +268,20 @@
       "contest": "KIC",
       "priority": "P1",
       "disposition": "FIX",
-      "status": "OPEN",
+      "status": "VERIFIED_CLOSED",
       "description": "Latest KIC lead branch CI regression: old positive handoff-body append test conflicts with new mandatory-section integrity validation.",
       "evidence_url": "https://github.com/hibi89/hibi89-kic-proofinvest/actions/runs/40105430707",
       "observed_sha": "d53bbd99b56477f81df49694c6311820b5e0f156",
       "owner": "KIC lead",
       "acceptance": "Use a complete valid canonical contract body plus a safe appended note as the positive test fixture; retain missing section/undefined negative protections, then independently verify new latest lead/kic SHA full GitHub Actions SUCCESS.",
-      "verification": "GitHub CI 40105430707 failure, 233 tests/1 ERROR in test_future_append_to_contract_body_preserves_header. Root cause verified in scripts/master_progress.py & test_root_contract_header.py.",
+      "verification": "FIXED_BY_KIC_LEAD_0a488ed626d0c123cd637262e0af5afbfdb26c34; SAME_SHA_ACTIONS_40106144873_SUCCESS; UNIT_TESTS_234_234_PASS; REPAIRED_POSITIVE_FIXTURE_USES_FULL_CANONICAL_CONTRACT_BODY; NEGATIVE_PROTECTION_PRESERVED; EXTERNAL_DAKER_DART_UNVERIFIED",
       "created_kst": "2026-10-25",
-      "verified_after_sha": null,
-      "review_trigger": "next KIC corrective source commit and same-SHA CI result",
+      "verified_after_sha": "0a488ed626d0c123cd637262e0af5afbfdb26c34",
+      "review_trigger": "reopen_only_if_new_lead_CI_regresses",
       "approval_required": false,
       "dispatched_to": null,
-      "last_reviewed_sha": "d53bbd99b56477f81df49694c6311820b5e0f156",
-      "last_review_report": "docs/audits/SUPERVISOR_LIVE_SYNC_20261024_NIGHT.md"
+      "last_reviewed_sha": "0a488ed626d0c123cd637262e0af5afbfdb26c34",
+      "last_review_report": "docs/audits/SUPERVISOR_CI_RECOVERY_SYNC_20261025.md"
     }
   ],
   "valid_statuses": [
