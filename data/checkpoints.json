@@ -8,7 +8,7 @@
     "kind": "coordination_docs",
     "auto_update": false,
     "verified_as_of": "2026-10-24 KST, cross-repo audit snapshot at 17:19 with later observed commits",
-    "last_update_reason": "Independent new live GitHub lead SHA/CI/sources audit with UGREEN G25, PayPal 212/5 divergence, DAKER peer-vote risk",
+    "last_update_reason": "2026-10-25 early KIC regression after 2026-10-24 night audit; current CI red",
     "first_read": "START_HERE.md",
     "update_protocol": "docs/CONTINUITY_PROTOCOL.md",
     "audit_report": "docs/audits/REPOSITORY_AUDIT_20261024.md",
@@ -251,6 +251,17 @@
         "kic": "DAKER final upload permission blocked; 2026-11-12 to 11-19 peer-vote eligibility needs authenticated verification",
         "paypal": "real PayPal Sandbox/real Gemini NOT_TESTED; main vs lead diverged 212 ahead/5 behind",
         "ugreen": "new candidate Skill SHA 770e08c6 official checker NOT_RUN; PDF transport correction only, rights+approval+Devpost not yet verified"
+      },
+      "subsequent_ci_regression": {
+        "observed_kst": "2026-10-25 00:04",
+        "contest": "KIC",
+        "current_at_observation": "d53bbd99b56477f81df49694c6311820b5e0f156",
+        "run_id": 40105430707,
+        "conclusion": null,
+        "tests": 233,
+        "errors": 1,
+        "previous_pass_sha": "9c34fb844a600c47e9268ab6126ca9e70d785882",
+        "source": "docs/audits/SUPERVISOR_LIVE_SYNC_20261024_NIGHT.md"
       }
     }
   },
@@ -263,7 +274,7 @@
       "repo": "hibi89/hibi89-kic-proofinvest",
       "repo_exists": true,
       "main_head_sha": "778f18c94048490aa6996973161bc720cf57f758",
-      "lead_head_sha": "9c34fb844a600c47e9268ab6126ca9e70d785882",
+      "lead_head_sha": "d53bbd99b56477f81df49694c6311820b5e0f156",
       "implemented_and_verified_features": 0,
       "planned_features": 3,
       "offline_tests_reported_passed": 26,
@@ -275,7 +286,7 @@
       "official_url": "https://daker.ai/public/hackathons/kic-ai-agent-competition",
       "lead_report_path": "docs/roles/lead/TO_HACKATHON_LEAD.md",
       "lead_report_branch": "lead/kic",
-      "lead_ci": "success; CI 40104177191; details in docs/audits/SUPERVISOR_LIVE_SYNC_20261024_NIGHT.md",
+      "lead_ci": "FAILED same HEAD workflow 40105430707, 233 tests 1 error (last observed)",
       "pull_requests_count": 0,
       "lead_report_checked_date_kst": "2026-10-24",
       "official_finalist_slots": 12,
@@ -389,14 +400,16 @@
       "latest_remote_audit": {
         "as_of_kst": "2026-10-24",
         "source": "docs/audits/SUPERVISOR_LIVE_SYNC_20261024_NIGHT.md",
-        "head": "9c34fb844a600c47e9268ab6126ca9e70d785882",
+        "head": "d53bbd99b56477f81df49694c6311820b5e0f156",
         "done": 29,
         "partial": 0,
         "blocked": 3,
         "not_started": 28,
         "scheduled_days": 60,
         "official_submission": false,
-        "live_external_verified": false
+        "live_external_verified": false,
+        "latest_ci_run": 40105430707,
+        "latest_ci_conclusion": null
       }
     },
     {

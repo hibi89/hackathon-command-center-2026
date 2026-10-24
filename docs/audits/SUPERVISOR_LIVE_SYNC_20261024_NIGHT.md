@@ -29,3 +29,10 @@
 - **NOT_VERIFIED:** 실제 계정/DAKER 업로드, PayPal Sandbox/Gemini, UGREEN vendor checker 동일 SHA, NAS, Live Production, 최종 참가자 승낙/Devpost 영수증, 실투입시간. 독립 로컬 테스트는 본 감사에서 수행하지 않음.
 - **NEXT:** P0 실외부 접근이 확인되면 각 대회 리드가 실제 기능검증·접수 준비를 실행, 전체 총괄이 SHA/증거 재조회. 다른 대회 소스 브랜치는 이 감사에서 수정하지 않음.
 - **중앙 Git 상태:** 보고 초안 기준 `main@491dbc9ba09b1a4b0588facab03849dabb1050e1`; 문서/원장 원자 커밋 후 새로운 Git SHA를 실제 재조회하여 외부에 보고. 중앙 Production/Vercel **미적용**.
+
+## 2026-10-25 00시경 — 10/24 심야 감사 이후 KIC 새 CI 실패 추가 발견
+
+- 본 감사에서 관측한 KIC `9c34fb84` 227/227 PASS 이후 새 HEAD `d53bbd99b56477f81df49694c6311820b5e0f156`로 전진. [Actions #40105430707](https://github.com/hibi89/hibi89-kic-proofinvest/actions/runs/40105430707) **null**, 로그 **233 tests / errors=1**.
+- 실패 테스트: `test_root_contract_header.RootContractHeaderIntegrityTests.test_future_append_to_contract_body_preserves_header`. `tests/test_root_contract_header.py` 구형 positive fixture는 `ROOT_CONTRACT_NOTICE + ROOT_CONTRACT_TITLE + 'old notes' 3000줄`뿐이라 최신 `scripts/master_progress.py`가 필수로 검사하는 본문 5개 섹션/채팅 복원 명령이 모두 누락됨. 새로운 필수 정책 본문 무결성 검사가 이 샘플을 거부하는 것이 자연스러움.
+- **시정 권고 (KIC 총괄 소유):** 실제 유효한 `KIC_HANDOFF_CONTRACT.md`를 읽고 뒤에 무해한 메모를 붙이는 positive fixture로 교체. 고의 결손/undefined/중복 제목이 거절되는 별도 테스트는 유지. 이후 최신 원격 SHA 전체 오프라인 CI 성공 확인. **해당 코드나 테스트는 중앙이 수정하지 않음.**
+- 사유: 마지막 관찰 직후에도 KIC가 독립적으로 커밋할 수 있으므로 이 SHA는 시점 스냅샷. 이번 감사에서 PayPal/UGREEN 브랜치는 해당 오류와 무관; 외부 API/실제 제출과 관계없음.

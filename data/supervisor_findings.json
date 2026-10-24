@@ -3,7 +3,7 @@
   "as_of_date_kst": "2026-10-24",
   "registry_purpose": "Track actual evidenced cross-contest audit corrective actions after requests, not an assertion that all projects passed.",
   "source_charter": "docs/SUPERVISOR_MANDATE.md",
-  "last_audit_performed_under_this_charter": "SUPERVISOR-20261024-NIGHT-LIVE-SYNC",
+  "last_audit_performed_under_this_charter": "SUPERVISOR-20261025-KIC-CI-REGRESSION",
   "findings": [
     {
       "id": "SUP-KIC-001",
@@ -262,6 +262,26 @@
       "dispatched_to": null,
       "last_reviewed_sha": "9c34fb844a600c47e9268ab6126ca9e70d785882",
       "last_review_report": "docs/audits/SUPERVISOR_LIVE_SYNC_20261024_NIGHT.md"
+    },
+    {
+      "id": "SUP-KIC-005",
+      "contest": "KIC",
+      "priority": "P1",
+      "disposition": "FIX",
+      "status": "OPEN",
+      "description": "Latest KIC lead branch CI regression: old positive handoff-body append test conflicts with new mandatory-section integrity validation.",
+      "evidence_url": "https://github.com/hibi89/hibi89-kic-proofinvest/actions/runs/40105430707",
+      "observed_sha": "d53bbd99b56477f81df49694c6311820b5e0f156",
+      "owner": "KIC lead",
+      "acceptance": "Use a complete valid canonical contract body plus a safe appended note as the positive test fixture; retain missing section/undefined negative protections, then independently verify new latest lead/kic SHA full GitHub Actions SUCCESS.",
+      "verification": "GitHub CI 40105430707 null, 233 tests/1 ERROR in test_future_append_to_contract_body_preserves_header. Root cause verified in scripts/master_progress.py & test_root_contract_header.py.",
+      "created_kst": "2026-10-25",
+      "verified_after_sha": null,
+      "review_trigger": "next KIC corrective source commit and same-SHA CI result",
+      "approval_required": false,
+      "dispatched_to": null,
+      "last_reviewed_sha": "d53bbd99b56477f81df49694c6311820b5e0f156",
+      "last_review_report": "docs/audits/SUPERVISOR_LIVE_SYNC_20261024_NIGHT.md"
     }
   ],
   "valid_statuses": [
@@ -334,6 +354,17 @@
       "kic": "DAKER final upload permission blocked; 2026-11-12 to 11-19 peer-vote eligibility needs authenticated verification",
       "paypal": "real PayPal Sandbox/real Gemini NOT_TESTED; main vs lead diverged 212 ahead/5 behind",
       "ugreen": "new candidate Skill SHA 770e08c6 official checker NOT_RUN; PDF transport correction only, rights+approval+Devpost not yet verified"
+    },
+    "subsequent_ci_regression": {
+      "observed_kst": "2026-10-25 00:04",
+      "contest": "KIC",
+      "current_at_observation": "d53bbd99b56477f81df49694c6311820b5e0f156",
+      "run_id": 40105430707,
+      "conclusion": null,
+      "tests": 233,
+      "errors": 1,
+      "previous_pass_sha": "9c34fb844a600c47e9268ab6126ca9e70d785882",
+      "source": "docs/audits/SUPERVISOR_LIVE_SYNC_20261024_NIGHT.md"
     }
   },
   "official_references": [
