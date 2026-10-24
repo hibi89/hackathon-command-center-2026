@@ -1,5 +1,7 @@
 # 2026 AI 해커톤 통합 상황실
 
+> **채팅방 변경 후 [START_HERE.md](START_HERE.md)부터 읽는다.** 이후 [HANDOFF](HANDOFF.md) → [STATUS](STATUS.md) → [AGENTS](AGENTS.md) → [REQUIREMENTS](REQUIREMENTS.md), 최신 GitHub SHA 및 대회별 공식 보고를 확인한다.
+
 > 기준: **2026-10-24 KST** | 역할: **전체 총괄(전략·일정·품질 감독)** | 실제 참가자: **1명**  
 > 이 저장소는 **프로젝트 코드 저장소가 아닌 운영·보고 전용 저장소**입니다. 이 파일들의 내용은 현재 시점의 스냅샷이며 자동 동기화되지 않습니다.
 
@@ -15,6 +17,11 @@
 
 **성공의 정의**: 공식 유효 제출 → KIC/UGREEN 본선 진출 등 객관적 성과 → 동작 제품·코드·시연 축적 → 상품화. AI 역할 13개는 작업 분담용이며 실제 팀원은 1명입니다.
 
+## 본선 선발 방식 (공식 규정 기준, 2026-10-24)
+- **KIC:** 예선 상위 **12팀** 본선, 최종 6팀 수상.
+- **UGREEN:** 예선 상위 **최대 30팀** 본선, 최종 5개 수상작.
+- **PayPal:** 별도 본선 정원/선발 발표 없음. Stage One 적격성 pass/fail → Stage Two 본심사. 내부 심사 단계를 '본선 진출' 경력으로 기재하지 않는다.
+
 ## 오늘 기준 가장 중요한 판단
 
 1. **KIC**: 예선에서 중요한 것은 **공식 PDF 10페이지 이내 기획서 제출**. 실제 API·배포는 본선 준비 항목; 합성 테스트를 실데이터 성공으로 간주하지 않음. 팀 전환/제출 버튼 확인이 우선 리스크.
@@ -22,6 +29,8 @@
 3. **UGREEN**: 참가 등록 확인. 실제 NAS 없이 예선 참가 가능. **500단어 이내 영문 PDF(1MB 이하) + 공식 Uliya 표준의 pre-test Skill ZIP** 필수. Round 1 ZIP에는 별도 실행 파일/스크립트/매니페스트를 넣으면 안 됨.
 
 ## 운영 문서
+- [START_HERE.md](START_HERE.md) — **새 통합 총괄 채팅방 복원 단일 진입점**
+- [docs/CONTINUITY_PROTOCOL.md](docs/CONTINUITY_PROTOCOL.md) — **중요 작업 종료 때 문서 최신화/원격 검증 절차**
 
 - [PayPal 공식 규정·기술 검토](docs/research/PAYPAL_OFFICIAL_REVIEW_20261024.md) — 필수 제출물·심사 기준·Sandbox·제품 전략 비교 (2026-10-24)
 - [STATUS.md](STATUS.md) — 최신 총괄 상태 / GitHub 증거

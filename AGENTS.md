@@ -22,3 +22,9 @@
 
 ## 대회별 총괄 보고 진입점 (KIC 검증: 2026-10-24 KST)
 KIC는 `hibi89/hibi89-kic-proofinvest` 저장소 `lead/kic` 브랜치의 [`docs/roles/lead/TO_HACKATHON_LEAD.md`](https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/roles/lead/TO_HACKATHON_LEAD.md)부터 읽는다. 보고서의 HEAD/CI·제출 증거와 맞지 않는 부분이 있으면 실제 원격 검증 결과를 우선한다. KIC 총괄에게 전달할 사항은 전체 총괄 상황판에 기록하며 KIC 기능 담당에게 직접 구현 지시를 내리지 않는다. PayPal/UGREEN에도 담당 총괄이 생기면 같은 방식으로 진입점을 지정한다.
+
+## 새 채팅방 복원·최신화 필수 지침 (2026-10-24)
+- 새 해커톤 총괄 채팅은 [START_HERE.md](START_HERE.md) → HANDOFF → STATUS → AGENTS → REQUIREMENTS → SCHEDULE → RISKS → projects/* 순서로 읽는다. 최신 원격 SHA, CI, 제출 증거와 대조한다.
+- 주요 개발 보고, 참가/제출, 규정/일정 변경, 승인·차단 해결, 채팅 인수인계 완료 시 [연속성 프로토콜](docs/CONTINUITY_PROTOCOL.md)에 따라 **관련 프로젝트 기록·STATUS·HANDOFF·START_HERE·JSON을 같은 작업에서 갱신**하고 원격 커밋 검증한다.
+- 공식 본선: KIC **12팀**, UGREEN **최대 30팀**. PayPal은 별도 본선 정원 없이 2단계 내부 심사. 등록/유효제출/본선/수상 혼동 금지.
+- 채팅방 간 자동 공유/실시간 동기화 없음. 시간만 지났다는 이유로 빈 커밋 금지. 사용자 `ㄱ`은 다음 실제 작업 계속 지시.
