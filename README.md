@@ -1,3 +1,5 @@
+> **최신 사용자 확정(2026-10-24): 실제 채팅 4개.** 통합 총괄 1 + KIC·PayPal·UGREEN 총괄 겸 직접 개발자 각 1. 7개/13개 채팅과 별도 작업자 라우팅은 구형 기록이다. [현행 정책](docs/FOUR_CHAT_EXECUTION_PROTOCOL.md) · [4개 프롬프트](docs/CHAT_TRANSITION_PROMPTS_4.md) · [전환 검수](docs/audits/FOUR_CHAT_TRANSITION_AUDIT_20261024.md)를 최우선으로 읽어라. 기능 브랜치 보존, 대회별 전환 반영은 원격 확인 전 미검증.
+
 # 2026 AI 해커톤 통합 상황실
 
 > **현행 운영: [7개 채팅방 복원 프롬프트](docs/CHAT_TRANSITION_PROMPTS_7.md)** — 전체 총괄 1, 대회 총괄 3, 범용 작업자 3. 기존 13개 개별 기능 채팅 지침은 역사 자료.

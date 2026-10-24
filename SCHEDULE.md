@@ -61,3 +61,9 @@
 - PayPal [총괄 실행계획](https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/PAYPAL_EXECUTION_PLAN_20261024.md): **11/11 조기 제출**. 10/26~30 quote-payment → 10/31~11/02 delivery → 11/03~06 subscriptions → 11/07~09 통합.
 - UGREEN [총괄 실행계획](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/UGREEN_EXECUTION_PLAN_20261024.md): **11/10 조기 제출 목표**, 기존 전체 상황실 11/14는 **예비 일정 점검일**. 10/24~26 SDK → 10/27 계약 → 10/28~29 missing-files → 10/30~31 version-conflicts → 11/01~02 privacy → 11/03~05 통합 → 11/07~09 PDF/ZIP 검증. 공식 마감 11/16 16:45 KST 불변.
 - 세 대회 동시 진행 / 대회 안에서 범용 작업자 1명이 기능을 차례로 처리. 날짜가 되었단 이유로 단일 READY 지시를 자동 전환하지 않음.
+
+## 2026-10-24 KST — 신규 사용자 결정: 4개 채팅 직접개발 체제
+- 3개 대회 총괄이 직접 개발/테스트/커밋/검수·제출 준비까지 책임. 실제 채팅은 **통합 1 + 대회 총괄 3 = 4개**로 축소. 별도 작업자 채팅 및 채팅 간 작업 인수 폐지. 기능별 브랜치와 코드·이전 작업 이력은 유지.
+- [4개 채팅 현행 정책](docs/FOUR_CHAT_EXECUTION_PROTOCOL.md), [4개 시작 프롬프트](docs/CHAT_TRANSITION_PROMPTS_4.md), [전환 확인](docs/audits/FOUR_CHAT_TRANSITION_AUDIT_20261024.md) 참조. 이전 7개/13개 운영 기록보다 본 최신 결정을 우선.
+- 전환 직전 PayPal PPL-001 feature READY_FOR_REVIEW, 합성 테스트 11 PASS(작업자 보고), Sandbox 실 API BLOCKED_BY_ACCESS. 해당 대회 총괄이 직접 최신 HEAD 및 코드/검수 보고를 확인 후 **중복 구현하지 않고 인계**할 것.
+- KIC/PayPal/UGREEN 소유 저장소를 이 통합 총괄은 수정하지 않는다. 사용자가 대회별 총괄에 개편을 지시했으나 **그 저장소에 실제 반영됐는지는 별도 GitHub 검수 대기**. 제품 배포·공식 제출 상태 변경 주장 없음.

@@ -8,17 +8,23 @@
     "kind": "coordination_docs",
     "auto_update": false,
     "verified_as_of": "2026-10-24 KST (new lead handoff remote check)",
-    "last_update_reason": "Confirmed lead and feature heads; corrected PayPal three AGENTS-only heads and approved UGREEN ProjectReady NAS topic; maintained 7-chat READY dispatch state",
+    "last_update_reason": "User switched from seven chats to four; contest leads now directly implement. Historical dispatcher preserved; PayPal PPL-001 worker report requires lead review.",
     "first_read": "START_HERE.md",
     "update_protocol": "docs/CONTINUITY_PROTOCOL.md",
     "audit_report": "docs/audits/REPOSITORY_AUDIT_20261024.md",
     "schedule_broadcast_verified_branches": 15,
-    "transition_prompts": "docs/CHAT_TRANSITION_PROMPTS_7.md",
-    "transition_role_count": 7,
-    "chat_count": 7,
+    "transition_prompts": "docs/CHAT_TRANSITION_PROMPTS_4.md",
+    "transition_role_count": 4,
+    "chat_count": 4,
     "logical_role_count": 13,
     "audit_single_worker": "docs/audits/SINGLE_WORKER_DISPATCH_AUDIT_20261024.md",
-    "observed_center_head_before_update": "797341dab1a6f5931dd3dcb366763e0dd42a3d20"
+    "observed_center_head_before_update": "797341dab1a6f5931dd3dcb366763e0dd42a3d20",
+    "active_executor_chat_count": 4,
+    "worker_chat_count": 0,
+    "lead_direct_development": true,
+    "lead_repo_migration_status": "PENDING_REMOTE_VERIFICATION",
+    "four_chat_protocol": "docs/FOUR_CHAT_EXECUTION_PROTOCOL.md",
+    "audit_four_chat": "docs/audits/FOUR_CHAT_TRANSITION_AUDIT_20261024.md"
   },
   "projects": [
     {
@@ -29,7 +35,7 @@
       "repo": "hibi89/hibi89-kic-proofinvest",
       "repo_exists": true,
       "main_head_sha": "1300b9b31a5b86792d15ed7a2dce7c24849dbd87",
-      "lead_head_sha": "b845170c2b81d438afcf8b2e7179e19af90cd41c",
+      "lead_head_sha": "92e2a787c5e10f84305a1142b2cc2e194bed3a52",
       "implemented_and_verified_features": 0,
       "planned_features": 3,
       "offline_tests_reported_passed": 9,
@@ -61,13 +67,17 @@
       "internal_plan_status": "lead_master_plan_user_approved_as_reported",
       "internal_early_submit": "2026-11-10",
       "active_task_id": "KIC-R-001",
-      "active_task_status": "READY_not_yet_started",
+      "active_task_status": "legacy_KIC-R-001_READY; lead self-execution migration pending",
       "dispatch_branch": "lead/kic",
       "dispatch_path": "docs/roles/lead/NEXT_TASK.md",
       "active_feature_branch": "feature/research",
-      "single_worker_chat": true,
+      "single_worker_chat": false,
       "worker_chat_start_path": "docs/roles/lead/WORKER_CHAT_START_PROMPT.md",
-      "worker_report_confirmed": false
+      "worker_report_confirmed": false,
+      "lead_direct_development": true,
+      "worker_chat_required": false,
+      "lead_migration_verified": false,
+      "legacy_dispatch_reference_only_after_migration": true
     },
     {
       "id": "paypal",
@@ -101,10 +111,10 @@
       "repo_creation_verified": true,
       "repo_visibility": "public",
       "main_head_sha": "b58533ac7e632706a95d807de5ced6497b5e46b0",
-      "lead_head_sha": "b8d12259307e7ca3f893680c4f8d2877f8020ee9",
+      "lead_head_sha": "2fb4eaabd3f572330e34b2406f532ce51b780361",
       "lead_branch": "lead/paypal",
       "feature_head_shas": {
-        "feature/quote-payment": "e5b70e0376628dc9e6237d69234f56648c849ca8",
+        "feature/quote-payment": "876d7d1b5935b91e6baddea36abdb8e50602c4fb",
         "feature/delivery": "77dc5327b69432d3f64a320dea8a1ae0c2f427ce",
         "feature/subscriptions": "9d77f9029d9dfb571f14f5d10289f97015ba6f4f"
       },
@@ -122,14 +132,19 @@
       "internal_plan_status": "lead_execution_plan_user_approved_as_reported",
       "internal_early_submit": "2026-11-11",
       "active_task_id": "PPL-001",
-      "active_task_status": "READY_not_yet_started",
+      "active_task_status": "legacy_PPL-001_IN_PROGRESS; feature report READY_FOR_REVIEW; lead review pending",
       "dispatch_branch": "lead/paypal",
       "dispatch_path": "docs/dispatch/ACTIVE_TASK.md",
       "active_feature_branch": "feature/quote-payment",
-      "single_worker_chat": true,
+      "single_worker_chat": false,
       "worker_chat_start_path": "docs/dispatch/WORKER_CHAT_PROMPT.md",
-      "worker_report_confirmed": false,
-      "feature_recent_change_type": "AGENTS.md routing documentation only; PPL-001 not started"
+      "worker_report_confirmed": true,
+      "feature_recent_change_type": "AGENTS.md routing documentation only; PPL-001 not started",
+      "lead_direct_development": true,
+      "worker_chat_required": false,
+      "lead_migration_verified": false,
+      "legacy_dispatch_reference_only_after_migration": true,
+      "reported_offline_unit_tests_passed": 11
     },
     {
       "id": "ugreen",
@@ -157,7 +172,7 @@
       "repo_creation_verified": true,
       "repo_visibility": "public",
       "main_head_sha": "d8cd806cb2b3842a80a571fd09910ec370e2de17",
-      "lead_head_sha": "3f193407b03691e371da3914f7e6710286c22961",
+      "lead_head_sha": "b1a055911bf8a31d0643873507cdc52dccb67495",
       "lead_branch": "lead/ugreen",
       "feature_head_shas": {
         "feature/missing-files": "9b3052bf82ad1a8a4844b1aeee699c0b759251dc",
@@ -178,15 +193,19 @@
       "internal_plan_status": "lead_product_schedule_approved_user_decision_reported",
       "internal_early_submit": "2026-11-10",
       "active_task_id": "UGR-001",
-      "active_task_status": "READY_not_yet_started",
+      "active_task_status": "legacy_UGR-001_READY; lead self-execution migration pending",
       "dispatch_branch": "lead/ugreen",
       "dispatch_path": "docs/dispatcher/CURRENT_TASK.md",
       "active_feature_branch": "feature/missing-files",
-      "single_worker_chat": true,
+      "single_worker_chat": false,
       "worker_chat_start_path": "docs/WORKER_START_HERE.md",
       "worker_report_confirmed": false,
       "integration_contingency_check": "2026-11-14 (legacy review point, not submission target)",
-      "topic_status": "Product direction approved; Uliya SDK/CLI capability and supported checks unverified"
+      "topic_status": "Product direction approved; Uliya SDK/CLI capability and supported checks unverified",
+      "lead_direct_development": true,
+      "worker_chat_required": false,
+      "lead_migration_verified": false,
+      "legacy_dispatch_reference_only_after_migration": true
     }
   ]
 }

@@ -63,3 +63,9 @@
 - 과거 13개 채팅방 프롬프트는 이력으로만 보존. 지금은 [7개 실제 채팅방 재개 프롬프트](CHAT_TRANSITION_PROMPTS_7.md)를 사용.
 - 대회별 총괄이 유일한 READY 작업을 관리: KIC `lead/kic:docs/roles/lead/NEXT_TASK.md`, PayPal `lead/paypal:docs/dispatch/ACTIVE_TASK.md`, UGREEN `lead/ugreen:docs/dispatcher/CURRENT_TASK.md`.
 - 대회별 범용 작업자 채팅은 매 호출 최신 원격 READY를 확인, **지시 지정 feature 브랜치만** 수정. 총괄 검수 전에 두 번째 기능으로 자동 전환하지 않는다.
+
+## 2026-10-24 KST — 신규 사용자 결정: 4개 채팅 직접개발 체제
+- 3개 대회 총괄이 직접 개발/테스트/커밋/검수·제출 준비까지 책임. 실제 채팅은 **통합 1 + 대회 총괄 3 = 4개**로 축소. 별도 작업자 채팅 및 채팅 간 작업 인수 폐지. 기능별 브랜치와 코드·이전 작업 이력은 유지.
+- [4개 채팅 현행 정책](docs/FOUR_CHAT_EXECUTION_PROTOCOL.md), [4개 시작 프롬프트](docs/CHAT_TRANSITION_PROMPTS_4.md), [전환 확인](docs/audits/FOUR_CHAT_TRANSITION_AUDIT_20261024.md) 참조. 이전 7개/13개 운영 기록보다 본 최신 결정을 우선.
+- 전환 직전 PayPal PPL-001 feature READY_FOR_REVIEW, 합성 테스트 11 PASS(작업자 보고), Sandbox 실 API BLOCKED_BY_ACCESS. 해당 대회 총괄이 직접 최신 HEAD 및 코드/검수 보고를 확인 후 **중복 구현하지 않고 인계**할 것.
+- KIC/PayPal/UGREEN 소유 저장소를 이 통합 총괄은 수정하지 않는다. 사용자가 대회별 총괄에 개편을 지시했으나 **그 저장소에 실제 반영됐는지는 별도 GitHub 검수 대기**. 제품 배포·공식 제출 상태 변경 주장 없음.

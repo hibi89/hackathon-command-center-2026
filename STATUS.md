@@ -1,3 +1,5 @@
+> **최신 사용자 확정(2026-10-24): 실제 채팅 4개.** 통합 총괄 1 + KIC·PayPal·UGREEN 총괄 겸 직접 개발자 각 1. 7개/13개 채팅과 별도 작업자 라우팅은 구형 기록이다. [현행 정책](docs/FOUR_CHAT_EXECUTION_PROTOCOL.md) · [4개 프롬프트](docs/CHAT_TRANSITION_PROMPTS_4.md) · [전환 검수](docs/audits/FOUR_CHAT_TRANSITION_AUDIT_20261024.md)를 최우선으로 읽어라. 기능 브랜치 보존, 대회별 전환 반영은 원격 확인 전 미검증.
+
 # STATUS — 전체 총괄 현황
 
 - 기준: **2026-10-24 KST** (공식 웹/연결된 GitHub 직접 읽기)
@@ -116,3 +118,9 @@
 - **UGREEN ProjectReady NAS 사용자 승인 방향**(대회 자체 최신 실행계획)과 **내부 제출 11/10**을 우선. 11/14는 예전 일정의 예비 점검일. 공식 11/16 16:45 KST 마감 변경 없음.
 - 공식 제출 상태 3건 모두 미제출. KIC 팀 전환, PayPal Sandbox, UGREEN 실제 Kit/CLI, 출시·실 API·Production은 미완료/미검증. KIC 기존 합성 9 테스트 성공은 실제 API 성공 아님.
 - 일정/권한/제품 코드/작업지시서/공식 제출은 이번 통합 문서 갱신에서 변경하지 않음. 최신 증거 확인 후 담당 총괄이 검수/지시할 것.
+
+## 2026-10-24 KST — 신규 사용자 결정: 4개 채팅 직접개발 체제
+- 3개 대회 총괄이 직접 개발/테스트/커밋/검수·제출 준비까지 책임. 실제 채팅은 **통합 1 + 대회 총괄 3 = 4개**로 축소. 별도 작업자 채팅 및 채팅 간 작업 인수 폐지. 기능별 브랜치와 코드·이전 작업 이력은 유지.
+- [4개 채팅 현행 정책](docs/FOUR_CHAT_EXECUTION_PROTOCOL.md), [4개 시작 프롬프트](docs/CHAT_TRANSITION_PROMPTS_4.md), [전환 확인](docs/audits/FOUR_CHAT_TRANSITION_AUDIT_20261024.md) 참조. 이전 7개/13개 운영 기록보다 본 최신 결정을 우선.
+- 전환 직전 PayPal PPL-001 feature READY_FOR_REVIEW, 합성 테스트 11 PASS(작업자 보고), Sandbox 실 API BLOCKED_BY_ACCESS. 해당 대회 총괄이 직접 최신 HEAD 및 코드/검수 보고를 확인 후 **중복 구현하지 않고 인계**할 것.
+- KIC/PayPal/UGREEN 소유 저장소를 이 통합 총괄은 수정하지 않는다. 사용자가 대회별 총괄에 개편을 지시했으나 **그 저장소에 실제 반영됐는지는 별도 GitHub 검수 대기**. 제품 배포·공식 제출 상태 변경 주장 없음.
