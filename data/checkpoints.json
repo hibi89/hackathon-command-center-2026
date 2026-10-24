@@ -70,36 +70,36 @@
     "last_governance_update_reason": "User defined integrated head as independent oversight chief: audit leads' actual work, add missing critical tasks, identify/stop waste, track corrective actions persistently.",
     "supervision_last_audit_id": "SUPERVISOR-20261024-QUALITY",
     "supervision_open_findings": 6,
-    "supervision_followup_status": "KIC_22_DONE_113_CI_PASS_DAKER_BLOCKED; PAYPAL_12_DONE_193_CI_PASS_MIT_LICENSE_FIXED_SANDBOX_AI_BLOCKED; UGREEN_2_DONE_12_PARTIAL_204_PRIOR_CI_G13_PENDING_OFFICIAL_CREATOR_P0",
+    "supervision_followup_status": "KIC_23_DONE_117_PASS; PAYPAL_12_DONE_204_PASS; UGREEN_2_DONE_12_PARTIAL_G13_ONE_FAIL_CORRECTED_CI_PENDING_UGOS_CREATOR_P0",
     "supervision_snapshot": {
       "date_kst": "2026-10-24",
       "audit_id": "SUPERVISOR-20261024-QUALITY",
       "source_report": "docs/audits/SUPERVISOR_QUALITY_CHECK_20261024.md",
       "contests": {
         "kic": {
-          "sha": "a6aec576f07bd064ba1ef8f97aa249ea25f9c775",
-          "done": 22,
+          "sha": "18f3b81740b074ac3fcdb9ec1a0090a8ed12d2c8",
+          "done": 23,
           "partial": 0,
           "blocked": 3,
-          "not_started": 35,
+          "not_started": 34,
           "days": 60,
-          "verified_ci": 40081727073,
-          "tests_reported": 113
+          "verified_ci": 40082329914,
+          "tests_reported": 117
         },
         "paypal": {
-          "sha": "5d0d058d31e08a04d0b2ec49a3d85e750d557e3d",
+          "sha": "260ae7fbdd845419ebb626f6ae8eee60a688bf31",
           "done": 12,
           "partial": 2,
           "blocked": 1,
           "not_started": 3,
           "days": 18,
-          "verified_ci": 40081717845,
-          "tests_reported": 193,
+          "verified_ci": 40082429683,
+          "tests_reported": 204,
           "license": "MIT_PRESENT",
           "d15_percent": 20
         },
         "ugreen": {
-          "sha": "6a2cce0bcebb1d6943ff96cf8cfaf0ba7831e504",
+          "sha": "bba61a7f5d22e3fb7743b7d778190b2d4aa1b3dc",
           "done": 2,
           "partial": 12,
           "blocked": 3,
@@ -107,8 +107,9 @@
           "days": 24,
           "prior_verified_ci": 40080489057,
           "tests_reported": 204,
-          "g13_ci": "UNVERIFIED",
-          "official_creator": "NOT_EVIDENCED"
+          "g13_ci": "FIRST_RUN_FAILURE_AFTER_204_PASS_NEW_ASSERTION_FAILED__FIXED_SOURCE_HEAD_CI_UNVERIFIED",
+          "official_creator": "NOT_EVIDENCED",
+          "g13_preview_ci": 40082152962
         }
       },
       "official_submissions": 0,
@@ -116,7 +117,7 @@
     },
     "latest_lead_message_handoff": "docs/LEAD_MESSAGES_HANDOFF_20261024.md",
     "supervisor_message_dispatch_status": "3_OF_3_CHILD_LEAD_BRANCHES_PUBLISHED_AND_CI_PASSED",
-    "next_supervisor_action": "UGREEN official UGOS Creator actual generation+validation in supported entrant environment; KIC DAKER authenticated entry submission rights; PayPal real Sandbox+AI; check latest lead heads and CI. No submissions without approval.",
+    "next_supervisor_action": "Verify new UGREEN bba61a7 CI after Markdown formatting-test correction; entrant official UGOS Creator actual generation; PayPal real Sandbox+AI; KIC DAKER submission rights; do not submit without approval.",
     "supervisor_dispatch_kst": "2026-10-24",
     "supervisor_dispatched_from": "main",
     "lead_message_dispatch": {
@@ -175,7 +176,7 @@
       "repo": "hibi89/hibi89-kic-proofinvest",
       "repo_exists": true,
       "main_head_sha": "778f18c94048490aa6996973161bc720cf57f758",
-      "lead_head_sha": "a6aec576f07bd064ba1ef8f97aa249ea25f9c775",
+      "lead_head_sha": "18f3b81740b074ac3fcdb9ec1a0090a8ed12d2c8",
       "implemented_and_verified_features": 0,
       "planned_features": 3,
       "offline_tests_reported_passed": 26,
@@ -331,7 +332,7 @@
       "repo_creation_verified": true,
       "repo_visibility": "public",
       "main_head_sha": "bed3fa67086caaa63da79810c00b44638f0a7346",
-      "lead_head_sha": "5d0d058d31e08a04d0b2ec49a3d85e750d557e3d",
+      "lead_head_sha": "260ae7fbdd845419ebb626f6ae8eee60a688bf31",
       "lead_branch": "lead/paypal",
       "feature_head_shas": {
         "feature/quote-payment": "876d7d1b5935b91e6baddea36abdb8e50602c4fb",
@@ -437,7 +438,7 @@
       "repo_creation_verified": true,
       "repo_visibility": "public",
       "main_head_sha": "a361824451c25dc101c8cc4b2a62ed8f017154e4",
-      "lead_head_sha": "6a2cce0bcebb1d6943ff96cf8cfaf0ba7831e504",
+      "lead_head_sha": "bba61a7f5d22e3fb7743b7d778190b2d4aa1b3dc",
       "lead_branch": "lead/ugreen",
       "feature_head_shas": {
         "feature/missing-files": "4e74dc7b187e70ad72e906e042fdbf4c140940f8",
