@@ -1,4 +1,4 @@
-> **통합 총괄 최신 감독 2026-10-24 15:34 KST:** KIC 82 PASS·11/01 Risk 100% / PayPal 131 PASS+Chromium·D07 100%·D08 0% / UGREEN 116 PASS·G6 Skill 후보 오프라인 완료·공식 G1 SDK 차단. 10/25~11/11 원안 합산 기본 138h·보수 확보 304.5h (**잔여시간 아님, 선행 완료 미차감**). 실 API/NAS/Production/공식 제출 증거 없음. [일정·최신 원장·위험 분석](docs/audits/TRIPLE_HACKATHON_CAPACITY_AND_READINESS_20261024.md).
+> **통합 총괄 후속 검수 2026-10-24 15:36 KST:** KIC 11/03 PDF 1~4쪽 **100%**, DAKER **60%**, 다음 11/04 0%·**82 PASS**; PayPal D08 **100%**, 다음 D09 0%·**131 PASS+로컬 Chromium**; UGREEN G7 Skill 패키징 사전검사 **오프라인 완료**, **131 PASS**, G1 공식 SDK 여전히 0%/BLOCKED. **출품 3건 모두 미검증/미제출**. 10/25~11/11 원래 일정표 138h 기본/304.5h 보수 확보는 **잔여시간 아님**. [근거·우선순위](docs/audits/TRIPLE_HACKATHON_CAPACITY_AND_READINESS_20261024.md).
 
 > **UGREEN 일별 투입시간 및 제출 위험 (2026-10-24 KST)**: [날짜별 보수적 계획·예비·완료기준](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/UGREEN_DAILY_EFFORT_PLAN_20261024.md) / [실측 기록](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/roles/lead/WORK_TIME_LOG.md) / [대회 총괄→상위 총괄 보고](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/roles/lead/TO_HACKATHON_LEAD.md). UGREEN만 계획 **34.25h**, 별도 예비 **26.75h**, 모두 쓰면 **최대 61h**. 하루 상한 평일 보통 3h·주말 4h; KIC(11/12)·PayPal(11/13) 공식 마감일 UGREEN 신규 개발 0h. 11/10 조기 제출은 **SDK 접근 차단으로 조건부**, 11/14 대체 게이트, 공식 11/16 16:45 KST. **다른 두 대회 소요시간·외부 SDK 대기시간은 합산되지 않았으므로 3개 대회 전체의 안전성은 별도 재계산 필요.** 하루 상한 초과는 완료로 주장하지 않고 이월·재산정.
 
@@ -57,3 +57,9 @@
 - [18일 원안 교차 계산](docs/audits/TRIPLE_HACKATHON_CAPACITY_AND_READINESS_20261024.md): 기본 138h/보수 확보 304.5h, 최대 기본 11/06 9.5h, 최대 보수 11/08 20h. **이미 선행 완료된 날짜 포함**하므로 잔여 138h 표현 금지. 실제 가용시간 미확인.
 - P0 외부 선행: KIC 팀장 권한·공식 양식, PayPal 실제 Sandbox 및 AI 공급자, UGREEN 공식 Uliya Skill CLI/Agent/validator. 코드 합성 CI는 실제 계정/실 SDK/접수 증거와 별개.
 - 충돌 완화: KIC 11/10 PDF 제출, PayPal 11/11 완성작 제출, UGREEN 11/10 조건부·11/14 예비 제출. 사용자의 금전·범위·계정·마감 승인 조건 유지.
+
+
+## 2026-10-24 15:36 KST — 새 원격 차단 판정
+- KIC DAKER 35→60%는 **공식 양식 확인** 개선이며 실제 팀장 제출 버튼/팀 전환 인증 40점은 여전히 BLOCKED. 기획서 v0.2 생성 산출물은 임시 파일이며 Library 영구 보존 미확인; 공개 GitHub에 원본 복제 금지.
+- PayPal D08 100%라도 Sandbox OAuth/실 AI/구독/운영 배포는 미실증. 계약 UI 진짜 Chromium E2E는 다음 D09 과제.
+- UGREEN G7 오프라인 패키징 PASS ≠ 공식 Creation Tool validator 통과. Round1 PDF/ZIP 접수 영수증 없음.

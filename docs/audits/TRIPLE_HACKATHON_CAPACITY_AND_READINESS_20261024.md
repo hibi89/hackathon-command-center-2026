@@ -58,3 +58,28 @@
 - [UGREEN Rules](https://ugreenhackathon.devpost.com/rules): 11/15 23:45 PST = 11/16 16:45 KST, Round 1 NAS 런타임 증거 불필요.
 
 **다음 통합 점검:** 실제 새 SHA·CI/일일 원장을 다시 읽고, 선행 완료를 중복 계산하지 않고 변동만 반영. 
+
+
+## 2026-10-24 15:36 KST — 이전 18일 교차 계획 산정 이후 수신한 실제 후속 결과
+> 위 138h/304.5h 표는 동일 원안의 재현용 기준표이고 아래 선행 완료는 **그 표에 중복 가산하거나 실측시간으로 변환하지 않음**. 본 단락의 SHA/CI가 기존 본문 이전 스냅샷보다 최신이다.
+
+### KIC
+- 원격 [`lead/kic@32a0c1ae035f`](https://github.com/hibi89/hibi89-kic-proofinvest/commit/32a0c1ae035fcd2d6820c890df218c5829e97212) · [CI 40070509483 success](https://github.com/hibi89/hibi89-kic-proofinvest/actions/runs/40070509483) · 합성/오프라인 82 tests PASS.
+- **선행 검증:** 11/03 공식 양식 기반 PDF 1~4쪽 v0.2/4쪽 검토 PDF/10쪽 작업중 PDF 생성·레이아웃 QA, 계획 작업 100%; DAKER 35%→60% (공식 양식 직접 확인 +25점)
+- **NEXT:** 11/04 기획서 5~7쪽 0%/기본 1.5h+예비 3.5h=5h.
+- **차단/미검증:** DAKER 실 계정 팀장 제출권한 40점 BLOCKED(접근 후 기본 0.5h+예비1.5h=2h), DART 공식 접수번호 90% BLOCKED(접근 후 0.5h+예비1h=1.5h). PDF v0.2 바이너리 임시 생성·Library 영구저장 미완료. 최종 제출 미실시.
+
+### PayPal
+- 원격 [`lead/paypal@c0d9afe5b8f6`](https://github.com/hibi89/hibi89-paypal-ai-hackathon/commit/c0d9afe5b8f6257ee61f1b72d8faf8e672fadcc1) · [CI 40070453781 success](https://github.com/hibi89/hibi89-paypal-ai-hackathon/actions/runs/40070453781) · 합성/오프라인 131 tests PASS.
+- **선행 검증:** D08 계약 CREATE/GET·납품/검수 REST-ish HTTP API와 서버측 인증·Origin/CSRF/원자 상태전이 검증 100%, Node 131/131 및 기존 로컬 Chromium quote E2E CI 성공
+- **NEXT:** D09 납품/검수 UI/로컬 E2E 0%/기본 5h+안전 확보 9h.
+- **차단/미검증:** D03 실제 Sandbox·무료 AI 접근 0%(3h/안전8h+외부대기 미정), D04 실 AI 20% 미검증(잔여 2h/안전4h). 신규 계약 UI 실제 브라우저 E2E와 실 Sandbox/Production/Devpost 미검증.
+
+### UGREEN
+- 원격 [`lead/ugreen@477979fe7e94`](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/commit/477979fe7e946c7e9fe6aad58fc021477cd7400a) · [CI 40070667817 success](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/actions/runs/40070667817) · 합성/오프라인 131 tests PASS.
+- **선행 검증:** G7 Round1 Skill 후보 디렉터리 3파일 오프라인 패키징 검사·출처/데이터흐름 고지·15개 신규 회귀 테스트 검증, 총 합성 131/131 CI PASS (G6 후보 선행 포함)
+- **NEXT:** 10/25 G1 공식 Tool CLI·등록 Expert Agent·validator 명세 0%/기본 1.5h+예비 1.5h=3h.
+- **차단/미검증:** 공식 Uliya SDK/validator 실행·실 NAS·PII 내용 검사·최종 제안 PDF/ZIP Devpost 미검증. G7 검사는 공식 승인·실서비스 성공의 대체 증거가 아님.
+
+
+**공통:** 오프라인 CI/문서 QA != 실 PayPal 결제·NAS 공식 Tool 통과·Production/Devpost 제출. 개발시간 모두 미계측, 외부 대기시간 미정. 공식 마감/4채팅/신규 유료 지출 0원/원본 불변. 원본 GitHub가 추가 갱신되면 다음 점검에서 다시 HEAD·CI를 조회한다.
