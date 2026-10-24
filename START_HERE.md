@@ -83,3 +83,8 @@
 **한계:** 자동 실시간 동기화, 다른 채팅의 진행 상황 실시간 감지, 불참자 대신 Devpost 최종 제출을 자체 실행한다는 가정 **금지**. 실제 새 채팅에서 이 GitHub 주소를 전달해 읽게 하면 된다.
 
 공식 출처: [KIC](https://daker.ai/public/hackathons/kic-ai-agent-competition) · [PayPal Rules](https://paypalaihackathon.devpost.com/rules) · [UGREEN Rules](https://ugreenhackathon.devpost.com/rules)
+
+## 2026-10-24 — 개발 저장소 이름 결정(생성 예정)
+- PayPal 예정 저장소: `hibi89/hibi89-paypal-ai-hackathon`. 2026-10-24 확인 시 GitHub `404`로 **아직 생성되지 않음**. 프로젝트 주제는 여전히 잠정.
+- UGREEN 예정 저장소: `hibi89/hibi89-ugreen-nas-hackathon`. 2026-10-24 확인 시 GitHub `404`로 **아직 생성되지 않음**. 프로젝트 주제는 여전히 잠정.
+- 사용자가 두 저장소를 만든 뒤 실제 원격 접근·visibility·기본 브랜치를 확인하고, 각 대회 총괄을 별도 채팅방으로 설정하여 역할/인수인계 문서 구조를 논의. 기존 KIC 소스 변경 금지.

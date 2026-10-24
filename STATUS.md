@@ -64,3 +64,8 @@
 - **PayPal:** 공식 본선 선발 정원 **없음**. Stage One 적격성 pass/fail → Stage Two 동일 비중 5항목 본심사. 작품 미생성, 최종 제출 미실시.
 - 신규 통합 인수인계 시작점 `START_HERE.md`와 `docs/CONTINUITY_PROTOCOL.md` 구축. 매 중요한 상태 변경 종료 시 동시 최신화/원격 SHA 검증 필수; 자동 동기화 아님.
 - 현재 우선순위: **PayPal 개발 총괄 및 Sandbox 실현성 확인**, UGREEN 공식 Skill 규격, KIC 팀 전환·PDF 최종 제출/상호평가 일정 보호.
+
+## 2026-10-24 KST — PayPal·UGREEN 새 저장소 이름 지정
+- 사용자에게 새 저장소 이름 두 개 안내: `hibi89-paypal-ai-hackathon`, `hibi89-ugreen-nas-hackathon`. **아직 사용자가 생성했다고 확인하지 않음**.
+- GitHub 직접 조회는 각각 `404 Not Found`였으며, 이는 생성되지 않았거나 조회 권한이 없는 상태를 뜻함. 현재 **생성 대기**로 표시. 사용자가 생성하면 기존 상태표 URL/역할 분리를 갱신할 것.
+- 새 저장소는 초기 Private 권고; PayPal 작품 제출 시 공개 코드·루트 LICENSE가 공식 필수. Public 전환은 사용자 승인/요청 후 수행.

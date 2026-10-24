@@ -50,3 +50,8 @@
 8. 남은 차단: KIC 팀 전환·PDF 접수, PayPal Developer Sandbox 실제 사용 가능 여부, PayPal·UGREEN 주제 확정·개발 저장소, UGREEN 공식 Skill 규격.
 9. 바로 다음 작업: PayPal 전담 총괄/저장소 준비·Sandbox 확인 → UGREEN 총괄/Starter Kit 검증 → KIC PDF/상호평가 마감과 충돌 관리. 중대한 승인/범위/비용 변경은 사용자 결정.
 10. 작성·검증 시점: **2026-10-24 KST**. 대회 공식 Rules(본선 규모), 원격 GitHub·KIC 보고 확인. 자동 실시간 업데이트는 하지 않으며 주요 변경마다 `START_HERE`/HANDOFF/STATUS 등 실제 최신화.
+
+## 2026-10-24 KST — 두 대회용 새 저장소 이름 지정 및 다음 단계
+- **PayPal** 예정: `hibi89/hibi89-paypal-ai-hackathon`; **UGREEN** 예정: `hibi89/hibi89-ugreen-nas-hackathon`. 사용자에게 이름을 안내했지만, 같은 시점 직접 GitHub 조회는 404로 실제 생성은 미확인. 기존 저장소 임의 복제·신규 생성은 수행하지 않음.
+- 사용자 생성 완료 후 각각 원격 저장소·접근·공개 설정 확인 → 대회 총괄 채팅/브랜치 구조 선정 → 담당 총괄에게 공식 규정/잠정 설계·기술 제약 전달. PayPal은 제출 전 코드/라이선스 공개가 공식 요구.
+- 다음 채팅방은 START_HERE→HANDOFF→STATUS 순서로 읽고 증거와 SHA에 맞춰 갱신. 이번 변경은 운영 문서·JSON만 반영, 자동 동기화 없음.

@@ -8,7 +8,7 @@
     "kind": "coordination_docs",
     "auto_update": false,
     "verified_as_of": "2026-10-24 KST",
-    "last_update_reason": "Official finalists clarification and cross-chat recovery docs published",
+    "last_update_reason": "Planned repo names assigned; creation not yet confirmed",
     "first_read": "START_HERE.md",
     "update_protocol": "docs/CONTINUITY_PROTOCOL.md"
   },
@@ -73,7 +73,9 @@
       "official_finalist_slots": null,
       "finalist_selection_notes": "No official finalist slots; Stage One pass/fail then Stage Two judging",
       "award_status": "no_award_evidence",
-      "results_time_notes": "Dates vs Rules conflict: 2026-12-22 02:00 or 07:00 KST"
+      "results_time_notes": "Dates vs Rules conflict: 2026-12-22 02:00 or 07:00 KST",
+      "planned_repo": "hibi89/hibi89-paypal-ai-hackathon",
+      "repo_creation_verified": false
     },
     {
       "id": "ugreen",
@@ -96,7 +98,9 @@
       "interested_track": "Automate Your Workflow (registration form)",
       "official_finalist_slots_max": 30,
       "official_award_projects": 5,
-      "finalist_status": "not_yet_selected"
+      "finalist_status": "not_yet_selected",
+      "planned_repo": "hibi89/hibi89-ugreen-nas-hackathon",
+      "repo_creation_verified": false
     }
   ]
 }
