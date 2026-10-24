@@ -19,3 +19,9 @@
 - PayPal 총괄은 자기 `lead/paypal` 저장소에서 직접 개발·테스트하고 원본 일별 표를 최신화한다.
 - 통합 총괄은 이 상황실 `main`의 일정·위험·링크·인수인계만 갱신한다. 다른 대회 소스·기능 브랜치를 변경하지 않는다.
 - 이번 문서는 사용자의 **"GitHub에 등록해서 두 총괄이 같이 보게"**라는 명시적 요청에 따라 연결한 것. 새 코드 개발·PayPal 실제 계정 테스트·Devpost 제출로 보고하지 않는다.
+
+## 2026-10-24 KST — 제출 이후 Stage Two/결과 조건부 감독
+- PayPal **공식 별도 본선 추가 개발이 없다.** Stage One pass/fail과 Stage Two 심사는 출품물 평가의 절차이며 공표된 본선팀 선발·본선 제작기간으로 오해하지 않는다. [공식 Rules](https://paypalaihackathon.devpost.com/rules).
+- [원본 심사 대응·수상 시간표](https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/POST_SUBMISSION_JUDGING_PLAN_20261024.md)는 11/13~12/22 전후 점검 11회, 기본 **8h/보수 확보 16h**, 사고 발생 시 추가 4~8h 재산정. **11/11 이전 개발 82h/164h와 전혀 별도**. 심사 기간은 한국시간 12/02 07:00~12/16 01:00, 수상 발표는 12/22 전후(미국 발표시각 규정/일정 페이지 간 불일치).
+- 마감 11/13 05:00 이후 출품자료 임의 수정 금지, 심사 종료까지 작동·무상 접근 경로 유지. 출품 자체의 구현/실증·최종 접수는 미확인. 상위 총괄은 [PayPal 리드 최신 보고](https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/roles/lead/TO_HACKATHON_LEAD.md)와 원격 GitHub HEAD를 직접 재조회해야 한다.
+- PayPal 원본 확인 기준 `lead/paypal@f9ecef4c96fd735747ba11d780275066679377c9`; 기간 경과·GitHub 변경 시 최신 상태를 우선. KIC·UGREEN 본선/예선 일정과 **혼동하지 않는다**.
