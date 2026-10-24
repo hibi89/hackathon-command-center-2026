@@ -49,3 +49,11 @@
 - **미완료**: 제출 프로젝트 생성, Round 1 PDF/ZIP 제작·제출, GitHub 전담 개발 저장소 구성, 실제 NAS 테스트.
 - KIC는 신청·팀 생성 화면만 확인했고 **최종 팀 전환 여부 미검증**; PayPal은 참가자용 화면 확인. 따라서 세 대회 모두 등록 단계에 진입했지만 KIC 전환 검증은 별도 남아 있음.
 - 다음 순서: PayPal·UGREEN 담당 총괄 지정 및 저장소 구조 준비, 주제/SDK 검증, 제출물 제작. KIC 기존 총괄 개발 범위는 침범하지 않음.
+
+## 2026-10-24 KST — PayPal 공식 규정·제출 요건 실사
+- 공식 공개 사이트 Overview/Rules/Resources/FAQs/Schedule/Updates를 읽었고 [조사 보고서](docs/research/PAYPAL_OFFICIAL_REVIEW_20261024.md)를 기록함.
+- 실무 중요 조건: PayPal+AI 핵심 기능, 동작 앱, 공개 LICENSE 포함 소스 저장소, 재현 가능한 설치 안내 또는 데모 URL, 3분 미만 공개 YouTube, 영어 제출/번역.
+- 심사: Stage One 테마/API 적합성 pass/fail → Stage Two 기술·디자인·효용·혁신·발표 **동일 비중**. 별도 예선/MVP 2차 제출 일정이 아니라 한 번의 유효 완성작 제출 구조.
+- PayPal Developer 무료 Sandbox는 공식적으로 제공되지만 사용자 계정의 실제 생성/로그인/API 호출은 아직 미확인.
+- **잠정 2안**: 세 기능 병렬 구현 vs Sandbox 결제 end-to-end 핵심 구현 우선(후자 권고). 사용자 및 대회 총괄 승인 전 확정하지 않음.
+- 공식 마감 2026-11-13 05:00 KST 유지. 등록 완료 / 작품 미생성 / 개발 미착수 / 제출 미완료.
