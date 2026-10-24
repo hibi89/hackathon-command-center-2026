@@ -1,3 +1,5 @@
+> **현행 승인(2026-10-24): 작업 순서 최적화 허용.** 당일 목표 검증 완료 후 선행 개발 또는 날짜 건너뛰기 가능. **의존성·BLOCKED·실제 증거·달력일 100% 분리** 필수. [상위 규약](docs/WORK_ORDER_FLEX_POLICY_20261024.md). 기존 2026 일정표·0원 예산·4채팅 유지.
+
 > **장기 총괄 범위 확장(2026-10-24):** 이 저장소는 기존 3개뿐 아니라 앞으로 참가하는 **모든 해커톤의 영구 통합 상황실**이다. [운영 헌장](docs/LONG_TERM_HACKATHON_COMMAND.md) · [2027 공식 일정·후보](docs/2027_HACKATHON_WATCHLIST.md) · [후보 JSON](data/future_hackathons.json). **현재 활성 개발 3개/4개 채팅은 그대로**, 2027 후보 2개는 **미등록**. 자동 감시·지출·신규 등록은 실행하지 않음.
 
 > **KIC 매 작업 종료 실적판 (2026-10-24 13:53:35 KST)**: [현재 날짜의 작업 완료율 %·남은 예상시간](https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/roles/lead/DAILY_PROGRESS.md) / [100점 근거 기반 계산 규칙](https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/roles/lead/DAILY_PROGRESS_PROTOCOL.md). KIC 총괄은 **실작업 종료·부분중단 때마다** 수치·잔여 순작업·오류 예비·이월·증거 SHA/CI를 업데이트한다. 상위 총괄은 매 점검 때 최신 `lead/kic`에서 다시 확인. 원본과 상황실의 과거 숫자가 다르면 **원본이 우선**. (10/24 100%=당일 계획만; 전체 프로젝트 아님.)

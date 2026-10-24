@@ -1,3 +1,5 @@
+> **현행 승인(2026-10-24): 작업 순서 최적화 허용.** 당일 목표 검증 완료 후 선행 개발 또는 날짜 건너뛰기 가능. **의존성·BLOCKED·실제 증거·달력일 100% 분리** 필수. [상위 규약](docs/WORK_ORDER_FLEX_POLICY_20261024.md). 기존 2026 일정표·0원 예산·4채팅 유지.
+
 > **장기 총괄 범위 확장(2026-10-24):** 이 저장소는 기존 3개뿐 아니라 앞으로 참가하는 **모든 해커톤의 영구 통합 상황실**이다. [운영 헌장](docs/LONG_TERM_HACKATHON_COMMAND.md) · [2027 공식 일정·후보](docs/2027_HACKATHON_WATCHLIST.md) · [후보 JSON](data/future_hackathons.json). **현재 활성 개발 3개/4개 채팅은 그대로**, 2027 후보 2개는 **미등록**. 자동 감시·지출·신규 등록은 실행하지 않음.
 
 > **PayPal '본선' 공식 규정 정정 및 후속 시간표 (2026-10-24):** PayPal은 별도 추가 개발 본선이 아닌 Stage One 적합성 pass/fail → Stage Two 기존 출품작 심사. [심사·접근·수상 대응 원본표](https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/POST_SUBMISSION_JUDGING_PLAN_20261024.md) **11회 점검, 순작업 예상 8h / 보수 확보 16h** (11/13~12/22 전후). **출품 전 82h/164h 개발표는 그대로**; 실 Sandbox/배포/제출 미검증. [공식 규정](https://paypalaihackathon.devpost.com/rules) 참조.
