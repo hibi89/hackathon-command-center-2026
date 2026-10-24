@@ -3,7 +3,7 @@
   "as_of_date_kst": "2026-10-24",
   "registry_purpose": "Track actual evidenced cross-contest audit corrective actions after requests, not an assertion that all projects passed.",
   "source_charter": "docs/SUPERVISOR_MANDATE.md",
-  "last_audit_performed_under_this_charter": "SUPERVISOR-20261024-LATE-RECHECK",
+  "last_audit_performed_under_this_charter": "SUPERVISOR-20261024-LATE-REFRESH",
   "findings": [
     {
       "id": "SUP-KIC-001",
@@ -18,14 +18,14 @@
       "reason": "11/08 PDF internally frozen, but ability to submit remains 60%-complete blocked gate.",
       "created_kst": "2026-10-24",
       "status": "BLOCKED_EXTERNAL",
-      "verification": "2026-10-24 KIC_29_DONE_155_REMOTE_CI_PASS; DAKER_AUTHENTICATED_TEAM_LEADER_UPLOAD_RIGHTS_10_25_AND_11_09_STILL_60_PERCENT_BLOCKED; NO_OFFICIAL_RECEIPT",
+      "verification": "2026-10-24 CONNECTED_BROWSER_SIGNED_IN_DAKER_APPLICATION_AND_ONE_PERSON_TEAM_UI_REPORTED_BY_LEAD; PHONENUMBER_VERIFICATION_PROMPT; FINAL_UPLOAD_BUTTON_PERMISSIONS_AND_RECEIPT_STILL_UNVERIFIED; KIC_155_CI_PASS",
       "verified_after_sha": null,
       "review_trigger": "next_user_requested_supervisor_audit_or_relevant_lead_commit",
       "approval_required": true,
       "dispatched_to": "https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/FROM_HACKATHON_COMMAND.md",
       "dispatched_child_head": "c965a59d2ae7e86aae1a1c10cbd6b0caedb480d5",
       "dispatched_kst": "2026-10-24",
-      "last_reviewed_sha": "3d3c7ecb8a1b00eb943a9bdafc08ecf8f43ed47c"
+      "last_reviewed_sha": "aa5dc9c175d1d97b40ebd54d80aacdc7366e9f3b"
     },
     {
       "id": "SUP-PAYPAL-001",
@@ -40,14 +40,14 @@
       "reason": "Official rules require an app integrating PayPal developer platform plus AI, functional demo; D03 remains 0%, D04 real AI 20% unmet.",
       "created_kst": "2026-10-24",
       "status": "BLOCKED_EXTERNAL",
-      "verification": "2026-10-24 PAYPAL_259_REMOTE_OFFLINE_NODE_PASS; NO_REAL_SANDBOX_BUSINESS_PERSONAL_OAUTH_ORDERS_CAPTURE_GET_OR_ACTUAL_AI_RESPONSE",
+      "verification": "2026-10-24 PAYPAL_260_OFFLINE_NODE_TESTS_PASS; SANDBOX_TRANSPORT_10SEC_TIMEOUT_FAIL_CLOSED; REAL_SANDBOX_AND_AI_NOT_TESTED",
       "verified_after_sha": null,
       "review_trigger": "next_user_requested_supervisor_audit_or_relevant_lead_commit",
       "approval_required": true,
       "dispatched_to": "https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/FROM_HACKATHON_COMMAND.md",
       "dispatched_child_head": "4098eb6663317a1d00c737d23253c5c26cb38c72",
       "dispatched_kst": "2026-10-24",
-      "last_reviewed_sha": "70f0d5b873e6ed1759cd7c6c27a73f2630625756"
+      "last_reviewed_sha": "8562b184483bb7735ec35dadf31e3d79c0742a86"
     },
     {
       "id": "SUP-UGREEN-001",
@@ -91,7 +91,7 @@
       "dispatched_to": "https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/FROM_HACKATHON_COMMAND.md",
       "dispatched_child_head": "c965a59d2ae7e86aae1a1c10cbd6b0caedb480d5",
       "dispatched_kst": "2026-10-24",
-      "last_reviewed_sha": "3d3c7ecb8a1b00eb943a9bdafc08ecf8f43ed47c"
+      "last_reviewed_sha": "aa5dc9c175d1d97b40ebd54d80aacdc7366e9f3b"
     },
     {
       "id": "SUP-PAYPAL-002",
@@ -113,7 +113,7 @@
       "dispatched_to": "https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/FROM_HACKATHON_COMMAND.md",
       "dispatched_child_head": "4098eb6663317a1d00c737d23253c5c26cb38c72",
       "dispatched_kst": "2026-10-24",
-      "last_reviewed_sha": "70f0d5b873e6ed1759cd7c6c27a73f2630625756"
+      "last_reviewed_sha": "8562b184483bb7735ec35dadf31e3d79c0742a86"
     },
     {
       "id": "SUP-KIC-003",
@@ -135,7 +135,7 @@
       "dispatched_to": "https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/FROM_HACKATHON_COMMAND.md",
       "dispatched_child_head": "c965a59d2ae7e86aae1a1c10cbd6b0caedb480d5",
       "dispatched_kst": "2026-10-24",
-      "last_reviewed_sha": "3d3c7ecb8a1b00eb943a9bdafc08ecf8f43ed47c"
+      "last_reviewed_sha": "aa5dc9c175d1d97b40ebd54d80aacdc7366e9f3b"
     },
     {
       "id": "SUP-UGREEN-002",
@@ -179,7 +179,7 @@
       "dispatched_to": "https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/FROM_HACKATHON_COMMAND.md",
       "dispatched_child_head": "4098eb6663317a1d00c737d23253c5c26cb38c72",
       "dispatched_kst": "2026-10-24",
-      "last_reviewed_sha": "70f0d5b873e6ed1759cd7c6c27a73f2630625756"
+      "last_reviewed_sha": "8562b184483bb7735ec35dadf31e3d79c0742a86"
     },
     {
       "id": "SUP-UGREEN-003",
@@ -218,6 +218,25 @@
       "last_reviewed_sha": "d52c8d98d8212bafb9e125b10d81709df6485dc8",
       "reported_progress": "OFFICIAL_TOOL_CREATION_REPORTED_NOT_INDEPENDENTLY_VERIFIED",
       "evidence_update_url": "https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/submission/G18_CODEX_CREATOR_RESULT_REPORTED_20261024.md"
+    },
+    {
+      "id": "SUP-PAYPAL-004",
+      "contest": "PayPal",
+      "priority": "P1",
+      "disposition": "VERIFY",
+      "description": "Before Devpost judging, ensure public source URL resolves the real tested lead/paypal code and MIT license, not the stale/diverged default main. Do not automatically merge or change default branch.",
+      "evidence_url": "https://github.com/hibi89/hibi89-paypal-ai-hackathon/tree/lead/paypal",
+      "observed_sha": "8562b184483bb7735ec35dadf31e3d79c0742a86",
+      "owner": "PayPal lead / entrant",
+      "acceptance": "Entrant-approved Devpost source link is publicly accessible and opens the tested exact code SHA/ref, MIT LICENSE, reproducible README and working demo; compare/resolve default main divergence without unapproved branch promotion.",
+      "reason": "GitHub compare main...lead/paypal showed diverged ahead=185, behind=5; bare GitHub repo link opens default main by default and risks leading judges to obsolete source.",
+      "created_kst": "2026-10-24",
+      "status": "OPEN",
+      "verification": "2026-10-24_GITHUB_COMPARE_MAIN_LEAD_DIVERGED_185_AHEAD_5_BEHIND; NO_FINAL_JUDGE_LINK_CHECK_OR_APPROVED_PROMOTION",
+      "verified_after_sha": null,
+      "review_trigger": "before_paypal_final_devpost_submission",
+      "approval_required": true,
+      "last_reviewed_sha": "8562b184483bb7735ec35dadf31e3d79c0742a86"
     }
   ],
   "valid_statuses": [
@@ -245,34 +264,35 @@
   "note": "Empty findings means no registered corrective action yet, not that all three repositories have zero issues. The next user-requested audit must independently check the latest state.",
   "current_snapshot": {
     "date_kst": "2026-10-24",
-    "audit_id": "SUPERVISOR-20261024-LATE-RECHECK",
+    "audit_id": "SUPERVISOR-20261024-LATE-REFRESH",
     "source_report": "docs/audits/SUPERVISOR_RECHECK_20261024_LATE.md",
-    "scope": "Latest remote lead HEAD and canonical ledgers plus Actions current-head job logs; UGREEN generated local source not supplied",
+    "scope": "Latest remote lead HEAD and canonical ledgers plus Actions current-head job logs; UGREEN generated local source not supplied; KIC authenticated site evidence is lead-reported; PayPal 260-test at new HEAD independently checked",
     "contests": {
       "kic": {
-        "sha": "3d3c7ecb8a1b00eb943a9bdafc08ecf8f43ed47c",
+        "sha": "aa5dc9c175d1d97b40ebd54d80aacdc7366e9f3b",
         "days": 60,
         "done": 29,
         "partial": 0,
         "blocked": 3,
         "not_started": 28,
-        "latest_code_ci": 40089748414,
+        "latest_code_ci": 40090950819,
         "lead_reported_offline_tests": 155,
-        "submit_permission": "BLOCKED_EXTERNAL",
+        "submit_permission": "PARTIAL_AUTHENTICATED_READ_ONLY_LEAD_REPORT__FINAL_UPLOAD_RIGHTS_BLOCKED",
         "official_submitted": false
       },
       "paypal": {
-        "sha": "70f0d5b873e6ed1759cd7c6c27a73f2630625756",
+        "sha": "8562b184483bb7735ec35dadf31e3d79c0742a86",
         "days": 18,
         "done": 12,
         "partial": 2,
         "blocked": 1,
         "not_started": 3,
         "current_d15_percent": 20,
-        "latest_code_ci": 40089857353,
-        "lead_reported_offline_tests": 259,
+        "latest_code_ci": 40091061070,
+        "lead_reported_offline_tests": 260,
         "real_sandbox_ai": "NOT_TESTED",
-        "official_submitted": false
+        "official_submitted": false,
+        "judge_source_ref": "DEFAULT_MAIN_DIVERGED_FROM_TESTED_LEAD"
       },
       "ugreen": {
         "sha": "d52c8d98d8212bafb9e125b10d81709df6485dc8",

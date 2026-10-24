@@ -8,7 +8,7 @@
     "kind": "coordination_docs",
     "auto_update": false,
     "verified_as_of": "2026-10-24 KST, cross-repo audit snapshot at 17:19 with later observed commits",
-    "last_update_reason": "Recheck actual latest KIC/PayPal/UGREEN lead HEAD, progress ledgers, CI job logs; record new UGREEN Codex-reported official creator result without asserting uninspected source quality.",
+    "last_update_reason": "Reconcile concurrent child lead heads, authenticated UI read-only report, PayPal bounded sandbox transport, and judge source-link divergence risk.",
     "first_read": "START_HERE.md",
     "update_protocol": "docs/CONTINUITY_PROTOCOL.md",
     "audit_report": "docs/audits/REPOSITORY_AUDIT_20261024.md",
@@ -47,7 +47,7 @@
     "existing_four_chat_structure_unchanged": true,
     "reinvestment_policy": "optional_personal_reward_after_official_result; any_charge_or_hardware_purchase_requires_fresh_approval",
     "last_supervisor_sync_report": "docs/audits/SUPERVISOR_RECHECK_20261024_LATE.md",
-    "latest_supervisor_sync_kst": "2026-10-24 KST; late-session independent remote recheck",
+    "latest_supervisor_sync_kst": "2026-10-24 KST; post-audit simultaneous-lead follow-up",
     "cross_contest_original_capacity": {
       "date_start": "2026-10-25",
       "date_end": "2026-11-11",
@@ -68,35 +68,36 @@
     "supervision_authority_limit": "central_repo_write_only; no_unapproved_child_repo_modification_or_scope_reduction_or_submission_or_spending",
     "supervision_charter_approved_kst": "2026-10-24",
     "last_governance_update_reason": "User defined integrated head as independent oversight chief: audit leads' actual work, add missing critical tasks, identify/stop waste, track corrective actions persistently.",
-    "supervision_last_audit_id": "SUPERVISOR-20261024-LATE-RECHECK",
-    "supervision_open_findings": 6,
-    "supervision_followup_status": "KIC_29_DONE_155_TEST_PASS_DAKER_PERMISSION_BLOCKED; PAYPAL_12_DONE_259_TEST_PASS_REAL_PROVIDER_BLOCKED; UGREEN_2_DONE_12_PARTIAL_211_TEST_PASS_CREATOR_REPORTED_SOURCE_NOT_AVAILABLE",
+    "supervision_last_audit_id": "SUPERVISOR-20261024-LATE-REFRESH",
+    "supervision_open_findings": 7,
+    "supervision_followup_status": "KIC_29_DONE_155_TEST_PASS_DAKER_SIGNED_IN_APPLICATION_COMPLETE_LEAD_REPORT_UPLOAD_RIGHTS_UNKNOWN; PAYPAL_12_DONE_260_TEST_PASS_REAL_PROVIDER_BLOCKED_MAIN_LEAD_DIVERGED; UGREEN_2_DONE_12_PARTIAL_211_TEST_PASS_CREATOR_REPORTED_SOURCE_NOT_AVAILABLE",
     "supervision_snapshot": {
       "date_kst": "2026-10-24",
-      "audit_id": "SUPERVISOR-20261024-LATE-RECHECK",
+      "audit_id": "SUPERVISOR-20261024-LATE-REFRESH",
       "source_report": "docs/audits/SUPERVISOR_RECHECK_20261024_LATE.md",
       "contests": {
         "kic": {
-          "sha": "3d3c7ecb8a1b00eb943a9bdafc08ecf8f43ed47c",
+          "sha": "aa5dc9c175d1d97b40ebd54d80aacdc7366e9f3b",
           "days": 60,
           "done": 29,
           "partial": 0,
           "blocked": 3,
           "not_started": 28,
-          "last_verified_source_ci": 40089748414,
+          "last_verified_source_ci": 40090950819,
           "offline_tests_reported": 155,
-          "real_submission_permission": "BLOCKED_EXTERNAL"
+          "real_submission_permission": "PARTIAL_AUTHENTICATED_READ_ONLY_LEAD_REPORT_FINAL_UPLOAD_UNVERIFIED"
         },
         "paypal": {
-          "sha": "70f0d5b873e6ed1759cd7c6c27a73f2630625756",
+          "sha": "8562b184483bb7735ec35dadf31e3d79c0742a86",
           "days": 18,
           "done": 12,
           "partial": 2,
           "blocked": 1,
           "not_started": 3,
-          "last_verified_source_ci": 40089857353,
-          "offline_tests_reported": 259,
-          "real_paypal_and_ai": "NOT_TESTED"
+          "last_verified_source_ci": 40091061070,
+          "offline_tests_reported": 260,
+          "real_paypal_and_ai": "NOT_TESTED",
+          "judge_source_ref": "MAIN_VS_LEAD_DIVERGED_REQUIRES_ENTRANT_APPROVED_REVIEW"
         },
         "ugreen": {
           "sha": "d52c8d98d8212bafb9e125b10d81709df6485dc8",
@@ -116,7 +117,7 @@
     },
     "latest_lead_message_handoff": "docs/LEAD_MESSAGES_HANDOFF_20261024.md",
     "supervisor_message_dispatch_status": "3_OF_3_CHILD_LEAD_BRANCHES_PUBLISHED_AND_CI_PASSED",
-    "next_supervisor_action": "First independent review entrant's newly generated UGREEN SKILL.md/references actual bytes & SHA if provided; otherwise await authenticated KIC DAKER submit rights or permitted genuine PayPal Sandbox+AI receipts. Do not repeat blocked probes or prematurely activate stretch P1.",
+    "next_supervisor_action": "First examine newly generated UGREEN SKILL.md bytes if provided; independently verify KIC signed-in final DAKER upload rights or real authorized PayPal+AI receipts. Before PayPal Devpost submission verify tested GitHub ref link versus default-main divergence. No blind merge.",
     "supervisor_dispatch_kst": "2026-10-24",
     "supervisor_dispatched_from": "main",
     "lead_message_dispatch": {
@@ -163,7 +164,7 @@
         "message": "https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/FROM_HACKATHON_COMMAND.md"
       }
     },
-    "supervision_total_findings": 10,
+    "supervision_total_findings": 11,
     "supervision_closed_findings": 4,
     "supervisor_direct_dispatch": {
       "date_kst": "2026-10-24 19:12",
