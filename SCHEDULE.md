@@ -1,3 +1,5 @@
+> **장기 총괄 범위 확장(2026-10-24):** 이 저장소는 기존 3개뿐 아니라 앞으로 참가하는 **모든 해커톤의 영구 통합 상황실**이다. [운영 헌장](docs/LONG_TERM_HACKATHON_COMMAND.md) · [2027 공식 일정·후보](docs/2027_HACKATHON_WATCHLIST.md) · [후보 JSON](data/future_hackathons.json). **현재 활성 개발 3개/4개 채팅은 그대로**, 2027 후보 2개는 **미등록**. 자동 감시·지출·신규 등록은 실행하지 않음.
+
 > **UGREEN 매 작업 종료별 당일 100% 완료율·잔여시간 공시:** [실시간 GitHub 원본](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/roles/lead/DAILY_PROGRESS.md) / [산정·검증 규칙](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/roles/lead/DAILY_PROGRESS_REPORTING_PROTOCOL.md). **2026-10-24 1일차 사후 스냅샷**: 완료 **75%**, 잔여 **25%**(공식 SDK ZIP/CLI 검증 차단), 기준 남은 작업 배당 **약 0.4시간** + 별도 예비 배정 **1.5시간**. **실제 SDK 완료 ETA 산정 불가·실측 작업시간 미측정**, 합성 CI 16 PASS와 공식 SDK/NAS 검증은 다르다. 최신 완료율은 이 고정 문장이 아닌 위 UGREEN `lead/ugreen`의 DAILY_PROGRESS.md/json과 `TO_HACKATHON_LEAD.md`에서 매번 다시 조회할 것. 작업 종료 후 날짜별 100% 분모, 완료/미완료·예측/실측 구분, 차단 지연 및 실제 CI SHA를 상위 총괄이 확인한다.
 
 > **UGREEN 본선 조건부 안전 일정 (진출/배정 미확인, 2026-10-24 KST):** [일별 시간표/원격 NAS 특수일 계획](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/UGREEN_FINALIST_DAILY_PLAN_20261024.md). 11/17~12/01 기본 계획 **32h + 별도 예비 20.5h = 최대 52.5h**. 11/22~28 PT 중 미정인 **하루 NAS 접근** 때 두 한국 날짜 일반 시간을 빼고 **6h 계획+6h 예비**의 특수 검증으로 대체 → 최대 **54.5~58.5h**. 실제 NAS 영상과 최종 ZIP 필요, 내부 제출 11/30 20:00 KST, 공식 12/01 16:45 KST. 초청 전 비활성, Round1 SDK BLOCKED 상태 변화 없음. **KIC/PayPal 시간·외부 대기 제외, 완료 보장 아님.**
@@ -79,3 +81,10 @@
 - [4개 채팅 현행 정책](docs/FOUR_CHAT_EXECUTION_PROTOCOL.md), [4개 시작 프롬프트](docs/CHAT_TRANSITION_PROMPTS_4.md), [전환 확인](docs/audits/FOUR_CHAT_TRANSITION_AUDIT_20261024.md) 참조. 이전 7개/13개 운영 기록보다 본 최신 결정을 우선.
 - 전환 직전 PayPal PPL-001 feature READY_FOR_REVIEW, 합성 테스트 11 PASS(작업자 보고), Sandbox 실 API BLOCKED_BY_ACCESS. 해당 대회 총괄이 직접 최신 HEAD 및 코드/검수 보고를 확인 후 **중복 구현하지 않고 인계**할 것.
 - KIC/PayPal/UGREEN 소유 저장소를 이 통합 총괄은 수정하지 않는다. 사용자가 대회별 총괄에 개편을 지시했으나 **그 저장소에 실제 반영됐는지는 별도 GitHub 검수 대기**. 제품 배포·공식 제출 상태 변경 주장 없음.
+
+## 2027년 공식 공고된 새 후보 (기존 2026 확정 일정과 분리)
+| 대회 (현재 미등록) | 온라인 참가 시작 KST | 공식 제출 마감 KST |
+|---|---|---|
+| [DeveloperWeek 2027](https://developerweek-2027-hackathon.devpost.com/) | 2027-01-26 03:00 | **2027-02-12 03:00** |
+| [DeveloperWeek New York 2027](https://developerweek-new-york-2027.devpost.com/) | 2027-05-31 23:00 | **2027-06-17 23:00** |
+기타 2027 이벤트는 **공식 재개최·날짜 미확정**으로 별도 관리: [장기 대회 목록](docs/2027_HACKATHON_WATCHLIST.md). 주최 일정 변동 및 참가 자격·현장 발표 조건은 신청 직전에 재검증. 사용자 참가 승인·등록 아직 없음.

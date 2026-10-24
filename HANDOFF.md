@@ -1,3 +1,5 @@
+> **장기 총괄 범위 확장(2026-10-24):** 이 저장소는 기존 3개뿐 아니라 앞으로 참가하는 **모든 해커톤의 영구 통합 상황실**이다. [운영 헌장](docs/LONG_TERM_HACKATHON_COMMAND.md) · [2027 공식 일정·후보](docs/2027_HACKATHON_WATCHLIST.md) · [후보 JSON](data/future_hackathons.json). **현재 활성 개발 3개/4개 채팅은 그대로**, 2027 후보 2개는 **미등록**. 자동 감시·지출·신규 등록은 실행하지 않음.
+
 > **KIC 매 작업 종료 실적판 (2026-10-24 13:53:35 KST)**: [현재 날짜의 작업 완료율 %·남은 예상시간](https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/roles/lead/DAILY_PROGRESS.md) / [100점 근거 기반 계산 규칙](https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/roles/lead/DAILY_PROGRESS_PROTOCOL.md). KIC 총괄은 **실작업 종료·부분중단 때마다** 수치·잔여 순작업·오류 예비·이월·증거 SHA/CI를 업데이트한다. 상위 총괄은 매 점검 때 최신 `lead/kic`에서 다시 확인. 원본과 상황실의 과거 숫자가 다르면 **원본이 우선**. (10/24 100%=당일 계획만; 전체 프로젝트 아님.)
 
 > **PayPal 일별 시간표 — 상위 총괄 필독 (2026-10-24 KST):** [PayPal 원본 18일 계획](https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/DAILY_CAPACITY_PLAN_20261024.md) · [상황실 감독 메모](docs/PAYPAL_DAILY_CAPACITY_OVERSIGHT_20261024.md). **예상 82시간 / 지연 포함 권장 확보 164시간**, PayPal 단독 매일 평균 약 9.1시간 필요. **KIC·UGREEN 병행 시 11/11 조기 제출 HIGH RISK**. 시간표/코드/CI의 진실은 PayPal `lead/paypal` 최신 HEAD로 재확인. 실 Sandbox·AI API/Production/Devpost 접수 미검증.
@@ -170,3 +172,10 @@
 - 최초 SQL placeholder 오류로 CI run `40064603053` 실패했고, 수정 코드 커밋 `0c07306bb9633183358f0a1c86a8a3d28653d15e`의 [GitHub Actions 40064652611](https://github.com/hibi89/hibi89-paypal-ai-hackathon/actions/runs/40064652611) **success**, Node22 npm test 성공. 문서·진행률 갱신 커밋 `ba148d0f9b38a9150c31239665f6096e1e4cb2a4`의 [CI 40064814053](https://github.com/hibi89/hibi89-paypal-ai-hackathon/actions/runs/40064814053)도 **success**. 검사 파일 기준 합성 테스트 56건.
 - **현재 다음 3일차 PPL-D03: 0% / 100%, 남은 예상 3시간 / 안전 확보 8시간**, PayPal Sandbox Business/Personal·Client 인증/무료 AI 모델 접근 **BLOCKED_BY_ACCESS**. 3/8시간은 hands-on 계획이지 외부 인증 소요일 보증이 아님. 실 OAuth/Orders/create/approve/capture/GET, AI/브라우저/Production/Devpost 제출 `NOT_TESTED`.
 - 실측 경과시간 NOT_MEASURED, 원래 82h/164h 전체 보수 시간표를 임의 감산하지 않음. 다른 해커톤과 공식 마감 충돌 유지. **통합 총괄은 위 원본에 접속해 최신 HEAD/원장/CI를 재조회**한다. 이번 변경은 상황실 보고만, PayPal·KIC·UGREEN 코드/제출 수정 없음.
+
+## 2026-10-24 — 사용자 지시로 영구 통합 총괄 역할 확장
+- 상위 총괄은 2026의 세 대회 전담에서 **향후 모든 사용자가 참가하기로 결정한 해커톤의 장기 전략·일정·공식 실적·상품화·수익 연계 감독**으로 확장됨. [헌장](docs/LONG_TERM_HACKATHON_COMMAND.md).
+- 현재 3개 실행 저장소/4개 채팅/예산 0원/일별 계획은 **그대로 유지**. 신규 대회 후보는 승인/등록/출품 상태가 아님. 사용자 승인 후 신규 총괄 역할/저장소를 개별 온보딩.
+- 2027 공식 공고 확인 후보 **DeveloperWeek 2027 1/26~2/12 KST**, **DeveloperWeek New York 2027 5/31~6/17 KST**. [일정·미확정 시리즈 분리](docs/2027_HACKATHON_WATCHLIST.md) / [JSON](data/future_hackathons.json).
+- 장기 보상 및 상금 재투자 방침은 **미래 검토 사안**으로만 기록. 확인되지 않은 수상·상금을 수입으로 계산하지 않고, 결제·장비 구매는 매번 명시 승인. Public repo에 민감한 개인 금융정보는 기록 금지.
+- 신규 채팅은 `CHAT_BOOTSTRAP.md`와 장기 헌장/2027 후보를 읽고 기존 활성 대회 최신 HEAD부터 실사. 무인 자동 추적은 없음.

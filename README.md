@@ -1,3 +1,5 @@
+> **장기 총괄 범위 확장(2026-10-24):** 이 저장소는 기존 3개뿐 아니라 앞으로 참가하는 **모든 해커톤의 영구 통합 상황실**이다. [운영 헌장](docs/LONG_TERM_HACKATHON_COMMAND.md) · [2027 공식 일정·후보](docs/2027_HACKATHON_WATCHLIST.md) · [후보 JSON](data/future_hackathons.json). **현재 활성 개발 3개/4개 채팅은 그대로**, 2027 후보 2개는 **미등록**. 자동 감시·지출·신규 등록은 실행하지 않음.
+
 > **신규 채팅 한 줄 재개:** `[해커톤총괄 깃헙 레포지토리 확인하고 작업하셈]` → [CHAT_BOOTSTRAP.md](CHAT_BOOTSTRAP.md) → 최신 원격 HEAD/역할/다음 작업. **실제 채팅 4개** 체계 유지. 현재 변경 작업이 끝날 때 진행·인수인계 최신화.
 
 > **최신 사용자 확정(2026-10-24): 실제 채팅 4개.** 통합 총괄 1 + KIC·PayPal·UGREEN 총괄 겸 직접 개발자 각 1. 7개/13개 채팅과 별도 작업자 라우팅은 구형 기록이다. [현행 정책](docs/FOUR_CHAT_EXECUTION_PROTOCOL.md) · [4개 프롬프트](docs/CHAT_TRANSITION_PROMPTS_4.md) · [전환 검수](docs/audits/FOUR_CHAT_TRANSITION_AUDIT_20261024.md)를 최우선으로 읽어라. 기능 브랜치 보존, 대회별 전환 반영은 원격 확인 전 미검증.
@@ -79,3 +81,8 @@ KIC는 전용 `TO_HACKATHON_LEAD.md` → 담당 총괄 `HANDOFF.md`/`STATUS.md` 
 - 실제 첫 READY 업무: [KIC KIC-R-001](https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/roles/lead/NEXT_TASK.md) (`feature/research`), [PayPal PPL-001](https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/dispatch/ACTIVE_TASK.md) (`feature/quote-payment`), [UGREEN UGR-001](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/dispatcher/CURRENT_TASK.md) (`feature/missing-files`). **READY지만 각 기능 브랜치 착수 보고 없음**. 총괄이 검수하기 전 다른 작업 발행/전환 금지.
 - 일정: KIC 내부 11/10, PayPal 내부 11/11. UGREEN 전담 최신 일정은 **11/10 조기 제출 목표로 앞당겨짐**, 이전 통합 11/14는 예비 확인점으로 관리; 공식 11/16 16:45 그대로.
 - 실제 분산 락·AI 채팅 자동 전환/실행/통지 기능은 없음. 문서 기반 프로토콜이며 사용자 호출과 원격 검수 필요.
+
+## 2027년 이후 신규 해커톤 통합 관리
+- **관리 범위:** 현행 KIC/PayPal/UGREEN에서 **앞으로 승인되는 모든 대회**로 확장. 현재 전담 총괄·작업자 구조는 기존 4개 채팅 유지.
+- [장기 통합 총괄 헌장](docs/LONG_TERM_HACKATHON_COMMAND.md) · [2027 참가 후보/공식 일정](docs/2027_HACKATHON_WATCHLIST.md) · [후보 기계판독 목록](data/future_hackathons.json).
+- 확정 일정: DeveloperWeek 2027 **2/12 03:00 KST**, DeveloperWeek New York 2027 **6/17 23:00 KST**. **모두 참가 등록 전 후보**.

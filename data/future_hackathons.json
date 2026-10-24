@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "as_of_date_kst": "2026-10-24",
+  "registry_scope": "all_future_user_approved_hackathons",
+  "active_contests_2026": [
+    "KIC",
+    "PayPal",
+    "UGREEN"
+  ],
+  "current_future_registration_count_verified": 0,
+  "autonomous_monitoring_enabled": false,
+  "source_document": "docs/2027_HACKATHON_WATCHLIST.md",
+  "confirmed_2027_announced_candidates": [
+    {
+      "id": "developerweek-2027",
+      "name": "DeveloperWeek 2027 Hackathon",
+      "official_url": "https://developerweek-2027-hackathon.devpost.com/",
+      "rules_url": "https://developerweek-2027-hackathon.devpost.com/rules",
+      "schedule_source_url": "https://www.developerweek.com/hackathon/",
+      "status": "announced_candidate_not_registered",
+      "date_verified_kst": "2026-10-24",
+      "source_timezone": "America/Los_Angeles",
+      "start_local": "2027-01-25T10:00:00-08:00",
+      "deadline_local": "2027-02-11T10:00:00-08:00",
+      "start_kst": "2027-01-26T03:00:00+09:00",
+      "deadline_kst": "2027-02-12T03:00:00+09:00",
+      "online": true,
+      "solo_allowed": true,
+      "recheck_before_registration": [
+        "Eventbrite and Devpost registration",
+        "sponsor-prize/country exceptions",
+        "stage presentation attendance",
+        "commercial use and prior code",
+        "entry fees and API pricing"
+      ],
+      "evidence_level": "organizer_official_schedule_and_devpost_rules"
+    },
+    {
+      "id": "developerweek-newyork-2027",
+      "name": "DeveloperWeek New York 2027 Hackathon",
+      "official_url": "https://developerweek-new-york-2027.devpost.com/",
+      "rules_url": "https://developerweek-new-york-2027.devpost.com/rules",
+      "schedule_source_url": "https://www.developerweek.com/newyork/hackathon/",
+      "status": "announced_candidate_not_registered",
+      "date_verified_kst": "2026-10-24",
+      "source_timezone": "America/New_York",
+      "start_local": "2027-05-31T10:00:00-04:00",
+      "deadline_local": "2027-06-17T10:00:00-04:00",
+      "start_kst": "2027-05-31T23:00:00+09:00",
+      "deadline_kst": "2027-06-17T23:00:00+09:00",
+      "online": true,
+      "solo_allowed": true,
+      "recheck_before_registration": [
+        "final-stage attendance",
+        "challenge prize/country exceptions",
+        "entry fees and AI availability",
+        "license and prior code"
+      ],
+      "evidence_level": "organizer_official_schedule_and_devpost_rules"
+    }
+  ],
+  "2027_unconfirmed_watch_channels": [
+    {
+      "name": "Microsoft Agents League",
+      "status": "no_official_2027_schedule_verified",
+      "url": "https://info.microsoft.com/Agents-League-Hackathon-Registration/"
+    },
+    {
+      "name": "NASA Space Apps Challenge",
+      "status": "no_official_2027_schedule_verified",
+      "url": "https://www.nasa.gov/prizes-challenges-and-crowdsourcing/"
+    },
+    {
+      "name": "lablab.ai AI Hackathons",
+      "status": "individual_2027_event_not_verified",
+      "url": "https://lablab.ai/ai-hackathons"
+    },
+    {
+      "name": "DAKER",
+      "status": "individual_2027_event_not_verified",
+      "url": "https://daker.ai/"
+    },
+    {
+      "name": "DACON",
+      "status": "individual_2027_event_not_verified",
+      "url": "https://dacon.io/"
+    },
+    {
+      "name": "Devpost",
+      "status": "discovery_channel_only",
+      "url": "https://devpost.com/hackathons"
+    }
+  ],
+  "reward_reinvestment_status": "aspirational_not_authorized_for_purchase",
+  "future_lead_creation": "only_after_explicit_user_decision",
+  "submission_status_basis": "official_platform_evidence_required"
+}

@@ -1,3 +1,5 @@
+> **장기 총괄 범위 확장(2026-10-24):** 이 저장소는 기존 3개뿐 아니라 앞으로 참가하는 **모든 해커톤의 영구 통합 상황실**이다. [운영 헌장](docs/LONG_TERM_HACKATHON_COMMAND.md) · [2027 공식 일정·후보](docs/2027_HACKATHON_WATCHLIST.md) · [후보 JSON](data/future_hackathons.json). **현재 활성 개발 3개/4개 채팅은 그대로**, 2027 후보 2개는 **미등록**. 자동 감시·지출·신규 등록은 실행하지 않음.
+
 > **KIC 매 작업 종료 실적판 (2026-10-24 13:53:35 KST)**: [현재 날짜의 작업 완료율 %·남은 예상시간](https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/roles/lead/DAILY_PROGRESS.md) / [100점 근거 기반 계산 규칙](https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/roles/lead/DAILY_PROGRESS_PROTOCOL.md). KIC 총괄은 **실작업 종료·부분중단 때마다** 수치·잔여 순작업·오류 예비·이월·증거 SHA/CI를 업데이트한다. 상위 총괄은 매 점검 때 최신 `lead/kic`에서 다시 확인. 원본과 상황실의 과거 숫자가 다르면 **원본이 우선**. (10/24 100%=당일 계획만; 전체 프로젝트 아님.)
 
 > **PayPal '본선' 공식 규정 정정 및 후속 시간표 (2026-10-24):** PayPal은 별도 추가 개발 본선이 아닌 Stage One 적합성 pass/fail → Stage Two 기존 출품작 심사. [심사·접근·수상 대응 원본표](https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/POST_SUBMISSION_JUDGING_PLAN_20261024.md) **11회 점검, 순작업 예상 8h / 보수 확보 16h** (11/13~12/22 전후). **출품 전 82h/164h 개발표는 그대로**; 실 Sandbox/배포/제출 미검증. [공식 규정](https://paypalaihackathon.devpost.com/rules) 참조.
@@ -12,7 +14,7 @@
 
 > **최신 사용자 확정(2026-10-24): 실제 채팅 4개.** 통합 총괄 1 + KIC·PayPal·UGREEN 총괄 겸 직접 개발자 각 1. 7개/13개 채팅과 별도 작업자 라우팅은 구형 기록이다. [현행 정책](docs/FOUR_CHAT_EXECUTION_PROTOCOL.md) · [4개 프롬프트](docs/CHAT_TRANSITION_PROMPTS_4.md) · [전환 검수](docs/audits/FOUR_CHAT_TRANSITION_AUDIT_20261024.md)를 최우선으로 읽어라. 기능 브랜치 보존, 대회별 전환 반영은 원격 확인 전 미검증.
 
-# START HERE — 2026 AI 해커톤 통합 총괄 재개 지점
+# START HERE — 장기 해커톤 통합 총괄 재개 지점
 
 > **2026-10-24 KST 검증된 스냅샷**. 채팅방이 달라져도 이 저장소를 통해 전체 운영을 복원한다. **자동 동기화 아님**. 읽은 날의 현재 `main` HEAD·다른 대회 원격 HEAD를 다시 확인한다.
 >

@@ -8,7 +8,7 @@
     "kind": "coordination_docs",
     "auto_update": false,
     "verified_as_of": "2026-10-24 13:53:35 KST",
-    "last_update_reason": "UGREEN lead actual official public SDK ZIP retrieval in ephemeral CI; 29 offline PASS; exact CLI remains blocked; daily 75 percent unchanged",
+    "last_update_reason": "Expand integrated oversight to all future hackathons and add separately verified 2027 watchlist",
     "first_read": "START_HERE.md",
     "update_protocol": "docs/CONTINUITY_PROTOCOL.md",
     "audit_report": "docs/audits/REPOSITORY_AUDIT_20261024.md",
@@ -36,7 +36,16 @@
     "bootstrap_role_count": 4,
     "kic_daily_capacity_oversight": "docs/KIC_DAILY_CAPACITY_OVERSIGHT_20261024.md",
     "ugreen_time_budget_visible": true,
-    "kic_daily_progress_primary_source": "docs/roles/lead/DAILY_PROGRESS.md in hibi89/hibi89-kic-proofinvest@lead/kic"
+    "kic_daily_progress_primary_source": "docs/roles/lead/DAILY_PROGRESS.md in hibi89/hibi89-kic-proofinvest@lead/kic",
+    "long_term_command_scope": "all_future_user_selected_hackathons_not_only_three_2026",
+    "long_term_governance_doc": "docs/LONG_TERM_HACKATHON_COMMAND.md",
+    "future_watchlist_doc": "docs/2027_HACKATHON_WATCHLIST.md",
+    "future_registry_json": "data/future_hackathons.json",
+    "future_confirmed_2027_date_candidates": 2,
+    "future_candidates_registered": 0,
+    "contest_expansion_requires_user_explicit_decision": true,
+    "existing_four_chat_structure_unchanged": true,
+    "reinvestment_policy": "optional_personal_reward_after_official_result; any_charge_or_hardware_purchase_requires_fresh_approval"
   },
   "projects": [
     {

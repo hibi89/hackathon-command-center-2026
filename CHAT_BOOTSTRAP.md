@@ -1,3 +1,5 @@
+> **장기 총괄 범위 확장(2026-10-24):** 이 저장소는 기존 3개뿐 아니라 앞으로 참가하는 **모든 해커톤의 영구 통합 상황실**이다. [운영 헌장](docs/LONG_TERM_HACKATHON_COMMAND.md) · [2027 공식 일정·후보](docs/2027_HACKATHON_WATCHLIST.md) · [후보 JSON](data/future_hackathons.json). **현재 활성 개발 3개/4개 채팅은 그대로**, 2027 후보 2개는 **미등록**. 자동 감시·지출·신규 등록은 실행하지 않음.
+
 > **PayPal '본선' 공식 규정 정정 및 후속 시간표 (2026-10-24):** PayPal은 별도 추가 개발 본선이 아닌 Stage One 적합성 pass/fail → Stage Two 기존 출품작 심사. [심사·접근·수상 대응 원본표](https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/POST_SUBMISSION_JUDGING_PLAN_20261024.md) **11회 점검, 순작업 예상 8h / 보수 확보 16h** (11/13~12/22 전후). **출품 전 82h/164h 개발표는 그대로**; 실 Sandbox/배포/제출 미검증. [공식 규정](https://paypalaihackathon.devpost.com/rules) 참조.
 
 > **PayPal 일별 시간표 — 상위 총괄 필독 (2026-10-24 KST):** [PayPal 원본 18일 계획](https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/DAILY_CAPACITY_PLAN_20261024.md) · [상황실 감독 메모](docs/PAYPAL_DAILY_CAPACITY_OVERSIGHT_20261024.md). **예상 82시간 / 지연 포함 권장 확보 164시간**, PayPal 단독 매일 평균 약 9.1시간 필요. **KIC·UGREEN 병행 시 11/11 조기 제출 HIGH RISK**. 시간표/코드/CI의 진실은 PayPal `lead/paypal` 최신 HEAD로 재확인. 실 Sandbox·AI API/Production/Devpost 접수 미검증.
@@ -12,7 +14,7 @@
 ## 호출 시 즉시 수행
 1. GitHub 연결을 이용해 본 저장소의 **원격 최신 `main` HEAD SHA**를 조회하고 본 문서 → `START_HERE.md` → `HANDOFF.md` → `STATUS.md` → `docs/FOUR_CHAT_EXECUTION_PROTOCOL.md` → `SCHEDULE.md` → `RISKS.md` → `data/checkpoints.json` 순서로 복원한다.
 2. 사용자가 해당 채팅의 대회(KIC/PayPal/UGREEN)를 명시했거나 이전 확정 역할이 있으면 **그 대회 총괄 겸 개발자**로 실행한다. 대회 지정이 없는 새 채팅에 **이 문구만** 있다면 통합 총괄로 시작한다. 동일한 글자만으로 신규 채팅이 어느 대회의 총괄인지를 구별하는 것은 불가능하므로 임의 대회로 코드를 수정하지 않는다.
-3. 세 대회 `lead/*`의 원격 HEAD 및 `TO_HACKATHON_LEAD.md`와 `LEAD_ACTIVE_WORK.md`를 확인한다. 대회 총괄이라면 자기 저장소의 `lead/*/CHAT_BOOTSTRAP.md`를 읽고 현재 작업을 **직접 개발·테스트·검수·커밋**한다. 통합 총괄이라면 일정·차단·제출·개발 증거 검수 및 상황실 동기화를 실제 수행한다.
+3. 기존 활성 3개 대회 `lead/*`의 원격 HEAD 및 `TO_HACKATHON_LEAD.md`와 `LEAD_ACTIVE_WORK.md`를 확인한다. 대회 총괄이라면 자기 저장소의 `lead/*/CHAT_BOOTSTRAP.md`를 읽고 현재 작업을 **직접 개발·테스트·검수·커밋**한다. 통합 총괄이라면 일정·차단·제출·개발 증거 검수 및 상황실 동기화를 실제 수행한다.
 4. 구형 7/13개 채팅·작업자 `NEXT_TASK`/`ACTIVE_TASK`/`CURRENT_TASK`는 역사를 보존하되 **실행권이 없다**. 각 리드 `LEAD_ACTIVE_WORK.md`가 현재 우선순위다. 완료 보고·실제 HEAD·코드가 다르면 최신 실증으로 판단하고 기존 정상 기능/기록을 보존한다.
 5. 권한·실결제·개인정보 외부 전송·유료 서비스·품질/범위 축소·원본 덮어쓰기는 기존 사용자 승인 게이트를 지킨다. 실제 테스트/실 API/Production/공식 제출은 별도 증거 없이 완료 처리하지 않는다.
 
