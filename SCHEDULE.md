@@ -1,3 +1,5 @@
+> **KIC 일별 작업시간 통합 열람 (2026-10-24 13:29:50 KST)**: [원본 60일 시간표](https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/roles/lead/DAILY_CAPACITY_PLAN_20261024.md) · [통합 총괄 검수 기준](docs/KIC_DAILY_CAPACITY_OVERSIGHT_20261024.md). 원본 `lead/kic`는 KIC 총괄이 매 작업 주요 변경 시 최신화한다. 상위 총괄은 매 점검 시 **당일 작업·예비시간·이월·제출위험**을 반드시 확인한다. 과거 채팅/스냅샷 SHA보다 최신 브랜치가 우선한다. (본 공시는 새 제품 구현/제출 증거가 아님.)
+
 # SCHEDULE — 공식 일정 및 내부 운영 목표
 
 **기준일: 2026-10-24 KST**. 모든 시각은 **대한민국 표준시(KST, UTC+09:00)**. `공식`과 `내부` 일정을 혼동하지 말 것. Devpost에 기재된 11월 PST는 KST보다 17시간 느리며, 미국 11월은 서머타임 종료 후 PST(UTC-8) 기준.

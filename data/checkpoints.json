@@ -7,8 +7,8 @@
     "default_branch": "main",
     "kind": "coordination_docs",
     "auto_update": false,
-    "verified_as_of": "2026-10-24 KST (single-sentence entry audit, snapshot)",
-    "last_update_reason": "Verified central + 3 lead CHAT_BOOTSTRAP files and all 3 default main READMEs; user one-line command and continuity contract published",
+    "verified_as_of": "2026-10-24 13:29:50 KST",
+    "last_update_reason": "KIC 60-day conservative daily time plan linked to overall command center; single KIC lead source and variance tracking policy",
     "first_read": "START_HERE.md",
     "update_protocol": "docs/CONTINUITY_PROTOCOL.md",
     "audit_report": "docs/audits/REPOSITORY_AUDIT_20261024.md",
@@ -33,7 +33,8 @@
     "bootstrap_update_policy": "on_major_work_completion_or_chat_transition_only",
     "bootstrap_verified_paths": 7,
     "bootstrap_verified_date_kst": "2026-10-24",
-    "bootstrap_role_count": 4
+    "bootstrap_role_count": 4,
+    "kic_daily_capacity_oversight": "docs/KIC_DAILY_CAPACITY_OVERSIGHT_20261024.md"
   },
   "projects": [
     {
@@ -44,7 +45,7 @@
       "repo": "hibi89/hibi89-kic-proofinvest",
       "repo_exists": true,
       "main_head_sha": "778f18c94048490aa6996973161bc720cf57f758",
-      "lead_head_sha": "e09102fb730653b03ece9dc092398861c0c452c9",
+      "lead_head_sha": "4b285a2334fa4c443a8199ed5bf08b115e90f5b0",
       "implemented_and_verified_features": 0,
       "planned_features": 3,
       "offline_tests_reported_passed": 26,
@@ -93,7 +94,33 @@
       "current_work_pointer": "docs/roles/lead/LEAD_ACTIVE_WORK.md",
       "bootstrap_path": "CHAT_BOOTSTRAP.md",
       "bootstrap_verified": true,
-      "bootstrap_in_main_readme": true
+      "bootstrap_in_main_readme": true,
+      "daily_capacity_source": "https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/roles/lead/DAILY_CAPACITY_PLAN_20261024.md",
+      "daily_capacity_source_path": "docs/roles/lead/DAILY_CAPACITY_PLAN_20261024.md",
+      "daily_capacity_source_branch": "lead/kic",
+      "daily_capacity_report_commit": "4b285a2334fa4c443a8199ed5bf08b115e90f5b0",
+      "daily_capacity_days": 60,
+      "daily_capacity_summary": {
+        "2026-10-24_to_2026-11-12": {
+          "days": 20,
+          "base_hours": 25,
+          "contingency_hours": 65,
+          "capacity_ceiling_hours": 90
+        },
+        "2026-11-13_to_2026-12-03": {
+          "days": 21,
+          "base_hours": 17,
+          "contingency_hours": 43,
+          "capacity_ceiling_hours": 60
+        },
+        "2026-12-04_to_2026-12-22_conditional": {
+          "days": 19,
+          "base_hours": 17.5,
+          "contingency_hours": 57.5,
+          "capacity_ceiling_hours": 75
+        }
+      },
+      "daily_capacity_status": "PLANNED_ONLY__ACTUAL_DURATION_NOT_YET_MEASURED"
     },
     {
       "id": "paypal",

@@ -1,3 +1,5 @@
+> **KIC 일별 작업시간 통합 열람 (2026-10-24 13:29:50 KST)**: [원본 60일 시간표](https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/roles/lead/DAILY_CAPACITY_PLAN_20261024.md) · [통합 총괄 검수 기준](docs/KIC_DAILY_CAPACITY_OVERSIGHT_20261024.md). 원본 `lead/kic`는 KIC 총괄이 매 작업 주요 변경 시 최신화한다. 상위 총괄은 매 점검 시 **당일 작업·예비시간·이월·제출위험**을 반드시 확인한다. 과거 채팅/스냅샷 SHA보다 최신 브랜치가 우선한다. (본 공시는 새 제품 구현/제출 증거가 아님.)
+
 > **신규 채팅 한 줄 재개:** `[해커톤총괄 깃헙 레포지토리 확인하고 작업하셈]` → [CHAT_BOOTSTRAP.md](CHAT_BOOTSTRAP.md) → 최신 원격 HEAD/역할/다음 작업. **실제 채팅 4개** 체계 유지. 현재 변경 작업이 끝날 때 진행·인수인계 최신화.
 
 > **최신 사용자 확정(2026-10-24): 실제 채팅 4개.** 통합 총괄 1 + KIC·PayPal·UGREEN 총괄 겸 직접 개발자 각 1. 7개/13개 채팅과 별도 작업자 라우팅은 구형 기록이다. [현행 정책](docs/FOUR_CHAT_EXECUTION_PROTOCOL.md) · [4개 프롬프트](docs/CHAT_TRANSITION_PROMPTS_4.md) · [전환 검수](docs/audits/FOUR_CHAT_TRANSITION_AUDIT_20261024.md)를 최우선으로 읽어라. 기능 브랜치 보존, 대회별 전환 반영은 원격 확인 전 미검증.
