@@ -58,7 +58,16 @@
       "completed_early_not_subtracted": true,
       "actual_elapsed": "NOT_MEASURED",
       "interpretation": "original planned workload only, NOT remaining work"
-    }
+    },
+    "supervision_mandate": "docs/SUPERVISOR_MANDATE.md",
+    "supervision_findings_registry": "data/supervisor_findings.json",
+    "supervision_scope": "Independent audit of each lead's necessity, completion evidence, efficiency, gaps, duplicated work, time/risks and corrective actions on user request",
+    "supervision_priority": "P0_submit_security_proof; P1_core_value_integrity; P2_optional",
+    "supervision_workflow": "latest_lead_HEAD_and_MASTER_PROGRESS -> code+CI+official_gate -> KEEP/ADD/FIX/STOP_OR_DEFER/BLOCKED/VERIFY -> central corrective register -> later independent verification",
+    "supervision_frequency": "on_user_request_or_approved_go_action_not_background_monitoring",
+    "supervision_authority_limit": "central_repo_write_only; no_unapproved_child_repo_modification_or_scope_reduction_or_submission_or_spending",
+    "supervision_charter_approved_kst": "2026-10-24",
+    "last_governance_update_reason": "User defined integrated head as independent oversight chief: audit leads' actual work, add missing critical tasks, identify/stop waste, track corrective actions persistently."
   },
   "projects": [
     {

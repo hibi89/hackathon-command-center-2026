@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "as_of_date_kst": "2026-10-24",
+  "registry_purpose": "Track actual evidenced cross-contest audit corrective actions after requests, not an assertion that all projects passed.",
+  "source_charter": "docs/SUPERVISOR_MANDATE.md",
+  "last_audit_performed_under_this_charter": null,
+  "findings": [],
+  "valid_statuses": [
+    "OPEN",
+    "PENDING_LEAD_ACCEPTANCE",
+    "IN_PROGRESS",
+    "BLOCKED_EXTERNAL",
+    "VERIFIED_CLOSED",
+    "DEFERRED_APPROVED",
+    "REJECTED_WITH_REASON"
+  ],
+  "required_per_finding": [
+    "id",
+    "contest",
+    "priority",
+    "disposition",
+    "description",
+    "evidence_url",
+    "observed_sha",
+    "owner",
+    "acceptance",
+    "status",
+    "verified_after_sha"
+  ],
+  "note": "Empty findings means no registered corrective action yet, not that all three repositories have zero issues. The next user-requested audit must independently check the latest state."
+}

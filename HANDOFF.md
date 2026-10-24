@@ -1,3 +1,5 @@
+> **상시 최우선: 통합 수뇌부 감독 헌장 (2026-10-24 사용자 지정).** 이 채팅은 단순 진도 집계자가 아니라 KIC·PayPal·UGREEN의 **작업 품질·누락·중복·불필요한 개발·일정 위험을 독립 검수하고, 시정 과제를 발행·추적·재검증하는 최상위 감독자**다. 새 채팅 및 “애들 검수” 요청마다 [통합 수뇌부 상시 감독 헌장](docs/SUPERVISOR_MANDATE.md)을 먼저 읽는다. 실제 대회 코드는 각 리드가 변경하며 사용자 승인 게이트를 지킨다. 이 문서 아래 과거 스냅샷은 정본 최신 상태가 아니다.
+
 > **통합 총괄 후속 검수 2026-10-24 15:36 KST:** KIC 11/03 PDF 1~4쪽 **100%**, DAKER **60%**, 다음 11/04 0%·**82 PASS**; PayPal D08 **100%**, 다음 D09 0%·**131 PASS+로컬 Chromium**; UGREEN G7 Skill 패키징 사전검사 **오프라인 완료**, **131 PASS**, G1 공식 SDK 여전히 0%/BLOCKED. **출품 3건 모두 미검증/미제출**. 10/25~11/11 원래 일정표 138h 기본/304.5h 보수 확보는 **잔여시간 아님**. [근거·우선순위](docs/audits/TRIPLE_HACKATHON_CAPACITY_AND_READINESS_20261024.md).
 
 > **현행 승인(2026-10-24): 작업 순서 최적화 허용.** 당일 목표 검증 완료 후 선행 개발 또는 날짜 건너뛰기 가능. **의존성·BLOCKED·실제 증거·달력일 100% 분리** 필수. [상위 규약](docs/WORK_ORDER_FLEX_POLICY_20261024.md). 기존 2026 일정표·0원 예산·4채팅 유지.
@@ -220,3 +222,8 @@
 - **PayPal**: D08 계약 CREATE/GET·납품/검수 REST-ish HTTP API와 서버측 인증·Origin/CSRF/원자 상태전이 검증 100%, Node 131/131 및 기존 로컬 Chromium quote E2E CI 성공; 다음 D09 납품/검수 UI/로컬 E2E 0%/기본 5h+안전 확보 9h; 차단 D03 실제 Sandbox·무료 AI 접근 0%(3h/안전8h+외부대기 미정), D04 실 AI 20% 미검증(잔여 2h/안전4h). 신규 계약 UI 실제 브라우저 E2E와 실 Sandbox/Production/Devpost 미검증. [검증 CI 40070453781](https://github.com/hibi89/hibi89-paypal-ai-hackathon/actions/runs/40070453781)
 - **UGREEN**: G7 Round1 Skill 후보 디렉터리 3파일 오프라인 패키징 검사·출처/데이터흐름 고지·15개 신규 회귀 테스트 검증, 총 합성 131/131 CI PASS (G6 후보 선행 포함); 다음 10/25 G1 공식 Tool CLI·등록 Expert Agent·validator 명세 0%/기본 1.5h+예비 1.5h=3h; 차단 공식 Uliya SDK/validator 실행·실 NAS·PII 내용 검사·최종 제안 PDF/ZIP Devpost 미검증. G7 검사는 공식 승인·실서비스 성공의 대체 증거가 아님. [검증 CI 40070667817](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/actions/runs/40070667817)
 - 총괄 원안 10/25~11/11 138h/304.5h 합산은 이미 완료한 선행 과제까지 포함하는 **최초 일정표 기준**으로, 현재 남은 소요나 실제 작업시간이 아님. 상세 [교차 감사](docs/audits/TRIPLE_HACKATHON_CAPACITY_AND_READINESS_20261024.md).
+
+## 최상위 감독 헌장 (2026-10-24 영구 지시)
+- [통합 수뇌부 직무·검수·시정 절차](docs/SUPERVISOR_MANDATE.md)와 [시정 추적 원장](data/supervisor_findings.json) 공시. 사용자가 요청할 때마다 **세 대회 최신 총작업표·원장·실제 코드·CI·차단/제출 증거**를 독립 확인한다.
+- 단순 보고 취합 금지. **반드시 필요한데 빠진 업무는 ADD, 무의미한 중복/과잉은 STOP_OR_DEFER, 사실/테스트 불일치는 FIX**, 합당한 작업은 KEEP으로 근거와 우선순위를 판정한다. 통합 총괄은 시정안을 중앙에서 등록·추적하며 대회별 `lead/*` 원본 코드는 임의 수정하지 않는다.
+- 보고서는 **실제 반영**과 **중앙 권고/지시 기록**을 별개로 표시하고, 다음 감사 때 처리됐는지 증거로 재확인한다. 사용자 승인 없이 필수 품질 축소·비용·계정/제출 변경 금지. 자동 백그라운드 감시는 없다.
