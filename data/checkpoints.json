@@ -46,8 +46,8 @@
     "contest_expansion_requires_user_explicit_decision": true,
     "existing_four_chat_structure_unchanged": true,
     "reinvestment_policy": "optional_personal_reward_after_official_result; any_charge_or_hardware_purchase_requires_fresh_approval",
-    "last_supervisor_sync_report": "docs/audits/SUPERVISOR_PROGRESS_REVIEW_20261024_1719.md",
-    "latest_supervisor_sync_kst": "2026-10-24 17:19 KST snapshot (later code activity verified separately)",
+    "last_supervisor_sync_report": "docs/audits/SUPERVISOR_FOLLOWUP_20261024.md",
+    "latest_supervisor_sync_kst": "2026-10-24 KST, follow-up snapshot",
     "cross_contest_original_capacity": {
       "date_start": "2026-10-25",
       "date_end": "2026-11-11",
@@ -68,68 +68,49 @@
     "supervision_authority_limit": "central_repo_write_only; no_unapproved_child_repo_modification_or_scope_reduction_or_submission_or_spending",
     "supervision_charter_approved_kst": "2026-10-24",
     "last_governance_update_reason": "User defined integrated head as independent oversight chief: audit leads' actual work, add missing critical tasks, identify/stop waste, track corrective actions persistently.",
-    "supervision_last_audit_id": "SUPERVISOR-20261024-1719",
+    "supervision_last_audit_id": "SUPERVISOR-20261024-FOLLOWUP",
     "supervision_open_findings": 8,
-    "supervision_followup_status": "CENTRAL_RECOMMENDATIONS_NOT_YET_VERIFIED_APPLIED_AT_CHILD_LEADS",
+    "supervision_followup_status": "KIC_LEAD_ACKNOWLEDGED_AND_ONE_P2_CLOSED; PAYPAL_D14_CI_PENDING_AND_LICENSE_BLOCKED; UGREEN_RELEASE_PENDING_AND_OFFICIAL_REPORT_STALE",
     "supervision_snapshot": {
       "date_kst": "2026-10-24",
-      "audit_id": "SUPERVISOR-20261024-1719",
-      "reported_time_context_kst": "2026-10-24 17:19 KST; latest observed heads may advance while other lead chats work",
-      "scope": "Full 3-repo master-progress, CI and contest rules cross-check",
+      "audit_id": "SUPERVISOR-20261024-FOLLOWUP",
+      "source_report": "docs/audits/SUPERVISOR_FOLLOWUP_20261024.md",
       "contests": {
         "kic": {
-          "sha": "8e2af4f133e23b1db39e2f45fa241636f5d18066",
-          "last_ci_id": 40077778024,
-          "ci": "success",
-          "offline_tests": 82,
-          "days": 60,
-          "done": 14,
+          "sha": "052b7b4152c3108f2851823f57c4db202a8f5b3f",
+          "done": 16,
           "partial": 0,
-          "blocked": 2,
-          "not_started": 44,
-          "next": "2026-11-09 DAKER authenticated team-owner submit permission + frozen PDF match",
-          "exclusively_offline": true,
-          "submission": false,
-          "major_change": "10-page PDF/PPTX internally frozen; 6 private Library assets verified",
-          "main_risk": "DAKER team conversion and permission 60% remains blocked; DART filing viewer 90% blocked"
+          "blocked": 3,
+          "not_started": 41,
+          "days": 60,
+          "ci_job": 40078759840,
+          "offline_tests_reported": 90
         },
         "paypal": {
-          "sha": "673f47a1e47b25197e2a51f1b949024e356d3a25",
-          "last_completed_ci_id": 40077804576,
-          "last_completed_ci_sha": "673f47a1e47b25197e2a51f1b949024e356d3a25",
-          "ci": "success at current code SHA, D13 master acceptance still 0%",
-          "offline_tests_last_verified": 175,
-          "days": 18,
-          "done": 10,
-          "partial": 1,
+          "sha": "d6dd022ab7b095d3a3079d66bb2ea654761a7e66",
+          "done": 11,
+          "partial": 2,
           "blocked": 1,
-          "not_started": 6,
-          "next": "PPL-D13 synthetic integration regression code commit pending CI; JSON still 0%",
-          "submission": false,
-          "major_change": "D11 offline webhook, D12 local subscription UX and persistent state; local Chromium PASS",
-          "main_risk": "D03 real PayPal Sandbox+AI 0% BLOCKED and D04 real AI 20% incomplete; official rule requires PayPal developer platform and AI and runnable app",
-          "last_ci_id": 40077804576
+          "not_started": 4,
+          "days": 18,
+          "D14_progress_pct": 20,
+          "ci": "current_D14_unverified"
         },
         "ugreen": {
-          "sha": "4f9bd0d0e47ce10b46f9ab5064aaa76283b49738",
-          "last_ci_id": 40076722503,
-          "ci": "success",
-          "offline_tests": 190,
-          "days": 24,
+          "sha": "ead21d523432c4b2ac17fabaed0da281394b0386",
           "done": 2,
           "partial": 12,
           "blocked": 3,
           "not_started": 7,
-          "next": "G1 exact installed SDK/Agent rights still blocked; in parallel finalize Round1 PDF+ZIP review",
-          "submission": false,
-          "major_change": "351/500-word proposal and 1-page PDF + 4-file Markdown ZIP generated in successful CI, DRAFT not submitted",
-          "main_risk": "Official SDK runtime/license/permissions not verified; real NAS NOT REQUIRED for Round1 per official rules"
+          "days": 24,
+          "offline_tests_reported": 200,
+          "preview_submission_status": "draft_not_approved"
         }
       }
     },
     "latest_lead_message_handoff": "docs/LEAD_MESSAGES_HANDOFF_20261024.md",
     "supervisor_message_dispatch_status": "3_OF_3_CHILD_LEAD_BRANCHES_PUBLISHED_AND_CI_PASSED",
-    "next_supervisor_action": "Read child FROM_HACKATHON_COMMAND.md and TO_HACKATHON_LEAD.md; verify acceptance and implementation evidence",
+    "next_supervisor_action": "Recheck latest heads, PayPal D14 CI/root LICENSE, UGREEN G9 top-level report/release approval, KIC DAKER authenticated rights and final-submit receipt.",
     "supervisor_dispatch_kst": "2026-10-24",
     "supervisor_dispatched_from": "main",
     "lead_message_dispatch": {
@@ -175,7 +156,9 @@
         "next": "UGR-D02 external SDK BLOCKED; prioritize Round1 valid PDF/ZIP/entrant-reviewed submission",
         "message": "https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/FROM_HACKATHON_COMMAND.md"
       }
-    }
+    },
+    "supervision_total_findings": 9,
+    "supervision_closed_findings": 1
   },
   "projects": [
     {
@@ -186,7 +169,7 @@
       "repo": "hibi89/hibi89-kic-proofinvest",
       "repo_exists": true,
       "main_head_sha": "778f18c94048490aa6996973161bc720cf57f758",
-      "lead_head_sha": "c965a59d2ae7e86aae1a1c10cbd6b0caedb480d5",
+      "lead_head_sha": "052b7b4152c3108f2851823f57c4db202a8f5b3f",
       "implemented_and_verified_features": 0,
       "planned_features": 3,
       "offline_tests_reported_passed": 26,
@@ -286,21 +269,7 @@
       "last_verified_lead_ci_url": "https://github.com/hibi89/hibi89-kic-proofinvest/actions/runs/40078509037",
       "last_verified_lead_ci_sha": "c965a59d2ae7e86aae1a1c10cbd6b0caedb480d5",
       "last_verified_lead_asof_kst": "2026-10-24 17:19 KST approximate snapshot",
-      "latest_supervisor_observation": {
-        "audit_id": "SUPERVISOR-20261024-1719",
-        "head": "8e2af4f133e23b1db39e2f45fa241636f5d18066",
-        "done": 14,
-        "partial": 0,
-        "blocked": 3,
-        "not_started": 43,
-        "next": "2026-11-14 Verification regression; DAKER 11/09 submission authority blocked 60%",
-        "ci": "success",
-        "offline_tests": 82,
-        "submission": "NOT_SUBMITTED",
-        "main_risk": "DAKER team conversion and permission 60% remains blocked; DART filing viewer 90% blocked",
-        "message_commit": "c965a59d2ae7e86aae1a1c10cbd6b0caedb480d5",
-        "message_ci_success": true
-      },
+      "latest_supervisor_observation": "SUPERVISOR-20261024-FOLLOWUP: 16/0/3/41 DONE/PARTIAL/BLOCKED/NOT_STARTED; source docs/audits/SUPERVISOR_FOLLOWUP_20261024.md; no final submission",
       "daker_preflight_progress": {
         "date_kst": "2026-10-25",
         "percent_complete": 60,
@@ -311,18 +280,18 @@
       "master_progress_path": "docs/roles/lead/MASTER_PROGRESS.md",
       "master_progress_json_path": "docs/roles/lead/MASTER_PROGRESS.json",
       "master_progress_days": 60,
-      "master_progress_done": 14,
+      "master_progress_done": 16,
       "master_progress_partial": 0,
-      "master_progress_blocked": 2,
-      "master_progress_not_started": 44,
+      "master_progress_blocked": 3,
+      "master_progress_not_started": 41,
       "supervisor_findings_ids": [
         "SUP-KIC-001",
         "SUP-KIC-002",
         "SUP-KIC-003"
       ],
       "supervisor_message_url": "https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/FROM_HACKATHON_COMMAND.md",
-      "supervisor_message_acknowledged": false,
-      "supervisor_message_applied": false
+      "supervisor_message_acknowledged": true,
+      "supervisor_message_applied": "PARTIAL_KIC_002_CLOSED_DAKER_BLOCKED"
     },
     {
       "id": "paypal",
@@ -356,7 +325,7 @@
       "repo_creation_verified": true,
       "repo_visibility": "public",
       "main_head_sha": "bed3fa67086caaa63da79810c00b44638f0a7346",
-      "lead_head_sha": "4098eb6663317a1d00c737d23253c5c26cb38c72",
+      "lead_head_sha": "d6dd022ab7b095d3a3079d66bb2ea654761a7e66",
       "lead_branch": "lead/paypal",
       "feature_head_shas": {
         "feature/quote-payment": "876d7d1b5935b91e6baddea36abdb8e50602c4fb",
@@ -400,21 +369,7 @@
       "last_verified_lead_ci_url": "https://github.com/hibi89/hibi89-paypal-ai-hackathon/actions/runs/40078519603",
       "last_verified_lead_ci_sha": "4098eb6663317a1d00c737d23253c5c26cb38c72",
       "last_verified_lead_asof_kst": "2026-10-24 17:19 KST approximate snapshot",
-      "latest_supervisor_observation": {
-        "audit_id": "SUPERVISOR-20261024-1719",
-        "head": "673f47a1e47b25197e2a51f1b949024e356d3a25",
-        "done": 11,
-        "partial": 1,
-        "blocked": 1,
-        "not_started": 5,
-        "next": "PPL-D14; D03 real Sandbox+AI 0% blocked, D04 real AI partial",
-        "ci": "success_on_D13_code_SHA_but_daily_acceptance_0",
-        "offline_tests": 175,
-        "submission": "NOT_SUBMITTED",
-        "main_risk": "D03 real PayPal Sandbox+AI 0% BLOCKED and D04 real AI 20% incomplete; official rule requires PayPal developer platform and AI and runnable app",
-        "message_commit": "4098eb6663317a1d00c737d23253c5c26cb38c72",
-        "message_ci_success": true
-      },
+      "latest_supervisor_observation": "SUPERVISOR-20261024-FOLLOWUP: 11/2/1/4 DONE/PARTIAL/BLOCKED/NOT_STARTED; source docs/audits/SUPERVISOR_FOLLOWUP_20261024.md; no final submission",
       "daily_progress_latest": {
         "daily_progress_ledger_active": "PPL-D09",
         "D01": 100,
@@ -437,18 +392,18 @@
       "master_progress_path": "MASTER_PROGRESS.md",
       "master_progress_json_path": "data/paypal_daily_progress.json",
       "master_progress_days": 18,
-      "master_progress_done": 10,
-      "master_progress_partial": 1,
+      "master_progress_done": 11,
+      "master_progress_partial": 2,
       "master_progress_blocked": 1,
-      "master_progress_not_started": 6,
+      "master_progress_not_started": 4,
       "supervisor_findings_ids": [
         "SUP-PAYPAL-001",
         "SUP-PAYPAL-002",
         "SUP-PAYPAL-003"
       ],
       "supervisor_message_url": "https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/FROM_HACKATHON_COMMAND.md",
-      "supervisor_message_acknowledged": false,
-      "supervisor_message_applied": false
+      "supervisor_message_acknowledged": "INFERRED_SCOPE_WORK_NOT_EXPLICIT_ID_REPLY",
+      "supervisor_message_applied": "D14_20_PERCENT_LICENSE_PENDING"
     },
     {
       "id": "ugreen",
@@ -581,21 +536,7 @@
       "last_verified_lead_ci_url": "https://github.com/hibi89/hibi89-ugreen-nas-hackathon/actions/runs/40078635510",
       "last_verified_lead_ci_sha": "ead21d523432c4b2ac17fabaed0da281394b0386",
       "last_verified_lead_asof_kst": "2026-10-24 17:19 KST approximate snapshot",
-      "latest_supervisor_observation": {
-        "audit_id": "SUPERVISOR-20261024-1719",
-        "head": "4f9bd0d0e47ce10b46f9ab5064aaa76283b49738",
-        "done": 2,
-        "partial": 12,
-        "blocked": 3,
-        "not_started": 7,
-        "next": "UGR-D02 external SDK BLOCKED; prioritize Round1 valid PDF/ZIP/entrant-reviewed submission",
-        "ci": "success",
-        "offline_tests": 190,
-        "submission": "NOT_SUBMITTED",
-        "main_risk": "Official SDK runtime/license/permissions not verified; real NAS NOT REQUIRED for Round1 per official rules",
-        "message_commit": "ead21d523432c4b2ac17fabaed0da281394b0386",
-        "message_ci_success": true
-      },
+      "latest_supervisor_observation": "SUPERVISOR-20261024-FOLLOWUP: 2/12/3/7 DONE/PARTIAL/BLOCKED/NOT_STARTED; source docs/audits/SUPERVISOR_FOLLOWUP_20261024.md; no final submission",
       "daily_progress_latest": {
         "date": "2026-10-24",
         "day_work": 100,
@@ -618,11 +559,12 @@
       "master_progress_not_started": 7,
       "supervisor_findings_ids": [
         "SUP-UGREEN-001",
-        "SUP-UGREEN-002"
+        "SUP-UGREEN-002",
+        "SUP-UGREEN-003"
       ],
       "supervisor_message_url": "https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/FROM_HACKATHON_COMMAND.md",
       "supervisor_message_acknowledged": false,
-      "supervisor_message_applied": false
+      "supervisor_message_applied": "NOT_VERIFIED"
     }
   ]
 }
