@@ -1,7 +1,7 @@
 # UGREEN NAS AI Hackathon — NAS 프로젝트 파일 관리 Skill (잠정)
 
 - 공식 페이지: https://ugreenhackathon.devpost.com/
-- 참가: 미신청(사용자 진술, 2026-10-24)
+- 참가: **2026-10-24 KST Devpost 참가 등록 완료 화면 확인** — `Thanks for registering!` 문구 및 `My hackathon projects`/`Create project` 표시. 백엔드·이메일 별도 확인 전.
 - 전담 GitHub: 미생성(연결 계정 조회 시점)
 - 대회 총괄: AI 역할 운영 예정, 기술 검증 미착수
 
@@ -27,7 +27,7 @@
 - 실제 NAS 실행을 별도로 검증해야 함.
 
 ## 체크리스트
-- [ ] Devpost 참가
+- [x] Devpost 참가 등록 후 성공 메시지 및 프로젝트 관리 화면 확인
 - [ ] Skill Developer Package 확보·규격/권한 확인
 - [ ] 주제 확정과 위험 관리
 - [ ] 500단어/1MB 제한 영문 PDF
@@ -36,3 +36,9 @@
 - [ ] (본선 시) NAS 실작동·영상 재현 검증
 
 내부 목표: 10/24~26 등록·규격 검토, 11/06~09 패키지 초안, 11/13~15 제출 검증.
+
+## 2026-10-24 KST — 참가 확인 근거·다음 단계
+- 사용자 스크린샷에서 UGREEN Hackathon의 `Thanks for registering!` 배너를 직접 확인. **참가 등록 완료**, **작품 생성·실제 제출은 아직 시작 전**.
+- 사용자 등록 시 관심 트랙은 `Automate Your Workflow`로 선택. 이 선택은 추후 Skill 아이디어 최종 확정을 의미하지 않음.
+- 다음 작업: 공식 UGREEN Skill Developer Package 확보/규격 조사 → 주제 A/B안 평가와 사용자 승인 → 500단어 이내 영문 PDF와 유효한 `SKILL.md` 중심 ZIP 제작.
+- 실제 NAS 실행은 예선 필수가 아님. 본선 진출 시 원격 장비 테스트 후 검증.
