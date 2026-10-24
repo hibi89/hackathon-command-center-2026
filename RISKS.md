@@ -1,3 +1,5 @@
+> **통합 총괄 최신 감독 2026-10-24 15:34 KST:** KIC 82 PASS·11/01 Risk 100% / PayPal 131 PASS+Chromium·D07 100%·D08 0% / UGREEN 116 PASS·G6 Skill 후보 오프라인 완료·공식 G1 SDK 차단. 10/25~11/11 원안 합산 기본 138h·보수 확보 304.5h (**잔여시간 아님, 선행 완료 미차감**). 실 API/NAS/Production/공식 제출 증거 없음. [일정·최신 원장·위험 분석](docs/audits/TRIPLE_HACKATHON_CAPACITY_AND_READINESS_20261024.md).
+
 > **UGREEN 일별 투입시간 및 제출 위험 (2026-10-24 KST)**: [날짜별 보수적 계획·예비·완료기준](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/UGREEN_DAILY_EFFORT_PLAN_20261024.md) / [실측 기록](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/roles/lead/WORK_TIME_LOG.md) / [대회 총괄→상위 총괄 보고](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/roles/lead/TO_HACKATHON_LEAD.md). UGREEN만 계획 **34.25h**, 별도 예비 **26.75h**, 모두 쓰면 **최대 61h**. 하루 상한 평일 보통 3h·주말 4h; KIC(11/12)·PayPal(11/13) 공식 마감일 UGREEN 신규 개발 0h. 11/10 조기 제출은 **SDK 접근 차단으로 조건부**, 11/14 대체 게이트, 공식 11/16 16:45 KST. **다른 두 대회 소요시간·외부 SDK 대기시간은 합산되지 않았으므로 3개 대회 전체의 안전성은 별도 재계산 필요.** 하루 상한 초과는 완료로 주장하지 않고 이월·재산정.
 
 # RISKS — 전체 3개 대회 공통 위험 관리
@@ -49,3 +51,9 @@
 - 확인된 PayPal 원본 `lead/paypal@fe74448a419d75d622db4b8c1a9a5a2e6d75a36e`, 10/25~11/11 **18일 / 순작업 추정 82h / 안전 확보 164h / 일평균 약 9.1h**. 시간은 측정 실적이 아닌 예측이며 2배 안전 확보조차 완료 보증 아님. 3대회 병행에서 **HIGH RISK**. PayPal 하루 4시간이면 18일 72시간으로 순작업 추정치보다 10시간 부족.
 - PayPal 총괄은 매 개발 작업 후 원본 계획의 잔여·실측·이월/장애를 보고하고, 상위 총괄은 매 점검 시 `lead/paypal` [TO_HACKATHON_LEAD](https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/roles/lead/TO_HACKATHON_LEAD.md) + 최신 SHA/CI를 직접 확인해 일정 충돌·사용자 승인 필요한 범위 조정에 대응한다.
 - 제품 실증: PayPal 합성 결제 계약 11 PASS 및 해당 커밋 CI 성공만 증거; 실제 PayPal Sandbox/AI API·호스팅/브라우저/Devpost 접수는 미검증·미완료. 신규 현금 지출 0원, Sandbox 전용, 공식 11/13 05:00 KST 마감 불변. **무인 자동 최신화 아님**.
+
+
+## 2026-10-24 15:34 KST — 3개 대회 동시 실행 부하 P0 위험
+- [18일 원안 교차 계산](docs/audits/TRIPLE_HACKATHON_CAPACITY_AND_READINESS_20261024.md): 기본 138h/보수 확보 304.5h, 최대 기본 11/06 9.5h, 최대 보수 11/08 20h. **이미 선행 완료된 날짜 포함**하므로 잔여 138h 표현 금지. 실제 가용시간 미확인.
+- P0 외부 선행: KIC 팀장 권한·공식 양식, PayPal 실제 Sandbox 및 AI 공급자, UGREEN 공식 Uliya Skill CLI/Agent/validator. 코드 합성 CI는 실제 계정/실 SDK/접수 증거와 별개.
+- 충돌 완화: KIC 11/10 PDF 제출, PayPal 11/11 완성작 제출, UGREEN 11/10 조건부·11/14 예비 제출. 사용자의 금전·범위·계정·마감 승인 조건 유지.
