@@ -197,10 +197,10 @@
       },
       "paypal": {
         "sha": "673f47a1e47b25197e2a51f1b949024e356d3a25",
-        "last_completed_ci_id": 40077353161,
-        "last_completed_ci_sha": "54a0c0341c3175766e4f850b554b16f314f42c13",
-        "ci": "in_progress_on_current_head; previous head SUCCESS",
-        "offline_tests_last_verified": 171,
+        "last_completed_ci_id": 40077804576,
+        "last_completed_ci_sha": "673f47a1e47b25197e2a51f1b949024e356d3a25",
+        "ci": "success at current code SHA, D13 master acceptance still 0%",
+        "offline_tests_last_verified": 175,
         "days": 18,
         "done": 10,
         "partial": 1,
@@ -209,7 +209,8 @@
         "next": "PPL-D13 synthetic integration regression code commit pending CI; JSON still 0%",
         "submission": false,
         "major_change": "D11 offline webhook, D12 local subscription UX and persistent state; local Chromium PASS",
-        "main_risk": "D03 real PayPal Sandbox+AI 0% BLOCKED and D04 real AI 20% incomplete; official rule requires PayPal developer platform and AI and runnable app"
+        "main_risk": "D03 real PayPal Sandbox+AI 0% BLOCKED and D04 real AI 20% incomplete; official rule requires PayPal developer platform and AI and runnable app",
+        "last_ci_id": 40077804576
       },
       "ugreen": {
         "sha": "4f9bd0d0e47ce10b46f9ab5064aaa76283b49738",
@@ -232,5 +233,6 @@
     "https://ugreenhackathon.devpost.com/rules",
     "https://paypalaihackathon.devpost.com/rules"
   ],
-  "interpretation": "OPEN means central audit recommendation recorded. This is NOT evidence a child lead received, acknowledged, implemented, or had CI verify it."
+  "interpretation": "OPEN means central audit recommendation recorded. This is NOT evidence a child lead received, acknowledged, implemented, or had CI verify it.",
+  "followup_observation": "PayPal D13 source at 673f47a1e47b passed 175/175 tests and Chromium 40077804576, but master progress still 10 DONE, D13 0% NOT_STARTED."
 }

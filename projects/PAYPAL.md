@@ -1,3 +1,5 @@
+> **최신 코드 CI 추가 확인:** D13 합성 3기능 integration `673f47a1e47b` [175 Node PASS + 로컬 Chromium PASS](https://github.com/hibi89/hibi89-paypal-ai-hackathon/actions/runs/40077804576). 그러나 D13 정본 원장 0% NOT_STARTED, 전체 DONE10/18 보존. 실 PayPal/AI 결제·데모 준비 결격 해결된 것은 아님.
+
 > **2026-10-24 독립 재검수:** `lead/paypal@673f47a1e47b`, 마지막 완료 [Node171+Chromium PASS](https://github.com/hibi89/hibi89-paypal-ai-hackathon/actions/runs/40077353161)는 **이전 SHA**이고 D13 최신 커밋 당시 CI 진행중. 날짜별 DONE10/PARTIAL1/BLOCKED1/NOT_STARTED6; D11 webhook/D12 subscription offline, **실 PayPal Sandbox+AI, runnable external integration, LICENSE/Devpost gate 별도**. [감사](../docs/audits/SUPERVISOR_PROGRESS_REVIEW_20261024_1719.md).
 
 > **PayPal '본선' 공식 규정 정정 및 후속 시간표 (2026-10-24):** PayPal은 별도 추가 개발 본선이 아닌 Stage One 적합성 pass/fail → Stage Two 기존 출품작 심사. [심사·접근·수상 대응 원본표](https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/POST_SUBMISSION_JUDGING_PLAN_20261024.md) **11회 점검, 순작업 예상 8h / 보수 확보 16h** (11/13~12/22 전후). **출품 전 82h/164h 개발표는 그대로**; 실 Sandbox/배포/제출 미검증. [공식 규정](https://paypalaihackathon.devpost.com/rules) 참조.

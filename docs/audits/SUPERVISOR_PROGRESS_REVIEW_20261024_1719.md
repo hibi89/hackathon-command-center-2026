@@ -46,3 +46,8 @@
 - KIC 60개 일정에는 12월 본선 **조건부** 19일과 결과대기 일감이 포함. '14/60=23%'를 예선 제출 완성률로 환산하지 말 것. PayPal 10/18, UGREEN 2/24도 서로 다른 분모다.
 - 원래 138h/304.5h 3대회 교차 시간 모델은 과거 선행작업을 포함한 원래 18일 계획. **현재 남은 작업시간도 실측시간도 아니다.**
 - 공식 제출/계정·실결제·대회 저장소 코드 수정/무단 지출은 **본 감사에서 전혀 수행하지 않았다**. 이 저장소 `main`에만 시정 원장을 등록했다. 사용자 권한/승인 필요한 조치는 승인 전 실행하지 않는다.
+
+## 감사 직후 추가 검증 — PayPal D13 HEAD CI 성공
+- D13 새 코드 SHA `673f47a1e47b25197e2a51f1b949024e356d3a25`의 [GitHub Actions 40077804576](https://github.com/hibi89/hibi89-paypal-ai-hackathon/actions/runs/40077804576) **완료 SUCCESS**, **Node 175/175 PASS + 실제 로컬 Chromium 3기능 통합 GET-only E2E PASS**. 이전 171개에서 신규 통합 보안/상태 경계 4개 테스트 증가.
+- **주의:** 해당 `data/paypal_daily_progress.json` 원장은 검사 시점 여전히 **PPL-D13 NOT_STARTED 0% / 활성 D13**, 즉 기능 소스와 CI가 통과했다고 일차 과제를 곧바로 100%로 계산하지 않는다. 최종 D13 수용 기준·원장·HANDOFF 동기화는 담당 리드가 직접 해야 함.
+- PayPal 전체 날짜 통계 **10 DONE/1 PARTIAL/1 BLOCKED/6 NOT_STARTED** 유지. **실 Sandbox+실 AI+Production+정식 제출 미검증** 유지.
