@@ -6,7 +6,7 @@
 
 | 필드 | KIC | PayPal | UGREEN |
 |---|---|---|---|
-| 참가자 등록 | 참가 신청·팀 생성 화면 확인 / 팀 전환 미확인 | 등록 직후 Devpost `My hackathon projects` 화면 확인 | 미신청(사용자 제공) |
+| 참가자 등록 | 참가 신청·팀 생성 화면 확인 / 팀 전환 미확인 | Devpost 참가자용 화면 확인 | **Devpost `Thanks for registering!` 및 참가자용 화면 확인** |
 | 주제 | ProofInvest **확정** | 프리랜서 계약·결제 Agent **잠정** | NAS 파일 관리 Skill **잠정** |
 | GitHub | [기존 저장소](https://github.com/hibi89/hibi89-kic-proofinvest) | 생성 전 | 생성 전 |
 | 코드·산출물 | Python 합성 스타터 / 예선 PDF v0.1 대화 파일 | 미착수 | 미착수 |
@@ -27,7 +27,7 @@
 
 ## 전체 총괄의 현재 미해결 사항
 1. PayPal 참가 등록 직후 화면 확인. 다음은 주제 검증과 전담 저장소 구성; 작품 프로젝트 생성 및 제출은 미완료.
-2. UGREEN 참가 신청 → 공식 Skill Developer Package/CLI/권한 확인 → 주제 확정 및 예선 PDF·ZIP 제작.
+2. UGREEN 참가 등록 확인 완료 → 공식 Skill Developer Package/CLI/권한 확인 → 주제 확정 및 예선 PDF·ZIP 제작.
 3. KIC 팀으로 전환, 예선 PDF 최종 검수/제출 여부는 KIC 총괄이 사용자와 확인.
 4. 세 대회 모두 **제출 영수증/공식 성과** 없음.
 
@@ -42,4 +42,10 @@
 ## 2026-10-24 KST — PayPal 대회 참가 등록 확인
 - 사용자가 등록 폼 제출 후 PayPal Devpost 대회의 `My hackathon projects` 화면과 `Create project` 버튼을 캡처해 제공함. 참가자 전용 프로젝트 관리 화면으로 진입한 사실을 확인했으며 참가 등록은 **완료로 판단**.
 - **미완료/미검증**: 작품 프로젝트 생성, 작품 최종 제출, 참가 확인 이메일·백엔드 상태 독립 조회, 전담 GitHub 구축, 실제 서비스.
-- 다음 사용자 작업: UGREEN 대회 참가 신청. PayPal 작품 생성은 담당 총괄의 설계·주제 확정 이후 진행.
+- UGREEN 참가도 이후 별도 확인됨. PayPal 작품 생성은 담당 총괄의 설계·주제 확정 이후 진행.
+
+## 2026-10-24 KST — UGREEN 참가 등록 확인
+- 사용자 제공 UGREEN Devpost 화면 상단에 **`Thanks for registering!`** 표시, `My projects` 및 `Create project` 접근 확인. 참가 등록 **확인**(화면 근거); 백엔드 상태와 이메일 별도 미조회.
+- **미완료**: 제출 프로젝트 생성, Round 1 PDF/ZIP 제작·제출, GitHub 전담 개발 저장소 구성, 실제 NAS 테스트.
+- KIC는 신청·팀 생성 화면만 확인했고 **최종 팀 전환 여부 미검증**; PayPal은 참가자용 화면 확인. 따라서 세 대회 모두 등록 단계에 진입했지만 KIC 전환 검증은 별도 남아 있음.
+- 다음 순서: PayPal·UGREEN 담당 총괄 지정 및 저장소 구조 준비, 주제/SDK 검증, 제출물 제작. KIC 기존 총괄 개발 범위는 침범하지 않음.
