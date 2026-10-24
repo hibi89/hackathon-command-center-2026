@@ -23,6 +23,7 @@
 
 ## 운영 문서
 
+- [PayPal 공식 규정·기술 검토](docs/research/PAYPAL_OFFICIAL_REVIEW_20261024.md) — 필수 제출물·심사 기준·Sandbox·제품 전략 비교 (2026-10-24)
 - [STATUS.md](STATUS.md) — 최신 총괄 상태 / GitHub 증거
 - [SCHEDULE.md](SCHEDULE.md) — 공식 마감·내부 목표·시간대
 - [RISKS.md](RISKS.md) — 교차 일정·제출 차단 항목
