@@ -1,0 +1,12 @@
+# Local and sensitive data
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+credentials/
+__pycache__/
+.pytest_cache/
+.DS_Store
+Thumbs.db
