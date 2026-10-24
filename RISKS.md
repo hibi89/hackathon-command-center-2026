@@ -43,3 +43,9 @@
 - [4개 채팅 현행 정책](docs/FOUR_CHAT_EXECUTION_PROTOCOL.md), [4개 시작 프롬프트](docs/CHAT_TRANSITION_PROMPTS_4.md), [전환 확인](docs/audits/FOUR_CHAT_TRANSITION_AUDIT_20261024.md) 참조. 이전 7개/13개 운영 기록보다 본 최신 결정을 우선.
 - 전환 직전 PayPal PPL-001 feature READY_FOR_REVIEW, 합성 테스트 11 PASS(작업자 보고), Sandbox 실 API BLOCKED_BY_ACCESS. 해당 대회 총괄이 직접 최신 HEAD 및 코드/검수 보고를 확인 후 **중복 구현하지 않고 인계**할 것.
 - KIC/PayPal/UGREEN 소유 저장소를 이 통합 총괄은 수정하지 않는다. 사용자가 대회별 총괄에 개편을 지시했으나 **그 저장소에 실제 반영됐는지는 별도 GitHub 검수 대기**. 제품 배포·공식 제출 상태 변경 주장 없음.
+
+## 2026-10-24 KST — PayPal 일별 시간표 상위 총괄 공식 공유
+- 사용자 승인: PayPal 총괄과 **통합 총괄 모두 [같은 원본 날짜별 시간표](https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/DAILY_CAPACITY_PLAN_20261024.md)**를 확인한다. 상황실은 [감독 기준](docs/PAYPAL_DAILY_CAPACITY_OVERSIGHT_20261024.md)만 별도로 보유하고 18일 원본 행을 복제하지 않는다.
+- 확인된 PayPal 원본 `lead/paypal@fe74448a419d75d622db4b8c1a9a5a2e6d75a36e`, 10/25~11/11 **18일 / 순작업 추정 82h / 안전 확보 164h / 일평균 약 9.1h**. 시간은 측정 실적이 아닌 예측이며 2배 안전 확보조차 완료 보증 아님. 3대회 병행에서 **HIGH RISK**. PayPal 하루 4시간이면 18일 72시간으로 순작업 추정치보다 10시간 부족.
+- PayPal 총괄은 매 개발 작업 후 원본 계획의 잔여·실측·이월/장애를 보고하고, 상위 총괄은 매 점검 시 `lead/paypal` [TO_HACKATHON_LEAD](https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/roles/lead/TO_HACKATHON_LEAD.md) + 최신 SHA/CI를 직접 확인해 일정 충돌·사용자 승인 필요한 범위 조정에 대응한다.
+- 제품 실증: PayPal 합성 결제 계약 11 PASS 및 해당 커밋 CI 성공만 증거; 실제 PayPal Sandbox/AI API·호스팅/브라우저/Devpost 접수는 미검증·미완료. 신규 현금 지출 0원, Sandbox 전용, 공식 11/13 05:00 KST 마감 불변. **무인 자동 최신화 아님**.

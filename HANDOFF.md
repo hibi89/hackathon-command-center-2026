@@ -1,3 +1,5 @@
+> **PayPal 일별 시간표 — 상위 총괄 필독 (2026-10-24 KST):** [PayPal 원본 18일 계획](https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/DAILY_CAPACITY_PLAN_20261024.md) · [상황실 감독 메모](docs/PAYPAL_DAILY_CAPACITY_OVERSIGHT_20261024.md). **예상 82시간 / 지연 포함 권장 확보 164시간**, PayPal 단독 매일 평균 약 9.1시간 필요. **KIC·UGREEN 병행 시 11/11 조기 제출 HIGH RISK**. 시간표/코드/CI의 진실은 PayPal `lead/paypal` 최신 HEAD로 재확인. 실 Sandbox·AI API/Production/Devpost 접수 미검증.
+
 > **신규 채팅 한 줄 재개:** `[해커톤총괄 깃헙 레포지토리 확인하고 작업하셈]` → [CHAT_BOOTSTRAP.md](CHAT_BOOTSTRAP.md) → 최신 원격 HEAD/역할/다음 작업. **실제 채팅 4개** 체계 유지. 현재 변경 작업이 끝날 때 진행·인수인계 최신화.
 
 > **최신 사용자 확정(2026-10-24): 실제 채팅 4개.** 통합 총괄 1 + KIC·PayPal·UGREEN 총괄 겸 직접 개발자 각 1. 7개/13개 채팅과 별도 작업자 라우팅은 구형 기록이다. [현행 정책](docs/FOUR_CHAT_EXECUTION_PROTOCOL.md) · [4개 프롬프트](docs/CHAT_TRANSITION_PROMPTS_4.md) · [전환 검수](docs/audits/FOUR_CHAT_TRANSITION_AUDIT_20261024.md)를 최우선으로 읽어라. 기능 브랜치 보존, 대회별 전환 반영은 원격 확인 전 미검증.
@@ -147,3 +149,9 @@
 - 감독 절차/이월 규칙: [docs/KIC_DAILY_CAPACITY_OVERSIGHT_20261024.md](docs/KIC_DAILY_CAPACITY_OVERSIGHT_20261024.md). 예상 2배 초과 또는 일 상한 초과 시 실측 원장에 원인·이월 기록, 다음 3일 재산정. **원본 60일 표를 상황실에 복제하지 않으며** 총괄은 최신 `lead/kic` 파일을 매번 읽는다.
 
 - 다음 해커톤 통합 총괄 재개: KIC `lead/kic` 최신 HEAD 다시 조회 → 원본 60일 시간표에서 **그날** 작업/예비/실측 확인 → KIC 공식 제출 우선순위·타 대회와의 충돌 검수. 제품 코드·기존 제출 증빙 변경 없음.
+
+## 2026-10-24 KST — PayPal 일별 시간표 상위 총괄 공식 공유
+- 사용자 승인: PayPal 총괄과 **통합 총괄 모두 [같은 원본 날짜별 시간표](https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/DAILY_CAPACITY_PLAN_20261024.md)**를 확인한다. 상황실은 [감독 기준](docs/PAYPAL_DAILY_CAPACITY_OVERSIGHT_20261024.md)만 별도로 보유하고 18일 원본 행을 복제하지 않는다.
+- 확인된 PayPal 원본 `lead/paypal@fe74448a419d75d622db4b8c1a9a5a2e6d75a36e`, 10/25~11/11 **18일 / 순작업 추정 82h / 안전 확보 164h / 일평균 약 9.1h**. 시간은 측정 실적이 아닌 예측이며 2배 안전 확보조차 완료 보증 아님. 3대회 병행에서 **HIGH RISK**. PayPal 하루 4시간이면 18일 72시간으로 순작업 추정치보다 10시간 부족.
+- PayPal 총괄은 매 개발 작업 후 원본 계획의 잔여·실측·이월/장애를 보고하고, 상위 총괄은 매 점검 시 `lead/paypal` [TO_HACKATHON_LEAD](https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/roles/lead/TO_HACKATHON_LEAD.md) + 최신 SHA/CI를 직접 확인해 일정 충돌·사용자 승인 필요한 범위 조정에 대응한다.
+- 제품 실증: PayPal 합성 결제 계약 11 PASS 및 해당 커밋 CI 성공만 증거; 실제 PayPal Sandbox/AI API·호스팅/브라우저/Devpost 접수는 미검증·미완료. 신규 현금 지출 0원, Sandbox 전용, 공식 11/13 05:00 KST 마감 불변. **무인 자동 최신화 아님**.
