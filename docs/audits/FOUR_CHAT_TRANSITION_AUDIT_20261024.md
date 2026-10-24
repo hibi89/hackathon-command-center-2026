@@ -17,3 +17,11 @@
 4. 기존 데이터/비밀/권한 보호, 원격 SHA, 유효 Devpost/DAKER 제출 영수증 별도 확인.
 
 **현재 판정:** 상위 상황실의 정책은 4개로 변경 중. 세 대회 자체 운영체계 전환은 **원격 최종 검증 대기**. 다른 대회 저장소 무단 수정 없음.
+
+## 2026-10-24 KST — 세 대회 lead 전환 문서 원격 재검증
+- **3/3 저장소에 총괄 직접개발 운영 정책 반영 확인**: KIC `lead/kic@ea811b883929502f31aceb5db23b6d7a502fb8c0`, PayPal `lead/paypal@3fc1d9e9ac017d50c73492fb550c30f88c4f7fa2`, UGREEN `lead/ugreen@ef8e2fcbdae01a871861e0fef67638fa9c72d527` (본 검수 당시 원격 HEAD).
+- 세 대회 공통: `docs/roles/lead/LEAD_ACTIVE_WORK.md` 및 최신 `TO_HACKATHON_LEAD.md`에 **별도 작업자 채팅 폐지 / 대회 리드가 단독으로 설계·코드·테스트·검수 / `lead/*` 직접 개발 중심 / 과거 feature 원본 보존** 명시. 이전 NEXT_TASK/ACTIVE_TASK/CURRENT_TASK는 역사 자료로 전환.
+- KIC: 종전 `KIC-R-001` feature/research `3fb60204d153b5c791c18961ae790f9f7e94de38` DONE 보고, 로컬 합성 테스트 **26 PASS 주장**. 총괄 독립 재실행/CI/lead 병합 **검증 대기**. DAKER 팀 전환·PDF 공식 제출 미확인.
+- PayPal: 종전 `PPL-001` feature/quote-payment `876d7d1b5935b91e6baddea36abdb8e50602c4fb` READY_FOR_REVIEW, **오프라인 테스트 11 PASS 주장**. 총괄 독립 재실행/lead 병합 검증 대기, 실 Sandbox 주문/결제 OAuth 호출 **미실행**.
+- UGREEN: 종전 `UGR-001` feature/missing-files `4e74dc7b187e70ad72e906e042fdbf4c140940f8` SDK 능력 매트릭스 공개 자료 정리·**BLOCKED**. 공식 Kit 아카이브 내부 CLI/Expert Agent 명령/실 NAS 실행 미확인. 총괄이 새 접근 경로 검증 후 데이터 계약과 Skill 구현 진행해야 함.
+- **운영 문서 전환 완료(3/3), 실제 새 구조의 전체 개발·테스트·배포·최종 제출 사이클은 별도 검증 전**. 기존 작업의 성과와 차단을 삭제하지 않음.

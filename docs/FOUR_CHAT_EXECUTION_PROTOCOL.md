@@ -13,7 +13,7 @@
 ## 2. 각 대회 총괄의 실행 절차
 1. 매 작업 시작 시 `lead/*` 최신 원격 HEAD 및 HANDOFF/STATUS/AGENTS/REQUIREMENTS/실제 소스·테스트를 읽는다. 과거 단일 작업자용 NEXT_TASK/ACTIVE_TASK/CURRENT_TASK는 미완료 작업·중복 방지의 **이력/참고**로 조회하되 별도 작업자 채팅 호출을 요구하지 않는다.
 2. 현재 feature의 기존 코드/커밋/테스트/TO_*_LEAD 보고를 확인해 이미 완성한 작업·검수 대기 작업을 중복 실행하지 않는다. READY/IN_PROGRESS/검수 대기와 BLOCKED를 현재 실상에 맞게 정리한다.
-3. 해당 대회 총괄이 **기존 적절한 feature 브랜치**에서 직접 코드/테스트·검증/커밋을 실행한다. 코드 삭제·강제 덮어쓰기·임의 force push 금지. 역할 간 계약·합성/실 API·실배포 구분. 기능 변경 뒤 같은 feature의 STATUS/HANDOFF/테스트 증거를 정리한다.
+3. 해당 대회 총괄이 **자기 `lead/*` 브랜치를 통합 개발 기본 작업 공간으로 사용**한다. 종전 feature 브랜치에서 검증된 소스/테스트만 차분 검토 후 안전하게 선별 이관하고, 기존 feature 원본/커밋은 유지한다. 개발·검증 결과는 총괄이 같은 채팅에서 직접 기록한다. 코드 삭제·강제 덮어쓰기·임의 force push 금지. 역할 간 계약·합성/실 API·실배포 구분. 기능 변경 뒤 같은 feature의 STATUS/HANDOFF/테스트 증거를 정리한다.
 4. 본인 `lead/*`에 최신 지시/결정/통합 검수/STATUS/HANDOFF 및 `docs/roles/lead/TO_HACKATHON_LEAD.md`를 갱신하고, 필요시 PR·CI·병합 증거를 남긴다. GitHub Author/Committer와 원격 HEAD, Production SHA를 구분 검증한다.
 5. 사용자 `ㄱ` = **현재 승인된 다음 실제 작업 실행**. 계획서만 작성하거나 다른 작업자 채팅으로 넘기지 않는다. 마감·품질·비용 조건을 임의 축소·변경하지 않는다.
 
