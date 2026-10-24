@@ -17,3 +17,8 @@
 4. 보고 흐름: 각 feature `TO_KIC_LEAD.md` → KIC 총괄 `MESSAGE_REVIEW.md` → KIC `TO_HACKATHON_LEAD.md` → 본 통합 상황판. 채팅/저장소 간 자동 동기화 없음.
 5. 상위 총괄 감독 사항: 11/12 10:00 KST 예선 PDF 기한, 11/12~19 KIC 상호평가, PayPal·UGREEN 일정 충돌. KIC API·스키마 승인 및 기능 구현·통합은 KIC 총괄의 책임.
 6. 반영 범위: **통합 총괄 저장소 문서 갱신만**. KIC 원본 저장소와 세 feature 브랜치 코드 변경 없음. 본 총괄 저장소의 최종 SHA는 반영 후 원격 조회가 기준.
+
+## 2026-10-24 KST — PayPal 등록 단계 완료 판정
+- Devpost PayPal AI Hackathon의 등록 신청 폼 제출 직후 사용자 제공 스크린샷에서 `My hackathon projects` 및 `Create project` 버튼 확인. **참가 등록 완료로 판단**, 백엔드 등록확인 별도 미검증.
+- 작품 프로젝트 생성, 작품 제출, 전담 개발 저장소, PayPal Sandbox 연결은 모두 미완료. **`Create project`를 참가 미완료의 증거로 혼동하지 말 것**.
+- 다음 우선 작업: UGREEN 등록 후 PayPal/UGREEN 각각 총괄 저장소·역할 세팅(사용자 승인 필요한 항목은 별도 확인). 공식 제출 기한은 PayPal 2026-11-13 05:00 KST.
