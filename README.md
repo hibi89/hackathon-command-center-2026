@@ -11,7 +11,7 @@
 |---|---|---|---|---|---|
 | [KIC](projects/KIC.md) | **ProofInvest** (확정) | 신청·팀 생성 화면 확인, **팀 전환 미검증** | [hibi89-kic-proofinvest](https://github.com/hibi89/hibi89-kic-proofinvest) | 초기 Python 스타터 + 9개 테스트 보고, GitHub Actions 성공. 기획서 v0.1 존재; **미제출** | **11/12 10:00** |
 | [PayPal](projects/PAYPAL.md) | AI 프리랜서 계약·결제 Agent (후보) | **Devpost 참가 등록 후 My hackathon projects 화면 확인** | **미생성(조회 기준)** | 주제 미확정, 구현/시연/제출 미착수 | **11/13 05:00** |
-| [UGREEN](projects/UGREEN.md) | NAS 프로젝트 파일 관리 Skill (후보) | **미신청(사용자 진술)** | **미생성(조회 기준)** | 규격·SDK 적용 미검증, 예선 PDF·ZIP 미착수 | **11/16 16:45** |
+| [UGREEN](projects/UGREEN.md) | NAS 프로젝트 파일 관리 Skill (후보) | **Devpost ‘Thanks for registering!’ 및 My hackathon projects 확인** | **미생성(조회 기준)** | 규격·SDK 적용 미검증, 예선 PDF·ZIP 미착수 | **11/16 16:45** |
 
 **성공의 정의**: 공식 유효 제출 → KIC/UGREEN 본선 진출 등 객관적 성과 → 동작 제품·코드·시연 축적 → 상품화. AI 역할 13개는 작업 분담용이며 실제 팀원은 1명입니다.
 
@@ -19,7 +19,7 @@
 
 1. **KIC**: 예선에서 중요한 것은 **공식 PDF 10페이지 이내 기획서 제출**. 실제 API·배포는 본선 준비 항목; 합성 테스트를 실데이터 성공으로 간주하지 않음. 팀 전환/제출 버튼 확인이 우선 리스크.
 2. **PayPal**: 참가 등록 화면 확인 후 주제 확정 및 PayPal Sandbox **실제 작동**이 선행되어야 함. 공개 오픈소스 코드와 실행 가능한 데모, 3분 미만 공개 YouTube 영상은 공식 제출 요건.
-3. **UGREEN**: 실제 NAS 없이 예선 참가 가능. **500단어 이내 영문 PDF(1MB 이하) + 공식 Uliya 표준의 pre-test Skill ZIP** 필수. Round 1 ZIP에는 별도 실행 파일/스크립트/매니페스트를 넣으면 안 됨.
+3. **UGREEN**: 참가 등록 확인. 실제 NAS 없이 예선 참가 가능. **500단어 이내 영문 PDF(1MB 이하) + 공식 Uliya 표준의 pre-test Skill ZIP** 필수. Round 1 ZIP에는 별도 실행 파일/스크립트/매니페스트를 넣으면 안 됨.
 
 ## 운영 문서
 
@@ -34,7 +34,7 @@
 
 ## 대회별 공식 보고 진입점
 - **KIC:** [`lead/kic/docs/roles/lead/TO_HACKATHON_LEAD.md`](https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/roles/lead/TO_HACKATHON_LEAD.md) — 2026-10-24 KST 직접 확인. KIC 총괄 HEAD `f7f5a25d072d` CI 성공.
-- PayPal: 참가 등록 후 My hackathon projects 화면 확인, 전담 저장소 미생성. UGREEN: 참가 및 전담 저장소 구성 전. 향후 담당 총괄의 보고 경로를 확인하면 등록.
+- PayPal·UGREEN: Devpost 참가 등록 화면 확인, 전담 개발 저장소 미생성. 향후 각 담당 총괄의 보고 경로를 확인하면 등록. 향후 담당 총괄의 보고 경로를 확인하면 등록.
 
 ## 한 번의 점검 순서
 
