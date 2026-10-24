@@ -257,7 +257,7 @@
         "contest": "KIC",
         "current_at_observation": "d53bbd99b56477f81df49694c6311820b5e0f156",
         "run_id": 40105430707,
-        "conclusion": null,
+        "conclusion": "failure",
         "tests": 233,
         "errors": 1,
         "previous_pass_sha": "9c34fb844a600c47e9268ab6126ca9e70d785882",
@@ -409,7 +409,7 @@
         "official_submission": false,
         "live_external_verified": false,
         "latest_ci_run": 40105430707,
-        "latest_ci_conclusion": null
+        "latest_ci_conclusion": "failure"
       }
     },
     {
