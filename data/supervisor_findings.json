@@ -25,7 +25,7 @@
       "dispatched_to": "https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/FROM_HACKATHON_COMMAND.md",
       "dispatched_child_head": "c965a59d2ae7e86aae1a1c10cbd6b0caedb480d5",
       "dispatched_kst": "2026-10-24",
-      "last_reviewed_sha": "18f3b81740b074ac3fcdb9ec1a0090a8ed12d2c8"
+      "last_reviewed_sha": "d3e199c981ede9d9cf5fb41daee9b38719444a2c"
     },
     {
       "id": "SUP-PAYPAL-001",
@@ -69,7 +69,7 @@
       "dispatched_to": "https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/FROM_HACKATHON_COMMAND.md",
       "dispatched_child_head": "ead21d523432c4b2ac17fabaed0da281394b0386",
       "dispatched_kst": "2026-10-24",
-      "last_reviewed_sha": "bba61a7f5d22e3fb7743b7d778190b2d4aa1b3dc"
+      "last_reviewed_sha": "1b3e0c6ded859abffbbb327843bd70aff3e8e684"
     },
     {
       "id": "SUP-KIC-002",
@@ -91,7 +91,7 @@
       "dispatched_to": "https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/FROM_HACKATHON_COMMAND.md",
       "dispatched_child_head": "c965a59d2ae7e86aae1a1c10cbd6b0caedb480d5",
       "dispatched_kst": "2026-10-24",
-      "last_reviewed_sha": "18f3b81740b074ac3fcdb9ec1a0090a8ed12d2c8"
+      "last_reviewed_sha": "d3e199c981ede9d9cf5fb41daee9b38719444a2c"
     },
     {
       "id": "SUP-PAYPAL-002",
@@ -135,7 +135,7 @@
       "dispatched_to": "https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/FROM_HACKATHON_COMMAND.md",
       "dispatched_child_head": "c965a59d2ae7e86aae1a1c10cbd6b0caedb480d5",
       "dispatched_kst": "2026-10-24",
-      "last_reviewed_sha": "18f3b81740b074ac3fcdb9ec1a0090a8ed12d2c8"
+      "last_reviewed_sha": "d3e199c981ede9d9cf5fb41daee9b38719444a2c"
     },
     {
       "id": "SUP-UGREEN-002",
@@ -157,7 +157,7 @@
       "dispatched_to": "https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/FROM_HACKATHON_COMMAND.md",
       "dispatched_child_head": "ead21d523432c4b2ac17fabaed0da281394b0386",
       "dispatched_kst": "2026-10-24",
-      "last_reviewed_sha": "bba61a7f5d22e3fb7743b7d778190b2d4aa1b3dc"
+      "last_reviewed_sha": "1b3e0c6ded859abffbbb327843bd70aff3e8e684"
     },
     {
       "id": "SUP-PAYPAL-003",
@@ -196,7 +196,7 @@
       "verified_after_sha": "256a766d63eac38a1c6b181d29e3d74e20f9709a",
       "review_trigger": "next_user_requested_supervisor_audit_or_relevant_lead_commit",
       "approval_required": false,
-      "last_reviewed_sha": "bba61a7f5d22e3fb7743b7d778190b2d4aa1b3dc"
+      "last_reviewed_sha": "1b3e0c6ded859abffbbb327843bd70aff3e8e684"
     },
     {
       "id": "SUP-UGREEN-004",
@@ -215,7 +215,7 @@
       "verified_after_sha": null,
       "review_trigger": "owner_supported_codex_official_creator_run_then_next_supervisor_review",
       "approval_required": true,
-      "last_reviewed_sha": "bba61a7f5d22e3fb7743b7d778190b2d4aa1b3dc"
+      "last_reviewed_sha": "1b3e0c6ded859abffbbb327843bd70aff3e8e684"
     }
   ],
   "valid_statuses": [
@@ -248,14 +248,14 @@
     "scope": "Independent heads, inspected changed actual code, canonical JSON, verified CI jobs, official UGOS Creator eligibility",
     "contests": {
       "kic": {
-        "sha": "18f3b81740b074ac3fcdb9ec1a0090a8ed12d2c8",
+        "sha": "d3e199c981ede9d9cf5fb41daee9b38719444a2c",
         "days": 60,
-        "done": 23,
+        "done": 24,
         "partial": 0,
         "blocked": 3,
-        "not_started": 34,
-        "verified_ci": 40082329914,
-        "offline_tests_lead_reported": 117,
+        "not_started": 33,
+        "verified_ci": 40082667314,
+        "offline_tests_lead_reported": 120,
         "submissions": 0
       },
       "paypal": {
@@ -273,7 +273,7 @@
         "submissions": 0
       },
       "ugreen": {
-        "sha": "bba61a7f5d22e3fb7743b7d778190b2d4aa1b3dc",
+        "sha": "1b3e0c6ded859abffbbb327843bd70aff3e8e684",
         "days": 24,
         "done": 2,
         "partial": 12,
@@ -281,12 +281,13 @@
         "not_started": 7,
         "verified_previous_ci": 40080489057,
         "previous_bundle_ci": 40080489067,
-        "offline_tests_lead_reported": 204,
-        "new_g13_ci": "FIRST_SOURCE_40082152946_FAILURE_204_PASS_1_FAILED_FORMAT_ASSERTION; LATEST_ASSERTION_FIX_CI_NOT_VERIFIED",
+        "offline_tests_lead_reported": 205,
+        "new_g13_ci": "FIRST_40082152946_FAILURE_THEN_CORRECTED_40082466929_COMPLETED_SUCCESS_205",
         "official_creator": "NOT_EVIDENCED",
         "submissions": 0,
         "g13_bundle_ci": 40082152962,
-        "g13_bundle": "PREVIEW_SUCCESS_1PAGE_5038B_ZIP4_7097B"
+        "g13_bundle": "PREVIEW_SUCCESS_1PAGE_5038B_ZIP4_7097B",
+        "verified_ci": 40082466929
       }
     },
     "interpretation": "Calendar progress never equals functional completion; real API, registered SDK/official creator, entrant approval and submission are separate gates."
