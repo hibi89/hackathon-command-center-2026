@@ -299,54 +299,29 @@
   "interpretation": "OPEN means central audit recommendation recorded. This is NOT evidence a child lead received, acknowledged, implemented, or had CI verify it.",
   "followup_observation": "PayPal D13 source at 673f47a1e47b passed 175/175 tests and Chromium 40077804576, but master progress still 10 DONE, D13 0% NOT_STARTED.",
   "current_dispatch": {
-    "date_kst": "2026-10-24",
-    "state": "PUBLISHED_TO_ALL_3_LEADS_CI_SUCCESS",
-    "messages": {
+    "date_kst": "2026-10-24 19:12",
+    "state": "DIRECTLY_PUBLISHED_TO_3_LEAD_BRANCHES_BOOTSTRAP_AND_ACTIVE_DIRECTIVE_REMOTE_VERIFIED__LEAD_NEW_ACK_PENDING",
+    "report": "docs/audits/CHIEF_DIRECT_DISPATCH_20261024_1912.md",
+    "projects": {
       "kic": {
-        "repo": "hibi89/hibi89-kic-proofinvest",
-        "branch": "lead/kic",
-        "commit": "c965a59d2ae7e86aae1a1c10cbd6b0caedb480d5",
-        "ci": "40078509037",
-        "counts": {
-          "done": 14,
-          "partial": 0,
-          "blocked": 3,
-          "not_started": 43
-        },
-        "next": "2026-11-14 Verification regression; DAKER 11/09 submission authority blocked 60%",
-        "message": "https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/FROM_HACKATHON_COMMAND.md"
+        "head": "1939724345341f3c5bbeb79778a1323aa8d1c82f",
+        "file": "https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/FROM_HACKATHON_COMMAND.md",
+        "priority": "DAKER_AUTHENTICATED_SUBMIT_RIGHTS_P0"
       },
       "paypal": {
-        "repo": "hibi89/hibi89-paypal-ai-hackathon",
-        "branch": "lead/paypal",
-        "commit": "4098eb6663317a1d00c737d23253c5c26cb38c72",
-        "ci": "40078519603",
-        "counts": {
-          "done": 11,
-          "partial": 1,
-          "blocked": 1,
-          "not_started": 5
-        },
-        "next": "PPL-D14; D03 real Sandbox+AI 0% blocked, D04 real AI partial",
-        "message": "https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/FROM_HACKATHON_COMMAND.md"
+        "head": "ea9cd78a7b4609d55081277509bc0360c2e62374",
+        "file": "https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/FROM_HACKATHON_COMMAND.md",
+        "priority": "REAL_SANDBOX_AND_REAL_AI_P0"
       },
       "ugreen": {
-        "repo": "hibi89/hibi89-ugreen-nas-hackathon",
-        "branch": "lead/ugreen",
-        "commit": "ead21d523432c4b2ac17fabaed0da281394b0386",
-        "ci": "40078635510",
-        "counts": {
-          "done": 2,
-          "partial": 12,
-          "blocked": 3,
-          "not_started": 7
-        },
-        "next": "UGR-D02 external SDK BLOCKED; prioritize Round1 valid PDF/ZIP/entrant-reviewed submission",
-        "message": "https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/FROM_HACKATHON_COMMAND.md"
+        "head": "5ad578d5d7dca337eb5f3fc4409f6badbef5c595",
+        "file": "https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/FROM_HACKATHON_COMMAND.md",
+        "priority": "REAL_OFFICIAL_CREATOR_GENERATION_P0"
       }
-    }
+    },
+    "automatic_lead_execution": false
   },
-  "next_review": "Verify latest UGREEN bba61a7 post-correction test CI, real official UGOS Creator generation/check; PayPal real PayPal Sandbox and AI; KIC DAKER entrant/team submission permissions; all actual submissions 0.",
+  "next_review": "After explicit user-triggered lead tasks, verify replies to new ACTIVE P0 guidance; never equate published GitHub instructions with executed work.",
   "previous_snapshot_1719": {
     "date_kst": "2026-10-24",
     "audit_id": "SUPERVISOR-20261024-1719",
@@ -403,5 +378,5 @@
       }
     }
   },
-  "last_audit_verified_kst": "2026-10-24 KST (lead heads & CI evidence)"
+  "last_audit_verified_kst": "2026-10-24 KST; direct lead dispatch remote-verified, actual new lead acknowledgment pending"
 }
