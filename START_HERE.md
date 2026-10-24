@@ -84,8 +84,8 @@
 
 공식 출처: [KIC](https://daker.ai/public/hackathons/kic-ai-agent-competition) · [PayPal Rules](https://paypalaihackathon.devpost.com/rules) · [UGREEN Rules](https://ugreenhackathon.devpost.com/rules)
 
-## 2026-10-24 — 개발 저장소 이름 결정(생성 예정)
-- PayPal 예정 저장소: `hibi89/hibi89-paypal-ai-hackathon`. 2026-10-24 확인 시 GitHub `404`로 **아직 생성되지 않음**. 프로젝트 주제는 여전히 잠정.
+## 2026-10-24 — 저장소 생성 이전의 이름 지정 이력 (과거 기록)
+- PayPal 예정 저장소: `hibi89/hibi89-paypal-ai-hackathon`. 2026-10-24 확인 시 GitHub `404`로 **당시에는 생성되지 않았으나 아래 후속 단락에서 생성 완료를 검증**. 프로젝트 주제는 여전히 잠정.
 - UGREEN 예정 저장소: `hibi89/hibi89-ugreen-nas-hackathon`. 2026-10-24 확인 시 GitHub `404`로 **아직 생성되지 않음**. 프로젝트 주제는 여전히 잠정.
 - 사용자가 두 저장소를 만든 뒤 실제 원격 접근·visibility·기본 브랜치를 확인하고, 각 대회 총괄을 별도 채팅방으로 설정하여 역할/인수인계 문서 구조를 논의. 기존 KIC 소스 변경 금지.
 
