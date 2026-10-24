@@ -2,7 +2,7 @@
 
 - 공식 페이지: https://paypalaihackathon.devpost.com/
 - 공식 일정: https://paypalaihackathon.devpost.com/details/dates
-- 참가: 미신청(사용자 진술, 2026-10-24)
+- 참가: **Devpost 참가 등록 완료로 판단(2026-10-24 KST)** — Register 이후 대회 내 `My hackathon projects` 화면과 `Create project` 버튼 스크린샷 확인. 참가 확인 메일 및 서버 기록은 별도 미검증.
 - 전담 GitHub: 미생성(연결 계정 조회 시점)
 - 대회 총괄: AI 역할 운영 예정, 개발 착수 미확인
 
@@ -22,7 +22,7 @@
 - AI 개발 방식·사용한 PayPal 기술·제품 소개.
 
 ## 진행 체크리스트
-- [ ] 참가 등록
+- [x] 참가 등록 직후 참가자 화면 확인 (프로젝트 생성·최종 제출과 구분)
 - [ ] 주제·실제 API 사용 가능성 검증
 - [ ] PayPal Sandbox 최소 결제 흐름
 - [ ] 세 기능 중 실제 작동 범위 결정 및 구현
@@ -32,3 +32,6 @@
 
 내부 목표: 10/24~26 참가/기술 조사; 10/27~31 Sandbox 최소 흐름; 11/01~05 통합 검증; 11/11~12 최종 제출.
 공식 결과는 심사 후 별도 기록한다.
+
+## 2026-10-24 등록 증거
+등록 절차 화면 → `Register` 실행 → Devpost PayPal AI Hackathon 내 `My hackathon projects` 페이지 진입. 아직 프로젝트가 없어 `Create project`가 나타남. **참가 등록과 작품 최종 제출은 별개의 단계**. 계정 식별정보/개인정보를 공개 GitHub에 업로드하지 않음.
