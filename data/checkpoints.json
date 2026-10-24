@@ -1,0 +1,65 @@
+{
+  "as_of_date_kst": "2026-10-24",
+  "owner": "hibi89",
+  "meta": {
+    "repository": "hibi89/hackathon-command-center-2026",
+    "repository_state": "created_public_initial_docs_uploaded",
+    "default_branch": "main",
+    "kind": "coordination_docs",
+    "auto_update": false,
+    "verified_as_of": "2026-10-24 KST"
+  },
+  "projects": [
+    {
+      "id": "kic",
+      "title": "ProofInvest",
+      "topic_confirmed": true,
+      "registration": "application_and_team_creation_seen_team_conversion_unverified",
+      "repo": "hibi89/hibi89-kic-proofinvest",
+      "repo_exists": true,
+      "main_head_sha": "9d0d454154a7393627a840113ab811a5b91f121a",
+      "lead_head_sha": "3ea8596edbd17cd3dcbbdadf17d9855010d835d9",
+      "implemented_and_verified_features": 0,
+      "planned_features": 3,
+      "offline_tests_reported_passed": 9,
+      "main_ci": "success",
+      "live_api": "unverified",
+      "production": "not_deployed",
+      "submitted": false,
+      "submission_deadline_kst": "2026-11-12T10:00:00+09:00",
+      "official_url": "https://daker.ai/public/hackathons/kic-ai-agent-competition"
+    },
+    {
+      "id": "paypal",
+      "title": "Freelancer Contract and Payment AI Agent",
+      "topic_confirmed": false,
+      "registration": "not_registered_user_report",
+      "repo": null,
+      "repo_exists": false,
+      "implemented_and_verified_features": 0,
+      "planned_features": 3,
+      "main_ci": null,
+      "live_api": "unverified",
+      "production": "not_deployed",
+      "submitted": false,
+      "submission_deadline_kst": "2026-11-13T05:00:00+09:00",
+      "official_url": "https://paypalaihackathon.devpost.com/"
+    },
+    {
+      "id": "ugreen",
+      "title": "NAS Project File Management AI Skill",
+      "topic_confirmed": false,
+      "registration": "not_registered_user_report",
+      "repo": null,
+      "repo_exists": false,
+      "implemented_and_verified_features": 0,
+      "planned_features": 3,
+      "main_ci": null,
+      "live_api": "unverified",
+      "production": "not_applicable_in_round_1",
+      "submitted": false,
+      "submission_deadline_kst": "2026-11-16T16:45:00+09:00",
+      "official_url": "https://ugreenhackathon.devpost.com/"
+    }
+  ]
+}
