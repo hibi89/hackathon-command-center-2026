@@ -22,7 +22,7 @@
 - verification: 141dbbaf31487806e5d3d01fc92ecc3667e53ca2
 - risk: 0e4d2cf6526c44626bb09c4fe6d30b490ad15ad0
 - [main GitHub Actions 성공](https://github.com/hibi89/hibi89-kic-proofinvest/actions/runs/40050488506)
-- [lead GitHub Actions 성공](https://github.com/hibi89/hibi89-kic-proofinvest/actions/runs/40050871579)
+- [lead/kic 최신 HEAD GitHub Actions 성공](https://github.com/hibi89/hibi89-kic-proofinvest/actions/runs/40051624837)
 - 초기 Python 오프라인 합성 테스트 9건 통과 보고. 실기업 API/통합 Agent/배포/브라우저 미검증.
 - 각 기능 담당 메시지함의 신규 차단/의사결정 요청: 조회 시점 0건.
 - **최우선 고정 보고서:** [TO_HACKATHON_LEAD.md](https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/roles/lead/TO_HACKATHON_LEAD.md) (소유 브랜치: `lead/kic`). 상세 검증은 같은 브랜치의 `docs/roles/lead/STATUS.md`, `HANDOFF.md`, `MESSAGE_REVIEW.md`와 실제 HEAD/CI로 대조한다.
@@ -45,3 +45,7 @@
 - 전체 PR 목록 직접 조회: 0건. 공식 기획서 PDF 제출·팀 전환은 여전히 확인되지 않음.
 - **상위 총괄 확인이 필요한 안건:** KIC 예선 PDF 제출 가능성(팀 전환·접수 버튼 포함), 11/12~19 상호평가 일정 확보, 공통 데이터 계약 A안과 실제 OpenDART 호출은 담당 총괄의 사용자 승인 대기.
 - 분업: KIC 총괄은 새 지시 전에 세 기능 브랜치의 `TO_KIC_LEAD.md`를 검토하고 `MESSAGE_REVIEW.md`에 기록. 전체 총괄은 KIC 공식 보고서를 읽고 대회 간 일정·위험을 관리하며 기능 구현에는 개입하지 않음.
+
+## 2026-10-24 KST — 성과 기준
+- 공식 **예선 상위 12팀 본선**, 최종 **6팀 수상**. 아직 예선 PDF 제출·팀 전환 완료 증거가 없으며 본선 선발·수상 단계는 **미진입**.
+- 상호평가 기간 **11/12~19** 사용자 참여 일정 확보가 필요하다. 구체 투표 조건은 KIC 전담 총괄이 주최 최신 공고를 검증한다.

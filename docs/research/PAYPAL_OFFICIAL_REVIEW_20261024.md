@@ -59,3 +59,8 @@
 - 실제 DEVPOST 프로젝트 생성·공개·범위 변경/Live 결제 실행은 사용자 의사결정 및 별도 확인.
 
 상태 변경은 각 대회 총괄의 원격 보고가 생기면 그 문서와 GitHub SHA·CI·실제 데모 증거를 대조하여 갱신한다. 본 문서는 2026-10-24의 조사 스냅샷이며 자동 갱신되지 않는다.
+
+## 2026-10-24 추가 확인 — 공식 본선 선발 정원 없음
+- [PayPal Rules §6](https://paypalaihackathon.devpost.com/rules): Stage One은 기본 실현성/PayPal API 주제 적합성 pass/fail. Stage Two는 기술 구현·디자인·영향·혁신·발표를 동일 비중으로 평가한다.
+- 공식으로 공개한 **'Finalists 몇 팀 선발' 정원/선발 발표**는 없으므로 Stage Two 심사 대상이 곧 공식 본선 진출 이력이라고 주장하지 않는다.
+- 발표 시각 [Dates](https://paypalaihackathon.devpost.com/details/dates)와 Rules가 5시간 상충하므로 공식 결과 시간은 추후 확인. 유효 제출 마감 2026-11-13 05:00 KST는 동일하다.

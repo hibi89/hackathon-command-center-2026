@@ -42,3 +42,8 @@
 - 사용자 등록 시 관심 트랙은 `Automate Your Workflow`로 선택. 이 선택은 추후 Skill 아이디어 최종 확정을 의미하지 않음.
 - 다음 작업: 공식 UGREEN Skill Developer Package 확보/규격 조사 → 주제 A/B안 평가와 사용자 승인 → 500단어 이내 영문 PDF와 유효한 `SKILL.md` 중심 ZIP 제작.
 - 실제 NAS 실행은 예선 필수가 아님. 본선 진출 시 원격 장비 테스트 후 검증.
+
+## 2026-10-24 KST — 공식 Finalists 선발 규모
+- [공식 UGREEN Rules](https://ugreenhackathon.devpost.com/rules)에 예선 상위 **최대 30개 프로젝트**가 Finalists로 선발된다고 명시됨.
+- 본선은 11/21 PT 이메일 통지, 11/22~28 PT 중 지정 1일 무료 원격 NAS 테스트, 12/01 16:45 KST 최종 ZIP/영상 제출, 최종 **5개 수상작**(1·2·3위 각 1개 + Most Creative 2개).
+- 현재는 Devpost 참가 등록 화면만 확인. **예선 PDF·ZIP 제출/본선 진출/수상은 모두 미발생**.

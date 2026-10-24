@@ -8,7 +8,9 @@
     "kind": "coordination_docs",
     "auto_update": false,
     "verified_as_of": "2026-10-24 KST",
-    "last_update_reason": "PayPal official rules, FAQs, resources, judging and Sandbox documentation reviewed"
+    "last_update_reason": "Official finalists clarification and cross-chat recovery docs published",
+    "first_read": "START_HERE.md",
+    "update_protocol": "docs/CONTINUITY_PROTOCOL.md"
   },
   "projects": [
     {
@@ -39,7 +41,10 @@
         "kind": "offline-tests"
       },
       "pull_requests_count": 0,
-      "lead_report_checked_date_kst": "2026-10-24"
+      "lead_report_checked_date_kst": "2026-10-24",
+      "official_finalist_slots": 12,
+      "official_award_teams": 6,
+      "finalist_status": "not_yet_selected"
     },
     {
       "id": "paypal",
@@ -64,7 +69,11 @@
       "judging_model": "theme_api_pass_fail_then_five_equal_weight_criteria",
       "sandbox_access_verified": false,
       "submission_requirements_reviewed": true,
-      "strategy_status": "two_options_compared_not_approved"
+      "strategy_status": "two_options_compared_not_approved",
+      "official_finalist_slots": null,
+      "finalist_selection_notes": "No official finalist slots; Stage One pass/fail then Stage Two judging",
+      "award_status": "no_award_evidence",
+      "results_time_notes": "Dates vs Rules conflict: 2026-12-22 02:00 or 07:00 KST"
     },
     {
       "id": "ugreen",
@@ -84,7 +93,10 @@
       "registration_evidence": "User supplied Devpost screenshot 2026-10-24 KST: 'Thanks for registering!' on UGREEN My hackathon projects page",
       "registration_backend_independently_verified": false,
       "project_created": false,
-      "interested_track": "Automate Your Workflow (registration form)"
+      "interested_track": "Automate Your Workflow (registration form)",
+      "official_finalist_slots_max": 30,
+      "official_award_projects": 5,
+      "finalist_status": "not_yet_selected"
     }
   ]
 }
