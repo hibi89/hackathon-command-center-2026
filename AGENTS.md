@@ -19,3 +19,6 @@
 - 비밀번호·토큰·API 키·개인정보·비공개 고객 자료·기획서 원본은 게시하지 않는다.
 - 대회별 원본 소스 저장소를 무단 수정하지 않는다.
 - 작업 없는 기간에 형식적인 커밋은 생성하지 않는다.
+
+## 대회별 총괄 보고 진입점 (KIC 검증: 2026-10-24 KST)
+KIC는 `hibi89/hibi89-kic-proofinvest` 저장소 `lead/kic` 브랜치의 [`docs/roles/lead/TO_HACKATHON_LEAD.md`](https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/roles/lead/TO_HACKATHON_LEAD.md)부터 읽는다. 보고서의 HEAD/CI·제출 증거와 맞지 않는 부분이 있으면 실제 원격 검증 결과를 우선한다. KIC 총괄에게 전달할 사항은 전체 총괄 상황판에 기록하며 KIC 기능 담당에게 직접 구현 지시를 내리지 않는다. PayPal/UGREEN에도 담당 총괄이 생기면 같은 방식으로 진입점을 지정한다.
