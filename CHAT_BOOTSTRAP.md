@@ -1,4 +1,4 @@
-> **후속 독립 감독 최신화 (2026-10-24 KST):** 기존 8건 시정 전달에 대한 첫 재검수 완료. [최신 검수](docs/audits/SUPERVISOR_FOLLOWUP_20261024.md) · [시정 원장](data/supervisor_findings.json)에서 **KIC 1건 검증종료, 총 9건 중 8건 미종결** 확인. KIC/PAYPAL/UGREEN의 추가 선행 커밋과 원장 수치가 아래 과거 안내보다 변경되었으므로 반드시 각 `lead/*`를 새로 읽을 것. 기존 한 줄 재개 문구·4채팅 체제·권한 규칙 변경 없음.
+> **해커톤 총괄 새 채팅 최신 복원 (2026-10-24 KST):** [통합 감독 후속 감사](docs/audits/SUPERVISOR_FOLLOWUP_20261024.md)와 [시정 원장](data/supervisor_findings.json) 최우선. KIC `cf5552c` 16/0/3/41, PayPal `55c0c50` 11/2/1/4 (D14 60%), UGREEN `256a766` 2/12/3/7. **시정 총 9건 중 2건 검증종결, 7건 미종결.** 3대회 공식 제출 미완료. 새 채팅은 현재 `main`→세 `lead/*`의 실제 HEAD/정본/CI를 새로 확인; 아래 오래된 숫자를 재활용하지 않는다. 사용자 한 줄 호출·4채팅 체제·승인 게이트는 그대로다.
 
 > **새 채팅방 인수인계 완료 (2026-10-24 KST):** 사용자 명령대로 **KIC·PayPal·UGREEN 총괄 세 저장소 모두** `lead/*/docs/FROM_HACKATHON_COMMAND.md` 수뇌부 직접 전달문과 `CHAT_BOOTSTRAP.md` 상단 필독 경로를 실제 원격 게시했다. **세 담당 저장소 CI 모두 해당 SHA에서 SUCCESS**. [세 팀별 링크·커밋·다음 감독 절차](docs/LEAD_MESSAGES_HANDOFF_20261024.md). 기존 시정 8건은 **전달됨·담당 수용/이행 미검증**, 새 채팅은 원장·답신·실제 테스트를 계속 감사해야 한다. 아래의 기존 상태 수치는 과거 스냅샷이다.
 
