@@ -34,6 +34,9 @@
 - **PAYPAL**: [일정 공시](https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/COMPETITION_SCHEDULE.md) · [총괄 보고](https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/roles/lead/TO_HACKATHON_LEAD.md) · `main b58533ac7e63` / `lead/paypal 62efc0293af5`
 - **UGREEN**: [일정 공시](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/COMPETITION_SCHEDULE.md) · [총괄 보고](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/roles/lead/TO_HACKATHON_LEAD.md) · `main d8cd806cb2b3` / `lead/ugreen 1fdcabc12cb5`
 
+## 새 채팅방 13개 복원용 프롬프트
+- [13개 AI 채팅방별 인수인계 프롬프트](docs/CHAT_TRANSITION_PROMPTS_13.md) — 전체 총괄 1 / 3대회 총괄 3 / 기능 담당 9. **본인 역할 번호의 코드블록만 새 채팅 첫 메시지에 복사**.
+
 ## 운영 문서
 - [START_HERE.md](START_HERE.md) — **새 통합 총괄 채팅방 복원 단일 진입점**
 - [docs/CONTINUITY_PROTOCOL.md](docs/CONTINUITY_PROTOCOL.md) — **중요 작업 종료 때 문서 최신화/원격 검증 절차**

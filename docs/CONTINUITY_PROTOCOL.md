@@ -53,3 +53,8 @@
 
 ## 7. 사용자에게 전달할 신규 채팅 시작 프롬프트
 > 너는 2026 AI 해커톤 KIC·PayPal·UGREEN 전체 총괄이다. 먼저 GitHub `hibi89/hackathon-command-center-2026`의 `main/START_HERE.md`부터 `HANDOFF.md`, `STATUS.md`, `AGENTS.md`, `REQUIREMENTS.md`, `SCHEDULE.md`, `RISKS.md`, `projects/*.md`를 읽고 실제 SHA와 맞춰 현황을 복원하라. 전체 일정·위험·공식 성과만 감독하며 각 대회 개발 총괄 역할은 침범하지 말 것. 이후 사용자 `ㄱ` 지시에 따라 가장 중요한 다음 일을 진행하고, 주요 작업이 끝나면 관련 문서·HANDOFF·START_HERE를 GitHub에 갱신 및 원격 SHA 검증하라. 검증 없는 완료 주장 금지.
+
+## 8. 13개 역할별 새 채팅방으로 넘어갈 때
+- [13개 인수인계 프롬프트](CHAT_TRANSITION_PROMPTS_13.md)에서 새 채팅이 담당할 **한 역할**만 선택하여 코드블록 전체를 첫 메시지로 전송한다.
+- 각 역할이 원격 브랜치 HEAD·소스·CI와 과거 보고 차이를 직접 검증하도록 한다.
+- 대회 총괄/기능 담당자의 역할별 문서는 담당 브랜치만 소유한다. 통합 총괄은 상황실 문서만 수정한다.

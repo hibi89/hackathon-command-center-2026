@@ -8,11 +8,13 @@
     "kind": "coordination_docs",
     "auto_update": false,
     "verified_as_of": "2026-10-24 KST",
-    "last_update_reason": "3 repositories, 15 branches independently audited; schedules published to every branch; cross-chat documentation synced",
+    "last_update_reason": "Published 13 cross-chat independent role prompts; navigation linked from command-center entry files",
     "first_read": "START_HERE.md",
     "update_protocol": "docs/CONTINUITY_PROTOCOL.md",
     "audit_report": "docs/audits/REPOSITORY_AUDIT_20261024.md",
-    "schedule_broadcast_verified_branches": 15
+    "schedule_broadcast_verified_branches": 15,
+    "transition_prompts": "docs/CHAT_TRANSITION_PROMPTS_13.md",
+    "transition_role_count": 13
   },
   "projects": [
     {
