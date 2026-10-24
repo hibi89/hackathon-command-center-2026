@@ -61,15 +61,15 @@
       "acceptance": "PDF <=1MB and <=500 English answer words, all ten official questions, ZIP<=10MB and permitted Markdown only, frontmatter/disclosures, licensed original content, exact artifacts reviewed, Devpost final receipt with participant approval.",
       "reason": "Official Round1 explicitly does not require running NAS, demo, video or official runtime proof; preview artifact is a draft with seven-day retention.",
       "created_kst": "2026-10-24",
-      "status": "PENDING_LEAD_ACCEPTANCE",
-      "verification": "DRAFT_PDF_ZIP_G9_VALIDATION_PASSED_BUT_LICENSE_PRIVACY_USER_RELEASE_NOT_APPROVED; NO_DEVPOST_RECEIPT",
+      "status": "IN_PROGRESS",
+      "verification": "G10_LEAD_EXPLICITLY_ACCEPTED; G9_DRAFT_RELEASE_PASS_BUT_ENTRANT_EDITORIAL_LICENSE_PRIVACY_NOT_CLEARED_AND_NO_DEVPOST_RECEIPT",
       "verified_after_sha": null,
       "review_trigger": "next_user_requested_supervisor_audit_or_relevant_lead_commit",
       "approval_required": true,
       "dispatched_to": "https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/FROM_HACKATHON_COMMAND.md",
       "dispatched_child_head": "ead21d523432c4b2ac17fabaed0da281394b0386",
       "dispatched_kst": "2026-10-24",
-      "last_reviewed_sha": "ead21d523432c4b2ac17fabaed0da281394b0386"
+      "last_reviewed_sha": "256a766d63eac38a1c6b181d29e3d74e20f9709a"
     },
     {
       "id": "SUP-KIC-002",
@@ -149,15 +149,15 @@
       "acceptance": "Round1 candidate review advances with honest unverified runtime disclosure; revisit G1 only with new official support/access and without unapproved SDK execution.",
       "reason": "Static probes and 190 offline tests bring less Round1 value than final compliance/entry receipt; actual NAS only available to finalists.",
       "created_kst": "2026-10-24",
-      "status": "PENDING_LEAD_ACCEPTANCE",
-      "verification": "G1_EXTERNAL_NOT_RUN; ROUND1_ARTIFACT_NOT_BLOCKED_BY_NAS; LEAD_ACKNOWLEDGMENT_NOT_SEEN",
+      "status": "IN_PROGRESS",
+      "verification": "G10_LEAD_ACCEPTED_AND_CHANGED_SKILL_POLICY_BUT_NEW_G10_CI_NOT_VERIFIED; G1_RUNTIME_STILL_BLOCKED",
       "verified_after_sha": null,
       "review_trigger": "next_user_requested_supervisor_audit_or_relevant_lead_commit",
       "approval_required": false,
       "dispatched_to": "https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/FROM_HACKATHON_COMMAND.md",
       "dispatched_child_head": "ead21d523432c4b2ac17fabaed0da281394b0386",
       "dispatched_kst": "2026-10-24",
-      "last_reviewed_sha": "ead21d523432c4b2ac17fabaed0da281394b0386"
+      "last_reviewed_sha": "256a766d63eac38a1c6b181d29e3d74e20f9709a"
     },
     {
       "id": "SUP-PAYPAL-003",
@@ -172,14 +172,14 @@
       "reason": "Official rules allow working repo/setup instructions instead of hosted demo. Avoid spending scarce contest time on unnecessary hosting while retaining actual functionality.",
       "created_kst": "2026-10-24",
       "status": "IN_PROGRESS",
-      "verification": "D14_LICENSE_DECISION_AND_ENGLISH_REPRO_IN_PROGRESS; ROOT_LICENSE_NOT_FOUND; PARTICIPANT_LICENSE_SELECTION_REQUIRED",
+      "verification": "D14_60_PERCENT_WITH_179_NODE_AND_CHROMIUM_CI_SUCCESS; ROOT_LICENSE_STILL_AWAITING_USER_SELECTION; REAL_SANDBOX_AI_UNTESTED",
       "verified_after_sha": null,
       "review_trigger": "next_user_requested_supervisor_audit_or_relevant_lead_commit",
       "approval_required": true,
       "dispatched_to": "https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/FROM_HACKATHON_COMMAND.md",
       "dispatched_child_head": "4098eb6663317a1d00c737d23253c5c26cb38c72",
       "dispatched_kst": "2026-10-24",
-      "last_reviewed_sha": "d6dd022ab7b095d3a3079d66bb2ea654761a7e66"
+      "last_reviewed_sha": "55c0c50a89e094f07e6bc2dec3cb608062aee733"
     },
     {
       "id": "SUP-UGREEN-003",
@@ -191,11 +191,12 @@
       "observed_sha": "ead21d523432c4b2ac17fabaed0da281394b0386",
       "owner": "UGREEN lead",
       "acceptance": "Lead official outbound report starts with latest verified G9 200/200 CI and Round1 draft NOT_APPROVED, with current SHA and blockers; old history clearly marked, next supervisor audit reconciles with canonical JSON.",
-      "status": "PENDING_LEAD_ACCEPTANCE",
-      "verification": "CENTRAL_CREATED_NOT_YET_SENT_TO_CHILD_LEAD",
-      "verified_after_sha": null,
+      "status": "VERIFIED_CLOSED",
+      "verification": "TO_HACKATHON_LEAD_TOP_NOW_EXPLICITLY_RECONCILES_G9_200_PASS_DRAFT_UNAPPROVED_AND_G10_PENDING; DOCUMENT_FRESHNESS_ONLY_CLOSED",
+      "verified_after_sha": "256a766d63eac38a1c6b181d29e3d74e20f9709a",
       "review_trigger": "next_user_requested_supervisor_audit_or_relevant_lead_commit",
-      "approval_required": false
+      "approval_required": false,
+      "last_reviewed_sha": "256a766d63eac38a1c6b181d29e3d74e20f9709a"
     }
   ],
   "valid_statuses": [
@@ -228,7 +229,7 @@
     "scope": "Independent 3 lead-head/JSON/code/CI follow-up; statuses only as seen at time of reading; concurrent lead commits may advance",
     "contests": {
       "kic": {
-        "sha": "052b7b4152c3108f2851823f57c4db202a8f5b3f",
+        "sha": "cf5552c840588f28f26b0649fb00ac2098efe71e",
         "days": 60,
         "done": 16,
         "partial": 0,
@@ -240,10 +241,12 @@
         "ci_job_verified": "completed_success",
         "next": "2026-11-16 verification missing/uncertainty 0%",
         "submission": false,
-        "external_gate": "DAKER authenticated team/submit permissions blocked"
+        "external_gate": "DAKER authenticated team/submit permissions blocked",
+        "newest_source_CI": "NOT_VERIFIED_AT_CF5552C",
+        "last_verified_code_ci_id": 40078759840
       },
       "paypal": {
-        "sha": "d6dd022ab7b095d3a3079d66bb2ea654761a7e66",
+        "sha": "55c0c50a89e094f07e6bc2dec3cb608062aee733",
         "days": 18,
         "done": 11,
         "partial": 2,
@@ -251,13 +254,16 @@
         "not_started": 4,
         "last_verified_code_ci_id": 40077804576,
         "last_verified_tests_lead_reported": 175,
-        "current_D14_pct": 20,
-        "current_D14_ci": "NOT_VERIFIED",
+        "current_D14_pct": 60,
+        "current_D14_ci": "VERIFIED_JOB_SUCCESS_AT_PRIOR_SOURCE_SHA",
         "next": "D14 security/LICENSE/reproduction; real Sandbox and AI blocked",
-        "submission": false
+        "submission": false,
+        "last_verified_D14_ci_id": 40079069519,
+        "last_verified_D14_ci_code_sha": "624c5ff49a70",
+        "offline_tests_lead_reported": 179
       },
       "ugreen": {
-        "sha": "ead21d523432c4b2ac17fabaed0da281394b0386",
+        "sha": "256a766d63eac38a1c6b181d29e3d74e20f9709a",
         "days": 24,
         "done": 2,
         "partial": 12,
@@ -267,9 +273,12 @@
         "offline_tests_lead_reported": 200,
         "round1_preview_ci_id": 40078079879,
         "next": "Round1 candidate editorial/license/privacy clearance; G1 official runtime blocked",
-        "submission": false
+        "submission": false,
+        "current_G10_ci": "PENDING_NOT_VERIFIED",
+        "last_verified_G9_offline_ci_id": 40078079863
       }
-    }
+    },
+    "reported_time_context_kst": "2026-10-24 KST, concurrent lead follow-up"
   },
   "official_references": [
     "https://ugreenhackathon.devpost.com/rules",
@@ -382,5 +391,5 @@
       }
     }
   },
-  "last_audit_verified_kst": "2026-10-24 (local clock unrecorded)"
+  "last_audit_verified_kst": "2026-10-24 KST, concurrent lead follow-up"
 }
