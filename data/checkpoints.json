@@ -8,7 +8,7 @@
     "kind": "coordination_docs",
     "auto_update": false,
     "verified_as_of": "2026-10-24 KST, cross-repo audit snapshot at 17:19 with later observed commits",
-    "last_update_reason": "User requested current worker quality sweep and a durable, minimal owner-only checklist for after returning home; verified UGREEN independent review branch already has P1 corrected source.",
+    "last_update_reason": "Independent new live GitHub lead SHA/CI/sources audit with UGREEN G25, PayPal 212/5 divergence, DAKER peer-vote risk",
     "first_read": "START_HERE.md",
     "update_protocol": "docs/CONTINUITY_PROTOCOL.md",
     "audit_report": "docs/audits/REPOSITORY_AUDIT_20261024.md",
@@ -46,8 +46,8 @@
     "contest_expansion_requires_user_explicit_decision": true,
     "existing_four_chat_structure_unchanged": true,
     "reinvestment_policy": "optional_personal_reward_after_official_result; any_charge_or_hardware_purchase_requires_fresh_approval",
-    "last_supervisor_sync_report": "docs/audits/SUPERVISOR_HOME_PREP_AUDIT_20261024.md",
-    "latest_supervisor_sync_kst": "2026-10-24 KST; owner home preparation after three lead/CI reviews",
+    "last_supervisor_sync_report": "docs/audits/SUPERVISOR_LIVE_SYNC_20261024_NIGHT.md",
+    "latest_supervisor_sync_kst": "2026-10-24 night KST GitHub read",
     "cross_contest_original_capacity": {
       "date_start": "2026-10-25",
       "date_end": "2026-11-11",
@@ -204,7 +204,55 @@
       "ugreen": "NAS_FILE_CHANGE_MISSING_VERSION_CONFLICT_DIFFERENTIAL_AUDIT",
       "next_use": "Read on future chief restart/strategy review; only issue new lead ACTIVE tasks after checking present gates and deadline."
     },
-    "owner_home_checklist": "docs/OWNER_HOME_ACTIONS_20261024.md"
+    "owner_home_checklist": "docs/OWNER_HOME_ACTIONS_20261024.md",
+    "verified_live_snapshot": {
+      "as_of_kst": "2026-10-24 late-night remote audit",
+      "source_report": "docs/audits/SUPERVISOR_LIVE_SYNC_20261024_NIGHT.md",
+      "central_base_head": "491dbc9ba09b1a4b0588facab03849dabb1050e1",
+      "official_submission_evidence_count": 0,
+      "true_production_verified_count": 0,
+      "current_remote_lead": {
+        "kic": {
+          "repo": "hibi89/hibi89-kic-proofinvest",
+          "sha": "9c34fb844a600c47e9268ab6126ca9e70d785882",
+          "ci": 40104177191,
+          "tests": 227,
+          "done": 29,
+          "partial": 0,
+          "blocked": 3,
+          "not_started": 28,
+          "days": 60
+        },
+        "paypal": {
+          "repo": "hibi89/hibi89-paypal-ai-hackathon",
+          "sha": "8748dbb262a4d5df0f449642ab680a15561881f2",
+          "ci": 40104444669,
+          "tests": 323,
+          "done": 12,
+          "partial": 2,
+          "blocked": 1,
+          "not_started": 3,
+          "days": 18
+        },
+        "ugreen": {
+          "repo": "hibi89/hibi89-ugreen-nas-hackathon",
+          "sha": "d40b522edb57cea8982e56662cafa14520efc27d",
+          "ci": 40104218442,
+          "prevCoreCi": 40104183474,
+          "tests": 224,
+          "done": 2,
+          "partial": 12,
+          "blocked": 3,
+          "not_started": 7,
+          "days": 24
+        }
+      },
+      "extra_gate": {
+        "kic": "DAKER final upload permission blocked; 2026-11-12 to 11-19 peer-vote eligibility needs authenticated verification",
+        "paypal": "real PayPal Sandbox/real Gemini NOT_TESTED; main vs lead diverged 212 ahead/5 behind",
+        "ugreen": "new candidate Skill SHA 770e08c6 official checker NOT_RUN; PDF transport correction only, rights+approval+Devpost not yet verified"
+      }
+    }
   },
   "projects": [
     {
@@ -215,7 +263,7 @@
       "repo": "hibi89/hibi89-kic-proofinvest",
       "repo_exists": true,
       "main_head_sha": "778f18c94048490aa6996973161bc720cf57f758",
-      "lead_head_sha": "6f8dba9c370802400b4f406638b0e55d1ca0502e",
+      "lead_head_sha": "9c34fb844a600c47e9268ab6126ca9e70d785882",
       "implemented_and_verified_features": 0,
       "planned_features": 3,
       "offline_tests_reported_passed": 26,
@@ -227,7 +275,7 @@
       "official_url": "https://daker.ai/public/hackathons/kic-ai-agent-competition",
       "lead_report_path": "docs/roles/lead/TO_HACKATHON_LEAD.md",
       "lead_report_branch": "lead/kic",
-      "lead_ci": "success_on_message_commit",
+      "lead_ci": "success; CI 40104177191; details in docs/audits/SUPERVISOR_LIVE_SYNC_20261024_NIGHT.md",
       "pull_requests_count": 0,
       "lead_report_checked_date_kst": "2026-10-24",
       "official_finalist_slots": 12,
@@ -242,7 +290,7 @@
       "schedule_published_branches": 5,
       "schedule_verified_date_kst": "2026-10-24",
       "verified_live_features": 0,
-      "ci_summary": "11/03 공식 양식 기반 PDF 1~4쪽 v0.2/4쪽 검토 PDF/10쪽 작업중 PDF 생성·레이아웃 QA, 계획 작업 100%; DAKER 35%→60% (공식 양식 직접 확인 +25점); DAKER 실 계정 팀장 제출권한 40점 BLOCKED(접근 후 기본 0.5h+예비1.5h=2h), DART 공식 접수번호 90% BLOCKED(접근 후 0.5h+예비1h=1.5h). PDF v0.2 바이너리 임시 생성·Library 영구저장 미완료. 최종 제출 미실시.",
+      "ci_summary": "Remote lead 227/227 offline, same-SHA CI success; rule-based offline controller, no real LLM/DART/DAKER submission.",
       "internal_plan_url": "https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/roles/lead/KIC_MASTER_SCHEDULE_20261024.md",
       "internal_plan_status": "lead_master_plan_user_approved_as_reported",
       "internal_early_submit": "2026-11-10",
@@ -337,7 +385,19 @@
       ],
       "supervisor_message_url": "https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/FROM_HACKATHON_COMMAND.md",
       "supervisor_message_acknowledged": true,
-      "supervisor_message_applied": "PARTIAL_KIC_002_CLOSED_DAKER_BLOCKED; LATEST_NEW_CODE_CI_PENDING"
+      "supervisor_message_applied": "PARTIAL_KIC_002_CLOSED_DAKER_BLOCKED; LATEST_NEW_CODE_CI_PENDING",
+      "latest_remote_audit": {
+        "as_of_kst": "2026-10-24",
+        "source": "docs/audits/SUPERVISOR_LIVE_SYNC_20261024_NIGHT.md",
+        "head": "9c34fb844a600c47e9268ab6126ca9e70d785882",
+        "done": 29,
+        "partial": 0,
+        "blocked": 3,
+        "not_started": 28,
+        "scheduled_days": 60,
+        "official_submission": false,
+        "live_external_verified": false
+      }
     },
     {
       "id": "paypal",
@@ -371,7 +431,7 @@
       "repo_creation_verified": true,
       "repo_visibility": "public",
       "main_head_sha": "bed3fa67086caaa63da79810c00b44638f0a7346",
-      "lead_head_sha": "b4e1ffc73e93a4cdfef14f3bbb2f2727c15c716c",
+      "lead_head_sha": "8748dbb262a4d5df0f449642ab680a15561881f2",
       "lead_branch": "lead/paypal",
       "feature_head_shas": {
         "feature/quote-payment": "876d7d1b5935b91e6baddea36abdb8e50602c4fb",
@@ -386,8 +446,8 @@
       "schedule_published_branches": 5,
       "schedule_verified_date_kst": "2026-10-24",
       "verified_live_features": 0,
-      "lead_ci": "success_on_message_commit",
-      "ci_summary": "D08 계약 CREATE/GET·납품/검수 REST-ish HTTP API와 서버측 인증·Origin/CSRF/원자 상태전이 검증 100%, Node 131/131 및 기존 로컬 Chromium quote E2E CI 성공; D03 실제 Sandbox·무료 AI 접근 0%(3h/안전8h+외부대기 미정), D04 실 AI 20% 미검증(잔여 2h/안전4h). 신규 계약 UI 실제 브라우저 E2E와 실 Sandbox/Production/Devpost 미검증.",
+      "lead_ci": "success; CI 40104444669; details in docs/audits/SUPERVISOR_LIVE_SYNC_20261024_NIGHT.md",
+      "ci_summary": "Remote lead 323/323 Node offline and local Chromium CI success; real Sandbox/Gemini NOT_TESTED. 212/5 main divergence.",
       "internal_plan_url": "https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/PAYPAL_EXECUTION_PLAN_20261024.md",
       "internal_plan_status": "lead_execution_plan_user_approved_as_reported",
       "internal_early_submit": "2026-11-11",
@@ -449,7 +509,19 @@
       ],
       "supervisor_message_url": "https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/FROM_HACKATHON_COMMAND.md",
       "supervisor_message_acknowledged": "INFERRED_SCOPE_WORK_NO_PER_FINDING_REPLY",
-      "supervisor_message_applied": "D14_60_PERCENT_CI_179_PRIOR_SHA_SUCCESS_LICENSE_DECISION_PENDING"
+      "supervisor_message_applied": "D14_60_PERCENT_CI_179_PRIOR_SHA_SUCCESS_LICENSE_DECISION_PENDING",
+      "latest_remote_audit": {
+        "as_of_kst": "2026-10-24",
+        "source": "docs/audits/SUPERVISOR_LIVE_SYNC_20261024_NIGHT.md",
+        "head": "8748dbb262a4d5df0f449642ab680a15561881f2",
+        "done": 12,
+        "partial": 2,
+        "blocked": 1,
+        "not_started": 3,
+        "scheduled_days": 18,
+        "official_submission": false,
+        "live_external_verified": false
+      }
     },
     {
       "id": "ugreen",
@@ -477,7 +549,7 @@
       "repo_creation_verified": true,
       "repo_visibility": "public",
       "main_head_sha": "a361824451c25dc101c8cc4b2a62ed8f017154e4",
-      "lead_head_sha": "cb29c2f4197ff9edd2f89c96d6da2d8c44384845",
+      "lead_head_sha": "d40b522edb57cea8982e56662cafa14520efc27d",
       "lead_branch": "lead/ugreen",
       "feature_head_shas": {
         "feature/missing-files": "4e74dc7b187e70ad72e906e042fdbf4c140940f8",
@@ -492,8 +564,8 @@
       "schedule_published_branches": 5,
       "schedule_verified_date_kst": "2026-10-24",
       "verified_live_features": 0,
-      "lead_ci": "success_on_message_commit",
-      "ci_summary": "G7 Round1 Skill 후보 디렉터리 3파일 오프라인 패키징 검사·출처/데이터흐름 고지·15개 신규 회귀 테스트 검증, 총 합성 131/131 CI PASS (G6 후보 선행 포함); 공식 Uliya SDK/validator 실행·실 NAS·PII 내용 검사·최종 제안 PDF/ZIP Devpost 미검증. G7 검사는 공식 승인·실서비스 성공의 대체 증거가 아님.",
+      "lead_ci": "success; CI 40104218442; details in docs/audits/SUPERVISOR_LIVE_SYNC_20261024_NIGHT.md",
+      "ci_summary": "Remote lead same-SHA master/closeout success, previous 224/224 offline; G22/G24 candidate confirmed, G25 PDF transport byte difference corrected; new Skill checker NOT_RUN.",
       "internal_plan_url": "https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/UGREEN_EXECUTION_PLAN_20261024.md",
       "internal_plan_status": "lead_product_schedule_approved_user_decision_reported",
       "internal_early_submit": "2026-11-10",
@@ -610,7 +682,19 @@
       ],
       "supervisor_message_url": "https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/FROM_HACKATHON_COMMAND.md",
       "supervisor_message_acknowledged": true,
-      "supervisor_message_applied": "G10_LEAD_ACKNOWLEDGED_SUPO_001_002; 003_REPORT_FRESHNESS_VERIFIED_CLOSED; NEW_CODE_CI_PENDING"
+      "supervisor_message_applied": "G10_LEAD_ACKNOWLEDGED_SUPO_001_002; 003_REPORT_FRESHNESS_VERIFIED_CLOSED; NEW_CODE_CI_PENDING",
+      "latest_remote_audit": {
+        "as_of_kst": "2026-10-24",
+        "source": "docs/audits/SUPERVISOR_LIVE_SYNC_20261024_NIGHT.md",
+        "head": "d40b522edb57cea8982e56662cafa14520efc27d",
+        "done": 2,
+        "partial": 12,
+        "blocked": 3,
+        "not_started": 7,
+        "scheduled_days": 24,
+        "official_submission": false,
+        "live_external_verified": false
+      }
     }
   ]
 }

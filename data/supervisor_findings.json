@@ -3,7 +3,7 @@
   "as_of_date_kst": "2026-10-24",
   "registry_purpose": "Track actual evidenced cross-contest audit corrective actions after requests, not an assertion that all projects passed.",
   "source_charter": "docs/SUPERVISOR_MANDATE.md",
-  "last_audit_performed_under_this_charter": "SUPERVISOR-20261024-HOME-PREP",
+  "last_audit_performed_under_this_charter": "SUPERVISOR-20261024-NIGHT-LIVE-SYNC",
   "findings": [
     {
       "id": "SUP-KIC-001",
@@ -25,7 +25,8 @@
       "dispatched_to": "https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/FROM_HACKATHON_COMMAND.md",
       "dispatched_child_head": "c965a59d2ae7e86aae1a1c10cbd6b0caedb480d5",
       "dispatched_kst": "2026-10-24",
-      "last_reviewed_sha": "850b4889769503ff669be31b331318d2c4e7b85f"
+      "last_reviewed_sha": "9c34fb844a600c47e9268ab6126ca9e70d785882",
+      "last_review_report": "docs/audits/SUPERVISOR_LIVE_SYNC_20261024_NIGHT.md"
     },
     {
       "id": "SUP-PAYPAL-001",
@@ -47,7 +48,8 @@
       "dispatched_to": "https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/FROM_HACKATHON_COMMAND.md",
       "dispatched_child_head": "4098eb6663317a1d00c737d23253c5c26cb38c72",
       "dispatched_kst": "2026-10-24",
-      "last_reviewed_sha": "dac161b150bb3486f8b4c0871172e750b6dcd278"
+      "last_reviewed_sha": "8748dbb262a4d5df0f449642ab680a15561881f2",
+      "last_review_report": "docs/audits/SUPERVISOR_LIVE_SYNC_20261024_NIGHT.md"
     },
     {
       "id": "SUP-UGREEN-001",
@@ -69,7 +71,8 @@
       "dispatched_to": "https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/FROM_HACKATHON_COMMAND.md",
       "dispatched_child_head": "ead21d523432c4b2ac17fabaed0da281394b0386",
       "dispatched_kst": "2026-10-24",
-      "last_reviewed_sha": "6a660075edd1de5f01c10a31e304902fbecafe2c"
+      "last_reviewed_sha": "d40b522edb57cea8982e56662cafa14520efc27d",
+      "last_review_report": "docs/audits/SUPERVISOR_LIVE_SYNC_20261024_NIGHT.md"
     },
     {
       "id": "SUP-KIC-002",
@@ -211,13 +214,14 @@
       "reason": "Official Rule Project Requirements explicitly says create Skill USING official UGOS Skill Creation Tool; latest official-creator Codex runbook in repo is unexecuted, proof NOT_EVIDENCED.",
       "created_kst": "2026-10-24",
       "status": "IN_PROGRESS",
-      "verification": "G20_REVIEW_ZIP_BYTES_AND_NEW_OFFICIAL_CREATOR_SKILL_SHA_e1b07166_INDEPENDENTLY_VERIFIED; P1_DELEGATION_FIX_REVIEW_7af2cb7_WITH_OFFICIAL_CHECK_STATIC_PASS_JSON_0_ERRORS_WARNINGS_REPORTED; ONLY_LEAD_RELEASE_INTEGRATION_HUMAN_SIGNOFF_AND_OFFICIAL_SUBMISSION_PENDING",
+      "verification": "G22/G24 latest creator-derived Skill ZIP 4893B and exact new Skill SHA 770e08c6...; Codex static-pass previously on different SHA 164e84fe... NOT_TRANSFERABLE; new SHA official checker NOT_RUN; rights/Devpost approval pending",
       "verified_after_sha": null,
       "review_trigger": "UGREEN_LEAD_REVIEWS_review/ugreen-official-creator_7af2cb7_WITH_SOURCE_SHA_LICENSE_RELEASE_AND_EXACT_PDF_ZIP; HUMAN_APPROVES_FINAL_ARTIFACT",
       "approval_required": true,
-      "last_reviewed_sha": "6a660075edd1de5f01c10a31e304902fbecafe2c",
+      "last_reviewed_sha": "d40b522edb57cea8982e56662cafa14520efc27d",
       "reported_progress": "SOURCE_RECEIVED_AND_INDEPENDENTLY_REVIEWED; P1_FIXED_IN_REVIEW_BRANCH; LEAD_ACCEPTANCE_PENDING",
-      "evidence_update_url": "https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/review/ugreen-official-creator/docs/submission/G20_P1_CHANGE_REPORT.md"
+      "evidence_update_url": "https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/review/ugreen-official-creator/docs/submission/G20_P1_CHANGE_REPORT.md",
+      "last_review_report": "docs/audits/SUPERVISOR_LIVE_SYNC_20261024_NIGHT.md"
     },
     {
       "id": "SUP-PAYPAL-004",
@@ -232,11 +236,32 @@
       "reason": "GitHub compare main...lead/paypal showed diverged ahead=185, behind=5; bare GitHub repo link opens default main by default and risks leading judges to obsolete source.",
       "created_kst": "2026-10-24",
       "status": "OPEN",
-      "verification": "2026-10-24_GITHUB_COMPARE_MAIN_LEAD_DIVERGED_185_AHEAD_5_BEHIND; NO_FINAL_JUDGE_LINK_CHECK_OR_APPROVED_PROMOTION",
+      "verification": "GitHub compare main...lead/paypal on 2026-10-24: status diverged, lead 212 ahead, 5 behind; correct judged URL/LICENSE/src visibility not verified",
       "verified_after_sha": null,
       "review_trigger": "before_paypal_final_devpost_submission",
       "approval_required": true,
-      "last_reviewed_sha": "dac161b150bb3486f8b4c0871172e750b6dcd278"
+      "last_reviewed_sha": "8748dbb262a4d5df0f449642ab680a15561881f2",
+      "last_review_report": "docs/audits/SUPERVISOR_LIVE_SYNC_20261024_NIGHT.md"
+    },
+    {
+      "id": "SUP-KIC-004",
+      "contest": "KIC",
+      "priority": "P1",
+      "disposition": "VERIFY",
+      "description": "Treat peer-vote eligibility after KIC PDF submission as a separate dated deliverable; DAKER community No Vote No Gain reported by lead, exact minimum/eligibility in authenticated view remains unverified.",
+      "evidence_url": "https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/roles/lead/KIC_PRELIMINARY_VOTE_RUBRIC_GATE_20261024.md",
+      "observed_sha": "9c34fb844a600c47e9268ab6126ca9e70d785882",
+      "owner": "KIC lead / participant",
+      "acceptance": "After authorized PDF submission, inspect actual DAKER 2026-11-12 12:00 to 2026-11-19 10:00 peer evaluation minimum vote requirement, participation and final confirmation without automated voting or fabricated counts; record official evidence.",
+      "created_kst": "2026-10-24",
+      "status": "OPEN",
+      "verification": "LEAD_REPORT_ONLY; MINIMUM_COUNT_AND_ENTRANT_SESSION_NOT_VERIFIED",
+      "verified_after_sha": null,
+      "review_trigger": "after DAKER final submission or 2026-11-12",
+      "approval_required": true,
+      "dispatched_to": null,
+      "last_reviewed_sha": "9c34fb844a600c47e9268ab6126ca9e70d785882",
+      "last_review_report": "docs/audits/SUPERVISOR_LIVE_SYNC_20261024_NIGHT.md"
     }
   ],
   "valid_statuses": [
@@ -263,52 +288,53 @@
   ],
   "note": "Empty findings means no registered corrective action yet, not that all three repositories have zero issues. The next user-requested audit must independently check the latest state.",
   "current_snapshot": {
-    "date_kst": "2026-10-24",
-    "audit_id": "SUPERVISOR-20261024-HOME-PREP",
-    "source_report": "docs/audits/SUPERVISOR_HOME_PREP_AUDIT_20261024.md",
-    "scope": "All 3 remote lead HEAD/canonical days/current SHA Actions logs + UGREEN extra review branch contents; no user browser/real external APIs",
-    "contests": {
+    "audit_id": "SUPERVISOR-20261024-NIGHT-LIVE-SYNC",
+    "source_report": "docs/audits/SUPERVISOR_LIVE_SYNC_20261024_NIGHT.md",
+    "as_of_kst": "2026-10-24 late-night remote audit",
+    "central_base_head": "491dbc9ba09b1a4b0588facab03849dabb1050e1",
+    "official_submission_evidence_count": 0,
+    "true_production_verified_count": 0,
+    "current_remote_lead": {
       "kic": {
-        "sha": "850b4889769503ff669be31b331318d2c4e7b85f",
-        "days": 60,
+        "repo": "hibi89/hibi89-kic-proofinvest",
+        "sha": "9c34fb844a600c47e9268ab6126ca9e70d785882",
+        "ci": 40104177191,
+        "tests": 227,
         "done": 29,
         "partial": 0,
         "blocked": 3,
         "not_started": 28,
-        "latest_code_ci": 40094275466,
-        "lead_reported_offline_tests": 165,
-        "submit_permission": "BLOCKED_FINAL_DAKER_UPLOAD_RIGHTS",
-        "official_submitted": false
+        "days": 60
       },
       "paypal": {
-        "sha": "dac161b150bb3486f8b4c0871172e750b6dcd278",
-        "days": 18,
+        "repo": "hibi89/hibi89-paypal-ai-hackathon",
+        "sha": "8748dbb262a4d5df0f449642ab680a15561881f2",
+        "ci": 40104444669,
+        "tests": 323,
         "done": 12,
         "partial": 2,
         "blocked": 1,
         "not_started": 3,
-        "latest_code_ci": 40094382302,
-        "lead_reported_offline_tests": 278,
-        "real_sandbox_ai": "NOT_TESTED",
-        "official_submitted": false,
-        "judge_source_ref": "MAIN_LEAD_DIVERGED_NEEDS_EXACT_FINAL_LINK"
+        "days": 18
       },
       "ugreen": {
-        "sha": "6a660075edd1de5f01c10a31e304902fbecafe2c",
-        "review_branch_sha": "7af2cb750b37826fb02a00e2d45cb73f3a85c239",
-        "days": 24,
+        "repo": "hibi89/hibi89-ugreen-nas-hackathon",
+        "sha": "d40b522edb57cea8982e56662cafa14520efc27d",
+        "ci": 40104218442,
+        "prevCoreCi": 40104183474,
+        "tests": 224,
         "done": 2,
         "partial": 12,
         "blocked": 3,
         "not_started": 7,
-        "latest_code_ci": 40093085741,
-        "lead_reported_offline_tests": 219,
-        "official_creator_generation": "G20_ZIP_REAL_BYTES_INDEPENDENT_VERIFIED; P1_REVIEW_BRANCH_JSON_STATIC_PASS_REPORTED",
-        "official_submitted": false
+        "days": 24
       }
     },
-    "time_measurement": "ALL_UNMEASURED",
-    "note": "G20 source SHA independently checked, official checker execution not independently run. P1 on review branch not official final release."
+    "extra_gate": {
+      "kic": "DAKER final upload permission blocked; 2026-11-12 to 11-19 peer-vote eligibility needs authenticated verification",
+      "paypal": "real PayPal Sandbox/real Gemini NOT_TESTED; main vs lead diverged 212 ahead/5 behind",
+      "ugreen": "new candidate Skill SHA 770e08c6 official checker NOT_RUN; PDF transport correction only, rights+approval+Devpost not yet verified"
+    }
   },
   "official_references": [
     "https://ugreenhackathon.devpost.com/rules",
@@ -396,6 +422,6 @@
       }
     }
   },
-  "last_audit_verified_kst": "2026-10-24 KST; user-requested post-dispatch quality audit",
+  "last_audit_verified_kst": "2026-10-24 late night KST",
   "owner_home_checklist": "docs/OWNER_HOME_ACTIONS_20261024.md"
 }
