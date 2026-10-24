@@ -21,3 +21,9 @@
 ## 근거 우선순위
 공식 제출 증거·실행 결과 → 원격 SHA 및 CI → 대회별 최신 HANDOFF/STATUS → 과거 채팅 설명.
 서로 다르면 확인한 사실과 미확인 사항을 구분한다. 새 자료를 확인하지 않은 날짜에 자동 최신이라고 주장하지 않는다.
+
+## KIC 전용 확정 라우팅 (2026-10-24 KST)
+- 수신 브랜치: `hibi89/hibi89-kic-proofinvest` → `lead/kic`.
+- 전체 총괄이 가장 먼저 읽을 KIC 단일 보고 진입점: [`docs/roles/lead/TO_HACKATHON_LEAD.md`](https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/roles/lead/TO_HACKATHON_LEAD.md).
+- KIC 기능 담당자별 메시지는 `feature/{research,verification,risk}`의 `docs/roles/<role>/TO_KIC_LEAD.md`로 모이며, KIC 총괄만 각 원격 HEAD를 검토해 `lead/kic/docs/roles/lead/MESSAGE_REVIEW.md`에 처리 기록을 남긴다.
+- 전체 총괄은 KIC 메시지함을 직접 수정하지 않고 총괄 공식 보고의 상태·차단·일정 위험을 반영한다. 각 대회 보고서는 최신 작성 시각과 원격 SHA를 비교하며 자동 동기화되는 것으로 간주하지 않는다.
