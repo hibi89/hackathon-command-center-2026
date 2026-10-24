@@ -67,3 +67,16 @@
 8. 원본/보안: KIC 기존 저장소 무수정, 두 신규 저장소 최초 빈 상태에서 문서만 작성. 마감 산출물·결제 실계정 데이터/인증값/미공개 원본 업로드 없음. 공개 범위는 사용자 직접 설정 후 변경하지 않음.
 9. 다음 작업: PayPal 총괄 새 채팅에 `lead/paypal` 안내 → 공식 규정/Sandbox 접근 검증과 2개 기술 설계 비교, 사용자 최종 승인 후 구현. 이어서 UGREEN 총괄 새 채팅에 `lead/ugreen` 안내 → 공식 Skill SDK/제출 형식 확인/설계 비교. 기능 담당 AI 채팅은 총괄의 지시로 순차 배정.
 10. 갱신: 2026-10-24 KST, KIC는 직전 확인 상태 유지. 이번 통합 상황실 업데이트 기준 SHA는 완료 후 원격 main HEAD로 확인. `START_HERE`·`STATUS`·`HANDOFF`·`projects/*.md`·JSON을 일치 유지, 자동 실시간 갱신 없음.
+
+## 2026-10-24 KST — 3개 대회·15개 브랜치 구조/일정 공시 검수
+- [종합 검수 보고서](docs/audits/REPOSITORY_AUDIT_20261024.md) — 브랜치 15/15, 일정표 존재 15/15, README 상대 링크 15/15, 각 대회 총괄 보고 경로 정상.
+- **KIC**: [일정 공시](https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/COMPETITION_SCHEDULE.md) · [총괄 보고](https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/roles/lead/TO_HACKATHON_LEAD.md) · `main 1300b9b31a5b` / `lead/kic 25fe5f60642a`
+- **PAYPAL**: [일정 공시](https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/COMPETITION_SCHEDULE.md) · [총괄 보고](https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/roles/lead/TO_HACKATHON_LEAD.md) · `main b58533ac7e63` / `lead/paypal 62efc0293af5`
+- **UGREEN**: [일정 공시](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/COMPETITION_SCHEDULE.md) · [총괄 보고](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/roles/lead/TO_HACKATHON_LEAD.md) · `main d8cd806cb2b3` / `lead/ugreen 1fdcabc12cb5`
+- KIC 5개 HEAD Actions 완료/성공(합성/오프라인에 한정), PayPal·UGREEN 제품 CI 설정/실행 이력 없음. 세 대회 유효 작품 제출/본선 진출은 아직 미완료.
+- 일정: **KIC 11/12 10:00 → PayPal 11/13 05:00(19시간) → UGREEN 11/16 16:45 KST**. 내부 조기 제출 목표 KIC 11/10, PayPal 11/11, UGREEN 11/14는 **공식 마감이 아님**.
+- 신규 AI 채팅은 자기 담당 브랜치 HANDOFF부터 읽고 해당 `docs/COMPETITION_SCHEDULE.md` 확인. 통합 총괄은 계속 일정·위험만 감독하며 원본 소스 수정 금지.
+
+### 차기 총괄 필수 작업
+- PayPal 총괄 채팅부터 배정하고 Sandbox 접근/핵심 기능 구현·실검증. UGREEN Skill Developer Package 검토 및 주제 설계 병행. KIC 팀 전환 및 11/10 PDF 조기 제출 목표를 기존 KIC 총괄에게 확인.
+- 이번 통합 업데이트는 보고서·일정·SHA 동기화로 코드 수정/Production 배포는 **미적용**. 원격 SHA는 갱신 후 직접 재조회.

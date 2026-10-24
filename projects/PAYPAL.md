@@ -57,3 +57,8 @@
 - `feature/subscriptions` HEAD `8ad5897be995e654d95bffef4f2d03e0691cef33`
 - 총괄 고정 상위 보고: [`lead/paypal/docs/roles/lead/TO_HACKATHON_LEAD.md`](https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/roles/lead/TO_HACKATHON_LEAD.md).
 - **검증**: GitHub 5/5 브랜치와 각각 필수 운영·인수인계·메시지 문서 전수 확인. **코드/CI/실 API/배포/최종 제출은 없음.** 제품 주제·기능은 사용자 최종 승인 전 잠정. 대회별 AI 총괄 채팅방은 아직 생성됐다는 증거 없음.
+
+## 2026-10-24 KST — 구조/일정 재검증 반영
+- [역할별 공식 일정 공시](https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/COMPETITION_SCHEDULE.md) 존재; 5/5 브랜치가 동일한 전체 일정표를 보유하며 README에 링크가 있음.
+- 관측 HEAD: `main b58533ac7e632706a95d807de5ced6497b5e46b0`, `lead/paypal 62efc0293af5aef6ddd43480f3349f7dba728646`. 세 feature별 최신 SHA는 [통합 검수 보고서](../docs/audits/REPOSITORY_AUDIT_20261024.md) 참고.
+- 주제·참가/기능·실 API·실서비스·최종 제출의 기존 상태 **변경 없음**. 문서 링크·검증 개선만 완료.

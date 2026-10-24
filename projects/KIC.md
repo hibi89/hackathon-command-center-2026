@@ -49,3 +49,8 @@
 ## 2026-10-24 KST — 성과 기준
 - 공식 **예선 상위 12팀 본선**, 최종 **6팀 수상**. 아직 예선 PDF 제출·팀 전환 완료 증거가 없으며 본선 선발·수상 단계는 **미진입**.
 - 상호평가 기간 **11/12~19** 사용자 참여 일정 확보가 필요하다. 구체 투표 조건은 KIC 전담 총괄이 주최 최신 공고를 검증한다.
+
+## 2026-10-24 KST — 구조/일정 재검증 반영
+- [역할별 공식 일정 공시](https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/COMPETITION_SCHEDULE.md) 존재; 5/5 브랜치가 동일한 전체 일정표를 보유하며 README에 링크가 있음.
+- 관측 HEAD: `main 1300b9b31a5b86792d15ed7a2dce7c24849dbd87`, `lead/kic 25fe5f60642ad022343da68ae01535713436dcf9`. 세 feature별 최신 SHA는 [통합 검수 보고서](../docs/audits/REPOSITORY_AUDIT_20261024.md) 참고.
+- 주제·참가/기능·실 API·실서비스·최종 제출의 기존 상태 **변경 없음**. 문서 링크·검증 개선만 완료.

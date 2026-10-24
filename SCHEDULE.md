@@ -49,3 +49,9 @@
 - PayPal: **별도 Finalists 선정 인원/발표 없음**. Stage One pass/fail, Stage Two 본심사는 동일 제출작 심사 순서. 정식 작품 제출 **11/13 05:00**을 최우선 마감으로 유지.
 - UGREEN: **최대 30팀 본선**. 11/21 **미국 PT 기준** 이메일 안내, 팀별 NAS 테스트 일정 통지. 최종 5개 수상작.
 - PayPal 수상 발표 시각 공식 공고 상충: Dates는 **12/21 09:00 PST = 12/22 02:00 KST**, Rules는 **12/21 14:00 PST = 12/22 07:00 KST**. 날짜만 확정적으로 관리하고 시각은 근접 시 재검증.
+
+## 2026-10-24 KST — 모든 역할 브랜치에 공시 완료
+- [KIC lead 일정표](https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/COMPETITION_SCHEDULE.md), [PayPal lead 일정표](https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/COMPETITION_SCHEDULE.md), [UGREEN lead 일정표](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/COMPETITION_SCHEDULE.md).
+- 3개 저장소 × 5개 브랜치 = **15개 브랜치 모두 공시 파일과 README 링크 경로 확인**. 공식 행사/마감과 내부 목표를 각 담당자가 자체 문서에서 직접 확인 가능.
+- 내부 조기 제출 목표: **KIC 11/10**, **PayPal 11/11**, **UGREEN 11/14**. 계획 날짜는 제출 확인서가 아니며, 공식 마감은 변하지 않았다.
+- 전체 총괄의 충돌 대응: KIC/PAYPAL 마감 19시간 차이, PayPal 조기 제출 실패 시 KIC 예선 기획서 작업 방해 금지. 사용자 실제 플랫폼 제출 조작이 필요하면 적시에 요청.

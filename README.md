@@ -28,6 +28,12 @@
 2. **PayPal**: 참가 등록 화면 확인 후 주제 확정 및 PayPal Sandbox **실제 작동**이 선행되어야 함. 공개 오픈소스 코드와 실행 가능한 데모, 3분 미만 공개 YouTube 영상은 공식 제출 요건.
 3. **UGREEN**: 참가 등록 확인. 실제 NAS 없이 예선 참가 가능. **500단어 이내 영문 PDF(1MB 이하) + 공식 Uliya 표준의 pre-test Skill ZIP** 필수. Round 1 ZIP에는 별도 실행 파일/스크립트/매니페스트를 넣으면 안 됨.
 
+## 세 대회 공시 일정 및 최신 구조 검수
+- [2026-10-24 GitHub 종합 검수 결과](docs/audits/REPOSITORY_AUDIT_20261024.md)
+- **KIC**: [일정 공시](https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/COMPETITION_SCHEDULE.md) · [총괄 보고](https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/roles/lead/TO_HACKATHON_LEAD.md) · `main 1300b9b31a5b` / `lead/kic 25fe5f60642a`
+- **PAYPAL**: [일정 공시](https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/COMPETITION_SCHEDULE.md) · [총괄 보고](https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/roles/lead/TO_HACKATHON_LEAD.md) · `main b58533ac7e63` / `lead/paypal 62efc0293af5`
+- **UGREEN**: [일정 공시](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/COMPETITION_SCHEDULE.md) · [총괄 보고](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/roles/lead/TO_HACKATHON_LEAD.md) · `main d8cd806cb2b3` / `lead/ugreen 1fdcabc12cb5`
+
 ## 운영 문서
 - [START_HERE.md](START_HERE.md) — **새 통합 총괄 채팅방 복원 단일 진입점**
 - [docs/CONTINUITY_PROTOCOL.md](docs/CONTINUITY_PROTOCOL.md) — **중요 작업 종료 때 문서 최신화/원격 검증 절차**
