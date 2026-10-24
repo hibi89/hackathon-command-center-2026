@@ -7,8 +7,8 @@
     "default_branch": "main",
     "kind": "coordination_docs",
     "auto_update": false,
-    "verified_as_of": "2026-10-24 13:29:50 KST",
-    "last_update_reason": "Registered verified UGREEN conservative day-by-day effort plan and capacity in the central schedule and oversight reports",
+    "verified_as_of": "2026-10-24 13:53:35 KST",
+    "last_update_reason": "Track KIC evidence-weighted daily percent and conservative remaining estimated hours from one authoritative lead dashboard",
     "first_read": "START_HERE.md",
     "update_protocol": "docs/CONTINUITY_PROTOCOL.md",
     "audit_report": "docs/audits/REPOSITORY_AUDIT_20261024.md",
@@ -35,7 +35,8 @@
     "bootstrap_verified_date_kst": "2026-10-24",
     "bootstrap_role_count": 4,
     "kic_daily_capacity_oversight": "docs/KIC_DAILY_CAPACITY_OVERSIGHT_20261024.md",
-    "ugreen_time_budget_visible": true
+    "ugreen_time_budget_visible": true,
+    "kic_daily_progress_primary_source": "docs/roles/lead/DAILY_PROGRESS.md in hibi89/hibi89-kic-proofinvest@lead/kic"
   },
   "projects": [
     {
@@ -121,7 +122,28 @@
           "capacity_ceiling_hours": 75
         }
       },
-      "daily_capacity_status": "PLANNED_ONLY__ACTUAL_DURATION_NOT_YET_MEASURED"
+      "daily_capacity_status": "PLANNED_ONLY__ACTUAL_DURATION_NOT_YET_MEASURED",
+      "daily_progress_url": "https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/roles/lead/DAILY_PROGRESS.md",
+      "daily_progress_protocol_url": "https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/roles/lead/DAILY_PROGRESS_PROTOCOL.md",
+      "daily_progress_baseline": {
+        "date_kst": "2026-10-24",
+        "day_target_percent": 100,
+        "remaining_base_hours": 0,
+        "remaining_contingency_hours": 0,
+        "remaining_conservative_hours": 0,
+        "actual_elapsed": "UNMEASURED",
+        "scope": "daily schedule document only; extra Research milestone tracked separately"
+      },
+      "daily_progress_next_plan": {
+        "date_kst": "2026-10-25",
+        "day_target_percent": 0,
+        "remaining_base_hours": 1,
+        "remaining_contingency_hours": 3,
+        "remaining_conservative_hours": 4,
+        "actual_elapsed": "UNMEASURED",
+        "scope": "DAKER role, official PDF form and previous draft validation"
+      },
+      "daily_progress_observed_kic_sha": "c4fc1e54a95b71839959fcc7e410d6ccb5621e75"
     },
     {
       "id": "paypal",

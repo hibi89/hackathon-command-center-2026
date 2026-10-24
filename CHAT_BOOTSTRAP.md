@@ -36,3 +36,9 @@
 
 ## 2026-10-24 13:29:50 KST — KIC 일별 시간표 공유 진입점
 - 새 통합 총괄 채팅은 [KIC 60일 원본 시간표](https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/roles/lead/DAILY_CAPACITY_PLAN_20261024.md) 및 [통합 감독 규칙](docs/KIC_DAILY_CAPACITY_OVERSIGHT_20261024.md)을 KIC 현재 과제와 함께 열람한다. KIC 자체 총괄 채팅도 동일 원본을 사용한다. 상한·예비·실측·이월을 분리하며 자동 최신화라는 주장은 하지 않는다.
+
+## 2026-10-24 13:53:35 KST — KIC 일일 진척률 100% 기준과 잔여시간 상위 총괄 연결
+- 사용자 지시: **매 실제 작업 종료 또는 BLOCKED 시점**에 KIC 1일 핵심 목표를 100점 가중 검증 게이트로 평가해 완료율 및 잔여 예상시간을 공개. [현행 KIC 단일 실적판](https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/roles/lead/DAILY_PROGRESS.md) / [점수 계산·시간 산정 프로토콜](https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/roles/lead/DAILY_PROGRESS_PROTOCOL.md).
+- 현재 근거 스냅샷(2026-10-24): **당일 원 계획(60일 시간표 공시) 100/100=100%, 잔여 0h**, 별도 Research 인수/CI 26 PASS는 **선행 작업**으로 분리. 10/25 DAKER 권한·공식 양식·초안 계획 **0/100=0%**, 남은 기본 **1h + 오류/검수 예비 3h = 초기 최대 4h**. **실제 작업시간 미계측**. 이 수치는 **계획상 잔여 예상**이지 완료 보증/프로젝트 전체 완성률이 아님.
+- 사용자에게는 각 작업 종료 시 `오늘 XX%/100% · 남은 순작업 Xh + 오류예비 Yh = 상한 Zh · 미완료/차단 · 실제 투입(또는 미계측) · SHA/CI`를 보고하도록 KIC `LEAD_FULLSTACK_PROTOCOL.md`에 등록. 상위 통합 총괄도 매 번 `lead/kic`의 **실제 최신 HEAD**를 재조회하여 종료 수치의 최신성을 검증한다.
+- KIC 커밋 `c4fc1e54a95b71839959fcc7e410d6ccb5621e75`에서 원본 실적판·지침 확인 가능(상황실 스냅샷, 매번 ref 갱신 확인). 별도 worker 채팅 사용하지 않으며 KIC 계획/코드/공식 제출은 본 상황실이 임의 변경하지 않는다.

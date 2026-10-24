@@ -1,3 +1,5 @@
+> **KIC 매 작업 종료 실적판 (2026-10-24 13:53:35 KST)**: [현재 날짜의 작업 완료율 %·남은 예상시간](https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/roles/lead/DAILY_PROGRESS.md) / [100점 근거 기반 계산 규칙](https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/roles/lead/DAILY_PROGRESS_PROTOCOL.md). KIC 총괄은 **실작업 종료·부분중단 때마다** 수치·잔여 순작업·오류 예비·이월·증거 SHA/CI를 업데이트한다. 상위 총괄은 매 점검 때 최신 `lead/kic`에서 다시 확인. 원본과 상황실의 과거 숫자가 다르면 **원본이 우선**. (10/24 100%=당일 계획만; 전체 프로젝트 아님.)
+
 > **PayPal 일별 시간표 — 상위 총괄 필독 (2026-10-24 KST):** [PayPal 원본 18일 계획](https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/DAILY_CAPACITY_PLAN_20261024.md) · [상황실 감독 메모](docs/PAYPAL_DAILY_CAPACITY_OVERSIGHT_20261024.md). **예상 82시간 / 지연 포함 권장 확보 164시간**, PayPal 단독 매일 평균 약 9.1시간 필요. **KIC·UGREEN 병행 시 11/11 조기 제출 HIGH RISK**. 시간표/코드/CI의 진실은 PayPal `lead/paypal` 최신 HEAD로 재확인. 실 Sandbox·AI API/Production/Devpost 접수 미검증.
 
 > **신규 채팅 한 줄 재개:** `[해커톤총괄 깃헙 레포지토리 확인하고 작업하셈]` → [CHAT_BOOTSTRAP.md](CHAT_BOOTSTRAP.md) → 최신 원격 HEAD/역할/다음 작업. **실제 채팅 4개** 체계 유지. 현재 변경 작업이 끝날 때 진행·인수인계 최신화.
@@ -155,3 +157,9 @@
 - 확인된 PayPal 원본 `lead/paypal@fe74448a419d75d622db4b8c1a9a5a2e6d75a36e`, 10/25~11/11 **18일 / 순작업 추정 82h / 안전 확보 164h / 일평균 약 9.1h**. 시간은 측정 실적이 아닌 예측이며 2배 안전 확보조차 완료 보증 아님. 3대회 병행에서 **HIGH RISK**. PayPal 하루 4시간이면 18일 72시간으로 순작업 추정치보다 10시간 부족.
 - PayPal 총괄은 매 개발 작업 후 원본 계획의 잔여·실측·이월/장애를 보고하고, 상위 총괄은 매 점검 시 `lead/paypal` [TO_HACKATHON_LEAD](https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/roles/lead/TO_HACKATHON_LEAD.md) + 최신 SHA/CI를 직접 확인해 일정 충돌·사용자 승인 필요한 범위 조정에 대응한다.
 - 제품 실증: PayPal 합성 결제 계약 11 PASS 및 해당 커밋 CI 성공만 증거; 실제 PayPal Sandbox/AI API·호스팅/브라우저/Devpost 접수는 미검증·미완료. 신규 현금 지출 0원, Sandbox 전용, 공식 11/13 05:00 KST 마감 불변. **무인 자동 최신화 아님**.
+
+## 2026-10-24 13:53:35 KST — KIC 일일 진척률 100% 기준과 잔여시간 상위 총괄 연결
+- 사용자 지시: **매 실제 작업 종료 또는 BLOCKED 시점**에 KIC 1일 핵심 목표를 100점 가중 검증 게이트로 평가해 완료율 및 잔여 예상시간을 공개. [현행 KIC 단일 실적판](https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/roles/lead/DAILY_PROGRESS.md) / [점수 계산·시간 산정 프로토콜](https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/roles/lead/DAILY_PROGRESS_PROTOCOL.md).
+- 현재 근거 스냅샷(2026-10-24): **당일 원 계획(60일 시간표 공시) 100/100=100%, 잔여 0h**, 별도 Research 인수/CI 26 PASS는 **선행 작업**으로 분리. 10/25 DAKER 권한·공식 양식·초안 계획 **0/100=0%**, 남은 기본 **1h + 오류/검수 예비 3h = 초기 최대 4h**. **실제 작업시간 미계측**. 이 수치는 **계획상 잔여 예상**이지 완료 보증/프로젝트 전체 완성률이 아님.
+- 사용자에게는 각 작업 종료 시 `오늘 XX%/100% · 남은 순작업 Xh + 오류예비 Yh = 상한 Zh · 미완료/차단 · 실제 투입(또는 미계측) · SHA/CI`를 보고하도록 KIC `LEAD_FULLSTACK_PROTOCOL.md`에 등록. 상위 통합 총괄도 매 번 `lead/kic`의 **실제 최신 HEAD**를 재조회하여 종료 수치의 최신성을 검증한다.
+- KIC 커밋 `c4fc1e54a95b71839959fcc7e410d6ccb5621e75`에서 원본 실적판·지침 확인 가능(상황실 스냅샷, 매번 ref 갱신 확인). 별도 worker 채팅 사용하지 않으며 KIC 계획/코드/공식 제출은 본 상황실이 임의 변경하지 않는다.
