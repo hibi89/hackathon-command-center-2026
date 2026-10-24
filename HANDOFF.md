@@ -29,3 +29,12 @@
 3. KIC·PayPal·UGREEN 공식 마감 각각 11/12 10:00, 11/13 05:00, 11/16 16:45 KST 유지. PayPal·UGREEN 전담 개발 저장소와 구현·최종 제출은 미착수 상태.
 4. 이번 작업은 통합 총괄 저장소의 현황 문서·JSON 기록만 변경. KIC 코드는 무수정, 참가자 계정 개인 정보/화면 원본은 Public GitHub에 업로드하지 않음.
 5. 다음 작업: 각 대회 총괄 설계 책임 분리 → Devpost/UGREEN 공식 기술 규격 검증 → 제출물 준비 → 접수 확인 및 통합 상태 갱신. 자동 동기화는 구현하지 않음.
+
+## 2026-10-24 KST — PayPal 공식 대회 규정 추가 조사 인수인계
+1. 직접 검토: https://paypalaihackathon.devpost.com/ 의 Overview·Rules·Resources·FAQs·Schedule·Updates 및 PayPal 공식 Sandbox 가이드.
+2. 새 보고서: `docs/research/PAYPAL_OFFICIAL_REVIEW_20261024.md` (공식 출처, 필수 제출, 심사, 주제 A/B, 미검증 API, 승인 항목).
+3. 주요 공식 마감: 2026-11-13 05:00 KST. 공개 오픈소스 소스+LICENSE, AI/PayPal 의미 있는 결합, 실행 가능한 데모, 3분 미만 YouTube 영상, 영어/번역 필요.
+4. 심사: 적합성 pass/fail과 5개 동등 기준. 규정의 Stage One/Two는 **내부 심사 절차**, KIC/UGREEN 같은 분리된 개발·제출 본선 체계는 아님.
+5. 현재 실제 실행/검증: Devpost 참가만 화면 확인, 프로젝트 미생성, PayPal Developer/Sandbox 접근과 API 실호출 0, 코드·CI·배포·영상 없음.
+6. KIC 저장소·UGREEN 상태 및 사용자 계정/비밀키는 변경하지 않았다. 새 개발 저장소를 임의 생성하지 않았다.
+7. 추후 담당 총괄은 두 설계안을 비교한 뒤 사용자 승인으로 최종 주제·범위를 결정. PayPal 계정 국가별 사용성, Orders 흐름, 보안, 영문 영상부터 검증할 것. 이 보고는 2026-10-24의 스냅샷.
