@@ -25,3 +25,9 @@
 - [원본 심사 대응·수상 시간표](https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/POST_SUBMISSION_JUDGING_PLAN_20261024.md)는 11/13~12/22 전후 점검 11회, 기본 **8h/보수 확보 16h**, 사고 발생 시 추가 4~8h 재산정. **11/11 이전 개발 82h/164h와 전혀 별도**. 심사 기간은 한국시간 12/02 07:00~12/16 01:00, 수상 발표는 12/22 전후(미국 발표시각 규정/일정 페이지 간 불일치).
 - 마감 11/13 05:00 이후 출품자료 임의 수정 금지, 심사 종료까지 작동·무상 접근 경로 유지. 출품 자체의 구현/실증·최종 접수는 미확인. 상위 총괄은 [PayPal 리드 최신 보고](https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/roles/lead/TO_HACKATHON_LEAD.md)와 원격 GitHub HEAD를 직접 재조회해야 한다.
 - PayPal 원본 확인 기준 `lead/paypal@f9ecef4c96fd735747ba11d780275066679377c9`; 기간 경과·GitHub 변경 시 최신 상태를 우선. KIC·UGREEN 본선/예선 일정과 **혼동하지 않는다**.
+
+## 2026-10-24 KST — PayPal 1일차 개발 실증 수신
+- PayPal 개발 리드에서 10/25 배정 1일차를 조기 실행, [실제 API 코드·검증 계약](https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/technical/PPL_002_DAY1_API_CONTRACT.md) 반영. `src/quote_api.mjs`: 소유자 GET, 명시 인간 승인 POST, quote version/USD 금액/CSRF/Origin, 조회/F5 비쓰기, 결제 POST 강제 차단.
+- 원본 소스 커밋 `9fa2084e27995ec7d77e5907c2390246f13f4150`, [Node 22 GitHub Actions 40063789450](https://github.com/hibi89/hibi89-paypal-ai-hackathon/actions/runs/40063789450) 성공. 합성 신규 23개+기존 11개 = 34개 테스트. PayPal 문서/인계 HEAD `ceccd20eb659938d646d42d7ea2a3181abdbcbec`, [문서 반영 CI 40063888737](https://github.com/hibi89/hibi89-paypal-ai-hackathon/actions/runs/40063888737) 성공.
+- **상태는 DAY1_OFFLINE_ACCEPTED, 실결제 NOT_TESTED.** 메모리 기반 fixture라 DB 영속성/원자성·실 PayPal Sandbox·AI·실 브라우저/호스팅/Devpost 완료 증빙 없음. **현재 NEXT Day2**: DB UNIQUE/CAS·영속 시도 로그, concurrency/restart 회귀. Day2 예상 5시간/안전 9시간. Day1 계획 4h/안전 8h; 실제 경과시간은 미계측이므로 소요 4h 주장 금지.
+- 상위 총괄은 PayPal 최신 [LEAD_ACTIVE_WORK](https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/roles/lead/LEAD_ACTIVE_WORK.md), [일별 정본](https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/DAILY_CAPACITY_PLAN_20261024.md)을 새 HEAD로 재확인. KIC·UGREEN 작업현황은 이 보고로 변경하지 않음.
