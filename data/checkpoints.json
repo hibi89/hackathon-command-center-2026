@@ -7,7 +7,8 @@
     "default_branch": "main",
     "kind": "coordination_docs",
     "auto_update": false,
-    "verified_as_of": "2026-10-24 KST"
+    "verified_as_of": "2026-10-24 KST",
+    "last_update_reason": "KIC lead report received and independently verified"
   },
   "projects": [
     {
@@ -18,7 +19,7 @@
       "repo": "hibi89/hibi89-kic-proofinvest",
       "repo_exists": true,
       "main_head_sha": "9d0d454154a7393627a840113ab811a5b91f121a",
-      "lead_head_sha": "3ea8596edbd17cd3dcbbdadf17d9855010d835d9",
+      "lead_head_sha": "f7f5a25d072d7049eddfef1577d8b9c2134b8325",
       "implemented_and_verified_features": 0,
       "planned_features": 3,
       "offline_tests_reported_passed": 9,
@@ -27,7 +28,18 @@
       "production": "not_deployed",
       "submitted": false,
       "submission_deadline_kst": "2026-11-12T10:00:00+09:00",
-      "official_url": "https://daker.ai/public/hackathons/kic-ai-agent-competition"
+      "official_url": "https://daker.ai/public/hackathons/kic-ai-agent-competition",
+      "lead_report_path": "docs/roles/lead/TO_HACKATHON_LEAD.md",
+      "lead_report_branch": "lead/kic",
+      "lead_ci": {
+        "run_id": 40051624837,
+        "head_sha": "f7f5a25d072d7049eddfef1577d8b9c2134b8325",
+        "status": "completed",
+        "conclusion": "success",
+        "kind": "offline-tests"
+      },
+      "pull_requests_count": 0,
+      "lead_report_checked_date_kst": "2026-10-24"
     },
     {
       "id": "paypal",
