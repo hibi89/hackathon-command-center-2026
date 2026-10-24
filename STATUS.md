@@ -100,3 +100,10 @@
 - **PayPal:** [lead/paypal 자체 기능별 실행 일정](https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/COMPETITION_SCHEDULE.md) 5절 확인. `lead/paypal` 원격 `a7fb08d141f40455606816bbc15520a0f925134d`. 10/24~26 주제/Sandbox 검증, 10/27~11/01 quote-payment, 10/29~11/04 delivery, 10/30~11/05 subscriptions, 11/06~09 통합·테스트, **11/11 내부 조기 제출**. 잠정 3기능·개발 순서는 **사용자 미승인**. Sandbox/영상/Devpost 실제 수행 미확인.
 - **UGREEN:** [기존 3대회 공식 일정표](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/COMPETITION_SCHEDULE.md)는 존재하지만 `lead/ugreen` 원격 `1fdcabc12cb5f226ca27ddeb0dbd8c339457c8ea` 기준 **추가로 작성한 대회 전용 날짜별 세부 실행계획은 아직 확인되지 않음**. 담당 총괄은 규격/CLI 조사→3기능 및 Round 1 PDF·ZIP 일정을 제안하고 자신에게 맡겨진 진행을 보고해야 한다. **11/14 내부 조기 제출 목표** 유지.
 - 사용자가 세 대회 담당 총괄들에게 일정 작성 지시. 통합 총괄은 **승인/제출/개발이 완료되었다고 간주하지 않고** 자체 계획과 3대회 연속 마감 충돌을 교차 검토한다.
+
+## 2026-10-24 KST — 최종 사용자 운영 정책 확인: 7개 채팅방, 3개 대회 동시·대회 내 기능 순차
+- **실제 채팅 7개** = 통합 총괄 1 + 대회 총괄 3 + 대회별 순환 개발 담당 3. **기능 역할과 브랜치 9개는 그대로 유지**한다.
+- [현행 7개 채팅 시작 프롬프트](docs/CHAT_TRANSITION_PROMPTS_7.md), [GitHub 실사 보고](docs/audits/SINGLE_WORKER_DISPATCH_AUDIT_20261024.md)를 확인. 구형 [13개 프롬프트](docs/CHAT_TRANSITION_PROMPTS_13.md)는 9개 기능별 독립 채팅 운영 시의 **과거 자료**이며 현행 새 채팅 시작에 사용하지 않는다.
+- 실제 첫 READY 업무: [KIC KIC-R-001](https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/roles/lead/NEXT_TASK.md) (`feature/research`), [PayPal PPL-001](https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/dispatch/ACTIVE_TASK.md) (`feature/quote-payment`), [UGREEN UGR-001](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/dispatcher/CURRENT_TASK.md) (`feature/missing-files`). **READY지만 각 기능 브랜치 착수 보고 없음**. 총괄이 검수하기 전 다른 작업 발행/전환 금지.
+- 일정: KIC 내부 11/10, PayPal 내부 11/11. UGREEN 전담 최신 일정은 **11/10 조기 제출 목표로 앞당겨짐**, 이전 통합 11/14는 예비 확인점으로 관리; 공식 11/16 16:45 그대로.
+- 실제 분산 락·AI 채팅 자동 전환/실행/통지 기능은 없음. 문서 기반 프로토콜이며 사용자 호출과 원격 검수 필요.

@@ -55,3 +55,9 @@
 - 3개 저장소 × 5개 브랜치 = **15개 브랜치 모두 공시 파일과 README 링크 경로 확인**. 공식 행사/마감과 내부 목표를 각 담당자가 자체 문서에서 직접 확인 가능.
 - 내부 조기 제출 목표: **KIC 11/10**, **PayPal 11/11**, **UGREEN 11/14**. 계획 날짜는 제출 확인서가 아니며, 공식 마감은 변하지 않았다.
 - 전체 총괄의 충돌 대응: KIC/PAYPAL 마감 19시간 차이, PayPal 조기 제출 실패 시 KIC 예선 기획서 작업 방해 금지. 사용자 실제 플랫폼 제출 조작이 필요하면 적시에 요청.
+
+## 2026-10-24 — 각 대회 총괄 최신 순차 일정 교차 검수
+- KIC [총괄 마스터 일정](https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/roles/lead/KIC_MASTER_SCHEDULE_20261024.md): **11/10 조기 제출**. 10/27~28 Research → 10/29~11/01 Verification → 11/02~03 Risk → 11/04 lead 통합 (모두 내부 계획, 실제 개발 착수는 별개).
+- PayPal [총괄 실행계획](https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/PAYPAL_EXECUTION_PLAN_20261024.md): **11/11 조기 제출**. 10/26~30 quote-payment → 10/31~11/02 delivery → 11/03~06 subscriptions → 11/07~09 통합.
+- UGREEN [총괄 실행계획](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/UGREEN_EXECUTION_PLAN_20261024.md): **11/10 조기 제출 목표**, 기존 전체 상황실 11/14는 **예비 일정 점검일**. 10/24~26 SDK → 10/27 계약 → 10/28~29 missing-files → 10/30~31 version-conflicts → 11/01~02 privacy → 11/03~05 통합 → 11/07~09 PDF/ZIP 검증. 공식 마감 11/16 16:45 KST 불변.
+- 세 대회 동시 진행 / 대회 안에서 범용 작업자 1명이 기능을 차례로 처리. 날짜가 되었단 이유로 단일 READY 지시를 자동 전환하지 않음.

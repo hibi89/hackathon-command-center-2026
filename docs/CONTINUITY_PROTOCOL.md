@@ -58,3 +58,8 @@
 - [13개 인수인계 프롬프트](CHAT_TRANSITION_PROMPTS_13.md)에서 새 채팅이 담당할 **한 역할**만 선택하여 코드블록 전체를 첫 메시지로 전송한다.
 - 각 역할이 원격 브랜치 HEAD·소스·CI와 과거 보고 차이를 직접 검증하도록 한다.
 - 대회 총괄/기능 담당자의 역할별 문서는 담당 브랜치만 소유한다. 통합 총괄은 상황실 문서만 수정한다.
+
+## 9. 현행 7개 채팅방 동적 작업 라우터가 13개 역할별 채팅 지침에 우선
+- 과거 13개 채팅방 프롬프트는 이력으로만 보존. 지금은 [7개 실제 채팅방 재개 프롬프트](CHAT_TRANSITION_PROMPTS_7.md)를 사용.
+- 대회별 총괄이 유일한 READY 작업을 관리: KIC `lead/kic:docs/roles/lead/NEXT_TASK.md`, PayPal `lead/paypal:docs/dispatch/ACTIVE_TASK.md`, UGREEN `lead/ugreen:docs/dispatcher/CURRENT_TASK.md`.
+- 대회별 범용 작업자 채팅은 매 호출 최신 원격 READY를 확인, **지시 지정 feature 브랜치만** 수정. 총괄 검수 전에 두 번째 기능으로 자동 전환하지 않는다.

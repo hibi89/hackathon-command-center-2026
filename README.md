@@ -1,5 +1,7 @@
 # 2026 AI 해커톤 통합 상황실
 
+> **현행 운영: [7개 채팅방 복원 프롬프트](docs/CHAT_TRANSITION_PROMPTS_7.md)** — 전체 총괄 1, 대회 총괄 3, 범용 작업자 3. 기존 13개 개별 기능 채팅 지침은 역사 자료.
+
 > **채팅방 변경 후 [START_HERE.md](START_HERE.md)부터 읽는다.** 이후 [HANDOFF](HANDOFF.md) → [STATUS](STATUS.md) → [AGENTS](AGENTS.md) → [REQUIREMENTS](REQUIREMENTS.md), 최신 GitHub SHA 및 대회별 공식 보고를 확인한다.
 
 > 기준: **2026-10-24 KST** | 역할: **전체 총괄(전략·일정·품질 감독)** | 실제 참가자: **1명**  
@@ -67,3 +69,9 @@ KIC는 전용 `TO_HACKATHON_LEAD.md` → 담당 총괄 `HANDOFF.md`/`STATUS.md` 
 - UGREEN: https://ugreenhackathon.devpost.com/
 
 **주의**: '완료'는 근거로 확인된 사실에만 사용합니다. 본선 선발·수상·실API·배포 결과를 추정하지 않습니다.
+## 2026-10-24 KST — 최종 사용자 운영 정책 확인: 7개 채팅방, 3개 대회 동시·대회 내 기능 순차
+- **실제 채팅 7개** = 통합 총괄 1 + 대회 총괄 3 + 대회별 순환 개발 담당 3. **기능 역할과 브랜치 9개는 그대로 유지**한다.
+- [현행 7개 채팅 시작 프롬프트](docs/CHAT_TRANSITION_PROMPTS_7.md), [GitHub 실사 보고](docs/audits/SINGLE_WORKER_DISPATCH_AUDIT_20261024.md)를 확인. 구형 [13개 프롬프트](docs/CHAT_TRANSITION_PROMPTS_13.md)는 9개 기능별 독립 채팅 운영 시의 **과거 자료**이며 현행 새 채팅 시작에 사용하지 않는다.
+- 실제 첫 READY 업무: [KIC KIC-R-001](https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/roles/lead/NEXT_TASK.md) (`feature/research`), [PayPal PPL-001](https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/dispatch/ACTIVE_TASK.md) (`feature/quote-payment`), [UGREEN UGR-001](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/dispatcher/CURRENT_TASK.md) (`feature/missing-files`). **READY지만 각 기능 브랜치 착수 보고 없음**. 총괄이 검수하기 전 다른 작업 발행/전환 금지.
+- 일정: KIC 내부 11/10, PayPal 내부 11/11. UGREEN 전담 최신 일정은 **11/10 조기 제출 목표로 앞당겨짐**, 이전 통합 11/14는 예비 확인점으로 관리; 공식 11/16 16:45 그대로.
+- 실제 분산 락·AI 채팅 자동 전환/실행/통지 기능은 없음. 문서 기반 프로토콜이며 사용자 호출과 원격 검수 필요.
