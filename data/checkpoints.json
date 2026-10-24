@@ -7,8 +7,8 @@
     "default_branch": "main",
     "kind": "coordination_docs",
     "auto_update": false,
-    "verified_as_of": "2026-10-24 KST (new lead handoff remote check)",
-    "last_update_reason": "Published permanent one-sentence GitHub restoration entrypoint and update contract",
+    "verified_as_of": "2026-10-24 KST (single-sentence entry audit, snapshot)",
+    "last_update_reason": "Verified central + 3 lead CHAT_BOOTSTRAP files and all 3 default main READMEs; user one-line command and continuity contract published",
     "first_read": "START_HERE.md",
     "update_protocol": "docs/CONTINUITY_PROTOCOL.md",
     "audit_report": "docs/audits/REPOSITORY_AUDIT_20261024.md",
@@ -30,7 +30,10 @@
     "bootstrap_phrase": "[해커톤총괄 깃헙 레포지토리 확인하고 작업하셈]",
     "bootstrap_entrypoint": "CHAT_BOOTSTRAP.md",
     "bootstrap_default_role": "integrated_lead_unless_explicit_contest",
-    "bootstrap_update_policy": "on_major_work_completion_or_chat_transition_only"
+    "bootstrap_update_policy": "on_major_work_completion_or_chat_transition_only",
+    "bootstrap_verified_paths": 7,
+    "bootstrap_verified_date_kst": "2026-10-24",
+    "bootstrap_role_count": 4
   },
   "projects": [
     {
@@ -40,8 +43,8 @@
       "registration": "application_and_team_creation_seen_team_conversion_unverified",
       "repo": "hibi89/hibi89-kic-proofinvest",
       "repo_exists": true,
-      "main_head_sha": "1300b9b31a5b86792d15ed7a2dce7c24849dbd87",
-      "lead_head_sha": "ea811b883929502f31aceb5db23b6d7a502fb8c0",
+      "main_head_sha": "778f18c94048490aa6996973161bc720cf57f758",
+      "lead_head_sha": "e09102fb730653b03ece9dc092398861c0c452c9",
       "implemented_and_verified_features": 0,
       "planned_features": 3,
       "offline_tests_reported_passed": 26,
@@ -87,7 +90,10 @@
       "lead_development_branch": "lead/kic",
       "reported_offline_unit_tests_passed": 26,
       "lead_work_branch": "lead/kic",
-      "current_work_pointer": "docs/roles/lead/LEAD_ACTIVE_WORK.md"
+      "current_work_pointer": "docs/roles/lead/LEAD_ACTIVE_WORK.md",
+      "bootstrap_path": "CHAT_BOOTSTRAP.md",
+      "bootstrap_verified": true,
+      "bootstrap_in_main_readme": true
     },
     {
       "id": "paypal",
@@ -120,8 +126,8 @@
       "planned_repo": "hibi89/hibi89-paypal-ai-hackathon",
       "repo_creation_verified": true,
       "repo_visibility": "public",
-      "main_head_sha": "b58533ac7e632706a95d807de5ced6497b5e46b0",
-      "lead_head_sha": "3fc1d9e9ac017d50c73492fb550c30f88c4f7fa2",
+      "main_head_sha": "bed3fa67086caaa63da79810c00b44638f0a7346",
+      "lead_head_sha": "623e70017f0f7d6244d9d2f907364ae8873ea388",
       "lead_branch": "lead/paypal",
       "feature_head_shas": {
         "feature/quote-payment": "876d7d1b5935b91e6baddea36abdb8e50602c4fb",
@@ -142,7 +148,7 @@
       "internal_plan_status": "lead_execution_plan_user_approved_as_reported",
       "internal_early_submit": "2026-11-11",
       "active_task_id": "PPL-001",
-      "active_task_status": "legacy_PPL-001_READY_FOR_REVIEW__lead_review_pending__Sandbox_unverified",
+      "active_task_status": "PPL-001_LEAD_OFFLINE_11_PASS_CI_SUCCESS_LIVE_SANDBOX_BLOCKED",
       "dispatch_branch": "lead/paypal",
       "dispatch_path": "docs/roles/lead/LEAD_ACTIVE_WORK.md",
       "active_feature_branch": null,
@@ -157,7 +163,11 @@
       "reported_offline_unit_tests_passed": 11,
       "lead_development_branch": "lead/paypal",
       "lead_work_branch": "lead/paypal",
-      "current_work_pointer": "docs/roles/lead/LEAD_ACTIVE_WORK.md"
+      "current_work_pointer": "docs/roles/lead/LEAD_ACTIVE_WORK.md",
+      "bootstrap_path": "CHAT_BOOTSTRAP.md",
+      "bootstrap_verified": true,
+      "bootstrap_in_main_readme": true,
+      "lead_reported_offline_acceptance": true
     },
     {
       "id": "ugreen",
@@ -184,8 +194,8 @@
       "planned_repo": "hibi89/hibi89-ugreen-nas-hackathon",
       "repo_creation_verified": true,
       "repo_visibility": "public",
-      "main_head_sha": "d8cd806cb2b3842a80a571fd09910ec370e2de17",
-      "lead_head_sha": "ef8e2fcbdae01a871861e0fef67638fa9c72d527",
+      "main_head_sha": "a361824451c25dc101c8cc4b2a62ed8f017154e4",
+      "lead_head_sha": "b356df05af1606a84856e7b02a51b5c5b119a3d7",
       "lead_branch": "lead/ugreen",
       "feature_head_shas": {
         "feature/missing-files": "4e74dc7b187e70ad72e906e042fdbf4c140940f8",
@@ -221,7 +231,10 @@
       "legacy_dispatch_reference_only_after_migration": true,
       "lead_development_branch": "lead/ugreen",
       "lead_work_branch": "lead/ugreen",
-      "current_work_pointer": "docs/roles/lead/LEAD_ACTIVE_WORK.md"
+      "current_work_pointer": "docs/roles/lead/LEAD_ACTIVE_WORK.md",
+      "bootstrap_path": "CHAT_BOOTSTRAP.md",
+      "bootstrap_verified": true,
+      "bootstrap_in_main_readme": true
     }
   ]
 }

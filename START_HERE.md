@@ -141,3 +141,10 @@
 - PayPal: 종전 `PPL-001` feature/quote-payment `876d7d1b5935b91e6baddea36abdb8e50602c4fb` READY_FOR_REVIEW, **오프라인 테스트 11 PASS 주장**. 총괄 독립 재실행/lead 병합 검증 대기, 실 Sandbox 주문/결제 OAuth 호출 **미실행**.
 - UGREEN: 종전 `UGR-001` feature/missing-files `4e74dc7b187e70ad72e906e042fdbf4c140940f8` SDK 능력 매트릭스 공개 자료 정리·**BLOCKED**. 공식 Kit 아카이브 내부 CLI/Expert Agent 명령/실 NAS 실행 미확인. 총괄이 새 접근 경로 검증 후 데이터 계약과 Skill 구현 진행해야 함.
 - **운영 문서 전환 완료(3/3), 실제 새 구조의 전체 개발·테스트·배포·최종 제출 사이클은 별도 검증 전**. 기존 작업의 성과와 차단을 삭제하지 않음.
+
+## 2026-10-24 KST — 한 문장 새 채팅 복원 4개 저장소 실사
+- **사용자 공통 단문**: `[해커톤총괄 깃헙 레포지토리 확인하고 작업하셈]` — 통합 [`main/CHAT_BOOTSTRAP.md`](CHAT_BOOTSTRAP.md)에 진입점·4개 역할 라우팅/현재 작업·검증 및 작업 종료 최신화 규칙 게시. KIC/PayPal/UGREEN 각각 `lead/*/CHAT_BOOTSTRAP.md`와 GitHub 기본 `main/README.md`도 공통 문구·전담 브랜치 링크 게시됨을 원격 재조회로 확인(총 **7/7 진입 경로**).
+- **원격 실사 HEAD (변동 가능한 스냅샷)**: 통합 본 갱신 전 `29776c65d4c5ac05f378a75befda72e121c02242`; KIC `lead/kic e09102fb730653b03ece9dc092398861c0c452c9` / `main 778f18c94048490aa6996973161bc720cf57f758`; PayPal `lead/paypal 623e70017f0f7d6244d9d2f907364ae8873ea388` / `main bed3fa67086caaa63da79810c00b44638f0a7346`; UGREEN `lead/ugreen b356df05af1606a84856e7b02a51b5c5b119a3d7` / `main a361824451c25dc101c8cc4b2a62ed8f017154e4`. 이후에는 매번 새 HEAD 조회.
+- 세 대회 **총괄=직접 개발자** 운영 유지, 구형 7/13개 별도 작업자 채팅·디스패치 무효. `LEAD_ACTIVE_WORK.md`가 각 대회의 현재 실행 기준.
+- 이번 공시는 **새 채팅 진입/문서 업데이트 규칙** 성과이며, 제품 API/배포/공식 제출 성공과 다르다. 자동 실시간 최신화 기능은 없음. 새 채팅 또는 주요 작업 종료 시 해당 저장소에서 직접 GitHub 동기화.
+- PayPal 최신 리드 작업 포인터에는 PPL-001 **총괄 오프라인 독립 테스트 11 PASS 및 GitHub CI 성공(리드 보고)**, 실제 Sandbox 주문·캡처는 접근권한 제한으로 **차단/미검증**이 기록됨. 해당 범위를 넘어 전체 앱 완료로 볼 수 없음.
