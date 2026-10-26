@@ -1,3 +1,5 @@
+> **PRIZE CHECK:** UGREEN official rules have **Most Creative Skills Award x2, USD $5k each**, but this is for eligible **Round-2 functional NAS Skill submissions** only; there is no confirmed prize solely for a Round-1 proposal/idea. Source: https://ugreenhackathon.devpost.com/rules . Do not use an unexecuted broad workflow idea as equivalent to award eligibility.
+
 # 2026-10-27 Owner's PayPal + UGREEN Hackathon Platform Objectives & Submission Gates
 **Newer product direction:** user re-asserted expansive product value for both contests. This is the **authoritative business/product north-star**, not evidence that all integrations have been achieved or that the previously frozen minimal viable submitted implementation has been silently expanded. Preserve exact old artifacts/source/rights and require explicit owner signoff for risk/quality/scope changes. No purchase, permission change or public submission authorized in this documentation event.
 
