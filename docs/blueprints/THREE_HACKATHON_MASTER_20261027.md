@@ -1,0 +1,67 @@
+# THREE HACKATHON MASTER BLUEPRINT — FINAL OWNER DIRECTION
+**Date:** 2026-10-27 KST | **Authority:** user's explicit "finalize 3 blueprints" and "no more new GitHub [projects], focus hackathons starting today".
+**Canonical source of truth for all 3 designs.** Supersedes contradictory product and priority descriptions in `docs/strategy/FINAL_THREE_HACKATHON_COMPOSITION_20261027.md` for all three contests, but retains that document's evidence, safety restrictions and historical rationale. This document and three linked contest blueprints define the newest proposed product architecture; actual code, tests, PDF/ZIP, external accounts and official submissions require their own evidence.
+
+## Executive scope/decision
+**Existing repos only, no new repositories or unrelated new products.** Keep command center `hibi89/hackathon-command-center-2026@main` for program management, existing contest repos `hibi89/hibi89-kic-proofinvest@lead/kic`, `hibi89/hibi89-paypal-ai-hackathon@lead/paypal`, `hibi89/hibi89-ugreen-nas-hackathon@lead/ugreen` for actual work. Any new Markdown specification file inside those repos is NOT a new product/repo. Four-chat structure remains 1 chief + 3 execution leads. Existing independent SOVIA, DBVORA, AI_AutoML_Analyst, AX_FLOW, RAG_STUDIO and n8n reliability-lab are source-of-ideas/adaptable technology, not new projects to commission. No surprise clones, paid services, proprietary copying, or exposing private AX_FLOW/DBVORA/SMAX material in public contest repos. Public examples must be original clean-room implementations or suitably licensed with documented attribution.
+
+**User's revised priority TODAY:** Hackathons-first. The older "SMAX-first until November 7" historical priority is now superseded for scheduling. Do not mark SMAX or other projects as cancelled; simply pause noncontest features and avoid spawning new projects. Protect highest-risk PayPal live-sandbox end-to-end gate and three official submissions. No background autonomous running; other chats must read this canonical doc when invoked.
+
+## The three aligned products
+| Contest and name | Full vision | Acceptable in-contest product |
+| --- | --- | --- |
+| KIC **ProofInvest** | Evidence-grounded enterprise & capital-market analyst integrating financial statements, offerings, ownership, dilution, cash flows, peer research, targeted ML, deep learning on filing language and tracked post-analysis evaluation | Round 1: 10-page <=PDF describing narrow case + credible feasible roadmap. If finalist, original filing→verified financial/capital facts→calculation→ML conditional→a pretrained document semantic extractor with explicit evaluation→source-linked report, working demo URL/code |
+| PayPal **AI Work Marketplace** (working brand; no repo rename) | Global service-project posting→AI talent matching→data-grounded ML reference-price range→negotiated contract→PayPal checkout→SOVIA-style audit/risk→DBVORA observability and claims/complaint intelligence | One new project, synthetic users clearly marked, AI matching and transparent price fallback, one actual approved PayPal Sandbox buyer→order→capture/read-back, minimal immutable audit/DB; public running/reproducible app and <3-min video |
+| UGREEN **NAS FlowPilot** (working brand; ProjectReady kept as template/legacy artifact) | Natural-language NAS workflow designer, interactive missing-input resolver, safe validated execution, eventually independent AX_FLOW on NAS Docker with SOVIA/DBVORA and licensed connectors | One newly authored contest-compliant `SKILL.md` with linked Markdown only; compose an approved bounded set of official registered read-only Expert Agent file/document actions, ask for missing parameters, confirm plans, verify outputs. No Python/JS/n8n runtime/API shim in Skill. Finalist: real assigned NAS proof on same Skill |
+
+## Official rules (reverified 2026-10-27)
+- KIC: https://daker.ai/public/hackathons/kic-ai-agent-competition — prelim **Nov 12 10:00 KST**, organizer template PDF <=10 pages, mandatory 7 sections; 12 finalists announced Dec3; finals prototype working URL + executable GitHub code + 10-min PDF due Dec22 10:00 KST; optional video.
+- PayPal: https://paypalaihackathon.devpost.com/rules — Nov12 12:00 PM PST = **Nov13 05:00 KST**; genuine PayPal Sandbox plus AI core; run-capable demo, public repository with root open-source LICENSE, clear English setup, public YouTube functioning demo <3 minutes, Devpost receipt. Stage1 pass/fail, Stage2 equally weighted implementation/design/impact/innovation/presentation. No "Top10" promotion published.
+- UGREEN: https://ugreenhackathon.devpost.com/rules — Nov15 23:45 PST = **Nov16 16:45 KST**, Round1 English ten-answer PDF <=500 substantive words <=1MB and ZIP with SKILL.md + directly linked refs/*.md only (<=10MB compressed and unpacked, <=1MB per file, <=100 files), AI/libraries/source/license disclosures and originality; no runtime script/JS/Python or arbitrary NAS access. Maximum 30 finalists Nov21 PT; one allotted NAS test day; finalist final ZIP+public NAS-run YouTube <3min by Nov30 23:45 PST = **Dec1 16:45 KST**. Contest Skill/workflow newly developed during contest; same project Round2.
+- n8n terms: https://support.n8n.io/article/can-i-use-your-license-for-my-use-case — third-party customers configuring workflows via API/custom UI/AI agent requires commercial license; research n8n or independently authored AX_FLOW core instead, unless rights obtained.
+
+## Architectural ownership and integration boundaries
+**KIC** data = official verified issuer evidence, numbers and filing text. ProofInvest is authority for source/temporal verification. AutoML components apply conditional profilers/models/time-aware splits. Pretrained transformer/dense encoders aid extraction & document matching, not proof of correctness, and are evaluated vs manual labels. RAG only narrow grounding. DBVORA **not required**. No autonomous financial advice or unjustified probabilistic return promise.
+**PayPal** ledger/authority = transactional Node/D1 candidate, approved amount/merchant binding and PayPal Sandbox reconciliation; SOVIA analysis is a separate **auditor** of event trails, never authorization to transfer funds; DBVORA is read-only DB topology/health/backup observability, never replaces atomic payment state. ML reference pricing requires lawful comparable transactions and temporal tests; use clear fallback when no real data. Do not imply access to all PayPal customers or instant global marketplace seller support. No real payments/escrow/automatic refunds.
+**UGREEN** official Uliya registered Expert Agents are sole contest execution authority. A policy-bounded Markdown Skill uses typed intent→slot filling→read-only plan/tool invocation→evidence-based outcome; no arbitrary shell, n8n JSON execution or external API. Full AX_FLOW+n8n-like scheduler+DBVORA+SOVIA is a separately gated **post-contest NAS product vision**, not claimed deliverable. SOVIA/DBVORA safety and state concepts may guide wording, not copied unsupported runtimes. Official Starter Kit rights and NAS live capability remain to be validated.
+
+## Critical path from 2026-10-27
+**Immediately 10/27–10/30:**
+1. PayPal owner/merchant + sandbox buyer + HTTPS return trust, approved 1 low-value **virtual** order for first real create→buyer approval→capture→GET reconciliation, after separate explicit approval; do NOT perform it based solely on design authorization. Prove real AI-assisted quote/match input and safe auth. No public secrets or automation before proof.
+2. KIC review frozen/private PDF and exact original organizer template without overwriting; add only a narrow, credible paragraph/diagram describing expanded financial/capital/shareholder data, conditional ML, pretrained filing deep learning and evaluation **if owner approves exact edited PDF**. Ensure 7 sections, <=10 pages, deadline and DAKER account/submission rights.
+3. UGREEN compare new FlowPilot user story vs available official Uliya read-actions, unsupported writes/schedulers, current ProjectReady package and vendor license HOLD. Form one bounded new workflow and new English ten-answer PDF/Skill candidate in existing UGREEN repo after rights and file lineage review; preserve old G36/G37 originals.
+
+**10/31–11/06:**
+- PayPal marketplace thin UI with fictional test profiles, AI typed matching/explanation, price-data-status and fallback; connect to already working payment ledger; SOVIA micro audit fields + tests. No exotic ML inference without independent labeled real-like data. DBVORA read-only adapter/observability demo only if real E2E green.
+- KIC exact draft PDF compile and visual/official form check, independent fact checks and source/legal gate. Do NOT wait for deep learning model training.
+- UGREEN new SKILL with deterministic slots/allowed actions/evidence and 5 negative test scenarios; official Creator/checker when possible; resolve license correspondence separately.
+**11/07–11/10:**
+- Prioritize PayPal end-to-end full demo, new-project significant-update disclosure, licensed runnable public code with clean secrets, demo video footage (video not mocked). **Nov10 PayPal go/no-go**: if still no genuine authorized PayPal Sandbox end-to-end, stop extra DBVORA/ML/growth features and repair payment path or report blocked.
+- KIC internal PDF review freeze **Nov10**, submit before official deadline with express user approval and capture final DAKER receipt.
+- UGREEN finish new proposal + ZIP, rights check, advisor sign-off, freeze hashes.
+**11/11–11/13:** KIC official receipt by **11/12 10:00**; PayPal video/repo/testable path/Devpost receipt by **11/13 05:00**. Verify what was actually submitted, not only candidate artifacts.
+**11/13–11/16:** UGREEN official checker/zip/doc/owner permission; internal target Nov14–15 KST; Devpost receipt by **11/16 16:45**.
+**After results:** KIC if finalist use Dec3–Dec22 to complete real-source/dl+ml working MVP; UGREEN if finalist use allotted one NAS day to validate and record SAME Skill for Dec1 due; PayPal after submission iterate only if rules allow, prioritize portfolio documentation and license-safe product roadmap.
+
+## Explicit user-facing next-action gates
+- KIC: actual exact PDF + title + DAKER team conversion + final click **user separately approves**; no frozen PDF overwrite.
+- PayPal: verified seller/buyer sandbox identity and app binding; credentials remain out of GitHub; any real external OAuth/Orders/buyer/capture/cloud deploy **user separately approves exact live scope**, Sandbox only; root LICENSE, public demo and official submit user approves.
+- UGREEN: official Creator/Skill Kit license response not verified (vendor inquiry sent only); exact new artifact and external rights approval; user explicitly authorizes Devpost upload, actual NAS credentials use only if selected.
+- All contest apps: no unapproved payment/paid model/secret upload/publication; keep source provenance and licenses clear.
+
+## Proof/acceptance matrix
+| Task | DONE only if | Not valid proof |
+| --- | --- | --- |
+| KIC prelim | Exact organizer compliant user-signed PDF at DAKER, confirmed submission history/receipt | Draft PDFs, private saved files, 254 offline CI |
+| KIC DL | Explicit pretrained model/type, sample manually verified filing labels and measured extractor results with source citations | Saying "uses GPT" or showing hallucinated text |
+| KIC learned ML | Leakage-safe company/temporal split, baseline and held-out performance/evidence, NO_TRAIN if thin data | Arbitrary AutoML train on a single CSV, random split/lookahead |
+| PayPal AI matching | Source-labeled profiles, nonzero candidates, explainable candidate ranking, denial safety | Frozen hardcoded unsourced 100% matches |
+| PayPal price ML | Authorized comparable outcome labels, held-out MAE/coverage and provenance; otherwise data-poor fallback | Fabricated "historical prices"/unearned confidence percent |
+| PayPal checkout | Actual authorized Sandbox create/buyer approval/capture/GET reconciliation; correct merchant/amount/version; repeated calls and ambiguous POST safe | Only OAuth 200 / 347 offline tests |
+| PayPal SOVIA/DBVORA | Tamper-aware relevant audit trail and read-only DB/backup/restore evidence where implemented | Mere Python repo badge/log keyword; copying DBVORA into payment critical path |
+| UGREEN Round1 | NEW contest-created official Skill ZIP+English 10-answer PDF plus rights approval and Devpost receipt | Historic ProjectReady ZIP rebranded; Python/JS/n8n REST shim in ZIP |
+| UGREEN Round2 | Runs on issued NAS, video actually shows approved behavior of same Skill | Pure local mock, printed pseudo-commands, invented CLI abilities |
+| Global claims | Report per-file Git SHA, CI SHA, real external receipt and exact status | "Design fixed" implying finished software or win odds |
+
+## Decision freeze/revisions
+This blueprint is the **locked user-requested product target and execution strategy**, not finished software. Scope can be revised only by evidenced official requirements or an explicit later owner direction. Prior drafts, frozen submissions and code retain their history. No new repo, no simultaneous unrelated work. User asked to focus hackathons; this is a resource-priority decision effective 2026-10-27.
