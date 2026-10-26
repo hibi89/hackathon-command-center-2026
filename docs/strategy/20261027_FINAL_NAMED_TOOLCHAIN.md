@@ -1,0 +1,42 @@
+# FINAL NAMED TOOLCHAIN — 3 HACKATHONS (2026-10-27 KST)
+**Owner correction:** "스택" meant **named actual software, APIs, libraries, databases, build/test tools, deployment and submission tools**, not generic AI/ML/DB layers. Exactly one active submission product per contest; no feature growth. THIS consolidates three contest-specific first-party lead-branch toolchain files. See more-specific files for actual modules and hard acceptance tests. Submission freeze still overrides hypothetical "finalist" future work.
+
+## KIC ProofInvest Global
+*Official preliminary until Nov12 10:00 KST*: exact organizer PDF template, original author's preferred slide/PDF native editor, Python 3 + pypdf for PDF checks, existing proofinvest modules and optional Streamlit offline demo, GitHub Actions / unittest; cited verified SEC EDGAR public source candidate. 10-page-or-less 7-section PDF is the ONLY mandatory prelim deliverable; no new code/ML training/SEC connector required for it.
+*Selected only if finalist Dec03*:
+- **Language/runner:** Python 3.11+, venv/pip.
+- **Official source:** SEC EDGAR REST at data.sec.gov (Submissions by CIK, Company Facts and official filings); requests client with User-Agent, caching, rate limit and hashes.
+- **Parsing:** BeautifulSoup4 HTML, pypdf authorized text-PDF, pandas/numpy + Decimal for numeric/scaled facts; SQLite local source/provenance store.
+- **ML:** scikit-learn Dummy baseline, HistGradientBoosting/RandomForest ONLY if meaningful legally sourced issuer-time labels and leak-safe held-out validation. AI_AutoML_Analyst technique adaptation under lawful provenance checks.
+- **DL:** PyTorch CPU, sentence-transformers model **all-MiniLM-L6-v2** for English filing paragraph semantic retrieval (Apache-2.0 model card), source-span verification and curated extraction QA. Embeddings are not automatic truth. ProsusAI/finbert NOT default (model weights NC).
+- **UI/release:** Existing Streamlit, judge-accessible URL candidate Streamlit Community Cloud after actual deployment viability test, GitHub repo and presentation PDF by Dec22 10:00.
+- **Module registered now:** external **Disclosure Lightning** (private existing Bid Owl repo feature/disclosure-lightning) to fetch/index/amend raw official disclosures with provenance. The KIC lead-branch file documents EXACT future contract; NOT a copied/working engine, prelim doesn't depend on it.
+- **Preprocessor:** UNDECIDED. Owner asks SMAX feature availability; if none, may design separately after submissions. No claim an existing SMAX data-cleaning module or API.
+
+## PayPal AI Work Marketplace
+- **Language/UI:** existing Node.js 22.5+ ESM, vanilla HTML/CSS/JS and current Node built-in HTTP/fetch/crypto, no React/Next.js rewrite.
+- **Payment:** PayPal Developer Sandbox OAuth2 + Orders v2 (human-bound approved quote, merchant, actual buyer approval→capture→provider GET). Prior one OAuth success does NOT mean end-to-end.
+- **AI/match:** existing Gemini API model endpoint gemini-3.5-flash-lite if authorized/free and available; strict typed output, native JS eligibility over **3 synthetic freelancers**. Price says insufficient comparison data, no speculative ML.
+- **DB/security:** current node:sqlite local persisted state/claim/session/ledger; minimal SOVIA-style AI/human/provider event trace, NOT standalone SOVIA; DBVORA runtime OMITTED (future read-only contract only). Cloudflare Workers/D1 planned alternative, NOT current required local Node runtime.
+- **Testing/publication:** npm Node test runner, Chromium, GitHub Actions, public GitHub MIT LICENSE/English judge-run README, OBS Studio + optional Shotcut, public YouTube <3min and Devpost receipt by Nov13 05:00. Official rules explicitly allow a reproducible local functional demo instead of hosted website; public repo still mandatory.
+- **After competition only:** Python 3.11+pandas+scikit-learn verified actual completed price labels, full SOVIA & DBVORA integration, seller onboarding etc.
+
+## UGREEN NAS FlowPilot
+- **Official authoring:** UGREEN UGOS/Uliya Skill Creation Tool, **Codex** supported assistant, original Skill in YAML-frontmatter **SKILL.md** + only directly linked references/*.md.
+- **Runtime:** UGOS/Uliya built-in Agent, catalog File Expert Agent ug-filesystem ls/find/stat, Doc Expert Agent ug-document metadata/qa/extract/reconcile, only authorized & actually installed read operations.
+- **Product:** ONE read-only handoff audit conversation with adaptive missing folder/checklist/content consent inputs, plan preview, evidence-linked READY/BLOCKED/NEEDS_REVIEW.
+- **Offline-only QA tools:** Python 3.11 stdlib unittest/zipfile/hashlib, ReportLab and pypdf proposal PDF generator/checker; NO script/runtime in ZIP. GitHub Actions offline fixture checks.
+- **Submit:** Devpost Round1 English 10-answer PDF <=500 words <=1MB plus Markdown-only ZIP <=10MB, each <=1MB and <=100 files by Nov16 16:45 KST. **If finalist** official assigned NAS iDX6011 Pro device one day, Uliya skill validator, OBS video/YouTube by Dec01 16:45.
+- **NOT in contest:** n8n, Docker, AX_FLOW engine, Python/JS runtime, SOVIA & DBVORA executable integrations, new UI, local LLM provider guarantee. Possible postcontest NAS app separate.
+
+## What is already complete VS just selected
+These are FINAL **tool choices**, not installed/deployed facts. KIC existing offline proofinvest/Streamlit; PayPal existing Node + local sqlite and earlier partial PayPal/Gemini API checks, no genuine buy/capture GET; UGREEN existing ProjectReady Skill/269 offline test and permission/kit license HOLD, new FlowPilot unbuilt. Disclosure Lightning KIC file is only an integration note; its source branch exists but no official SEC collector/adapter implemented. No original KIC PDF / PayPal program / UGREEN submission artifacts were modified in this task.
+
+## GitHub primary lead specs
+- KIC: https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/architecture/FINAL_TOOLCHAIN_20261027.md
+- Disclosure Lightning KIC module: https://github.com/hibi89/hibi89-kic-proofinvest/blob/lead/kic/docs/architecture/DISCLOSURE_LIGHTNING_INTERFACE_20261027.md
+- PayPal: https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/architecture/FINAL_TOOLCHAIN_20261027.md
+- UGREEN: https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/architecture/FINAL_TOOLCHAIN_20261027.md
+- Older tool choices React+Vite/Cloudflare mandatory for PayPal, OpenDART primary for KIC and n8n API wrapper in UGREEN are superseded for the actual initial contest submissions.
+
+References: https://paypalaihackathon.devpost.com/rules ; https://ugreenhackathon.devpost.com/rules ; https://ai.ugreen.com/pages/hackathon-starter-kit ; https://www.sec.gov/search-filings/edgar-application-programming-interfaces ; https://docs.streamlit.io/deploy/streamlit-community-cloud ; https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2 ; https://huggingface.co/ProsusAI/finbert .
