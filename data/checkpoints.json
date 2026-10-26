@@ -9,6 +9,7 @@
     "auto_update": false,
     "verified_as_of": "2026-10-24 KST, cross-repo audit snapshot at 17:19 with later observed commits",
     "kic_analysis_automl_design_decision": {"date_kst":"2026-10-27","state":"USER_APPROVED_DIRECTION_DESIGN_ONLY","doc":"docs/strategy/KIC_PROOFINVEST_ANALYSIS_AUTOML_DIRECTION_20261027.md","source_product":"hibi89/AI_AutoML_Analyst@feature/kmong-v1","kic_lead_execution":"NOT_VERIFIED","kic_pdf_and_repo_changes":"NONE","paypal":"UNCHANGED_UNDER_USER_REVIEW","ugreen":"UNCHANGED"},
+    "final_three_hackathon_blueprint_20261027": {"decision":"USER_APPROVED_FINAL_DESIGN_DOCS_ONLY","date_kst":"2026-10-27","master":"docs/blueprints/THREE_HACKATHON_MASTER_20261027.md","kic":"docs/blueprints/KIC_PROOFINVEST_FINAL_20261027.md","paypal":"docs/blueprints/PAYPAL_AI_WORK_MARKETPLACE_FINAL_20261027.md","ugreen":"docs/blueprints/UGREEN_NAS_FLOWPILOT_FINAL_20261027.md","owner_priority":"THREE_HACKATHONS_FIRST_IMMEDIATELY","previous_smax_first_priority":"SUPERSEDED_FOR_SCHEDULING_NOT_CANCELLED","no_new_github_repositories_or_projects":true,"lead_code_pdf_zip_modified":false,"actual_submission_evidence":false,"user_account_approval_still_required":true},
     "last_update_reason": "KIC latest lead CI repaired and independently verified (234/234); PayPal lead 325 PASS with 214/5 main divergence; UGREEN external checker still blocked",
     "first_read": "START_HERE.md",
     "update_protocol": "docs/CONTINUITY_PROTOCOL.md",
