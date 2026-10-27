@@ -1,4 +1,4 @@
-> **2026-10-28 추가 사용자 공통 개발 지시:** [모든 신규 레포 개발 3/5/7일 표준](../strategy/20261028_OWNER_UNIVERSAL_REPO_DELIVERY_STANDARD_3_5_7.md). DAY 1~2 작동 MVP, 원래 설계 대비 기능·검증 우선, 고급 프론트 마지막, DAY 3 BEST / DAY 4~5 STANDARD / DAY 7 HARD STOP·재평가. 본 헌장의 독립 감사·역할 경계·필수 외부 승인 조건은 유지한다.
+> **2026-10-28 추가 사용자 공통 개발 지시:** [모든 신규 레포 개발 3/5/7일 표준](strategy/20261028_OWNER_UNIVERSAL_REPO_DELIVERY_STANDARD_3_5_7.md). DAY 1~2 작동 MVP, 원래 설계 대비 기능·검증 우선, 고급 프론트 마지막, DAY 3 BEST / DAY 4~5 STANDARD / DAY 7 HARD STOP·재평가. 본 헌장의 독립 감사·역할 경계·필수 외부 승인 조건은 유지한다.
 
 # 통합 수뇌부 상시 감독 헌장 — 독립 검수·불필요 작업 차단·누락 보완
 
