@@ -1,3 +1,5 @@
+> **2026-10-28 사용자 최신 HAE 생태계 정본:** [PRIVATE HAE official canonical architecture](https://github.com/hibi89/HAE/blob/main/docs/ECOSYSTEM_CANONICAL.md). 접근권한 있는 해총은 새 채팅 시 확인: HAE(자연어/고객 안내) + LA(자체 플로우 구성·실행) + SOVIA(행동·권한 감사) + DBVORA(업무 DB화 연결 및 DB 구조·상태·보존)가 전체 완성의 필수 4구성. REA_APP, 코드체커, SMAX 등은 선택 확장. n8n은 런타임이 아님. 세 대회 제출·기밀·권한 게이트와 섞지 말 것. 본 PUBLIC 상황실에는 비공개 상세 설계나 고객 자료를 복사하지 않는다. 문서 기록은 통합 구현/승인 증거가 아님.
+
 > **새로운 사용자 상위 개발 표준 (2026-10-28):** [전 레포 3/5/7일 MVP 우선 개발 원칙](docs/strategy/20261028_OWNER_UNIVERSAL_REPO_DELIVERY_STANDARD_3_5_7.md)을 이 문서와 함께 읽는다. 해총은 외부 레포 자동 수정 없이 위반·지연을 독립 검수한다.
 
 # 해총 단문 자동 복원 — 해커톤 통합 상황실
