@@ -1,3 +1,5 @@
+> **2026-10-29 사용자 추가 결정 — 개인 소버린 AI / FrontierOR 2027 실전 검증:** [공개 해총 도전 계획](docs/research/20261029_FRONTIEROR_2027_CHALLENGE_TARGET.md) → [PRIVATE HAE 상세](https://github.com/hibi89/HAE/blob/main/docs/research/20261029_SOVEREIGN_AI_FRONTIEROR_2027_PLAN.md). **별도 로컬 소버린 AI(이름 미정)는 기존 AI 역공학 기술 REA_AI와 다른 프로젝트다.** LA 검증 후 12월 공식 연습 6종·2 vCPU/4GB 오프라인 시험, 2027-01-04 FrontierOR 60문제 예선 도전 목표. 60문제 완주 ≠ 결선 자동 진출; 진출 팀 수 미발표. **기록만 완료**: 개발·대회 등록·신규 레포·출품·수상 증거 없음. 현재 3해커톤의 우선순위 변경 금지.
+
 > **2026-10-29 REA_AI 장기 연구 아이디어 등록 (기록만):** 사용자가 구상한 로컬 경량 AI·검증 기반 탐색 연구는 **LA 워크플로 실행 엔진의 실제 완성/테스트 이후에 실험**한다. 현재 구현·AGI 성능 입증·신규 저장소 생성이 아니다. [해총 공개 백로그](docs/research/20261029_REA_AI_RESEARCH_BACKLOG.md) → [상세 PRIVATE HAE 정본](https://github.com/hibi89/HAE/blob/main/docs/research/20261029_REA_AI_LA_DEPENDENT_RESEARCH.md). 기존 제품·해커톤 우선순위 유지.
 
 > **2026-10-29 사용자 확인 — HAE 로컬 UI/배포 방향:** 웹형 로컬 사용자 화면을 먼저 완성하고, 이후 더블클릭 실행기 → 필요시 트레이·데스크톱 전용 외형 순으로 발전시킨다. **세부 기술·통합 설계 정본은 PRIVATE [HAE ECOSYSTEM CANONICAL §8](https://github.com/hibi89/HAE/blob/main/docs/ECOSYSTEM_CANONICAL.md)에 저장했다.** 공개 상황실은 링크만 보존하고, 제품 기능·실행기·통합·배포가 완료됐다고 주장하지 않는다. 공식 해커톤 승인·제출 범위는 변경 없음.
