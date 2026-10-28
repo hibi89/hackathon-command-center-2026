@@ -1,3 +1,5 @@
+> **2026-10-29 REA_AI 장기 연구 아이디어 등록 (기록만):** 사용자가 구상한 로컬 경량 AI·검증 기반 탐색 연구는 **LA 워크플로 실행 엔진의 실제 완성/테스트 이후에 실험**한다. 현재 구현·AGI 성능 입증·신규 저장소 생성이 아니다. [해총 공개 백로그](docs/research/20261029_REA_AI_RESEARCH_BACKLOG.md) → [상세 PRIVATE HAE 정본](https://github.com/hibi89/HAE/blob/main/docs/research/20261029_REA_AI_LA_DEPENDENT_RESEARCH.md). 기존 제품·해커톤 우선순위 유지.
+
 > **2026-10-29 사용자 확인 — HAE 로컬 UI/배포 방향:** 웹형 로컬 사용자 화면을 먼저 완성하고, 이후 더블클릭 실행기 → 필요시 트레이·데스크톱 전용 외형 순으로 발전시킨다. **세부 기술·통합 설계 정본은 PRIVATE [HAE ECOSYSTEM CANONICAL §8](https://github.com/hibi89/HAE/blob/main/docs/ECOSYSTEM_CANONICAL.md)에 저장했다.** 공개 상황실은 링크만 보존하고, 제품 기능·실행기·통합·배포가 완료됐다고 주장하지 않는다. 공식 해커톤 승인·제출 범위는 변경 없음.
 
 > **[2026-10-28 최신 사용자 지시 / 해총 감독 복원]** [전 프로젝트 개발 가속·검증 정본](docs/DEV_ACCELERATION_AND_VERIFICATION_20261028.md) 먼저 읽기. 현재 **KIC(+DL)·PayPal·UGREEN·LA 4개만 GPT-6 Instant 개발**, 해총은 높은 추론 독립 검수. 그 외 제품 개발은 소유자 재개 지시 전 대기. LA Windows SQLite 잠금(26 ERROR), DL 공시 시각 테스트(2 CI FAIL)는 정확한 SHA/로그 재검증까지 FIX. 다른 제품 설계/안전 승인 및 개별 해커톤 제출 규칙 유지.
