@@ -1,3 +1,5 @@
+> **2026-10-29 사용자 확인 — HAE 로컬 UI/배포 방향:** 웹형 로컬 사용자 화면을 먼저 완성하고, 이후 더블클릭 실행기 → 필요시 트레이·데스크톱 전용 외형 순으로 발전시킨다. **세부 기술·통합 설계 정본은 PRIVATE [HAE ECOSYSTEM CANONICAL §8](https://github.com/hibi89/HAE/blob/main/docs/ECOSYSTEM_CANONICAL.md)에 저장했다.** 공개 상황실은 링크만 보존하고, 제품 기능·실행기·통합·배포가 완료됐다고 주장하지 않는다. 공식 해커톤 승인·제출 범위는 변경 없음.
+
 > **[2026-10-28 최신 사용자 지시 / 해총 감독 복원]** [전 프로젝트 개발 가속·검증 정본](docs/DEV_ACCELERATION_AND_VERIFICATION_20261028.md) 먼저 읽기. 현재 **KIC(+DL)·PayPal·UGREEN·LA 4개만 GPT-6 Instant 개발**, 해총은 높은 추론 독립 검수. 그 외 제품 개발은 소유자 재개 지시 전 대기. LA Windows SQLite 잠금(26 ERROR), DL 공시 시각 테스트(2 CI FAIL)는 정확한 SHA/로그 재검증까지 FIX. 다른 제품 설계/안전 승인 및 개별 해커톤 제출 규칙 유지.
 
 > **2026-10-28 OWNER PRIVATE PRODUCT ARCHITECTURE:** HAE 생태계의 사용자 확정 구조는 [PRIVATE 원본 문서](https://github.com/hibi89/HAE/blob/main/docs/ECOSYSTEM_CANONICAL.md)에 보관. 접근 허용된 해총은 새 채팅 복원 시 반드시 확인할 것. 이 **PUBLIC** 상황실에 구체적인 비공개 통합·사업 설계나 고객 데이터를 복사하지 말 것. 기록 ≠ 기능 구현/해커톤 출품 완료.
