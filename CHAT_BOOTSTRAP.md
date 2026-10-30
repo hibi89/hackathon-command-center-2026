@@ -1,3 +1,5 @@
+> **2026-10-31 새 채팅 최우선 추가 지침:** [BACKEND-FIRST 48H 실행 정본](docs/strategy/20261031_OWNER_BACKEND_FIRST_48H_EXECUTION_PROTOCOL.md). 제품·기술스택·기존 프로그램/레포 의존성·API 계약을 먼저 고정하고 **각 대회 메인 레포 백엔드부터 구현**한다. CI는 비차단 추적/독립 작업 병행하되 릴리스 전 필수 검증은 통과시킨다. 이 중앙 공시가 개별 리드 코드/CI 작업을 자동 수행한 것은 아니다.
+
 > **2026-10-29 사용자 추가 결정 — 개인 소버린 AI / FrontierOR 2027 실전 검증:** [공개 해총 도전 계획](docs/research/20261029_FRONTIEROR_2027_CHALLENGE_TARGET.md) → [PRIVATE HAE 상세](https://github.com/hibi89/HAE/blob/main/docs/research/20261029_SOVEREIGN_AI_FRONTIEROR_2027_PLAN.md). **별도 로컬 소버린 AI(이름 미정)는 기존 AI 역공학 기술 REA_AI와 다른 프로젝트다.** LA 검증 후 12월 공식 연습 6종·2 vCPU/4GB 오프라인 시험, 2027-01-04 FrontierOR 60문제 예선 도전 목표. 60문제 완주 ≠ 결선 자동 진출; 진출 팀 수 미발표. **기록만 완료**: 개발·대회 등록·신규 레포·출품·수상 증거 없음. 현재 3해커톤의 우선순위 변경 금지.
 
 > **2026-10-29 REA_AI 장기 연구 아이디어 등록 (기록만):** 사용자가 구상한 로컬 경량 AI·검증 기반 탐색 연구는 **LA 워크플로 실행 엔진의 실제 완성/테스트 이후에 실험**한다. 현재 구현·AGI 성능 입증·신규 저장소 생성이 아니다. [해총 공개 백로그](docs/research/20261029_REA_AI_RESEARCH_BACKLOG.md) → [상세 PRIVATE HAE 정본](https://github.com/hibi89/HAE/blob/main/docs/research/20261029_REA_AI_LA_DEPENDENT_RESEARCH.md). 기존 제품·해커톤 우선순위 유지.
