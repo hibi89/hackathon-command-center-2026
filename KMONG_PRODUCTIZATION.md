@@ -1,5 +1,8 @@
 # 크몽 상품화 — 최종 완성률 현황 (GitHub 재감사)
 
+> **2026-11-10 KST — EAI 진행 37→38%(+1%p), CI 검증 구분:** `hibi89/EAI@feature/local-first-mvp` P12 SHA256 고정 오프라인 목표 배치 기능의 테스트 코드 SHA `d5f9287837041bfd552d5857b10b6a45164bda9f`에서 [Actions #42670939944](https://github.com/hibi89/EAI/actions/runs/42670939944) **Linux Python3.11 269/269 PASS, 0 FAIL**. P13 local doctor 및 P14 의존성 파이프라인은 기능 코드를 GitHub에 추가했으나 각각 [P13](https://github.com/hibi89/EAI/actions/runs/42671534452), [P14](https://github.com/hibi89/EAI/actions/runs/42672478578) Actions가 **FAILURE / Job 0**여서 전체 테스트 실행 미증명; 후속 기능은 미검증, 39/40% 미반영. 현 EAI 문서 HEAD `e94d9fa3f28d74237a17e62e79e0743a2826cb1e`, 최신 기능 소스 SHA `d18dec6dfca729b83c311361502256901dd387d8`는 테스트 SHA가 아님. 두 번 같은 CI pre-job 실패 후 STOP&PIVOT, Windows/실 Ollama/Qwen/고객/상용화 HOLD. EAI 외 16개 제품·해커톤/KIC/PayPal/UGREEN 무변경, 판매승인도 변경 없음. 기존 P11 37%와 이전 Actions 기록은 과거 스냅샷.
+
+
 > **2026-11-10 KST — EAI P11 검증 후속, 제품 최종 37% (+1%p):** 새로운 네 번째 독립 CPU 도메인 `schedule_tasks`(작업 의존 DAG, 임계경로, 병렬 작업/여유시간, 마감 초과 HOLD, 원본 기반 독립 영수증 검사)를 `hibi89/EAI@feature/local-first-mvp`에 구현. P10/P11 큰 소수·초대형 수 정밀도 보강 포함. 검증 소스 SHA **`42d6b53400fd841d6f5f4e3db0e97583bf3996cd`**, [GitHub Actions #42666810963](https://github.com/hibi89/EAI/actions/runs/42666810963) **Python3.11 Linux 249/249 PASS / 0 FAIL, compileall/CLI smoke SUCCESS**, 정확 SHA 일치. 이후 EAI docs-only SHA `717e9bb105fe065377ea67a5aca199c4f77fff61`. 기존 최종상품 **36%→37% (+1%p 잠정)**; 나머지 16개 제품 수치·판매 HOLD·KIC/PayPal/UGREEN 역할/배포 변화 없음. 실제 Windows·Qwen/Ollama·고객사용·일반 AI·상용 배포 미검증. [EAI P11 설명](https://github.com/hibi89/EAI/blob/feature/local-first-mvp/docs/P11_CRITICAL_PATH_SCHEDULE.md). 앞선 P9/P10 내용은 시점별 기록이며 최신 평가 아님.
 
 
@@ -29,7 +32,7 @@
 | AXMART³ (CUBE) | 35% | **45%** | 소프트웨어 판매 플랫폼 본체(결제/사용자/다운로드/문의) 미완. 현재는 개발 제품 소개 사이트 |
 | SMAX² | 40% | **45%** | 전체 SELF+PREP Native/Windows 통합 QA |
 | Web REA Studio | 30% | **40%** | 실제 동적 사이트 복원 사례에서 Failed to fetch 확인; 최종 3모드 생성·재현 품질/실고객/출시 미완 |
-| EAI | 20% | **37%** | P11 독립 CPU 임계경로·마감/여유시간+별도 검증 영수증·P10/P11 정밀도 보강; [Linux Python3.11 249/249 PASS](https://github.com/hibi89/EAI/actions/runs/42666810963) (기능 SHA `42d6b534`); 고객 Windows·실 Qwen/Ollama·범용 AI·상용 출고 미검증 |
+| EAI | 20% | **38%** | P12 SHA256 검증 로컬 목표 배치·오류격리 [269/269 CI PASS](https://github.com/hibi89/EAI/actions/runs/42670939944) (검증 SHA `d5f92878`); P13/P14 소스 구현만·CI Job 0으로 미검증. Windows/실 Qwen/상용화 HOLD |
 
 - **집계:** 17개. 해커톤 KIC·PayPal·UGREEN 및 제외 결정된 BID OWL 불포함. 아래 2개 신규 확장상품은 별도 기획으로 아직 별도 제품 완성률 계산 제외.
 - **주요 정정:** RAG Studio 5→55%, DBVORA는 문서-only `develop`이 아닌 실코드 `feature/p0-db-map` 참조, SMAX PREP는 별도 `preprocessing` 브랜치, AXMART³는 소개·유통 사이트와 첫 제품 PC CARE를 분리. REA_APP과 HAE/Lightning의 한정 합성 MVP 지표는 최종 상용 지표가 아님.
