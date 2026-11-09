@@ -1,3 +1,5 @@
+> **SMAX² 작업 재개 — 2026-11-10 KST:** 비공개 `hibi89/SMAX@preprocessing`에 기존 Generic CSV PREP의 원본·검토 영수증을 검증한 뒤 SELF 매출 보고의 **승인 전 로컬 초안**을 생성하는 `self-preview-gate.mjs` 추가. PREP 오류/중복/수식 또는 SELF 집계 보류가 있으면 `REVIEW_HOLD`; 정상에도 `NOT_GRANTED`/실행 미수행, 원본·고객 행·파일·외부 전송 없음. 기능 SHA `037576e74359e2961838dc8891b7f196c47ece03`, 최신 문서 HEAD `101a9d3f9f82e1a285b2d1b2ea8cac1605ee9bea`. 실제 GitHub 기존 모듈+신규 테스트의 **격리 V8 14/14 PASS(암호화 해시·UTF8 API test double)**만 확인; Node Native 전체 `npm run test:preprocessing`/Windows/E2E/Actions **미검증**. 따라서 **SMAX² 45% 잠정 유지**, RELEASE HOLD. `frontend`/`main` 자동 병합·원본 변경 없음. [비공개 SMAX 인수인계](https://github.com/hibi89/SMAX/blob/preprocessing/HANDOFF.md) · [P3 계약](https://github.com/hibi89/SMAX/blob/preprocessing/docs/PREP_SELF_PREVIEW_GATE_20261110.md).
+
 > **현행 운영 목록 — 2026-11-10 KST 소유자 결정:** Web REA Studio를 크몽 독립 판매·개발 관리 목록에서 **제외**하고 `REA_Web`(75%)에 집중. 기존 `hibi89/web-rea-studio` 저장소·코드·과거 감사 이력은 **보존 / 개발 보류 / 삭제·병합 없음**. 활성 **16개 상품**, 최종완성률 50% 미만은 **SMAX² 45%, AXMART³ CUBE 45% (2개)**; 정확히 50% 3개, 50% 초과 11개. 기존 17종 감사/스냅샷은 당시 이력이며 현행 목록 아님. SMAX²는 기능 검증 전까지 45% 유지. [현행 16종 명단](docs/audits/KMONG_16_ACTIVE_COMPLETION_20261110.md).
 
 > **2026-11-10 KST 최신 크몽 17종 재조회·상태 정합성 확인:** 지정 GitHub 구현 브랜치 **18개 재조회** (SMAX 2브랜치), 나머지 16개 상품 구현 SHA는 기존 감사값과 동일, EAI는 정확 실행 소스 `88af3412d59dad8ea848322bdb75292adb7db9e4` [Linux 475/475 PASS](https://github.com/hibi89/EAI/actions/runs/42696296697), 문서-only 최신 HEAD `836f79272531df9b9d548f3f5070a4ab8f4a73a0`. 관리표 기준 **17종 = 50% 미만 3종 (Web REA Studio 40%, SMAX² 45%, AXMART³ CUBE 45%) / 정확히 50% 3종 / 초과 11종**. 다른 제품에 신규 전체 CI/실사용 증거가 없어 완성률 무단 상향 없음. 최종상품률은 추정·판매 HOLD. 상세 최신 근거: [2026-11-10 최신 17종 상품·18브랜치 HEAD 스냅샷](docs/audits/KMONG_17_COMPLETION_SNAPSHOT_EAI50_20261110.md). 과거 본문에 남아 있는 EAI 35%와 Job 0 오류는 **구형 스냅샷**으로 현재 검증 상태가 아님.
@@ -49,7 +51,7 @@
 | 코인 패턴 분석기 | 40% | **50%** | 고객 임의 수식 범용성 |
 | AXMART PC CARE | 35% | **50%** | 물리 Windows/USB·WinRE·QR/A4·실수리 승인/복구 검증 미완. Release A/B HOLD |
 | AXMART³ (CUBE) | 35% | **45%** | 소프트웨어 판매 플랫폼 본체(결제/사용자/다운로드/문의) 미완. 현재는 개발 제품 소개 사이트 |
-| SMAX² | 40% | **45%** | 전체 SELF+PREP Native/Windows 통합 QA |
+| SMAX² | 40% | **45%** | PREP→SELF `self-preview-gate` 기능 코드 추가(비공개 `preprocessing` SHA `037576e7`), 격리 V8 합성 14/14 PASS(crypto·UTF8 test double); **Native Node 전체/실 UI 브랜치 통합/Windows E2E 미검증**, 완성률 상승 보류, RELEASE HOLD |
 | EAI | 20% | **50%** | P20 로컬 텍스트 증거 검색·P21 공유자원 최적 일정·P22 MAD 이상치 분석, 독립 영수증/배치 DAG 보류. [Linux Python3.11 전체 475/475 CI PASS](https://github.com/hibi89/EAI/actions/runs/42696296697) (검증 SHA `88af3412`); 실제 Windows·Qwen/Ollama·고객 원본·상용 판매 HOLD |
 
 - **집계:** 16개 (2026-11-10 Web REA Studio 관리 대상 제외). 해커톤 KIC·PayPal·UGREEN 및 제외 결정된 BID OWL 불포함. 아래 2개 신규 확장상품은 별도 기획으로 아직 별도 제품 완성률 계산 제외.
