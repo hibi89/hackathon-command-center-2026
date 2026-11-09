@@ -78,3 +78,10 @@
 
 - 정확 코드 SHA `bbd01576eed2573ffeab5a70eec0662fcb40bad0`에서 Ubuntu Python3.11 `Ran 301 tests in 5.244s`, `OK`, Job `offline-checks` completed/success. P13 관련 14 PASS, P14 18 PASS. 기존 P12 269 PASS를 유지하면서 추가 32 PASS.
 - EAI 최종상품 잠정 38→**40%**. 당시 P13/P14 Job=0 실패는 이전 SHA의 CI 관측이며, 기능·테스트가 실제 실행된 최신 CI의 결과로 대체한다. 나머지 16종과 상점 출시/상업권 상태 변경 없음.
+
+## EAI P15 신규 검증 · 2026-11-10 KST
+
+> **2026-11-10 KST — EAI 최종상품 40→41%(+1%p 잠정) / P15 실사용 편의 개선 검증:** `hibi89/EAI@feature/local-first-mvp`에서 사용자 입력 목표파일의 실제 SHA256을 계산해 P12 `goal_batch`·P14 `goal_pipeline`용 JSON을 **stdout만 사용해 생성하는 `make-manifest` CLI**를 구현. 기존 솔버·원본·데이터 쓰기/외부 API 사용 없음. 기능+테스트 SHA **`c35269299f0cdfaa42c51eb8351db50b9e7ec93d`** [GitHub Actions #42676269100](https://github.com/hibi89/EAI/actions/runs/42676269100) Linux Python3.11 **320/320 PASS / 0 FAIL, compileall 및 CLI smoke PASS**, P15 신규 19 통합/보안 회귀. 이후 EAI docs-only HEAD **`273b8100034cc65b61fe1037037c13bf133f1722`**. 기존 40%→**41% (+1%p)**, 오늘 목표 50%까지 9%p 남음. 실제 고객 Windows·Qwen/Ollama·SearXNG/상용 출시는 미검증·RELEASE HOLD. **17개 중 EAI 1개만 수정, 다른 16종/KIC·PayPal·UGREEN/판매권한·배포는 불변**. [P15 근거](https://github.com/hibi89/EAI/blob/feature/local-first-mvp/docs/P15_MANIFEST_BUILDER.md).
+
+- `hibi89/EAI` 테스트 소스 SHA `c35269299f0cdfaa42c51eb8351db50b9e7ec93d`에서 GitHub Actions run 42676269100 **320/320 PASS**, P15 신규 19건 포함한 Linux3.11 CLI+실배치/의존 DAG 합성 통합. EAI 최신 문서 HEAD `273b8100034cc65b61fe1037037c13bf133f1722`와 구분.
+- EAI 전체상품 잠정 **41%**로 상향, 나머지 상품의 출고/권리/기능 평가 및 SHA 재감사는 수행하지 않았으며 수치 변경하지 않음.
