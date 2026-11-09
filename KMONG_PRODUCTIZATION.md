@@ -1,34 +1,34 @@
-# 크몽 상품화 — 최종 완성률 현황
+# 크몽 상품화 — 최종 완성률 현황 (GitHub 재감사)
 
-2026-11-09 KST 기준 · **최초 확정 최종설계 = 100%** · 아래 수치는 기존 GitHub 구현·검증 기록에 근거한 **잠정 추정치**(최신 전체 재검증 아님).
+**2026-11-10 KST 업데이트 · 17개 · 최초 확정 최종설계 = 100%.** 아래 수치는 최신 원격 GitHub 구현/과거 CI 기록·미검증 출고 조건을 대조한 **잠정 재산정값**이다. 오늘 전체 회귀·실 고객 QA를 재실행했다는 의미가 아니다. 기술 완성률/최종 납품 완성률/상점 심사 여부를 혼동하지 않는다.
 
-| 제품 | 최종 완성률 |
-|---|---:|
-| 코인 캔들 수집기 | 90% |
-| AI Code Checker | 75% |
-| REA_APP | 70% |
-| AI AutoML Analyst | 65% |
-| REA_Web | 65% |
-| SOVIA | 60% |
-| Astra PDF Redesigner | 52% |
-| DBVORA | 50% |
-| HAE | 45% |
-| Lightning Azent | 45% |
-| SMAX² | 40% |
-| 코인 패턴 분석기 | 40% |
-| AXMART³ (CUBE) | 35% |
-| AXMART PC CARE | 35% |
-| Web REA Studio | 30% |
-| EAI | 20% |
-| RAG Studio AX Edition | 5% |
+| 제품 | 구형 11/09 | 최종 완성률 재산정 | 핵심 확인/출시 조건 |
+|---|---:|---:|---|
+| 코인 캔들 수집기 | 90% | **94%** | 업비트 유상 API 사용 프로그램 배포 제한·빗썸 상업권 미확인 |
+| AI Code Checker | 75% | **78%** | 71개 구성요소 LICENSE/NOTICE 검수 |
+| REA_Web | 65% | **75%** | 고객 실기기·원본 앱 복원 범위·유통권·정식 납품 E2E 미완 |
+| SOVIA | 60% | **75%** | 실제 고객 승인/PII 오탐 |
+| AI AutoML Analyst | 65% | **71%** | 소유자별 PDF/ZIP 시각 최종 검수 |
+| REA_APP | 70% | **70%** | 고객용 판매 패키지 |
+| HAE | 45% | **65%** | OAuth/실 SaaS |
+| Lightning Azent | 45% | **60%** | HAE 실제 런타임 교체·외부 공급자 인증·배포/상업권 미완. 과거 91% 합성 매트릭스와 구분 |
+| DBVORA | 50% | **55%** | PostgreSQL·자동 스케줄·증분/중복 안전보관·고객 Windows·최신 전체 게이트 미검증. develop 문서 0%는 구형 |
+| RAG Studio AX Edition | 5% | **55%** | Private SMAX PREP Native/승인 E2E·고객 데이터 자동 표준화·5 RAG 유형 완결·실물 설치/상용화 미완 |
+| Astra PDF Redesigner | 52% | **52%** | STEP5/7 및 BASIC/PRO/BUSINESS 확장 |
+| 코인 패턴 분석기 | 40% | **50%** | 고객 임의 수식 범용성 |
+| AXMART PC CARE | 35% | **50%** | 물리 Windows/USB·WinRE·QR/A4·실수리 승인/복구 검증 미완. Release A/B HOLD |
+| AXMART³ (CUBE) | 35% | **45%** | 소프트웨어 판매 플랫폼 본체(결제/사용자/다운로드/문의) 미완. 현재는 개발 제품 소개 사이트 |
+| SMAX² | 40% | **45%** | 전체 SELF+PREP Native/Windows 통합 QA |
+| Web REA Studio | 30% | **40%** | 실제 동적 사이트 복원 사례에서 Failed to fetch 확인; 최종 3모드 생성·재현 품질/실고객/출시 미완 |
+| EAI | 20% | **35%** | 최신 바이트 동일 전체 체크아웃 미검증 |
 
-**집계:** 17개. 해커톤 3개(KIC·PayPal·UGREEN) 및 사용하지 않기로 한 BID OWL 제외.
-
-**PDF Redesigner 근거:** `hibi89/astra_pdf_redesigner`의 최초 7단계 로드맵 대비 `integration/astra-commercial-core` 2026-10-29 STATUS 추정 약 52%. 실제 고객 PDF·구매자 PC·OCR·스타일 레퍼런스·상용 검증 미완료.
-
-**주의:** MVP 완성률·판매 준비율이 아닌 *최종 설계 대비 진척 추정치*이며, 실사용·출시 검증은 별도.
-
-**REA_APP 독립 저장소 작업 필요:** 현재 `hibi89/HAE`의 `REA_APP` 브랜치(`tools/rea-app/`)에 있으므로, 향후 `hibi89/REA_APP` 신규 저장소를 별도 생성해 원본과 이력을 보존하며 분리해야 함. **미생성·미이전**.
+- **집계:** 17개. 해커톤 KIC·PayPal·UGREEN 및 제외 결정된 BID OWL 불포함. 아래 2개 신규 확장상품은 별도 기획으로 아직 별도 제품 완성률 계산 제외.
+- **주요 정정:** RAG Studio 5→55%, DBVORA는 문서-only `develop`이 아닌 실코드 `feature/p0-db-map` 참조, SMAX PREP는 별도 `preprocessing` 브랜치, AXMART³는 소개·유통 사이트와 첫 제품 PC CARE를 분리. REA_APP과 HAE/Lightning의 한정 합성 MVP 지표는 최종 상용 지표가 아님.
+- **판매 주의:** 코인 수집기는 기술 99% 기록·최종상품 94% 추정이지만 **Upbit API 유료 프로그램 판매 제한 및 Bithumb 라이선스 미확인으로 HOLD**. 다른 상품도 실제 납품·권리 검토·최종 출시 승인과 본 표의 수치는 별도다.
+- **상세 감사:** [2026-11-10 전체 17종 GitHub 코드·테스트·브랜치 SHA 및 근거](docs/audits/KMONG_17_PRODUCT_COMPLETION_AUDIT_20261110.md).
+- **기존 2026-11-09 수치:** 위 '구형' 열에 그대로 보존. 오늘 코드를 개발해 수치가 상승했다는 뜻이 아니라 **보유 코드 누락을 정정하고 평가 범위를 재조정**한 것이다.
+- **REA_APP 독립 저장소:** 현행 실제 코드 `hibi89/HAE@REA_APP/tools/rea-app`. 별도 신규 `hibi89/REA_APP` 저장소는 아직 만들거나 이관하지 않았다. 무단 이전 금지.
+- **RAG + PREP 상품 방향:** PREP Private 핵심 엔진은 SMAX 내 유지하고, RAG 전용 Public 계약·어댑터로 통합한다. 소스 그대로 공개 이전 금지.
 
 ## 크몽 상품 개발·심사 병행 운영 기준
 
