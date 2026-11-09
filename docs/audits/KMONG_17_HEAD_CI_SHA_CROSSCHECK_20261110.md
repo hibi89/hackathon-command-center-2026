@@ -64,3 +64,10 @@
 
 - EAI 최신 원격 브랜치 HEAD `b9aef18d1bb60adb14985393ef7609c2c97a723c`는 `[skip ci]` 상태/인수인계 문서 커밋이고, 기능 소스 검증 SHA는 `843a1426ac4c2dcb4c0e957768bc94ea04078f02`. [GitHub Actions 42664669185](https://github.com/hibi89/EAI/actions/runs/42664669185) 로그 기준 Python3.11 `Ran 229 tests in 4.748s` / `OK`, 기존 211 + 신규 P10 18.
 - **현재 EAI 최종상품 36%**(최종 확정 제품설계 100%, 주관적 진척 추정)로 갱신. 1차 감사의 35%와 과거 HEAD 실패 기록은 삭제하지 않고 시점별 보존. 타 제품·판매 승인·Product readiness는 변동 없음.
+
+## EAI P11 최신 후속 사실 · 2026-11-10 KST
+
+> **2026-11-10 KST — EAI P11 검증 후속, 제품 최종 37% (+1%p):** 새로운 네 번째 독립 CPU 도메인 `schedule_tasks`(작업 의존 DAG, 임계경로, 병렬 작업/여유시간, 마감 초과 HOLD, 원본 기반 독립 영수증 검사)를 `hibi89/EAI@feature/local-first-mvp`에 구현. P10/P11 큰 소수·초대형 수 정밀도 보강 포함. 검증 소스 SHA **`42d6b53400fd841d6f5f4e3db0e97583bf3996cd`**, [GitHub Actions #42666810963](https://github.com/hibi89/EAI/actions/runs/42666810963) **Python3.11 Linux 249/249 PASS / 0 FAIL, compileall/CLI smoke SUCCESS**, 정확 SHA 일치. 이후 EAI docs-only SHA `717e9bb105fe065377ea67a5aca199c4f77fff61`. 기존 최종상품 **36%→37% (+1%p 잠정)**; 나머지 16개 제품 수치·판매 HOLD·KIC/PayPal/UGREEN 역할/배포 변화 없음. 실제 Windows·Qwen/Ollama·고객사용·일반 AI·상용 배포 미검증. [EAI P11 설명](https://github.com/hibi89/EAI/blob/feature/local-first-mvp/docs/P11_CRITICAL_PATH_SCHEDULE.md). 앞선 P9/P10 내용은 시점별 기록이며 최신 평가 아님.
+
+- 최신 EAI 원격 구현 브랜치 HEAD `717e9bb105fe065377ea67a5aca199c4f77fff61`는 [skip ci] 문서-only. 정밀도 보강 포함 **실제 테스트 코드 SHA `42d6b53400fd841d6f5f4e3db0e97583bf3996cd`**에서 Actions #42666810963 **249 PASS/0 FAIL**; 최초 P11 247 PASS SHA `7e625cd356cc579634ca0b8842cb2e1e9893f8d3`는 정밀도 보강 전 과거 증거.
+- **37%는 17개 중 EAI 단일 제품의 잠정 전체상품 완성률.** 나머지 16개 수치 불변, 전체 판매승인/Windows/모델 연동 QA 없음. 과거 SHA/CI 실패 통계는 원래 감사 시점 스냅샷으로만 읽는다.
