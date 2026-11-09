@@ -85,3 +85,10 @@
 
 - `hibi89/EAI` 테스트 소스 SHA `c35269299f0cdfaa42c51eb8351db50b9e7ec93d`에서 GitHub Actions run 42676269100 **320/320 PASS**, P15 신규 19건 포함한 Linux3.11 CLI+실배치/의존 DAG 합성 통합. EAI 최신 문서 HEAD `273b8100034cc65b61fe1037037c13bf133f1722`와 구분.
 - EAI 전체상품 잠정 **41%**로 상향, 나머지 상품의 출고/권리/기능 평가 및 SHA 재감사는 수행하지 않았으며 수치 변경하지 않음.
+
+## EAI P16/P17 단일 상품 후속 검사 — 2026-11-10 KST
+
+> **2026-11-10 KST — EAI 최종상품 41→43%(+2%p 잠정), P16·P17 전체 실행 검증:** `hibi89/EAI@feature/local-first-mvp` 다섯 번째 독립 CPU 도메인 `csv_quality`(로컬 CSV 필수값/중복키/정확 숫자범위, 원본 해시·제한된 레코드 인덱스·독립 검증)와 여섯 번째 `csv_schema_drift`(두 CSV의 열 추가·삭제·순서 및 숫자/문자/혼합/빈열 타입 변화, 이중 소스 해시·독립 검증) 구현. P12/P14/P15 워크플로 연동, P13 doctor 10개 검증, 고객 실제 셀 값 외부 미출력/미전송. P16 검증 소스 SHA `954b72737338082d1d5ce5c327f5be29c96732ef` [Actions #42679425913](https://github.com/hibi89/EAI/actions/runs/42679425913) **348/348 PASS**. P17 최종 기능·테스트 SHA **`9b0b7438cd0e8756e87c7ca4d03d23a731773d91`** [Actions #42680542935](https://github.com/hibi89/EAI/actions/runs/42680542935) Python3.11 Linux **375/375 PASS/0 FAIL, compileall/CLI smoke PASS**, 신규 P16 28건·P17 27건 전체 회귀. EAI 문서-only 최신 HEAD **`68c55e6a13eac7a5dde32673ea65bbb5299b76c5`**, 검증 소스와 구분. 전체 최종완성률 **43%**, 당일 목표 50%까지 7%p. 실제 고객 Windows, Ollama/Qwen, SearXNG, 원본 데이터/상업권·배포 RELEASE HOLD. **나머지 16개 상품 수치·해커톤 KIC/PayPal/UGREEN·다른 저장소/배포/권한 변화 없음.** 중간 2개 테스트 기대값 실패는 수정 후 최종 375 PASS. [P16 명세](https://github.com/hibi89/EAI/blob/feature/local-first-mvp/docs/P16_CSV_QUALITY_GATE.md) · [P17 명세](https://github.com/hibi89/EAI/blob/feature/local-first-mvp/docs/P17_CSV_SCHEMA_DRIFT.md).
+
+- 실제 Actions run 42680542935 소스 SHA `9b0b7438cd0e8756e87c7ca4d03d23a731773d91`, `Ran 375 tests in 7.529s` 및 `OK`/job SUCCESS. 이전 P16 `954b7273` run 42679425913 348/348 PASS. 가장 최근 GitHub EAI 문서 HEAD `68c55e6a13eac7a5dde32673ea65bbb5299b76c5`는 docs-only [skip ci]이므로 해당 코드 테스트 SHA와 혼동 금지.
+- 이 업데이트는 EAI 1종에만 해당. 16개 상품의 브랜치/완성률 재감사 수행하지 않았으며 변동 없음. EAI 43%는 사용자 추정 최종상품 기준 잠정치로 판매/Windows QA 승인이 아님.

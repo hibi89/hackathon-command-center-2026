@@ -1,5 +1,8 @@
 # 크몽 상품화 — 최종 완성률 현황 (GitHub 재감사)
 
+> **2026-11-10 KST — EAI 최종상품 41→43%(+2%p 잠정), P16·P17 전체 실행 검증:** `hibi89/EAI@feature/local-first-mvp` 다섯 번째 독립 CPU 도메인 `csv_quality`(로컬 CSV 필수값/중복키/정확 숫자범위, 원본 해시·제한된 레코드 인덱스·독립 검증)와 여섯 번째 `csv_schema_drift`(두 CSV의 열 추가·삭제·순서 및 숫자/문자/혼합/빈열 타입 변화, 이중 소스 해시·독립 검증) 구현. P12/P14/P15 워크플로 연동, P13 doctor 10개 검증, 고객 실제 셀 값 외부 미출력/미전송. P16 검증 소스 SHA `954b72737338082d1d5ce5c327f5be29c96732ef` [Actions #42679425913](https://github.com/hibi89/EAI/actions/runs/42679425913) **348/348 PASS**. P17 최종 기능·테스트 SHA **`9b0b7438cd0e8756e87c7ca4d03d23a731773d91`** [Actions #42680542935](https://github.com/hibi89/EAI/actions/runs/42680542935) Python3.11 Linux **375/375 PASS/0 FAIL, compileall/CLI smoke PASS**, 신규 P16 28건·P17 27건 전체 회귀. EAI 문서-only 최신 HEAD **`68c55e6a13eac7a5dde32673ea65bbb5299b76c5`**, 검증 소스와 구분. 전체 최종완성률 **43%**, 당일 목표 50%까지 7%p. 실제 고객 Windows, Ollama/Qwen, SearXNG, 원본 데이터/상업권·배포 RELEASE HOLD. **나머지 16개 상품 수치·해커톤 KIC/PayPal/UGREEN·다른 저장소/배포/권한 변화 없음.** 중간 2개 테스트 기대값 실패는 수정 후 최종 375 PASS. [P16 명세](https://github.com/hibi89/EAI/blob/feature/local-first-mvp/docs/P16_CSV_QUALITY_GATE.md) · [P17 명세](https://github.com/hibi89/EAI/blob/feature/local-first-mvp/docs/P17_CSV_SCHEMA_DRIFT.md).
+
+
 > **2026-11-10 KST — EAI 최종상품 40→41%(+1%p 잠정) / P15 실사용 편의 개선 검증:** `hibi89/EAI@feature/local-first-mvp`에서 사용자 입력 목표파일의 실제 SHA256을 계산해 P12 `goal_batch`·P14 `goal_pipeline`용 JSON을 **stdout만 사용해 생성하는 `make-manifest` CLI**를 구현. 기존 솔버·원본·데이터 쓰기/외부 API 사용 없음. 기능+테스트 SHA **`c35269299f0cdfaa42c51eb8351db50b9e7ec93d`** [GitHub Actions #42676269100](https://github.com/hibi89/EAI/actions/runs/42676269100) Linux Python3.11 **320/320 PASS / 0 FAIL, compileall 및 CLI smoke PASS**, P15 신규 19 통합/보안 회귀. 이후 EAI docs-only HEAD **`273b8100034cc65b61fe1037037c13bf133f1722`**. 기존 40%→**41% (+1%p)**, 오늘 목표 50%까지 9%p 남음. 실제 고객 Windows·Qwen/Ollama·SearXNG/상용 출시는 미검증·RELEASE HOLD. **17개 중 EAI 1개만 수정, 다른 16종/KIC·PayPal·UGREEN/판매권한·배포는 불변**. [P15 근거](https://github.com/hibi89/EAI/blob/feature/local-first-mvp/docs/P15_MANIFEST_BUILDER.md).
 
 
@@ -38,7 +41,7 @@
 | AXMART³ (CUBE) | 35% | **45%** | 소프트웨어 판매 플랫폼 본체(결제/사용자/다운로드/문의) 미완. 현재는 개발 제품 소개 사이트 |
 | SMAX² | 40% | **45%** | 전체 SELF+PREP Native/Windows 통합 QA |
 | Web REA Studio | 30% | **40%** | 실제 동적 사이트 복원 사례에서 Failed to fetch 확인; 최종 3모드 생성·재현 품질/실고객/출시 미완 |
-| EAI | 20% | **41%** | P15 `make-manifest` SHA256 자동 계산·읽기 전용 P12/P14 실행 준비. [Linux Python3.11 CI 320/320 PASS](https://github.com/hibi89/EAI/actions/runs/42676269100) (소스 `c3526929`); 실제 Windows·Ollama/Qwen·범용 AI·고객 납품·상용 출시 HOLD |
+| EAI | 20% | **43%** | P16 로컬 CSV 품질 규칙·P17 두 파일 스키마 변경 감지, 별도 원본 재검증. [Linux Python3.11 375/375 CI PASS](https://github.com/hibi89/EAI/actions/runs/42680542935) (테스트 SHA `9b0b7438`); Windows·Qwen/Ollama·실고객·상용판매 HOLD |
 
 - **집계:** 17개. 해커톤 KIC·PayPal·UGREEN 및 제외 결정된 BID OWL 불포함. 아래 2개 신규 확장상품은 별도 기획으로 아직 별도 제품 완성률 계산 제외.
 - **주요 정정:** RAG Studio 5→55%, DBVORA는 문서-only `develop`이 아닌 실코드 `feature/p0-db-map` 참조, SMAX PREP는 별도 `preprocessing` 브랜치, AXMART³는 소개·유통 사이트와 첫 제품 PC CARE를 분리. REA_APP과 HAE/Lightning의 한정 합성 MVP 지표는 최종 상용 지표가 아님.
