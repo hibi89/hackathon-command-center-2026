@@ -1,3 +1,5 @@
+> **2026-11-10 KST — EAI P18 독립 CPU SQLite 테이블 검증 완료 / 최종상품 43→44%(+1%p 잠정):** `hibi89/EAI@feature/local-first-mvp`에 7번째 typed goal `sqlite_table_audit` 추가. 로컬 단일 SQLite 일반 테이블 필수값 누락·반복 단일/복합 키 진단, SHA256 + 컬럼 중심 독립 receipt, 임의 SQL/파일쓰기/외부전송 금지, 16MiB/20k행/32열 제한, P12 배치·P14 DAG 종속 HOLD. 기능+전체 회귀 정확 소스 SHA **`ef220a017c3f7a14d20aaadfdbcdb40bd3feec28`** [Actions 42688535530](https://github.com/hibi89/EAI/actions/runs/42688535530) Linux Python3.11 **395/395 PASS, 0 FAIL, 0 SKIP**, compileall·CLI smoke PASS (+20 P18 테스트). EAI 후속 문서-only HEAD `de2d02b1cf28310b2b234c10b9aceff5181b98aa` ([P18 설계](https://github.com/hibi89/EAI/blob/feature/local-first-mvp/docs/P18_SQLITE_TABLE_AUDIT.md))은 CI 검증 소스 SHA와 구분. **EAI 44%**, 당일 목표 50%까지 6%p; 실제 Windows10/11, 고객 SQLite DB, 실 Qwen/Ollama/SearXNG, 설치·상용 출시 미검증 / RELEASE HOLD. P13 doctor는 기존 10개 합성 검사를 유지하며 P18은 독립 임시 SQLite DB 테스트로 검증. **다른 16개 제품의 완성률, KIC/PayPal/UGREEN, 배포·판매/권한 변경 없음.** 과거 EAI 43% 및 교차감사 CI 실패 문구는 당시 기록이며 최신 결과 아님.
+
 # 크몽 17종 — 실제 브랜치 HEAD / Actions SHA 교차검증 (2026-11-10 KST)
 
 ## 감사 목적과 범위
