@@ -1,5 +1,8 @@
 # 크몽 상품화 17종 GitHub 개발 근거 재감사 — 2026-11-10 KST
 
+> **동일 날짜 후속 교차감사:** [17종/18 구현 브랜치 HEAD와 해당 SHA Actions 결과](docs/audits/KMONG_17_HEAD_CI_SHA_CROSSCHECK_20261110.md)를 별도로 확인했다. 기록된 브랜치 SHA 모두 일치하지만 RAG/EAI 현재 HEAD Actions는 FAILURE(테스트 실행 증거 없음), SOVIA는 SUCCESS이며 나머지 15개 구현 브랜치는 동일 SHA Actions 기록이 없다. 따라서 아래 과거 PASS는 현재 HEAD 전체 PASS로 승격하지 않는다. 17개 최종상품 완성률/판매 HOLD는 불변.
+
+
 ## 범위와 판정 기준
 
 기준: 해총 `kmong-productization/KMONG_PRODUCTIZATION.md` 2026-11-09 목록의 **17개** (KIC·PayPal·UGREEN 제외). 2026-11-10에 연결된 GitHub `hibi89` 계정에서 30개 접근 가능 저장소 목록, 각 후보 저장소 브랜치, 트리, STATUS/README/REQUIREMENTS 및 이전 테스트 기록을 읽고 교차 대조했다. 개인·고객 원본이나 비공개 소스 전문을 본 공개 보고서로 전송하지 않았다.
