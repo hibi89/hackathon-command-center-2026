@@ -71,3 +71,10 @@
 
 - 최신 EAI 원격 구현 브랜치 HEAD `717e9bb105fe065377ea67a5aca199c4f77fff61`는 [skip ci] 문서-only. 정밀도 보강 포함 **실제 테스트 코드 SHA `42d6b53400fd841d6f5f4e3db0e97583bf3996cd`**에서 Actions #42666810963 **249 PASS/0 FAIL**; 최초 P11 247 PASS SHA `7e625cd356cc579634ca0b8842cb2e1e9893f8d3`는 정밀도 보강 전 과거 증거.
 - **37%는 17개 중 EAI 단일 제품의 잠정 전체상품 완성률.** 나머지 16개 수치 불변, 전체 판매승인/Windows/모델 연동 QA 없음. 과거 SHA/CI 실패 통계는 원래 감사 시점 스냅샷으로만 읽는다.
+
+## EAI P13/P14 완결 증거 후속 추록 — 2026-11-10 KST
+
+> **2026-11-10 KST — EAI 최종상품 38→40%(+2%p 잠정) / P13·P14 GitHub 전체 검증 완료:** 최신 기능+테스트 SHA **`bbd01576eed2573ffeab5a70eec0662fcb40bad0`** [GitHub Actions #42675220982](https://github.com/hibi89/EAI/actions/runs/42675220982) Python3.11 Linux **301/301 unittest PASS, 0 FAIL, compileall·CLI smoke PASS**. P13 오프라인 doctor 8개 실제 합성 진단+예상 상태 검사(테스트 14개), P14 의존성 기반 목표 파이프라인+원본 SHA256·정해진 실행 순서 영수증 보강(테스트 18개) 확인. 초기 P13/P14 두 Actions Job=0 실패는 과거 기록이고, 후속 Job 실제 실행 301개 PASS가 현재 최신 근거. EAI 문서-only 최신 HEAD `6373b5cf0366a545724456119587b810b799c64f`는 테스트 소스 SHA와 별개. EAI **40%**, 오늘 목표 50%까지 **10%p 남음**, 실제 Windows·Ollama/Qwen·SearXNG·고객 실사용·상업용 출시는 여전히 미검증/RELEASE HOLD. 나머지 16종 상품의 완성률/권리/배포 및 KIC·PayPal·UGREEN 변경 없음. [P13 문서](https://github.com/hibi89/EAI/blob/feature/local-first-mvp/docs/P13_OFFLINE_DOCTOR.md) · [P14 문서](https://github.com/hibi89/EAI/blob/feature/local-first-mvp/docs/P14_DEPENDENCY_PIPELINE.md).
+
+- 정확 코드 SHA `bbd01576eed2573ffeab5a70eec0662fcb40bad0`에서 Ubuntu Python3.11 `Ran 301 tests in 5.244s`, `OK`, Job `offline-checks` completed/success. P13 관련 14 PASS, P14 18 PASS. 기존 P12 269 PASS를 유지하면서 추가 32 PASS.
+- EAI 최종상품 잠정 38→**40%**. 당시 P13/P14 Job=0 실패는 이전 SHA의 CI 관측이며, 기능·테스트가 실제 실행된 최신 CI의 결과로 대체한다. 나머지 16종과 상점 출시/상업권 상태 변경 없음.
