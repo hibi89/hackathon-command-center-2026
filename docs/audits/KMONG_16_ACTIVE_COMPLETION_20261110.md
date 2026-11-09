@@ -1,3 +1,5 @@
+> **2026-11-10 KST — SMAX² P4 실행형 로컬 PREP→SELF CLI 개발, 전체 진행률 최신화:** `hibi89/SMAX@preprocessing` 정확 기능+테스트 커밋 `9358eb0a383b2d89b2bb574a8ac88577542bf334`, 최신 문서 HEAD `9b8ab43dc03cc3badf73d1df374893d08bd3c7f9`. `self-preview-cli.mjs`의 엄격 `--input CSV --config JSON`/2MiB·64KiB 한계/실제 Node regular-file, symlink, UTF-8·전후 SHA/시간·크기 안정성 검증/승인 전 로컬 집계 출력과 exit0·2·1. 정확 CLI blob `8a59c0877655ff734251e131c162e6dbceb05fed`과 Node22.16 로컬 `git hash-object` 일치, `node --check` PASS, **Node Native 파일 I/O 11/11 PASS (도메인 PREP/SELF는 스텁 사용)**, 기존 P3 V8 14/14 PASS(crypto·UTF8 테스트 대체). 신규 테스트 `tests/self-preview-cli.test.mjs` 16개는 GitHub 체크인·`npm run test:preprocessing` 등록했으나 실제 원본 저장소의 Native 통합·전체 CI·Windows/고객 환경 **NOT_RUN**. 완성률 **SMAX² 45% 유지, RELEASE HOLD**. 해총 현행 **16개 상품 산술 단순 평균 61.875% ≈ 61.9%** (가중 평균·판매 출시율 아님); 50% 미만 2개 `SMAX² 45%`·`AXMART³ CUBE 45%`. Web REA Studio 비활성/역사 소스 보존. `frontend`/`main`/KIC/PayPal/UGREEN/배포/권한/실고객 수정 없음. [SMAX 최신 인수인계](https://github.com/hibi89/SMAX/blob/preprocessing/HANDOFF.md) · [P4 설계/테스트 경계](https://github.com/hibi89/SMAX/blob/preprocessing/docs/PREP_SELF_PREVIEW_CLI_20261110.md).
+
 > **SMAX² 작업 재개 — 2026-11-10 KST:** 비공개 `hibi89/SMAX@preprocessing`에 기존 Generic CSV PREP의 원본·검토 영수증을 검증한 뒤 SELF 매출 보고의 **승인 전 로컬 초안**을 생성하는 `self-preview-gate.mjs` 추가. PREP 오류/중복/수식 또는 SELF 집계 보류가 있으면 `REVIEW_HOLD`; 정상에도 `NOT_GRANTED`/실행 미수행, 원본·고객 행·파일·외부 전송 없음. 기능 SHA `037576e74359e2961838dc8891b7f196c47ece03`, 최신 문서 HEAD `101a9d3f9f82e1a285b2d1b2ea8cac1605ee9bea`. 실제 GitHub 기존 모듈+신규 테스트의 **격리 V8 14/14 PASS(암호화 해시·UTF8 API test double)**만 확인; Node Native 전체 `npm run test:preprocessing`/Windows/E2E/Actions **미검증**. 따라서 **SMAX² 45% 잠정 유지**, RELEASE HOLD. `frontend`/`main` 자동 병합·원본 변경 없음. [비공개 SMAX 인수인계](https://github.com/hibi89/SMAX/blob/preprocessing/HANDOFF.md) · [P3 계약](https://github.com/hibi89/SMAX/blob/preprocessing/docs/PREP_SELF_PREVIEW_GATE_20261110.md).
 
 # 크몽 현행 16종 관리 명단 — 2026-11-10 KST
@@ -7,7 +9,7 @@
 
 - 현행 상품 **16종**, 50% 미만 **2종** (`SMAX² 45%`, `AXMART³ CUBE 45%`), 50% 정확히 **3종**, 초과 **11종**.
 - `REA_Web` 기존 완성률 **75%** 유지. Web REA Studio를 제외한다고 REA_Web이 더 완성된 것으로 평가하지 않는다.
-- SMAX²는 사용자 지시에 따라 핵심 개발 우선. P3 PREP→SELF 승인 전 로컬 초안 어댑터를 구현했으나 Native 전체 검증 미완료로 완성률 45% 유지. `hibi89/SMAX@frontend` SHA `52e8a54f676a015e9fbee58def89e1cb84656d72`; `@preprocessing` SHA `ff94d0cd971ab143eb4b8b7665f308f85fb6df97` (개발 시작 전 백업 기준).
+- SMAX²는 사용자 지시에 따라 핵심 개발 우선. P3 PREP→SELF 초안 어댑터와 P4 Node 오프라인 CLI(정확 코드 SHA `9358eb0a`) 구현. Node native CLI 구문·11개 파일 I/O 항목은 통과했으나 도메인 모듈이 stub이므로 전체 원본 Native 통합 회귀 미검증, 완성률 **45% 유지**. `hibi89/SMAX@frontend` SHA `52e8a54f676a015e9fbee58def89e1cb84656d72`; `@preprocessing` SHA `ff94d0cd971ab143eb4b8b7665f308f85fb6df97` (개발 시작 전 백업 기준).
 - 상용판매/권리/고객·Windows 실기기 검증 미완 **HOLD**. 완성률은 소스·테스트·사용자 인수 조건에 따른 잠정 평가; 번호를 바꾼 사실 자체로 진척률을 변경하지 않는다.
 
 ## 현행 16종
