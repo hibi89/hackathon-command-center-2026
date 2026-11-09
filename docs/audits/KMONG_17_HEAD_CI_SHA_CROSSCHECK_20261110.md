@@ -50,3 +50,10 @@
 ## 변경 기록
 - 본 후속 감사의 변경 대상은 해총 관리 문서뿐이다. 제품별 13개 원본 저장소와 각 개발 브랜치 **전부 무수정**. 새 실행 테스트 **0건**. Vercel/Cloudflare/크몽 상점 변경 **0건**. 상품 최종완성률은 `KMONG_PRODUCTIZATION.md`의 17개 수치를 유지한다.
 - 기준 시각: **2026-11-10 KST**. 정확한 문서 기준 커밋은 이 파일을 포함한 GitHub 커밋을 조회한다.
+
+## 후속 사실 정정 · EAI P9 신규 코드/CI (2026-11-10 KST)
+
+**2026-11-10 KST — EAI P9 후속 검증 (기존 감사 이후):** Private `hibi89/EAI@feature/local-first-mvp`에 상세 영수증 독립검증 기능 반영. 검증 기능·테스트 코드 SHA `da48d1764f8a369905ef34bd6810cb738efb8a2b`에서 [GitHub Actions #42659433939](https://github.com/hibi89/EAI/actions/runs/42659433939) `offline-checks` **211/211 PASS (0 FAIL)**, compileall/CLI smoke SUCCESS; 이후 `[skip ci]` 인수인계 문서-only HEAD `8c5a2a9f7c8229efeb320f435ca2f0d45181f47c`. 원래 17종 감사의 EAI `8516d8...` SHA는 **과거 스냅샷**, 당시 Actions FAILURE도 이전 실행 이력. 현재 CI 실패로 오판 금지. 현 상품 최종완성률 35% 유지(전체 범용 AI·고객 Windows·Ollama/Qwen·상용 출시 미검증), 원본/타 제품/배포·판매 변경 없음. [EAI P9 문서](https://github.com/hibi89/EAI/blob/feature/local-first-mvp/docs/P9_RECEIPT_DISPLAY_INTEGRITY.md).
+
+- **신규 EAI 브랜치 최신 HEAD:** `8c5a2a9f7c8229efeb320f435ca2f0d45181f47c` (문서-only, `[skip ci]`). 기능 소스/테스트 검증 SHA `da48d1764f8a369905ef34bd6810cb738efb8a2b`; GitHub Actions [#42659433939](https://github.com/hibi89/EAI/actions/runs/42659433939) SUCCESS, 211 Python tests PASS. 이 보고서 위쪽의 EAI `8516d8...` 및 FAILURE는 **당시 감사 시점 역사 기록**이며 현재 브랜치·CI 상태로 사용하면 안 된다.
+- EAI 외 16개 최종상품의 기존 기준선은 수정하지 않았다. EAI도 최종상품 35% 유지, 매출·판매승인·실기기/외부 런타임 검증 미진행.
