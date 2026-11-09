@@ -2,7 +2,7 @@
 
 ## 감사 목적과 범위
 - 후속 감사 기준점: 해총 `kmong-productization@8cd6ef87257e222aa0895e384216a9e34b5ab3a6`; 1차 재평가 `docs/audits/KMONG_17_PRODUCT_COMPLETION_AUDIT_20261110.md` 보존.
-- GitHub 연결 계정 `hibi89`의 14개 저장소 브랜치 목록 API와 17개 상품에 대응하는 **18개 구현 브랜치 HEAD**를 직접 확인했다. SMAX²의 `frontend`와 `preprocessing`은 별도로 계산한다. Web REA Studio의 비교용 `main`은 확인했지만 현재 구현 브랜치 집계에서는 제외했다.
+- GitHub 연결 계정 `hibi89`의 13개 제품 저장소 브랜치 목록 API와 17개 상품에 대응하는 **18개 구현 브랜치 HEAD**를 직접 확인했다. SMAX²의 `frontend`와 `preprocessing`은 별도로 계산한다. Web REA Studio의 비교용 `main`은 확인했지만 현재 구현 브랜치 집계에서는 제외했다.
 - 아래 18개 SHA 모두 1차 감사문서의 기록과 **일치**한다. 제품 소스/CI/브랜치/배포/권리/판매 설정은 수정하지 않았다.
 - 같은 SHA에서의 GitHub Actions 이력만 `GET /repos/hibi89/{repo}/actions/runs?head_sha={sha}`로 대조했다. **결과: 1 SUCCESS, 2 FAILURE, 15개는 해당 HEAD의 Actions 실행 없음.** 15개가 코드 실패란 뜻이 아니며 과거 성공 로그를 현재 SHA 성공으로 승격하지 않는다. GitHub Actions 밖의 Windows/로컬 검증은 별도 기존 근거다.
 - 새 테스트, 설치, 고객 PC 확인, 유료 API 호출, Production 브라우저 확인, 상점 심사는 이 감사에서 **0건**. 상품별 기존 최종 완성률과 출시 HOLD는 변경하지 않는다.
@@ -48,5 +48,5 @@
 5. 불필요한 완성률 재산정/형식적 커밋 대신, 새 증거가 생긴 제품의 기준선·검증 게이트·정확한 SHA를 갱신한다.
 
 ## 변경 기록
-- 본 후속 감사의 변경 대상은 해총 관리 문서뿐이다. 제품별 14개 원본 저장소와 각 개발 브랜치 **전부 무수정**. 새 실행 테스트 **0건**. Vercel/Cloudflare/크몽 상점 변경 **0건**. 상품 최종완성률은 `KMONG_PRODUCTIZATION.md`의 17개 수치를 유지한다.
+- 본 후속 감사의 변경 대상은 해총 관리 문서뿐이다. 제품별 13개 원본 저장소와 각 개발 브랜치 **전부 무수정**. 새 실행 테스트 **0건**. Vercel/Cloudflare/크몽 상점 변경 **0건**. 상품 최종완성률은 `KMONG_PRODUCTIZATION.md`의 17개 수치를 유지한다.
 - 기준 시각: **2026-11-10 KST**. 정확한 문서 기준 커밋은 이 파일을 포함한 GitHub 커밋을 조회한다.
