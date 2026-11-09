@@ -10,6 +10,7 @@
 | AI AutoML Analyst | 65% |
 | REA_Web | 65% |
 | SOVIA | 60% |
+| Astra PDF Redesigner | 52% |
 | DBVORA | 50% |
 | HAE | 45% |
 | Lightning Azent | 45% |
@@ -21,7 +22,9 @@
 | EAI | 20% |
 | RAG Studio AX Edition | 5% |
 
-**집계:** 16개. 해커톤 3개(KIC·PayPal·UGREEN) 및 사용하지 않기로 한 BID OWL 제외.
+**집계:** 17개. 해커톤 3개(KIC·PayPal·UGREEN) 및 사용하지 않기로 한 BID OWL 제외.
+
+**PDF Redesigner 근거:** `hibi89/astra_pdf_redesigner`의 최초 7단계 로드맵 대비 `integration/astra-commercial-core` 2026-10-29 STATUS 추정 약 52%. 실제 고객 PDF·구매자 PC·OCR·스타일 레퍼런스·상용 검증 미완료.
 
 **주의:** MVP 완성률·판매 준비율이 아닌 *최종 설계 대비 진척 추정치*이며, 실사용·출시 검증은 별도.
 
