@@ -1,5 +1,8 @@
 # 크몽 상품화 — 최종 완성률 현황 (GitHub 재감사)
 
+> **2026-11-10 KST — EAI P10 실기능 진척 +1%p (최신):** 기존 P9 영수증 검증에 이어 **세 번째 독립 CPU 목표 도메인 `plan_tasks`**(작업 12개 제한·시간/비용/선행조건·정확 최적 조합·동점 인간 보류·독립 결과 검증) 구현. 테스트 소스 SHA `843a1426ac4c2dcb4c0e957768bc94ea04078f02`, [GitHub Actions #42664669185](https://github.com/hibi89/EAI/actions/runs/42664669185) Linux Python3.11 **229/229 PASS, 0 FAIL**, compileall·CLI smoke PASS; 이후 문서-only EAI HEAD `b9aef18d1bb60adb14985393ef7609c2c97a723c`. **EAI 최종상품 완성률 35%→36% (+1%p 잠정)**, 기존 17종 전체 범위/다른 16개 수치 불변. 기술 부분 성공 ≠ 구매자 Windows/Qwen/Ollama/범용 AI/출시 승인. 원본·main/HAE/LA/타 제품/배포·API/판매 무수정. [P10 명세](https://github.com/hibi89/EAI/blob/feature/local-first-mvp/docs/P10_TASK_PORTFOLIO.md). 이전 EAI P9 35%와 오래된 Actions FAIL은 역사적 관측값.
+
+
 > **2026-11-10 후속 SHA/CI 검사:** 17개 제품·18개 구현 브랜치 HEAD 모두 1차 감사의 SHA와 일치. 현재 HEAD GitHub Actions는 성공 1(SOVIA), 실패 2(RAG/EAI 모두 테스트 단계 실행 미입증), 동일 SHA 실행 기록 없음 15. **아래 최종상품 완성률과 출시 HOLD는 그대로 유지**한다. [정확한 SHA·실행 링크·PREP 코드 교차증거](docs/audits/KMONG_17_HEAD_CI_SHA_CROSSCHECK_20261110.md).
 
 
@@ -23,7 +26,7 @@
 | AXMART³ (CUBE) | 35% | **45%** | 소프트웨어 판매 플랫폼 본체(결제/사용자/다운로드/문의) 미완. 현재는 개발 제품 소개 사이트 |
 | SMAX² | 40% | **45%** | 전체 SELF+PREP Native/Windows 통합 QA |
 | Web REA Studio | 30% | **40%** | 실제 동적 사이트 복원 사례에서 Failed to fetch 확인; 최종 3모드 생성·재현 품질/실고객/출시 미완 |
-| EAI | 20% | **35%** | P9 영수증 상세증거 보강·Linux Python 3.11 CI 211/211 PASS (검증 SHA `da48d176`); 고객 Windows·Qwen/Ollama·범용 AI 목표/출시 미검증 |
+| EAI | 20% | **36%** | P10 독립 CPU 작업 조합(시간/예산/선행조건) + 검증 영수증; Linux Python3.11 [229/229 PASS](https://github.com/hibi89/EAI/actions/runs/42664669185) (코드 SHA `843a1426`); 고객 Windows·실 Qwen/Ollama·범용 AI/상용 출고 미검증 |
 
 - **집계:** 17개. 해커톤 KIC·PayPal·UGREEN 및 제외 결정된 BID OWL 불포함. 아래 2개 신규 확장상품은 별도 기획으로 아직 별도 제품 완성률 계산 제외.
 - **주요 정정:** RAG Studio 5→55%, DBVORA는 문서-only `develop`이 아닌 실코드 `feature/p0-db-map` 참조, SMAX PREP는 별도 `preprocessing` 브랜치, AXMART³는 소개·유통 사이트와 첫 제품 PC CARE를 분리. REA_APP과 HAE/Lightning의 한정 합성 MVP 지표는 최종 상용 지표가 아님.

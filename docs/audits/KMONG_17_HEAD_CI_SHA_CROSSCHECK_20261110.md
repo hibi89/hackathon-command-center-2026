@@ -57,3 +57,10 @@
 
 - **신규 EAI 브랜치 최신 HEAD:** `8c5a2a9f7c8229efeb320f435ca2f0d45181f47c` (문서-only, `[skip ci]`). 기능 소스/테스트 검증 SHA `da48d1764f8a369905ef34bd6810cb738efb8a2b`; GitHub Actions [#42659433939](https://github.com/hibi89/EAI/actions/runs/42659433939) SUCCESS, 211 Python tests PASS. 이 보고서 위쪽의 EAI `8516d8...` 및 FAILURE는 **당시 감사 시점 역사 기록**이며 현재 브랜치·CI 상태로 사용하면 안 된다.
 - EAI 외 16개 최종상품의 기존 기준선은 수정하지 않았다. EAI도 최종상품 35% 유지, 매출·판매승인·실기기/외부 런타임 검증 미진행.
+
+## 신규 P10 변경·완성률 +1%p 기록 (2026-11-10 KST)
+
+> **2026-11-10 KST — EAI P10 실기능 진척 +1%p (최신):** 기존 P9 영수증 검증에 이어 **세 번째 독립 CPU 목표 도메인 `plan_tasks`**(작업 12개 제한·시간/비용/선행조건·정확 최적 조합·동점 인간 보류·독립 결과 검증) 구현. 테스트 소스 SHA `843a1426ac4c2dcb4c0e957768bc94ea04078f02`, [GitHub Actions #42664669185](https://github.com/hibi89/EAI/actions/runs/42664669185) Linux Python3.11 **229/229 PASS, 0 FAIL**, compileall·CLI smoke PASS; 이후 문서-only EAI HEAD `b9aef18d1bb60adb14985393ef7609c2c97a723c`. **EAI 최종상품 완성률 35%→36% (+1%p 잠정)**, 기존 17종 전체 범위/다른 16개 수치 불변. 기술 부분 성공 ≠ 구매자 Windows/Qwen/Ollama/범용 AI/출시 승인. 원본·main/HAE/LA/타 제품/배포·API/판매 무수정. [P10 명세](https://github.com/hibi89/EAI/blob/feature/local-first-mvp/docs/P10_TASK_PORTFOLIO.md). 이전 EAI P9 35%와 오래된 Actions FAIL은 역사적 관측값.
+
+- EAI 최신 원격 브랜치 HEAD `b9aef18d1bb60adb14985393ef7609c2c97a723c`는 `[skip ci]` 상태/인수인계 문서 커밋이고, 기능 소스 검증 SHA는 `843a1426ac4c2dcb4c0e957768bc94ea04078f02`. [GitHub Actions 42664669185](https://github.com/hibi89/EAI/actions/runs/42664669185) 로그 기준 Python3.11 `Ran 229 tests in 4.748s` / `OK`, 기존 211 + 신규 P10 18.
+- **현재 EAI 최종상품 36%**(최종 확정 제품설계 100%, 주관적 진척 추정)로 갱신. 1차 감사의 35%와 과거 HEAD 실패 기록은 삭제하지 않고 시점별 보존. 타 제품·판매 승인·Product readiness는 변동 없음.
