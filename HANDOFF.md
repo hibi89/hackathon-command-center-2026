@@ -1,3 +1,15 @@
+## 2026-11-11 KST — 코인 분석기 멀티 수식 엔진 격리개발 인수인계
+1. 목표: 크몽 70% 미만 상품 중 코인 패턴 분석기 고객 맞춤 수식 개발; DBVORA 55% stalled on Windows/full repo gates.
+2. 구현: 한 번에 16 JSON 수식 다중 DB 검색과 안전 CSV, SMA/EMA/BB/threshold/cross/AND-OR-NOT. 격리 브랜치로 병렬 작업 충돌 회피; feature/candle-pattern-analyzer의 단일 수식 구현 보존.
+3. 실제 테스트: Linux Python3.13.5 strict ResourceWarning synthetic SQLite real SQL 23 PASS / 0 FAIL / 0 SKIP. Exact Git blobs source f0d16c11..., tests 6119c830... 맞음. 전체 제품 회귀/Windows/사용자DB/EXE NOT RUN.
+4. 상태: 코인 분석기 50% 그대로/목표 70%, DBVORA 55%, 16종 평균 1015/16=63.4375%, 판매 RELEASE HOLD. 별도 브랜치 실험 코드는 통합 전 완성률 미반영.
+5. 오류 및 대응: 원본 패턴 브랜치 동시 업데이트로 세 차례 커밋 충돌 우려; compare 확인 후 독립 브랜치와 draft PR 제안. PR mergeable false reported, 실제 conflict 진단/해소 미완. 중복 구현을 통합하지 않고 판매하지 말 것.
+6. Repo/branch/SHA: hibi89/candle_scraper feature/custom-batch-rule-engine HEAD 4ed41932afd8c9d0219638810bc7f6501d895ef9, source commit a7b33d60; PR #1 https://github.com/hibi89/candle_scraper/pull/1; hub hibi89/hackathon-command-center-2026 kmong-productization HEAD confirm after this write.
+7. Runtime: Python3.11 intended; Python3.13.5 Linux tests only. No Vercel/production; no paid Actions.
+8. Original/security: collector/main, original market data E:/SQLite/WAL/SHM, existing scanners, saved ZIP unchanged. No customer files, token, external API or permission changes.
+9. Next: reconcile/compare single vs multi-rule DSL, choose one canonical client interface; same-SHA full tests and Windows/real DB performance, sale/license checks; approve PR merge after verification.
+10. Checked 2026-11-11 KST. Focused 23 tests verified, product integrated unverified. Product docs CUSTOM_RULE_BATCH_P0_20261111.md.
+
 ## 2026-11-11 KST — Coin Pattern P1 해총 인수인계 (DBVORA 제외)
 1. 목표/기술: 크몽 70% 미만 7개 후보 중 긴급 코인 패턴 분석기 50→70% 추진. 사용자 맞춤 JSON 조건을 Python3.11+ 오프라인 SQLite 로컬 스캔하는 독립 엔진. DBVORA는 타 채팅이 작업 중으로 이번 변경 대상 제외.
 2. 변경/결정: 임의 Python 규칙 파일 실행보다 허용목록 DSL 선택(비용 0, 사용자 DB 보안·재현성 우세), SMA/EMA/BB·비교·교차·논리식, SQLite read-only, CSV 원자 출력, SHA256 규칙 추적. 기존 collector/고정 분석기는 불변.
