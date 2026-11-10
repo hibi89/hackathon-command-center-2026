@@ -1,3 +1,15 @@
+## 2026-11-11 KST — DBVORA P0-10 해총 인수인계
+1. 목표: 크몽 최종완성 70% 미만 8종 우선순위 1번 DBVORA의 SQLite 관계도 정확성.
+2. 구현: ASCII-only FK catalog target comparison, no Unicode casefold/DB writes. Source commit a8169a969db919f336a2fc68343a63f291513960.
+3. 테스트: 실제 메모리 SQLite 6 신규 + 기존 16 = 22 PASS/0 FAIL/0 SKIP, strict ResourceWarning; full registry 2 and entire >=355 full suite / Windows/HTML browser not executed.
+4. 상태: DBVORA 55% unchanged, 16-product average 63.4375% unchanged, target 70%, RELEASE HOLD.
+5. 오류/차단: SQLite case semantics vs Python exact membership false absent-FK; source-backed real SQLite reproduced; private full checkout DNS unavailable. No false positive success claim.
+6. Repo SHA: hibi89/DBVORA feature/p0-db-map code a8169a96, docs 786bf7be; hub hibi89/hackathon-command-center-2026 kmong-productization HEAD to verify after update.
+7. Runtime: Linux3.13 isolated; Windows3.11/Production/Vercel not applicable or unverified.
+8. Original/security: customer data/archives/permissions/main/develop untouched; no paid Actions or external transfer; normal Git revert available.
+9. Next: authorized complete checkout targeted registry/UI tests then release gate >=355, Windows UX, archive safety; only evidence-supported rate increase.
+10. 2026-11-11 KST checkpoint; P0-10 details in DBVORA docs/P0_10_SQLITE_IDENTIFIER_CASE_20261111.md.
+
 ## 2026-11-11 KST — DBVORA P0-09 체크포인트 (크몽 70% 계획)
 
 1. 목표: 크몽 70% 미만 8종 우선순위 1번 DBVORA에 고객 행 자료 접근 없는 스키마 점검 추가.
