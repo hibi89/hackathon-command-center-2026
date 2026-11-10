@@ -1,3 +1,15 @@
+## 2026-11-11 KST — 코인 분석기 P2 통합 / 해총 최신
+1. 목표/기술: 크몽 70% 미만에서 DBVORA 다른 방 개발을 제외, 코인 패턴 고객별 JSON 수식 안전한 단일 DSL/배치 통합. Python3.11+ stdlib, SQLite read-only.
+2. 변경: 기존 P1를 기준으로 16규칙 1pass 배치·진행률/결과 CSV/규칙SHA; P1 malformed JSON TypeError 3건 수정. 독립 PR #1은 기존 배치 DSL이 달라 unmerged/draft 유지.
+3. 테스트: Linux Python3.13.5 단일/배치 29/29 PASS strict warning, compileall PASS. 합성 8만 봉×16규칙 3.2sec/5056 rows, original DB hash unchanged. 전체 레거시 테스트, Windows, 실 DB/차트/EXE NOT RUN.
+4. 상태: 코인 최종상품 50%, 70% 미달, DBVORA 55%, 전체 16종 1015%p/16=63.4375% 그대로. 상용 RELEASE HOLD.
+5. 실패/대안: 기존 P1 unhashable JSON TypeError 재현·수정. Private clone DNS 불가 이력, 반복하지 않음. Windows3.11/실 데이터와 과금 승인 전 GitHub Actions 미실행.
+6. Git: product hibi89/candle_scraper feature/candle-pattern-analyzer SHA f410bf64d63e6a6b0852935aba66689f855c7221, code blobs P1 8b98d125/P2 97c6bef5/test 452159c6; hub hibi89/hackathon-command-center-2026 kmong-productization (이 커밋 후 SHA 확인).
+7. 실행/배포: python custom_formula_batch.py --db SRC --rules JSON --output CSV --progress; no Vercel/production, Windows exe not built.
+8. 보호: main collector/고객 E: SQLite/WAL/SHM/기존 CSV/서드파티 DB/토큰·계정/유료 배포 및 다른 상품 불변. Git revert rollback.
+9. 다음: full product Python regression; Windows 3.11 read-only real DB + chart parity and stress; formula editing UX, report viewer, customer executable; license and release gate; PR #1 합류 판단 전 비교.
+10. 기준: 2026-11-11 KST, 원격 Git blob/HEAD 교차 검증과 로컬 합성 시험. [P2 문서](https://github.com/hibi89/candle_scraper/blob/feature/candle-pattern-analyzer/docs/CUSTOM_FORMULA_BATCH_P2_20261111.md).
+
 ## 2026-11-11 KST — 코인 분석기 멀티 수식 엔진 격리개발 인수인계
 1. 목표: 크몽 70% 미만 상품 중 코인 패턴 분석기 고객 맞춤 수식 개발; DBVORA 55% stalled on Windows/full repo gates.
 2. 구현: 한 번에 16 JSON 수식 다중 DB 검색과 안전 CSV, SMA/EMA/BB/threshold/cross/AND-OR-NOT. 격리 브랜치로 병렬 작업 충돌 회피; feature/candle-pattern-analyzer의 단일 수식 구현 보존.
