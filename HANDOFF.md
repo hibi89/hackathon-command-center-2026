@@ -1,3 +1,16 @@
+## 2026-11-11 KST — 크몽 8종 70% 계획 및 DBVORA P0-08
+
+1. **목표:** 활성 16종 중 70% 미만 8종을 최초 최종 납품 기준으로 70%까지, KIC/PayPal 긴급 제출과 고객 원본 분리.
+2. **변경:** 우선순위 DBVORA→코인 패턴→RAG→SMAX→Astra→EAI→PC CARE→CUBE. DBVORA P0-08 generated HTML/observation failure-cleanup two-step code + release gate 324→336.
+3. **검증:** DBVORA exact helper blob `060b48cd`, local isolated Python 7 PASS/0 FAIL; full SQLite integration 신규 5·전체 >=336·Windows/Node/실서비스 **NOT RUN**. 다른 15종 신규 검증 없음.
+4. **상태:** 8종 모두 기존 기록된 % 유지(55/50/55/50/52/50/50/50), 전체 1015%p /16=63.4375%. 70% 목표 미달·상용 RELEASE HOLD. 목표 충족 시 평균 72.6875%는 가정.
+5. **차단:** DBVORA private full checkout in current runtime unavailable; partial inodes cleanup cannot prove crash atomicity. Paid Actions/real DB/user Windows gate 별도 승인.
+6. **저장소:** hub `hibi89/hackathon-command-center-2026@kmong-productization`; product `hibi89/DBVORA@feature/p0-db-map` code `0518269d`→`9d1d4b08`, doc/gate `098d027e`; this hub HEAD must be refetched after write.
+7. **배포:** DBVORA local-only Python3.11+ CLI/HTML, Vercel/Production 해당 없음. No new release or payment/credentials/permissions.
+8. **원본/복구:** original data and main/develop/Production unchanged. Normal Git revert for code changes; public hub has evidence only, not private source.
+9. **다음:** full checkout targeted tests then release gate >=336; if blocked, independently shift to coin analyzer without false percentage increases. Work on product branch, update SHA/CI/hub evidence at milestones.
+10. **기준:** 2026-11-11 KST; confirmed source+helper isolated test only, customer/Windows/whole integration unverified. [plan](docs/audits/KMONG_TO_70_PRIORITY_20261111.md).
+
 ## 2026-11-10 KST — 크몽 Lightning Azent P15/P16 70% 잠정 인수인계
 
 1. **목표:** 50~69% 우선 후보 Lightning Azent에서 70%까지 기능 진척, HAE와 LA 실행 근거 무결성. Python3.11+ 로컬 deterministic IR/SQLite.
