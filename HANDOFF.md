@@ -1,3 +1,16 @@
+## 2026-11-11 KST — DBVORA P0-09 체크포인트 (크몽 70% 계획)
+
+1. 목표: 크몽 70% 미만 8종 우선순위 1번 DBVORA에 고객 행 자료 접근 없는 스키마 점검 추가.
+2. 구현: catalog-only PK/FK/index heuristic review + HTML textContent UI + explicit unavailable fallback, no external network/DB writes; P0-09 commit `5bbbc5ed`.
+3. 검증: exact SHA Git blob `25d671c6` + test `7a76c2af`, local in-memory SQLite 9 PASS/0 FAIL, prior generated-file helper 7 PASS; full-source HTML 2 tests + >=347 all regressions/Windows/Production not run.
+4. 상태: DBVORA 55% unchanged, all 16 products 63.4375%; 70% not yet achieved. RELEASE HOLD.
+5. 차단: full private repo checkout unavailable to isolated container; avoid unsupported pass claims. Warning labels are advisory, not confirmed query performance defects.
+6. Git: `hibi89/DBVORA@feature/p0-db-map:5bbbc5edac4d6f11b3f1e770247c421c964b3bb1`; hub `hibi89/hackathon-command-center-2026@kmong-productization`, hub SHA verify after this write.
+7. Env/deploy: Python3.11+ local SQLite/HTML intended, Linux Python3 isolated tests only. Vercel/Production not applicable, no payment/credentials.
+8. Originals: customer DB, archive, main/develop and other repositories unchanged. Git history rollback available, no paid Actions.
+9. Next: full authorized checkout `python -B -m unittest -v tests.test_schema_review tests.test_schema_review_ui tests.test_publication_cleanup tests.test_workspace_publication`, then `python -m scripts.verify_release_gate` (>=347). Fix failures and verify Windows browser before uplift.
+10. KST/grounding: 2026-11-11, Git SHA and isolated 16 actual tests, full integration/market release unverified; [P0-09](https://github.com/hibi89/DBVORA/blob/feature/p0-db-map/docs/P0_09_SCHEMA_REVIEW_20261111.md).
+
 ## 2026-11-11 KST — 크몽 8종 70% 계획 및 DBVORA P0-08
 
 1. **목표:** 활성 16종 중 70% 미만 8종을 최초 최종 납품 기준으로 70%까지, KIC/PayPal 긴급 제출과 고객 원본 분리.
