@@ -1,3 +1,15 @@
+## 2026-11-11 KST — 해총 코인 패턴 분석기 P4 잠정 65% 인수인계
+1. 목표/요구/기술: 크몽 16종 중 70% 미만 코인 패턴 분석기 고객 맞춤 수식 50→70, Python3.11+ 로컬 read-only SQLite 및 HTML/CSV.
+2. 구현: canonical P1 단일, P2 같은 DSL 16규칙 배치, P3 5템플릿, 신규 P4 coin_analyzer.py single/batch 통합 CLI·coin_report.py CSP 오프라인 보고서와 고객 BAT/예제. 기존 엔진/Collector 비수정, 경쟁 draft PR #1 미병합.
+3. 실제 검증: P4 Linux3.13.5 21/21 PASS (mock CLI 8 + real CSV/HTML 13), Chromium 1/1 HTML render PASS, 정확 SHA Git blob 9개. 이전 P1/P2/P3 36/36 PASS는 다른 SHA, 신규 P4 실제 4 E2E/whole suite/Windows/실고객DB NOT RUN.
+4. 상태: 코인 최종상품 평가 50→**65% 잠정**(+15), 목표 70까지 **5%p**, 16종 평균 1015/16=63.4375→1030/16=**64.375% 잠정**. 상품 판매 RELEASE HOLD.
+5. 장애/회피: 중복 JSON DSL 독립 PR #1과 정본 P2 병합 충돌 방지; primary P1/P2 재사용. Private full clone DNS 제한으로 새 P4 실제 E2E 미실행; 없는 결과 성공 주장 금지.
+6. 저장소/브랜치/SHA: hibi89/candle_scraper feature/candle-pattern-analyzer P4 code 33ed7ae00341016b8c6e42a43eb0f6d610e0b742, docs 0a846d7a206e87fb16475a64c60e650cb15f3f5c; hub hibi89/hackathon-command-center-2026 kmong-productization new SHA verify after commit.
+7. Production/execution: python -W error::ResourceWarning -m unittest -v test_custom_formula_scanner.py test_custom_formula_batch.py test_custom_formula_builder.py test_coin_cli_dispatch.py test_coin_report.py test_coin_analyzer.py; then entire source test discovery. Linux local partial only, Windows3.11/EXE not verified, Vercel N/A.
+8. Originals/backups/security: Main collector, legacy candle analyzers, customer E: SQLite/WAL/SHM, old CSV/ZIP, tokens, licences, permissions unchanged. Normal Git revert available, no paid CI or external data upload.
+9. Next: on complete authorized current feature checkout run 4 P4 canonical E2E plus P1/P2/P3 and whole repo; if passed, re-evaluate 65→70; Windows/3.6GB customer DB/chart parity, EXE and exchange licensing still separate for commercial release.
+10. 2026-11-11 KST; current Git remote SHAs verified before and after, test scopes and blocked gates explicitly differentiated. Technical evidence docs/COIN_ANALYZER_P3_UNIFIED_20261111.md.
+
 ## 2026-11-11 KST — 코인 분석기 P2 통합 / 해총 최신
 1. 목표/기술: 크몽 70% 미만에서 DBVORA 다른 방 개발을 제외, 코인 패턴 고객별 JSON 수식 안전한 단일 DSL/배치 통합. Python3.11+ stdlib, SQLite read-only.
 2. 변경: 기존 P1를 기준으로 16규칙 1pass 배치·진행률/결과 CSV/규칙SHA; P1 malformed JSON TypeError 3건 수정. 독립 PR #1은 기존 배치 DSL이 달라 unmerged/draft 유지.

@@ -31,3 +31,8 @@
 
 ## Commit/rollback policy
 Use existing independent feature branches only; maintain source and customer data. Verify SHA, author/committer and CI at each major milestone. Stop and pivot after unrecoverable repeated environment failures; no false PASS. New evidence required before raising %.
+
+## 2026-11-11 KST — after P4, priority #2 Coin Analyzer provisional 65%
+- Previous priority table above is the **starting baseline**. Coin Pattern Analyzer: **50→65% provisional** based on canonical P1/P2 shared-DSL single/multirule search, P3 five customer template patterns, and P4 unified CLI + offline HTML reporting. Code SHA `33ed7ae00341016b8c6e42a43eb0f6d610e0b742`. Product 70 remains **5pp away**, not marked complete; required true P4 P1/P2 E2E four and full regression remain NOT RUN, Windows/real 3.6GB DB/EXE/license HOLD.
+- Isolated P4 CLI dispatch (mock) 8 + actual safe report 13 **21/21 PASS** at exact newly pushed blobs; separate prior P1/P2/P3 36 PASS, distinct Git SHA. The experimental independent batch Draft PR #1 remains unmerged to avoid duplicate rule DSL.
+- Current active-product arithmetic = earlier 1015%p +15%p = **1030%p** /16 = **64.375%** provisional. Do not rewrite earlier historical 50% baseline or count old draft code in final-product ratio. Actual 70 requires same-SHA acceptance. Original customer data, main, release unchanged.
