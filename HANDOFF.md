@@ -1,3 +1,15 @@
+## 2026-11-11 KST — Coin Pattern P1 해총 인수인계 (DBVORA 제외)
+1. 목표/기술: 크몽 70% 미만 7개 후보 중 긴급 코인 패턴 분석기 50→70% 추진. 사용자 맞춤 JSON 조건을 Python3.11+ 오프라인 SQLite 로컬 스캔하는 독립 엔진. DBVORA는 타 채팅이 작업 중으로 이번 변경 대상 제외.
+2. 변경/결정: 임의 Python 규칙 파일 실행보다 허용목록 DSL 선택(비용 0, 사용자 DB 보안·재현성 우세), SMA/EMA/BB·비교·교차·논리식, SQLite read-only, CSV 원자 출력, SHA256 규칙 추적. 기존 collector/고정 분석기는 불변.
+3. 테스트: 로컬 Linux Python3.13 `python -W error -m unittest -v test_custom_formula_scanner.py` 15 PASS/0 FAIL, compileall PASS. 신규 실제 GitHub 코드·테스트 blob SHA 대조 일치. 원본 전체 회귀/Windows/3.6GB DB/차트/EXE NOT RUN.
+4. 상태: 개발 feature 반영 완료, 최종상품률 **50% 그대로**, 70% 미달, 활성 16종 총 1015%p /16=63.4375%, RELEASE HOLD.
+5. 오류·제약: 고객 원본 DB 및 native Windows 접근 불가; 전체 private checkout CI 검증과 판매 라이선스 미확인. 유료 Actions/실데이터 반출·원본 수정 강행 금지. 독립 합성 테스트 15 PASS를 전체통과로 확대하지 않음.
+6. GitHub: product `hibi89/candle_scraper@feature/candle-pattern-analyzer:cfb4b821fdd650203b7d63561c5b11c20ebfd50c`, source `custom_formula_scanner.py`, test `test_custom_formula_scanner.py`, doc `docs/CUSTOM_FORMULA_SCANNER_20261111.md`. hub `hibi89/hackathon-command-center-2026@kmong-productization`, 최신 HEAD 본 문서 커밋 후 재조회.
+7. Production/환경: 로컬 Python3.11+ CLI 및 별도 CSV. GitHub commit SHA CI status checks 목록 0건 관측, 전체 Actions/Windows 미확인. Vercel 미적용.
+8. 원본/복구/보안: 로컬 고객 E: SQLite/WAL/SHM, 과거 ZIP/CSV, 수집기 main 보존, 별도 feature commits Git revert 가능, 비공개 소스 전문 공개 hub로 복제하지 않음.
+9. 다음: authorized full repo checkout→신규·고정 스캐너·전체 수집기 회귀→Windows DB 복사본/차트·성능→고객용 EXE/UX/상업권 확인→완성률 70% 재판정. DBVORA 타 담당과 겹치는 수정 금지.
+10. 기준시각 2026-11-11 KST, 실제 검증 Linux 격리 합성 15개 + GitHub source blob/commit, 나머지 미검증. 상세 `docs/audits/KMONG_COIN_PATTERN_CUSTOM_FORMULA_P1_20261111.md`.
+
 ## 2026-11-11 KST — DBVORA P0-12 해총 체크포인트
 1. 목표/환경: 70% 미만 8개 상품 중 1순위 DBVORA 검증; local SQLite, offline HTML, Node22, Chromium+Playwright Python3.13.
 2. 완료: 기존 DOM test_ui_dom.cjs + 새 SVG test_workspace_html_dom.cjs 실제 Node TAP 1/1 PASS; 합성 HTML에서 Chromium3/3 PASS; 선택형 browser_workspace_smoke.py GitHub commit 55749bfc.
