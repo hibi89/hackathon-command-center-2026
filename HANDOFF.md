@@ -1,3 +1,15 @@
+## 2026-11-11 KST — DBVORA P0-11 해총 인수인계
+1. 목표/기술: 70% 미만 8종 중 1순위 DBVORA 55→70%, SQLite readonly/HTML schema-graph.
+2. 구현: P0-10 ASCII-only FK target 판정과 P0-11 SVG 연결선 누락 간 불일치 수정. No Unicode casefold or data rewrite, new VM DOM regression and Node gate wiring.
+3. 테스트: local Node22 subset 5 assertions PASS; earlier Python isolated 22 PASS. Real new full-source JS DOM test / full >=355 Python and Windows/production not run.
+4. 상태: DBVORA 55% unchanged, 16-product avg 1015/16=63.4375%, RELEASE HOLD; 70% not reached.
+5. 실패/원인: legacy JS names.indexOf case-sensitive despite SQLite metadata case-insensitive. Source-backed bug review; private checkout DNS unavailable; no unapproved CI.
+6. Repo/SHA: private hibi89/DBVORA feature/p0-db-map code 47e9b7c8 and docs 1b16d7e9; hub hibi89/hackathon-command-center-2026 kmong-productization SHA verify after this commit.
+7. Env: Linux Node22 isolated; Windows Python3.11/offline actual browser unverified, Vercel/Production N/A.
+8. Original/security: no customer data/files/credentials, archives, main/develop, billing, domain or external transfer changes. Git revert available.
+9. Next: complete authorized checkout run node --test tests/test_ui_dom.cjs and python -m scripts.verify_release_gate (>=355 Python), then Windows browser and archive safety; if blocked, pivot to next ranked product without fake score changes.
+10. 2026-11-11 KST source/code current and subset verified; not integrated product acceptance. Detail P0-11 doc.
+
 ## 2026-11-11 KST — DBVORA P0-10 해총 인수인계
 1. 목표: 크몽 최종완성 70% 미만 8종 우선순위 1번 DBVORA의 SQLite 관계도 정확성.
 2. 구현: ASCII-only FK catalog target comparison, no Unicode casefold/DB writes. Source commit a8169a969db919f336a2fc68343a63f291513960.
