@@ -1,3 +1,15 @@
+## 2026-11-11 KST — DBVORA P0-12 해총 체크포인트
+1. 목표/환경: 70% 미만 8개 상품 중 1순위 DBVORA 검증; local SQLite, offline HTML, Node22, Chromium+Playwright Python3.13.
+2. 완료: 기존 DOM test_ui_dom.cjs + 새 SVG test_workspace_html_dom.cjs 실제 Node TAP 1/1 PASS; 합성 HTML에서 Chromium3/3 PASS; 선택형 browser_workspace_smoke.py GitHub commit 55749bfc.
+3. 증거/범위: 정확한 UI/test Git blob 확인, inline JS 6575자/FNV1a 6e298a23, console0/network0; 원본 전체 HTML/CSS 미재구성, Node는 실제 소스 JS 테스트, Chromium은 합성 셸+원본 inline JS. Python >=355과 Windows/NTFS 미실행.
+4. 상태: DBVORA 최종 55% unchanged, 16상품 평균 63.4375%, RELEASE HOLD, 70% not yet reached.
+5. 차단/피벗: Chromium file:// ERR_BLOCKED_BY_ADMINISTRATOR; explicit document-only Chromium 3 PASS, native local file open unverified. Full private clone DNS blocked, no repeat blind attempt.
+6. 저장소/브랜치/SHA: hibi89/DBVORA feature/p0-db-map source 55749bfc, docs c91aa69b; hub hibi89/hackathon-command-center-2026 kmong-productization HEAD verify after update.
+7. 실행/배포: optional browser script requires Playwright+Chromium only when invoked; Windows 3.11 and full repo/regression/Production not verified or not applicable; no Vercel.
+8. 원본/보안: no customer DB or secrets/billing/external data/archive changes; main/develop and other 15 product repos untouched; Git history rollback supported.
+9. Next: full authorized private checkout and python -m scripts.verify_release_gate >=355, node --test tests/test_ui_dom.cjs; unrestricted browser strict file URL; archive safety before percentage uplift.
+10. 2026-11-11 KST; evidence docs/P0_12_BROWSER_SMOKE_20261111.md; SHA and test scopes specified.
+
 ## 2026-11-11 KST — DBVORA P0-11 해총 인수인계
 1. 목표/기술: 70% 미만 8종 중 1순위 DBVORA 55→70%, SQLite readonly/HTML schema-graph.
 2. 구현: P0-10 ASCII-only FK target 판정과 P0-11 SVG 연결선 누락 간 불일치 수정. No Unicode casefold or data rewrite, new VM DOM regression and Node gate wiring.
