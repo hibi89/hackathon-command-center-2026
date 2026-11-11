@@ -47,3 +47,8 @@ KIC는 `hibi89/hibi89-kic-proofinvest` 저장소 `lead/kic` 브랜치의 [`docs/
 - PayPal: [`hibi89/hibi89-paypal-ai-hackathon` `lead/paypal` `docs/roles/lead/TO_HACKATHON_LEAD.md`](https://github.com/hibi89/hibi89-paypal-ai-hackathon/blob/lead/paypal/docs/roles/lead/TO_HACKATHON_LEAD.md).
 - UGREEN: [`hibi89/hibi89-ugreen-nas-hackathon` `lead/ugreen` `docs/roles/lead/TO_HACKATHON_LEAD.md`](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/roles/lead/TO_HACKATHON_LEAD.md).
 - 두 저장소의 각 `main`과 총괄 1개·기능 3개 브랜치, 모든 역할 필수 운영 문서 원격 검증 완료. 그러나 제품 코드·실 API/SDK·CI·배포·공식 제출은 아직 없다.
+
+## 크몽 상품 개발 종료 시 해총 완성률 동기화 (2026-11-11)
+- 현재 활성 16종과 최신 SHA의 정본: [크몽 현재 완성률](docs/audits/KMONG_16_CURRENT_20261111.md). 상품 작업·검증·완성률 변경의 같은 완료 단위에서 제품 HANDOFF/STATUS와 해총 KMONG_PRODUCTIZATION·현행 16종 목록·해총 STATUS/HANDOFF를 함께 갱신한다.
+- [필수 검증·동기화 프로토콜](docs/audits/KMONG_COMPLETION_SYNC_PROTOCOL_20261111.md). 문서-only/테스트 건수만으로 숫자 상향 금지, 정확 SHA·CI·미검증·RELEASE HOLD 구분. 동기화 실패 시 KMONG_HUB_SYNC_PENDING로 보고하고 거짓 완료 주장 금지.
+- **기술적 자동 동기화는 없음.** 다른 채팅/브랜치 커밋만으로 중앙 퍼센트는 변경되지 않는다. 자동 웹훅/토큰/CI 권한 변경은 별도 승인 사항.
