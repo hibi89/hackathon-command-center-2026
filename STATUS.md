@@ -1,6 +1,6 @@
 ## 2026-11-12 KST — DBVORA P3-06 scoped read-only archive recovery review; score unchanged
-- Product `hibi89/DBVORA@feature/p0-db-map` HEAD `ee7ee73952a918249a0ee8a4779741ae5372b1f2`; new local-only synthetic ledger/archive reconciliation, no writes/retries/automatic acceptance.
-- Isolated local reconstructed Linux Python **16 PASS/0 FAIL/0 SKIP**; full original-source Python >=476, Node/Windows/NTFS/live PostgreSQL not run. Product 70% provisional unchanged, **85 NOT MET**, RELEASE HOLD.
+- Product `hibi89/DBVORA@feature/p0-db-map` HEAD `c11683e854275cfe28571c7cd6e996a0a78dcb62`; new local-only synthetic ledger/archive reconciliation, no writes/retries/automatic acceptance.
+- Isolated local reconstructed Linux Python **17 PASS/0 FAIL/0 SKIP**; full original-source Python >=477, Node/Windows/NTFS/live PostgreSQL not run. Product 70% provisional unchanged, **85 NOT MET**, RELEASE HOLD.
 - Current active 16 total **1196%p / mean74.75% / 13 below85 / 3 at-least85**, RAG Studio 73 and SMAX² 85 untouched. No release/permission/secret or other code changes.
 - Detailed P3-06 evidence in private product repository; hub manual sync only.
 
