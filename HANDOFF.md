@@ -1,3 +1,17 @@
+## 2026-11-11 KST — HAE P4 73% source CI recovery mirror (10-point handoff)
+1. 목적/기술: 크몽 HAE 최종상품 73→85% 목표, 로컬 HAE·Lightning Azent·SQLite·DBVORA p0-01.v1 안전 검증. 공개 상황실은 제품 완료율 메타데이터만 반영.
+2. 구현/결정: 실제 HAE 원격 source는 이미 Windows temp SQLite handle release, 8.3 aliases/junction/reparse tests, port probe 회귀를 최소 수정했고, 진짜 LA SQLite와 DBVORA 계약 **모의 HTTP 서버** E2E를 추가했다. 기존 바이너리 배포 재생성은 사용자 승인이 필요해 보존.
+3. 명령/검증: HAE `cd apps/ax-flow && python -m unittest discover -s tests -v`, source SHA `14c8a7b75b079c8904792cbf3eaae7d1eeded60b` [Actions #42976273517](https://github.com/hibi89/HAE/actions/runs/42976273517) Windows/Ubuntu 각각 204 중 195 PASS/2 FAIL/7 SKIP/0 ERROR, 신규 2 E2E 양OS PASS; 전체 CI **FAILURE**. 실 DBVORA 프로세스는 미검증.
+4. 상태: 크몽 HAE **73% 잠정 그대로**(85까지 12%p), RELEASE HOLD. 16종 합계 1166%p, 평균72.875%, >=85 1종, <85 15종, 70 미만 0종.
+5. 실패/중단/대안: 배포된 기존 .pyz 및 ZIP이 신규 business/schema/LA 소스와 불일치하는 두 `test_shipped_package` failure. skip/overwrite/CI green 주장 금지. 별도 새 버전 후보(A: 승인 후 source parity+Windows 검증) 또는 기존 원본 보호하면서 기능 개발(B: 현 선택).
+6. 레포/SHA: `hibi89/HAE@feature/axflow-mvp` 테스트 SHA `14c8a7b75b079c8904792cbf3eaae7d1eeded60b`, HAE docs HEAD `b69d71eca3c2ac0cb5cc7e1bf9295d065630c09e`; 중앙 `hibi89/hackathon-command-center-2026@kmong-productization`는 이 동기화 커밋 SHA 별도 확인. 세부 기술은 private HAE의 `docs/HAE_CI_RECOVERY_P4_20261111.md`.
+7. 배포/환경: HAE standalone 로컬, Vercel/Production 미적용. GitHub-hosted Python3.11 Windows/Ubuntu synthetic CI만, 실 고객 Windows10 미검증.
+8. 원본/백업/인증/수정금지: 비공개 소스·고객 DB·토큰·환경변수는 public 중앙에 반입하지 않음. HAE 원본 zip/pyz, Git history, main/LA/REA_APP, DBVORA repo, 다른 크몽 상품/배포 불변.
+9. 다음 우선순위/승인: versioned new package 후보 및 Win native parity 승인→실 DBVORA read-only 합성 연동→OAuth/Gmail/Sheets 실계정 동의→고객형 3 workflow/installer 안전검증. 완료율 가산은 증거와 확정 상품 요건 충족 시만.
+10. 갱신: 2026-11-11 KST; 실제 GitHub SHA·Actions 로그로 확인한 synthetic 범위. HAE 최신 docs HEAD와 central 새 HEAD 구분하며, 다른 채팅 업데이트가 후속 발생하면 재조회.
+
+---
+
 ## 2026-11-11 KST — Kmong <85% urgency TOP3 and HAE P3 73% sync
 1. Objective/confirmed tech: user requested urgent TOP3 among active 16 product scores below 85%, then immediately develop TOP1. Ranked (1) HAE 70 prework due to failed cross-platform full CI/common workflow foundation, (2) SMAX² 70 due divergent PREP feature/native E2E missing, (3) RAG Studio AX Edition 70 due private SMAX integration/customer workflow gap. Relative scores are prioritization criteria, not release readiness.
 2. Done/tradeoff: opted for zero-cost local Python safety fixes plus synthetic SQLite schema metadata, versus unauthorized direct customer/OAuth/DBVORA external integration. HAE feature branch 8c016035 fixes cp1252 Korean console path and port error contract; 4f19b367 adds synthetic-only schema inventory/CLI with no rows or network and source SHA receipt, owner-review names. Original checked-in ZIP and .pyz unchanged. HAE 70→73 provisional, below 85.
