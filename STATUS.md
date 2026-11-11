@@ -1,3 +1,8 @@
+## 2026-11-12 KST — DBVORA P3-07 local owner offline review, 72% provisional
+- hibi89/DBVORA@feature/p0-db-map HEAD adbad6cc2eed8d930ec74fd98e8fad151b2e598e. New synthetic-only manual request review HTML+new-only file and no replay/delete/network; P3+1 and P4+1 engineering rubric => 70→72, 85 not reached.
+- Exact GitHub P3-07 source/test blob local SHA match; local Python3.13.5 isolated 39/39 PASS (22 new), Chromium injected HTML five table rows, 0 external requests/JS errors. Full original >=499/Node ZIP/ZSTD, Windows/NTFS, real PG TLS and direct file:// untested.
+- Current 16 roster total **1210%p / mean 75.625%**, >=85 4, under85 12, under70 0; RAG85/SMAX85 remain, all 16 RELEASE HOLD, Vercel DBVORA N/A.
+
 ## 2026-11-12 KST — RAG Studio 85% provisional engineering sync to Kmong active16
 - Confirmed RAG_STUDIO feature SHA 0e5f1b8812638cfa1deedf167a1b485efcf0837d: P5.47–P5.53 owner-mapped CSV read-only metric/citations + held document source + review-only integrity-checked folder. Linux Node22.16 scoped **63/63 PASS**; synthetic Chromium UI↔real CLI source lines; standalone bundle local HTTP PASS. GitHub Actions [43096408958](https://github.com/hibi89/RAG_STUDIO/actions/runs/43096408958) FAILED with **0 Jobs** (pre-run, full/Windows unverified); real private SMAX/Windows/customer/rights not tested.
 - Central provisional score RAG 73→85 (+12), SMAX² 85 protected, 16 active scores total **1208%p / mean 75.5% / >=85 4, <85 12, <70 0**. All RELEASE HOLD, no deployment/permissions/source data change. Internal engineering scope estimate ≠ commercial launch readiness.
