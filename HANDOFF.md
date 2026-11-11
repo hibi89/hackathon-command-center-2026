@@ -602,3 +602,15 @@
 8. 원본·보안: 사용자 고객 CSV/원본 RAG ZIP/Private SMAX/SOVIA/원본 DB·비밀정보 미수정, 실데이터 전송 및 과금/권한 변경 0. 합성 exporter만 허용, 검토 승인 NOT_GRANTED, customer indexed false, 임시 테스트 디렉터리 정리, 일반 Git revert 복구 가능.
 9. 다음: 70→출시 100 작업은 실제 신뢰된 Private SMAX Native/동의서·권리 확인→비합성 CSV/PDF/DOCX와 SQL+문서 인용 E2E→Windows 3대 실제 설치·브라우저/EXE/SmartScreen→라이선스/환불·지원정책. 실제 고객자료·배포·권한·유료작업 사전 승인 필요. 합성 전용 PASS를 상용 PASS로 치환 금지.
 10. 일시 및 기준: 2026-11-11 KST, Github Actions actual source SHA에 대한 합성 CLI·Linux/Windows 검증 완료; 테스트 뒤 docs-only commit은 기능 검증 재실행으로 주장하지 않음. 상세 [P550 evidence](https://github.com/hibi89/RAG_STUDIO/blob/feature/p550-mapped-cited-journey/docs/P550_70_PROVISIONAL_MILESTONE.md).
+
+## 2026-11-11 KST — SMAX² 70% 잠정 개발 인수인계 (10항)
+1. 목표/기술: 크몽 SMAX² SELF+PREP 중간 목표 50→70%; Node20+ 오프라인, Private hibi89/SMAX, 승인 전 모든 입력 검토.
+2. 변경/판단: P8 명시적 로컬 매핑 HTML/JSON(+5), P9 원본 SHA/P3 PREP-SELF 연결(+5), P10 P5/P6 검토 영수증(+5), P11 신규 로컬 HTML/JSON/SHA 검증 패키지(+5); P12 연결 CLI 중복 가산 없음. 자동 추론·원격 업로드 대신 사람 선택/검증 우선.
+3. 실제 테스트: Linux Node22.16 신규 Native 파일 **17 PASS/0 FAIL/0 SKIP**, P9 서비스와 P11 렌더링은 테스트 대체. Chromium 로컬 HTML 내용 렌더/매핑 JSON 다운로드 PASS, 요청·페이지 오류 0; 직접 file:// 환경정책 차단. 기존 Private P3·P6 실제 원본 V8 격리 합성 100.00−10.00=90.00 및 위조 거부(해시/Buffer 모의). 완전 Private npm 회귀·실파일 CLI·Windows 고객 설치 미실행.
+4. 상태: 기능가중치 엔지니어링 **70% 잠정**, 실고객/출시 전 QA·권리·Windows·통합 Native 대기, 상용 RELEASE HOLD.
+5. 실패·대안: 일부 문자열 전송으로 원격 Git Blob 불일치 1회 발생 후 테스트한 바이트와 일치하도록 수정. P11 manifest 필드 숫자 검증 8/9 문제 수정 후 Native 7/7 PASS. 직접 file://는 관리정책 ERR_BLOCKED_BY_ADMINISTRATOR여서 문서 주입 검증만 수행. Private 전체 checkout 환경 제약 시 동일 실패방식 반복하지 않음.
+6. 저장소·브랜치: private `hibi89/SMAX@feature/prep-self-owner-mapping-p8`, 기반 안정 `preprocessing` SHA `3830cb276f560d58e8181ba384d9cbe64815737c`; 중앙 `hibi89/hackathon-command-center-2026@kmong-productization`. 실제 HEAD는 최신 재조회. 새 주요 경로 preprocessing/self-owner-mapping.mjs, self-owner-preview.mjs, self-owner-cli.mjs, self-owner-delivery.mjs, self-owner-delivery-cli.mjs, tests/self-owner-*.test.mjs, 문서 docs/SMAX_PREP_SELF_P8_P12_70_20261111.md.
+7. 실행/배포: node preprocessing/self-owner-cli.mjs --form /absolute/source.csv /absolute/new.html; --preview /absolute/source.csv /absolute/draft.json; node preprocessing/self-owner-delivery-cli.mjs --package /absolute/source.csv /absolute/draft.json /absolute/new-directory. 명령의 무스텁 실제 E2E 실행은 아직 검증 전. Vercel/Cloudflare Production 미적용.
+8. 원본/보안·복구: SMAX stable main/frontend/backend/preprocessing 불변. 합성자료만 시험, 고객 파일/비밀/과금/권한/외부 업로드 없음. feature 기반 SHA 복구 가능, 강제병합 금지.
+9. 다음 일: 전체 private Native npm test 및 test:preprocessing 같은 SHA 실행 → P8~P12 실제 파일 CLI/Windows 브라우저/패키지 E2E → 계정·고객 권리·라이선스·출시 게이트 확인. 병합/공개/판매 및 실고객 접근은 별도 승인.
+10. 검증기준: 2026-11-11 KST, 기능개발 범위만 70% 잠정. 중앙 16종 합계 **1070%p**, 평균 **66.875%**, 70% 미만 5종. RELEASE HOLD. 근거 SMAX feature docs/SMAX_PREP_SELF_P8_P12_70_20261111.md.
