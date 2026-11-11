@@ -650,3 +650,15 @@
 8. 원본/보안·복구: SMAX stable main/frontend/backend/preprocessing 불변. 합성자료만 시험, 고객 파일/비밀/과금/권한/외부 업로드 없음. feature 기반 SHA 복구 가능, 강제병합 금지.
 9. 다음 일: 전체 private Native npm test 및 test:preprocessing 같은 SHA 실행 → P8~P12 실제 파일 CLI/Windows 브라우저/패키지 E2E → 계정·고객 권리·라이선스·출시 게이트 확인. 병합/공개/판매 및 실고객 접근은 별도 승인.
 10. 검증기준: 2026-11-11 KST, 기능개발 범위만 70% 잠정. 중앙 16종 합계 **1070%p**, 평균 **66.875%**, 70% 미만 5종. RELEASE HOLD. 근거 SMAX feature docs/SMAX_PREP_SELF_P8_P12_70_20261111.md.
+
+## 2026-11-11 KST — 크몽 ASTRA 70% 잠정 결과 해총 10항
+1. **목표·기술:** 관리16종 ASTRA PDF Redesigner 52→70%, React/TS/Vite/PDF.js/Electron, 원본 PDF/기존 IDB 안전 유지.
+2. **완료:** STEP4 오프라인 스타일 프리셋 JSON 이동·미리보기/적용·Undo(+5pp); STEP5 로컬 레퍼런스 스타일 재사용(+4); STEP7 수동 원본 검토/원본 PDF·문서 내용 SHA 영수증(+5); 독립 오프라인 파일 해시 비교(+4). 기존 8 BASIC 디자인 중복진척 0.
+3. **테스트:** 기능 SHA `dab6e365f5c9d57e285eaf71cb840ecc41513c6e`, Actions Chrome/Edge #42957762014 **SUCCESS** Node107/107, build, 실제 A4·V2/STEP3 보존; Windows NSIS #42957762000 **SUCCESS** Node107/107·Desktop16/16·설치/업그레이드. 실제 Windows 구매자 PC/고객 원문은 별도 미검증.
+4. **상태:** ASTRA **70% 잠정 엔지니어링**, 상용 NO-GO/RELEASE HOLD; 관리16종 누적 **1088%p/68.0%**, 70 미만4종. 이 추정은 원본7단계 설계 완성률, 실고객 수용/유료 판매율과 별개.
+5. **오류:** 신규 TS narrow 실패, A4 픽셀→pt 허용오차 잘못 가정, `updatedAt` 테스트 비교점 오류, Windows URL pathname 실행경로 오류를 실제 CI 로그로 발견·수정. 최종 SHA 정확 재실행 Linux 2직업/Windows1직업 SUCCESS. 비즈니스·원본 데이터 오류 근거 없음.
+6. **코드·SHA:** `hibi89/astra_pdf_redesigner@feature/astra-p52-to-p70-20261111`; 부모 원본 integration SHA `b80830ab3219dbcf88556d60ce2c47c2dcec7764`; 새 `src/step4/stylePreset.ts`, `src/step3/reviewReceipt.ts`, `scripts/verify-source-review.mjs`, Workspace/테스트/CI. 해총 `hibi89/hackathon-command-center-2026@kmong-productization`; 최신 문서 HEAD은 반영 후 재조회.
+7. **배포/실행:** `npm test`, `npm run build`, Chrome·Edge real CI, Windows Electron/NSIS CI; 별도 파일 검증 명령 `node scripts/verify-source-review.mjs receipt.json original.pdf project.localdoc.json` (절대경로). Vercel/Production 미적용, 서명·실판매 없음.
+8. **원본·보안:** 원본 설계/PNG, 기존 main/integration/Draft PR3/4/9, customer PDF, IndexedDB/STEP1 원문 불변. 합성 PDF 테스트만, 고객자료 업로드·LLM 다운로드·권한/결제·외부전송 없음. 영수증은 콘텐츠 복원/원본 일치의 의미론적 완전성 인증이 아님.
+9. **다음:** 우선 다른 방 DBVORA 유지. 70 미만 대상 EAI50→AXMART PC CARE50→AXMART³ CUBE50. ASTRA 70→출시에는 실제 문서 5~10개 원본 대조, licensed GGUF 로컬 추론, PRO20/BUSINESS30 기능, 구매자 Windows/서명·라이선스가 필요; 외부 데이터·유료·배포·원본 변경 사용자 사전 승인.
+10. **기준:** 2026-11-11 KST, 기능 SHA에서 GitHub Actions 실제 SUCCESS, 문서 이후 수정은 기능 검증으로 주장하지 않음. 상세 [ASTRA 중간목표 근거](https://github.com/hibi89/astra_pdf_redesigner/blob/feature/astra-p52-to-p70-20261111/docs/commercial/ASTRA_P70_PORTABLE_STYLE_RECEIPT_20261111.md).
