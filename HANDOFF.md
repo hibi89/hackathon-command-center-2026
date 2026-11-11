@@ -1,3 +1,15 @@
+## 2026-11-11 KST — Kmong Coin source-exact P1-P6 101-test proof checkpoint
+1. Goal: strengthen already achieved provisional 70% engineering milestone for Coin Pattern Analyzer; protect other Kmong products/DBVORA.
+2. Verified: all 19 exact Git source/test blobs matched, scoped P1/P2/P3 CLI/report/P4 evidence/P5 ZIP/P6 selftest full synthetic E2E; no source changes or new dependencies.
+3. Tests: 101/101 PASS, 0 FAIL/SKIP, Python3.13.5 Linux -W error::ResourceWarning; compileall PASS. Whole repo including collector tests/Windows/client data NOT RUN.
+4. State: Coin 70% provisional UNCHANGED; active 16 mean 64.6875% provisional UNCHANGED; RELEASE HOLD.
+5. Constraint/pivot: private git clone DNS refused; GitHub connector fetched exact source with SHA matching and reconstituted local test checkout. This is NOT native Windows proof or customer DB benchmark.
+6. Sources: hibi89/candle_scraper feature/candle-pattern-analyzer docs SHA 8eafcb075959985c4f7aa0757c2e19e192ed27fa; hub kmong-productization SHA to confirm after this update. Details docs/COIN_P6_SOURCE_EXACT_101_SCOPED_20261111.md.
+7. Runtime/deploy: local Python3.13 on Linux; intended Windows3.11, no Production/Vercel, Actions full CI not run.
+8. Original safety: collector main, customer E: DB/WAL/SHM, images/data, old reports/ZIP unchanged. No tokens, permissions, paid resources changed.
+9. Next: whole source-suite test and Windows selftest, offline 3.6GB DB-copy/chart parity, EXE/security/licensing before sale; provisional 70 not a release certification.
+10. Checked 2026-11-11 KST, source exact scope 19 Python files and 101 tests; no real customer source.
+
 ## 2026-11-11 KST — Coin Pattern Analyzer P6 70% provisional completion
 1. **Objective/stack:** advance below-70% Kmong products; coin product P1/P2 safe JSON DSL, P3 HTML/CLI, P4 receipts, P5 ZIP, P6 offline selftest, Python3.11+ SQLite local.
 2. **Delivered:** verified exact SHA across six canonical core source files, added coin_selftest.py and three new test modules; genuine P1-P5 synthetic customer pipeline and ZIP extraction/receipt checked.
