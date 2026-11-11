@@ -824,3 +824,14 @@
 8. Original/security: synthetic CSV only, all content remains in browser, zero requests; no customer credentials/paid costs/billing/perms; product stable main/backend/frontend/preprocessing unaffected. Git prior SHA restoration.
 9. Next work/criteria: full trusted private checkout native suites + actual P18 download→P9/P12/P16 real-file package & HOLD, physical Windows10/11 + Edge file://, SELF product frontend integration, installer/license customer QA, re-evaluate85 only after proof. External paid runner/permissions/Production requires explicit approval.
 10. KST verified at 2026-11-11; exact GitHub source SHA/Node22 isolated/real Chromium set_content, not whole repo/Windows/Production. Current hub roster updated after product docs and percent recompute.
+## 2026-11-11 KST SMAX P18 exact hash vector QA addendum (10 items)
+1. Goal: prevent physical CSV SHA mismatch at block/size boundaries for browser-downloaded P8 draft; retain 85% eventual target.
+2. Method: extract exact embedded standalone `site/owner.html` SHA256 function to isolated Node vm and compare to Node crypto, add test without modifying product UI.
+3. Evidence: Node22/Linux **53 PASS/0 FAIL**, 0..2MiB and SHA padding boundaries; previous P18 portal Native **5 PASS**, Chromium customer flow **14 PASS** remain distinct. Whole Native repo and P8→P16 full E2E NOT_RUN.
+4. Status: 76% provisional retained, goal 85 still 9%p, RELEASE HOLD.
+5. Error/pivot: repeated Chromium downloads same filename throttled; not a SHA defect. Two attempts at same stress then switched to isolated real algorithm comparison and passed.
+6. Refs: SMAX `feature/prep-self-owner-mapping-p8` HEAD `65697b623c33e945d6c864ac1fe66808e5cea3bd`, sha test commit `bdefbee8ef8794f5f926544666eda5df79c31caa`, blob `faaa836ec7b745cb27e2675a13a7addfcab311c3`, suite commit `74074304f3f2a32886337c7badccde5a62e46d72`, proof `docs/SMAX_P18_BROWSER_SELF_OWNER_PORTAL_20261111.md`.
+7. Deployment/runtime: no Vercel/Production or public release; Node20+ only for local CLI and SHA test.
+8. Original/security: no customer data or original changes; no billing/API/permissions; stable preprocessing/main/frontend/backend preserved.
+9. Next: real full repo Node tests and P18 browser JSON→P9/P12/P16 CLI, Windows Edge file:// customer acceptance/installer; evidence-gated 85 decision.
+10. KST checkpoint 2026-11-11, exact GitHub source SHA and local Node22 scope, no Windows or Production verification. Central roster same rates/aggregate.
