@@ -1,3 +1,15 @@
+## 2026-11-12 KST — RAG P5.48 kmong sync (10-point handoff)
+1. Goal: next urgent non-SMAX RAG Studio to 85%, current 73%, still 12%p gap.
+2. Work: local offline owner mapping review/edit/save and SHA/byte strict verification, loopback HTTP static UI with no files API, secrets/import/remote transfer; ranked separate product only.
+3. Tests: Linux Node22.16 19/19 scoped PASS; Chromium 144 synthetic DOM file selection/download/CLI PASS (not real URL); GitHub Actions #43092180863 zero jobs / failure, whole npm/Windows not run.
+4. Completion: RAG 70→73% engineering provisional (+2 mapping/recheck, +1 UI startup); other 15 unchanged, active 16 mean74.375%; all releases HOLD; 85 NOT met.
+5. Failure cause: local git clone DNS inaccessible; file:// browser blocked by admin sandbox, remote Actions zero-job pre-execution; workaround scoped exact Git blob tests + synthetic browser; do not declare production acceptance.
+6. Repo: hibi89/RAG_STUDIO@feature/p546-rag-prep-mapping SHA 1430c244e08de34bf9941c0ac21e68754ba7e9ca; hub kmong-productization parent 060f4c58eb3b91f0ac7ab2a6715b7c6e90026619, new SHA verify post-push. Docs docs/P548_PREP_OWNER_LOCAL_UI.md.
+7. Production: none; local-only Node, user Windows/localhost actual acceptance pending.
+8. Preservation: private SMAX source/customer data untouched; main/develop not promoted; Git parent for rollback; no new external permission/paid services.
+9. Next: fix GitHub Actions pre-job block via authorized platform check; full Windows/Ubuntu npm + browser, owner mapping→read-only cited preview; SMAX producer live and rights with explicit approval.
+10. 2026-11-12 KST, evidence exactly scoped 19 Node tests + synthetic Chromium; central data source current RAG commit and hub last HEAD.
+
 ## 2026-11-12 KST — RAG P5.47 sync handoff (10-point)
 1. Objective: next non-SMAX urgent product RAG Studio; 70%→85% target, 15%p remains.
 2. Delivered: public offline owner mapping editor, explicit types/keys and metadata-only JSON, re-read saved owner JSON vs actual original CSV SHA/size, no SMAX source or import.

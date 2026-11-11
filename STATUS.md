@@ -1,3 +1,8 @@
+## 2026-11-12 KST — RAG P5.48 owner mapping local UI 73% provisional sync
+- Verified `hibi89/RAG_STUDIO@feature/p546-rag-prep-mapping` HEAD 1430c244e08de34bf9941c0ac21e68754ba7e9ca. P5.47 explicit mapping JSON and SHA-bound owner recheck +2 points; P5.48 static-only localhost/Host/Origin/CSP launcher +1 point.
+- Local Linux Node22.16 scoped 19 PASS/0 FAIL/0 SKIP; Chromium synthetic DOM 3-column proposal→download→CLI hold PASS but real file/HTTP URL browser access blocked/unverified. Actions 43092180863 completed FAILURE, 0 jobs; no full CI PASS.
+- Active Kmong 16 scores sum **1190%p** / mean **74.375%**, 14 below85, 2 at least85, 0 below70. RAG **73% provisional**, RELEASE HOLD all. Other 15 scores unchanged.
+
 ## 2026-11-12 KST — RAG P5.47 source work checkpoint
 - 선택: SMAX²/HAE는 타 작업 중이거나 목표 달성, 우선순위 다음 RAG Studio 70→85 목표.
 - 구현: RAG P5.47 offline mapping editor + SHA-pinned draft verifier/CLI, direct feature commit e9254c05e2d79783fac52b6683f90170733c2d16.
