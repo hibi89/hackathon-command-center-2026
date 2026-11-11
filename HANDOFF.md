@@ -777,3 +777,14 @@
 8. Backups/security: stable preprocessing `3830cb27...`, SMAX main/frontend/backend unaffected, original customer data not used, Git prior commit restores code; no secrets.
 9. Next: run full exact SHA native test suite and checked-in P14/P15 E2E, fix regression, customer Windows offline mapping, SELF UI and installer acceptance, then evidence-based 85% reassessment; paid service/deploy/perms only with approval.
 10. KST: 2026-11-11; source and limited Node22 direct test verified, not full repo/Windows/production.
+## 2026-11-11 KST — SMAX P16 product↔hub ten-point sync
+1. Goal: local-first PREP→SELF owner CSV review package validation hardened against symlink/file swaps; no hidden approval/execution/upload. Target 85%, current 70%.
+2. Code/choice: `self-owner-delivery.mjs` P11 path-based read replaced with fd-bound `O_NOFOLLOW` where supported, before/open/read/after bigint identity comparisons + finally close; same bundle contract. Existing path-only additional check not selected due residual pre-open race.
+3. Evidence: exactly matched private GitHub production blob `66bc6dcbde6d0858337d5bddf3fd080f7279b20a` and 7-test blob `167928a8db2cdee069460184639854a12581a211`; Node22 Linux isolated **7 PASS/0 FAIL/0 SKIP** (synthetic fixture and renderer). Full repo `npm run test:preprocessing`/`npm test`, real P8–P16 CLI, Windows/SELF/installer NOT_RUN.
+4. Status: P16 code and tests committed, local targeted verified, remaining full E2E/customer QA pending; 70→70 unchanged, RELEASE HOLD; active 16 sum 1168%p average 73.0%.
+5. Errors/mitigation: TOCTOU gap in old path-read closed within tested Node POSIX file cases; OS-specific O_NOFOLLOW fallback and directory races unverified. Private repo checkout unavailable in sandbox; do not repeat DNS failure/claim full CI.
+6. Refs: product `hibi89/SMAX@feature/prep-self-owner-mapping-p8` HEAD `672d32567ab1bf4ce98bb04dfcf1889e66c479eb`; feature `5f2ccfa04c9fe0a04277f06135925249a4728470`, test `f0e77a9138b415bbe7cfe8560b0c1f618ee06d1e`, suite registration `079d630b741710eb8c7d86d451738e56e466772a`. Hub `kmong-productization` latest SHA recheck after write.
+7. Production: deployment Vercel/Cloudflare N/A and no release. Node>=20 local CLI `--package`/`--verify`; full `npm run test:preprocessing` pending.
+8. Originals: no customer data, permissions, secrets, paid runners, cross-repo private code, stable branch main/frontend/backend/preprocessing merge; Git SHA historical rollback.
+9. Next: full native complete checkout + E2E including P16, Windows Edge local file workflows/SELF customer UI, installation and licensing; 85% only after evidence, any paid runner/Production/permissions requires approval.
+10. Checked 2026-11-11 KST; connected GitHub branch/blob plus isolated local Node22 file module, no Windows/CI/Production. Canonical product `docs/SMAX_P16_FD_BOUND_PACKAGE_VERIFY_20261111.md` and hub roster `docs/audits/KMONG_16_CURRENT_20261111.md`.
