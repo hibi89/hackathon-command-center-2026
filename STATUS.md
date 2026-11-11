@@ -413,3 +413,8 @@
 - Private `hibi89/SMAX@feature/prep-self-owner-mapping-p8`: P8 소유자 오프라인 CSV 열 매핑 HTML/JSON(+5), P9 SHA 결속 기존 PREP/SELF 초안 경로(+5), P10 P5/P6 검토 영수증 전환(+5), P11 SHA 검사 가능 HTML·JSON 새 폴더(+5), P12 명령 결합(추가 가산 없음). **70% 잠정 엔지니어링 범위**이며 판매/배포 준비 완료가 아님.
 - Linux Node22.16 신규 파일 테스트 **17 PASS/0 FAIL/0 SKIP**; Chromium 합성 HTML 소유자 선택·JSON 다운로드 PASS. 기존 Private PREP/SELF 및 P6 원본을 사용한 V8 격리 호환 시험도 PASS였으나 내부 해시/Buffer는 테스트 대체, P9/P11 Native 신규 테스트도 일부 서비스 대체. 전체 Private npm test/preprocessing, 실제 무스텁 경로·Windows 실기기·고객파일·설치/판매 QA **NOT RUN**. RELEASE HOLD, 사용자 원본 및 Private 타 브랜치 변경 없음.
 - 크몽 활성 16종 잠정 완성률 총합 **1070%p**, 단순평균 **66.875%**; 70% 미만 **5종**. DBVORA 별도 채팅 진행을 제외한 집계이며 DBVORA는 계속 55% 잠정 기록.
+
+## 2026-11-11 KST — ASTRA PDF Redesigner 잠정 70% (기존 52% +18%p)
+- 개발코드 `hibi89/astra_pdf_redesigner@feature/astra-p52-to-p70-20261111` — STEP4 스타일 프리셋 파일 생성/미리보기/적용/복구 +5pp, STEP5 로컬 이미지/PDF 제안→프리셋 재사용 +4pp, STEP7 원본 PDF 및 새 문서 SHA·수동대조 영수증 +5pp, 별도 오프라인 원본·프로젝트 해시 검증 +4pp. 52→**70% 기능개발 잠정**, RELEASE HOLD.
+- 기능 SHA `dab6e365f5c9d57e285eaf71cb840ecc41513c6e`, [Chrome+Edge #42957762014](https://github.com/hibi89/astra_pdf_redesigner/actions/runs/42957762014) SUCCESS (Node 107/107, TypeScript/Vite build, 두 실제 브라우저, A4·원본 V2 보존), [Windows NSIS #42957762000](https://github.com/hibi89/astra_pdf_redesigner/actions/runs/42957762000) SUCCESS (Node107/107, desktop16/16, 설치·업그레이드·데이터 보존). 실고객 PDF/물리 PC, 실제 Korean GGUF/라이선스, PRO20/BUSINESS30, OCR·인터넷탐색은 미검증·미구현. 원본 main/integration/PR3/4/9/고객PDF/권한·비용·배포 불변.
+- 16종 합계 **1088%p** / 평균 **68.0%** 잠정(이전 1070/16=66.875%), 70% 미만 **4종**: DBVORA55(별도 채팅 개발), EAI50, AXMART PC CARE50, AXMART³ CUBE50. 실제 판매 준비율/출시 승인을 의미하지 않음. 증거: ASTRA `docs/commercial/ASTRA_P70_PORTABLE_STYLE_RECEIPT_20261111.md`.
