@@ -1,3 +1,15 @@
+## 2026-11-12 KST — RAG P5.47 sync handoff (10-point)
+1. Objective: next non-SMAX urgent product RAG Studio; 70%→85% target, 15%p remains.
+2. Delivered: public offline owner mapping editor, explicit types/keys and metadata-only JSON, re-read saved owner JSON vs actual original CSV SHA/size, no SMAX source or import.
+3. Tests: scoped Linux Node22.16 14 PASS/0 FAIL/0 SKIP. GitHub [Actions #43090370088](https://github.com/hibi89/RAG_STUDIO/actions/runs/43090370088) 0 jobs / failure, not runtime tests. Full npm/Windows/browser/customer unverified.
+4. State: new P5.47 code committed; full product 70% provisional unchanged; 85 NOT achieved, all RELEASE HOLD.
+5. Failure/pivot: local git clone cannot resolve github.com, accurate local Git blob materialization used. Chromium file:// check timed out. Remote Actions pre-job failure also occurred on older P545, root cause unknown; don't claim code failure.
+6. Repo: hibi89/RAG_STUDIO@feature/p546-rag-prep-mapping SHA e9254c05e2d79783fac52b6683f90170733c2d16; paths src/prep-owner-verify.mjs, ui/prep-owner.*, tests/p547-owner-*.test.mjs; hub kmong-productization updated in this commit.
+7. Production: RAG N/A, local Node; remote CI failed pre-job.
+8. Backups: source branch parent commit preserves original; private SMAX, SOVIA and customer data untouched, no secret or raw customer data moved.
+9. Next: diagnose Actions zero-job execution, real Windows/Chromium manual UI and full regressions, public-to-private contracted E2E only on explicit approval; no automatic percent uplift.
+10. Date: 2026-11-12 KST; inspection GitHub exact code SHA and scoped 14-test local evidence only; hub HEAD to be checked after sync.
+
 ## 2026-11-11 KST — HAE P9 85% 유지 최신 QA 증빙 동기화 (10-point handoff)
 1. 목표·용도·기술: HAE local-first Python3.11+LA+SQLite 85% 잠정 목표 이미 달성; 실 상용 출시 별개, 크몽16종 합계 유지.
 2. 완료·변경/비용·유지보수: 저장 workflow GET 중 화면 잠금(A) 대신 최신 요청 세대 식별/오래된 응답 폐기(B) 선택—사용자 편집 방해 없이 무료·기존 API 그대로. Windows LA HTTP test timeout5→20s bounded, 서버 수명보다 임시 DB 수명이 짧아지는 WinError32 정리 오류 보정.
