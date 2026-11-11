@@ -1,10 +1,10 @@
 ## 2026-11-12 KST — DBVORA P3-06 central synchronization (10 points)
 1. Goal: select most urgent under-85 non-RAG product, excluding finished SMAX²85 and HAE85. DBVORA70 chosen; target85, local Python/SQLite/ZIP/ZSTD.
 2. Delivered: synthetic-only read-only request ledger and independent archive digest review, no automatic resume/del/approval; compared A auto recovery vs B human-review (chosen for safety).
-3. Verification: locally reconstructed isolated Linux Python16 PASS/0 FAIL/0 SKIP; full private original-source >=476, Node, Windows, live PG NOT RUN.
+3. Verification: locally reconstructed isolated Linux Python17 PASS/0 FAIL/0 SKIP; full private original-source  >=477, Node, Windows, live PG NOT RUN.
 4. Status: DBVORA **70% unchanged**, 85 NOT MET; active 16 total **1196%p**, mean74.75%, under85=13, all release HOLD.
-5. Blocker: local private Git clone DNS resolution inaccessible. No unsupported full-source success. GitHub Actions runs none; next authorized full checkout for 476+.
-6. Product `hibi89/DBVORA@feature/p0-db-map` SHA `ee7ee73952a918249a0ee8a4779741ae5372b1f2`, `dbvora/archive/request_audit.py`, `tests/test_request_audit.py`, `docs/P3_06_REQUEST_LEDGER_AUDIT_20261112.md`; hub kmong-productization HEAD verify after sync.
+5. Blocker: local private Git clone DNS resolution inaccessible. No unsupported full-source success. GitHub Actions runs none; next authorized full checkout for 477+.
+6. Product `hibi89/DBVORA@feature/p0-db-map` SHA `c11683e854275cfe28571c7cd6e996a0a78dcb62`, `dbvora/archive/request_audit.py`, `tests/test_request_audit.py`, `docs/P3_06_REQUEST_LEDGER_AUDIT_20261112.md`; hub kmong-productization HEAD verify after sync.
 7. Production: local-only source, Vercel/Production not applicable; Windows3.11/NTFS and authenticated PostgreSQL TLS test not run.
 8. Preserve: private DB code remains private; public hub status metadata only. No customer DB/files/DSN, original archives, main/develop, paid actions, security/permissions, deployment changed. Git parent revert.
 9. Next: full repo actual release gate >476 plus ZIP/ZSTD/Node, Windows3.11 safe archive and browser, explicit owner-approved PG read-only endpoint; only then score reassessment. RAG other room ownership preserved.
