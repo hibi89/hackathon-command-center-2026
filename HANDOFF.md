@@ -1,3 +1,15 @@
+## 2026-11-12 KST — DBVORA P3-08 hub checkpoint (10-point handoff)
+1. Goal/stack: urgent <85 non-RAG product DBVORA, private Python3.11+ SQLite, ZIP/ZSTD, ledger, offline HTML; target 85 and source preservation.
+2. Work/decision: owner-mediated manual review instead of unsafe automatic replay. New real-engine synthetic request/recovery gate verifies ZIP+ZSTD, ledger digest, static HTML and deliberate corruption detection; request_ledger create=False O_CREAT race fixed. New 15+2 test cases.
+3. Tests/evidence: exact Git Blob source/runtime modules, actual Linux Python3.13.5 installed ZSTD & ZIP end-to-end **16 checks PASS**, isolated 58 tests PASS/0 FAIL/0 SKIP, compileall. Whole repo Python≥518+Node/Windows/customer NOT RUN, no Vercel deployment.
+4. Status/score: DBVORA 72→77 provisional scope (P0 22 P1 8 P2 19 P3 17 P4 11); 85 8p missing, RELEASE HOLD. Active16 sum1215/16=75.9375%, >=85 four, under85 twelve. Other fifteen unchanged.
+5. Failure/pivot: local Git DNS blocked; exact private GitHub connector source manually reconstructed and SHA matched for only necessary core modules. No Actions run/payment, full 518 unavailable, so no full PASS claim.
+6. GitHub source: hibi89/DBVORA@feature/p0-db-map 06473b7121adc8454e56651ae29d88c2a5b75707; hub hibi89/hackathon-command-center-2026@kmong-productization pending post-doc HEAD. New scripts/recovery_review_gate.py, tests/test_recovery_review_gate.py and docs/P3_08_REAL_CHAIN_AND_LEDGER_RACE_20261112.md.
+7. Production/runtime: Linux scoped testing, native Win3.11 NTFS, PG TLS/live DB, real customer, installer, full browser and hardware loss all NOT RUN; DBVORA Vercel N/A.
+8. Preservation: generated temp fixtures only, customer SQLite/original archives/credentials untouched; Git non-force revert rollback, no private code published in central docs.
+9. Next: full private original `python -m scripts.verify_release_gate` ≥518+Node; Windows native file://, NTFS warm/cold restart, approved read-only PG TLS; then reevaluate 85; no retention/deletion or customer backups until separately approved.
+10. Updated 2026-11-12 KST from exact GitHub source SHA + isolated Linux synthetic gate. Central HEAD after update must be checked; unchanged products independently active in other chats.
+
 ## 2026-11-12 KST — AI Code Checker P3-01/P3-02 hub sync (10-point)
 1. Scope: Kmong AI Code Checker offline Windows product 78→85 requested; DBVORA handled elsewhere, existing 85+ excluded.
 2. Changes: private owner-controlled candidate ZIP from original owner-supplied license/notice and EXE, cross-bind ZIP with physical EXE + previously collected Windows receipts. No auto license or distribution.
