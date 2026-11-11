@@ -1,3 +1,15 @@
+## 2026-11-11 KST — Kmong EAI 70 provisional and ASTRA roster reconciliation
+1. Objective/scope: coordinate 16 active Kmong products, retain original 100% product standard, EAI 50→70 provisional on verified engineering features; keep other original branches.
+2. Delivered: EAI feature P23-P30 source-first CSV advisor, SHA-pinned CPU/local-input-only model candidate, human dual SHA approved execution, CSP HTML, deterministic .pyz, quick CLI, P29 distribution shift, P30 packed synthetic E2E. ASTRA prior 70% CI milestone aligned into main roster row.
+3. Tests: EAI exact source SHA 8cdad74a256d3e132870dfd28a875dd4425ffa77 GitHub Actions 42960081154 Ubuntu Python3.11 582/582 PASS compileall and CLI smoke; fake localhost Qwen only. ASTRA code SHA dab6e365f5c9d57e285eaf71cb840ecc41513c6e Chrome/Edge CI and Windows NSIS success as independently recorded.
+4. Status: active 16 sum 1123 percentage points, average 70.1875%, below 70 only PC CARE50/CUBE50; EAI provisional 70; all releases HOLD. EAI native Windows, real Ollama/Qwen, actual customer tasks, commercial packaging/licensing unverified.
+5. Errors/fixes: EAI P24 earlier test fixture wrongly used literal goal ID (one failure), corrected and 509 PASS; P26 unittest method named run collided with runner, renamed, 533 PASS; latest P30 exact code all 582 PASS. No unfinished current EAI CI failure. 70% is scope-weighted engineering estimate, not proof of retail use.
+6. Repos/commits: hibi89/EAI feature/local-first-mvp tested 8cdad74a, docs-only HEAD 379d0c7a; hibi89/astra_pdf_redesigner feature/astra-p52-to-p70-20261111 source dab6e365; hub hibi89/hackathon-command-center-2026 kmong-productization parent 88b36a35c5f8eac59c79983f553bbb9acd1fadd0; hub new docs SHA verify.
+7. Deploy/runtime: EAI local Python3.11 CLI/.pyz; production/Vercel not applicable. GitHub Actions Ubuntu CI confirmed. Owner Windows native runtime/model unknown.
+8. Backups/security: Git source history preserves P0-P22 and main; no real user CSV/notes/DB, models, tokens, env, paid API, external customer data upload, permissions/production changes; EAI previous baseline 836f7927...
+9. Next: PC CARE and CUBE both 50% next below-70 priorities, subject to separate branch owners. For EAI real local Windows/Ollama acceptance, customer-like fixtures, packaging/licensing, security/privacy review prior to retail. Any customer data/paid/permission/release changes require owner approval.
+10. Timestamp/basis: 2026-11-11 KST; exact EAI source and CI 42960081154, ASTRA concurrent CI reports; hub table reconciled at latest remote parent 88b36a35c5f8eac59c79983f553bbb9acd1fadd0. Docs-only hub SHA verify after publish.
+
 ## 2026-11-11 KST — DBVORA 70% provisional productization milestone sync
 1. Goal/tech: 16 actively tracked Kmong products; DBVORA metadata-only SQLite/PG, archive ZIP+ZSTD/ledger, offline HTML/CLI, private GitHub authoritative.
 2. Completed: DBVORA P1-PG02 code+tests 4 exact blobs, mixed engine no cross-DB inference and explicit synthetic-only CLI; existing archive core and customer original unchanged. Updated current roster RAG and SMAX earlier 70 provisional statuses, no code change to their branches.
