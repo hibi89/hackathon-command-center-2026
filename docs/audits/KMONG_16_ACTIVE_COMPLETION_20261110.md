@@ -1,3 +1,5 @@
+> **2026-11-11 CUBE/PC CARE 동기화 최신:** [16종 현재 정본](KMONG_16_CURRENT_20261111.md) 합계 1163%p, 평균 72.6875%, 70% 미만 0종. 다른 날짜의 하위 메모는 역사적 스냅샷.
+
 > **2026-11-11 최신 기준:** [현행 16종 정본·18개 브랜치 SHA](KMONG_16_CURRENT_20261111.md) / [필수 동기화 규칙](KMONG_COMPLETION_SYNC_PROTOCOL_20261111.md). 아래 2026-11-10 상단 기록은 역사적 시점이며 동기화 자동화가 아니다.
 
 > **2026-11-10 KST — Lightning Azent 최종상품 진척 68→70% 잠정 (+2%p), 활성 16종 평균 63.4375% ≈63.4%:** private `hibi89/HAE@feature/lightning-azent` HEAD `9dd2a6e10ffab6ea313e74366065c3333b1490b2`. P15 미완료·실패 run 상태의 검증성공 오표시 차단(+1%p), P16 검증 영수증의 실제 plan SHA·모든 단계 completed/skipped 결과와 저장 단계 수 일치 확인(+1%p). 실제 Linux Python3.13.5 격리 LA bridge 20/20 + HAE 소비자 7/7 = **27/27 PASS**, 실제 source/test Git blob SHA 일치. **실제 LA engine/HAE planner/SQLite P14 통합 E2E·원본 전체 회귀·Windows/GUI 미검증**: 70%는 **제품화 항목의 잠정 진척 추정이며 통합/상용 완료·RELEASE PASS가 아님**. 다른 15종 불변, 새 16종 합계 **1015%p / 16 = 63.4375%**; 정확 50% 5개 / 51~69% 3개 / 70% 이상 8개. Production/고객자료/과금/권한 변경 없음, RELEASE HOLD. [P15](https://github.com/hibi89/HAE/blob/feature/lightning-azent/docs/lightning-azent/HAE_BRIDGE_P15_EVIDENCE_20261110.md) · [P16](https://github.com/hibi89/HAE/blob/feature/lightning-azent/docs/lightning-azent/HAE_BRIDGE_P16_STEP_COMPLETENESS_20261110.md).
@@ -23,7 +25,7 @@
 ## 결정
 사용자 승인에 따라 **Web REA Studio(과거 40%)**를 크몽 독립 판매·개발 관리 범위에서 제외한다. 이는 `hibi89/web-rea-studio` GitHub 저장소 삭제나 기존 소스·테스트·감사 자료의 삭제가 아니다. 그 프로젝트는 **개발 보류/역사적 보존**으로 기록하며, REA_Web과 통합도 현재 수행하지 않는다.
 
-- **2026-11-11 KST 현행 16종:** 합계 1123%p, 평균 70.1875%(70.19%). 70% 미만 2종(AXMART PC CARE 50%, AXMART³ CUBE 50%), 70% 이상 14종. 아래 기존 11/10 개발 기록/수치는 당시 이력이며 현재 표·정본 우선.
+- **2026-11-11 KST 최신 활성 16종:** 합계 **1163%p**, 평균 **72.6875%**, 70% 미만 **0종**, 70% 이상 **16종**. PC CARE·CUBE 각각 70% 잠정, 실제 고객 출시 모두 HOLD. 아래 11/10의 원 개발 기록은 역사적이다.
 - `REA_Web` 기존 완성률 **75%** 유지. Web REA Studio를 제외한다고 REA_Web이 더 완성된 것으로 평가하지 않는다.
 - SMAX² 최신 기능 기준 `3190da505efcd55e7e83a1eabe994fbd8c9e5718`, 문서 `3830cb276f560d58e8181ba384d9cbe64815737c`: P3/P4 이후 P5 배치+검증·P6 오프라인 HTML·P7 헤더 후보 안내 기능 구현으로 **잠정 45→50%**. P7 Native 28 PASS(라이브러리 18/CLI 원본 parser·reader stub 10), P5/P6 실제 기능 V8 회귀 확인. 실 전체 Native repo/Windows/SELF UI/출시 검증 미완, RELEASE HOLD. `hibi89/SMAX@frontend` `52e8a54f676a015e9fbee58def89e1cb84656d72`, `@preprocessing` `3830cb276f560d58e8181ba384d9cbe64815737c`.
 - 상용판매/권리/고객·Windows 실기기 검증 미완 **HOLD**. 완성률은 소스·테스트·사용자 인수 조건에 따른 잠정 평가; 번호를 바꾼 사실 자체로 진척률을 변경하지 않는다.
@@ -44,8 +46,8 @@
 | RAG Studio AX Edition | **70%** | `hibi89/RAG_STUDIO@feature/p546-rag-prep-mapping` (`5dca9368d409`) | Linux 571 PASS/2 SKIP·Windows 573 PASS(검증 소스 a3f10f95); Private PREP/실고객 미검증 |
 | Astra PDF Redesigner | **70%** | `hibi89/astra_pdf_redesigner@feature/astra-p52-to-p70-20261111` (`8f987462dc7c`) | STEP4/5/7 추가; 코드 dab6e365 Chrome/Edge CI 107 PASS·Windows NSIS SUCCESS; 실제 PDF 미검증 |
 | 코인 패턴 분석기 | **70%** | `hibi89/candle_scraper@feature/candle-pattern-analyzer` (`8eafcb075959`) | P1~P6 합성 원본 101 PASS, 실제 3.6GB·Windows/EXE/상업권 미검증 |
-| AXMART PC CARE | **50%** | `hibi89/AX_MART@feature/pc-care-usb` (`b8706e0a77ec`) | Windows USB·WinRE·실수리·QR/A4·복구 검증 미완 |
-| AXMART³ CUBE | **50%** | `hibi89/AX_MART@feature/cube-commerce-core` (`bb37b754c8e6`) | 상품 카탈로그/ZIP 검사/정적 페이지 46 PASS; 계정·결제·배포·고객 E2E 미완 |
+| AXMART PC CARE | **70%** | `hibi89/AX_MART@feature/pc-care-offline-casepack-20261111` (`9c25ec379899`, 기능 `163fd38be68c`) | 오프라인 상담 UI·내부 ZIP 등록, Node 11 PASS·Chromium 합성 UI; 실 Windows/USB/WinRE/QR·인쇄·복구 미검증, 출시 HOLD |
+| AXMART³ CUBE | **70%** | `hibi89/AX_MART@feature/cube-commerce-core` (`061addb6e19c`) | P4 로컬 지원 메타데이터·P5 거래 HOLD 영수증·P6 ZIP 내부 CRC·P7 무JS FAQ·P8 SHA 고정 CLI/빌드 통합. Node22 Linux 신규 정확 소스 26/26 PASS; 전체 npm test/build·실 브라우저/Windows/고객/Cloudflare 미검증, 회원/결제/다운로드 미구현 · RELEASE HOLD |
 | SMAX² | **70%** | `hibi89/SMAX@feature/prep-self-owner-mapping-p8` (`67fc66f9b8ca`) | P8~P12 별도 feature 17 부분 PASS; preprocessing 본 브랜치는 50% 기록, Native 전체 통합 미검증 |
 | EAI | **70%** | `hibi89/EAI@feature/local-first-mvp` (`379d0c7a77e9`) | P23~P30, 코드 8cdad74a Ubuntu 582 PASS; 진짜 Qwen/Windows/실고객 미검증 |
 
