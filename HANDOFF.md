@@ -1,3 +1,15 @@
+## 2026-11-12 KST — DBVORA P3-07 72% hub checkpoint (10-point handoff)
+1. Goal/tech: next urgent non-RAG under85 product DBVORA, Python3.11+ local SQLite/ZIP/ZSTD/static HTML, aim 85.
+2. Delivered/decision: option A auto-resume after crash (unsafe) vs B manual read-only recovery ledger/archive review + static HTML new-only output (chosen). No source DB/write/archive retry/telemetry.
+3. Tests: Linux scoped Python3.13.5 **39 PASS/0 FAIL/0 SKIP** including new22 exact Git Blob source/test matches. Chromium set_content HTML table 5 rows, no JS/network; actual original ZIP/ZSTD independent catalog mocked in integrated test, full 499/Node/Windows NOT RUN.
+4. State: DBVORA engineering scope 70→**72% provisional** (+P3 1, P4 1), 85 NOT MET, releases HOLD. Active16 total **1210%p**, avg75.625%, <85=12, >=85=4; no changes to other15 (including RAG85/SMAX85).
+5. Failures/strategy: private local git clone DNS unavailable; direct Chromium file URL blocked by sandbox, set_content tested instead; Actions not triggered due no authorized private CI cost. Need real checkout/Windows for acceptance.
+6. Repo/branch/SHA: hibi89/DBVORA feature/p0-db-map HEAD adbad6cc2eed8d930ec74fd98e8fad151b2e598e; new paths dbvora/archive/review_html.py, tests/test_review_html.py, docs/P3_07_OFFLINE_RECOVERY_REVIEW_20261112.md; central hub kmong-productization HEAD verify after sync.
+7. Production/runtime: no DBVORA production/Vercel deployment (N/A); no Windows3.11 NTFS/live PG approved role/TLS/real browser file URL or customer pilot.
+8. Preservation: private source retained in private DBVORA repo; hub only progress metadata, no customer DB/credentials/archive original/main/develop/permission/payment changes. Revert feature commits for rollback.
+9. Next: full original checkout python -m scripts.verify_release_gate >=499 + Node, actual ZIP/ZSTD request/ledger/recovery, Windows NTFS local browser, approved read-only PG/TLS. Do not auto-run backups or release before validation.
+10. KST 2026-11-12; evidence exactly source/test blob+isolated local and synthetic Chromium; hub branch commit/HEAD re-verify after final write.
+
 ## 2026-11-12 KST — RAG to 85% and central sync (10-point handoff)
 1. Goal/tech: user target 85 for next urgent non-SMAX Kmong RAG Studio, Node22, local first.
 2. Completed: owner-mapped CSV source SHA/semantic recheck, exact SKU totals and cited original lines, held TXT/MD policy excerpts/conflict refusal, browser review and explicit local source-free review bundle+integrity verification.
