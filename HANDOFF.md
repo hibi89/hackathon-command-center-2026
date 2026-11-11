@@ -1,3 +1,15 @@
+## 2026-11-11 KST — DBVORA P1-PG01 command center checkpoint
+1. Goal: 70% readiness for DBVORA with read-only PostgreSQL plus safe backup request engine, without unauthorized real customer data.
+2. Completed: feature branch P3-05 ZIP/ZSTD archive-once with ledger, then P1-PG01 optional psycopg3 pg_catalog-only reader; no source SQLite CLI or user-facing workspace modification.
+3. Tests: original GitHub source exact local Linux Python3.13.5 115 old core +17 new P3-05 +15 PG fake=147/147 PASS (0 fail/skip). Git SHA matches source; full 429 Python, Node, real PG SQL / TLS, Windows3.11 NTFS not run.
+4. Status: DBVORA provisional 55% unchanged, 70 target unmet; 16-product mean 64.6875%, RELEASE HOLD.
+5. Uncertainty: PostgreSQL queries are only simulated against fake cursor; no live Postgres server/psycopg driver. No real exactly-once power outage; no native Windows report. Do not infer live support, release or customer readiness from 147 scope tests.
+6. Repo/branch/SHA: hibi89/DBVORA feature/p0-db-map 121df3edad7c3ba04cf1cc24de625febedaa635f, parent P3-05 4d7c44fd7f91459b8b5e2eb66e8f267f7ce933a4. Hub hibi89/hackathon-command-center-2026 kmong-productization prior 0aefa53ecb9aa3522d9fb0dbf3f34b03ef98fdf4; resulting hub SHA verify.
+7. Runtime/deploy: Python3.13.5 Linux local synthetic, zstd installed, PostgreSQL server and Windows3.11 untested; Production/Vercel not applicable.
+8. Original backups/access: no customer source, external DB credentials, permissions, paid CI, force push, main/develop promotion, other 15 products modified. Parent commit supports rollback.
+9. Next: complete Python >=429, Node/browser/local UI, approved sandbox PostgreSQL metadata SSL read-only, Windows3.11 NTFS/package and recovery tests; update scoring only after proof.
+10. Updated 2026-11-11 KST, partial source-exact test scope only, corresponding product repo feature SHA above.
+
 ## 2026-11-11 KST — DBVORA P3-05 command hub checkpoint
 1. Goal: DBVORA 55→70 project advancement without customer data or paid CI.
 2. Delivered: synthetic-only archive_once API with transactional request reservation; real ZIP/ZSTD and independent restored-SQLite verification, unchanged archive_cli and no scheduler.
