@@ -397,3 +397,8 @@
 - 제품 SHA `c8a1637ab4d07db577d4d971ccad5f5adac22593`, docs `62b5ceb6230ac0e404dab95e03b13838ae52f116`. Git SHA 정확 일치한 P1→P2→P3 CLI/HTML→P4 SHA receipt→P5 ZIP 실제 합성 SQLite 고객흐름 검증 41/41 PASS(0 FAIL/0 SKIP), 신규 고객 자가진단 `coin_selftest.py` 합성 PASS. 20만 캔들 ×16식/2 pairs Linux6.42초/입력 DB SHA 불변. 기존 P5 별도 shim이 아닌 정본 P3 연동 검증 완료.
 - *최종완성률은 개발 기능 기준 잠정 70%, 실제 판매 준비율 또는 릴리스 인증 아님*. 활성 16종 합계 1035%p/평균 **64.6875%(64.69%)**, 70% 미만 7종. Windows Python3.11/전체 collector 레거시/3.6GB 실제 DB·차트/EXE/상업 API 권리 미검증, RELEASE HOLD.
 - GitHub main/collector 원본·E: 고객 데이터·계정/보안/권한/유료 CI·외부 API 불변. 근거 `docs/audits/KMONG_COIN_P6_70_20261111.md`.
+
+## 2026-11-11 KST — 크몽 RAG Studio AX Edition 잠정 70% (이전 55% +15%p)
+- Public `hibi89/RAG_STUDIO@feature/p550-mapped-cited-journey` P5.48 오프라인 매핑 UI/JSON(+5), P5.49 원본 SHA와 SMAX 공개 V1 검증·매출 집계(+5), P5.50 기존 P5.34 합성 SMAX→RAG SQL·문서 인용 통합(+5). 새 P5.47은 기존 55%에서 중복 반영하지 않음. 제품 개발 기능범위 기준 **70% 잠정**, 상용 출시 NOT READY.
+- 정확한 기능 SHA `a3f10f95db086f363fed3acff48425ca09b77d4f`, [GitHub Actions #42943551661](https://github.com/hibi89/RAG_STUDIO/actions/runs/42943551661) Linux **571 PASS/0 FAIL/2 SKIP**, Windows **573 PASS/0 FAIL/0 SKIP**, P5.47–P5.50 scoped 34/34 PASS, Gold/Negative/Heldout/router PASS. 공개 합성 결과 6주문/10개/157000원/문서 인용1, source/mapping SHA 및 수학 검산 일치.
+- 활성 16종 합계 **1050%p**, 산술평균 **65.625%=65.63% 잠정**. 70% 미만 6종. 실제 고객 Native SMAX/원본 권리·3PC Windows/EXE·LLM 품질/판매 라이선스 미검증. `REVIEW_HOLD/NOT_GRANTED`, **RELEASE HOLD**. Private SMAX/SOVIA, main/develop, 고객 데이터·권한·과금·Production 불변. 자세한 근거는 제품 브랜치 `docs/P550_70_PROVISIONAL_MILESTONE.md`와 중앙 KMONG_PRODUCTIZATION.md/HANDOFF.md.
