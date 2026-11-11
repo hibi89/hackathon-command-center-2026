@@ -1,3 +1,15 @@
+## 2026-11-12 KST — FFAX P50 / 해총 크몽 후보 동기화 (인수인계 10항)
+1. **목표/범위:** FFAX 프론트엔드 생성·편집·QA 플랫폼은 향후 크몽 수익화 가능 후보; 현재 활성16종에 추가하지 않음. `REQUIREMENTS.md` + 기존 12 AC 100점 고정.
+2. **구현/판단:** 규칙기반 한국어 브리프+시안2/컴포넌트13/테마3, 선택·이동·색상·텍스트·정렬·간격·타입 조정·Undo/Redo, 권한 확인 참조이미지 2안 승인, TSX 코드 초안/QA. 자유 JSX 자동편집 A보다 등록 컴포넌트 구조화 B를 선택해 안전성·재사용성 우선.
+3. **테스트:** `npm test` Linux Node22 24 PASS/0 FAIL; Chromium same-source `set_content` 30 PASS/0 FAIL; HTTP GET200 독립 확인. 브라우저 URL 직접 이동 `ERR_BLOCKED_BY_ADMINISTRATOR`로 미검증, CI/Windows/React build/실제 LLM 미검증.
+4. **완성·진행·중단:** FFAX 0→**50/100 잠정**, AC02 8+AC03 12+AC05 6+AC06 12+AC08 12, 나머지50미완. **RELEASE HOLD**. 활성16종 표 합계 **1254/16=78.375%**, FFAX 분모 제외. SOVIA 병렬 상태 차이 보류.
+5. **실패/회복:** 테스트 기대 fixture 오류 수정; '검색' 업종 오분류 2건을 구문 매칭 좁혀 해결; Chromium localhost 정책 차단 후 독립 동일 JS/CSS 삽입형 브라우저 검증으로 전환, 실제 URL 성공 주장은 금지.
+6. **Repo/branch/SHA:** FFAX `hibi89/frontend-foundry-ax@feature/ffax-workbench-p50-20261112`, code `e2d9355577e20cbe9d70d80f8bbb9a4263f2de08`, docs `833804a076a3daf79a46773a34bb3b0db5cc2712`, previous main `191289d...` preserved. Public hub `hibi89/hackathon-command-center-2026@kmong-productization` 본 커밋은 최신 ref 재조회할 것. `docs/audits/FFAX_KMONG_INCUBATION_P50_20261112.md`.
+7. **Production:** FFAX Vercel/Production **미적용**; 로컬 `npm start` loopback `127.0.0.1:4173`, Node>=20. 인가되지 않은 배포 없음.
+8. **원본/보안:** private 소스는 private 제품 repo, public hub에는 상태 메타데이터만. 원본 FFAX main, 기존 16상품 저장소, 고객 원본, 비밀/지불/권한 무수정. 롤백은 이전 브랜치 SHA를 이용한 non-force revert.
+9. **우선순위/승인:** 실제 React typecheck/런타임과 LLM AI 연동(외부 전송·비용 승인 필요), GitHub read-only import와 기존 기능 보존, browser direct/Win, CI/axe, 고객 수정 요청 대응, PR/rollback.
+10. **시점/검증 범위:** 2026-11-12 KST; FFAX 원격 커밋·문서·Node/Chromium 주입 검증 근거 확인. 이 해총 기록은 제품/상용 100% 승인이 아니며 배포·공개도 수행하지 않음.
+
 ## 2026-11-12 KST — AutoML 85 provisional engineering central sync, 10-point handoff
 1. Goal: user requests next urgent under85 excluding SOVIA and DBVORA; selected AI AutoML Analyst baseline71, target85. BASIC/STANDARD/PREMIUM owner-supplied CSV/XLSX local Python FastAPI/sklearn/pypdf/ReportLab/skops existing engine unchanged.
 2. Delivered/decision: rejected treating prior synthetic ZIP/pytest as legal customer sale approval; selected bounded physical ZIP SHA+manifest+PDF page owner audit (P6E50), 3-tier independent ZIP to no-JS static Korean HTML/JSON (P6E51), actual original BASIC/STD/PREMIUM synthetic generation→owner review (P6E52). No new API or model security downgrade.
