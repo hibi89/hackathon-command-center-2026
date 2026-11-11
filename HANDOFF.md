@@ -1,3 +1,15 @@
+## 2026-11-11 KST — Coin Pattern Analyzer P6 70% provisional completion
+1. **Objective/stack:** advance below-70% Kmong products; coin product P1/P2 safe JSON DSL, P3 HTML/CLI, P4 receipts, P5 ZIP, P6 offline selftest, Python3.11+ SQLite local.
+2. **Delivered:** verified exact SHA across six canonical core source files, added coin_selftest.py and three new test modules; genuine P1-P5 synthetic customer pipeline and ZIP extraction/receipt checked.
+3. **Tests:** isolated Linux Python3.13.5 strict ResourceWarning actual **41/41 PASS**, 0 FAIL/SKIP, 200k synthetic candles×16 rules/2 market-pairs 6.42sec/SQLite SHA unchanged; single/batch→CSV→HTML→receipt→ZIP verified. Whole collector unittest, Windows/real DB/chart/EXE NOT RUN.
+4. **Milestone/status:** coin **68→70% provisional**, target intermediate reached; commercial RELEASE HOLD. Hub 16 active total **1035%p**, mean **64.6875%**, seven below 70 remain.
+5. **Errors/limits:** previous P5 HTML adapter/shim was NOT canonical, fixed by source-exact local checkout and actual P3/P5 tests. Private complete clone DNS inaccessible, not a full repo regression; do not claim real customer PC ready.
+6. **Repos/SHA:** `hibi89/candle_scraper@feature/candle-pattern-analyzer` P6 code `c8a1637ab4d07db577d4d971ccad5f5adac22593`, docs `62b5ceb6230ac0e404dab95e03b13838ae52f116`; hub `hibi89/hackathon-command-center-2026@kmong-productization` verify after current commit.
+7. **Deploy/env:** local Python3.13.5 used; Windows3.11 not verified, customer EXE not built, Vercel/Production N/A; runnable `python coin_selftest.py`.
+8. **Source/backups/security:** no customer E: SQLite/WAL/SHM/CSV, API traffic, uploads, paid CI, original collector/main, permissions, release, domains; preserve backup/rollback via feature history.
+9. **Next:** prioritize 7 remaining under-70 products, likely RAG Studio AX Edition (55%); coin Windows/real-chart/customer release only on explicit approval and rights review. Complete full checkout legacy unittest before commercialization.
+10. **KST checked 2026-11-11:** exact source SHA and P6 41 scope, other older suites not additive; docs P6 link in hub audit.
+
 ## 2026-11-11 KST — Coin Pattern Analyzer P5 updated to 68% provisional
 1. Goal: 70% provisional customer-product milestone from 65%; Python3.11+ read-only P1/P2 DSL + P3 report + P4 receipt.
 2. New P5 coin_customer_bundle.py and 14 tests: stage data into fixed five-file local ZIP with CRC, rule/CSV integrity and output no-overwrite; avoids manual 3-command delivery and partial ZIP.

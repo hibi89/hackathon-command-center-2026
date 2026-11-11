@@ -384,3 +384,8 @@
 - 새 정본: `CHAT_BOOTSTRAP.md`, `docs/HAECHONG_CANONICAL_CONTEXT_20261025.md`, `docs/STECHONG_PRIORITY_AND_HACKATHON_GATES_20261025.md`. 구형 부트스트랩 내용은 `docs/history/CHAT_BOOTSTRAP_PRE_HAECHONG_20261025.md` 보존.
 - 사용자 10/25~11/07 SMAX² SELF 집중, 이후 해커톤 제출 집중. 그동안에도 대회별 DAKER·Sandbox/실 AI·공식 UGREEN Skill 검사 등 P0 필수 외부 의존성은 해총이 점검. 개별 대회 개발 총괄은 기존 `lead/*` 소유.
 - 본 갱신은 **역할과 인수인계 공시만**. 개별 대회 코드/테스트/제출/계정 상태를 새로 완료 처리하지 않음. 현재 3개 대회 상태는 새 채팅에서 반드시 실시간 재조회.
+
+## 2026-11-11 KST — 코인 패턴 분석기 70% 잠정 (이전 68% +2%p)
+- 제품 SHA `c8a1637ab4d07db577d4d971ccad5f5adac22593`, docs `62b5ceb6230ac0e404dab95e03b13838ae52f116`. Git SHA 정확 일치한 P1→P2→P3 CLI/HTML→P4 SHA receipt→P5 ZIP 실제 합성 SQLite 고객흐름 검증 41/41 PASS(0 FAIL/0 SKIP), 신규 고객 자가진단 `coin_selftest.py` 합성 PASS. 20만 캔들 ×16식/2 pairs Linux6.42초/입력 DB SHA 불변. 기존 P5 별도 shim이 아닌 정본 P3 연동 검증 완료.
+- *최종완성률은 개발 기능 기준 잠정 70%, 실제 판매 준비율 또는 릴리스 인증 아님*. 활성 16종 합계 1035%p/평균 **64.6875%(64.69%)**, 70% 미만 7종. Windows Python3.11/전체 collector 레거시/3.6GB 실제 DB·차트/EXE/상업 API 권리 미검증, RELEASE HOLD.
+- GitHub main/collector 원본·E: 고객 데이터·계정/보안/권한/유료 CI·외부 API 불변. 근거 `docs/audits/KMONG_COIN_P6_70_20261111.md`.
