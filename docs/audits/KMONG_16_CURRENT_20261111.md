@@ -1,6 +1,6 @@
 # 크몽 활성 16종 최종완성률 — 2026-11-11 KST 현재 조회 정본
 
-> **현재 16종 / 합계 1168%p / 산술 평균 73.0% / 70% 미만 0종 / 70% 이상 16종 / 85% 미만 15종.** 각 %는 최종 납품 범위 대비 주관적·잠정적 엔지니어링 추정이며 공식 테스트 완료율·판매 승인률이 아니다. **전 상품 RELEASE HOLD.**
+> **현재 16종 / 합계 1170%p / 산술 평균 73.125% / 70% 미만 0종 / 70% 이상 16종 / 85% 미만 15종.** 각 %는 최종 납품 범위 대비 주관적·잠정적 엔지니어링 추정이며 공식 테스트 완료율·판매 승인률이 아니다. **전 상품 RELEASE HOLD.**
 
 - 범위: `hibi89/hackathon-command-center-2026@kmong-productization` 활성 16종. 소유자 지시로 **Web REA Studio(과거 40%)는 독립 크몽 상품 목록 제외/원본 보존**, `REA_Web`은 계속 75%로 별도 관리.
 - 확인 방법: 2026-11-11 KST 연결된 GitHub 실제 구현 브랜치의 **12개 저장소 / 18개 브랜치 HEAD**를 직접 조회(16개 제품 정본 + SMAX `preprocessing`·`frontend` 보조 브랜치). 상품별 HANDOFF/STATUS 및 이전 CI·감사 근거 대조. 기존 16종 정합 조회 당시 신규 테스트 0건. 이번 PC CARE는 별도 신규 Node 11 PASS·Chromium 합성 UI 검증 및 정확 GitHub 기능 SHA 재평가를 추가했다. 과거 성공 CI는 해당 코드 SHA에만 귀속한다.
@@ -13,9 +13,9 @@
 |---|---:|---|---|
 | 코인 캔들 수집기 | **94%** | `hibi89/candle_scraper@main` (`1f976770db47`) | Windows 147 PASS(기존); 기술 99%와 판매상품 94% 분리, 거래소 상업권 미확인 |
 | AI Code Checker | **78%** | `hibi89/ai-code-checker@main` (`adf3f4ac8fab`) | Windows EXE/GUI 일부 검증, LICENSE/NOTICE·구매자 PC 검증 미완 |
+| HAE | **77%** | `hibi89/HAE@feature/axflow-mvp` (기능 `3db947023f90`; 문서 `0c43192b7e86`) | 합성 SQLite 원본→백업→복원 별도 경로 read-only SHA+논리 데이터/스키마/FK 일치, 진짜 LA 승인 CSV 통합 E2E + DBVORA p0 계약 **모의** HTTP 서버. [Win/Linux 224 PASS/2 FAIL/7 SKIP](https://github.com/hibi89/HAE/actions/runs/42982504012), Node UI16 PASS. 원본 ZIP/pyz parity 2 FAIL로 전체 CI FAILURE, 실 DBVORA/고객/OAuth/상용출시 미검증 HOLD |
 | REA_Web | **75%** | `hibi89/REA_Web@feature/d27-windows-python-discovery` (`97b6e5cab7b8`) | Lite/Pro 분리, 설치·고객 납품 E2E 미확인 |
 | SOVIA | **75%** | `hibi89/SOVIA_sovereign@develop` (`7418b23aff9b`) | 다중 OS CI 기존 기록, 고객 PII/권리/사용 승인 미검증 |
-| HAE | **75%** | `hibi89/HAE@feature/axflow-mvp` (기능 `522bd95139ff`; 문서 `0b58f4f3fdf7`) | 명시적 합성 SQLite 자산↔DBVORA 계약 모의 localhost 일치 검증(소스SHA·DB ID·크기·컬럼/PK/FK·provenance), GUI 수동 확인·stale 방지. [Actions #42980940727](https://github.com/hibi89/HAE/actions/runs/42980940727) Win/Linux 각 Python **210 PASS/2 FAIL/7 SKIP**, Node UI 16 PASS. 전체 CI FAIL은 원본 ZIP/pyz parity 2건. 실 DBVORA/Google OAuth·고객·출시 검증 전 HOLD |
 | AI AutoML Analyst | **71%** | `hibi89/AI_AutoML_Analyst@feature/kmong-v1` (`4b7da83e037b`) | 기존 Linux 273 PASS/3 SKIP, 구매자 PDF/ZIP·라이선스 최종 QA 미완 |
 | REA_APP | **70%** | `hibi89/HAE@REA_APP` (`2fe581b683f6`) | 독립 JS/TS 정적 분석 CLI 내부 MVP, 고객 상품 패키징 미완 |
 | Lightning Azent | **70%** | `hibi89/HAE@feature/lightning-azent` (`9dd2a6e10ffa`) | 부분 격리 27 PASS, 실제 HAE↔LA 통합 E2E·Windows 미확인 |
@@ -28,6 +28,10 @@
 | AXMART PC CARE | **70%** | hibi89/AX_MART@feature/pc-care-offline-casepack-20261111 (9c25ec379899; 기능 163fd38be68c) | 오프라인 상담 UI·내부ZIP 등록, Node11 PASS·Chromium 합성 UI; 실제 Windows/USB/WinRE/QR·PDF·복구 미검증, 출시 HOLD |
 | AXMART³ CUBE | **70%** | `hibi89/AX_MART@feature/cube-commerce-core` (`061addb6e19c`) | P4 로컬 지원 메타데이터·P5 거래 HOLD 영수증·P6 ZIP 내부 CRC·P7 무JS FAQ·P8 SHA 고정 CLI/빌드 통합. Node22 Linux 신규 정확 소스 26/26 PASS; 전체 npm test/build·실 브라우저/Windows/고객/Cloudflare 미검증, 회원/결제/다운로드 미구현 · RELEASE HOLD |
 
+
+## 2026-11-11 HAE P6 독립 합성 SQLite 복원 검증 (77% 잠정)
+
+> **2026-11-11 KST — HAE P6 합성 SQLite 독립 백업→복원 데이터 검증, 잠정 최종상품 75→77%(+2%p):** private `hibi89/HAE@feature/axflow-mvp` 최종 기능 SHA `3db947023f9034ab9e6257ce503a4872c23c7b31`, HAE docs HEAD `0c43192b7e868b7e5b42be8f827fe7732f803a9f`. [Actions #42982504012](https://github.com/hibi89/HAE/actions/runs/42982504012): Windows/Ubuntu 각 Python **233 중 224 PASS / 2 FAIL / 7 SKIP / 0 ERROR**, Node UI race **16 PASS**. 신규 synthetic-only `business_recovery_chain.py`/CLI의 읽기전용 SHA-pin 원본·백업·복원본 원본 동일성 및 SQLite `iterdump` 논리 데이터/스키마 해시, symlink/WAL/변조·실패 안전 종료, 비공개 행/SQL/경로 미노출. 테스트는 **진짜 Lightning Azent** 승인 합성 CSV→SQLite→새 경로 백업→새 경로 SHA 고정 복원→독립 논리 검증 및 HAE↔DBVORA **계약 모의 HTTP 서버** 자산 대조 포함. **실제 DBVORA 프로세스·Gmail/Sheets OAuth·고객 Win10·상용 ZIP/pyz 검증은 미실행**. 전체 CI **FAILURE**는 변경하지 않은 출고 ZIP/pyz vs 신규 모듈 parity 2 FAIL, 출시 **RELEASE HOLD**. R09 로컬 독립 복원 기능 근거에만 +2%p 부여하여 HAE **77% 잠정**, 목표85까지8%p. 크몽 활성 16종 합계 **1170%p / 평균 73.125% / 85 미만 15종 / 70 미만0종**, 다른 15종 점수·기능/고객자료/권한·과금/배포 불변. 제품 상세 private HAE `docs/HAE_RECOVERY_CHAIN_P6_20261111.md`.
 
 ## 2026-11-11 HAE P5 검증된 합성 자산↔DBVORA 로컬 계약·UI (75% 잠정)
 

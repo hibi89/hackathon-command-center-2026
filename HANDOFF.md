@@ -1,3 +1,17 @@
+## 2026-11-11 KST — HAE P6 복원 검증 77% / 크몽 16종 동기화 (10-point handoff)
+1. 목표·용도·기술: HAE 전체 최종상품 목표 85%, 현재 잠정77. 상품 16종 점수 정확 동기화; private HAE Python3.11+Lightning Azent/SQLite, DBVORA 계약 모의 fixture.
+2. 기능·결정 근거: A HTTP GET 내부 자동 backup/restore(비인가쓰기·유지보수 위험) 대신 B 기존 synthetic SQLite 3개 SHA 지정 검증(선택·무과금·원본 보존). HAE `business_recovery_chain.py`/CLI + 실제 LA 합성 CSV 데이터 복원 E2E, SQL/개인행 미노출.
+3. 테스트: `cd apps/ax-flow && python -m unittest discover -s tests -v`, `node tests/test_ui_races.cjs`; `3db947023f9034ab9e6257ce503a4872c23c7b31` [Actions #42982504012](https://github.com/hibi89/HAE/actions/runs/42982504012) Windows/Ubuntu 각각 233건 = **224 PASS/2 FAIL/7 SKIP**, Node UI16 PASS. **전체 CI FAILURE**; 유료/실 DBVORA/고객 PC 미검증.
+4. 상태: HAE 75→**77% 잠정** (+2), 85까지8%p. 크몽 16종 1170%p 합계/평균73.125%, 85미만 15종·70미만0종, 모두 RELEASE HOLD.
+5. 원인·시도·중단·대안: 초기 테스트 링크 우회·LA 컬럼 기대 불일치 수정 완료. 잔여 2 FAIL은 원본 ZIP/pyz 소스 parity; 무단 overwrite/skip/재배포 금지. 별도 버전 후보 사용자 사전 승인 시 수리·Win native validation, 그 전 safe source 개발.
+6. 저장소·브랜치·SHA·경로: `hibi89/HAE@feature/axflow-mvp` 기능 `3db947023f9034ab9e6257ce503a4872c23c7b31`, docs `0c43192b7e868b7e5b42be8f827fe7732f803a9f`. 중앙 `hibi89/hackathon-command-center-2026@kmong-productization` HEAD는 이번 docs sync 뒤 실제 검증. HAE 소스 경로 `apps/ax-flow/axflow/business_recovery_chain.py`, CLI, P6 tests, `docs/HAE_RECOVERY_CHAIN_P6_20261111.md`. 다른 상품 HEAD·점수 변경 없음.
+7. Production URL·Vercel·환경: HAE 로컬 소프트웨어, Vercel/Production 미적용; GitHub-hosted Win/Ubuntu Python3.11 Node22. Synthetic-only CLI no writes.
+8. 원본·백업·인증 관리/수정 금지: 원본 ZIP/pyz, DBVORA/LA/main, 고객 SQLite, Google 토큰, 비공개 소스의 중앙 복제 금지. 커밋 parent로 rollback 가능. 테스트는 일회성 합성 DB만.
+9. 다음 작업·완료/승인: 실제 DBVORA source/localhost 프로세스와 합성 원본·복원 재연결 실증, source-matched 새 versioned candidate는 소유자 명시 승인 후 생성, OAuth/Gmail/Sheets 실계정도 별도 사전 승인. 3 고객형 흐름/실 Windows installer/권리·보안 검증 전 85/출시 아님.
+10. KST 시각·확인 범위: 2026-11-11 KST GitHub 기능 SHA 및 두 OS Actions 완료 로그 확인, 실 서비스·고객 환경/설치 미검증, 중앙 commit SHA 확인 시 반영.
+
+---
+
 ## 2026-11-11 KST — HAE P5 75% 잠정 및 크몽 16종 최신화 (10-point handoff)
 1. 목표·제품·기술: HAE Humanized Automation Ecosystem 로컬 HAE/LA/SQLite + 별도 DBVORA p0-01.v1, 크몽 전체 16종 최종상품 완성률 진실성 확보, 목표 HAE 85%.
 2. 완료·변경·설계 근거: A 실 DBVORA/Google 서비스 연결 및 영구 저장소 생성(권한/승인/비용·보안 부담) vs B 현재 검증 가능한 합성 SQLite owner-bound API/수동 UI(채택). DB ID+SHA+테이블/컬럼/FK/관계/provenance의 로컬 read-only 교차 증거. 반응 지연 및 provider 단절시 fail-closed.
