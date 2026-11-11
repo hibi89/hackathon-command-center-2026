@@ -402,3 +402,8 @@
 - Public `hibi89/RAG_STUDIO@feature/p550-mapped-cited-journey` P5.48 오프라인 매핑 UI/JSON(+5), P5.49 원본 SHA와 SMAX 공개 V1 검증·매출 집계(+5), P5.50 기존 P5.34 합성 SMAX→RAG SQL·문서 인용 통합(+5). 새 P5.47은 기존 55%에서 중복 반영하지 않음. 제품 개발 기능범위 기준 **70% 잠정**, 상용 출시 NOT READY.
 - 정확한 기능 SHA `a3f10f95db086f363fed3acff48425ca09b77d4f`, [GitHub Actions #42943551661](https://github.com/hibi89/RAG_STUDIO/actions/runs/42943551661) Linux **571 PASS/0 FAIL/2 SKIP**, Windows **573 PASS/0 FAIL/0 SKIP**, P5.47–P5.50 scoped 34/34 PASS, Gold/Negative/Heldout/router PASS. 공개 합성 결과 6주문/10개/157000원/문서 인용1, source/mapping SHA 및 수학 검산 일치.
 - 활성 16종 합계 **1050%p**, 산술평균 **65.625%=65.63% 잠정**. 70% 미만 6종. 실제 고객 Native SMAX/원본 권리·3PC Windows/EXE·LLM 품질/판매 라이선스 미검증. `REVIEW_HOLD/NOT_GRANTED`, **RELEASE HOLD**. Private SMAX/SOVIA, main/develop, 고객 데이터·권한·과금·Production 불변. 자세한 근거는 제품 브랜치 `docs/P550_70_PROVISIONAL_MILESTONE.md`와 중앙 KMONG_PRODUCTIZATION.md/HANDOFF.md.
+
+## 2026-11-11 KST — SMAX² PREP/SELF 50→70% 기능개발 잠정 체크포인트
+- Private `hibi89/SMAX@feature/prep-self-owner-mapping-p8`: P8 소유자 오프라인 CSV 열 매핑 HTML/JSON(+5), P9 SHA 결속 기존 PREP/SELF 초안 경로(+5), P10 P5/P6 검토 영수증 전환(+5), P11 SHA 검사 가능 HTML·JSON 새 폴더(+5), P12 명령 결합(추가 가산 없음). **70% 잠정 엔지니어링 범위**이며 판매/배포 준비 완료가 아님.
+- Linux Node22.16 신규 파일 테스트 **17 PASS/0 FAIL/0 SKIP**; Chromium 합성 HTML 소유자 선택·JSON 다운로드 PASS. 기존 Private PREP/SELF 및 P6 원본을 사용한 V8 격리 호환 시험도 PASS였으나 내부 해시/Buffer는 테스트 대체, P9/P11 Native 신규 테스트도 일부 서비스 대체. 전체 Private npm test/preprocessing, 실제 무스텁 경로·Windows 실기기·고객파일·설치/판매 QA **NOT RUN**. RELEASE HOLD, 사용자 원본 및 Private 타 브랜치 변경 없음.
+- 크몽 활성 16종 잠정 완성률 총합 **1070%p**, 단순평균 **66.875%**; 70% 미만 **5종**. DBVORA 별도 채팅 진행을 제외한 집계이며 DBVORA는 계속 55% 잠정 기록.
