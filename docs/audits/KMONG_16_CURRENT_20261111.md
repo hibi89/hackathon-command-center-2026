@@ -1,6 +1,6 @@
 # 크몽 활성 16종 최종완성률 — 2026-11-11 KST 현재 조회 정본
 
-> **현재 16종 / 합계 1163%p / 산술 평균 72.6875% (≈72.69%) / 70% 미만 0종 / 70% 이상 16종.** 각 %는 최종 납품 범위 대비 주관적·잠정적 엔지니어링 추정이며 공식 테스트 완료율·판매 승인률이 아니다. **전 상품 RELEASE HOLD.**
+> **현재 16종 / 합계 1166%p / 산술 평균 72.875% (≈72.88%) / 70% 미만 0종 / 70% 이상 16종 / 85% 미만 15종.** 각 %는 최종 납품 범위 대비 주관적·잠정적 엔지니어링 추정이며 공식 테스트 완료율·판매 승인률이 아니다. **전 상품 RELEASE HOLD.**
 
 - 범위: `hibi89/hackathon-command-center-2026@kmong-productization` 활성 16종. 소유자 지시로 **Web REA Studio(과거 40%)는 독립 크몽 상품 목록 제외/원본 보존**, `REA_Web`은 계속 75%로 별도 관리.
 - 확인 방법: 2026-11-11 KST 연결된 GitHub 실제 구현 브랜치의 **12개 저장소 / 18개 브랜치 HEAD**를 직접 조회(16개 제품 정본 + SMAX `preprocessing`·`frontend` 보조 브랜치). 상품별 HANDOFF/STATUS 및 이전 CI·감사 근거 대조. 기존 16종 정합 조회 당시 신규 테스트 0건. 이번 PC CARE는 별도 신규 Node 11 PASS·Chromium 합성 UI 검증 및 정확 GitHub 기능 SHA 재평가를 추가했다. 과거 성공 CI는 해당 코드 SHA에만 귀속한다.
@@ -17,7 +17,7 @@
 | SOVIA | **75%** | `hibi89/SOVIA_sovereign@develop` (`7418b23aff9b`) | 다중 OS CI 기존 기록, 고객 PII/권리/사용 승인 미검증 |
 | AI AutoML Analyst | **71%** | `hibi89/AI_AutoML_Analyst@feature/kmong-v1` (`4b7da83e037b`) | 기존 Linux 273 PASS/3 SKIP, 구매자 PDF/ZIP·라이선스 최종 QA 미완 |
 | REA_APP | **70%** | `hibi89/HAE@REA_APP` (`2fe581b683f6`) | 독립 JS/TS 정적 분석 CLI 내부 MVP, 고객 상품 패키징 미완 |
-| HAE | **70%** | `hibi89/HAE@feature/axflow-mvp` (`d192e98daca8`) | SQLite 보호/백업 일부 성공; 전체 CI Linux·Windows 실패 남음 |
+| HAE | **73%** | `hibi89/HAE@feature/axflow-mvp` (기능 `4f19b367f057`; 문서 `2a1d90fd4db4`) | 소유자 지정 합성 로컬 SQLite 스키마·FK 읽기전용 검증 및 Windows 한글 경로/포트 회귀 보정; 신규 Linux 14/14 PASS, Actions #42972148842 Windows/Ubuntu **전체 FAILURE**(기존 배포 ZIP/pyz 및 잔여 회귀), 실 DBVORA/OAuth/고객/배포 미검증 · RELEASE HOLD |
 | Lightning Azent | **70%** | `hibi89/HAE@feature/lightning-azent` (`9dd2a6e10ffa`) | 부분 격리 27 PASS, 실제 HAE↔LA 통합 E2E·Windows 미확인 |
 | DBVORA | **70%** | `hibi89/DBVORA@feature/p0-db-map` (`9e27a5cda271`) | SQLite/PG 메타데이터+ZIP/ZSTD, Linux 부분 178 PASS, Chromium 9; 실PG·전체460·Windows 미검증 |
 | RAG Studio AX Edition | **70%** | `hibi89/RAG_STUDIO@feature/p546-rag-prep-mapping` (`5dca9368d409`) | Linux 571 PASS/2 SKIP·Windows 573 PASS(검증 소스 a3f10f95); Private PREP/실고객 미검증 |
@@ -28,6 +28,10 @@
 | AXMART PC CARE | **70%** | hibi89/AX_MART@feature/pc-care-offline-casepack-20261111 (9c25ec379899; 기능 163fd38be68c) | 오프라인 상담 UI·내부ZIP 등록, Node11 PASS·Chromium 합성 UI; 실제 Windows/USB/WinRE/QR·PDF·복구 미검증, 출시 HOLD |
 | AXMART³ CUBE | **70%** | `hibi89/AX_MART@feature/cube-commerce-core` (`061addb6e19c`) | P4 로컬 지원 메타데이터·P5 거래 HOLD 영수증·P6 ZIP 내부 CRC·P7 무JS FAQ·P8 SHA 고정 CLI/빌드 통합. Node22 Linux 신규 정확 소스 26/26 PASS; 전체 npm test/build·실 브라우저/Windows/고객/Cloudflare 미검증, 회원/결제/다운로드 미구현 · RELEASE HOLD |
 
+
+## 2026-11-11 HAE 73% 업데이트
+
+> **2026-11-11 KST — HAE TOP1 실개발 70→73%(+3%p) 최신화:** private `hibi89/HAE@feature/axflow-mvp` 소스 `4f19b367f0573a553b0f89965dca7fab32a5c09d` 및 인수인계 HEAD `2a1d90fd4db480cb7d88645ade43420186aaa5ae`. Windows cp1252 콘솔 한글 경로 안전 출력·포트 실패 검증 및 소유자 지정 **synthetic-only offline SQLite** 메타데이터 조회/관계 목록 CLI 추가. Linux 신규 스코프 14/14 PASS, 전체 [GitHub Actions #42972148842](https://github.com/hibi89/HAE/actions/runs/42972148842) Windows/Ubuntu 둘 다 **FAILURE**(기존 배포 소스 불일치/잔여 회귀). 기존 배포 ZIP·비공개 고객 데이터·main·외부 인증/권한 미수정, 상용출시 HOLD. 진척 73%는 주관적 제품 범위 재평가이며 85% **미달**. 활성 16종 합계 **1166%p**, 평균 **72.875%(≈72.88%)**, 85 미만 **15종**, 70 미만 **0종**. [긴급도 TOP3](docs/audits/KMONG_UNDER85_TOP3_20261111.md).
 
 ## 2026-11-11 PC CARE 70% 재평가
 
