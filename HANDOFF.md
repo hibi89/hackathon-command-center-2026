@@ -1,3 +1,17 @@
+## 2026-11-11 KST — HAE P5 75% 잠정 및 크몽 16종 최신화 (10-point handoff)
+1. 목표·제품·기술: HAE Humanized Automation Ecosystem 로컬 HAE/LA/SQLite + 별도 DBVORA p0-01.v1, 크몽 전체 16종 최종상품 완성률 진실성 확보, 목표 HAE 85%.
+2. 완료·변경·설계 근거: A 실 DBVORA/Google 서비스 연결 및 영구 저장소 생성(권한/승인/비용·보안 부담) vs B 현재 검증 가능한 합성 SQLite owner-bound API/수동 UI(채택). DB ID+SHA+테이블/컬럼/FK/관계/provenance의 로컬 read-only 교차 증거. 반응 지연 및 provider 단절시 fail-closed.
+3. 테스트: private HAE `522bd95139ff104fa0d9504ca6e3d1f82428ed47` [Actions #42980940727](https://github.com/hibi89/HAE/actions/runs/42980940727) Windows/Ubuntu 각 Python 219 total =210 PASS/2 FAIL/7 SKIP/0 ERROR; Node UI 16 PASS. 전체 Actions FAILURE; 실제 DBVORA process/고객/Google 계정/배포 미실행.
+4. 상태: HAE **75% 잠정**(+2%p·85까지10%p). 총 크몽 16종 **1168%p/평균73.0%**, 85 미만 15종·70 미만0종, 전체 RELEASE HOLD.
+5. 실패/원인/시도·대안: 마지막 2 FAIL은 이전 원본 ZIP/pyz와 현재 소스 내용 불일치. 테스트 skip/바이너리 원본 overwrite 금지. 별도 버전 후보는 사용자 사전 승인 후 빌드+실 Win 검증하거나 현재 소스-only 안전 개발 지속.
+6. 저장소/브랜치/SHA: `hibi89/HAE@feature/axflow-mvp` 기능 SHA `522bd95139ff104fa0d9504ca6e3d1f82428ed47`, docs SHA `0b58f4f3fdf7a5f74f74233dfa90cff8e104f653`, 중앙 `hibi89/hackathon-command-center-2026@kmong-productization` 신규 커밋 GitHub ref 확인. 공적 허브에 비공개 코드 복사하지 않음.
+7. 환경/실행/Production: GitHub-hosted Python3.11 Windows+Ubuntu, Node UI stub/fixture. Production/Vercel HAE 미적용; 로컬 UI에서 선택적 합성 DB source.
+8. 원본·백업·비밀·수정금지: previous HAE checked-in ZIP/pyz 보존; Git history revert; 고객 DB/토큰/원본 프로젝트/권한/결제/외부 전송·배포 변경 없음. 다른 15종 상품 보고와 SHA를 덮어쓰지 않음.
+9. 다음 우선순위·완료 기준·승인: (1) 별도 버전 후보 승인 후 package parity/Win native 검증, (2) 실제 DBVORA sandbox synthetic + independently verified backup/restore 및 저장 registry, (3) OAuth/Gmail/Sheets scoped 실계정 승인 후 3 자동화 UX·복구·Win customer pilot. 모든 release gate 통과 전 출시 HOLD.
+10. 날짜/검증/문서 기준: 2026-11-11 KST, HAE 소스·OS 실제 Actions 로그 확인(영업 고객·실 DBVORA 미검증). 중앙 신규 SHA는 실제 push 직후 확인, 본문 선행 스냅샷과 구분.
+
+---
+
 ## 2026-11-11 KST — HAE P4 73% source CI recovery mirror (10-point handoff)
 1. 목적/기술: 크몽 HAE 최종상품 73→85% 목표, 로컬 HAE·Lightning Azent·SQLite·DBVORA p0-01.v1 안전 검증. 공개 상황실은 제품 완료율 메타데이터만 반영.
 2. 구현/결정: 실제 HAE 원격 source는 이미 Windows temp SQLite handle release, 8.3 aliases/junction/reparse tests, port probe 회귀를 최소 수정했고, 진짜 LA SQLite와 DBVORA 계약 **모의 HTTP 서버** E2E를 추가했다. 기존 바이너리 배포 재생성은 사용자 승인이 필요해 보존.
