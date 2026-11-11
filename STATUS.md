@@ -1,3 +1,9 @@
+## 2026-11-12 KST — AI Code Checker owner candidate ZIP and same-EXE evidence development checkpoint
+- Target next urgent sub85 non-DBVORA: AI Code Checker 78% → 85; **not achieved**, 78 unchanged. Main `adf3f4ac8fab87c72d176011b0b719de39797db4` baseline untouched. Feature `hibi89/ai-code-checker@feature/retail-private-candidate-20261112` SHA `76332e53e50c6a589ac329ac33dff8925ec6447f`, draft PR #82.
+- P3-01 private owner-supplied original LICENSE/NOTICE/README + exact EXE into a new ZIP only, independent preflight and hash manifest, no release approval. P3-02 ZIP/EXE same SHA/byte match with pre-existing Windows readonly/smoke receipts, post-read verify; all human release gates UNVERIFIED. Source and test blob exact local parity.
+- Linux Python3.13 isolated **20 PASS, 0 FAIL, 0 SKIP**, replacing existing modules with local shims for these tests; full original repository/unit/Windows integration **NOT RUN**. GitHub Actions #43098458886 status QUEUED; cannot assert CI success. Customer Win10/11, SmartScreen/Defender/OS packet/Korean PDF, exact component vendor/NOTICE rights and owner sale approval not available. **RELEASE HOLD**.
+- Active16 scores still **1210%p/mean75.625%**, >=85 4, <85 12. Other 15 preserved; in-progress DBVORA72 unchanged. No cloud/permissions/customer data/main mutation.
+
 ## 2026-11-12 KST — DBVORA P3-07 local owner offline review, 72% provisional
 - hibi89/DBVORA@feature/p0-db-map HEAD adbad6cc2eed8d930ec74fd98e8fad151b2e598e. New synthetic-only manual request review HTML+new-only file and no replay/delete/network; P3+1 and P4+1 engineering rubric => 70→72, 85 not reached.
 - Exact GitHub P3-07 source/test blob local SHA match; local Python3.13.5 isolated 39/39 PASS (22 new), Chromium injected HTML five table rows, 0 external requests/JS errors. Full original >=499/Node ZIP/ZSTD, Windows/NTFS, real PG TLS and direct file:// untested.

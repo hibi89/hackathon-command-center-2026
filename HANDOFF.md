@@ -1,3 +1,15 @@
+## 2026-11-12 KST — AI Code Checker P3-01/P3-02 hub sync (10-point)
+1. Scope: Kmong AI Code Checker offline Windows product 78→85 requested; DBVORA handled elsewhere, existing 85+ excluded.
+2. Changes: private owner-controlled candidate ZIP from original owner-supplied license/notice and EXE, cross-bind ZIP with physical EXE + previously collected Windows receipts. No auto license or distribution.
+3. Tests: Python3.13 Linux new isolated 20 PASS/0 FAIL/0 SKIP with upstream test shims, source+test GH blob parity; original full repo/Windows EXE CI unverified. GitHub Actions 43098458886 QUEUED.
+4. Status: score **78 unchanged, 85 NOT MET**, feature branch committed, draft PR #82 not merged to main; release HOLD. Current 16 sum1210pp/75.625%, 4 >=85.
+5. Errors: local git github.com DNS failed, exact-GH-blob write instead; first shared fd bug fixed after 11pass/1error and retested 12pass then20pass. CI queued; do not falsely claim success. Root license/genuine consumer Windows not available.
+6. Repo/branch/SHA: hibi89/ai-code-checker main `adf3f4ac8fab87c72d176011b0b719de39797db4` untouched; feature PR #82 head `76332e53e50c6a589ac329ac33dff8925ec6447f`, source scripts/build_private_customer_candidate.py, scripts/link_private_candidate_evidence.py; hub kmong-productization parent `261288553fc98a8b2a3d744d35bd644470b17185`, final commit verify.
+7. Deployment: no hosted/Vercel, local Windows EXE; developer Python3.13 Linux only. CI queued, not ready.
+8. Originals/security: private binary/actual legal fulltexts/customer code never committed or sent; branch parent/GitHub main rollback, no paid API/system policy/permissions.
+9. Next: actual original repo CI/Windows Python; ZIP/source original cross-check, buyer Win10/11 GUI, SmartScreen/Defender/OS network, Korean PDF, 71 archive entries original license NOTICE/owner approval. Percent uplift only on verified production-scope gain.
+10. Date: 2026-11-12 KST. Observed data 20 shim tests and pending remote CI; hub reflects unchanged score and concurrent DBVORA state.
+
 ## 2026-11-12 KST — DBVORA P3-07 72% hub checkpoint (10-point handoff)
 1. Goal/tech: next urgent non-RAG under85 product DBVORA, Python3.11+ local SQLite/ZIP/ZSTD/static HTML, aim 85.
 2. Delivered/decision: option A auto-resume after crash (unsafe) vs B manual read-only recovery ledger/archive review + static HTML new-only output (chosen). No source DB/write/archive retry/telemetry.
