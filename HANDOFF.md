@@ -554,3 +554,15 @@
 2. 복원: 중앙 최신 `main`→`CHAT_BOOTSTRAP.md`→`docs/HAECHONG_CANONICAL_CONTEXT_20261025.md`→`START_HERE`/이 문서/STATUS/실 위험표/각 대회 리드 원격 HEAD·CI→다음 중요한 해총 감사·품질 시정 작업 진행.
 3. 스총 사용자의 우선순위 **10/25~11/07 사장님 존 SELF 집중**. 해총은 KIC 11/12, PayPal 11/13, UGREEN 11/16의 외부 블로커/공식 제출 자격을 조기 점검하고 제출 리스크가 없다고 함부로 주장하지 않는다.
 4. 지금은 총괄 역할/인수 기록 변경이지 3개 대회 브랜치의 코드 수정·실 provider·공식 제출·진도 추가 완료를 뜻하지 않음. Public repo에 SMAX Private 내부 문서를 복사하지 말 것.
+
+## 2026-11-11 KST — RAG Studio P5.47 해총 체크포인트 (크몽 55% 유지)
+1. 목표·기술: RAG Studio AX Edition PREP 수동 매핑 검토, Node22 로컬 CSV SHA256 + 제한 JSON. 기존 SMAX Private PREP 원본 재사용·공개 금지.
+2. 구현: hibi89/RAG_STUDIO feature/p547-bound-draft-review의 새 로컬 소스 결속 매핑 파서·CLI·10 테스트·워크플로·문서, P5.46 원본을 그대로 보존.
+3. 검증: Linux Node22.16 새 테스트 10 PASS/0 FAIL/0 SKIP + JS syntax PASS. 새 소스/테스트 3개 및 P5.46 의존성 2개 SHA가 로컬 검사와 GitHub blob 일치. 전체 npm test, Windows, CI run, 실제 SMAX Native·고객 기기·판매 미검증.
+4. 상태: 새 리뷰 경로는 실동작 범위 DONE, 권리·승인/Native 신뢰/자동 인제스트/고객용 UI/풀 회귀 PENDING. RAG 55% 잠정 그대로, 70 목표까지 15%p. 16종 평균 64.6875% 불변, RELEASE HOLD.
+5. 실패·피벗: 로컬 git ls-remote github.com DNS 오류 → GitHub connector 사용. 원본 P5.46 vs develop 10 ahead/1 behind, 강제 병합 금지. GitHub commit statuses 0 및 PR-only workflow runs 0은 CI 결과 불명이지 PASS 아님.
+6. 코드·기준: public hibi89/RAG_STUDIO/feature/p547-bound-draft-review, 기반 SHA 5dca9368d40992ad9233529f0ec8d73145ce2e55. 최종 HEAD은 최신 ref로 재조회. 중앙 hibi89/hackathon-command-center-2026 kmong-productization.
+7. 배포·실행: node --test tests/p547-prep-mapping-draft.test.mjs; node src/prep-mapping-review-cli.mjs /abs/source.csv /abs/map.json. Vercel/Production 미적용.
+8. 원본·보안: 고객자료, Private SMAX, SOVIA, main/develop, 비밀정보, 과금, 원본 DB 불변. 계획 응답은 REVIEW_HOLD/NOT_GRANTED 및 로컬 검토 메타데이터만.
+9. 다음 우선순위: RAG 전체 Linux/Windows CI 실결과 검증 → 사용자 편집 매핑 UI/메타데이터 출력 개선 → 공개 V1 호환 합성 E2E → 실제 Native 승인/3-PC 판매검증. 원본·권한 승인 없이 인제스트하지 않음.
+10. 시각: 2026-11-11 KST, 실제 파일 범위·SHA 및 10건 로컬 격리 시험만 검증. 사용자에게 완료율 미달·상용 미출시를 명확히 알릴 것. 상세 P547 문서는 RAG 브랜치 docs/P547_SOURCE_BOUND_DRAFT_REVIEW.md 참조.
