@@ -1,3 +1,8 @@
+## 2026-11-12 KST — DBVORA P3-08 actual ZIP/ZSTD recovery integrity, 77% provisional
+- Product `hibi89/DBVORA@feature/p0-db-map` HEAD `06473b7121adc8454e56651ae29d88c2a5b75707`, new synthetic runtime gate scripts/recovery_review_gate.py + 15 mocked regression controls, fixed record-only ledger O_CREAT race with 2 tests. **Actual original-source SHA-matched** core SQLite/ZIP/ZSTD/ledger/catalog/audit/HTML integration **16/16 checks PASS** on Linux Python3.13.5 with local zstd; scoped local 58/58 PASS/0 SKIP, compileall PASS.
+- Entire original repo `python -m scripts.verify_release_gate` Python≥518+Node, native Windows NTFS/file://, approved real PG TLS, user installer/power failure **NOT RUN**. No private paid CI, deployment, source customer data. Engineering 72→77 provisional, 85 pending 8p, all RELEASE HOLD.
+- Central roster active16 total **1215%p / mean75.9375% / >=85 4 / <85 12 / <70 0**; RAG85, SMAX85/HAE85 unaffected.
+
 ## 2026-11-12 KST — AI Code Checker owner candidate ZIP and same-EXE evidence development checkpoint
 - Target next urgent sub85 non-DBVORA: AI Code Checker 78% → 85; **not achieved**, 78 unchanged. Main `adf3f4ac8fab87c72d176011b0b719de39797db4` baseline untouched. Feature `hibi89/ai-code-checker@feature/retail-private-candidate-20261112` SHA `76332e53e50c6a589ac329ac33dff8925ec6447f`, draft PR #82.
 - P3-01 private owner-supplied original LICENSE/NOTICE/README + exact EXE into a new ZIP only, independent preflight and hash manifest, no release approval. P3-02 ZIP/EXE same SHA/byte match with pre-existing Windows readonly/smoke receipts, post-read verify; all human release gates UNVERIFIED. Source and test blob exact local parity.
