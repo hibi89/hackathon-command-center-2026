@@ -1,3 +1,9 @@
+## 2026-11-12 KST — DBVORA P3-06 scoped read-only archive recovery review; score unchanged
+- Product `hibi89/DBVORA@feature/p0-db-map` HEAD `ee7ee73952a918249a0ee8a4779741ae5372b1f2`; new local-only synthetic ledger/archive reconciliation, no writes/retries/automatic acceptance.
+- Isolated local reconstructed Linux Python **16 PASS/0 FAIL/0 SKIP**; full original-source Python >=476, Node/Windows/NTFS/live PostgreSQL not run. Product 70% provisional unchanged, **85 NOT MET**, RELEASE HOLD.
+- Current active 16 total **1196%p / mean74.75% / 13 below85 / 3 at-least85**, RAG Studio 73 and SMAX² 85 untouched. No release/permission/secret or other code changes.
+- Detailed P3-06 evidence in private product repository; hub manual sync only.
+
 ## 2026-11-12 KST — RAG P5.48 owner mapping local UI 73% provisional sync
 - Verified `hibi89/RAG_STUDIO@feature/p546-rag-prep-mapping` HEAD 1430c244e08de34bf9941c0ac21e68754ba7e9ca. P5.47 explicit mapping JSON and SHA-bound owner recheck +2 points; P5.48 static-only localhost/Host/Origin/CSP launcher +1 point.
 - Local Linux Node22.16 scoped 19 PASS/0 FAIL/0 SKIP; Chromium synthetic DOM 3-column proposal→download→CLI hold PASS but real file/HTTP URL browser access blocked/unverified. Actions 43092180863 completed FAILURE, 0 jobs; no full CI PASS.
