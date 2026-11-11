@@ -1,3 +1,18 @@
+## 2026-11-11 KST — HAE 85% 잠정 P7/P8·크몽 16종 동기화 (10-point handoff)
+
+1. **목표·제품·기술:** HAE 로컬 자동화 제품 잠정 85% 목표; Python3.11+Lightning Azent+SQLite, DBVORA `p0-01.v1` read-only 계약, 사전 승인·원본 보호. 해총 활성 크몽 16종 합계 동기화.
+2. **완료·결정 근거:** A 기존 runtime SQLite에 자산/recipe 합치기(한 파일이나 실행상태/데이터 수명 결합) vs B 별도 사용자가 초기화한 registry/catalog SQLite(추가파일은 늘지만 롤백/백업·권한/소유권 격리, 선택). HAE owner opt-in asset registry 메타데이터는 파일 경로·행·SQL·시크릿 미저장, task recipe catalog는 명시적 동의 후 task 텍스트+**상대 CSV 경로**+원본/계획SHA 저장, 재시작 강제 SHA 확인·새 승인, 5종 local no-node 프리셋, 진짜 LA local CSV 3 워크플로+durable replay.
+3. **테스트·범위:** SHA `0b1a6607b9daf9518ef9e5e42ba4aff710675760`, [Actions #42987797638](https://github.com/hibi89/HAE/actions/runs/42987797638). GitHub-hosted Windows+Ubuntu 각 Python273 total **264 PASS/2 FAIL/7 SKIP/0 ERROR**, Node UI **22 PASS**, source/registry/catalog/HTTP restart/3 real LA synthetic local cases PASS. 전체 CI FAILURE. 실 DBVORA FastAPI·Google OAuth/Gmail/Sheets/고객Win10·installer·3 외부 고객형 워크플로 실증 미검증.
+4. **상태/완성률:** HAE 종전77 + registry3 + presets1 + 3 local LA flows1 + catalog/GUI3=**85% 엔지니어링 잠정**. 크몽 활성 **16종 합계 1184%p/평균74.0%/85미만14/85이상2/70미만0**. 모든 16종 **RELEASE HOLD**, 85는 상용 출시 허가 아님.
+5. **실패 원인·시도/중단·대안:** 두 inherited FAIL `test_checked_in_zipapp_matches_current_hae_and_staged_la_sources` + `test_release_zip_matches_shipped_sources_and_executes_real_la_e2e`는 보존 원본 ZIP/pyz가 최신 source를 포함하지 못함; skip/overwrite/force push/무의미 CI 반복 불가. 첫 UI init fake DOM button disabled 불일치, Windows fixture WinError32(SQLite handle), LA replay physical DB SHA 가정 실패는 수정 후 최신 SHA 양 OS 전부 해결. 별도 버전 배포 후보 빌드/검수는 사용자 사전 승인, 그 전 source-only 개선.
+6. **저장소·브랜치·SHA·주요 경로:** HAE private `hibi89/HAE@feature/axflow-mvp` 기능 `0b1a6607b9daf9518ef9e5e42ba4aff710675760`, HAE docs `3544e0aef27085e1257f881b20d0c2864383b5e6`; central public `hibi89/hackathon-command-center-2026@kmong-productization` 새 SHA는 GitHub push 후 검증. HAE source `apps/ax-flow/axflow/{asset_registry.py,asset_registry_cli.py,workflow_catalog.py,workflow_catalog_cli.py,web.py,__main__.py,static/index.html,static/app.js}`; private evidence `docs/HAE_P7_P8_TO_85_20261111.md`.
+7. **Production/Vercel/환경/실행:** HAE local-only, Vercel/Production URL **미적용**. `cd apps/ax-flow && node tests/test_ui_races.cjs && python -m unittest discover -s tests -v` (staged real LA for E2E), Windows/Ubuntu Python3.11 GH Actions. Synthetic-only explicit registry init/serve flow; no public port.
+8. **원본·백업·시크릿 관리·수정 금지:** HAE original checked-in ZIP/pyz, main/LA/DBVORA/REA_APP, customer data, OAuth tokens/permissions, Production, other 15 products untouched. Private code never copied to central public; tests only disposable synthetic CSV/SQLite, source Git history enables rollback.
+9. **다음 우선순위·승인/완료기준:** 사용자 승인 별도 이름/version source-parity distribution candidate (원본 불변)→실 Win/NTFS/installer+browser/오프라인 audit; synthetic source with **real DBVORA FastAPI process**; 별도 동의 후 live scoped Google OAuth, Sheets→local+Gmail report, 3 external provider customer-style workflows; legal/privacy/support QA. 모든 출시 조건 불충족이므로 **RELEASE HOLD**, 100% 아님.
+10. **갱신 시각·검증 범위·기준 SHA:** 2026-11-11 KST. 양 OS 정확 Actions와 HAE GitHub HEAD 확인, source features+synthetic fixtures 한정, 상용 실고객·Google·실 DBVORA·Production 미검증. 중앙 신규 SHA push 후 재확인, 새 채팅 시 HEAD 우선 확인.
+
+---
+
 ## 2026-11-11 KST — HAE P6 복원 검증 77% / 크몽 16종 동기화 (10-point handoff)
 1. 목표·용도·기술: HAE 전체 최종상품 목표 85%, 현재 잠정77. 상품 16종 점수 정확 동기화; private HAE Python3.11+Lightning Azent/SQLite, DBVORA 계약 모의 fixture.
 2. 기능·결정 근거: A HTTP GET 내부 자동 backup/restore(비인가쓰기·유지보수 위험) 대신 B 기존 synthetic SQLite 3개 SHA 지정 검증(선택·무과금·원본 보존). HAE `business_recovery_chain.py`/CLI + 실제 LA 합성 CSV 데이터 복원 E2E, SQL/개인행 미노출.

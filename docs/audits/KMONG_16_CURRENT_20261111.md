@@ -1,6 +1,6 @@
 # 크몽 활성 16종 최종완성률 — 2026-11-11 KST 현재 조회 정본
 
-> **현재 16종 / 합계 1176%p / 산술 평균 73.5% / 70% 미만 0종 / 70% 이상 16종 / 85% 미만 15종.** 각 %는 최종 납품 범위 대비 주관적·잠정적 엔지니어링 추정이며 공식 테스트 완료율·판매 승인률이 아니다. **전 상품 RELEASE HOLD.**
+> **현재 16종 / 합계 1184%p / 산술 평균 74.0% / 70% 미만 0종 / 70% 이상 16종 / 85% 미만 14종.** 각 %는 최종 납품 범위 대비 주관적·잠정적 엔지니어링 추정이며 공식 테스트 완료율·판매 승인률이 아니다. **전 상품 RELEASE HOLD.**
 
 - 범위: `hibi89/hackathon-command-center-2026@kmong-productization` 활성 16종. 소유자 지시로 **Web REA Studio(과거 40%)는 독립 크몽 상품 목록 제외/원본 보존**, `REA_Web`은 계속 75%로 별도 관리.
 - 확인 방법: 2026-11-11 KST 연결된 GitHub 실제 구현 브랜치의 **12개 저장소 / 18개 브랜치 HEAD**를 직접 조회(16개 제품 정본 + SMAX `preprocessing`·`frontend` 보조 브랜치). 상품별 HANDOFF/STATUS 및 이전 CI·감사 근거 대조. 기존 16종 정합 조회 당시 신규 테스트 0건. 이번 PC CARE는 별도 신규 Node 11 PASS·Chromium 합성 UI 검증 및 정확 GitHub 기능 SHA 재평가를 추가했다. 과거 성공 CI는 해당 코드 SHA에만 귀속한다.
@@ -12,8 +12,9 @@
 | 제품 | 최종상품 잠정 완성률 | 구현 정본 브랜치 (조회 HEAD) | 핵심 증거와 미검증 사항 |
 |---|---:|---|---|
 | 코인 캔들 수집기 | **94%** | `hibi89/candle_scraper@main` (`1f976770db47`) | Windows 147 PASS(기존); 기술 99%와 판매상품 94% 분리, 거래소 상업권 미확인 |
+| HAE | **85% (잠정)** | `hibi89/HAE@feature/axflow-mvp` (기능 `0b1a6607b9da`; 인수인계 `3544e0aef270`) | P7 소유자 합성 SQLite 자산↔DBVORA `p0-01.v1` **모의 계약 서버** 검증·영구 메타데이터 등록/재시작, P8 5종 no-node 프리셋·진짜 LA 로컬 CSV 3흐름·SHA 고정 재로드 워크플로 저장/새 승인. [Actions #42987797638](https://github.com/hibi89/HAE/actions/runs/42987797638): Windows/Ubuntu Python **264 PASS/2 FAIL/7 SKIP**, UI Node22 **22 PASS**. 전체 CI FAILURE는 기존 ZIP/pyz source parity 2건. 실 DBVORA/Sheets/Gmail OAuth/고객 Windows/installer·판매 준비 미검증, **RELEASE HOLD** |
 | AI Code Checker | **78%** | `hibi89/ai-code-checker@main` (`adf3f4ac8fab`) | Windows EXE/GUI 일부 검증, LICENSE/NOTICE·구매자 PC 검증 미완 |
-| HAE | **77%** | `hibi89/HAE@feature/axflow-mvp` (기능 `3db947023f90`; 문서 `0c43192b7e86`) | 합성 SQLite 원본→백업→복원 별도 경로 read-only SHA+논리 데이터/스키마/FK 일치, 진짜 LA 승인 CSV 통합 E2E + DBVORA p0 계약 **모의** HTTP 서버. [Win/Linux 224 PASS/2 FAIL/7 SKIP](https://github.com/hibi89/HAE/actions/runs/42982504012), Node UI16 PASS. 원본 ZIP/pyz parity 2 FAIL로 전체 CI FAILURE, 실 DBVORA/고객/OAuth/상용출시 미검증 HOLD |
+| SMAX² | **76%** | `hibi89/SMAX@feature/prep-self-owner-mapping-p8` (`65697b623c33`; P18 customer portal `b32e0a01c6e3`) | Real no-server static `site/owner.html`: customer CSV chooser → manual role/period → exact original-byte SHA JSON download, linked from SMAX site; Node22 portal/CLI **5 PASS**, Chromium144 browser→real P8 validator **14 PASS**, exact HTML SHA256 Node **53 vectors PASS**, 0 requests/JS errors, exact 5 Git blobs verified. Full repo Native/P8→P16 real CLI/Windows Edge file:// & SELF customer integration **NOT_RUN**; RELEASE HOLD |
 | REA_Web | **75%** | `hibi89/REA_Web@feature/d27-windows-python-discovery` (`97b6e5cab7b8`) | Lite/Pro 분리, 설치·고객 납품 E2E 미확인 |
 | SOVIA | **75%** | `hibi89/SOVIA_sovereign@develop` (`7418b23aff9b`) | 다중 OS CI 기존 기록, 고객 PII/권리/사용 승인 미검증 |
 | AI AutoML Analyst | **71%** | `hibi89/AI_AutoML_Analyst@feature/kmong-v1` (`4b7da83e037b`) | 기존 Linux 273 PASS/3 SKIP, 구매자 PDF/ZIP·라이선스 최종 QA 미완 |
@@ -23,11 +24,14 @@
 | RAG Studio AX Edition | **70%** | `hibi89/RAG_STUDIO@feature/p546-rag-prep-mapping` (`5dca9368d409`) | Linux 571 PASS/2 SKIP·Windows 573 PASS(검증 소스 a3f10f95); Private PREP/실고객 미검증 |
 | Astra PDF Redesigner | **70%** | `hibi89/astra_pdf_redesigner@feature/astra-p52-to-p70-20261111` (`8f987462dc7c`) | STEP4/5/7 추가; 코드 dab6e365 Chrome/Edge CI 107 PASS·Windows NSIS SUCCESS; 실제 PDF 미검증 |
 | 코인 패턴 분석기 | **70%** | `hibi89/candle_scraper@feature/candle-pattern-analyzer` (`8eafcb075959`) | P1~P6 합성 원본 101 PASS, 실제 3.6GB·Windows/EXE/상업권 미검증 |
-| SMAX² | **76%** | `hibi89/SMAX@feature/prep-self-owner-mapping-p8` (`65697b623c33`; P18 customer portal `b32e0a01c6e3`) | Real no-server static `site/owner.html`: customer CSV chooser → manual role/period → exact original-byte SHA JSON download, linked from SMAX site; Node22 portal/CLI **5 PASS**, Chromium144 browser→real P8 validator **14 PASS**, exact HTML SHA256 Node **53 vectors PASS**, 0 requests/JS errors, exact 5 Git blobs verified. Full repo Native/P8→P16 real CLI/Windows Edge file:// & SELF customer integration **NOT_RUN**; RELEASE HOLD |
 | EAI | **70%** | `hibi89/EAI@feature/local-first-mvp` (`379d0c7a77e9`) | P23~P30, 코드 8cdad74a Ubuntu 582 PASS; 진짜 Qwen/Windows/실고객 미검증 |
 | AXMART PC CARE | **70%** | hibi89/AX_MART@feature/pc-care-offline-casepack-20261111 (9c25ec379899; 기능 163fd38be68c) | 오프라인 상담 UI·내부ZIP 등록, Node11 PASS·Chromium 합성 UI; 실제 Windows/USB/WinRE/QR·PDF·복구 미검증, 출시 HOLD |
 | AXMART³ CUBE | **70%** | `hibi89/AX_MART@feature/cube-commerce-core` (`061addb6e19c`) | P4 로컬 지원 메타데이터·P5 거래 HOLD 영수증·P6 ZIP 내부 CRC·P7 무JS FAQ·P8 SHA 고정 CLI/빌드 통합. Node22 Linux 신규 정확 소스 26/26 PASS; 전체 npm test/build·실 브라우저/Windows/고객/Cloudflare 미검증, 회원/결제/다운로드 미구현 · RELEASE HOLD |
 
+
+## 2026-11-11 HAE P7/P8 85% 엔지니어링 잠정·출시 HOLD
+
+> **2026-11-11 KST — HAE P7/P8 최종상품 엔지니어링 77→85% 잠정(+8%p), 모든 배포 RELEASE HOLD:** private `hibi89/HAE@feature/axflow-mvp` 기능 SHA `0b1a6607b9daf9518ef9e5e42ba4aff710675760`, HAE 문서 HEAD `3544e0aef27085e1257f881b20d0c2864383b5e6`. [Actions #42987797638](https://github.com/hibi89/HAE/actions/runs/42987797638) GitHub-hosted Ubuntu/Windows Python3.11 각각 **273 total / 264 PASS / 2 FAIL / 7 SKIP / 0 ERROR**, UI Node22 **22 PASS**. 실 HAE↔Lightning Azent 합성 로컬 CSV **전체 저장(3행)/amount>100 필터 저장(2행)/name 공백 정규화(3행)** 의 승인→SQLite→감사→중복 재요청 비즈니스 행 불변; 고객형 **로컬 합성 3개**이지 실 Gmail/Sheets 3종이 아님. R08 선택적 소유자 승인 SQLite↔DBVORA `p0-01.v1` **모의 계약 서버** 해시/스키마 검증 후 영구 분리 자산 메타데이터 등록부(경로·행·SQL/시크릿 저장 없음) 및 재시작 재검증, 불일치 무단 rebind 거부 +3%p. R01 사용자 노드 편집 없이 5종 로컬 CSV 선택 프리셋, 미리보기+승인 재요구 +1. R03/06 진짜 LA 3종 로컬 워크플로 +1. R07 사용자 초기화·동의 기반 별도 `workflow_catalog`에 **작업 텍스트/상대 CSV 경로/원본SHA/계획SHA만** 저장, 중복저장/재시작 조회/원본변경 거부, 자동 실행·쓰기 승인 복원 금지 +3. 그래서 **77+8=85% 잠정**, 공식 테스트 완료율/상용 승인율 아님. 남은 **원본 ZIP/pyz vs 최신 코드 parity 두 FAIL 때문에 전체 CI FAILURE**, 실 DBVORA FastAPI/Google OAuth/Gmail/Sheets/실고객 Win10/서명·설치·보안/3 외부 워크플로 판매 검증은 미구현 또는 미검증; 원본 바이너리·비공개 소스·고객파일·권한/과금·외부 서비스 유지. **현재 크몽 16종 합계 1184%p / 평균 74.0% / 85미만 14종 / 85이상 2종 / 70미만 0종**, SMAX² 최신 76% 등 기타 15종 점수 보존. HAE 상세 근거 private `docs/HAE_P7_P8_TO_85_20261111.md`.
 
 ## 2026-11-11 HAE P6 독립 합성 SQLite 복원 검증 (77% 잠정)
 
