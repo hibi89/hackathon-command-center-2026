@@ -4,7 +4,7 @@
 
 - 범위: `hibi89/hackathon-command-center-2026@kmong-productization` 활성 16종. 소유자 지시로 **Web REA Studio(과거 40%)는 독립 크몽 상품 목록 제외/원본 보존**, `REA_Web`은 계속 75%로 별도 관리.
 - 확인 방법: 2026-11-11 KST 연결된 GitHub 실제 구현 브랜치의 **12개 저장소 / 18개 브랜치 HEAD**를 직접 조회(16개 제품 정본 + SMAX `preprocessing`·`frontend` 보조 브랜치). 상품별 HANDOFF/STATUS 및 이전 CI·감사 근거 대조. 기존 16종 정합 조회 당시 신규 테스트 0건. 이번 PC CARE는 별도 신규 Node 11 PASS·Chromium 합성 UI 검증 및 정확 GitHub 기능 SHA 재평가를 추가했다. 과거 성공 CI는 해당 코드 SHA에만 귀속한다.
-- 주의: SMAX²는 `preprocessing@3830cb27` 자체 HANDOFF가 **50% 구형 범위**이고 별도의 `feature/prep-self-owner-mapping-p8@67fc66f9` P8–P12 기능에 따라 해총이 **70% 잠정**으로 산정했다. 상호 브랜치 병합·전체 Native E2E는 **미검증/미승인**. ASTRA도 `integration/astra-commercial-core`의 구형 52%와 새 기능 브랜치의 잠정 70%를 구분한다.
+- 주의: SMAX²는 `preprocessing@3830cb27` 자체 HANDOFF가 **50% 구형 범위**이고 별도의 `feature/prep-self-owner-mapping-p8@d9200d30` P8–P14 기능에 따라 해총이 **70% 잠정**으로 산정했다. 상호 브랜치 병합·전체 Native E2E는 **미검증/미승인**. ASTRA도 `integration/astra-commercial-core`의 구형 52%와 새 기능 브랜치의 잠정 70%를 구분한다.
 - 보존/한계: 각 제품 본 브랜치, 고객 원본·토큰, 권한/과금, Vercel/Cloudflare Production, 상용 출시 상태 전부 변경 없음. 비공개 저장소 내 상세 구현 코드를 이 공개 중앙 문서로 복사하지 않는다.
 
 ## 16개 목록 (내림차순)
@@ -23,7 +23,7 @@
 | RAG Studio AX Edition | **70%** | `hibi89/RAG_STUDIO@feature/p546-rag-prep-mapping` (`5dca9368d409`) | Linux 571 PASS/2 SKIP·Windows 573 PASS(검증 소스 a3f10f95); Private PREP/실고객 미검증 |
 | Astra PDF Redesigner | **70%** | `hibi89/astra_pdf_redesigner@feature/astra-p52-to-p70-20261111` (`8f987462dc7c`) | STEP4/5/7 추가; 코드 dab6e365 Chrome/Edge CI 107 PASS·Windows NSIS SUCCESS; 실제 PDF 미검증 |
 | 코인 패턴 분석기 | **70%** | `hibi89/candle_scraper@feature/candle-pattern-analyzer` (`8eafcb075959`) | P1~P6 합성 원본 101 PASS, 실제 3.6GB·Windows/EXE/상업권 미검증 |
-| SMAX² | **70%** | `hibi89/SMAX@feature/prep-self-owner-mapping-p8` (`67fc66f9b8ca`) | P8~P12 별도 feature 17 부분 PASS; preprocessing 본 브랜치는 50% 기록, Native 전체 통합 미검증 |
+| SMAX² | **70%** | `hibi89/SMAX@feature/prep-self-owner-mapping-p8` (`d9200d30f27e`; P9 code `da8d4a5d691e`) | P8–P12 + P13 package `--verify`, P9 exact receipt/amount gate, P14 native real-file E2E test registered; isolated V8 checks only, full Native/P14/Windows/SELF UI **NOT_RUN**; RELEASE HOLD |
 | EAI | **70%** | `hibi89/EAI@feature/local-first-mvp` (`379d0c7a77e9`) | P23~P30, 코드 8cdad74a Ubuntu 582 PASS; 진짜 Qwen/Windows/실고객 미검증 |
 | AXMART PC CARE | **70%** | hibi89/AX_MART@feature/pc-care-offline-casepack-20261111 (9c25ec379899; 기능 163fd38be68c) | 오프라인 상담 UI·내부ZIP 등록, Node11 PASS·Chromium 합성 UI; 실제 Windows/USB/WinRE/QR·PDF·복구 미검증, 출시 HOLD |
 | AXMART³ CUBE | **70%** | `hibi89/AX_MART@feature/cube-commerce-core` (`061addb6e19c`) | P4 로컬 지원 메타데이터·P5 거래 HOLD 영수증·P6 ZIP 내부 CRC·P7 무JS FAQ·P8 SHA 고정 CLI/빌드 통합. Node22 Linux 신규 정확 소스 26/26 PASS; 전체 npm test/build·실 브라우저/Windows/고객/Cloudflare 미검증, 회원/결제/다운로드 미구현 · RELEASE HOLD |
@@ -52,3 +52,6 @@
 - EAI CI [42960081154](https://github.com/hibi89/EAI/actions/runs/42960081154) SUCCESS at `8cdad74a256d3e132870dfd28a875dd4425ffa77`.
 - ASTRA UI [42957762014](https://github.com/hibi89/astra_pdf_redesigner/actions/runs/42957762014) 및 Windows [42957762000](https://github.com/hibi89/astra_pdf_redesigner/actions/runs/42957762000) SUCCESS at `dab6e365f5c9d57e285eaf71cb840ecc41513c6e`.
 - RAG [42943551661](https://github.com/hibi89/RAG_STUDIO/actions/runs/42943551661) SUCCESS at `a3f10f95db086f363fed3acff48425ca09b77d4f`. 이후 docs-only SHA와 구분.
+
+## 2026-11-11 SMAX² P9/P13/P14 재검증 보강 — 70% 유지
+> **실제 제품 소스 업데이트, 수치 동결:** Private `hibi89/SMAX@feature/prep-self-owner-mapping-p8` 원격 HEAD `d9200d30f27e5d1312c5b9e6a29eb44fc53e7c4d` (기능 SHA `da8d4a5d691e5241ea1269ef6370016a0b4581a4`). P9 필드 주입·위조 금액 차단, P13 무수정 `--verify` 영수증·HTML·SHA256 manifest 재검증, P14 실제 CSV→PREP/SELF→HTML→패키지 Native 회귀 **테스트 코드 등록**. V8 격리 positive/negative P9 1+5, P13 1+3 확인; Native 전체 `npm run test:preprocessing`/`npm test` 및 새 파일 E2E **실행 전**, Windows/고객/SELF frontend 미검증. 과거 P8~P12 부분 Node 17 PASS는 이전 SHA 근거에만 적용. **최종상품 70→70% 잠정, 출시 HOLD**, 85% 상향 불인정. 16종 전체 합계 **1166%p**, 평균 **72.875%**, 70% 미만 0종, 85% 미만 15종 그대로. 기존 안정 `preprocessing` 50% 기록은 과거 범위이며 그대로 보존. [제품 증빙](https://github.com/hibi89/SMAX/blob/feature/prep-self-owner-mapping-p8/docs/SMAX_OWNER_PREVIEW_REVERIFY_P13_P14_20261111.md).
