@@ -590,3 +590,15 @@
 8. 원본·보안: 고객자료, Private SMAX, SOVIA, main/develop, 비밀정보, 과금, 원본 DB 불변. 계획 응답은 REVIEW_HOLD/NOT_GRANTED 및 로컬 검토 메타데이터만.
 9. 다음 우선순위: RAG 전체 Linux/Windows CI 실결과 검증 → 사용자 편집 매핑 UI/메타데이터 출력 개선 → 공개 V1 호환 합성 E2E → 실제 Native 승인/3-PC 판매검증. 원본·권한 승인 없이 인제스트하지 않음.
 10. 시각: 2026-11-11 KST, 실제 파일 범위·SHA 및 10건 로컬 격리 시험만 검증. 사용자에게 완료율 미달·상용 미출시를 명확히 알릴 것. 상세 P547 문서는 RAG 브랜치 docs/P547_SOURCE_BOUND_DRAFT_REVIEW.md 참조.
+
+## 2026-11-11 KST — RAG Studio AX Edition 70% 잠정 목표 달성 인수인계
+1. 목표·기술: 크몽 활성 16종 중 RAG Studio 55→70% 중간목표, 로컬 Node22, SMAX PREP 표준 매핑→검증된 SQL/문서 근거 질의. Private SMAX 원본 분리, 고객자료·권리 보호.
+2. 완료: P5.48 매핑 HTML/JSON 사용자 인터랙션(+5pp), P5.49 공개 SMAX V1 정확한 SHA·필드·행/매출 계약 검증(+5pp), P5.50 고정 공개 합성 데이터로 기존 SMAX→AX→RAG 인용 질의 종단 간 일치(+5pp). P5.47 선행개발 55%에 이미 반영, 중복가산 없음.
+3. 테스트: RAG 기능 SHA `a3f10f95db086f363fed3acff48425ca09b77d4f`, GitHub Actions #42943551661 Linux Node22.16 **571 PASS/0 FAIL/2 SKIP**, Windows Node22.23 **573 PASS/0 FAIL/0 SKIP**, 새 P5.47~P5.50 34/34 PASS; Gold/Negative/Heldout/router/합성 CLI PASS. 매출6주문/10개/157000원/문서인용1. 로컬 Chromium set_content/다운로드 가능, 직접 file:// 정책 차단·실사용 PC 미검증.
+4. 상태: RAG 최종완성률 **70% 잠정** (55+15), 70 목표 달성. 16종 평균 **1050/16=65.625% 잠정**, 70 미만 6종. 다만 상용 RELEASE HOLD / 실고객·Private Native/Windows 물리기기 검수 미완.
+5. 장애: P5.47 YAML 중괄호 누락으로 0-job CI 실패, 수정 후 PASS. P5.49 첫 CI summary에 없는 source_sha256 필드 비교 5 FAIL → 원본 검증 `pkg.source.sha256`로 수정해 PASS. P5.45 유산 YAML flow mapping 문법 오류를 feature에서 고침. 브라우저 file:// ERR_BLOCKED_BY_ADMINISTRATOR는 정책 경계, 프로그램 오류 단정 금지.
+6. 저장소·브랜치·SHA: `hibi89/RAG_STUDIO@feature/p550-mapped-cited-journey`, tested source SHA 위, 최종 docs HEAD은 현재 ref 재조회. 허브 `hibi89/hackathon-command-center-2026@kmong-productization`, 이 문서 커밋 후 ref 재조회. Stable main/develop 유지; P5.46대 develop divergence로 강제 병합 금지.
+7. 환경: `node scripts/p550-prep-journey-cli.mjs` 합성 경로, `node src/prep-mapping-form-cli.mjs /abs/source.csv /abs/review.html` 로컬 양식, `node src/prep-smax-boundary-cli.mjs /abs/source.csv /abs/draft.json /abs/v1.json` 읽기 전용 검토. Production URL/Vercel N/A, 공개배포/판매 없음.
+8. 원본·보안: 사용자 고객 CSV/원본 RAG ZIP/Private SMAX/SOVIA/원본 DB·비밀정보 미수정, 실데이터 전송 및 과금/권한 변경 0. 합성 exporter만 허용, 검토 승인 NOT_GRANTED, customer indexed false, 임시 테스트 디렉터리 정리, 일반 Git revert 복구 가능.
+9. 다음: 70→출시 100 작업은 실제 신뢰된 Private SMAX Native/동의서·권리 확인→비합성 CSV/PDF/DOCX와 SQL+문서 인용 E2E→Windows 3대 실제 설치·브라우저/EXE/SmartScreen→라이선스/환불·지원정책. 실제 고객자료·배포·권한·유료작업 사전 승인 필요. 합성 전용 PASS를 상용 PASS로 치환 금지.
+10. 일시 및 기준: 2026-11-11 KST, Github Actions actual source SHA에 대한 합성 CLI·Linux/Windows 검증 완료; 테스트 뒤 docs-only commit은 기능 검증 재실행으로 주장하지 않음. 상세 [P550 evidence](https://github.com/hibi89/RAG_STUDIO/blob/feature/p550-mapped-cited-journey/docs/P550_70_PROVISIONAL_MILESTONE.md).
