@@ -1,3 +1,7 @@
+## 2026-11-12 KST — RAG Studio 85% provisional engineering sync to Kmong active16
+- Confirmed RAG_STUDIO feature SHA 0e5f1b8812638cfa1deedf167a1b485efcf0837d: P5.47–P5.53 owner-mapped CSV read-only metric/citations + held document source + review-only integrity-checked folder. Linux Node22.16 scoped **63/63 PASS**; synthetic Chromium UI↔real CLI source lines; standalone bundle local HTTP PASS. GitHub Actions [43096408958](https://github.com/hibi89/RAG_STUDIO/actions/runs/43096408958) FAILED with **0 Jobs** (pre-run, full/Windows unverified); real private SMAX/Windows/customer/rights not tested.
+- Central provisional score RAG 73→85 (+12), SMAX² 85 protected, 16 active scores total **1208%p / mean 75.5% / >=85 4, <85 12, <70 0**. All RELEASE HOLD, no deployment/permissions/source data change. Internal engineering scope estimate ≠ commercial launch readiness.
+
 ## 2026-11-12 KST — DBVORA P3-06 scoped read-only archive recovery review; score unchanged
 - Product `hibi89/DBVORA@feature/p0-db-map` HEAD `c11683e854275cfe28571c7cd6e996a0a78dcb62`; new local-only synthetic ledger/archive reconciliation, no writes/retries/automatic acceptance.
 - Isolated local reconstructed Linux Python **17 PASS/0 FAIL/0 SKIP**; full original-source Python >=477, Node/Windows/NTFS/live PostgreSQL not run. Product 70% provisional unchanged, **85 NOT MET**, RELEASE HOLD.

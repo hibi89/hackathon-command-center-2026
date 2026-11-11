@@ -1,3 +1,15 @@
+## 2026-11-12 KST — RAG to 85% and central sync (10-point handoff)
+1. Goal/tech: user target 85 for next urgent non-SMAX Kmong RAG Studio, Node22, local first.
+2. Completed: owner-mapped CSV source SHA/semantic recheck, exact SKU totals and cited original lines, held TXT/MD policy excerpts/conflict refusal, browser review and explicit local source-free review bundle+integrity verification.
+3. Tests: local Node22.16 source-exact scoped 63 PASS, 0 FAIL/SKIP. Synthetic Chromium144 DOM selection/download→actual CLI→KPI3/6/360, original CSV3 source lines+policy1. Bundle standalone local HTTP and tamper refusal. GitHub Actions #43096408958 0 jobs FAILED, whole npm/Windows/customer production unverified.
+4. Status: RAG 85% **provisional engineering** (+12 from prior73), launch HOLD. Active 16 sum 1208%p, mean75.5%, >=85 4, <85 12. Other15 unchanged, SMAX85 concurrent update preserved.
+5. Errors/pivot: local git DNS unavailable; exact-byted Git blob connector push. Chromium loopback blocked by browser policy, synthetic UI used with clear limitation. Zero-job Actions failure lacks job logs; never claim full CI PASS.
+6. Repo: hibi89/RAG_STUDIO@feature/p546-rag-prep-mapping 0e5f1b8812638cfa1deedf167a1b485efcf0837d; hub hibi89/hackathon-command-center-2026@kmong-productization parent 336c4aea7cd389fd7c9fa92a9886a549f9060fe5; updated hub SHA verify post-push. Paths docs/P552_P553_CITED_REVIEW_BUNDLE.md, STATUS.md, HANDOFF.md.
+7. Production: no RAG Vercel/hosted service; local Node22 self-service, Windows CMD made but not native customer verified.
+8. Source/backup/security: branch parent immutable rollback, no raw customer CSV/TXT/SMAX private source/credentials/production change, review excerpts may be confidential and only generated on explicit selected path.
+9. Next: determine Actions pre-job block, exact SHA complete Win/Linux CI, physical Windows/Edge/Chrome, SMAX Native authorized integration, 3 buyer demos/OSS rights/support then sell. Do not auto-approve.
+10. 2026-11-12 KST; source/functional scoped evidence only; Github hub final SHA checked post-commit.
+
 ## 2026-11-12 KST — DBVORA P3-06 central synchronization (10 points)
 1. Goal: select most urgent under-85 non-RAG product, excluding finished SMAX²85 and HAE85. DBVORA70 chosen; target85, local Python/SQLite/ZIP/ZSTD.
 2. Delivered: synthetic-only read-only request ledger and independent archive digest review, no automatic resume/del/approval; compared A auto recovery vs B human-review (chosen for safety).
