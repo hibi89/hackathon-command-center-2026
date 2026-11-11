@@ -120,3 +120,5 @@
 2. **AI 엑셀·CSV 매출·고객 데이터 분석 서비스** — 기존 `AI_AutoML_Analyst`에 **NVIDIA Auto Ontology 개념**을 참고해 컬럼 의미·데이터 표준화, 다변수 분석·ML 예측, 개선 기회 보고서를 결합. **현재 확장 구상 단계, 실제 통합·검증 전.**
 
 **구분:** 코인 캔들 분석은 사용자가 별도로 진행. 위 두 확장상품은 기존 완성률 표에 아직 포함되지 않음.
+
+> **2026-11-11 KST — RAG Studio AX Edition P5.47 source-bound mapping review (55% 유지):** Public `hibi89/RAG_STUDIO@feature/p547-bound-draft-review`는 기존 P5.46에서 별도 브랜치를 따서 로컬 CSV SHA256과 사용자가 수동 편집한 JSON 매핑(키/원본열/타입/필수 여부)을 재검증하는 읽기 전용 CLI를 추가. 엉뚱한 원본·변조된 SHA·승인 위조·중복 매핑·심볼릭 링크·잘못된 입력은 fail-closed, 결과는 항상 `REVIEW_HOLD/NOT_GRANTED`. 원본 CSV/매핑 JSON 불변, AX/SQLite/외부전송/Private SMAX 수정 없음. Linux Node22.16 로컬 실제 **10/10 PASS**, 새 코드·테스트 GitHub blob 원격 일치. 전체 `npm test`/Windows/현재 SHA CI·실 Private SMAX Native E2E·고객 Windows 설치/라이선스는 미검증. 신규 `.github/workflows/p547-verify.yml` 정의만 반영, 빈 상태·런 조회를 성공으로 해석하지 않음. **RAG 55% 잠정 그대로(70까지 15%p), 크몽 활성 16종 평균 64.6875% 그대로**, RELEASE HOLD. 현재 기능/핸드오프 [P5.47 문서](https://github.com/hibi89/RAG_STUDIO/blob/feature/p547-bound-draft-review/docs/P547_SOURCE_BOUND_DRAFT_REVIEW.md). 기존 RAG `develop`과 P5.46 분기 10 ahead/1 behind 문제를 무단 강제 병합하지 않음.
