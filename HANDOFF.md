@@ -1,3 +1,17 @@
+## 2026-11-11 KST — HAE P9 85% 유지 최신 QA 증빙 동기화 (10-point handoff)
+1. 목표·용도·기술: HAE local-first Python3.11+LA+SQLite 85% 잠정 목표 이미 달성; 실 상용 출시 별개, 크몽16종 합계 유지.
+2. 완료·변경/비용·유지보수: 저장 workflow GET 중 화면 잠금(A) 대신 최신 요청 세대 식별/오래된 응답 폐기(B) 선택—사용자 편집 방해 없이 무료·기존 API 그대로. Windows LA HTTP test timeout5→20s bounded, 서버 수명보다 임시 DB 수명이 짧아지는 WinError32 정리 오류 보정.
+3. 테스트: HAE 소스 SHA `2384e9d245ca60fc9b2055e9b82c4541b33bd6bd`, [Actions #42990527614](https://github.com/hibi89/HAE/actions/runs/42990527614) GitHub-hosted Windows/Ubuntu 각각 273 total=264 PASS/2 FAIL/7 SKIP/0 ERROR, Node22 UI24 PASS, LA Windows standalone targeted5 PASS. Live DBVORA/Google/Win10 customer/browser/installer 미검증.
+4. 상태: HAE **85% 잠정 유지(+0)**, 크몽 활성16종 합계1184%p/평균74.0%/85미만14·85이상2/70미만0. 전 상품 RELEASE HOLD, Production/Vercel HAE 미적용.
+5. 실패 근거·시도·대안: 첫 P9 Node mock async render test failure는 `setImmediate` barrier로 수정; 다음 Windows LA HTTP 5초 timeout/cleanup WinError32는 `TestCase.enterContext` + bounded20s로 수정. 기존 원본 ZIP/pyz source parity 2 FAIL만 여전히 전체 CI FAILURE; 무단 패키지 덮어쓰기/테스트 건너뛰기/의미 없는 재시도 금지. 별도 버전 후보는 사용자 사전 승인.
+6. 저장소·SHA·주요 경로: `hibi89/HAE@feature/axflow-mvp` 코드 `2384e9d245ca60fc9b2055e9b82c4541b33bd6bd`, docs `6dfa622e152af53fbcb685a8a50e4ccea0744fc2`; `apps/ax-flow/axflow/static/app.js`, `tests/test_ui_races.cjs`, `tests/test_web.py`, `tests/test_la_adapter.py`, 상세 private `docs/HAE_P9_85_STABILITY_20261111.md`; 중앙 `hibi89/hackathon-command-center-2026@kmong-productization` 최신 이번 커밋 확인.
+7. Production·Vercel·환경: 로컬 HAE, 실제 URL 및 Vercel 미적용, GitHub Windows/Ubuntu Python3.11 Node22; `cd apps/ax-flow && python -m unittest discover -s tests -v`, `node tests/test_ui_races.cjs`.
+8. 원본·백업·시크릿: HAE 원본 ZIP/pyz, main/LA/DBVORA, 실제 고객 SQLite/Google OAuth/토큰/시크릿/외부전송, 중앙 private source 복사 금지. Git commit parent 되돌리기.
+9. 다음 우선순위·승인·완료 기준: 사용자 승인 별도 이름 새 source-matched distribution 후보 및 Win installer·browser; 실 DBVORA localhost synthetic actual process; 승인받은 Gmail/Sheets 실 provider 3종·보안/계약·고객 테스트. 이 전 출시 HOLD, 85는 공식 상용 승인 아님.
+10. 갱신 KST·확인 범위: 2026-11-11 KST, 정확 기능 SHA에 해당하는 GH Actions 양 OS 로그 확인, P9 소스 QA만 적용, 실고객/Production 미실행, 중앙 문서 기준 커밋 확인 시 확정.
+
+---
+
 ## 2026-11-11 KST — HAE 85% 잠정 P7/P8·크몽 16종 동기화 (10-point handoff)
 
 1. **목표·제품·기술:** HAE 로컬 자동화 제품 잠정 85% 목표; Python3.11+Lightning Azent+SQLite, DBVORA `p0-01.v1` read-only 계약, 사전 승인·원본 보호. 해총 활성 크몽 16종 합계 동기화.

@@ -1,5 +1,7 @@
 # 크몽 활성 16종 최종완성률 — 2026-11-11 KST 현재 조회 정본
 
+> **2026-11-11 KST — HAE P9 85% 잠정 유지·UI/Windows 원장 회귀 신뢰성 강화, 점수변경 없음:** private `hibi89/HAE@feature/axflow-mvp` 검증 기능 SHA `2384e9d245ca60fc9b2055e9b82c4541b33bd6bd`, `HANDOFF.md`/STATUS docs SHA `6dfa622e152af53fbcb685a8a50e4ccea0744fc2`. [GitHub Actions #42990527614](https://github.com/hibi89/HAE/actions/runs/42990527614) Ubuntu/Windows Python3.11 각각 **273건 중 264 PASS·2 FAIL·7 SKIP·0 ERROR**, Node22 UI race **24 PASS**(+2). 이전 저장 워크플로의 늦은 HTTP 응답이 사용자의 최신 입력/다음 선택을 덮어쓰는 상황 거부·수동 편집 자유 보존, Windows LA HTTP 테스트의 5초 타임아웃/TempDir SQLite handle cleanup 부작용 보정 후 실제 Windows LA5 targeted PASS. 전체 CI **FAILURE**는 그대로 유지한 원본 `.pyz`/ZIP source-parity 두 실패, 신규 기능 실패/ERROR는 0. 실 DBVORA FastAPI, Google Sheets/Gmail OAuth, 고객 Windows/installer, full browser·실고객 3종은 미검증/미구현이고 **RELEASE HOLD**. HAE 완성률 **85% 잠정 그대로**, 전체 활성 크몽16종 합계 **1184%p / 평균74.0% / 85미만14·85이상2**, 다른15종 점수 불변. Private HAE 상세 `docs/HAE_P9_85_STABILITY_20261111.md`.
+
 > **현재 16종 / 합계 1184%p / 산술 평균 74.0% / 70% 미만 0종 / 70% 이상 16종 / 85% 미만 14종.** 각 %는 최종 납품 범위 대비 주관적·잠정적 엔지니어링 추정이며 공식 테스트 완료율·판매 승인률이 아니다. **전 상품 RELEASE HOLD.**
 
 - 범위: `hibi89/hackathon-command-center-2026@kmong-productization` 활성 16종. 소유자 지시로 **Web REA Studio(과거 40%)는 독립 크몽 상품 목록 제외/원본 보존**, `REA_Web`은 계속 75%로 별도 관리.
@@ -12,7 +14,7 @@
 | 제품 | 최종상품 잠정 완성률 | 구현 정본 브랜치 (조회 HEAD) | 핵심 증거와 미검증 사항 |
 |---|---:|---|---|
 | 코인 캔들 수집기 | **94%** | `hibi89/candle_scraper@main` (`1f976770db47`) | Windows 147 PASS(기존); 기술 99%와 판매상품 94% 분리, 거래소 상업권 미확인 |
-| HAE | **85% (잠정)** | `hibi89/HAE@feature/axflow-mvp` (기능 `0b1a6607b9da`; 인수인계 `3544e0aef270`) | P7 소유자 합성 SQLite 자산↔DBVORA `p0-01.v1` **모의 계약 서버** 검증·영구 메타데이터 등록/재시작, P8 5종 no-node 프리셋·진짜 LA 로컬 CSV 3흐름·SHA 고정 재로드 워크플로 저장/새 승인. [Actions #42987797638](https://github.com/hibi89/HAE/actions/runs/42987797638): Windows/Ubuntu Python **264 PASS/2 FAIL/7 SKIP**, UI Node22 **22 PASS**. 전체 CI FAILURE는 기존 ZIP/pyz source parity 2건. 실 DBVORA/Sheets/Gmail OAuth/고객 Windows/installer·판매 준비 미검증, **RELEASE HOLD** |
+| HAE | **85% (잠정)** | `hibi89/HAE@feature/axflow-mvp` (기능 `2384e9d245ca`; 인수인계 `6dfa622e152a`) | P7/P8 합성 source 승인 DBVORA p0 계약 **모의**, 로컬 자산 등록·프리셋/실 LA 로컬3종·SHA 고정 워크플로 카탈로그. P9 기존 작업 불러오기 늦은 응답에 의한 수동 편집 덮어쓰기 차단·Windows LA HTTP test timeout/cleanup 회귀 안정화. [Win/Linux Python264 PASS/2 FAIL/7 SKIP, UI24 PASS](https://github.com/hibi89/HAE/actions/runs/42990527614); 두 FAIL은 보존된 구형 ZIP/pyz 패키지 parity, 전체 CI FAILURE. 실 DBVORA/FastAPI·Google OAuth Sheets/Gmail·실 고객 Win10/배포·Chrome QA 미검증, RELEASE HOLD |
 | AI Code Checker | **78%** | `hibi89/ai-code-checker@main` (`adf3f4ac8fab`) | Windows EXE/GUI 일부 검증, LICENSE/NOTICE·구매자 PC 검증 미완 |
 | SMAX² | **76%** | `hibi89/SMAX@feature/prep-self-owner-mapping-p8` (`65697b623c33`; P18 customer portal `b32e0a01c6e3`) | Real no-server static `site/owner.html`: customer CSV chooser → manual role/period → exact original-byte SHA JSON download, linked from SMAX site; Node22 portal/CLI **5 PASS**, Chromium144 browser→real P8 validator **14 PASS**, exact HTML SHA256 Node **53 vectors PASS**, 0 requests/JS errors, exact 5 Git blobs verified. Full repo Native/P8→P16 real CLI/Windows Edge file:// & SELF customer integration **NOT_RUN**; RELEASE HOLD |
 | REA_Web | **75%** | `hibi89/REA_Web@feature/d27-windows-python-discovery` (`97b6e5cab7b8`) | Lite/Pro 분리, 설치·고객 납품 E2E 미확인 |
