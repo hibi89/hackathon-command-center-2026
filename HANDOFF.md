@@ -1,3 +1,15 @@
+## 2026-11-11 KST — Coin Analyzer P4 evidence and progress reconciliation
+1. Scope: product under 70%, coin analyzer at provisional 65% per previous hub re-evaluation; new SHA256 receipt is additional integrity scope, not duplicated percentage.
+2. Delivered: offline verification JSON for P1/P2 result CSV+rule source/rule SHA, row name/digest integrity, repeat verification and no-overwrite. Concurrent HTML report already exists; uncommitted duplicate was abandoned.
+3. Tests: local Linux3.13 Python 46/46 PASS = P1 15 + P2 14 + P3 builder 7 + new receipt 10; P4 compileall PASS, source/test blobs cf9850f5/8449fa43. P3 live CLI/report integrated 4, full repo/Windows/real 3.6GB DB NOT RUN.
+4. Current: coin 65% provisional, 70% gate short by 5pp, active 16 product mean 64.375% unchanged, commercial RELEASE HOLD.
+5. Block/pivot: private GitHub clone DNS unavailable; no unapproved paid CI, no repeated blind retry. Simultaneous feature source update handled through new additive files + latest ref fast-forward.
+6. Repositories: hibi89/candle_scraper feature/candle-pattern-analyzer source 03b3ca87f8a9fa38806116b0799f65ae3037bb80 docs 9d8f6baf0d210760d0ff59d161199ce54906fff9; hub hibi89/hackathon-command-center-2026 kmong-productization docs head verify after commit.
+7. Runtime: Python3.11 intended, local Python3.13 actual; Vercel N/A, CI status unreported for new SHA (no checks), no Production.
+8. Safeguards: original SQLite/WAL/SHM, main collector, previous CSV/ZIP, existing HTML and customer data untouched; git revert.
+9. Next: authorized full repo test suite incl P3/P4 E2E; Windows/large-db/chart/backend compatibility; EXE/policy, then reassess to 70 based on proof.
+10. Checkpoint: 2026-11-11 KST; verified only source Git blobs and local isolated tests; not a shipped customer build.
+
 ## 2026-11-11 KST — 해총 코인 패턴 분석기 P4 잠정 65% 인수인계
 1. 목표/요구/기술: 크몽 16종 중 70% 미만 코인 패턴 분석기 고객 맞춤 수식 50→70, Python3.11+ 로컬 read-only SQLite 및 HTML/CSV.
 2. 구현: canonical P1 단일, P2 같은 DSL 16규칙 배치, P3 5템플릿, 신규 P4 coin_analyzer.py single/batch 통합 CLI·coin_report.py CSP 오프라인 보고서와 고객 BAT/예제. 기존 엔진/Collector 비수정, 경쟁 draft PR #1 미병합.
