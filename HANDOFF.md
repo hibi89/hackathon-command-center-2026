@@ -1,3 +1,15 @@
+## 2026-11-12 KST — FFAX 75/100 기술 범위 및 크몽 후보 최신화 (10항)
+1. **목표·범위:** FFAX 로컬 우선 프론트엔드 생성/편집/검수 플랫폼, 유망 크몽 판매 후보로 별도 육성, 기존 활성16종에 무단 추가 금지.
+2. **완료/설계:** P50의 디자인 워크벤치 유지, P75에서 B read-only React 2개 fixture snapshot + SHA 보존 / UI-only 승인 패치·rollback / 10개 API 흐름 검증 / GitHub Draft PR 수락 경계. 무제한 React 코드 임의 수정 A 대비 B 선택.
+3. **테스트:** SHA `5cdba6922584df3e3824d105d8345307670ea5ca`에서 local Node v22.16 `npm test` **49 PASS/0 FAIL/0 SKIP**; Chromium 주입 30 PASS; CLI 실제 원본 SHA 동등성, temp 실제 git revert 성공. 직접 URL Chromium은 관리자 정책 차단, Windows·실 React 런타임/고객 통합·CI/Production 미검증.
+4. **상태:** FFAX 내부 검증 가중점 50→**75/100 잠정 (+25p)**; 세부 AC01 8/07 12/10 5, 나머지 25 미점수, **RELEASE HOLD**. 중앙 크몽 활성16종의 분모·각 점수·합계 불변.
+5. **오류/중단/대안:** 초반 중복 jobId 감지 순서 수정 후 PASS, TSX 첫 검색 빈 입력 테스트는 실제 입력/재렌더 시뮬레이션으로 수정, npm registry DNS 접근 불가 → 전역 TypeScript fallback, Chromium localhost 정책 차단 → 동일 코드 주입검증으로 범위 표시. 재시도 반복 금지.
+6. **저장소/브랜치/SHA:** `hibi89/frontend-foundry-ax@feature/ffax-workbench-p75-20261112` 기능 `5cdba6922584df3e3824d105d8345307670ea5ca`, 문서 `2b58e4cd7e32210d3ad20ee580aa95b694af0769`; [Draft PR #1](https://github.com/hibi89/frontend-foundry-ax/pull/1), main `191289d...` untouched. 해총 `hibi89/hackathon-command-center-2026@kmong-productization` 이번 문서 커밋은 최신 ref로 확인.
+7. **Production/환경:** FFAX Vercel/Production 미적용; Node>=20 loopback offline demo; 기타 16종 배포 설정 무변경.
+8. **원본/백업/인증:** Private FFAX source는 private repo에만 존재, 공개 허브에는 근거 메타데이터만. 고객 API·원본·키·권한·유료과금·부채 자료 외부 전송 0. feature/Draft PR, 격리복사/원본 SHA+rollback으로 복구.
+9. **다음 단계/승인:** AC04 실 React 빌드·통제된 AI 공급자, AC09 axe+사용자 UX 승인, AC11 비용/실패복구, AC12 clean CI+실 D1–D5. 유료 AI, 외부 전송, private source 연결/원본 수정, Production 배포는 사전 승인 필요.
+10. **2026-11-12 KST 검증 범위:** 제품 SHA+Draft PR+Node49/Chromium30/로컬 격리 CLI/실 git revert; 전체 설치·윈도우·React 모델/API·상업 출시 불인정. 이번 허브 SHA는 원격 업데이트 후 별도 확인.
+
 ## 2026-11-12 KST — EAI provisional85 + central roster correction (10-point handoff)
 1. Goal/technology: Kmong existing active16 complete engineering milestones to 85; EAI independent CPU-first Python3.11+ local bounded 13 typed goals and optional localhost Qwen INPUT-only classification. No scope reduction of original 100% target.
 2. Delivered/decision: EAI P31 independent CSV reference integrity, P32 owner-reviewed source-minimized HTML/JSON/new-only manifest, P33 unsigned reproducible 7-file .pyz/Windows synthetic runner ZIP, P34 real extracted E2E; safer independent verifier over modifying existing broad scanner. Hub corrected existing previously-evidenced DBVORA and SMAX old 70 roster rows to 85; retained independent AutoML85, SOVIA85 and FFAX nonroster.
