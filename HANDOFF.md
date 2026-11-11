@@ -1,3 +1,15 @@
+## 2026-11-11 KST — Coin Pattern Analyzer P5 updated to 68% provisional
+1. Goal: 70% provisional customer-product milestone from 65%; Python3.11+ read-only P1/P2 DSL + P3 report + P4 receipt.
+2. New P5 coin_customer_bundle.py and 14 tests: stage data into fixed five-file local ZIP with CRC, rule/CSV integrity and output no-overwrite; avoids manual 3-command delivery and partial ZIP.
+3. Tests: local isolated Linux3.13.5 P1 15+P2 14+P3 builder 7+P4 10+P5 14=60/60 PASS, exact blobs 85a74ef7, 24286bba. Test uses local report adapter, **actual GitHub P3 render and repo-wide regression not run**, Windows/user source not tested.
+4. Status: coin 68% PROVISIONAL (+3), 70% short 2pp, 16 products mean 1033/16=64.5625%. RELEASE HOLD.
+5. Problem/pivot: private GitHub clone DNS blocked; avoided unapproved paid CI and duplicate independent batch PR; initial test 'http' substring collided with CSP http-equiv and corrected, 60 PASS.
+6. Source: hibi89/candle_scraper@feature/candle-pattern-analyzer SHA 4c48b7d5ac886eeae4b6030e49804b2583f71c71; hub hibi89/hackathon-command-center-2026@kmong-productization verify after this commit.
+7. Runtime: Linux Python3.13 local, Python3.11 Windows intended, no Vercel/production.
+8. Security: private repo code, no new permissions/paid Actions/cloud transfer; customer original 3.6GB SQLite/WAL/SHM and collector main untouched.
+9. Next: exact P3 render and 4 actual integration tests from full authorized checkout, then full-source regression and Windows/customer copy/chart/EXE/license acceptance before 70+ credit.
+10. Date/checkpoint: 2026-11-11 KST, Git SHA checked and local isolated tests pass, platform/real-user tests unknown.
+
 ## 2026-11-11 KST — Coin Analyzer P4 evidence and progress reconciliation
 1. Scope: product under 70%, coin analyzer at provisional 65% per previous hub re-evaluation; new SHA256 receipt is additional integrity scope, not duplicated percentage.
 2. Delivered: offline verification JSON for P1/P2 result CSV+rule source/rule SHA, row name/digest integrity, repeat verification and no-overwrite. Concurrent HTML report already exists; uncommitted duplicate was abandoned.
