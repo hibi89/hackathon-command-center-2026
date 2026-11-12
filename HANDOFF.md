@@ -1,3 +1,15 @@
+## 2026-11-12 KST — Factory AX VERIFY W1 85-target follow-up hub (10 items)
+1. **Goal:** W1 VERIFY target 85 without conflating full Factory W1–W4 final blueprint.
+2. **Work:** source eca3222e5588aac41c3fbf700192cd4d707d1323, docs 84ed826aeba5a9b438e91d865a546e67fb7014df; repair backup competing-writer unlink bug, Linux Tk GUI canceled-folder/old-success output; PowerShell owner-only native QA and manual CI enhancements.
+3. **Tests:** exact local Linux Python3.13.5 **117 PASS/0 FAIL/0 SKIP**, compileall PASS, real Xvfb Tk synthetic 2 actions/cancel/source SHA PASS, four-role report/verify/backup/restore/verify and unsigned .pyz build PASS. GitHub Actions Windows+Ubuntu NOT RUN.
+4. **Stage:** W1 **82% provisional unchanged; 85 NOT ACCEPTED**. Whole ecosystem UNASSESSED, commercial RELEASE HOLD.
+5. **Failure/pivot:** competing writer may have been removed by old backup exception cleanup; fixed own inode only and 2 negative tests. Native Windows unavailable, private CI cost unknown, no unapproved runner. Multi-input atomic snapshot/authenticated approval still not implemented.
+6. **Repository/SHA:** `hibi89/factory-ax-ecosystem@feature/data-verify` tested eca3222e5588aac41c3fbf700192cd4d707d1323, docs 84ed826aeba5a9b438e91d865a546e67fb7014df; prior source 06a64f9c…, Factory main unchanged. Hub hibi89/hackathon-command-center-2026@kmong-productization final SHA must be rechecked after update.
+7. **Runtime/production:** Python3.11+ intended, Linux3.13 actual. Owner `scripts/windows_native_qa.ps1` prepared but NOT RUN; no Vercel/Production/customer URL.
+8. **Original/backups/security:** Private upstream SMAX/PREP/EAI/HAE etc/customer/OT data, branch settings and original product implementations untouched. Git revert baseline; no secrets/paid CI/force.
+9. **Next:** authorize private Actions minutes only after billing check, run genuine Windows CI and physical GUI/CMD/NTFS/Korean/offline negative tests; then reassess 85, hold 95/100 for customer/licensing/support.
+10. **Date/evidence:** 2026-11-12 KST GitHub verified source tree and local synthetic execution; Windows/CI/customer NOT VERIFIED, release HOLD. [Details](https://github.com/hibi89/factory-ax-ecosystem/blob/feature/data-verify/docs/VERIFY_82_QA_NATIVE_GATES_20261112.md).
+
 ## 2026-11-12 KST — Factory VERIFY P85 goal, 82 provisional: handoff 10 points
 1. Goal: first product W1 VERIFY targeted 85 per original acceptance; overall Factory ecosystem UNASSESSED.
 2. Done: retain W1-70; add source SHA recapture, exclusive new report/complete marker, independent unsigned receipt verify, manual local ZIP backup & new restore, Tkinter source GUI, deterministic pyz/CMD package, rights inventory.

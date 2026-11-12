@@ -1,3 +1,8 @@
+## 2026-11-12 KST — Factory VERIFY 82% retained after native QA readiness (newest)
+- Source eca3222e5588aac41c3fbf700192cd4d707d1323; docs 84ed826aeba5a9b438e91d865a546e67fb7014df; 9 changed blobs matched local Git object SHA. Linux Python 117/117 PASS, actual Xvfb Tk GUI synthetic two invocations + cancel PASS, source hashes unchanged, offline report/backup/restore and package verifier PASS.
+- Fixed competitor ZIP backup TOCTOU deletion; added Windows owner QA script and manual-only dual-OS CI procedure. Hosted Windows/Linux GitHub Actions 0 RUN, physical Win/NTFS/Defender/PS5.1 NOT RUN; private minute costs unconfirmed.
+- W1 VERIFY remains **82% provisional, 85 NOT ACCEPTED**, full Factory UNASSESSED, **RELEASE HOLD**. Existing 16 product scores unchanged. [Evidence](https://github.com/hibi89/factory-ax-ecosystem/blob/feature/data-verify/docs/VERIFY_82_QA_NATIVE_GATES_20261112.md).
+
 ## 2026-11-12 KST — Factory VERIFY owner QA candidate, W1 82% provisional (85 gate pending)
 - Product exact SHA 06a64f9c84aef37661423ec6dde49c2c12359b65 on feature/data-verify; existing 70% functions preserved. New local report+SHA completion receipt, manual backup/restore, Tkinter GUI, deterministic pyz/CMD and manifest; no source copying.
 - Linux full 115 PASS/0 FAIL/0 SKIP, compileall and package synthetic E2E PASS. Real Windows GUI/NTFS/Defender, hosted CI/new SHA, customer/rights and offline physical network NOT RUN. Workflow manual only, NOT RUN.
