@@ -1,3 +1,15 @@
+## 2026-11-12 KST — PREP P70 latest post-comparison supervisor update (10 items)
+1. Goal: independence/local PREP design R01–R12, 70%-feature gate.
+2. Delivered: bounded offline CSV/JSON typed engine+CLI and exact-original-row duplicate fix; raw diff in unmapped columns never falsely triggers duplicate review.
+3. Tested: Git exact source `a9285b06c08a2483565c48eb19ebaca175ae405a` and test `a8831717eb90e1e2f9ce57e663c3f0e6181272c1` match local execution; Linux Node22 61 PASS/0 FAIL/0 SKIP, fresh ZIP 61 PASS, check and pack dry-run PASS.
+4. Status: PRIVATE `hibi89/prep@feature/core-extraction`, functional 70% candidate; **official final-product percentage UNASSESSED and 70% NOT CERTIFIED**, release HOLD.
+5. Parity gaps: read-only SMAX source comparison found numeric grouping/trailing-0, date formats, boolean vocab and package/evidence schema discrepancies; no cross-product golden proof.
+6. SHA: PREP functional checkpoint `9e10a96f9870d1bf90b64a2ef07ca8b85200d8d7` (documentation HEAD newer), central evidence `docs/commercial/PREP_P70_CANDIDATE_20261112.md`.
+7. Production: not deployed, Windows/CI/consumer E2E NOT_RUN.
+8. Source/recovery: SMAX and PREP main/develop untouched, no private code copied, original pre-feature SHA `15e21dbe1ccac516dff93967c538b7645e756a3f`; no real data, credentials or paid service.
+9. Next: rights/provenance and explicit golden compatibility, output/receipt gaps, Windows & authorized consumer tests; no automatic release/promotion.
+10. Time and portfolio: 2026-11-12 KST; central Kmong active16 sum/mean **1369%p/85.5625%** unchanged.
+
 ## 2026-11-12 KST — PREP independent P70 functional candidate, supervisor handoff (current)
 1. Goal: standalone local-first PREP R01–R12, target 70 engineering gate, not release.
 2. Implemented: private feature branch clean-room CSV/JSON, strict typed explicit mapping and suggestions, review queue, SHA receipt, atomic new-only output and CLI, 6 exact committed files.
