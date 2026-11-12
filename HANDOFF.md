@@ -1,3 +1,15 @@
+## 2026-11-13 KST — GitHub Trending 전용 일간·주간 브랜치 분리 인수인계 10항
+1. **목표·기술:** 해총 공개 저장소 `hibi89/hackathon-command-center-2026`에서 GitHub Trending 일/주/월 조사와 크몽 상품화 아이디어를 예약 실행 후 날짜별로 중복 없이 누적. GitHub 파일 API + ChatGPT Automations, 추가 CI 없음.
+2. **완료·결정:** A 단일 `kmong-productization` 파일 동시 업데이트(충돌 위험)와 B 주기별 전용 브랜치(쓰기 격리·월간 읽기 통합)를 비교, 사용자 지시 따라 B 적용. `github-trending-daily`·`github-trending-weekly` 생성; 월간 `kmong-productization` 유지; 동일 저장소의 기존 `docs/github-trending/` 파일·월별 초기 이력 보존.
+3. **검증:** GitHub create_branch **2/2**, branch-specific `BRANCH_README.md` 생성 **2/2**, 공통 정책·인덱스 수정 **6/6**, 중앙 DAILY/WEEKLY 스냅샷 표시 **2/2**, 3개 예약 prompt 변경 **3/3** 성공 응답. 예정일 실제 자동 GitHub 커밋 **0건 확인(미검증)**; 기능 테스트/CI 해당 없음.
+4. **상태:** 전용 브랜치 및 예약 지시 구성 완료. 다음 예약 실행에서 실제 append·idempotent·읽기 전용 월간 연계 **검증 대기**. 대상 생성 파일은 사용자 요구한 문서 전용이며 상품 배포 미적용.
+5. **장애·대안:** 예약의 실행 환경에서 GitHub 연결/쓰기 권한이 전달되는지 미검증. 실패하면 `GITHUB_SYNC_PENDING`을 기록하고 실행 환경을 조사; 무단 PAT/Actions workflow/권한 확대 금지. 이전 주간 대체 집계는 공식 순위로 간주하지 않음.
+6. **저장소·브랜치·경로:** `hibi89/hackathon-command-center-2026` — 일간 `github-trending-daily:docs/github-trending/YYYY-MM/DAILY.md`; 주간 `github-trending-weekly:docs/github-trending/YYYY-MM/WEEKLY.md`; 월간 `kmong-productization:docs/github-trending/YYYY-MM/MONTHLY.md`; 각 전용 브랜치의 `docs/github-trending/BRANCH_README.md` 정본. 정확 Git commit SHA는 생성·수정 결과/재조회 기준.
+7. **배포·실행 환경:** ChatGPT 예약 일간10:00, 주간 월10:30, 월간 매월1일11:00 Asia/Seoul. Vercel·Production·로컬 실행/빌드 미적용.
+8. **원본·백업·보안:** 기존 `kmong-productization` 이력/상품 코드·상태·원본 요약 보존, Git 개별 SHA로 복구. Public repo에 비공개 소스·개인정보·고객·토큰 게시 금지; 강제 push/브랜치 병합 없음.
+9. **다음:** 11/13 일간 및 11/16 주간의 실제 자동 실행 뒤 해당 branch 날짜 섹션 유무, 커밋 SHA, README/라이선스·스타 증거, 다른 branch 무변경 검증. 12/01 월간이 양쪽을 읽어 종합했는지 확인. 실제 연결 실패하면 1회 개선 후 대안 승인 요청.
+10. **갱신 시점·검증 범위:** 2026-11-13 KST; 브랜치/문서 API와 예약 변경 API 응답까지 확인. 추후 자동 실행 성공은 주장하지 않음. 본 문서 갱신 커밋은 후속 조회 기준.
+
 ## [LATEST 2026-11-13 KST] REA_Web 원형 제품 P70 검증·크몽 최신화 인수인계 (10항)
 1. 목표/기술: 소유자 지시 원래 웹사이트 분석/재구축 제품 70%. Fable5.1 기술 탐색→Astra P4 증거+기능 명세→명시적 인간 검토→Pro 독립 FastAPI/SQLite 앱, 데이터전용 DATA2WEB 독립.
 2. 완료/결정: hibi89/REA_Web@feature/website-analysis-rebuild의 신규 rea/website_p70.py 실 Chromium 3 합성 local page search/filter/detail 행동 캡처+PNG SHA, Astra observed evidence/requires_review, 인풋 SHA와 리뷰 digest·APPROVE_SYNTHETIC_ONLY 명시 게이트, 기존 P50 진짜 Fable static/Pro 앱 생성과 실 Chrome 기능 동등 검증. 원본 HTML/소스·타브랜치 유지.
