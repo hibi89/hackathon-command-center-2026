@@ -1,3 +1,5 @@
+> **2026-11-12 KST 최신 PREP Private 검증·크몽 완성률 재확인:** GitHub `hibi89/prep` 저장소가 **PRIVATE**로 전환된 사실을 직접 조회했다(사용자가 설정 변경). 기존 Public 보안 차단은 해소됐지만, **SMAX 비공개 원본 이관·코드 GitHub 반영·골든 동등성·실 Windows 검증은 아직 진행되지 않았다.** PREP의 **정식 최종상품 완성률 미산정(UNASSESSED)**, **독립 GitHub 실행코드 검증률 0%**, **50% 목표 미달** 유지. 로컬 후보 Node22 `npm test` **71/71 PASS × 원본/ZIP 재실행**은 별도 증거. PREP `main/develop/feature/core-extraction` 문서 HEAD `15e21dbe1ccac516dff93967c538b7645e756a3f`. 기존 크몽 활성16종의 최종완성률·합계·평균·분모는 **변경하지 않음**; PREP는 별도 후보. 과거 PREP 'PUBLIC' 표기는 변경 이전 이력이며 최신 사실이 아님. [PREP 최신 감사](docs/audits/PREP_INDEPENDENT_PRODUCT_BASELINE_20261112.md). **RELEASE HOLD.**
+
 ## 2026-11-12 FFAX 독립후보 P85 재시도: 78/100점 유지
 FFAX 안전한 AI 공급자 어댑터·로컬 검증 확장, Node96 PASS·mock12 PASS. axe/실LLM/실CI/사용자승인 미검증. **활성16종의 모든 수치·합계·분모는 아래 원문 그대로**, FFAX는 별도. [기준 커밋](https://github.com/hibi89/frontend-foundry-ax/commit/a206561bd7efef46bb76ecba321280bb5af8f444).
 
