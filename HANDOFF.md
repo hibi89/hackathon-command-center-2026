@@ -1,3 +1,18 @@
+## 2026-11-12 KST — CUBE P95 continuation (10-point operational handoff)
+1. Goal/stack: AXMART³ CUBE Node18+ static product owner-review, engineering 85→95 goal; central goal-lock marker.
+2. Changes/decision: local full test/build/owner review one command via `npm run verify:local` (no paid private CI or Prod); protective test list, path/link, no-clobber, release HOLD invariants.
+3. Evidence: exact Git blobs runner `bfcda0c45931f768e4e3252fddeb9525f0532574`, tests `6a82487ce920a61a62faa3a0cb089e000a865e83`; Linux Node22.16 synthetic fixture `node --test tests/verify-cube-local.test.mjs` 5 PASS/0 FAIL/0 SKIP, syntax checks PASS. Real full 13 suites/build/owner receipt at same SHA **NOT RUN**.
+4. State: CUBE 85% provisional, P95 NOT achieved, [작업중] kept, RELEASE HOLD; other 15 rates unchanged.
+5. Blocker/pivot: local private GitHub DNS inaccessible, no existing private CI workflow or preapproved paid CI; safe synthetic isolated test instead, not a replacement for full end-to-end.
+6. Repo/branch/SHA: private `hibi89/AX_MART@feature/cube-owner-preflight-p85-20261112`; tested newly added code and test blobs at functional commit `62de5a77b5600a24e96135f1a208f8be6cdbad49`, product docs HEAD `f4522158fe1f64eff052bfbc8364d15f35838fce`. Hub `hibi89/hackathon-command-center-2026@kmong-productization`, `docs/audits/KMONG_16_CURRENT_20261111.md`.
+7. Deploy/runtime: Node>=18 locally; Cloudflare `https://ax-mart.pages.dev/` uses main (feature not deployed); Vercel N/A.
+8. Preservation: Git old feature SHAs restore; homepage/production main/PC CARE/secret/customer data and permissions untouched.
+9. Next and approval: full exact-SHA command `npm run verify:local` in authorized checkout; original Chromium/Edge/Windows review, IP/NOTICE/product pilot; merchant/payment/production actions need separate GO, marker only after 95 proved.
+10. Updated KST 2026-11-12; exact GitHub blob + local synthetic-only result, not full release or browser verification.
+
+---
+
+
 ## 2026-11-12 KST — Kmong AXMART³ CUBE P95 attempt (10-point handoff)
 1. Goal/tech: choose the urgent free-to-progress CUBE from 16 active Kmong products; aim engineering 85→95 without touching concurrently marked products. Node18+ static offline owner-release preflight.
 2. Delivery/decision: source-derived byte exact product/support HTML parity + explicit Cloudflare dist allowlist; six adversarial regressions and actual main-build owner HOLD integration. Chose deterministic generator/parity versus brittle heuristic CSP substring checking, no extra external cost.
