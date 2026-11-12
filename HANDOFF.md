@@ -1,3 +1,15 @@
+## 2026-11-12 KST — PREP PRIVATE 전환 검증 및 최종상품 진척 재확인 (10항 최신)
+1. **목표·기술:** 독립 PREP(Node20+ ESM) 범용 정형 데이터 전처리 코어와 CLI/SDK를 50% 단계로 개발. 기존 크몽 활성16종 외 독립 육성 후보.
+2. **완료·결정:** 소유자가 `hibi89/prep`를 PRIVATE으로 변경했고 GitHub로 직접 확인. PREP 공개에 따른 비공개 코드 노출 차단 조건 해소. 상태 문서·보안·마이그레이션 계약 갱신. 기능 소스 이관은 아직 하지 않음.
+3. **테스트·증거:** Linux Node22 별도 대화 임시 로컬 ZIP의 `npm test` 71 PASS / 0 FAIL / 0 SKIP × 2회(압축 해제 후 재실행 포함). 실제 PREP GitHub 커밋 소스 테스트·CI·Windows/소비자 E2E NOT_RUN. GitHub Privacy 메타데이터 PRIVATE 직접 확인.
+4. **완료/미완/중단:** 독립 PREP의 **정식 최종완성률 UNASSESSED**, GitHub 검증된 실행 기능 0%, 50% 목표 미달. 다음 단계는 원본 SHA/재사용 범위·라이선스/의존성·골든 패리티 검증 후 승인된 소스 이관. RELEASE HOLD. 기존16종 수치/집계 변동 없음.
+5. **오류·대안:** 공개 저장소에 비공개 원본을 올릴 위험은 사용자 Private 전환으로 해소; 이전 PUBLIC 차단은 역사. 남은 IP/테스트/동등성 게이트는 유지. 문서 변경은 실행 성공 증거가 아님.
+6. **브랜치·SHA:** `hibi89/prep@main/develop/feature/core-extraction` 문서 최신 `15e21dbe1ccac516dff93967c538b7645e756a3f`; `hibi89/hackathon-command-center-2026@kmong-productization`, [현행 PREP 감사](docs/audits/PREP_INDEPENDENT_PRODUCT_BASELINE_20261112.md). 해총 최종 HEAD는 반영 후 원격 검증.
+7. **배포·환경:** PREP Production/Vercel N/A, 상품화 HOLD. Node22 Linux 임시 ZIP 검증, 실제 GitHub 소스/Windows 설치 미검증.
+8. **원본·백업·인증:** 기존 Private SMAX 저장소/타16제품 코드·고객 데이터·토큰/환경변수/배포 불변. 사용자가 PREP visibility 변경 완료, assistant는 추가 권한·보안 변경 없음. 기존 문서 Git SHA로 복구 가능.
+9. **다음 작업/승인:** 정확 SMAX 원본 HEAD/소스/권리·골든 검토 → 승인 범용 코어를 PREP feature에 이관 → 테스트/Windows/고정 버전 소비자 회귀 → 제품 완료율 산정. 외부 결제·고객정보 반출·공개 배포는 별도 승인.
+10. **KST 기준·검증 범위:** 2026-11-12 KST; GitHub 저장소 visibility, PREP 문서 SHA·브랜치 일치, 해총 상품 상태만 검증. 50% 완료 주장 금지. 최신 해총 문서 커밋은 후속 확인.
+
 ## 2026-11-12 KST — FFAX additional P85 goal/P78 verified hub handoff (10 points)
 1. Objective: FFAX AI frontend workshop; original 12 AC / 100pt fixed definition; 85 target.
 2. Delivered: opt-in OpenAI-compatible HTTPS model transport + consent and existing policy ledger; strict output, mocked 12-screen contract, official axe harness and user UX checklist. No real vendor requests.
