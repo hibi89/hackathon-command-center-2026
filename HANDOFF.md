@@ -1,3 +1,5 @@
+## KUODRA 2026-11-13 KST 최종 사후 CI — 기능 SHA `8b8801991870f1a98117b68bd23ed2e99c77cacb`, [Actions #43300053991](https://github.com/hibi89/KUODRA/actions/runs/43300053991) Ubuntu·Windows 각 275/275 PASS/0 FAIL, Windows 1125파일 ZIP SHA 및 임시 설치/검사/명시제거·고객 원본 보존 PASS. 내부 최종상품 완성률 89% 잠정, P95 미달·KUODRA `[작업중]` 유지, 실제 기업/권리/고객 Windows/법률/판매 GO 미검증, RELEASE HOLD. 다른 상품·KIC 원본 불변.
+
 ## 2026-11-13 KST — KUODRA P95 재개 부분완료, 10항
 1. 목표·확정 기술: 독립 KUODRA 로컬 Windows 한국 OpenDART+미국 SEC 재무근거 A/B/C·조건부 ML/Guard 검증. P95 사용자 목표는 열린 상태, 정본 REQUIREMENTS 100점.
 2. 완료·판단: PR#6 DART 공식 필드 부재(`fs_div/thstrm_dt`) 호환 수정, 결산일 사용자 출처 대조, 합법 로컬 DART JSON GUI/CLI, 한국어 인쇄 HTML(폰트 번들 없음), Windows 미서명 ZIP 안전 설치/검증/동의 제거. API 키 없는 공개 문서 기반 해석, 로컬 BYOK 방식 유지.
