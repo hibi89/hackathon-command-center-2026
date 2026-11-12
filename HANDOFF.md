@@ -1,3 +1,15 @@
+## [LATEST 2026-11-13 KST] REA_Web 원형 제품 P70 검증·크몽 최신화 인수인계 (10항)
+1. 목표/기술: 소유자 지시 원래 웹사이트 분석/재구축 제품 70%. Fable5.1 기술 탐색→Astra P4 증거+기능 명세→명시적 인간 검토→Pro 독립 FastAPI/SQLite 앱, 데이터전용 DATA2WEB 독립.
+2. 완료/결정: hibi89/REA_Web@feature/website-analysis-rebuild의 신규 rea/website_p70.py 실 Chromium 3 합성 local page search/filter/detail 행동 캡처+PNG SHA, Astra observed evidence/requires_review, 인풋 SHA와 리뷰 digest·APPROVE_SYNTHETIC_ONLY 명시 게이트, 기존 P50 진짜 Fable static/Pro 앱 생성과 실 Chrome 기능 동등 검증. 원본 HTML/소스·타브랜치 유지.
+3. 테스트 명령/수: Python3.11 pytest -q tests/test_website_rebuild_p50.py tests/test_website_p70.py tests/test_orchestrator.py, exact-tested SHA bfac1116ac7a20c7162f42a59e51277d402b24d9, [Actions #43266467950](https://github.com/hibi89/REA_Web/actions/runs/43266467950) Ubuntu24.04 41PASS/0FAIL/1WARN, Windows2025 41PASS/0FAIL/1WARN, 2/2 SUCCESS, 기존31+신규10.
+4. 완료/진행/차단: 정본 50→70 합성 3사이트 Chromium E2E 게이트 달성, 최종상품 엔지니어링 잠정70%, 소유자 P70 현 목표 달성. 실제 외부 URL/원 사이트 디자인 자동 복구·실 구매자 OS/상업권·Production 전부 NOT RUN / RELEASE HOLD. 중앙 REA_Web [작업중]만 해제.
+5. 실패/원인/대안: 신규 P70 정확 SHA Actions 2/2 SUCCESS, 이전 P50 Windows PYTHONPATH 실패 수정 이력 유지. P70는 Fable 실제 정적 + 별도 Playwright DOM 관찰; Fable Record/real customer approval로 과장 금지.
+6. 저장소/브랜치/SHA: hibi89/REA_Web@feature/website-analysis-rebuild exact-tested bfac1116; rea/website_p70.py, tests/test_website_p70.py, .github/workflows/rea-website-p50.yml, docs/WEBSITE_P70_BROWSER_ACCEPTANCE_20261113.md. Original Pro 97b6e5, Fable pinned 7e6f273b, Astra pinned f044b66e. Hub hibi89/hackathon-command-center-2026@kmong-productization central docs/audits/KMONG_16_CURRENT_20261111.md.
+7. Production/환경: Python3.11+, pytest/Playwright actual Chromium, FastAPI/SQLite/uvicorn, actual Fable/Astra pinned; GitHub Windows2025/Ubuntu24.04. Production/Vercel 없음.
+8. 원본/백업/보안: 기존 Pro/Fable/Astra/Lite/DATA2WEB 원본/브랜치·고객 데이터 미변경. Git SHA 복구. 127.0.0.1·원본 SHA+수동 합성 승인·CSP/외부 요청차단; 원본 고객 비밀·PII/유료 API/환경변수 변경 없음.
+9. 다음 우선순위/승인: 사용자 차기 목표 시 실제 Fable Record, 사람 검수 UI/권리와 실사이트 기능명세/시각/반응형 비교, 고객 Windows 실기기 수용, Windows/Chromium 병행. 외부 real site/제3자 자료/유료 결제/배포/판매 권리 사전 승인.
+10. 갱신 일시/검증 범위: 2026-11-13 KST, GitHub run #43266467950 done 2/2 SUCCESS on bfac1116, 문서/중앙 HEAD는 별도 원격 확인. 실제 고객/프로덕션 미검증, 70%는 단계별 엔지니어링 잠정 점수.
+
 ## 2026-11-13 KST — GitHub Trending 누적 기록 인수인계(10항)
 1. 목표: 해총 `kmong-productization` 브랜치에 GitHub Trending 일간·주간·월간 및 크몽 상품 아이디어 누적 기록.
 2. 완료: `docs/github-trending/` 아래 DAILY/WEEKLY/MONTHLY/MONTHLY_INDEX/PRODUCT_IDEAS/AUTOMATION_POLICY 6파일 생성. 과거 11/06~12 일간, 11/09 주간은 미재검증 요약으로 표시.
