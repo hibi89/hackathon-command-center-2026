@@ -1,3 +1,15 @@
+## 2026-11-12 KST — Kmong RAG P5.54/P5.55 source safety handoff (10 points)
+1. Goal/tech: advance RAG Studio AX Edition P85→P95, Node22 local-only source-cited preview/review bundle; no real customer/SMAX private import.
+2. Completed/decision: compared delete-on-error inode precheck (TOCTOU still unsafe) vs preserve-on-failure; selected no recursive cleanup. Added HTTP static UI regular-file FD identity and allowlist validation; no backend data uploads.
+3. Evidence: old exact Git blob 0c9f357a3706109dbf0a3a4a7d3b4092ec67e262 reproduced deletion of unrelated synthetic temporary marker; new exact source blobs 47788b66c3268df75856022bd0a70184586b3cad and 9e8a2933eead90268fd1c9a431ceabaa4639eb1a. Local Linux Node22.16 exact-core mock-upstream harness 11 PASS/0 FAIL/SKIP. Remote p547 #43221154095, p545 #43221152060: FAILURE with 0 JOBS; full original CI/Windows NOT VERIFIED.
+4. Status: code, 2+5 regression tests and product docs committed; 85% provisional unchanged, 95% not reached, sale RELEASE HOLD. No product percentage increase without full original validation.
+5. Failure/root/pivot: original cleanup recursively deletes changed destination; removed. CI 0-job pre-execution blocker; no repeated rerun/paid escalation or attribution to code defects without logs. Native browser/owner legal rights not tested.
+6. Repo/branch/paths: `hibi89/RAG_STUDIO@feature/p546-rag-prep-mapping` code/test commits 1193e1666da3, 358244f9a97f, db6c296ccc04, 03e06c15d278, docs 6e57e876418; `src/prep-review-bundle.mjs`, `src/prep-owner-local-server.mjs`, `tests/p553-review-bundle.test.mjs`, `tests/p555-local-static-integrity.test.mjs`, `docs/P554_P555_SAFE_LOCAL_DELIVERY_20261112.md`; hub hibi89/hackathon-command-center-2026@kmong-productization.
+7. Production/runtime: Node22 local-only localhost, no Vercel/Production, no new deployment or CI policy changes.
+8. Backup/security: previous RAG feature commit 0e5f1b8812638cfa1deedf167a1b485efcf0837d recoverable; original CSV/TXT, private SMAX, customer data, credentials, other products unchanged. Synthetic temp only.
+9. Next: obtain entire original repo for full npm and Gold/Negative/Heldout on Win/Ubuntu, diagnose 0-job Actions non-destructively, real Windows Edge/Chrome localhost test, approved SMAX Native and product rights/customer pilot. No P95 or sale approval before gates.
+10. Updated 2026-11-12 KST, scope exact Git blobs + isolated local tests + remote CI metadata; hub scoreboard marker removed as current work unit stops and Code Checker marker preserved. SHA of hub docs checked after commit.
+
 ## 2026-11-12 KST — 크몽 작업중 표기 규칙 전파 인수인계 (운영 문서 작업 완료)
 1. 목표/범위: 모든 현행 크몽 상품 담당자가 작업을 시작하면 중앙 최종완성률 표에 `[작업중]` 커밋, 목표 달성·작업 종료·전환 시 해제. 활성16종과 별도 PREP/FFAX/Factory AX 후보 상태표 구분. 사용자 승인 받은 **운영 지침 변경**이며 제품 코드 변경 아님.
 2. 결정/구현: 제품 루트 `AGENTS.md` 최상단 필수 지시 삽입, 중앙 `AGENTS.md`·`docs/audits/KMONG_16_CURRENT_20261111.md` 후보 상태표 보완, 동시 수정 보존·허브 쓰기 실패 `KMONG_HUB_SYNC_PENDING` 명시. 원본/숫자/RELEASE HOLD 보존.
