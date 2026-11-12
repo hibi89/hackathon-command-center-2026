@@ -1,3 +1,15 @@
+## 2026-11-13 KST — GitHub Trending 누적 기록 인수인계(10항)
+1. 목표: 해총 `kmong-productization` 브랜치에 GitHub Trending 일간·주간·월간 및 크몽 상품 아이디어 누적 기록.
+2. 완료: `docs/github-trending/` 아래 DAILY/WEEKLY/MONTHLY/MONTHLY_INDEX/PRODUCT_IDEAS/AUTOMATION_POLICY 6파일 생성. 과거 11/06~12 일간, 11/09 주간은 미재검증 요약으로 표시.
+3. 검증: GitHub 파일 생성 6/6 응답 성공, 기존 예약 프롬프트 변경 3/3 성공. 자동 실행의 실제 GitHub 커밋 0건 검증, 기능 테스트/CI 미적용.
+4. 상태: 초기 문서·예약 지시 완료, **다음 예약 실행 GitHub 자동 append 종단 검증 대기**.
+5. 오류·대안: 과거 공식 순위와 README 전체 재검증 없음; 자동화 실행 환경에 GitHub 연결이 없으면 `GITHUB_SYNC_PENDING`, 수동 동기화 또는 별도 승인 후 GitHub Actions 설계.
+6. repo/branch: `hibi89/hackathon-command-center-2026@kmong-productization`, `docs/github-trending/`; 최신 SHA는 최종 조회 기준.
+7. Production/Vercel: 미적용. 예약 일간10:00, 주간 월10:30, 월간 1일11:00 KST.
+8. 원본/보안: Public 저장소, 비공개 소스·고객자료·토큰 제외, 기존 크몽 점수·제품·배포 불변, Git 이력으로 복구.
+9. 다음: 첫 예약 후 중복 없이 해당 날짜 추가됐는지 GitHub 커밋/파일 조회로 확인; 실패 시 연결·권한 확인 후 개선. 유료 호출·보안 변경은 별도 승인.
+10. 갱신: 2026-11-13 KST, 문서 생성 및 예약 설정만 확인, 미래 실행 미검증.
+
 ## 2026-11-13 KST — ASTRA 사용자 개입 필요 · hub 10-point handoff
 1. 목표·기술: Astra PDF Redesigner의 기존 오프라인 React/TypeScript/Vite/Electron/PDF.js, 목표 최종 엔지니어링 P95 유지.
 2. 완료/결정: P85 페이지별 이미지 위치 위험, P86 문서 읽기순서 위험, P87 7항목 수동 검수/로컬 JSON. 사용자 명시 지시로 Astra `[작업중]` → `[사용자 개입 필요]`; 95% 달성으로 인한 변경 아님.
