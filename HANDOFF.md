@@ -1,3 +1,15 @@
+## 2026-11-12 KST — DBVORA P4-04 85→95 목표 지속, 실제 정본 소스 범위 검증 10항
+1. **목표·기술:** 비공개 `hibi89/DBVORA` Python3.11+ 로컬 DB 구조·ZIP/ZSTD·PG read-only, 현재85%→P95 내부 목표, 판매 판단 별도.
+2. **결정·기능:** A 동일 ZIP 안에서 캐시 허용/검증 vs B 캐시 전면 거부 + **별도 신뢰된 checkout에서 사전 읽기전용 감사** 비교; B 선택. 기존 `-B`도 사전 bytecode 읽기 허용하는 점 실제 합성 재현, 캐시 차단, `PYTHONPATH` 격리, 승인된 원본만 import, 사용자 경로 무노출 실패 코드. 고객 DB 쓰기 불변.
+3. **검증:** Python3.13.5 실제 원격 Git Blob **4개 정확 일치**(verifier `d8d3e67b28f3`, verifier tests `56693b25a387`, trusted script `8430914e997d`, trusted tests `f7acd1840aee`). 원본 테스트 20+7=**27 PASS/0 FAIL/0 SKIP**; 추가 별도 격리7 PASS. 첫 시험 기대 오류1 FAIL은 오류 코드 조건 수정 후 재실행 전부 PASS. 기존 full repo >=553 Python+Node/ZIP 원본 통합/Win·PG 미실행.
+4. **진행·대기:** DBVORA **85% 잠정 유지**, P95 미달, RELEASE HOLD. 해총 중앙 `[작업중]` 목표까지 유지. 판매 및 고객 실사용 승인 없음.
+5. **실패·대안:** private full checkout git DNS 실패(반복 금지). GitHub 커넥터 정확 원본 4파일 재구성+Linux synthetic 테스트로 전환해 진전 검증. CI workflow 미존재, 유료 CI/보안 설정 무단 생성 없음. 다음 전체 정본 다운로드 가능한 환경에서 release gate.
+6. **정본·경로·SHA:** `hibi89/DBVORA@feature/p0-db-map` 기능/감사 `8d4199c62491`, 문서 `docs/P4_04_TRUSTED_PREIMPORT_AUDIT_20261112.md`. 해총 `hibi89/hackathon-command-center-2026@kmong-productization`, `docs/audits/KMONG_16_CURRENT_20261111.md`; 최종 HEAD 원격 재확인.
+7. **실행/배포:** 전체 정본에서 `python -m scripts.verify_release_gate` (>=553 Python + Node) + actual ZIP→fresh extract→trusted script `python -I -S -B /trusted/DBVORA/scripts/verify_trusted_extraction.py --extracted /fresh/extract`. Vercel/Production 미적용, 고객용 설치/판매 ZIP 없음.
+8. **원본·보안·복원:** Git 이력 기반 정상 rollback, main/develop, 기존 ZIP/DB 고객 데이터, 토큰/외부업로드/과금/권한/다른 제품 모두 불변. Unsigned SHA는 출처 신원/바이러스 방지 보증 아님.
+9. **다음 우선순위·완료 기준:** 원본 553+ Python+Node 전수 실행 및 실제 ZIP 빌더/감사, Windows3.11 NTFS/file://·실제 콜드 복구, 별도 승인된 PG TLS 읽기전용/권리 확인. P95 성공 확인 전 표식 삭제 금지; 소유자 승인 전 release 금지.
+10. **갱신:** 2026-11-12 KST. 원본 정확4 Git Blob scoped 27 unit+7 local, 고객/Windows 미검증; 최종 GitHub HEAD 재조회가 문서 기준. 
+
 ## 2026-11-12 KST — CUBE P95 continuation (10-point operational handoff)
 1. Goal/stack: AXMART³ CUBE Node18+ static product owner-review, engineering 85→95 goal; central goal-lock marker.
 2. Changes/decision: local full test/build/owner review one command via `npm run verify:local` (no paid private CI or Prod); protective test list, path/link, no-clobber, release HOLD invariants.
