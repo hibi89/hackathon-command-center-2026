@@ -1,3 +1,18 @@
+## 2026-11-12 KST — CUBE P95 certified engineering milestone (10-point handoff)
+1. Objective/stack: AXMART³ CUBE productization 85→95 scope using Node22/18+ static storefront, source-based publish safety, offline owner HOLD. Real commerce/public launch not approved.
+2. Delivered: exact catalog and generator-to-dist byte checks, manifest allowlisting, no-delete output failure safety, safe TAP test invoker, branch-only read-only GitHub Actions, real Chrome JS rendering and Windows CI; weighted score engineering P95.
+3. Tests: exact source SHA `037aa8bf5e9b251d39fa909f4354d10901fa4ed6`, [CI #43240934297](https://github.com/hibi89/AX_MART/actions/runs/43240934297) 2/2 SUCCESS; Linux native `npm test` 117 PASS/0 FAIL/0 SKIP, `npm run verify:local` 117 repeat PASS, actual build + headless Chrome development-only PC CARE card + owner unsigned HOLD PASS. Windows native 117 + repeated 117 PASS, real build/owner HOLD PASS. Distinct tests 117, not 468.
+4. State: internal engineering 95% target **achieved**, central CUBE work lock safely removed, but sales/release still HOLD, P100 is separate customer/legal/operational acceptance.
+5. Errors and pivots: private local Git clone DNS unavailable; synthetic-only 5 tests falsely green from NODE_TEST_CONTEXT nested skip discovered and fixed with 8/8. Chrome CI double-escaped line endings stalled one run #43240539061, auto-cancelled and corrected; final #43240934297 fully successful. Avoid rerunning incorrect CI.
+6. Repos/SHAs/paths: `hibi89/AX_MART@feature/cube-owner-preflight-p85-20261112` verified code/CI `037aa8bf5e9b...`, product HANDOFF docs `2bf115086d54...`, `docs/CUBE_P95_EXACT_SOURCE_QA_20261112.md`, `.github/workflows/cube-p95-source-qa.yml`; hub `hibi89/hackathon-command-center-2026@kmong-productization`, `docs/audits/KMONG_16_CURRENT_20261111.md`, scoreboard update SHA `bb78fced32cdf76d8118c6a331b9e8ea79ce1e0f`.
+7. Runtime/deployment: GitHub hosted Ubuntu and Windows Node22, offline file:/// Chrome; Cloudflare `https://ax-mart.pages.dev/` main-linked unchanged and feature NOT deployed, Vercel N/A.
+8. Source/backup/security: earlier Git feature commits restore, owner source/customer data and homepage, production main, PC CARE other branches, credentials/permissions untouched. Workflows read-only no persisted repo token and no artifact upload.
+9. Next P100: actual customer Windows10/11/WinRE + safety, legal/LICENSE/NOTICE, optional user feedback/PII, order/payment/entitlement/refund and approved Cloudflare production E2E. User approval required for expenses/security/real release. Don't call engineering P95 a commercial product readiness 95.
+10. KST verified 2026-11-12, logged run #43240934297 exact SHA and original 117/117 each OS. Hub docs after this note are newer docs-only commits, not newly retested functional SHA.
+
+---
+
+
 ## 2026-11-12 KST — KUODRA commercial-product candidate registration (10-point handoff)
 1. Goal/tech: owner-created private `hibi89/KUODRA` commercial product. KR DART+US SEC filing/financial validation, common source/rights/as-of pipeline, A/B/C, optional heldout ML, Guard and local Windows evidence reports.
 2. Decisions/completion: [full 100% blueprint](https://github.com/hibi89/KUODRA/blob/main/docs/BLUEPRINT_100.md), REQUIREMENTS, AGENTS, SCHEMA, rights/release/branches docs created. Chose shared core+regional adapters vs KR-only rebuild; Windows local vs SaaS. Repo 9 branches created.
