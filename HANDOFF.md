@@ -1,3 +1,17 @@
+## 2026-11-12 KST — REA_APP original P53 P95 gate harness hub handoff (10 items)
+1. Goal/stack: P85→P95 source-backed customer ZIP for frozen Python3.11+ REA_APP P53 with pinned Babel7.29.9.
+2. Done/decision: compared analyzer rewrite vs read-only independent full-gate harness, chose lower-risk harness. New p53_acceptance.py checks original Gate R first then real P53 6/8 reports→source-bound buyer ZIP, privacy/determinism and immutable source fixtures; two fail-closed preflight tests.
+3. Tests: private `hibi89/HAE` feature code+QA SHA `f0dbf651a7ee45a131cf23d125f727bfb428860c`, docs HEAD `768f5b0694781efc732120f099c4f4481a4f3ce3`. Git blobs new source/test match; Linux Python3.13.5 **41/41 scoped PASS**, compileall PASS; actual P53 harness **exit2 BLOCKED**, original full Gate R/Node/Babel/Windows NOT RUN at this SHA.
+4. Status: REA_APP **85% provisional remains, 95 NOT ACCEPTED**, RELEASE HOLD; no change to other 15 products or central 16 sum/mean.
+5. Blocker/pivot: private git checkout DNS fails; partial local reconstruct can't run original P53 analyzer, file:// Chromium ERR_BLOCKED_BY_ADMINISTRATOR. New harness stops rather than claiming success; next authorized full checkout/CI. Paid Actions approval pending if chargeable.
+6. Repo/branch/SHA: private `hibi89/HAE@feature/rea-app-kmong-owner-delivery-20261112`, tested source `f0dbf651a7ee45a131cf23d125f727bfb428860c`, docs `768f5b0694781efc732120f099c4f4481a4f3ce3`; [evidence](https://github.com/hibi89/HAE/blob/feature/rea-app-kmong-owner-delivery-20261112/docs/REA_APP_P95_P53_GATE_HARNESS_20261112.md). Central `kmong-productization` HEAD to confirm after updates; original `REA_APP@2fe581b6` unchanged.
+7. Production/env: offline Linux Python3.13.5 scoped only, Vercel/Production N/A, real Windows and hosted CI UNVERIFIED.
+8. Backup/security: source branch SHA rollback; no original source/analyzer/customer data/secrets/licensing/permissions/paid calls/deploy edits.
+9. Next: authorized full checkout, run original verify_gate_r.py + retail 41 tests + p53_acceptance.py with exact installed Babel, then physical Windows browser file://, rights/NOTICE/support/buyer pilot; rescore 95 only after proof.
+10. Time: 2026-11-12 KST, code hash/local 41 PASS/expected BLOCKED verified, not full P53 P95 certification.
+
+---
+
 ## 2026-11-12 KST — Kmong REA_Web P95 completion handoff (10 fields)
 1. Goal/stack: preserve original Pro and owner-approved standalone Lite, improve seller kit and buyer proof without customer intervention.
 2. Done/decision: one-command create-only HTML+ZIP, SHA ownership, safe rollback, three real native browser downloads; companion chosen over changing Pro.
