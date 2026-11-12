@@ -1,3 +1,15 @@
+## 2026-11-12 KST — FFAX P85 목표 / 검증된 P78 크몽 별도 후보 동기화 (10항)
+1. **목표·요건:** FFAX v1 AI UI 생성·시각 편집·QA·안전한 Git 반영, 고정 12개 AC 총100점. 기존 크몽 활성16종과 별도 육성 후보.
+2. **완료·설계:** P75 보존, FFAX AC11용 opt-in AI 정책/비용한도/토큰/중복·429/취소·복구/민감정보 차단 구현. 실 provider 전송 없이 로컬 mock. A 무제한 자동 호출 대신 B 명시 승인·예산·외부 유출 사전 차단 채택. TypeScript 12 브리프와 legacy React 렌더 준비 점검(AC04 미충족).
+3. **테스트:** Linux Node22 67 PASS/0 FAIL/0 SKIP, Chromium 주입 30 PASS, 기초 접근성 12 PASS, 기존 규칙 생성 TSX TypeScript/React 구버전 실제 렌더 12 PASS+36 viewport; GitHub 변경 파일 Blob SHA 8/8 동일. 실 LLM, axe, CI, Windows, Production 미검증.
+4. **상태:** FFAX 잠정 **75→78/100(+3)**, 목표 85 미달, AC04 14/AC09 6/AC12 2 미충족, RELEASE HOLD. 기존 활성16종 합계1269%p/평균79.3125%/85이상9 유지, FFAX 분모 제외.
+5. **실패·전환:** 모델 식별자 경로 우회 테스트·총 예산 재시도 중복 계산 문제를 검출 후 수정, 전체 재검증 PASS. localhost Chrome URL 환경 정책 차단 → injected DOM 한정, 실제 서비스 URL PASS 주장 금지. axe-core 설치/원격 API 미승인·미확보로 사용자 수동 승인 전 AC09 0.
+6. **저장소·SHA:** 제품 `hibi89/frontend-foundry-ax@feature/ffax-workbench-p85-20261112`, 소스 `3d2d71d1e2887eaf55214acca146eca1b6f11b92`, 문서 `908bd3d9eaadb104d266517326a196fb3a242de4`. 제품 main `191289d19f7eb6203a2a6beb5e8efbcf10bc844d` 보존. 허브 `hibi89/hackathon-command-center-2026@kmong-productization`: 이번 commit 후 최신 HEAD 재조회 필요. 핵심: `docs/audits/FFAX_KMONG_INCUBATION_P85_TARGET_20261112.md`.
+7. **Production·환경:** Vercel/Production 미적용; FFAX 로컬 Node >=20, `npm start` loopback `127.0.0.1:4173`; Python Chromium 주입 시험. 실 AI provider 없음.
+8. **원본·백업·인증:** 모든 기존 고객 자료/Private 코드 및 제품 main/타 저장소 무변경. 비밀·프롬프트/토큰을 공개 해총에 기록하지 않음. 이전 P75 브랜치 `2b58e4cd7e32210d3ad20ee580aa95b694af0769` 복구 기준. 무승인 결제/전송/권한 변경 없음.
+9. **다음 우선:** 공급자·비용·외부 데이터 전송 승인 후 실제 LLM + production React/typecheck/12 브리프(AC04), axe+인간 UX(AC09), clean CI+D1–D5(AC12), 고객/Windows/브라우저 실제 URL·Production 별도 검증. 숫자 임의 조정 금지.
+10. **갱신:** 2026-11-12 KST, 제품 소스/문서 GitHub 실존 및 8/8 blob 대조, Linux 한정 테스트. 중앙 문서 최신화는 실제 이번 동기화 커밋 SHA 확인 후 완료 판정.
+
 ## 2026-11-12 KST — ASTRA P71–P75 85 provisional engineering synchronized to Kmong, 10-point central handoff
 1. Goal/technology: next most urgent non-REA_APP/other-chat product 70→85; Astra PDF Redesigner local React/Vite/TS/Electron/PDF.js original 7-stage source-to-redesign workflow, independent product branch.
 2. Implementation/decision: rejected A4 marker checks as proof of fidelity; chose B real original vs output PDF PDF.js token/numeric/rasters/A4 risk checks, SHA-bind original review receipt+project+output PDF, metadata-only HTML/JSON, in-app STEP7 local picker, no OCR/external API/data migration. Original source/project remain read-only.

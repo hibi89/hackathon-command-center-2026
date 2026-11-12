@@ -1,3 +1,8 @@
+## 2026-11-12 KST — FFAX P85 목표 개발, 실제 78/100 잠정 (해총 동기화)
+- Private `hibi89/frontend-foundry-ax@feature/ffax-workbench-p85-20261112`: tested source `3d2d71d1e2887eaf55214acca146eca1b6f11b92`, docs `908bd3d9eaadb104d266517326a196fb3a242de4`; 변경 GitHub blob 8/8 대조.
+- P75 75 + AC11 3 = **78/100 잠정 기술범위**. P85 목표 7p 미달. Node22 67/67 PASS, Chromium 주입 30/30, 기본 접근성 12/12, legacy React runtime 12/12+3폭36. 실 LLM/axe/UX 승인/clean CI/Windows/Production 미검증. 기존 main·타 제품 원본 무변경, RELEASE HOLD.
+- FFAX는 별도 육성 후보; 기존 활성16종 **1269%p / 평균79.3125% / 85이상9종** 기록 불변. [FFAX 기준 증빙](https://github.com/hibi89/frontend-foundry-ax/blob/feature/ffax-workbench-p85-20261112/docs/FFAX_P85_WORKSTREAM_EVIDENCE_20261112.md).
+
 ## 2026-11-12 KST — ASTRA 85% provisional engineering, CI verified same functional SHA
 - `hibi89/astra_pdf_redesigner@feature/astra-p71-pdf-source-parity-20261112` exact source `3b3c6f73a11d1791076eb5a860f14f87691844b5`, documentation `31db0af468815fcb442a3277a6f0aa0257796031`, draft [PR #10](https://github.com/hibi89/astra_pdf_redesigner/pull/10), no merge to original main/feature.
 - P71–P75: original and output PDF physical locally selected, SHA binding with old private receipt+project, text/numeric/image/A4 difference signals; standalone private offline HTML/JSON; in-app STEP7 GUI and original IndexedDB V2 preservation. [Chrome/Edge #43118808792](https://github.com/hibi89/astra_pdf_redesigner/actions/runs/43118808792) 2/2 SUCCESS Node134/134, [Windows #43118808750](https://github.com/hibi89/astra_pdf_redesigner/actions/runs/43118808750) 1/1 SUCCESS Node133 PASS/1SKIP/0FAIL, desktop16 PASS, unsigned NSIS package/upgrade PASS. Real buyer device and consented customer PDF NOT VERIFIED.
