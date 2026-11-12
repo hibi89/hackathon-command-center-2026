@@ -1,3 +1,15 @@
+## 2026-11-12 KST — Kmong REA_Web P95 completion handoff (10 fields)
+1. Goal/stack: preserve original Pro and owner-approved standalone Lite, improve seller kit and buyer proof without customer intervention.
+2. Done/decision: one-command create-only HTML+ZIP, SHA ownership, safe rollback, three real native browser downloads; companion chosen over changing Pro.
+3. Tests: REA_Web independent 92→95% provisional engineering after real 3-vertical browser downloads and owner-approved one-command create-only HTML+ZIP/verified rollback. Feature SHA cb7df1f4d1ce517c5940570af5bb1085410de268, Actions https://github.com/hibi89/REA_Web/actions/runs/43186105405 Windows2025+Ubuntu24.04 **2/2 SUCCESS**; full tests Windows **688 PASS/19 SKIP/0 FAIL**, Ubuntu **677 PASS/20 SKIP/0 FAIL**, native Chrome/Edge actual file download→disk→ZIP SHA→file reopen PASS ×3 each OS. Original source/other products unchanged; physical Win10/11 buyer, rights/PII/vendor NOTICE, pricing/refund/support and sales authorization NOT_VERIFIED. **Engineering 95% provisional, commercial RELEASE HOLD; not P100**. Active16 total 1379pp / average 86.1875% / 85+ 16 / 95+ 1; all other 15 scores unchanged.
+4. Status: technical engineering P95 provisional, sale RELEASE HOLD; active16 total1379pp mean86.1875%, 16 at least 85, 1 at least 95. Other15 untouched.
+5. Error & pivot: QA Windows Playwright unsafe-eval under CSP blocked; used locator text assertion instead of weakening CSP; final CI 2/2 SUCCESS. Do not repeat CSP-unsafe testing.
+6. Repos: hibi89/REA_Web feature/lite-owner-delivery-p95-20261112 exact tested cb7df1f4, docs HEAD efdafed8; central hibi89/hackathon-command-center-2026 kmong-productization. Original Lite feature f842d288 protected.
+7. Deploy/runtime: GitHub hosted Windows2025 and Ubuntu24.04; Vercel/Production N/A.
+8. Original/backup/security: Pro/customer source and other product scores unchanged; no paid API, secret, license/permission/publishing change. Offline HTML embeds plaintext, SHA is unsigned.
+9. Next: physical nondeveloper Windows buyer 3 pilots, source/license/privacy/NOTICE, price/refund/support and sale approval; P100 not reached.
+10. Verified 2026-11-12 KST at functional SHA cb7df1f4; docs-only SHA distinct, current hub commit verify.
+
 ## 2026-11-12 KST — REA_APP 39-case P95-target hub handoff (10 entries)
 1. Goal/stack: REA_APP P85→P95 Python3.11+ optional retail review, original P53 frozen.
 2. Implemented/decision: Compared high-risk P53/Windows integrated changes vs independent zero-cost offline `candidate_cli.py` (selected); one explicit command local report SHA→owner HTML/JSON→deterministic ZIP→source validation and SHA receipt. Conservative rollback leaves modified replacements untouched.
