@@ -1,3 +1,17 @@
+## 2026-11-12 KST — Kmong SOVIA P40 isolated public projection 4/4 CI (10-point handoff)
+1. Goal/stack: SOVIA independent source-first 90→95 technical work, public synthetic-only Python3.11+ and eventual private first-party LA provenance integration, no customer data by default.
+2. Choice/delivery: A direct raw private LA run/audit/SQLite import to public audit rejected (information loss/PII/unauthenticated consent). B strict bounded public abstract LA-like projection + independent SOVIA verified report count/plan comparison chosen; 12 negative/positive tests, isolated `-I -B` CLI; no writes or external data.
+3. Tests: exact source+test SHA `63c9a329de71470089e0a866e802a20ce9a48ad6`; [Actions #43210005055](https://github.com/hibi89/SOVIA_sovereign/actions/runs/43210005055) Windows/Ubuntu Python3.11/3.13 4/4 SUCCESS, 940 discovered per environment, Windows929PASS/11SKIP, Ubuntu917PASS/23SKIP, 0FAIL. Historic Windows 0.14 CMD/Edge/portable tests kept green.
+4. State: SOVIA engineering **90% provisional retained**, P95 NOT achieved, commercial RELEASE HOLD. Active16 1384pp mean86.5% unchanged, 95+ REA_Web one; other15 rates untouched.
+5. Limitations: public projection can only detect contradictions in self-asserted synthetic aggregate, cannot prove LA producer origin, same canonical plan/run identity, genuine consent or completeness. Public P40 source not packaged in P39 existing 0.14 ZIP. Owner genuine sources/rights/legal/customer Win10/11 still unverified.
+6. Source/branch/SHA: PUBLIC `hibi89/SOVIA_sovereign@feature/kmong-la-review-p2-20261112` code `63c9a329de71470089e0a866e802a20ce9a48ad6`, P40 paths `sovia_la_minimal_projection.py`, `tests/test_sovia_la_minimal_projection.py`, `docs/SOVIA_LA_MINIMAL_PROJECTION_P40_20261112.md`; draft PR #71 unmerged, docs HEAD later. Hub `hibi89/hackathon-command-center-2026@kmong-productization`.
+7. Runtime/deploy: `python -I -B sovia_la_minimal_projection.py --projection SYNTHETIC.json --review-dir NEW_VERIFIED_SYNTHETIC --synthetic-only`; local stdout-only, 16KiB, no external API, deployment/Production/Vercel N/A, v0.14 bundle unmodified/unsigned/ephemeral.
+8. Backups/security: original SOVIA main/develop, old ZIPs, private HAE/LA contents, owner customer data and secrets untouched. Prior source P39 `3470020b974e09ca864d030bca3fa580216aa91b` available for rollback. No paid/permission/auth changes.
+9. Next priority/approval: approved versioned private LA producer-side sanitized projector, separate trust/authorization and identity mapping, genuine consented local LA→SOVIA cross-repo E2E on real receipts, owner physical Win10/11 and pilot/privacy/legal/support, explicit sale GO. Do not call 95 from fabricated JSON.
+10. 2026-11-12 KST, exact code CI source verified and product docs HEAD separately checked; no fake authenticated evidence. [P40 audit](https://github.com/hibi89/SOVIA_sovereign/blob/feature/kmong-la-review-p2-20261112/docs/SOVIA_LA_MINIMAL_PROJECTION_P40_20261112.md).
+
+---
+
 ## 2026-11-12 KST — Kmong SOVIA P39 90% milestone (10-point handoff)
 1. Goal/tech: independently advance SOVIA synthetic retrospective audit local Python3.11+ towards 95 while protecting private LA/HAE rights and customer originals.
 2. Completed/choice: A repack existing v0.13 rejected for version integrity, B distinct 0.14 deterministic 18-file candidate SHA verifier, Windows CMD synthetic two-report comparison and repeat/alter refusal selected.
