@@ -143,6 +143,17 @@ FFAX 안전한 AI 공급자 어댑터·로컬 검증 확장, Node96 PASS·mock12
 | AXMART³ CUBE | **85% (잠정 엔지니어링, P95 미달)** | `hibi89/AX_MART@feature/cube-owner-preflight-p85-20261112` (code/tests/npm `34dac38ffac6`, docs `0e6a2faa20ee`) | Node18+ owner offline preflight: source→dist exact source catalog/index/CSP/no-sale and owner HTML/JSON/SHA manifest. **출력 폴더 교체 후 실패 처리에서 무관 파일 재귀 삭제 위험 실제 임시 재현 및 무삭제 HOLD로 수정**, 신규3 회귀, 기존26+신규3 **29/29 scoped PASS, FAIL0/SKIP0**, 4/4 Git Blob parity; 취약 코드일 때 신규 2 FAIL → 수정 3 PASS. Full repo npm test/build, real Windows/browser/Cloudflare/customer/payment/rights NOT RUN, production main/PC CARE branch preserved, RELEASE HOLD. [Evidence](https://github.com/hibi89/AX_MART/blob/feature/cube-owner-preflight-p85-20261112/docs/CUBE_OWNER_PREFLIGHT_OUTPUT_RACE_20261112.md) |
 
 
+
+## 별도 육성 후보 작업 상태 (활성 16종 집계 제외)
+
+> 담당자는 후보에 실제 개발·수정·검증에 착수하는 순간 해당 후보명 옆 `**[작업중]**`을 커밋으로 표시한다. 검증된 목표치 달성·중단·종료·다른 상품 전환 때 자기 표식을 제거한다. 후보를 활성 16종에 임의 추가하거나, 확정되지 않은 최종완성률을 새로 기입하지 않는다. 신규 후보는 필요시 동일 표에 별도 행을 추가할 수 있으나 실제 제품명과 GitHub 저장소를 확인한다.
+
+| 후보 제품 | 작업 상태 | 정본 저장소·브랜치 | 구분 |
+|---|---|---|---|
+| PREP | 미표시 (작업 여부 미확인) | `hibi89/prep@feature/core-extraction` | 활성16 제외; 최종상품률 미산정 |
+| FFAX | 미표시 (작업 여부 미확인) | `hibi89/frontend-foundry-ax@feature/ffax-workbench-p85-20261112` | 활성16 제외; 별도 후보 |
+| Factory AX | 미표시 (작업 여부 미확인) | `hibi89/factory-ax-ecosystem@feature/data-verify` | 활성16 제외; W1과 전체 생태계 구분 |
+
 ## 2026-11-11 HAE P7/P8 85% 엔지니어링 잠정·출시 HOLD
 
 > **2026-11-11 KST — HAE P7/P8 최종상품 엔지니어링 77→85% 잠정(+8%p), 모든 배포 RELEASE HOLD:** private `hibi89/HAE@feature/axflow-mvp` 기능 SHA `0b1a6607b9daf9518ef9e5e42ba4aff710675760`, HAE 문서 HEAD `3544e0aef27085e1257f881b20d0c2864383b5e6`. [Actions #42987797638](https://github.com/hibi89/HAE/actions/runs/42987797638) GitHub-hosted Ubuntu/Windows Python3.11 각각 **273 total / 264 PASS / 2 FAIL / 7 SKIP / 0 ERROR**, UI Node22 **22 PASS**. 실 HAE↔Lightning Azent 합성 로컬 CSV **전체 저장(3행)/amount>100 필터 저장(2행)/name 공백 정규화(3행)** 의 승인→SQLite→감사→중복 재요청 비즈니스 행 불변; 고객형 **로컬 합성 3개**이지 실 Gmail/Sheets 3종이 아님. R08 선택적 소유자 승인 SQLite↔DBVORA `p0-01.v1` **모의 계약 서버** 해시/스키마 검증 후 영구 분리 자산 메타데이터 등록부(경로·행·SQL/시크릿 저장 없음) 및 재시작 재검증, 불일치 무단 rebind 거부 +3%p. R01 사용자 노드 편집 없이 5종 로컬 CSV 선택 프리셋, 미리보기+승인 재요구 +1. R03/06 진짜 LA 3종 로컬 워크플로 +1. R07 사용자 초기화·동의 기반 별도 `workflow_catalog`에 **작업 텍스트/상대 CSV 경로/원본SHA/계획SHA만** 저장, 중복저장/재시작 조회/원본변경 거부, 자동 실행·쓰기 승인 복원 금지 +3. 그래서 **77+8=85% 잠정**, 공식 테스트 완료율/상용 승인율 아님. 남은 **원본 ZIP/pyz vs 최신 코드 parity 두 FAIL 때문에 전체 CI FAILURE**, 실 DBVORA FastAPI/Google OAuth/Gmail/Sheets/실고객 Win10/서명·설치·보안/3 외부 워크플로 판매 검증은 미구현 또는 미검증; 원본 바이너리·비공개 소스·고객파일·권한/과금·외부 서비스 유지. **현재 크몽 16종 합계 1184%p / 평균 74.0% / 85미만 14종 / 85이상 2종 / 70미만 0종**, SMAX² 최신 76% 등 기타 15종 점수 보존. HAE 상세 근거 private `docs/HAE_P7_P8_TO_85_20261111.md`.
