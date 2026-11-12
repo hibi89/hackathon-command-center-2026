@@ -1,3 +1,5 @@
+> **[2026-11-13 KST · 등록완료 이력 영구 보존]** [최종 19개 등록 순위표](docs/strategy/KMONG_29_TO_19_SERVICE_CATALOG_20261113.md)의 상품은 크몽 등록 후에도 순위 목록에서 **삭제 금지**. 실증된 `등록완료` / URL / 날짜 / 고유 ID / 이력을 [JSON 등록 원장](data/kmong_service_catalog_20261113.json)에 누적한다. 판매중지·비공개 후에도 등록완료 이력을 유지하며 신규 상품·모듈 결합 기획 시 기존 등록·옵션·원천 상품과 중복을 먼저 검사한다. 현 시점 19개 모두 **미등록(실제 게시 증거0)**, 이는 실제 기술 진척/판매 GO와 무관하다.
+
 ## [2026-11-13 KST] 크몽 최종 등록 서비스 정본: **29개 원천 → 19개 판매 게시글 후보 + 내부 CUBE 1개**
 [상품군·최종 1~19위·STANDARD/DELUXE/PREMIUM](docs/strategy/KMONG_29_TO_19_SERVICE_CATALOG_20261113.md) / [원천29↔19+1 전수매핑](data/kmong_service_catalog_20261113.json) / [Sol Ultra 최종설계 잠금 검수](docs/strategy/KMONG_BLUEPRINT_LOCKED_SOL_ULTRA_QA_20261113.md). 기존 29종 진척·마커·판매 HOLD 불변. 원래 29개 순위는 원천별 비교 이력으로 유지하며 **실제 판매 등록 우선순위는 새 19개 서비스표**. 검증·심사·게시 전 모두 HOLD.
 
