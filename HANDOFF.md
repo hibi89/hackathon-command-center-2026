@@ -1,3 +1,15 @@
+## 2026-11-13 KST — GitHub Trending 과거 조사·수익화 총정리 (10항)
+1. 목표·기술: GitHub Markdown + ChatGPT 예약 3개로 일간/주간 전용 브랜치 및 월간 총괄 누적을 유지.
+2. 완료 기능·결정: 과거 보고의 중복 제거 상품화 가설 30개와 조사 중 언급된 repo 69개를 3브랜치에 문서화. 일·주 브랜치 지역 누적/월간 중앙 통합 방식 선택. 중앙 정본 `docs/github-trending/MONETIZATION_IDEAS_MASTER.md` / `RESEARCH_HISTORY_INDEX.md`.
+3. 검증: GitHub 원장2×3 생성 및 목차·정책·PRODUCT_IDEAS 3×3 업데이트 응답 성공, 예약 프롬프트 3/3 수정 성공. 원격 readback은 별도 확인 예정. 실제 예약 후 GitHub 자동 커밋 미검증. 제품 테스트/CI 미적용.
+4. 상태: 문서 구축·예약 지시 완료, 자동 append 종단검증 대기. 과거 Trending 순위/스타/라이선스 미재검증, 고객 수요·상용 판매 미검증.
+5. 오류·복구: API/연결 불가면 `GITHUB_SYNC_PENDING`, SHA 충돌은 최신 내용 조회 후 안전 재시도 1회. 자동 병합·force push·무의미한 재실행 금지.
+6. 저장소·브랜치·SHA: `hibi89/hackathon-command-center-2026` 중앙 `kmong-productization`, 일간 `github-trending-daily`, 주간 `github-trending-weekly`; 정확 SHA는 원격 최종 확인 기준.
+7. 실행/배포: 매일10:00, 월요일10:30, 매월1일11:00 KST; ChatGPT 예약. Production/Vercel 미적용.
+8. 원본/권한: Public repo, 개인/비공개 고객 코드·토큰·민감 기획 미등록. 이전 크몽 상품 코드·완성률/CI/권한 불변, 문서 Git 기록으로 복구.
+9. 다음 작업/완료/승인: 다음 예약 실제 commit SHA·파일 readback·중복 방지 확인 후 자동화 성공 판정. 연결 실패 시 원인/대안 보고. 유료/API·권한·프로덕션/상품 개발은 별도 승인.
+10. 갱신/확인범위: 2026-11-13 KST. 이번 작업은 **과거 보고 정리와 예약 프롬프트 등록**, 새로운 외부 사실 검증이나 실판매/Windows 제품 품질 검증이 아님.
+
 ## 2026-11-13 KST — DBVORA P1-10, 내부94% 잠정/P95 미달 (10항)
 1. **목표/스택:** PG/SQLite 로컬 DB 관제 + ZIP/ZSTD; 내부 목표95%.
 2. **결정/기능:** 기존 PG 독립 유닛만 신뢰(A) vs 실제 catalog→stats→FK→DBA manual hints→offline HTML→새 파일 합성6체크 의무 통합(B) 중 B. `scripts/pg_synthetic_acceptance.py` 등 새 tests, release gate 추가, PG optional binary driver + operator guide.
