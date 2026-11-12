@@ -1,3 +1,9 @@
+## 2026-11-13 KST — GitHub Trending 과거 조사·수익화 후보 통합 원장 최신화
+- 기존 11/06~12 일간, 11/09 주간 보고의 상품화 아이디어 **30개** 및 GitHub 참고 저장소 **69개**를 중복 제거하여 `docs/github-trending/MONETIZATION_IDEAS_MASTER.md`, `RESEARCH_HISTORY_INDEX.md`에 기록. 이전 순위·라이선스는 미재검증 명시.
+- 일간·주간·월간 3브랜치 문서 생성 및 목차/상품 원장 연결. 예약 프롬프트 3/3 수정 성공: 일·주는 자기 브랜치 `PRODUCT_IDEAS.md`와 `RESEARCH_HISTORY_INDEX.md` 갱신, 월간이 양 브랜치를 읽어 중앙 마스터 갱신. 과거 날짜별 보고 보존.
+- 검증: GitHub 문서 create/update 커밋 응답, 예약 3개 활성/업데이트 성공. **미검증:** 미래 예약 실제 자동 append·원격 readback, 과거 순위·상업 라이선스·고객 수요. 쓰기 실패 시 `GITHUB_SYNC_PENDING`.
+- Public 문서와 예약 지시만 수정. 원본 제품 코드/완성률/배포/권한/CI·유료 API 변경 없음. Git 이력 복구 가능.
+
 > **2026-11-13 KST DBVORA P1-10 / 94% 잠정(목표95 미달):** 실제 원본 `dbvora/multi_engine_report.py` JS 3074자 FNV `88ecd396` 동일 Node22 syntax 및 synthetic DOM 실제 table click/stats/hints/FK/search/unavailable **PASS**. `pyproject.toml` 정확 Git Blob `080af800601fff0177eedbfbf58aeb3b2664c36a` 일치 Python3.13.5 TOML PASS(PG optional separate). 합성 PG catalog→stat→review→HTML→file SHA `scripts/pg_synthetic_acceptance.py` **6체크 코드·tests** + `scripts.verify_release_gate` 필수 E2E 단계, PG 설치 가이드 추가. **새 6체크 full original Python 실행/전체>=553 Python+Node/실 PG TLS·Windows/실 ZIP 미검증**. P0 25 + P1 12 + P2 20 + P3 19 + P4 18 = 94/100 기능범위 잠정, P95 미달, DBVORA [작업중] 유지, RELEASE HOLD; 타 상품 불변. [증거](docs/audits/KMONG_16_CURRENT_20261111.md).
 
 ## 2026-11-13 KST — KUODRA P50 내부 엔지니어링 달성·크몽 후보 최신화
