@@ -1,3 +1,17 @@
+## 2026-11-12 KST — Kmong EAI P36 local-model gate (10 items)
+1. Goal/tech: EAI owner-independent 85→95 development with actual evidence, preserve CPU-owned local-first Python3.11.
+2. Delivered/decision: A implicit remote AI/model installation rejected (cost/PII/authority); B explicitly consented local-only Qwen synthetic classification and separately explicit SHA-approved CPU receipt added, isolated from customer originals.
+3. Test source: `hibi89/EAI@feature/kmong-eai-85-p31-20261112` code/test SHA `9e53920bd3df6cf8f0a89d3416905bf2045b9e9d`; [Actions #43200279491](https://github.com/hibi89/EAI/actions/runs/43200279491) Ubuntu Python3.11 **632 total / 631 PASS /0 FAIL /1 Windows-only SKIP**, compileall, CLI, unsigned ZIP builder/verifier PASS. Model tests mocked only.
+4. Product: 85% provisional unchanged, P95 NOT achieved; RELEASE HOLD. Active16 sum1379pp mean86.1875%, 95+ REA_Web only; other15 scores/denominator retained.
+5. Blockers: genuine locally installed Ollama/Qwen, actual Win10/11 buyer EXE/CMD/HTML, rights/PII/signing/customer sale approval unverified. Neither mocked model nor Ubuntu CI certifies them.
+6. Repo/branch/SHA: private `hibi89/EAI@feature/kmong-eai-85-p31-20261112` tested `9e53920bd3df6cf8f0a89d3416905bf2045b9e9d`, docs HEAD later; `scripts/accept_local_qwen.py`, `tests/test_local_qwen_acceptance_p36.py`, `docs/P36_LOCAL_QWEN_ACCEPTANCE_20261112.md`. Hub `hibi89/hackathon-command-center-2026@kmong-productization`.
+7. Runtime: Python3.11 localhost-only optional consent; no Vercel/Production; private synthetic ZIP artifact `13935096489`, SHA256 `6806459198a5214eae28cf95b7bc1000b275186a46d2df31e27b6875ace153b9` retained transiently.
+8. Originals/security: main/base, customer data, other repos untouched; original EAI code SHA `fe5b3d56ea79` permits rollback; no tokens/model weights, external API/paid workflows/licenses/permissions/deploy changed.
+9. Next: owner-approved real local Qwen run with `python -m scripts.accept_local_qwen --ack-local-model --approve-synthetic-run` and genuine Windows10/11 package CMD/HTML/Defender tests, then commercial privacy/rights/pilot. P95 ONLY after substantiated gates.
+10. Time: 2026-11-12 KST; exact tested SHA as above, docs SHA separately updated; verified mock tests and Linux CI only.
+
+---
+
 ## 2026-11-12 KST — Kmong EAI P35 ZIP security handoff (10 items)
 1. Goal/stack: advance EAI owner-free P85→P95 only with evidence, retain local Python3.11 CPU-owned source-only model.
 2. Delivered/choice: A unchanged allowlist+SHA permits hidden self-extractor-like prefix, trailing bytes and archive comment; B canonical ZIP full-byte rebuild chosen for deterministic bounded ZIP, preserving all existing goals and customer data.
