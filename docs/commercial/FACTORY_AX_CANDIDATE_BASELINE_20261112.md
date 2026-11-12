@@ -1,3 +1,5 @@
+> **2026-11-12 KST 최신 검증 — Factory AX VERIFY 첫 W1만 85% 잠정 엔지니어링 단계 달성:** [기능 기준 SHA b70a059](https://github.com/hibi89/factory-ax-ecosystem/commit/b70a059175389bf53d87f8c90dc4f5bbe6a97986), [최신 인수인계 SHA 0b754b4](https://github.com/hibi89/factory-ax-ecosystem/commit/0b754b4dd771d7c6863ab4d8de7fca7ca09160f4), [GitHub Actions #43178583600](https://github.com/hibi89/factory-ax-ecosystem/actions/runs/43178583600) **Linux+Windows 2/2 SUCCESS, 각 138 PASS / 0 FAIL / 0 SKIP**. Windows의 파일 핸들 fsync 오류 수정, Python3.11 .pyz/CMD 패키지, Tk GUI·PS5.1 한글 경로·보고서/백업/복원·SHA 무결성·기존 출력 덮어쓰기 거부 검증. **W1 VERIFY 85% 잠정 엔지니어링 후보**, 전체 Factory AX 생태계 최종완성률 미산정(W2–W4 미구현), 상용 출시 RELEASE HOLD. Python/Tk 별도 설치·서명 없는 내부 QA 후보이며 실제 사용자 Win10/11·격리망·원천 권리·고객 인수 미검증. 크몽 기존 활성 16종 완성률/평균/분모 불변. [검증 근거](https://github.com/hibi89/factory-ax-ecosystem/blob/feature/data-verify/docs/VERIFY_85_CI_ACCEPTANCE_20261112.md).
+
 > **2026-11-12 KST — Factory 자동 Linux CI 전환 검증 성공, Windows gate 미달:** [Factory feature workflow source SHA `067139c6b9`](https://github.com/hibi89/factory-ax-ecosystem/commit/067139c6b9b657b3f04fc622550081ec8f22d37c), [최신 인수인계 SHA `1fd78311010a`](https://github.com/hibi89/factory-ax-ecosystem/commit/1fd78311010a12dda61ef96efa9247b5699ab1b5). 기존 manual-only Factory와 달리 `feature/data-verify`의 소스 변경 `push` 시 Linux QA 자동 실행, 문서만 변경하면 미실행. GitHub [자동 run #43175793749](https://github.com/hibi89/factory-ax-ecosystem/actions/runs/43175793749) **SUCCESS**: Python3.11 Ubuntu 134/134 PASS, 패키지 무결성·4종 합성 보고서·백업·복원·Xvfb GUI PASS. Windows는 비용/예산 미확인으로 수동 전용 유지, 이전 Windows [run #43173438702](https://github.com/hibi89/factory-ax-ecosystem/actions/runs/43173438702) `test_backup.py` FAIL; 상세 진단 업데이트 후 **새 Windows 실행 0회**. 따라서 **VERIFY 82% 잠정 / 85 미달 / RELEASE HOLD**, 전체 Factory 생태계 미산정. 활성 크몽16종 점수·분모·평균 변경 없음. 비공개 Actions Linux도 포함량 초과 시 요금 발생 가능하므로 계정 예산 설정은 소유자 확인 필요.
 
 > **2026-11-12 KST — Factory VERIFY 첫 Windows CI 실제 실패, 82% 유지:** 사용자 수동 실행 [GitHub Actions #43173438702](https://github.com/hibi89/factory-ax-ecosystem/actions/runs/43173438702) (`workflow_dispatch`, 소스 `17142a9247c2b787a7881d23fa048470716b63b1`) 확인. **Linux SUCCESS** 134/134, 패키지·검수·백업·복원·가상 GUI PASS. **Windows FAILURE** `test_backup.py` 15개 발견, unittest exit1; 기존 CI가 stderr를 출력하지 않아 원인 단정 불가, 이후 패키지/실 Windows Tk 단계 SKIPPED. [Factory 새 디버그 계측 SHA `6cafc69d`](https://github.com/hibi89/factory-ax-ecosystem/commit/6cafc69d076acac457b6f1c344bca6dc7364f481)에서 실패 stdout/stderr 20k 문자 제한·ASCII 안전 출력 추가, fail-closed 종료 유지. Linux 15/15 backup + 합성 오류 진단 계측 테스트 PASS, 새 Windows 호스티드 실행은 **미실행**. 사용자가 예산 확인 뒤 **기능 최신 SHA를 대상으로 새 `Run workflow`** 실행 필요(과거 SHA의 `Re-run jobs`는 진단 보강 미적용). **VERIFY 82% 잠정 / 85% 미달 / Factory 전체 UNASSESSED / RELEASE HOLD**. 활성 크몽 16종 점수·평균·분모 불변. [실패 분석 문서](https://github.com/hibi89/factory-ax-ecosystem/blob/feature/data-verify/docs/VERIFY_82_HOSTED_WIN_FAIL_20261112.md).
@@ -35,9 +37,9 @@
 ## 완성률 정본
 | 평가 대상 | 2026-11-12 현재 | 목표와 이유 |
 |---|---|---|
-| **Factory AX VERIFY 최종 상품 완성률** | **82% 잠정 엔지니어링 (85 목표 미달)** | 기존 4단계 대사 유지, 수동 백업·복구, 신규 보고서/무결성 영수증, 로컬 Tkinter GUI 소스, .pyz/Windows CMD QA 후보. 실제 Windows·CI 미검증. |
-| **신규 Factory AX 기능 구현/실행 검증** | **GitHub QA 코드 + Linux 합성 117 PASS** | Python3.13.5 117 PASS/0 FAIL/0 SKIP, compileall, 독립 .pyz 합성 CLI·백업·변조 거부 PASS. Windows/호스티드 CI/실고객/라이선스 미검증. |
-| **첫 개발 목표** | **W1 82% 잠정 / 85% 미달** | Windows 실행 GUI·패키지, NTFS 보안·한글경로/복구·GitHub clean CI 및 사용 인수시험 필요. RELEASE HOLD. |
+| **Factory AX VERIFY 최종 상품 완성률** | **85% 잠정 엔지니어링(납품 후보)** | GitHub-hosted Windows+Linux clean CI 각 138 PASS; 업무 대사·Tk GUI·CMD·보고서 SHA·백업/복원·한글 경로 검증. 실사용 고객 PC와 상용 인수는 미검증. |
+| **신규 Factory AX 기능 구현/실행 검증** | **GitHub Actions 43178583600 Windows+Linux 각 138 PASS** | Python3.11 compileall/오프라인 .pyz·SHA manifest/복구/한글 PowerShell5.1/CMD BLOCKED=3·GUI PASS. 별도 Python3.11+Tk 필요, 서명·실제 Win10/11·권리 미검증. |
+| **첫 개발 목표** | **W1 85% 잠정 엔지니어링 단계 도달** | 다음 95%는 실제 Windows10/11 고객형 오프라인/NTFS/대용량/UX 검증, 100%는 고객 인수·계약·권리·출시 승인. RELEASE HOLD. |
 | **Factory AX Ecosystem 장기 최종 완성률** | **UNASSESSED (정식 미산정)** | W1→W4 완성, HAE·LA·보안 Guard·RAG·NAS/FILE·PC CARE·Code QA·Console 통합 및 고객 납품 검증이 최종 100% 범위. |
 | 출고 상태 | **RELEASE HOLD** | 제품 코드·납품 설치·고객 성과·보안·권리·상용 판매 미검증. |
 
@@ -51,7 +53,7 @@
 - 가격 가설 (아직 유료 고객/원가·수요 검증 전): BASIC 249,000원 / 구축형 STANDARD 990,000원 / PRO 290만~500만 원.
 
 ## 크몽 전체 장부 보호
-- 기존 활성 **16종의 상태/점수·합계·평균·분모는 그대로 유지**. 해총 최근 검증 기록 기준 16종 모두 **85% 이상 잠정 엔지니어링**, 합계 1369%p/평균 85.5625%.
+- Factory AX VERIFY는 크몽 활성 16종과 별도 후보로 기록한다. Factory 85%로 기존 활성 상품 16종의 점수·합계·평균·분모는 변경하지 않는다. 활성 수치는 해총 최신 장부에 따른다.
 - Factory AX는 아직 **1개 신규 별도 후보**. W2/3/4 모듈을 별도 3개 유료 상품으로 중복 추가하지 않음.
 - 기존 PREP/FFAX/BID AX/FlowPilot Universal/WORKNOVA Desk 및 다른 기술 후보와 분리. 중복 계산·다른 프로젝트 점수 대입 금지.
 - 현시점 해총 연동은 수동 문서 기록이며 Factory 원본과 자동 동기화되지 않음.
