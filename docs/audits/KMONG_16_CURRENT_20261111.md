@@ -1,3 +1,5 @@
+> **2026-11-12 FFAX 독립 개발 후보:** 기능 SHA `a76a962`, 문서 `142ac413`; 프로젝트 저장/복원/검사 Node105·Chromium30+9 PASS. 최종 기술점수 **78/100 잠정**, 목표85 미달, RELEASE HOLD. **기존 활성16종 표·합계·분모 무변경.** [개별 증거](https://github.com/hibi89/frontend-foundry-ax/blob/feature/ffax-workbench-p85-20261112/docs/FFAX_P85_LOCAL_PROJECT_RESTORE_20261112.md).
+
 > **2026-11-12 KST 최신 PREP Private 검증·크몽 완성률 재확인:** GitHub `hibi89/prep` 저장소가 **PRIVATE**로 전환된 사실을 직접 조회했다(사용자가 설정 변경). 기존 Public 보안 차단은 해소됐지만, **SMAX 비공개 원본 이관·코드 GitHub 반영·골든 동등성·실 Windows 검증은 아직 진행되지 않았다.** PREP의 **정식 최종상품 완성률 미산정(UNASSESSED)**, **독립 GitHub 실행코드 검증률 0%**, **50% 목표 미달** 유지. 로컬 후보 Node22 `npm test` **71/71 PASS × 원본/ZIP 재실행**은 별도 증거. PREP `main/develop/feature/core-extraction` 문서 HEAD `15e21dbe1ccac516dff93967c538b7645e756a3f`. 기존 크몽 활성16종의 최종완성률·합계·평균·분모는 **변경하지 않음**; PREP는 별도 후보. 과거 PREP 'PUBLIC' 표기는 변경 이전 이력이며 최신 사실이 아님. [PREP 최신 감사](docs/audits/PREP_INDEPENDENT_PRODUCT_BASELINE_20261112.md). **RELEASE HOLD.**
 
 ## 2026-11-12 FFAX 독립후보 P85 재시도: 78/100점 유지

@@ -1,3 +1,15 @@
+## 2026-11-12 KST — FFAX fourth-pass Kmong handoff (10 items)
+1. Goal: FFAX local-first frontend workbench, complete original 100-point v1 requirements; candidate outside active16.
+2. Changes/strategy: Strict local JSON archive import with owner confirmation and Undo instead of arbitrary script/JSON execution; existing other projects untouched.
+3. Tests: Node105 PASS/0 FAIL, Chromium injected UI30 PASS, project restore Chromium9 PASS, manual model UI10 PASS, D1–D5 local5 PASS; exact six GitHub file Blob SHA matched local tested code.
+4. Status: **78/100 provisional**, 85 target missed, AC04(14)/AC09(6)/AC12(2) pending; RELEASE HOLD; active16 unchanged.
+5. Failure/recovery: formal axe dependency unavailable, no fake axe success. First async browser test expected immediate update/wrong phrase, test assertions corrected and rechecked9/9. No CI cost charged/triggered.
+6. Repo/branch/SHA: `hibi89/frontend-foundry-ax@feature/ffax-workbench-p85-20261112` code `a76a962037b41d474699845378c2656e439f66f1`, docs `142ac41386c7fd125b4bb8810296b2ee683eef79`; hub `kmong-productization` final SHA to verify after commit.
+7. Production/Vercel: no deployment/URL; Node22 local only; direct Chromium localhost navigation blocked; synthetic-injection browser scoped success.
+8. Originals/security: private main and 16 products preserved; no tokens, customer data, external calls, paid CI, source overwrite, permission change. Revert previous Git commits normally if necessary.
+9. Next: actual model provider approval and 12 prompt build (AC04), formal axe + owner current-screen acceptance (AC09), authorized clean CI (AC12); no score uplift until fully evidenced.
+10. Updated 2026-11-12 KST, validated code exact blobs6/6 and locally run tests; released state HOLD, documents do not claim production.
+
 ## 2026-11-12 KST — Factory AX 신규 크몽 육성 후보 등록 / 10항 인수인계
 1. **목표·제품:** Factory AX는 제조업/보수적 기업에 공급자가 설정·설치·검수해 납품하는 온프레미스 AX 제품군. 최초 W1 VERIFY(발주·생산·검사·출하), 이후 KNOWLEDGE/FILE, HAE+LA, Security Guard/SOVIA, PC CARE·Code Checker/콘솔 확장.
 2. **완료·결정:** Private `hibi89/factory-ax-ecosystem` `main@29b9653ccbc4bcd36a190f9e9d78954bcc4dae76`에서 29개 기준 문서·10개 브랜치 설계 확인. 기존 SMAX²와 독립, PREP 데이터 계약 재사용 후보. 중앙 해총에 별도 상품화 후보 등록하고 활성16종 변경하지 않음.

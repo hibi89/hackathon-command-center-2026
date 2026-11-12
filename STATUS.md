@@ -1,3 +1,7 @@
+## 2026-11-12 KST — FFAX P85 fourth pass: local project resume verified; score 78 retained
+- FFAX private [code a76a962](https://github.com/hibi89/frontend-foundry-ax/commit/a76a962037b41d474699845378c2656e439f66f1), docs HEAD `142ac41386c7fd125b4bb8810296b2ee683eef79`, branch `feature/ffax-workbench-p85-20261112`. Local project JSON save/reopen, allowlisted schemas/reference colors, explicit confirmation, Undo and fail-closed import. Node 105/105, Chromium UI30/30 + project restore9/9 + manual AI10/10, D1–D5 local5/5. Git Blob parity6/6. Actual model, formal axe/owner UX, CI, native Windows, Production not verified; **78/100 provisional retained / target85 unmet / RELEASE HOLD**.
+- **Candidate only, not existing active 16.** No change to other product scores, totals, permissions or deployments. [Evidence](https://github.com/hibi89/frontend-foundry-ax/blob/feature/ffax-workbench-p85-20261112/docs/FFAX_P85_LOCAL_PROJECT_RESTORE_20261112.md).
+
 ## 2026-11-12 KST — Factory AX Ecosystem 신규 상품화 후보·진척률 등록
 - 새 Private `hibi89/factory-ax-ecosystem@main:29b9653ccbc4bcd36a190f9e9d78954bcc4dae76` 설계 문서 29개/브랜치 10개 검증. 제조업 납품형 표준 제품이며 기존 SMAX² SELF와 별개.
 - **VERIFY 최종상품률 UNASSESSED**, Factory 신규 기능/실행 검증 **0건**, VERIFY **50% 목표 미달**. HAE/LA·보안·PC CARE·Code QA를 포함한 생태계 장기 최종완성률 역시 **UNASSESSED**. 문서 작성/타 제품 85%가 Factory 개발 진척은 아님. RELEASE HOLD.
