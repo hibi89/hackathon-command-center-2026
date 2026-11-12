@@ -1,3 +1,17 @@
+## 2026-11-12 KST — Kmong SOVIA P39 90% milestone (10-point handoff)
+1. Goal/tech: independently advance SOVIA synthetic retrospective audit local Python3.11+ towards 95 while protecting private LA/HAE rights and customer originals.
+2. Completed/choice: A repack existing v0.13 rejected for version integrity, B distinct 0.14 deterministic 18-file candidate SHA verifier, Windows CMD synthetic two-report comparison and repeat/alter refusal selected.
+3. Tests: SOVIA exact source+tests `3470020b974e09ca864d030bca3fa580216aa91b`, [CI #43205824976](https://github.com/hibi89/SOVIA_sovereign/actions/runs/43205824976) Windows/Ubuntu ×3.11/3.13 **4/4 SUCCESS**, each928/0FAIL, Windows917PASS/11SKIP, Ubuntu905PASS/23SKIP; native Windows CMD test verified.
+4. State: provisional engineering **90%** (prior87 +3 weighted scope), not 95; RELEASE HOLD. Active16 latest derived 1384pp mean86.5%, REA_Web only >=95; no other-product rate changed.
+5. Blockers/failures: actual owner authenticated first-party LA receipt/consent, physical Win10/11 SmartScreen, genuine customer acceptance/privacy/licensing/pilot/release not run. GitHub generated candidate in temporary test folder; chat source ZIP retrieval attempt failed URL viewing gate twice, no lasting chat ZIP; stop same method.
+6. Repo/branch/SHA: public `hibi89/SOVIA_sovereign@feature/kmong-la-review-p2-20261112`, verified source `3470020b974e09ca864d030bca3fa580216aa91b`, P39 docs and product HANDOFF/STATUS HEAD later. Files `verify_portable_la_delta.py`, `build_portable_la_delta.py`, `RUN_LA_DELTA.cmd`, `portable_smoke_la_delta.py`, `tests/test_portable_la_delta.py`, synthetic gap example, 0.14 README. Hub `hibi89/hackathon-command-center-2026@kmong-productization`.
+7. Production/env: offline Python3.11+ new-only unsigned build in source checkout, no Production/Vercel; build command `python -I -B build_portable_la_delta.py --output dist/SOVIA-LA-Delta-0.14.0-beta.zip`, existing folder and unique filename needed. Persistent GitHub artifact currently absent.
+8. Source/backup/security: old 0.13/0.12/0.11.2/0.10 preserved, develop/main unmerged, prior P38 SHA `cb41fcf85bd8f2b9cc9aeb430184ed2a5056ffa5` rollback, no customer data/private LA source/token, permissions/billing/automatic sale changes.
+9. Next: owner-approved genuine versioned LA receipt contract and sanitized authorized local integration, then actual customer Windows/Defender/report/PII/license/retention/support/pilot, then explicit release. Avoid more synthetic scoring inflation.
+10. Updated KST 2026-11-12, four-job exact CI source SHA proved, documents newer separate SHAs. [Detailed P39](https://github.com/hibi89/SOVIA_sovereign/blob/feature/kmong-la-review-p2-20261112/docs/SOVIA_LA_DELTA_P39_PORTABLE_20261112.md).
+
+---
+
 ## 2026-11-12 KST — SOVIA P38 cross-audit delta handoff (10 points)
 1. Goal/technology: advance public SOVIA offline retrospective audit owner independently to P95 where possible; preserve private LA/HAE, using Python3.11+ synthetic local reports only.
 2. Delivered/choice: A raw report/plan comparisons rejected for data exposure/unverified integrity; B byte-checked two review bundles with severity-only aggregate delta CLI + 7 tests implemented.
