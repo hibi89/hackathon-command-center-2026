@@ -1,3 +1,15 @@
+## 2026-11-12 KST — Kmong RAG P90 provisional engineering / P95 pending (10-point handoff)
+1. Goal: RAG Studio AX Edition P85→P95 using local Node22 CSV/TXT cited review and buyer-oriented offline ZIP, without customer/SMAX secret source.
+2. Done/design: P5.54/55 no-delete + local file integrity (+1p), P5.56 cross-report contradictions (+2p), P5.57 strict preverified deterministic 11-file ZIP/owner CLI and extracted verifier (+2p). Selected allowlisted unsigned review-only package over copying full source folder.
+3. Test evidence: exact blobs verify abe72a31e6e11a8dbe143750e5a770acc4028212, zip2054f2e49dfe25deb7db8a68212756e95324e264, CLI fe9070f624666265dfd102b3383ac4e1d1ca8fe4, tests 3981f61aac83e70ba677ff398039b56d010d0e9c and b77b05581f7f654be61c7fa3afb0b183e9abdb88; Linux Node22.16 **17 PASS/0 FAIL/SKIP** incl real OS unzip and independently reverified extraction. Original P553 integration registered but NOT RUN. GitHub Actions 0 JOBS FAILURE, full original tests unverified.
+4. Status: 90% engineering provisional weighted, target95 not met, RELEASE HOLD. Other15 rate unchanged, 16 total 1405pp/87.8125% based on last collector and Code Checker verified hub updates.
+5. Errors/pivot: container GitHub DNS unavailable; connected GitHub exact source copied with Git Blob parity for scoped execution. Actions 0 jobs before test start; do not rerun blindly or claim tests failed/passed. No vendor rights/Windows desktop proof yet.
+6. Source/branch/SHA: hibi89/RAG_STUDIO@feature/p546-rag-prep-mapping HEAD bda25da772886764e733d49f2fdc946767646e7a; docs/P556_P557_REVIEW_ZIP_INTEGRITY_20261112.md; hub hibi89/hackathon-command-center-2026@kmong-productization; this hub SHA verified after commit.
+7. Production: N/A localhost/offline-only, no Vercel deploy; Node22 Linux scoped, Windows/native browser unverified.
+8. Original/backup/security: prior RAG feature P85 checkpoint preserved by Git history, no force push, original CSV/TXT/private SMAX/credentials/customer rights changed, no paid CI or external data transfer.
+9. Next: original full npm suite+P553 actual producer, GitHub Actions zero-job cause resolution without billing/permission changes, physical Windows10/11 browser and portable ZIP, permissioned 3 vertical SMAX consumer E2E, legal rights and owner release GO. Keep product [작업중] until confirmed P95 per owner.
+10. Updated 2026-11-12 KST, evidence scope scoped exact blob + tests + GitHub CI metadata, not a full release or verified P95.
+
 ## 2026-11-12 KST — Code Checker stage95 verified/synchronized (10-point handoff)
 1. Product goal/stack: offline Windows Python3.11+/AST/Tk/PyInstaller, customer portable product; target 95% internal engineering.
 2. Changes: P3-06 run real native EXE from synthetic private ZIP extraction in Korean/space folder with system PATH excluding Python; self/gui/scenario smoke, EXE SHA cross-check; previous safe output error HOLD preserved.
