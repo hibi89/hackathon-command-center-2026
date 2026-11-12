@@ -1,3 +1,8 @@
+## 2026-11-13 KST — KUODRA P95 개발 중단 · 사용자 개입 필요
+- 사용자가 **개입 없이 95% 불가하면 중단**을 지시함. 완료율 **89/100 잠정**, 목표 P95 **미달**, `[작업중]`을 해제하고 `[사용자 개입 필요 · P95 중단]`으로 변경. `RELEASE HOLD / SALE NO-GO`, 추가 자동 개발·출시·배포 없음.
+- 최신 KUODRA PR #7 `develop` 병합 `733104a08fb99f4baf5bf4be520b0f7d88729f56`; 기능 SHA `49d78a013ad51495d8facc0d82e3c2103a2ae99d`, [CI #43302772793](https://github.com/hibi89/KUODRA/actions/runs/43302772793) Ubuntu/Windows 각각 282/282 PASS, Windows Tk GUI 스크롤 및 unsigned ZIP 검증. 별도의 병합 후 SHA CI는 미검증.
+- 차단: 본인 인증을 이용한 실제 SEC·DART 공시/이용권 검증, 소비자 Windows10/11 실 GUI/설치/제거·안티바이러스·한글 출력, 종속 배포 라이선스·금융법무·환불/판매 GO. 계정 키/실데이터를 채팅·GitHub에 올리지 말 것. KUODRA 외 다른 상품 완성률/상태는 미변경. 재개는 사용자 명시 지시 필요.
+
 ## [2026-11-13 KST] 크몽 등록완료 목록 영구 이력 정책 반영
 - 기존 19개 상품 행을 유지하고 모든 판매 서비스 고유 ID `KMONG-SVC-01..19`, `listing_status=미등록`, 크몽 URL/등록일 `null`, `listing_history=[]`로 초기화. 실증된 등록 완료 시만 `등록완료`로 변경하며 게시물 URL·날짜·증거/변경 이력을 보존한다. 등록 후에도 목록 삭제 금지; 중단/비공개/게시삭제된 서비스도 과거 등록기록 보존.
 - [19개 정본](docs/strategy/KMONG_29_TO_19_SERVICE_CATALOG_20261113.md) / [JSON 원장](data/kmong_service_catalog_20261113.json). 신규 등록·서비스 조합 전 이미 등록한 항목과 원천29개·9개 접힌 모듈까지 중복 검토. **실제 크몽 등록0 확인 근거가 아니라 게시 증거0이므로 현재 모두 미등록 기록**; 실제 판매자 계정 전수조회 미수행. 문서/JSON 정적검증만, 제품/CI/Production·완성률/마커 변화 없음.
