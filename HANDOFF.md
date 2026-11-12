@@ -1,3 +1,15 @@
+## [LATEST 2026-11-12 KST] 크몽 원래 REA_Web P50 목표 달성·작업중 해제 인수인계 10항
+1. **목표/용도/기술:** 사용자가 원래 REA_Web 웹사이트 분석·재구축 50% 달성 지시. 사이트 관찰→Fable5.1→Astra P4 증거·명세 검토→인간 승인→독립 FastAPI/SQLite 웹앱; DATA2WEB은 CSV/XLSX 별도 독립 제품.
+2. **완료/판단 근거:** 원래 `REA_Web@feature/website-analysis-rebuild`에서 새 `rea/website_rebuild.py`/tests/CI: 허가된 synthetic local HTML Fable 실제 정적 GET 1회→Astra 추정 전용 draft(행동은 REVIEW_REQUIRED)→사용자 별도 승인 CSV3행으로 원래 Pro 생성. 원본 참고 HTML 복제 없이 별도 신규 웹앱 API, review는 서버로 노출 안 함.
+3. **명령·시험:** exact code/workflow SHA `fb67616df6a5e7eb7ea14c1315a58dd689d2534d`, `python -m pytest -q tests/test_website_rebuild_p50.py tests/test_orchestrator.py`; [Actions #43242189801](https://github.com/hibi89/REA_Web/actions/runs/43242189801) Windows2025 31PASS/0FAIL/1WARN, Ubuntu24.04 31PASS/0FAIL/1WARN, 2/2 SUCCESS.
+4. **상태:** 최종설계 첫 P50 합성 E2E gate 검증 완료, **엔지니어링 50% 잠정**, 현 사용자 목표 달성으로 REA_Web 중앙 [작업중] 제거. 외부 실URL 사이트 UI/행동·실고객·물리 Win10/11·라이선스·상업 승인 미검증, RELEASE HOLD, Production N/A.
+5. **오류/재시도/피벗:** 최초 workflow-only run 테스트 파일 없는 CI 실패, 다음 정확 코드 #43241893298 Windows 기존 CLI Astra import 1FAIL/30PASS(잘못된 ':' PYTHONPATH), 공통 단일 Astra 경로 설정으로 최소 수정; 최종 SHA fb67616 양OS PASS. 실패를 기능통합 실패라고 과장/숨기지 않음.
+6. **repo/branch/SHA/path:** `hibi89/REA_Web@feature/website-analysis-rebuild`, 원본 Pro `feature/d27-windows-python-discovery@97b6e5`, Fable `7e6f273b`, Astra P4 `f044b66e`, 코드 `rea/website_rebuild.py`, QA `tests/test_website_rebuild_p50.py`, 증거 `docs/WEBSITE_P50_SYNTHETIC_ACCEPTANCE_20261112.md`. Hub `hibi89/hackathon-command-center-2026@kmong-productization` 중앙 표, 최신 HEAD GitHub readback 기준.
+7. **환경/Production:** Python3.11+, pytest/httpx/FastAPI/pydantic/requests/bs4; 실제 Fable pinned source checkout, Astra PYTHONPATH, hosted Win2025+Ubuntu24.04. Vercel/Production 미적용, 고객 UI 실브라우저 E2E 미실행.
+8. **원본/백업/보안:** main/Pro/Fable/Astra/Lite/Data2web 원본 브랜치·테스트·PR 보존, Git SHA 복구. 사용자 원본/민감 데이터/토큰 전송 없음, 로컬 synthetic fixture GET만 허용; 기존 고객 파일·배포·권한 변경 금지.
+9. **다음 작업/완료/승인:** 후속 P70은 합법적 허가 범위 내 복수 fixture 실제 Playwright 브라우저 UI 상호작용·before/after 관찰→Astra claim source/승인 workbench→실제 새 앱 UI·동작 매핑·검증, 50% 합성 정적 한계 해소. 외부 실사이트/실사용 데이터·유료 AI·라이선스/배포/고객 판매 GO는 사용자 승인 별도. 사용자 새 목표 전 [작업중] 임의 재지정 금지.
+10. **갱신/검증범위:** 2026-11-12 KST, GitHub exact CI run #43242189801 성공과 원격 중앙 행 검증, 추가 문서 커밋은 코드 테스트 SHA와 구별. 50% 주관적 milestone이지 전체 코드 50% 커버리지 주장 아님.
+
 ## 2026-11-12 KST — CUBE P95 certified engineering milestone (10-point handoff)
 1. Objective/stack: AXMART³ CUBE productization 85→95 scope using Node22/18+ static storefront, source-based publish safety, offline owner HOLD. Real commerce/public launch not approved.
 2. Delivered: exact catalog and generator-to-dist byte checks, manifest allowlisting, no-delete output failure safety, safe TAP test invoker, branch-only read-only GitHub Actions, real Chrome JS rendering and Windows CI; weighted score engineering P95.
