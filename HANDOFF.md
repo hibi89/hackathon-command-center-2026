@@ -1,3 +1,15 @@
+## 2026-11-13 KST — KUODRA P95 재개 부분완료, 10항
+1. 목표·확정 기술: 독립 KUODRA 로컬 Windows 한국 OpenDART+미국 SEC 재무근거 A/B/C·조건부 ML/Guard 검증. P95 사용자 목표는 열린 상태, 정본 REQUIREMENTS 100점.
+2. 완료·판단: PR#6 DART 공식 필드 부재(`fs_div/thstrm_dt`) 호환 수정, 결산일 사용자 출처 대조, 합법 로컬 DART JSON GUI/CLI, 한국어 인쇄 HTML(폰트 번들 없음), Windows 미서명 ZIP 안전 설치/검증/동의 제거. API 키 없는 공개 문서 기반 해석, 로컬 BYOK 방식 유지.
+3. 테스트: 기능 merge `8b8801991870f1a98117b68bd23ed2e99c77cacb` / source feature `8e5e454c6b84b92f5e2aaecefbc7d1eb3ca210a7`, CI #43298114834 Ubuntu·Windows 각 **275PASS/0FAIL**, Windows 1125파일 SHA·한글경로 EXE·임시 설치/제거·원본 보존 PASS. 실 공시/고객 PC/법률/배포는 불검증; develop docs 후속 CI 별도 확인.
+4. 상태·중단: 내부 범위 89/100 잠정(종전 87), P95 미달 6%p. 중앙 [작업중] 표시 유지, RELEASE HOLD/SALE NO-GO, Production/상용 제품 main 코드 미적용.
+5. 오류·원인·실패 반복/대안: 옛 코어가 공식 DART 반환하지 않는 필드를 필수로 보던 실제 연동 결함 수정. 최초 CI #43295893938 1FAIL은 구 오류 코드 변경으로 검출, 기존 `DART_FISCAL_PERIOD_MISSING` 복원 후 #43296095109 257PASS, 최종 #43298114834 275PASS. 실제 라이선스·키 없으면 고객 적법 로컬자료+HOLD; 우회 금지.
+6. 저장소·브랜치·SHA: 제품 `hibi89/KUODRA@develop` SHA 위, PR#6, main 문서; 허브 `hibi89/hackathon-command-center-2026@kmong-productization`, 대상 `docs/audits/KMONG_16_CURRENT_20261111.md`. 원본 KIC lead/kic 불변.
+7. Production·실행·환경: 배포 N/A; Python3.11 unittest, Actions Windows PyInstaller unsigned onedir ZIP, 실 구매자 Windows10/11 아님. Windows staging `python -m kuodra.portable_lifecycle`, 사용자 실제 API 명령은 제품 한국어 owner checklist 참고.
+8. 원본·백업·인증: KIC 제출물/소스 불변, 이전 제품 SHA `213e11ed5221b1d3ac668a157cac9341dfa2b652` 복구 기준. 키·실고객 개인자료·원본 서술/시세 데이터 GitHub에 미저장, 시스템 폰트 미번들. 실제 사용자 외부 데이터 전송 없음.
+9. 다음 우선순위·승인: 합법 실 SEC CIK XBRL 및 실 DART corp_code/year/독립 확인 회계 종료일 E2E; 고객 Windows10/11 GUI·백신·한글 인쇄 PDF·서명 설치/업데이트·한글 글꼴/상용 전제, OSS NOTICE·OS no-egress·금융법·환불·고객·판매자 GO. 고객 개인 인증은 사용자 로컬 마지막 단계에만.
+10. 확인 일시/증거: 2026-11-13 KST, 최신 제품 기능 PR#6 SHA 및 CI #43298114834 확인, 문서 및 중앙표 GitHub 반영. **89는 내부 개발 추정이고 95 아님**, 실 원본/판매/Production 미검증.
+
 ## [2026-11-13 KST] 크몽 29종 **가정95%** 상품화 우선순위·Sol Ultra 설계 잠금 인수인계 — 10항
 1. **목표/최종요구/기술:** 사용자 확정 작업 방식(해총 원본 설계 정본·코딩/통합/검수, Sol Ultra는 전수 누락감사·UI/UX 품질 강화·독립 보안/회귀감사)과 전체 29종 모두 기술95% *가정* 시 1~29위 판매 전환순 정본 작성. 실제 P95 달성 기록 아님.
 2. **완료·결정:** 17 활성+12 후보 중복 없이 순위표 신설 `docs/strategy/KMONG_P95_HYPOTHETICAL_COMMERCIALIZATION_PRIORITY_20261113.md`; SOP `docs/strategy/KMONG_BLUEPRINT_LOCKED_SOL_ULTRA_QA_20261113.md`. 기존 P50→P70→P85→P95→P100 단계와 제품별 최종설계 동결. 전체 재작성 대신 누락 확인→최소 수정→UX PR→정확SHA 테스트.
