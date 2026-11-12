@@ -1,3 +1,5 @@
+> **2026-11-12 KST 최신 재정합:** AXMART³ CUBE 70→85% 잠정 엔지니어링(신규 소유자 안전 검수 도구, 26 scoped Native PASS)로 활성16종 합계 **1,354%p**, 평균 **84.625%**, 85이상 **15종**, 미만 **1종(AXMART PC CARE 70%)**. PC CARE는 다른 채팅 개발 중, 최신 완료 주장 아님. FFAX는 별도 후보. 판매 전 16종 RELEASE HOLD. 기존 11/11 감사 행은 역사적 기준, 이 표의 현재 행만 최신 상태로 보정.
+
 > **2026-11-12 KST 최신 보정:** 코인 패턴 분석기 70→85% 잠정 엔지니어링은 11/11 당시 역사 감사 후의 신규 결과다. 활성 16종 합계 1,339%p, 평균 83.6875%, 85% 이상 14종, 미만 2종. FFAX 별도·LA85 반영. 실서비스 출시/CI/실 Windows/고객 데이터 검증과 별개이며 전 제품 RELEASE HOLD.
 
 > **2026-11-12 KST 현재 재정합:** REA_APP 독립 고객용 오프라인 검수 구현/로컬 테스트 근거로 중앙 행을 70→**85% 잠정** 반영. 16종 합계 **1,309%p**, 평균 **81.8125%**, 85이상 **12종**, 미만 **4종**. 모든 점수는 완성범위 추정이며 **판매/배포 HOLD**. 과거 감사 기록은 11/11 당시 상태라 그 기간의 수치는 역사값. FFAX 별도 후보, LA 진행중.
@@ -70,7 +72,7 @@
 | 코인 패턴 분석기 | **85% (잠정 엔지니어링)** | `hibi89/candle_scraper@feature/coin-pattern-p85-forward-eval-20261112` (`17ddfba71d32`) | Existing P1–P6 frozen; added source-independent offline next-bar event study with double-sided costs, EOF/gap censor, rule/market+pre/post summaries, new HTML/CSV/JSON/hash manifest. Exact local+GitHub source/test 2 blobs match; 25/25 synthetic PASS, 100k/201 synthetic 0.41 sec, input DB SHA unchanged. No Windows/legacy full/reality 3.6GB/EXE/licensing, RELEASE HOLD. |
 | EAI | **70%** | `hibi89/EAI@feature/local-first-mvp` (`379d0c7a77e9`) | P23~P30, 코드 8cdad74a Ubuntu 582 PASS; 진짜 Qwen/Windows/실고객 미검증 |
 | AXMART PC CARE | **70%** | hibi89/AX_MART@feature/pc-care-offline-casepack-20261111 (9c25ec379899; 기능 163fd38be68c) | 오프라인 상담 UI·내부ZIP 등록, Node11 PASS·Chromium 합성 UI; 실제 Windows/USB/WinRE/QR·PDF·복구 미검증, 출시 HOLD |
-| AXMART³ CUBE | **70%** | `hibi89/AX_MART@feature/cube-commerce-core` (`061addb6e19c`) | P4 로컬 지원 메타데이터·P5 거래 HOLD 영수증·P6 ZIP 내부 CRC·P7 무JS FAQ·P8 SHA 고정 CLI/빌드 통합. Node22 Linux 신규 정확 소스 26/26 PASS; 전체 npm test/build·실 브라우저/Windows/고객/Cloudflare 미검증, 회원/결제/다운로드 미구현 · RELEASE HOLD |
+| AXMART³ CUBE | **85% (잠정 엔지니어링)** | `hibi89/AX_MART@feature/cube-owner-preflight-p85-20261112` (`04d2be272d3b`) | P1–P8 기존 70% 유지 기반 별도 로컬 소유자 출시 사전검수, source→dist catalog/projection/홈페이지/Cloudflare header SHA 일치, CSP/결제·다운로드/가짜 판매 fail-close, Korean HTML/JSON/manifest SHA + 재검증. Linux Node22.16 정확 코드/CLI/QA Git Blob 3/3 일치, scoped 신규26 PASS. 원본 전체 npm test/build, 실 Windows/브라우저/Cloudflare·고객/실결제·권리 전부 미검증; RELEASE HOLD. |
 
 
 ## 2026-11-11 HAE P7/P8 85% 엔지니어링 잠정·출시 HOLD
