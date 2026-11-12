@@ -1,3 +1,15 @@
+## 2026-11-12 KST — DBVORA P4-02 / 85→95 목표 미달 (중앙 인수인계 10항)
+1. **목표/스택:** DBVORA 로컬 Python3.11+ SQLite/ZIP/ZSTD/PG 메타데이터 독립 상품, 현재 85% 잠정에서 95 목표; 외부 고객 DB·API 실행 금지.
+2. **완료/설계:** 추출 ZIP 미등록 bytecode/native executable sidecar 차단, Python `-S -B` 검증 런처, 실제 full ZIP 통합 회귀 코드 2종과 단위 회귀 추가. A 기존 SHA-only 대 B 유한 O(N) 감시 비교 후 B 선택.
+3. **테스트:** Linux Python3.13.5 **재구성 규칙 8 PASS/0 FAIL**, GitHub 변경 blob 원격 재확인. 완전한 original repo >=553 Python/Node/ZIP end-to-end, Windows/PG, 고객 검증 **NOT RUN**.
+4. **상태:** 85% 잠정 유지 / 목표 P95 **미달** / 중앙 `[작업중]` 유지 / RELEASE HOLD. 다른 15개 상품·분모·평균 불변.
+5. **장애/대안:** private git DNS 불가, 기존 CI workflow 부재, 무단 과금 CI 추가 불가. 전체 repo 실험 대신 원격 기능 반영+격리 재구성 규칙 테스트. 완전한 테스트·Windows 실사용 후 목표 재평가.
+6. **정본/경로:** 제품 `hibi89/DBVORA@feature/p0-db-map`, code SHA `94e1b5ddeb36b9610b8106300fd38d5da07ba795`, product docs SHA `049efc89cf5204231164cf22734bd1fb29150174`; hub `hibi89/hackathon-command-center-2026@kmong-productization`, `docs/audits/KMONG_16_CURRENT_20261111.md`.
+7. **실행/배포:** `python -m scripts.verify_release_gate` full suite, `python -m scripts.build_portable` real ZIP+subprocess. Vercel/Production N/A, 배포 없음.
+8. **원본/백업/보안:** feature Git 이력 복원 가능, main/develop 고객 원본 데이터·ZIP·비밀/외부 전송 불변. unsigned manifest는 publisher identity 아님.
+9. **다음:** full original tests/real ZIP, Windows Python3.11 NTFS/Edge, 승인된 PG TLS, 라이선스 및 판매권 확인. P95 증거 전 표식 해제 금지.
+10. **시간/범위:** 2026-11-12 KST, GitHub 원격 코드와 재구성 규칙만 증거. 중앙 HEAD는 최종 조회, user-facing completion 아직 85%.
+
 ## 2026-11-12 KST — Kmong Astra P79–P81 central handoff (10 required fields)
 1. Goal/tech: ASTRA PDF Redesigner 95%, offline React/TS/Electron/PDF.js. One-product scope, keep hub marker until verified target.
 2. Completed/decisions: P79 cancel stale input analysis with AbortController/PDF.js, P80 preserve numeric sign, P81 safe append after size guard, chosen over UI-only busy reset, digit-only matching and RangeError catch.
