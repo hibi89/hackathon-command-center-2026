@@ -1,3 +1,15 @@
+## 2026-11-13 KST — DBVORA P95 내부 목표 달성 / 판매 RELEASE HOLD, 크몽 인수인계 10항
+1. **목표·용도·기술:** `hibi89/DBVORA@feature/p0-db-map`, SQLite/PG local read-only topology/stats/manual optimization, ZIP/ZSTD archive; 사용자 개발 목표95% 달성.
+2. **완료/결정:** A 사설 전체 clone DNS 차단 시 유료 CI/새 환경 vs B GitHub connector에서 실제 필요한 11 원본 파일 취득·바이트 SHA 증명 후 Python/Node에서 본래 생산 코드 및 테스트 실행, B. 테이블→추정 통계→FK→manual review→CSP HTML→새 파일 퍼블리시 검증.
+3. **테스트:** 원격 GitHub `git blob` SHA 일치 11파일, Linux Python3.13.5 **6/6 실제 합성 생산모듈 E2E PASS exit0**, 정본 unittest **11 PASS/0 FAIL/0 SKIP** (6 PG 합성 실패닫기 포함/5 UI JavaScript/metadata), quiet repeat11 PASS, Node v22.16.0 check. **전체 private 원본 553+ Python+Node, Windows/NTFS·실 PG TLS, 출고 ZIP·고객 QA/서명 NOT RUN**.
+4. **상태:** 기술가중 P0 25/25+P1 13/15+P2 20/20+P3 19/20+P4 18/20=**95/100 개발 목표 달성**. 중앙 DBVORA `[작업중]` 목표 완료로 해제, 판매 RELEASE HOLD 및 P100 대기. 타 담당자 마커·집계 불변.
+5. **오류/진전/재시도 금지:** container DNS로 전체 clone 불가; 실패 재시도 반복 대신 GitHub blob 원본 재구성 11개와 실제 테스트로 핵심 P1 경계 달성. 비용 없는 isolated runner, 전체 repo QA 아직 미해결.
+6. **저장소·브랜치·SHA:** 제품 `hibi89/DBVORA@feature/p0-db-map`, 기능 상태 `c80de7fc570c1b8fd182955ca91dcacf95e3cc22`, P95 증빙 doc commit `08e3fcd83bf76cf306cd1c5565440b74670b6a66`, 상세 `docs/P1_11_P95_EXACT_SOURCE_ACCEPTANCE_20261113.md`. 중앙 `hibi89/hackathon-command-center-2026@kmong-productization`, 로스터 `docs/audits/KMONG_16_CURRENT_20261111.md`; 최신 HEAD 읽기 확인 후 보고.
+7. **Production/실행·환경:** `python -m scripts.pg_synthetic_acceptance`, `python -W error::ResourceWarning -m unittest -v tests.test_pg_synthetic_acceptance tests.test_pg_html_script`, Python3.13.5 Linux, Node22.16.0, NO real PG or network. Vercel/Production N/A.
+8. **원본·백업·인증·보안:** 원본 raw/customer DB/Zip, main/develop, secrets/.env, 권한/유료CI/Production 변경 없음; 기능 branch Git history rollback 가능; P95 합성 테스트는 판매/실 PG 접속 승인 아님.
+9. **다음 우선순위·완료조건·승인사항:** 판매/최종 P100 위한 전체 authorized checkout `python -m scripts.verify_release_gate` (553+ Python/Node/real ZIP), 실 합성 PG TLS verify-full/read-only, Windows3.11 NTFS/Edge offline app/데이터·권리·고객 QA. 실계정/민감 데이터/배포는 사용자 사전 승인.
+10. **갱신 KST·범위·기준 커밋:** 2026-11-13 KST, 원본 Git blob11+6 PG E2E+11 unittest 실제 PASS, 전체 repo/Windows/실 PG 미검증. 제품 SHA 최신 및 허브 HEAD는 최종 readback 기준.
+
 ## [LATEST 2026-11-13 KST] 원래 REA_Web P85 목표 검증·중앙 최신화 인수인계 10항
 1. 목표·요구·기술: 원래 REA_Web = 허가된 사이트 관찰/Fable5.1→Astra evidence/functional spec→human approval→독립 Pro FastAPI/SQLite 앱. DATA2WEB 표형 파일·Excel 상품과 분리. 사용자 새 P85 지시의 합성 정본 게이트 진행.
 2. 완료 기능·근거: REA_Web `rea/website_p85.py` + `tests/test_website_p85.py`; 합성 사이트 catalog/inventory/directory 각각 desktop/mobile 실 Chromium 3연속 UI 조작, Astra observed 명세·PNG SHA·review digest, 소유자 승인 합성 CSV로 Pro 생성, 실 웹앱 3단계 기능 parity와 Pillow 이미지 RGB 차이 및 DOM 계수 보고. 전 사이트 UI 복제 주장 금지.
