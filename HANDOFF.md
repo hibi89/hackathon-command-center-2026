@@ -1,3 +1,15 @@
+## 2026-11-13 KST — KUODRA P95 중단 인수인계 (10항)
+1. **목표·용도·기술:** KUODRA 로컬 Windows 기업 재무 공시 근거 검증(한국 OpenDART/미국 SEC, A/B/C·ML·Guard·HTML/PDF), 최종설계 100점 중 사용자 P95 목표.
+2. **완료·수정·결정:** PR #7 DART IS/CIS 항목처리·충돌거부, GUI 스크롤/Windows Tk 초기화 검증. **사용자가 직접 개입 없이 P95 불가능하면 중단 지시**하여 중단·보존.
+3. **테스트:** feature SHA `49d78a013ad51495d8facc0d82e3c2103a2ae99d` [CI #43302772793](https://github.com/hibi89/KUODRA/actions/runs/43302772793) Ubuntu·Windows 각각 282 PASS/0FAIL, Windows GUI/ZIP 검증. 병합 SHA `733104a08fb99f4baf5bf4be520b0f7d88729f56`; 후속 정확한 병합 SHA CI **미검증**. 실제 공시/구매자 OS/법무 미검증.
+4. **상태:** 최종 내부 엔지니어링 **89% 잠정**, **P95 미달**, `[사용자 개입 필요 · P95 중단]`, `RELEASE HOLD/SALE NO-GO`. 중단 표식은 완성 판정이 아님.
+5. **오류·차단·대안:** 합성 테스트로 실제 SEC/DART 인증/데이터 재배포권, 실고객 Windows, 판매규제 충족 불가. 독립 가능 코드작업은 여기서 중지. 법적으로 적법한 본인 자료/키와 실제 구매자 Windows 장비에서 최종 검수 후 재개하거나 별도 승인으로 범위 재설계; 403/429 우회나 성공 허위 주장 금지.
+6. **저장소·브랜치·SHA·경로:** `hibi89/KUODRA@develop` PR #7 병합 SHA 상기, `main` 설계·검증/인수인계 기준; 중앙 `hibi89/hackathon-command-center-2026@kmong-productization`, `docs/audits/KMONG_16_CURRENT_20261111.md`.
+7. **Production·Vercel·환경:** 미배포, unsigned Windows PyInstaller 개발 스테이징 및 GitHub Actions CI. 실제 고객 설치파일/서명/Win10/11 검증 없음.
+8. **원본·백업·인증:** KIC `hibi89/hibi89-kic-proofinvest@lead/kic` 원본/제출자료 불변, 이전 기능 SHA는 Git 이력 보존. 사용자 키/회사 비공개자료/제3자 라이선스 시세 GitHub에 올리지 않음.
+9. **다음 작업·승인:** 사용자 명시 재개 시 SEC/DART 적법 실기업 E2E → Windows 고객 PC GUI/한글 PDF/백신/설치·제거 → OSS NOTICE/데이터권리·금융법·지원/환불 → 사용자 판매 GO. 그 전 개발 중지 유지.
+10. **갱신 시각·검증 범위:** 2026-11-13 KST. GitHub 원격 문서 기록 및 원 기능 CI만 확인, 실고객/실데이터·계약·Production 미검증. 본 메모 커밋은 기능 CI 통과를 뜻하지 않음.
+
 ## [2026-11-13 KST] 크몽 등록완료 이력 영구 보존 인수인계 10항
 1. **목표/확정 요구:** 실 크몽 등록 후에도 모든 서비스 행을 **삭제하지 않고 등록완료로 남겨** 미래 중복 게시 거르고 기존 기술 조합 시 참고.
 2. **변경/결정:** 기존 19개 목록에 등록 상태 열(모두 미등록) 추가. 고유 `KMONG-SVC-01..19`와 JSON `listing_status`/`kmong_listing_url`/`published_at_kst`/`listing_history` 도입. 등록완료·판매중지·비공개·게시삭제 시에도 과거 이력 유지.
