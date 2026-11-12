@@ -1,3 +1,15 @@
+## 2026-11-13 KST — ASTRA 사용자 개입 필요 · hub 10-point handoff
+1. 목표·기술: Astra PDF Redesigner의 기존 오프라인 React/TypeScript/Vite/Electron/PDF.js, 목표 최종 엔지니어링 P95 유지.
+2. 완료/결정: P85 페이지별 이미지 위치 위험, P86 문서 읽기순서 위험, P87 7항목 수동 검수/로컬 JSON. 사용자 명시 지시로 Astra `[작업중]` → `[사용자 개입 필요]`; 95% 달성으로 인한 변경 아님.
+3. 테스트: 최신 기능 SHA `0db2acb51854` Linux Chrome/Edge CI #43243819225 2/2 SUCCESS 150PASS, Windows #43243819123 1/1 SUCCESS 149PASS/1SKIP desktop16PASS, 8/8 A4/NSIS 업그레이드 PASS. 이번 문서 전환에 코드/테스트 재실행 없음; 실제 구매자 Windows와 실고객 PDF 미검증.
+4. 상태: **85% 잠정, 95% 미달**, BASIC/PRO/BUSINESS **RELEASE HOLD**, Astra 현재 **[사용자 개입 필요]**, 담당 개발 종료·재개 지시 대기.
+5. 오류/시도: P82/P83 PDF.js constructPath 오류 P84 복구. P86 Edge CDP 시작 타임아웃 1회, 이후 P87 신 SHA Edge 성공. 불필요한 CI 반복 금지.
+6. 저장소·브랜치·SHA: 제품 `hibi89/astra_pdf_redesigner@feature/astra-p71-pdf-source-parity-20261112` 기능 SHA `0db2acb51854`, 문서 HEAD `723ef15f1442`, Draft PR #10; 허브 `hibi89/hackathon-command-center-2026@kmong-productization`, `docs/audits/KMONG_16_CURRENT_20261111.md`.
+7. 배포·실행: `npm test`, `npm run build`, Chrome/Edge/Windows GitHub Actions; Vercel/Production 미적용, 판매 배포 없음.
+8. 원본·복구·인증: 기존 main/PR·로컬 원본 PDF/IndexedDB 보존, 새 데이터 전송·유료 호출·권한 변경/비밀 제출 없음; 코드 Git 이력 복원 가능.
+9. 다음 우선순위: 사용자 승인된 실 PDF 5–10개/물리 Windows10·11 검수, 모델/폰트 재배포 권리, PRO20/BUSINESS30 구현 계획 승인, 상용 정책·서명·안전 검수 및 그후 P95 판정. 소유자 재개 지시 전 `[작업중]` 자동 재설정 금지; 다른 제품 표식 불변.
+10. 기준 일시 2026-11-13 KST, 근거는 이전 실 CI 정확 기능 SHA·금번 중앙 표식 직접 수정·제품 문서 Git HEAD. 이 허브 문서 commit은 작성 후 조회로 확인.
+
 ## 2026-11-12 KST — Astra P85–P87 hub handoff (10 points)
 1. Goal/tech: Astra PDF Redesigner 95%, offline React/TypeScript/Vite/Electron/PDF.js; preserve original PDF, product V2 and other Kmong work.
 2. Finished/choices: P85 image page-local movement, P86 whole-document reading order, P87 seven-item transient owner manual PDF acceptance, count-only metadata JSON; chose no storage schema/approved-license changes over premature PRO/BUSINESS persistence.

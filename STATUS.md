@@ -1,3 +1,8 @@
+## 2026-11-13 KST — 사용자 명시 지시: Astra 개발 종료, [사용자 개입 필요]
+- Owner 직접 지시: Astra PDF Redesigner의 중앙 최종률 표 `[작업중]` 제거, **`[사용자 개입 필요]`** 표기. 기존 목표 달성 전 잠금 규칙의 Astra 한정 명시적 예외. 중앙 `docs/audits/KMONG_16_CURRENT_20261111.md`에 반영한 상태이며 다른 상품의 표시와 점수는 수정하지 않음.
+- **완성률 85% 잠정 / P95 목표 미달 / RELEASE HOLD** 그대로. 소스 기능 SHA `0db2acb5185445d342f97062a6962ec52a08a1fe`, 제품 `AGENTS/STATUS/HANDOFF` 문서 SHA `723ef15f1442acd2776045717a8fd3ee21b45ea7`. CI [Linux Chrome/Edge #43243819225](https://github.com/hibi89/astra_pdf_redesigner/actions/runs/43243819225) SUCCESS 2/2 Node150 PASS, [Windows #43243819123](https://github.com/hibi89/astra_pdf_redesigner/actions/runs/43243819123) SUCCESS 1/1 Node149PASS/1SKIP, desktop16 PASS. 이 상태 변경에 새 기능/테스트 수행 없음.
+- 사용자 개입 필요: 대표 PDF 제공·육안 원본 검수(5~10개), 구매자 Windows 실사용 확인, 한국어 로컬 모델/폰트 권리 및 판매 승인. PRO20/BUSINESS30 신규 디자인과 라이선스/서명 통합 미완; 사용자 개입만으로 P95 자동 달성 아님. 제품은 사용자 새 재개 지시까지 대기.
+
 ## 2026-11-12 KST — Astra P85–P87 verified new PDF acceptance features, 95 goal pending
 - Product `hibi89/astra_pdf_redesigner@feature/astra-p71-pdf-source-parity-20261112` functional SHA `0db2acb5185445d342f97062a6962ec52a08a1fe`; product `STATUS/HANDOFF` SHA `deb87550fa480aa7cb0943867c2822cd353b4e4a`; Draft PR #10 unmerged.
 - P85 page-by-page raster image operation drift, P86 document-wide text-order advisory even with page reflow, P87 transient seven-point owner visual inspection with safe local JSON. No customer data or schema migration, no auto sales approval.
