@@ -1,3 +1,15 @@
+## 2026-11-12 KST — Factory AX VERIFY W1-70 해총 인수인계 10항 (최신)
+1. **목표:** Factory AX 첫 W1 VERIFY 70% 단계; 장기 W1–W4 전체 완성률과 분리.
+2. **완료:** 4단계 발주/생산/검사/출하 보수적 LOT 대사, 1:N/부분 출하·반품/재작업·기간/누적·원본행 품질 보류, 독립 Python 오프라인 공급자 정책 DRAFT UI.
+3. **실행:** Linux Python3.13.5 `python -m unittest discover -s tests -q` **87 PASS/0 FAIL/0 SKIP**, compileall 성공, 네 CSV 합성 CLI OK 및 negative REVIEW/BLOCKED. Chromium 주입 3 PASS, JS 오류0/외부요청0. native Windows/real file:///Actions NOT RUN.
+4. **진척:** 첫 제품 VERIFY **70% provisional engineering**, 전체 Factory AX **UNASSESSED**, 이전 50% 이력 유지, 모든 제품 RELEASE HOLD.
+5. **실패/대안:** Chromium 직접 file:// 정책에 의해 차단; same-source `set_content` 주입으로 한정 검수, 실 Windows 실행 성공 주장 금지. 진짜 공급자 서명·다중 소스 단일 원자 스냅샷·전체 ERP 정합·고객 사용권 미검증.
+6. **Repo:** `hibi89/factory-ax-ecosystem@feature/data-verify:c324158c54753516aafba5f2aad85a09b277061a`, code blob `d223747b600958c142f80ac7563c0fb2c4dcbf4a`, reconciler `50087c130b96a6f47451c5dd062dd027d9a7cc60`; evidence `docs/VERIFY_70_EVIDENCE_20261112.md`; hub `kmong-productization` current SHA verify after write.
+7. **Production:** not deployed, Vercel/Cloudflare N/A; `python examples/make_reconcile_synthetic.py /absolute/new/demo` → `python -m factoryax --spec ... --output ...`.
+8. **원본/보안:** Factory main·원천 PREP/SMAX/EAI/고객파일·권한·결제·보안설정 불변, 합성 데이터만 테스트, Git feature commit으로 복구 가능.
+9. **다음:** W1 85%는 Windows 실제 파일·패키징/clean CI·원자 스냅샷·승인 강제·권리·한글 UX·리뷰 진행 뒤에만 인증; 출시 사용자 승인 별도.
+10. **기준시점:** 2026-11-12 KST, 같은 소스 블롭 로컬 합성/Chrome 주입 범위. 기존 활성 크몽 16종 합계 1369%p/85.5625%, 전원85+ 불변, Factory 별도 육성 후보.
+
 ## 2026-11-12 KST — PREP P70 latest post-comparison supervisor update (10 items)
 1. Goal: independence/local PREP design R01–R12, 70%-feature gate.
 2. Delivered: bounded offline CSV/JSON typed engine+CLI and exact-original-row duplicate fix; raw diff in unmapped columns never falsely triggers duplicate review.

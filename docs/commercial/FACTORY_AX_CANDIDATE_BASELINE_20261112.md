@@ -1,3 +1,5 @@
+> **2026-11-12 KST — Factory AX VERIFY W1 70% 잠정 엔지니어링 최신화:** Private [Factory 기능 커밋 c324158c](https://github.com/hibi89/factory-ax-ecosystem/commit/c324158c54753516aafba5f2aad85a09b277061a) 최신 기능 HEAD 직접 검증. 기존 W1-50 원본 보존 + 발주→생산(1:N·재작업)→검사(PASS/FAIL/REVIEW)→출하(분할·반품) 연결, 품목/LOT·단위·Decimal·시간창·날짜별 누적/동일일 시각 불명 보류, 원본 SHA+행 근거, 안전 오프라인 공급자 정책 **DRAFT** 화면 구현. Linux Python3.13.5 합성 **87/87 PASS, 0 FAIL/0 SKIP** + compileall + CSV4종 CLI OK, Chromium 주입 화면 3 PASS/JS오류0/요청0; Windows 직접 file://는 브라우저 정책 차단으로 NOT VERIFIED. 기능 소스 Git blob `d223747b600958c142f80ac7563c0fb2c4dcbf4a`/reconcile `50087c130b96a6f47451c5dd062dd027d9a7cc60`/테스트 `734e4e1932a2ea67f21e88b38e2a97c238c06765` 로컬 파일 정확 일치. **첫 제품 VERIFY 70% 잠정**, 전체 Factory AX Ecosystem **UNASSESSED**, Windows/실고객/CI/원천 PREP·EAI golden/라이선스/출시 **미검증 RELEASE HOLD**. 기존 크몽 활성 **16종 1369%p/평균85.5625%/16종 모두85% 이상** 수치·분모 불변, 신규 후보 별도. [범위/증거](https://github.com/hibi89/factory-ax-ecosystem/blob/feature/data-verify/docs/VERIFY_70_EVIDENCE_20261112.md).
+
 > **2026-11-12 KST — Factory AX VERIFY W1 50% 잠정 엔지니어링 달성 (신규 크몽 육성 후보, 활성16종 외):** 원본 Private [feature/data-verify 기능 커밋](https://github.com/hibi89/factory-ax-ecosystem/commit/8007f82af7d07ec5d8938144038d4b419fa334dd) `8007f82af7d07ec5d8938144038d4b419fa334dd` GitHub 원격 HEAD 재확인, source Blob `dc4be03b682679211d16aed7c3efd6ac45c41f82`·tests `30e014751b2e8c7511d4493d3fde31749ed51d94` 테스트한 로컬 파일과 **정확히 일치**. 새 Python3.11 stdlib 비공개 로컬 코어: 발주·생산·검사·출하 4 승인형 CSV/제한 XLSX, profile·source SHA·행 근거, 누락·중복·단위/Decimal·주문참조·QC 5종 품질검사, OK/REVIEW_REQUIRED/BLOCKED, 새 전용 한국어 HTML/CSV/JSON 보고. Linux 합성 **54 PASS/0 FAIL/0 SKIP**, 컴파일 및 실 CSV4종 CLI OK, 원본 불변, 오염/변조/경로 거부 증거. **첫 상품 VERIFY의 50% 개발 단계만 잠정 인정**, PREP/EAI 원천 동등성·1:N/반품·Windows/실사용 고객·실 Excel·CI/상용 승인 **미검증**; **Factory AX Ecosystem 전체 완성률 UNASSESSED**, RELEASE HOLD. **기존 활성 크몽16종 합계 1369%p/평균85.5625%/16종 85% 이상 전부 불변**, FFAX/PREP/기타 육성 후보와 별도. [제품 검증 문서](https://github.com/hibi89/factory-ax-ecosystem/blob/feature/data-verify/docs/VERIFY_50_EVIDENCE_20261112.md).
 
 # Factory AX Ecosystem — 크몽 상품화 신규 후보 / 최종 완성률 등록
@@ -11,9 +13,9 @@
 ## 완성률 정본
 | 평가 대상 | 2026-11-12 현재 | 목표와 이유 |
 |---|---|---|
-| **Factory AX VERIFY 최종 상품 완성률** | **50% 잠정 엔지니어링(W1 제한 범위)** | 새 코드/합성 CSV4·XLSX4·품질 규칙·SHA/행 근거·보고서 로컬 검증. 원천 PREP/EAI 동등성·고객 Windows·전체 4단계 대사는 미검증이며 상용 제품 적합 판정 아님. |
-| **신규 Factory AX 기능 구현/실행 검증** | **GitHub 새 코어·54 합성 PASS** | 테스트한 소스 SHA=GitHub blob 일치, 합성 CLI OK/REVIEW/BLOCKED 확인. 기존 EAI/SMAX 자체 테스트는 Factory 결과로 계산하지 않음. |
-| **첫 개발 목표** | **W1-50 잠정 도달** | 승인형 4역할·CSV/제한 XLSX·열 매핑·품질 5종·원본 SHA/행 근거·기본 내보내기 검증. PREP 실제 golden parity와 제조업 정답 oracle 10종·심화 대사는 W1-70 전 해결 대상. |
+| **Factory AX VERIFY 최종 상품 완성률** | **70% 잠정 엔지니어링(W1 보수적 대사 범위)** | 승인형 CSV/제한 XLSX + 발주→생산→검사→출하 1:N/부분/LOT/반품·재작업·기간 대사, SHA/행 근거, source-minimal 보고. 원천 PREP/EAI 동등성·고객 Windows·상용인수 미검증. |
+| **신규 Factory AX 기능 구현/실행 검증** | **GitHub 새 코어·87 합성 PASS** | Linux 로컬 87 PASS/0 FAIL, 실제 4종 합성 CLI OK, Chromium 동일 HTML 주입 3 PASS/외부요청0. 정확 Git blob 3개/현재 기능 HEAD 검증. GitHub Actions·Windows file://는 미검증. |
+| **첫 개발 목표** | **W1-70 잠정 도달** | W1 50 기준 기능 유지 + 제조업 독립 합성 oracle 20+ 케이스와 보수적 날짜별 누적/단위·LOT·검사/출하, 오프라인 공급자 정책 DRAFT UI. 실제 사용·설치/보안·실고객 인수 기준은 W1-85 이후 게이트. |
 | **Factory AX Ecosystem 장기 최종 완성률** | **UNASSESSED (정식 미산정)** | W1→W4 완성, HAE·LA·보안 Guard·RAG·NAS/FILE·PC CARE·Code QA·Console 통합 및 고객 납품 검증이 최종 100% 범위. |
 | 출고 상태 | **RELEASE HOLD** | 제품 코드·납품 설치·고객 성과·보안·권리·상용 판매 미검증. |
 
@@ -35,8 +37,8 @@
 ## 다음 작업
 1. Factory `feature/data-verify` 에서 최종 설계 문서/원천 소스와 권리·버전 확인.
 2. 제조업 4종 합성 입력/독립 정답 oracle와 PREP 호환 계약을 실제 코드·테스트로 구현.
-3. EAI와 통합해 순차적으로 소스 SHA·테스트 PASS/FAIL/SKIP·실 Windows·보안·출시 위험을 분리 기록.
-4. 실제 VERIFY 개발 진척을 **인수 조건 검증 후** 50→70→85→95→100 단계별로 갱신. 장기 생태계 전체 진척도 별도 산정.
+3. EAI 및 PREP 권리·동등성 검증 후 순차적으로 소스 SHA·테스트 PASS/FAIL/SKIP·실 Windows·보안·출시 위험을 분리 기록.
+4. 실제 VERIFY 개발 진척을 **인수 조건 검증 후** 70→85→95→100 단계별로 갱신. 장기 생태계 전체 진척도 별도 산정.
 5. 신규 상용 공개·코드 원본 복사/변경·실고객 자료 반출·외부 API·유료 CI·권한 보안 변경은 별도 승인 전 금지.
 
 ## 근거
