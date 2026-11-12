@@ -1,3 +1,17 @@
+## 2026-11-12 KST — PREP P85 Linux 75-case hub handoff (current; ten items)
+1. Goal: PREP standalone R01–R12 with P85 Linux SDK/report/security/evidence gate, not release.
+2. Changes: six security regression cases; explicit package files allowlist to block untracked build artifacts. No upstream source or active product changes.
+3. Tests: private PREP exact-code SHA 07255335dc3b6de4f9c8c3e8bacdf06c87d4eb0e; Linux Node22.16 **75 PASS/0 FAIL/0 SKIP**, network-disabled suite **75 PASS**, npm run check PASS; staged allowlisted tarball offline install SDK/report/CLI smoke PASS. Github-hosted CI/Windows/approved consumer NOT_RUN. Full-remote doc packing not verified.
+4. State: P85 partial only, NOT CERTIFIED; formal P70 also NOT CERTIFIED, PREP completion UNASSESSED. RELEASE HOLD. Hub active16 totals unchanged.
+5. Gaps: source rights and SMAX decimal/date/boolean/receipt compatibility goldens, CSV standalone receipt, hosted CI, native Windows and consuming product E2E. No guessing.
+6. Repo: PRIVATE hibi89/prep feature/core-extraction, code 07255335dc3b6de4f9c8c3e8bacdf06c87d4eb0e, docs bed64033fda577e8c5c892975c809e45993bff08; hub evidence docs/commercial/PREP_P85_PARTIAL_20261112.md; safe earlier PREP 3e58e21875205376276021fc2547728f3c1832f4.
+7. Deploy: None, Vercel N/A, Linux Node22 native; GitHub manual CI NOT_DISPATCHED.
+8. Originals: SMAX and PREP main/develop untouched; no secrets, consumer data, billed runner use or changed privacy. GitHub previous SHA is rollback reference.
+9. Next: owner-approved source/provenance and compatibility goldens, CSV receipt policy/security, runner dispatch only with authorization, Windows and pinned consumer later. Reassess P85 with evidence.
+10. Evidence date: 2026-11-12 KST, PREP source and docs SHAs above; hub branch HEAD after this report commit must be read from remote.
+
+---
+
 ## 2026-11-12 KST — PREP P85 partial update (hub 10-item handoff)
 1. Goal: PREP independent R01–R12, 85% SDK/report/evidence/security/Linux acceptance.
 2. Change: PRIVATE feature added CSP-static escaped HTML, max-200 preview, CLI HTML path, pre-release SDK, 8 test declarations, manual-only CI, contract doc; no upstream import.

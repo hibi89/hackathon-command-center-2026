@@ -1,3 +1,12 @@
+## 2026-11-12 KST — newer P85 Linux evidence (supersedes older 6/6-only snapshot below)
+- Source/implementation SHA: PRIVATE hibi89/prep feature/core-extraction **07255335dc3b6de4f9c8c3e8bacdf06c87d4eb0e**; updated PREP documentation HEAD **bed64033fda577e8c5c892975c809e45993bff08**.
+- Exact GitHub-blob-matched source and tests restored into controlled Linux Node22.16.0 environment. Full native npm test **75 PASS, 0 FAIL, 0 SKIP**; npm run check PASS. Repeated full 75/75 PASS in Linux network-disabled namespace. Six added security cases cover XSS/CSP, safe JSON keys, CSV formula-risk, file non-overwrite/cleanup and invalid UTF-8.
+- package.json pack-files allowlist and local npm pack dry-run PASS; locally staged runtime tarball freshly installed offline with SDK/report/CLI smoke PASS. This did NOT include the full remote README and SDK contract docs, and was not a published package. Manual GitHub-hosted CI never dispatched; native Windows, source-rights/SMAX parity goldens and standalone CSV receipt remain unverified.
+- **P85 still PARTIAL / NOT CERTIFIED; PREP standalone canonical completion UNASSESSED; RELEASE HOLD**. Hub active 16 product denominator and **1369 percentage-point total / 85.5625% average** unchanged. No private code, customer data, paid runner use or production deployment.
+- See PREP STATUS/HANDOFF/ACCEPTANCE_MATRIX at docs HEAD bed64033 for full evidence and restrictions.
+
+---
+
 # PREP P85 hardening — PARTIAL candidate (2026-11-12 KST)
 
 ## Evidence and scope
