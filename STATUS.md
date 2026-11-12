@@ -1,3 +1,8 @@
+## 2026-11-12 KST — BID AX / FlowPilot Universal / WORKNOVA Desk 크몽 신규 상품화 후보 등록
+- [독립 후보 3종 상세 설계](docs/commercial/KMONG_3_NEW_PRODUCTS_20261112.md) 및 [크몽 상품화 목록](KMONG_PRODUCTIZATION.md)에 상품명, 1회 판매 가격 가설, 유료 구매 이유, 0원 월 서버 운영 목표, 구현·검수·출시 조건을 기록.
+- 기존 **활성 16종의 완성률·집계 불변**. 기존 FFAX·별도 기술협업 2건도 유지. 세 후보는 **기획 등록만 완료 / 개발·실행·Windows·판매 미검증 / RELEASE HOLD**.
+- 원본 KIC/PayPal/UGREEN 및 기존 크몽 상품, 배포·API 권한·고객 데이터·비밀은 변경하지 않음. 이번 문서 작업은 실 CI/제품 테스트를 수행하지 않음.
+
 ## 2026-11-12 KST — Lightning Azent 70→85% 잠정 엔지니어링, Windows/Ubuntu CI 검증 후 해총 최신화
 - Private `hibi89/HAE@feature/la-p17-audit-evidence-20261112`, 기능 SHA `c32e27c8156a4ed27d6f2bca7752e7a4eccf6dc7`, 문서 HEAD `febb0ebe773afa47ab596377196b4c98c501028d`; [Draft PR #2](https://github.com/hibi89/HAE/pull/2) 미병합. [정확 기능 CI #43124013493](https://github.com/hibi89/HAE/actions/runs/43124013493) 2/2 SUCCESS (Ubuntu 114 LA + 91 HAE = 205 PASS, Windows LA114 + HAE91 + 백업 집중1 = 206 PASS), 0 FAIL/0 SKIP; [문서 HEAD #43124884647](https://github.com/hibi89/HAE/actions/runs/43124884647) 2/2 SUCCESS.
 - P17 run/plan/completion approval/evidence bound + SQLite cache and actual HAE→LA synthetic E2E, P18 independent reproducible unsigned .pyz and tamper detector, P19 same-run OS lock/Windows backup source samefile; ZIP SHA `bf6388389cf0eaef674a68fdf551d27a386caa8ea21267cebc84ef7da2440e49`, private artifact 13903150555 (7days). Rubric prior LA70+15 = **85% provisional engineering**, real customer native Windows/Defender/SOVIA/DBVORA, production HAE GUI, legal/signing/support/pilot unverified, **RELEASE HOLD**.

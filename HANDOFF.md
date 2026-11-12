@@ -1,3 +1,15 @@
+## 2026-11-12 KST — 크몽 신규 상품화 후보 3종 등록: 인수인계 10항
+1. 목표·기술: 사용자 지시로 BID AX(공공입찰), FlowPilot Universal(Windows/SMB 검수), WORKNOVA Desk(견적·계약·납품)를 해총 크몽 후보에 추가. 로컬 설치형·SQLite·서버 0원/월 목표.
+2. 결정·완료: [3종 상품화 최종설계](docs/commercial/KMONG_3_NEW_PRODUCTS_20261112.md)에 제품 목적·기능·고객 가치·3티어 가격·비용/정책·설계 A/B와 50/70/85/95/100% 수락 기준 작성. 기존 제외 BID OWL은 재편입하지 않음.
+3. 테스트: 이번 작업은 문서 수정. 신규 프로그램/실행·CI/실 Windows·고객 검증 0건 NOT RUN; 이전 해커톤 합성 테스트가 범용 새 상품 성능의 증거는 아님.
+4. 완료/진행/대기: 후보 목록 추가만 완료. 실제 개발, 무료 대안 대비 구매 의사·시장 검증, 상업권/고객 수락·판매 승인 전부 대기; 세 상품 RELEASE HOLD.
+5. 문제·대안: FlowPilot 전 NAS 실검증 부재→범용 Windows/권한 있는 SMB 우선. WORKNOVA USD·결제 의존→KRW/VAT와 로컬 계약 원장 추출 우선. BID AX API·자격 판단/근거 계약→공식 API 확인·fail-closed 추가 확인 판정.
+6. 저장소·브랜치: hibi89/hackathon-command-center-2026 / kmong-productization. 경로 KMONG_PRODUCTIZATION.md, STATUS.md, HANDOFF.md, docs/commercial/KMONG_3_NEW_PRODUCTS_20261112.md. 기준 커밋 SHA는 최종 GitHub 검증 결과를 사용.
+7. Production·환경: 신규 설치형·Production/Vercel 배포 미적용, 실행 명령 아직 없음. 고객 PC 로컬 및 공식 무료 API(허용 조건) 목표이며 실서비스 아님.
+8. 백업·원본·보안: 기존 활성 16개 원본·점수/FFAX·별도 기술협업 후보·KIC/PayPal/UGREEN 소스 보존, Git 이전 SHA로 문서 복구 가능. 비밀·실 고객·API 키 미전송.
+9. 다음 작업·승인: 범용 상세 설계 승인 후 각 제품 독립 코드·권리/공식 API 검증→고객 샘플 E2E·Windows/SMB·문서→상품 상세/납품 지원/출시 승인. 신규 저장소/유료 API·실서비스 배포는 본 요청 범위 밖.
+10. 갱신 시점·검증: 2026-11-12 KST. GitHub 문서·기존 원천 소스의 검토와 사용자 확정 기획만 기록, 신규 코드 기능·상용 준비 미검증.
+
 ## 2026-11-12 KST — Lightning Azent verified 85% provisional / Kmong hub ten-point handoff
 1. Goal/technology: Existing 16 Kmong roster; LA Python3.11 stdlib SQLite HAE workflow bridge security and reproducible synthetic off-line package, 70→85 engineering milestone; full 100% commercial blueprint unchanged.
 2. Delivered/choice: P17 HAE run/plan SHA/terminal completion/write receipt binding and cached SQLite false-success prevention, P18 deterministic standalone unsigned .pyz/validator, P19 OS-local same-run lock/Windows logical backup mutation and actual file-identity tests; preferred isolated branch+facade not existing main deployment/runtime migration.
