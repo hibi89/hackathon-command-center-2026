@@ -1,3 +1,10 @@
+## [LATEST 2026-11-12 KST] REA_Web / DATA2WEB 독립 제품 정본 등재
+- 사용자 확정: REA_Web 원래 웹사이트 분석·Fable/Astra 증거→승인→독립 웹앱 재구축. 기존 Pro 부모 97b6e5 기준 feature/website-analysis-rebuild 새 브랜치 및 main REQUIREMENTS / docs/ORIGINAL_FINAL_DESIGN 정본. 원본 source·PR 보존.
+- 새 Private hibi89/data2web_studio main 초기화·최종설계 R01–R33·요구사항/AGENTS/STATUS/HANDOFF/권리 출처 문서 및 feature/lite-independent-migration, feature/xlsx-tsv-import 브랜치 생성. 기존 REA Lite source는 아직 독립 새 제품으로 이관/실행되지 않았다.
+- 중앙 표: 이전 단일 REA_Web P95(Lite 좁은 범위 기록) 행을 DATA2WEB Studio 최종상품 미산정으로 정정, 원래 REA_Web 최종상품 미산정 행 신규 등록. 활성 제품 식별자 17개, 15개 기존 점수·3개 타 담당 [작업중] 표식 보존, 두 제품 UNASSESSED, 전체17 평균·합계 미산정. 이전 활성16종 평균은 과거 기록.
+- [분리 감사](docs/audits/REA_WEB_DATA2WEB_PRODUCT_SPLIT_20261112.md) · [활성17종 표](docs/audits/KMONG_16_CURRENT_20261111.md). 새로운 DATA2WEB source/사이트 E2E/CI/Production NOT RUN; 상품 둘 다 RELEASE HOLD.
+- 다음: DATA2WEB 독립 CSV/JSON→HTML/ZIP→Windows·Linux file browser E2E, Excel/TSV 후속. REA_Web은 허용된 로컬 사이트→Fable/Astra→Human gate→Pro E2E부터 신규 실제 검증. 독립 개발 P50 목표 후보이며 현재 달성 주장 금지.
+
 ## 2026-11-12 KST — Astra P84 recovered real PDF.js CI (goal P95 still open)
 - Product `hibi89/astra_pdf_redesigner@feature/astra-p71-pdf-source-parity-20261112`, actual fixed code `ceef31d121d3d2a89448220326c89ecb1bc6066a`, product documentation `a8b1e9f00ab4ef3e658415b17029c288c49122c0`; Draft PR #10 unmerged, owner originals intact.
 - Real discovered P83 GitHub CI [Linux #43233430431](https://github.com/hibi89/astra_pdf_redesigner/actions/runs/43233430431) FAIL 146P/2F and [Windows #43233430460](https://github.com/hibi89/astra_pdf_redesigner/actions/runs/43233430460) FAIL 145P/2F/1S: PDF.js `OPS.constructPath` packs painting opcode in `argsArray[i][0]`; prior P82/P83 only counted top-level stroke and missed moved/removed vector borders.
