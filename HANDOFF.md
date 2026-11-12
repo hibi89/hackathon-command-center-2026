@@ -1,3 +1,17 @@
+## 2026-11-12 KST — PREP owner approved independent P85 (ten fields, latest)
+1. **Goal:** PREP independent local-first Node20+ ESM R01–R12, current P85 Linux SDK/receipt/HTML/security validation, later P95 Windows/consumer, P100 security/licensing/release.
+2. **Decision:** Owner expressly approved architecture A, independent PREP normalizers. SMAX perfect parity/adapter is NOT P85 core gate; source transfer or consumer switch is a new, separately scoped/approved project. No technical code changes this turn.
+3. **Evidence:** PRIVATE PREP functional SHA a4c71258851af4b0d8540202f36c84c1438ad9e6, docs approval 0ce7158d31595e53d840c426bd1384d5df9b2d5c; Linux Node22.16 150/150 PASS, previously isolated network-disabled 150/150 PASS, SDK/HTML/CLI/CSV+JSON receipt and local fresh offline runtime installation PASS. No new test claimed this decision turn. No hosted CI PASS.
+4. **State:** P85_LOCAL_ENGINEERING_COMPLETE; P85_HOSTED_CI_PENDING, formal 85% certification not yet claimed; RELEASE HOLD; central active product scores/denominator unchanged.
+5. **Limits:** Manual-only GitHub Actions runner unexecuted; private runner may incur expense and connector cannot start a new workflow. Independent design does not prove SMAX drop-in compatibility, original Node parity/rights pending for future use.
+6. **Repos/SHAs:** hibi89/prep feature/core-extraction docs 0ce7158d31595e53d840c426bd1384d5df9b2d5c, tested functional a4c71258851af4b0d8540202f36c84c1438ad9e6; central hibi89/hackathon-command-center-2026 kmong-productization. Previous PREP SHA 9696074e; SMAX preprocessing 3830cb27 read-only unchanged.
+7. **OS/deployment:** Linux Node22 local PASS. GitHub hosted CI NOT_RUN, Windows/consumer P95 NOT_RUN, Production/Vercel N/A.
+8. **Backup/security:** SMAX/PREP default branches unchanged, no original source copy, credential, personal data, paid runner dispatch, access, licensing, history or release alteration. Preserve previous Git SHAs.
+9. **Next:** Upon separate explicit runner-cost permission, run existing manual GitHub Actions workflow on feature/core-extraction, check full logs/exact SHA and only then promote formal P85. Later Windows and pinned authorized consumer. No more blind test-count growth.
+10. **Updated:** 2026-11-12 KST; decision from owner, prior 150-case evidence referenced. Hub documentation SHA verified after commit.
+
+---
+
 ## 2026-11-12 KST — PREP P85 original acceptance audit central handoff (10 items)
 1. Goal: standalone PREP local-first R01-R12; 85% Linux SDK/evidence/report/security, 95% Windows and consumer E2E, 100% release, no scope change.
 2. Done/decision: prior stagnant progress traced to conflating future and external gates with 85. Audited REQUIREMENTS/BLUEPRINT/ACCEPTANCE_MATRIX and wrote docs/P85_GATE_AUDIT_20261112.md; compared independent mode A (recommended, no SMAX source transfer) with parity adapter B (requires owner scope, rights).

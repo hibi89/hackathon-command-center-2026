@@ -1,3 +1,12 @@
+## 2026-11-12 KST — PREP independent P85 owner approval (LATEST)
+- **Owner APPROVED Architecture A:** PREP is independent reusable offline CLI/SDK with its own explicit normalization semantics. Do not require byte-for-byte SMAX parity or a SMAX-specific adapter for PREP P85. Existing five semantic differences remain documented; original SMAX consumer migration/native cross-engine golden and source-rights remain future opt-in tasks.
+- Verified implementation `hibi89/prep@feature/core-extraction` SHA `a4c71258851af4b0d8540202f36c84c1438ad9e6`; owner decision / docs HEAD `0ce7158d31595e53d840c426bd1384d5df9b2d5c`. Full official decision: PREP docs/DECISIONS.md D18 and docs/P85_GATE_AUDIT_20261112.md.
+- **P85 engineering scope locally complete**: Linux Node22.16 full 150/150 tests PASS, no-network Linux full 150/150 PASS, SDK/CLI/CSV/HTML and export receipt validation, fresh offline local runtime-package installation PASS from previous exact functional test evidence. This is NOT a claim that GitHub-hosted runner ran.
+- **Formal 85% verification PENDING real GitHub-hosted Linux CI**, consistent with original P85 criteria. Existing `.github/workflows/prep-candidate.yml` is manual-only; no hosted PASS confirmation or authorized billable runner dispatch. Node20/Windows + approved consumer remain P95; release P100. PREP `RELEASE HOLD` and overall product completion numeric score NOT REASSESSED.
+- Central Kmong active product percentage scores and denominator remain unchanged; PREP is an independent candidate outside the existing 16-product denominator. No original code, paid job, permission, public release, deployment or data changes.
+
+---
+
 ## 2026-11-12 KST — PREP P85 원래 기준 재검수 / 정체 원인 확정 (LATEST)
 - Private PREP feature/core-extraction 기능 SHA **a4c71258851af4b0d8540202f36c84c1438ad9e6**, 새 판정·인수인계 HEAD **9696074e55d28fa1fb7fe1afda27baab0dc3b88b**. 신설 **docs/P85_GATE_AUDIT_20261112.md**에 원래 REQUIREMENTS/BLUEPRINT/ACCEPTANCE_MATRIX에 따른 R01–R12 단계별 검수 기록.
 - 지연의 진짜 이유: 기능 테스트는 61→150으로 반복 증가했지만, **독립 엔진 P85 로컬 기능 검증**과 **SMAX 기존 소비자 교체 전 네이티브 호환성 승인 / 실제 GitHub-hosted CI / 후속 P95 Windows 소비자 검증**을 혼동하여 무조건 공식 85%를 보류했다. 이제 85 단계와 95+ 요구를 분리하고 외부 관문에 집중.
