@@ -1,3 +1,18 @@
+## 2026-11-12 KST — CUBE P95 native runner false-green repair (10-point handoff)
+1. Goal/stack: AXMART³ CUBE Node18+ local production static release preflight, 85→95 engineering target; goal lock required until verified.
+2. Done/decision: strict child node-test worker env sanitization, real TAP test count + fail status, 3 new failure/forged-GO regressions on 13 suite+build+review CLI. Avoid automatic private paid CI; choose free offline deterministic full checkout gate.
+3. Tests: exact new runner source blob `43e8ce5f51662143dc5f1bf000e9e8e18160a03c` and QA `9c92ab691d3a120df8b02cf4724fa5027fde9a03` (GitHub/local hashes match), Linux Node22.16 synthetic orchestrator 8 PASS/0 FAIL/0 SKIP, syntax 2 PASS. Actual product 13 original native suites, true Cloudflare build/owner preflight on exact new SHA NOT RUN.
+4. Status: CUBE 85% provisional unchanged, 95% NOT achieved, central [작업중] retained, RELEASE HOLD/SALE NO-GO; 15 unrelated products unmodified.
+5. Failure evidence: nested spawned `node --test` in Node `node:test` inherited `NODE_TEST_CONTEXT` => warning 'skipping running files', exit0, earlier 5/5 didn't mean real child tests ran. New injected native-failure test caught false green; fix validated 8/8. Local GitHub DNS still unavailable; don't repeat blind clone or invent CI pass.
+6. Git: `hibi89/AX_MART@feature/cube-owner-preflight-p85-20261112`, latest functional SHA `a0f5a8c20b937a29f64e5064266cabdeb7cd26e0`, product docs HEAD `824d1c8117749b55da9fc593f8bcf118f4289e0e`. Hub `hibi89/hackathon-command-center-2026@kmong-productization`, `docs/audits/KMONG_16_CURRENT_20261111.md`.
+7. Deployment: Cloudflare `https://ax-mart.pages.dev/` on main, feature NOT deployed; Vercel N/A. `npm run verify:local` is full check command for authorized Node18+ checkout.
+8. Backup/security: earlier feature commit Git history, original homepage, PC CARE feature, main linked deploy, user files/secrets/rights/accounts unchanged. No external data or payment activation.
+9. Next priority: real 13-suites+build+receipt, browser/Win and license/real customer acceptance, only then goal95 and marker release. Separate owner GO required for sales/checkout/production.
+10. Updated 2026-11-12 KST; exact source/test remote SHA and local synthetic runner, real source/customer environment unverified.
+
+---
+
+
 ## 2026-11-12 KST — DBVORA P4-04 85→95 목표 지속, 실제 정본 소스 범위 검증 10항
 1. **목표·기술:** 비공개 `hibi89/DBVORA` Python3.11+ 로컬 DB 구조·ZIP/ZSTD·PG read-only, 현재85%→P95 내부 목표, 판매 판단 별도.
 2. **결정·기능:** A 동일 ZIP 안에서 캐시 허용/검증 vs B 캐시 전면 거부 + **별도 신뢰된 checkout에서 사전 읽기전용 감사** 비교; B 선택. 기존 `-B`도 사전 bytecode 읽기 허용하는 점 실제 합성 재현, 캐시 차단, `PYTHONPATH` 격리, 승인된 원본만 import, 사용자 경로 무노출 실패 코드. 고객 DB 쓰기 불변.
