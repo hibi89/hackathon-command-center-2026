@@ -1,3 +1,15 @@
+## 2026-11-12 KST — 크몽 목표 달성 전 [작업중] 표식 유지 지침 전체 전파 인수인계
+1. **목표·확정 요구·기술:** 연결 GitHub 전체 소유 33개 저장소의 필수 `AGENTS.md` 공지에 크몽 단계 목표 달성 **전까지** `[작업중]` 유지, 검증된 목표 달성 **후에만** 제거. 작업 종료·보류·전환으로 삭제 금지. AGENTS 공지와 중앙 최종완성률 표를 GitHub 커넥터로 수정.
+2. **완료·변경·결정:** 33개 저장소 기본 `main` + 제품/대회 리드/중앙 포함 24개 주요 브랜치의 정책 전파. 예전 '전환·종료 시 삭제' 규칙을 최신 규칙으로 교체. 크몽 아닌 작업에는 조건부 적용. 기존 제품 원본·진척 수치 불변.
+3. **테스트·범위:** GitHub 원격 파일 `KMONG_WORK_TARGET_GATE_20261112` 존재 검증 **57 PASS/0 FAIL/0 SKIP** (33 main, 추가 24). 브라우저·기능 테스트·Production은 **미적용**: 운영 지침 문서만 수정.
+4. **상태:** 정책 전파 완료. 각 채팅의 실제 표기 수행과 목표 달성 여부 자동 검증·동기화는 **미구현/후속 담당자 책임**. 구형 미사용 브랜치 전체 반영은 미확인.
+5. **오류·대안:** 공통 정책 전파에 최종 실패 0. 다른 담당자가 중앙 표를 동시 수정하면 HEAD 최신화·차이 보존 후 재시도. 쓰기 실패 시 `KMONG_HUB_SYNC_PENDING` 기록, 타 담당자 표식 제거 금지.
+6. **저장소·브랜치·SHA:** `hibi89/hackathon-command-center-2026@kmong-productization`; [33개 저장소·57개 검증 대상·정책 근거](docs/audits/KMONG_TARGET_GATE_GLOBAL_ROLLOUT_20261112.md), 감사 작성 커밋 `08c9821aa65bdab041bb86a1914b4cc5ffd000ea`, 중앙 STATUS `c98fc6a33ffac550cb746cea6e0daa935ac9e516`.
+7. **Production·환경:** Vercel/Cloudflare 적용 **미적용**, 외부 API·유료 CI 없음. GitHub 문서 수정만 수행.
+8. **원본·백업·보안:** Git 이력에서 AGENTS 원본 복구 가능. 사용자 파일·제품 코드·토큰·환경·보안 설정·데이터·배포 불변. EAI/main·work-hell-dungeon/main AGENTS 없어서 신규 생성.
+9. **다음 우선순위:** 각 제품 담당 `ㄱ`에서 실제 작업 브랜치 AGENTS 최신 확인→목표 미달이면 `[작업중]` 보존/착수 시 표기→검증된 목표 달성 시만 해제→GitHub 원격 재확인. 목표 변경은 소유자 승인. 구형 브랜치로 전환 시 정책 존재 점검.
+10. **갱신 일시·기준:** 2026-11-12 KST, 조회 가능 전체 저장소 33개 및 선택 주요 브랜치 24개(총 57 AGENTS)의 원격 파일 조회로 검증, 문서 기준 SHA는 본 HANDOFF 반영 이후 원격 HEAD 확인.
+
 ## 2026-11-12 KST — ASTRA P76/P77 hub handoff (10 points)
 1. Goal/tech: Astra PDF Redesigner to P95, React/TS/Electron/PDF.js offline PDF editing.
 2. Changes/decision: P76 same-page selected text drift warning; P77 fail-closed owner output with no path deletion on second write fail, safer than inode-based cleanup.
