@@ -1,3 +1,17 @@
+## 2026-11-12 KST — REA_APP P95 hardening partial / hub handoff (10 fields)
+1. Goal: REA_APP offline private Python handoff 85→95, preserving frozen P53 analyzer and central 16 SKU scope.
+2. Work/design: chose independent retail companion security hardening over original analyzer edits for cost/maintenance/risk. Canonical unsigned ZIP review JSON/HTML/HOLD/digest/metrics, duplicate source JSON and unexpected delivery files, six added regression cases. Private details remain in product repo.
+3. Evidence: product code+QA SHA `c3f83af41240d0aefd6d9b26611b70068871ada9`, docs HEAD `53f5bcadabf76a296cd092c28865a3697239cf24`; isolated local logic mirror **10 PASS/0 FAIL**, exact GitHub suite 29 cases NOT RUN, original Gate R/QA NOT RUN; GitHub combined status0/runs0.
+4. State: REA_APP **85% provisional retained; 95 NOT achieved**, RELEASE HOLD. Central 16 scores/aggregate unchanged.
+5. Failure/retry/pivot: isolated private checkout `git ls-remote` failed DNS; connector file-level writes work, cannot claim authenticated full checkout or auto CI. Avoid blind repeats; authorized runner/owner machine needed.
+6. Repo/SHA: `hibi89/HAE@feature/rea-app-kmong-owner-delivery-20261112` code `c3f83af41240d0aefd6d9b26611b70068871ada9`, docs `53f5bcadabf76a296cd092c28865a3697239cf24`; original REA_APP branch unmodified; hub `hibi89/hackathon-command-center-2026@kmong-productization` new HEAD to check post-write. [Evidence](https://github.com/hibi89/HAE/blob/feature/rea-app-kmong-owner-delivery-20261112/docs/REA_APP_KMONG_P95_HARDENING_PARTIAL_20261112.md).
+7. Production: no Vercel/Production; offline Python only. Native Win10/11/Edge/Chrome file:// and full Gate R not verified.
+8. Assets/security: customer source/keys, original analyzer, other 15 products, permissions/paid runners/branch merges/deployments untouched; prior Git SHA supports rollback.
+9. Next: authorized full private checkout; execute 29 retail_qa plus Gate R+QA exact SHA, real synthetic 6/8 report→owner/ZIP source check, physical Windows browser, rights/support pilot before rescore 95 and any commercial approval.
+10. Date/limit: 2026-11-12 KST; code remote verified but only independent local scoped simulation executed. No paid CI/secret upload/production change.
+
+---
+
 ## 2026-11-12 KST — Factory VERIFY 85% candidate central handoff (10 fields)
 1. **Goal:** W1 Factory CORE+VERIFY 85% stage only, not W2–W4 complete Factory AX Ecosystem.
 2. **Done/decision:** Original local Python3.11+ standalone QA engine (PREP/EAI source unbundled), four-stage order-production-inspection-shipment, source SHA, reports, Tk UI, new-only backup/restore; corrected Windows read-only os.fsync handle.
