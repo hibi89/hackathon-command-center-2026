@@ -1,3 +1,5 @@
+> **2026-11-12 KST — DBVORA P4-05 최신(원본 단위7 PASS / P95 미달):** `hibi89/DBVORA@feature/p0-db-map`에서 신규 패키지 ZIP 빌드→추출→신뢰된 검사기→합성 복구→변조 HOLD를 `scripts.verify_release_gate` 필수 단계에 등록. 실제 GitHub 원본 모듈 Git Blob `7e08838eae1d` 및 원본 테스트 Git Blob `81694c7b623e` 로컬 SHA 동일, Linux Python3.13.5 **단위7 PASS/0 FAIL/0 SKIP** (빌더·child 모의, 임시 실제 작은 ZIP), 별도 판단 경로5 PASS. 전체 private source 553+ Python+Node/완전 ZIP 통합/Windows/PG/고객 **NOT RUN**. DBVORA **85% 잠정/P95 미달/RELEASE HOLD**, 중앙 **[작업중] 유지**, 나머지 상품 불변. [근거](docs/audits/KMONG_16_CURRENT_20261111.md).
+
 ## [LATEST 2026-11-12 KST] REA_Web / DATA2WEB 독립 제품 정본 등재
 - 사용자 확정: REA_Web 원래 웹사이트 분석·Fable/Astra 증거→승인→독립 웹앱 재구축. 기존 Pro 부모 97b6e5 기준 feature/website-analysis-rebuild 새 브랜치 및 main REQUIREMENTS / docs/ORIGINAL_FINAL_DESIGN 정본. 원본 source·PR 보존.
 - 새 Private hibi89/data2web_studio main 초기화·최종설계 R01–R33·요구사항/AGENTS/STATUS/HANDOFF/권리 출처 문서 및 feature/lite-independent-migration, feature/xlsx-tsv-import 브랜치 생성. 기존 REA Lite source는 아직 독립 새 제품으로 이관/실행되지 않았다.
