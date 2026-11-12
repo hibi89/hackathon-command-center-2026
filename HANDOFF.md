@@ -1,3 +1,15 @@
+## 2026-11-13 KST — DBVORA P1-10, 내부94% 잠정/P95 미달 (10항)
+1. **목표/스택:** PG/SQLite 로컬 DB 관제 + ZIP/ZSTD; 내부 목표95%.
+2. **결정/기능:** 기존 PG 독립 유닛만 신뢰(A) vs 실제 catalog→stats→FK→DBA manual hints→offline HTML→새 파일 합성6체크 의무 통합(B) 중 B. `scripts/pg_synthetic_acceptance.py` 등 새 tests, release gate 추가, PG optional binary driver + operator guide.
+3. **테스트:** `dbvora/multi_engine_report.py` blob `f3859d9c5d3c` 실 JS 3074 chars FNV `88ecd396` exact; Node22 syntax+DOM fake click/stats/manual review/FK/search/missing **PASS**. `pyproject.toml` SHA `080af800601...` exact + tomllib PASS. **실 원본 새 PG6체크/원본 전체 >=553 Python+Node/Windows/PG TLS·전체 ZIP NOT RUN**. 지난 P1-09 PG core isolated17/optimizer source unittest8은 이전 SHA scoped evidence.
+4. **단계:** 내부 P0 25 + P1 12 + P2 20 + P3 19 + P4 18 = **94% 잠정**, P95 미달. `[작업중]` 유지, RELEASE HOLD.
+5. **실패/전환:** GitHub private full repo clone DNS blocked; plugin GitHub read/patch and extracted original JS exact Node execution+TOML parity as pivot; no paid CI/workflow/permission changes.
+6. **repo/branch/SHA:** `hibi89/DBVORA@feature/p0-db-map`, E2E `b02d1c46ac18`, release gate `0cd07e65dfb7`, syntax test `b7c2045253d0`, doc `docs/P1_10_PG_OFFLINE_E2E_20261113.md`. Hub `hibi89/hackathon-command-center-2026@kmong-productization` roster `docs/audits/KMONG_16_CURRENT_20261111.md`.
+7. **Product/runtime:** Python3.11+, Node22 locally for script, standalone offline synthetic PG gate next. Production/Vercel N/A, Windows native unverified.
+8. **Preservation:** main/develop/customer data/PG credentials/permissions/billing/external AI/domain unchanged; feature commit normal rollback. No real PG connection.
+9. **Next:** exact full checkout run `python -m scripts.pg_synthetic_acceptance` (6/6) + new unit tests + `python -m scripts.verify_release_gate` (whole >=553 Python/Node/ZIP). If proven, P1 +1 may justify 95; actual owner-approved PG TLS & Windows/consumer remains P100/sale gate. Marker cannot be removed early.
+10. **KST & evidence:** 2026-11-13, GitHub exact JS + TOML local QA; full tests unrun. SHA must be read back after all updates.
+
 ## 2026-11-13 KST — KUODRA P50 engineering scoped acceptance (10-part handoff)
 1. Goal/use/tech: independent KR DART + US SEC local financial fact evidence software, source/timestamp-correct canonical, A rights gate, B facts, limited C peer, conditional stats/ML, Guard and local reports. Python3.11 and existing KIC safe core.
 2. Completed/decision: main 100pt blueprint and D0–D8 acceptance; develop unmerged synthetic KR+US offline/CLI/Tkinter HTML/JSON, original KIC canonical now mandatory. Shared regional adapters vs KR-only duplication.
