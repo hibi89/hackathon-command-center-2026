@@ -1,3 +1,17 @@
+## 2026-11-12 KST — Kmong EAI P37 native Windows acceptance tool (10 items)
+1. Goal/stack: EAI P85→P95 independently while preserving local CPU-owned Python3.11 tasks and other products.
+2. Decision/delivery: A automatic Windows Actions could consume unverified billable private runner quota; B explicit owner-approved native Windows synthetic CMD acceptance script chosen, with Korean-space path, source-only ZIP, HTML/report and repeat no-clobber checks. No additional paid runs.
+3. Test: private `hibi89/EAI@feature/kmong-eai-85-p31-20261112` code/test SHA `f3a61e624e5d21a21700ec21930a9021b4acd9c2` [Actions #43202624144](https://github.com/hibi89/EAI/actions/runs/43202624144) Ubuntu Python3.11 **637 discovered / 636 PASS / 0 FAIL / 1 Windows-only SKIP**; compileall, CLI, ZIP builder/verifier PASS.
+4. State: EAI **85% provisional, P95 NOT ACHIEVED, RELEASE HOLD**; other 15 product percentages unchanged by this operation.
+5. Issues/attempts/pivot: no current CI fail; native Windows real CMD, Win10/11/SmartScreen, genuine Qwen and commercial rights remain not run. No charge/quota confirmation, thus no Windows hosted action; do not call mocks/Ubuntu success native acceptance.
+6. Repo/branch/SHA: `hibi89/EAI@feature/kmong-eai-85-p31-20261112`, feature `f3a61e624e5d21a21700ec21930a9021b4acd9c2`, subsequent docs HEAD; `scripts/accept_windows_candidate.py`, `tests/test_windows_candidate_p37.py`, `tests/test_customer_candidate_p33.py`, `docs/P37_WINDOWS_CANDIDATE_ACCEPTANCE_20261112.md`; hub `hibi89/hackathon-command-center-2026@kmong-productization`.
+7. Production/runtime: local Python3.11 ZIP only, Vercel/Production not applicable; same unsigned synthetic candidate SHA `6806459198a5214eae28cf95b7bc1000b275186a46d2df31e27b6875ace153b9`, temporary artifact `13934909841`.
+8. Backup/secret/source: EAI previous source `9e53920bd3df` safe rollback, original customer files/main/base, other repos, credentials/data, branch settings and permissions unchanged.
+9. Next steps: on approved Windows10/11 Python3.11 host run `python -m scripts.accept_windows_candidate --ack-windows-host`, then genuine `python -m scripts.accept_local_qwen --ack-local-model --approve-synthetic-run` with actual local Qwen; document OS/browser/SmartScreen/privacy/license/pilot evidence and request owner release approval before P95.
+10. Time/proof: 2026-11-12 KST; exact verified source/test SHA and GitHub CI; docs-only HEAD separately check, no false Windows/real model claim.
+
+---
+
 ## 2026-11-12 KST — Kmong EAI P36 local-model gate (10 items)
 1. Goal/tech: EAI owner-independent 85→95 development with actual evidence, preserve CPU-owned local-first Python3.11.
 2. Delivered/decision: A implicit remote AI/model installation rejected (cost/PII/authority); B explicitly consented local-only Qwen synthetic classification and separately explicit SHA-approved CPU receipt added, isolated from customer originals.
