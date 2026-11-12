@@ -1,3 +1,15 @@
+## 2026-11-12 KST — PREP 독립 코어 로컬 후보 71 PASS / 50% 목표 미달 (해총 10항)
+1. **목표/기술:** `hibi89/prep`의 독립 로컬 Node20+ ESM 범용 CSV 전처리 코어를 50% 기준까지 개발하고 해총 크몽 후보로 추적.
+2. **실제 완료:** 새 clean-room CSV parser, 명시적 매핑/타입 정규화, 중복·결측·수식 위험 검토 큐, 바이트 SHA, CLI inspect/run/verify, 원본 불변/새 파일 출력 코드를 **ChatGPT 임시 ZIP에만 구현**. Private SMAX 소스 이동 없음.
+3. **검증:** Node22.16 Linux `npm test` **71 PASS/0 FAIL/0 SKIP**; ZIP 별도 압축해제 후 동일 71 PASS; 구문/pack dry-run/CRC/CLI 실파일 inspect→run(REVIEW_REQUIRED exit2)→verify PASS. 실제 GitHub 소스·Actions·Windows·업스트림 동등성·고객 환경은 NOT_RUN.
+4. **판정:** PREP 정식 최종상품 진도 **UNASSESSED**, GitHub 실행코드 검증률 0% 유지. **50% 목표 아직 미달 / RELEASE HOLD**. 기존 크몽 활성16종 점수·합계·분모 불변.
+5. **차단/대안:** PREP PUBLIC, 원본 SMAX PRIVATE. 비공개 소스 공개 복사 금지. 원본 SHA/라이선스·동등성·private 전환은 사용자 승인 뒤 진행, 또는 완전 새로운 코드 공개 별도 승인. 소스 자동 푸시 미실행.
+6. **경로·SHA:** PREP 세 브랜치 `main/develop/feature/core-extraction` 갱신 문서 SHA `6427a4880f2a71183ed45a74b1083f99370c0b91`. 임시 ZIP `PREP_STANDALONE_CORE_LOCAL_CANDIDATE_20261112.zip` sha256 `974dbad1f146a154d4f08033cd6e3d0e1f2b87b7966f3b4f7849070f477fdbe4`. [중앙 근거](docs/audits/PREP_INDEPENDENT_PRODUCT_BASELINE_20261112.md).
+7. **배포·환경:** Linux Node22 로컬만, Production/Vercel N/A, 패키지 dry-run만(공개 출시는 없음).
+8. **원본/보안:** SMAX Private/기존 16제품 원본·고객 데이터/권한/비밀·배포 무변경. local generated code는 GitHub에 넣지 않음; 대화 ZIP을 영구 보관소로 간주하지 말 것.
+9. **다음 작업:** PRIVATE 전환/코드 공개 정책 사전 승인 → 정확 SMAX 소스 SHA/골든 패리티 → 후보와 동작 비교·수정 → 기능 브랜치 push → 전체 Native/Windows/어댑터 검증 → 50% 진도 재평가. 기존 16점수 불변.
+10. **시점/근거:** 2026-11-12 KST. 직접 로컬 실행 결과에만 PASS 귀속, 원격 기능 구현 또는 50% 달성 주장은 하지 않음. 해총 kmong branch 이 항목 완료 후 최신 commit SHA 재조회 필요.
+
 ## 2026-11-12 KST — PC CARE 85 provisional engineering, all 16 >=85 (ten-point handoff)
 1. Goal and technology: original PC CARE FINAL_SPEC_V2 Windows CMD/PS5.1 local-only diagnose, proof-based report, consultation, offline recovery-readiness/consent. Owner goal >=85 of all 16 active Kmong products, preserving 100% blueprint.
 2. Delivered and design choice: safer owner-triggered no-network consultation+static A4 readiness vs unverified real WinRE copying. P15+3 menu and card, P16+3 no false-clean JS/Python assessment, P17+2 private path/JSON ambiguities, P18+2 internal-only ZIP/test setup, P19+5 real GitHub Windows full synthetic QA. Original source/production untouched.
