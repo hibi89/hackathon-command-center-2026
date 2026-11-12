@@ -1,3 +1,17 @@
+## 2026-11-12 KST — REA_APP NTFS reparse security and P95 gate (hub 10-item handoff)
+1. Goal/tech: Move REA_APP P85→P95 customer offline packaging safety with frozen original P53, Python3.11+.
+2. Decision/implemented: Symlink-only A misses Windows NTFS junction metadata; shared lstat FILE_ATTRIBUTE_REPARSE_POINT+symlink guard B selected. Apply to source report/directory, output/ZIP ancestors and conservative rollback. No network or original source modification.
+3. Tests: Private feature code+QA `043938bdb8ca4c3802de16622898f4ed93d30004`, docs `9c91ff7494f3c3cfed4d6cb7fe8bfeaf91fbee11`; 4 Git Blobs exactly matched executed local files; Linux Python3.13.5 **50 PASS/0FAIL/0SKIP**, optimized `-O` **50 PASS**, compileall PASS, 9 new simulated NTFS cases. Native Windows/real junction NOT RUN.
+4. Status: REA_APP **85% provisional remains**, 95 NOT VERIFIED; product and all 16 active sales RELEASE HOLD, others' scores untouched.
+5. Blocker/retry/pivot: full private P53 checkout and locked Babel absent (container git DNS blocked); `p53_acceptance.py` exit2 BLOCKED. No paid CI without approval. Browser file:// admin-blocked in Linux; physical Win10/11 needs separate test. Avoid false P95 claim.
+6. Repo/branch/SHA: Private `hibi89/HAE@feature/rea-app-kmong-owner-delivery-20261112`, functional `043938bdb8ca4c3802de16622898f4ed93d30004`, docs `9c91ff7494f3c3cfed4d6cb7fe8bfeaf91fbee11`; [audit](https://github.com/hibi89/HAE/blob/feature/rea-app-kmong-owner-delivery-20261112/docs/REA_APP_P95_REPARSE_SAFETY_20261112.md). Original `REA_APP@2fe581b6` and frozen P53 untouched. Hub `kmong-productization` HEAD verified after writes.
+7. Production/runtime: Vercel/Production N/A, local-only Python3.13.5; actual Windows10/11/Chromium and hosted CI NOT VERIFIED.
+8. Source/backup/security: Previous Git SHA rollback, user sources/credentials/legal rights, original engine, other branches, permission/billing/deployment unchanged.
+9. Next: authorized complete private checkout and exact Babel7.29.9, execute P53 Gate R and six/eight-report→ZIP, then native Windows NTFS junction plus browser file:// and buyer pilot; only rescore 95 with executed proof, obtain approval for paid CI/customer data/release.
+10. KST & evidence: 2026-11-12; remote SHA + local 50 scoped checks verified, original P53 blocked, real Windows unverified.
+
+---
+
 ## 2026-11-12 KST — REA_Web P95 product final closeout (10-item handoff)
 1. Goal/stack: complete remaining owner-independent REA_Web Lite product P95 engineering and close documentation without modifying customer files/Pro.
 2. Done/rationale: seller HTML/ZIP one-command toolkit already verified; final physical customer/privacy/licensing/sales checklist added to docs/62, [Draft PR #34](https://github.com/hibi89/REA_Web/pull/34) left unmerged to prevent unintended release.
