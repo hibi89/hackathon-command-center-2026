@@ -1,3 +1,15 @@
+## 2026-11-12 KST — PREP P85 partial update (hub 10-item handoff)
+1. Goal: PREP independent R01–R12, 85% SDK/report/evidence/security/Linux acceptance.
+2. Change: PRIVATE feature added CSP-static escaped HTML, max-200 preview, CLI HTML path, pre-release SDK, 8 test declarations, manual-only CI, contract doc; no upstream import.
+3. Verified: isolated report test **6 PASS / 0 FAIL / 0 SKIP**, Linux Node22.16 exact Git module+test blob hashes `84daeeea1af5d3667d112df87d6f755aefdad2a9` and `2f55aaa4d1e466b789d0b3d4507b9a5c5dec7720`; updated full suite and CI NOT_RUN. Old 61 PASS refers only earlier code.
+4. State: **P85 partial, not certified; P70 formal not certified; canonical product rate UNASSESSED**, release HOLD. Active16 totals unchanged.
+5. Gaps: SMAX numeric/date/bool/evidence parity & rights, CSV receipt, new HTML E2E, CI, Windows, published SDK/consumer; no test pass fabricated.
+6. GitHub: `hibi89/prep@feature/core-extraction` code `29316f13818765d374aeefdd29e4420b680e3014`, docs `3e58e21875205376276021fc2547728f3c1832f4`, [central evidence](docs/commercial/PREP_P85_PARTIAL_20261112.md); hub `kmong-productization`.
+7. Production: not deployed; no Vercel/Cloudflare Production URL; tests only isolated Linux.
+8. Backup/security: previous PREP SHA `7379b80290f86d1cdefaf7215bef26326dd37f30`; SMAX and PREP main/develop unchanged, no secrets/data export, billing/security changes.
+9. Next: full exact-SHA Linux run and gated manual CI, licensed upstream golden equivalence, receipt/negative security proof, then milestone re-grade; later Windows and consumer.
+10. Date: 2026-11-12 KST; verify source paths and SHA when resuming. 16 active products 1369%p/85.5625% unchanged; PREP independent candidate.
+
 ## 2026-11-12 KST — Factory AX VERIFY W1-70 해총 인수인계 10항 (최신)
 1. **목표:** Factory AX 첫 W1 VERIFY 70% 단계; 장기 W1–W4 전체 완성률과 분리.
 2. **완료:** 4단계 발주/생산/검사/출하 보수적 LOT 대사, 1:N/부분 출하·반품/재작업·기간/누적·원본행 품질 보류, 독립 Python 오프라인 공급자 정책 DRAFT UI.
