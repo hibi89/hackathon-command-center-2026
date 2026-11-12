@@ -1,3 +1,15 @@
+## [2026-11-13 KST] 크몽 등록완료 이력 영구 보존 인수인계 10항
+1. **목표/확정 요구:** 실 크몽 등록 후에도 모든 서비스 행을 **삭제하지 않고 등록완료로 남겨** 미래 중복 게시 거르고 기존 기술 조합 시 참고.
+2. **변경/결정:** 기존 19개 목록에 등록 상태 열(모두 미등록) 추가. 고유 `KMONG-SVC-01..19`와 JSON `listing_status`/`kmong_listing_url`/`published_at_kst`/`listing_history` 도입. 등록완료·판매중지·비공개·게시삭제 시에도 과거 이력 유지.
+3. **테스트:** JSON parse/19 ID 고유성/19건 미등록 및 URL·날짜 null/Markdown 19행 정적검사 PASS. 기능·CI·브라우저·크몽 계정 검증 0.
+4. **상태:** 등록 완료 증거 없음. 현재 **19개 모두 미등록**으로 초기화. 실 등록 개수나 상품 출시 준비를 확인한 것이 아님; 기존 상품별 개발률·[작업중]·판매 HOLD 그대로.
+5. **오류/원인·대안:** 선행 29→19 통합표에 이력 보존 필드가 누락됨→기존 목록을 파괴하지 않고 상태 필드와 정책만 추가. 추후 상품 중복은 동일 고객 문제/납품 산출물 및 기존 9개 옵션 모듈 매핑으로 검사.
+6. **저장소/브랜치:** `hibi89/hackathon-command-center-2026@kmong-productization`, `docs/strategy/KMONG_29_TO_19_SERVICE_CATALOG_20261113.md`, `data/kmong_service_catalog_20261113.json`, `AGENTS.md`, `KMONG_PRODUCTIZATION.md`, `STATUS.md`, `HANDOFF.md`. 정확 SHA는 후속 GitHub write/readback.
+7. **Production/실행환경:** GitHub Markdown/JSON 정책만. 크몽 직접 게시·Vercel/Cloudflare/실서비스·실OS 테스트 미적용.
+8. **원본/백업·보안:** Git parent commit으로 복구, 기존 29종 소스·원본 자료·상품 순위·원래 완성률 보존, 키·고객 자료·권한·비용 변경 없음.
+9. **다음 작업:** 실제 등록 증빙이 생기면 기존 서비스 ID에 등록완료·크몽 URL·날짜·변경 이력을 추가하고 이력 삭제 없이 목록 유지. 새 등록 후보는 과거 등록/중단 서비스, 원천 29개 기술 및 기존 STANDARD/DELUXE/PREMIUM 중복·확장 가능성을 비교한 뒤 승인.
+10. **확인시점/검증한계:** 2026-11-13 KST 사용자 직접 지시, 정적 문서 스키마/집계만 확인. 실제 게시 여부는 판매자 계정 증거 확인 시 갱신; 문서 커밋·원격 readback SHA를 별도 보고.
+
 ## [2026-11-13 KST] 크몽 29→19+1 상품 등록/등급 재편 인수인계 10항
 1. **목표·용도/확정요구:** 사용자 요청 크몽 중복 상품을 별도 게시하지 않고 Standard/Deluxe/Premium 안에 묶고, 전29 원천 제품의 최종 등록 우선순위 확정. 전29 기술95% 가정은 실제 진척 아님.
 2. **완료/결정:** 원천 29=19 독립 고객서비스+9 하위 확장 모듈+내부 AXMART³ CUBE 1. [최종 19순위](docs/strategy/KMONG_29_TO_19_SERVICE_CATALOG_20261113.md)/[매핑 JSON](data/kmong_service_catalog_20261113.json). 별도 구매목적 FFAX/REA_Web, SOVIA/HAE, EAI/AutoML, DBVORA/RAG 분리. 29개 원본 설계와 역할 유지.
