@@ -1,3 +1,15 @@
+## 2026-11-12 KST — 독립 PREP 제품 신규 후보 기록 (해총 10항 인수인계)
+1. **목표·범위·기술:** `hibi89/prep` Node20+ ESM, 로컬 우선 전처리 코어, SHA-256 근거, 품질·매핑 검토, 안전 CLI/SDK를 최종 목표로 함. 크몽 활성16종의 독립 후보로 기록하며 판매 등록 아님.
+2. **완료·판단:** R01–R12 최종 설계·상세 청사진·검수 기준 문서화 확인. 기능은 새 저장소에 아직 이관되지 않음. 원본 전체복사보다 선택적 범용코어 이관이 안전. 16종 현행 점수·분모·합계/평균·순위 변경 없음.
+3. **테스트:** 새 PREP 독립 저장소 코드·Native 테스트·GitHub Actions·Windows/E2E·배포 테스트 **NOT_RUN**; PASS/FAIL/SKIP 미산정. 문서 원격 조회는 제품 테스트가 아님.
+4. **상태/중단:** 독립 PREP **검증된 실행 기능 구현률 0%**; 정식 최종상품 완성률 **UNASSESSED**, RELEASE HOLD. 새 저장소 Public 때문에 Private 원본 코드 이관 차단. 활성16종 편입 금지(별도 승인 전).
+5. **원인·시도·대안:** 기존 Private SMAX 원본을 Public PREP에 복사하면 공개 위험. 소스 복사 미시도. 사용자 승인하에 Private 전환 후 선택적 이관을 우선; 공개 유지 시 비공개 코드를 복사하지 않는 신규 구현만 가능. 실패 재시도나 무단 권한 변경 금지.
+6. **저장소/브랜치/SHA:** `hibi89/prep@main`, 확인 문서 SHA `1b5d2be9ddd289aa03b95809e8fc95afc85fb8a3`, 브랜치 `main`/`develop`/`feature/core-extraction`. 해총 `hibi89/hackathon-command-center-2026@kmong-productization`; 중앙 근거 [PREP 독립제품 감사](docs/audits/PREP_INDEPENDENT_PRODUCT_BASELINE_20261112.md). 허브 종료 SHA 재조회.
+7. **실서비스·환경:** PREP Public GitHub(문서 공개), Production/Vercel/배포 **미적용**, 로컬 Node20+ 계획만 있음.
+8. **원본/보안/백업:** 기존 `hibi89/SMAX` Private와 기존 크몽 활성16개 코드·브랜치·배포·고객 원본 불변. PREP에 토큰·고객 데이터·비공개 소스 업로드 안 함. GitHub 기존 SHA로 문서 복구 가능.
+9. **다음 우선순위·승인:** 먼저 Private 전환 승인 여부 확인 → 원본 SHA/권리·의존성 점검 → 독립 추출 → Native/보안/Windows/소비자 통합 테스트 → 근거 기반 완성률 재산정. 권한/보안·유료·공개 배포는 별도 승인.
+10. **갱신시점/검증:** 2026-11-12 KST, GitHub 저장소 메타데이터와 PREP STATUS/HANDOFF/REQUIREMENTS/ACCEPTANCE 문서 및 해총 기록 확인. 신제품 기능 실행 증거 없음. 중앙 완성률 0%는 **검증된 독립 구현 기준**이지 전체제품 정식 완성률 추정이 아님.
+
 ## 2026-11-12 KST — FFAX 78/100 provisional third-pass update (10-point handoff)
 1. **Goal/tech:** FFAX AI frontend production workbench, react component editor and QA; existing v1 100-point rubric preserved. FFAX is separate candidate (NOT active16).
 2. **Work/decision:** Private FFAX manual owner-controlled AI copy→strict JSON approval UI, no automatic model/provider connection; added fail-closed secret/output checks, cleanroom test, optional manual-only Actions workflow. Safer manual proof before external billing/data approval.
