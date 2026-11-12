@@ -1,3 +1,17 @@
+## 2026-11-12 KST — REA_APP P95 goal, actual output-deletion race remediation (10 items)
+1. Goal/technology: frozen REA_APP P53 Python3.11+/Node/Babel7.29.9 and local source-bound buyer review ZIP/pyz, target 95.
+2. Done/decision: two reproduced actual synthetic-data destructive cases: swapped review output symlink followed by cleanup erased 3 unrelated files, and replaced ZIP path erased another writer's archive on writer failure. Compared byte+inode checked rollback (still TOCTOU) vs **no automatic deletion** (selected). Original parser unchanged; failures now HOLD and manual output review with no overwrite.
+3. Tests: feature code+QA SHA `ccfb96fc4b5f5fe424d97020119ccc6f0c28a313`, docs HEAD `d3e18fa116f4831f6219364c0c62af7b30997205`, 7/7 changed file Git Blobs match local. Linux Python3.13.5 **62 tests discovered/60 PASS/2 native SKIP/0 FAIL**, `python -O` same, compileall PASS. Updated `.pyz` SHA256 `92001c97f721ac4a4131687a8f964d0a0d6a25c499c7ed4d6be549346b89ba4c`, 10,388 bytes, identical two builds and actual independent synthetic ZIP/sources-unchanged proof.
+4. Status: **85% provisional, P95 NOT achieved, RELEASE HOLD**; other 15 central products and 16-denominator unmodified.
+5. Blocker/cause/pivot: private full original P53 checkout and Babel package unavailable in Linux container due GitHub/npm DNS; direct Windows NTFS junction/Edge Chrome `file://`, actual original Gate R and source-generated 6/8 report E2E still NOT RUN. Stop repetitive blocked attempts. Paid GitHub Windows CI requires explicit approval if needed.
+6. Repo/branch/SHA: private `hibi89/HAE@feature/rea-app-kmong-owner-delivery-20261112`, source `ccfb96fc4b5f5fe424d97020119ccc6f0c28a313`, docs `d3e18fa116f4831f6219364c0c62af7b30997205`; [audit](https://github.com/hibi89/HAE/blob/feature/rea-app-kmong-owner-delivery-20261112/docs/REA_APP_P95_FAIL_CLOSED_OUTPUT_INTEGRITY_20261112.md); original `REA_APP@2fe581b6` untouched. Hub `kmong-productization` HEAD verify after sync.
+7. Production: N/A, offline Python zipapp review only, unsigned/not EXE. Linux Python3.13.5 scoped; no current Windows proof, Vercel not applicable.
+8. Originals, recovery & privacy: original P53 and customer inputs unchanged, all safety experiments temporary synthetic. Failed generated outputs retained rather than automatically deleted; previous code Git SHAs permit rollback, no paid CI, keys, external transfer or deployment.
+9. Next: authorized native Windows checkout + exact installed Babel7.29.9, execute `python retail_qa/strict_windows_gate.py` which calls original verify_gate_r and p53_acceptance, 62 cases with no native skips and actual 6/8 source reports to ZIP, then buyer rights/NOTICE/support/pilot and explicit release approval. No false P95 rescore.
+10. 2026-11-12 KST verification: 7/7 source Git blob parity and Linux 60 scoped PASS, real native Windows/Node original/Babel/customer release BLOCKED or UNVERIFIED.
+
+---
+
 ## 2026-11-12 KST — Kmong SOVIA P40 isolated public projection 4/4 CI (10-point handoff)
 1. Goal/stack: SOVIA independent source-first 90→95 technical work, public synthetic-only Python3.11+ and eventual private first-party LA provenance integration, no customer data by default.
 2. Choice/delivery: A direct raw private LA run/audit/SQLite import to public audit rejected (information loss/PII/unauthenticated consent). B strict bounded public abstract LA-like projection + independent SOVIA verified report count/plan comparison chosen; 12 negative/positive tests, isolated `-I -B` CLI; no writes or external data.
