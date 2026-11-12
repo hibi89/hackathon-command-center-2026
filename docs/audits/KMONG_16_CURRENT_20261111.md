@@ -1,3 +1,5 @@
+> **2026-11-12 KST — 독립 PREP 신규 후보 최신화(기존 크몽 활성16종 제외):** 새 공개 저장소 [`hibi89/prep`](https://github.com/hibi89/prep) 설계 문서 기준 HEAD `1b5d2be9ddd289aa03b95809e8fc95afc85fb8a3`. 최종 제품 설계/R01–R12 검수 기준은 문서화되어 있으나 독립 실행 코드 이관·테스트/CI/Windows/패키징 **NOT_RUN**. **독립 구현·실행 검증률 0%(검증된 기능 기준), 정식 최종상품 완성률 미산정(UNASSESSED), RELEASE HOLD**. 기존 SMAX² 50% 역사 기록 및 현행 SMAX² 85% 잠정은 PREP 수치가 아니다. PREP는 활성16종 외 별도 육성 후보로 기록; 16종 합계·평균·분모·개별 완성률 전부 **불변**. PREP가 Public이므로 Private SMAX 소스 이관 차단; 보안 설정 변경·원본 수정 없음. [근거 및 다음 작업](docs/audits/PREP_INDEPENDENT_PRODUCT_BASELINE_20261112.md).
+
 ## 2026-11-12 KST — FFAX manual-AI and offline cleanroom extension; **78/100 provisional unchanged**
 - **Private repo:** `hibi89/frontend-foundry-ax@feature/ffax-workbench-p85-20261112`. code `ffd04a8f452ef3f7523201767b1f18cd3d18fb31`; docs `0dac41467e404a2521f6f458b2282b7b1601133d`. Main preserved.
 - **Feature:** owner consent before exporting safe UI-only prompt for optional manual use with ChatGPT, pasted strict model JSON rejected if secret, invalid component or absent owner design approval; visual canvas/TSX updates only after acceptance. No auto AI provider calls/billing/GitHub merge.
