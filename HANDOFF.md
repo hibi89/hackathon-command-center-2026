@@ -1,3 +1,15 @@
+## 2026-11-12 KST — 크몽 작업중 표기 규칙 전파 인수인계 (운영 문서 작업 완료)
+1. 목표/범위: 모든 현행 크몽 상품 담당자가 작업을 시작하면 중앙 최종완성률 표에 `[작업중]` 커밋, 목표 달성·작업 종료·전환 시 해제. 활성16종과 별도 PREP/FFAX/Factory AX 후보 상태표 구분. 사용자 승인 받은 **운영 지침 변경**이며 제품 코드 변경 아님.
+2. 결정/구현: 제품 루트 `AGENTS.md` 최상단 필수 지시 삽입, 중앙 `AGENTS.md`·`docs/audits/KMONG_16_CURRENT_20261111.md` 후보 상태표 보완, 동시 수정 보존·허브 쓰기 실패 `KMONG_HUB_SYNC_PENDING` 명시. 원본/숫자/RELEASE HOLD 보존.
+3. 검증: 연결 GitHub 원격에서 **15개 저장소·21개 주요 브랜치 중 21/21 AGENTS 정책 식별자 재조회 PASS/0 FAIL**, commit identity `hibi89` 표본 2 PASS. 테스트 명령/서비스 브라우저/API/Prod는 **미적용**(문서-only 운영 규칙).
+4. 상태: 운영 규칙 **반영·검증 완료**. 실제 제품 담당자의 착수/종료 상태 자동 갱신 **미구현**. 현재 실제 진행 중인 다른 채팅을 검증했다는 주장은 하지 않는다.
+5. 오류/차단: 문서 쓰기 1회 409 HEAD 경쟁 발생. 최신 파일을 다시 읽고 원본 내용을 보존해 재시도. 허브 HEAD 경쟁 시 최신 재조회·기존 기록 보존 후 충돌 해결, 타 담당자 표식 임의 제거/force push 금지.
+6. 저장소/경로: `hibi89/hackathon-command-center-2026@kmong-productization`. 상세 21개 저장소/브랜치/정책 커밋 SHA는 [전파 감사](docs/audits/KMONG_MARKER_ROLLOUT_20261112.md) 참조.
+7. 배포/환경: Vercel·Cloudflare Production **미적용**. GitHub 문서 커밋만 수행, 배포/권한/환경변수 무변경.
+8. 원본/보안/복구: 기존 정책 파일은 Git 이력에서 복구 가능, 전 제품 정상 소스·고객 정보·원본·비밀·배포 변경 없음. 공개 중앙 저장소에는 비공개 코드를 기록하지 않음.
+9. 다음: 각 제품 담당자는 새 `ㄱ`에서 제품 `AGENTS.md` 최상단을 읽고 중앙 표 최신 HEAD 확인→실착수 시 자기 상품만 마킹→목표 달성·종료/전환 시 해제→원격 검증. 중복/다른 담당자 마크 보존. 후보의 정식 활성16종 편입은 별도 승인.
+10. 갱신 기준: 2026-11-12 KST / 확인 범위 각 브랜치 AGENTS 상단 원격 재조회(21건) / 중앙 집계변경 없음 / 문서 기준 SHA는 본 HANDOFF 커밋의 원격 HEAD.
+
 ## 2026-11-12 KST — AI Code Checker P95 attempt / 16-job CI evidence (10 points)
 1. Scope/tech: Code Checker offline Windows Python AST/Tk/PyInstaller, 85→95 target excluding concurrent coin pattern and collector work.
 2. Change/design: 3 private ZIP/JSON scripts had pathname unlink risk after concurrent replacement; compared inode-check unlink (TOCTOU persists) vs preserve-on-error HOLD (selected). Original Gemini/local scanner unchanged.
