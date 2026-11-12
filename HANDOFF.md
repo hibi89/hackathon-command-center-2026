@@ -1,3 +1,15 @@
+## 2026-11-12 KST — REA_Web full-repo original regression follow-up (10)
+1. Goal: improve P95 confidence on existing REA_Web P92 without user intervention or changing product code.
+2. Change: existing independent branch CI expanded to full tests directory both OS, no code/production modification.
+3. Tests: exact REA_Web SHA 397e0f2f04cb9c01fbcdabcf399239ce93b14cca [Actions #43181986482](https://github.com/hibi89/REA_Web/actions/runs/43181986482), Windows 676 PASS/19 SKIP, Ubuntu 665 PASS/20 SKIP, 0 FAIL; earlier 3-row native file:// + CSV/HTML/ZIP browser E2E PASS, 6 subtests each, 1 WARN.
+4. Completion: P92 unchanged, 95 NOT ACHIEVED, RELEASE HOLD. Central active16 sum1376pp mean86.0; 16>=85, 0>=95.
+5. Error: no new test failures; avoid falsely equating separate D1-D31 workflows or physical buyer checks to full pytest.
+6. Repo: hibi89/REA_Web feature/lite-owner-delivery-p95-20261112 tested 397e0f2f; central hibi89/hackathon-command-center-2026 kmong-productization.
+7. OS/deploy: hosted Ubuntu/Windows PASS, physical buyer Win10/11 NOT_RUN, Production/Vercel N/A.
+8. Backups/security: original Lite/Pro, customer data, credentials, vendor rights, publishing unchanged. Old SHAs available for rollback.
+9. Next: user physical Win10/11 manual file save/reopen acceptance and 3 pilots; privacy/vendor NOTICE/licensing/support/price GO approval required. Do not inflate engineering percent from tests.
+10. Updated 2026-11-12 KST, tested SHA cited; hub documentation commit to verify.
+
 ## 2026-11-12 KST — Kmong REA_Web P92 continuation (ten-field handoff)
 1. Goal: independent progression toward P95 on existing product, owner-free until physical/legal sale gate.
 2. Done: hosted actual file URL browser CSV rejected/accepted owner mapping, exported Blob→independent verified ZIP→file reopen, no production or original mutation.
