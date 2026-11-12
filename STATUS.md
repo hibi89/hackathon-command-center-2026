@@ -1,3 +1,5 @@
+> **2026-11-12 KST — DBVORA P4-03, 최종 목표 P95 미달 / 85% 잠정 유지:** 제품 `hibi89/DBVORA@feature/p0-db-map`에서 추출 ZIP의 미등록 모든 파일(확장자 없는 파일 포함) 검증 차단, 매니페스트와 맞는 CPython 생성 캐시만 허용, 캐시 hardlink 거부. 회귀 코드 추가. **Linux 임시 폴더 19 PASS/0 FAIL(격리 재구성 규칙)**이며 원본 전체 >=553 Python+Node, 실제 ZIP·Windows3.11/NTFS·PG·고객 테스트는 **미검증**. 개발 기능 SHA `b1b80d52dc3c`, 제품 문서 HEAD `3a86dfa5f093`. **완성률85% 그대로, RELEASE HOLD**, 해총 DBVORA [작업중] 유지, 다른 상품 불변. [세부](docs/audits/KMONG_16_CURRENT_20261111.md).
+
 ## 2026-11-12 KST — AI Code Checker P95 목표 달성·[작업중] 해제 (사용자 확정)
 - 중앙 활성16종 표의 AI Code Checker는 검증기록상 기술 **95% 잠정**으로, 사용자는 현시점 100% 작업 목표를 부여하지 않았으며 **[작업중] 표시 즉시 해제**를 명령. 해당 행만 표식 제거 및 'P100 목표' 표현을 **출시 검증 HOLD**로 수정·원격 확인. 별도 고객/법적/권리/판매 검증은 미완료이며 상품 출시 승인 아님.
 - 다른 상품 DBVORA·Astra PDF Redesigner·AXMART³ CUBE의 `[작업중]` 표시 보존(3개). 코드·CI·Production 변경 없음. [정본 표](docs/audits/KMONG_16_CURRENT_20261111.md).
