@@ -1,3 +1,6 @@
+## [2026-11-13 KST] 크몽 최종 등록 서비스 정본: **29개 원천 → 19개 판매 게시글 후보 + 내부 CUBE 1개**
+[상품군·최종 1~19위·STANDARD/DELUXE/PREMIUM](docs/strategy/KMONG_29_TO_19_SERVICE_CATALOG_20261113.md) / [원천29↔19+1 전수매핑](data/kmong_service_catalog_20261113.json) / [Sol Ultra 최종설계 잠금 검수](docs/strategy/KMONG_BLUEPRINT_LOCKED_SOL_ULTRA_QA_20261113.md). 기존 29종 진척·마커·판매 HOLD 불변. 원래 29개 순위는 원천별 비교 이력으로 유지하며 **실제 판매 등록 우선순위는 새 19개 서비스표**. 검증·심사·게시 전 모두 HOLD.
+
 > **[2026-11-13 KST · 크몽 29종 상품화/최종설계 잠금 운영 정책]** [가정 95% 상품화 우선순위 1~29위](docs/strategy/KMONG_P95_HYPOTHETICAL_COMMERCIALIZATION_PRIORITY_20261113.md) · [Sol Ultra 독립 누락감사+UI/UX 고도화 SOP](docs/strategy/KMONG_BLUEPRINT_LOCKED_SOL_ULTRA_QA_20261113.md). **이는 모든 29개를 실제 95%로 기록하는 변경이 아니다.** 기존 상품 최종완성률·HOLD·[작업중]·[사용자 개입 필요] 일체 보존. 우선 DATA2WEB→PREP→FlowPilot Universal 3종에 SKU 표준납품 게이트를 적용하되, 고객/법적/실 Windows/실서비스 검증과 소유자 승인 전 출시 불가. GitHub 최종설계가 기준, Sol Ultra는 독립 감사/UX PR 역할, 전체 원본 재작성·테스트 없는 PASS 주장 금지.
 
 ## [최신 2026-11-13 KST] GitHub 35개 저장소·457개 브랜치 대조 후 크몽 최종상품률 정본

@@ -1,3 +1,15 @@
+## [2026-11-13 KST] 크몽 29→19+1 상품 등록/등급 재편 인수인계 10항
+1. **목표·용도/확정요구:** 사용자 요청 크몽 중복 상품을 별도 게시하지 않고 Standard/Deluxe/Premium 안에 묶고, 전29 원천 제품의 최종 등록 우선순위 확정. 전29 기술95% 가정은 실제 진척 아님.
+2. **완료/결정:** 원천 29=19 독립 고객서비스+9 하위 확장 모듈+내부 AXMART³ CUBE 1. [최종 19순위](docs/strategy/KMONG_29_TO_19_SERVICE_CATALOG_20261113.md)/[매핑 JSON](data/kmong_service_catalog_20261113.json). 별도 구매목적 FFAX/REA_Web, SOVIA/HAE, EAI/AutoML, DBVORA/RAG 분리. 29개 원본 설계와 역할 유지.
+3. **테스트:** 전29 식별자 1회씩, 고유19순위 및 내부1, JSON parse·집계 정적 검산. 코드 실행 0, Actions 0, 실 고객·OS·브라우저0, 크몽 게시/심사0. 실제 크몽 3등급 공개사례 확인.
+4. **상태:** 기획 문서 변경만, 실제 19개 등록된 것 아님. 기존 29개 최종완성률·작업중/Astra 사용자 개입·SALE HOLD 모두 유지. 19개 모두 출시 승인은 별도 필요.
+5. **오류/원인/대안:** 서로 같은 고객 문제를 29개 별도 게시하면 중복 위험. 고급 기술·라이선스 경계를 패키지 차등화로 해결, 원본 기능/코드는 삭제/합치지 않음. 실제 기능이나 고객 목적이 다르면 별도 판매 서비스 유지.
+6. **저장소/브랜치/SHA:** `hibi89/hackathon-command-center-2026@kmong-productization`, 신설 `docs/strategy/KMONG_29_TO_19_SERVICE_CATALOG_20261113.md`/`data/kmong_service_catalog_20261113.json`; KMONG_PRODUCTIZATION/현재완성률감사/과거 29순위/AGENTS/STATUS/HANDOFF 최신 정책 최상단. 문서 커밋·remote ref 검증 뒤 실제 HEAD 인용.
+7. **Production/URL/환경:** GitHub Markdown/JSON만, Vercel/Cloudflare·크몽·프로덕션 N/A, UI/API/Windows 실검증 미실행.
+8. **백업/보안/원본:** 변경 직전 Git parent SHA 롤백 가능, 기존 제품 소스/원본 데이터/고객파일/비밀/권한/결제·상업권 불변.
+9. **다음 절차/승인:** 배치 A 1~10위·B 11~19위 순으로 설계별 요구사항 추적→Sol Ultra 독립 감사/UX PR→정확 SHA 실제 CI·실고객 Windows/브라우저·권리/사업자/지원·심사→소유자 최종 승인. 현장/유료/실게시 승인 없이 실행 금지.
+10. **갱신 시각/범위:** 2026-11-13 KST, 중앙 기존29·관련 제품 원본 요구/Blueprint·크몽 실제 3등급 사례. 제품 29개 재실행이나 시장수요/계정별 등록 한도 검증이 아님. 최종 문서 GitHub SHA는 실 ref 조회.
+
 ## KUODRA 2026-11-13 KST 최종 사후 CI — 기능 SHA `8b8801991870f1a98117b68bd23ed2e99c77cacb`, [Actions #43300053991](https://github.com/hibi89/KUODRA/actions/runs/43300053991) Ubuntu·Windows 각 275/275 PASS/0 FAIL, Windows 1125파일 ZIP SHA 및 임시 설치/검사/명시제거·고객 원본 보존 PASS. 내부 최종상품 완성률 89% 잠정, P95 미달·KUODRA `[작업중]` 유지, 실제 기업/권리/고객 Windows/법률/판매 GO 미검증, RELEASE HOLD. 다른 상품·KIC 원본 불변.
 
 ## 2026-11-13 KST — KUODRA P95 재개 부분완료, 10항
