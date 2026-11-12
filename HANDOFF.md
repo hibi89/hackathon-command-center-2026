@@ -1,3 +1,15 @@
+## 2026-11-12 KST — Astra P84 recovered CI central handoff (10 fields)
+1. Goal/technology: one-product Kmong Astra PDF Redesigner to 95%, offline React/TS/Vite/Electron/PDF.js. Keep central [작업중] until verified milestone.
+2. Completed/decisions: P82/P83 vector stroke checker failed actual PDF.js operator integration; choose correct constructPath embedded opcode decoding instead of pixel-parity claims; GUI+CLI+tests repaired in ceef31.
+3. Tests: P83 Linux #43233430431 FAIL 146PASS/2FAIL, Windows #43233430460 FAIL 145PASS/2FAIL/1SKIP, Edge FAIL. P84 exact code ceef31 Linux Chrome/Edge #43235958596 SUCCESS 2/2 jobs, Node 148PASS, build PASS, real browser STEP7 PASS; Windows #43235958651 SUCCESS 1/1, Node147PASS/1SKIP, desktop16PASS, NSIS install/upgrade + 8/8 layouts PASS; actual customer/owner physical PC NOT VERIFIED.
+4. Status: product engineering 85% provisional, 95 goal not met, release HOLD, [작업중] persisted. No auto-unmark on chat switch.
+5. Root/failed attempts/pivot: relying on narrow PR-only GitHub workflow query yielded empty, but push workflows existed. Used read-only GitHub Actions REST GET to inspect exact code, failing test logs and synthetic diagnostic. Top-level OPS.stroke ignored embedded constructPath, fixed once with actual evidence.
+6. Repo/branch/SHA: hibi89/astra_pdf_redesigner feature/astra-p71-pdf-source-parity-20261112 code ceef31d121d3, docs a8b1e9f00ab4; Draft PR10; hub hibi89/hackathon-command-center-2026 kmong-productization, roster docs/audits/KMONG_16_CURRENT_20261111.md.
+7. Execution/deployment: npm test/build, actual Chrome/Edge/Windows hosted Actions, Electron NSIS. Vercel production N/A, no release or service deployment.
+8. Original/data/auth: previous P83 SHA 36bc recoverable, no buyer PDFs, local IndexedDB, secrets, existing main or API permissions changed; synthetic CI images only.
+9. Next milestones: owner-approved customer PDF samples / physical Windows, PRO20/BUSINESS30 unique designs, rights/license signed installer and approved local Korean model; maintain hold and marker until 95 objectively satisfied.
+10. Updated 2026-11-12 KST; exact GitHub run IDs, raw logs, branch/code/central scoreboard verified. This document's SHA is the hub documentation commit to read after write.
+
 ## 2026-11-12 KST — CUBE P95 native runner false-green repair (10-point handoff)
 1. Goal/stack: AXMART³ CUBE Node18+ local production static release preflight, 85→95 engineering target; goal lock required until verified.
 2. Done/decision: strict child node-test worker env sanitization, real TAP test count + fail status, 3 new failure/forged-GO regressions on 13 suite+build+review CLI. Avoid automatic private paid CI; choose free offline deterministic full checkout gate.
