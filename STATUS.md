@@ -1,3 +1,8 @@
+## 2026-11-12 KST — REA_APP P95 target security validation 32 scoped PASS (85% retained)
+- Private `hibi89/HAE@feature/rea-app-kmong-owner-delivery-20261112` product SHA `31011f67eb8cacd56a5533e4602531ad38c47483`, docs HEAD `ff21b5d323c313a9eff437d661b12f826ab63832`. Canonical whole ZIP prevents hidden suffix and preflight-to-pack byte swap fixed; synthetic source schema-shaped test added.
+- Linux Python3.13.5 **32 PASS / 0 FAIL / 0 SKIP** exact remote Git Blob 3/3 matched; original Gate R/QA and actual P53 bundle/Windows/file:// unverified; Chromium direct file navigation blocked by admin. GitHub hosted CI not executed. No commercial GO.
+- **REA_APP 85% provisional unchanged / P95 NOT achieved**, RELEASE HOLD; all other 15 items and 16-product roster scores unchanged. [Proof](https://github.com/hibi89/HAE/blob/feature/rea-app-kmong-owner-delivery-20261112/docs/REA_APP_P95_ZIP_SECURITY_RETEST_20261112.md).
+
 ## 2026-11-12 KST — REA_Web P92 exact full original pytest cross OS, no added percent
 - Product branch hibi89/REA_Web@feature/lite-owner-delivery-p95-20261112 SHA 397e0f2f04cb9c01fbcdabcf399239ce93b14cca [Actions #43181986482](https://github.com/hibi89/REA_Web/actions/runs/43181986482) Windows+Ubuntu 2/2 SUCCESS. Entire pytest tests Ubuntu 665 PASS/20 SKIP, Windows 676 PASS/19 SKIP, 0 FAIL; six subtests each, one warning each. Real hosted file:// synthetic owner flow PASS. Original product code and production untouched; only CI whole-suite step added.
 - Central active 16 scores unchanged (REA_Web P92, total1376 pp mean86.0%, 95+ none). Physical buyer and legal/license/sale acceptance still NOT VERIFIED, all RELEASE HOLD. Full D1–D31 separate workflows not claimed.
