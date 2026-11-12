@@ -1,3 +1,15 @@
+## 2026-11-12 KST — Code Checker P3-07 to P100 verification (10-point)
+1. Goal/tech: offline Windows AST/Tk/PyInstaller Code Checker, user `ㄱ` continuation after P95; P100 final consumer sale gate.
+2. Delivered: actual Windows EXE SHA-bound 71-row unresolved NOTICE owner-progress template+summary validator with forged approval/stale queue fail-closed, no user/vendor original data uploaded.
+3. Exact evidence: feature `ec83e83e5a0becc6e9fde61b6e2970d773633e01`; [GitHub Tests 43226330001](https://github.com/hibi89/ai-code-checker/actions/runs/43226330001) **16/16 SUCCESS**; [Windows 43226330609](https://github.com/hibi89/ai-code-checker/actions/runs/43226330609) **1/1 SUCCESS**; real frozen EXE SHA256 `7579fb43d65a407494f7181419214e32712f2f03b5feb500de494fc1f46c8880`.
+4. Completion: engineering **95% provisional unchanged**; 100% production, customer original/rights and seller acceptance **NOT DONE**; RELEASE HOLD; `[작업중]` retained per owner 100% target.
+5. Problems/pivot: no failures in exact CI; printable worksheet-only did not record item identity/progress; SHA-bound template+summary added. No automatic rights/legal approval.
+6. Repo: hibi89/ai-code-checker@feature/retail-private-candidate-20261112 code `ec83e83e5a0becc6e9fde61b6e2970d773633e01`, docs `64744eebd109ebbdfd6dafca23ec23329cc3ee77`; hub hibi89/hackathon-command-center-2026@kmong-productization; new script `scripts/ci_real_frozen_notice_review.py`.
+7. Production: hosted GitHub Windows2025 native EXE, tests; public downloadable EXE/sales deployment NONE, Vercel N/A, main unchanged, PR #82 draft.
+8. Originals/security: only synthetic code/metadata; vendor originals and customer materials never copied to GitHub; previous code `3d92c4c0f3886d80e499261b8b6d44b7791713c4` recoverable; no force push/paid API.
+9. Next: actual buyer no-Python Windows10/11, interactive Korean PDF and SmartScreen/Defender OS packet checks, legal original vendor rights & 71 rows, final owner-only license/NOTICE/support/refund/customer ZIP and GO before sale.
+10. Updated 2026-11-12 KST; exact proof source `ec83e83e5a0becc6e9fde61b6e2970d773633e01`; central SHA after commit. Code Checker marker remains until 100% verified, other markers untouched.
+
 ## 2026-11-12 KST — Astra P78 central handoff (10 points)
 1. Goal / technology: raise ASTRA PDF Redesigner 85 to 95, offline React/TS/Electron/PDF.js and owner-controlled source/output PDF review.
 2. Feature/decision: chose O(N) count-only within-page extracted order warning instead of costly false fidelity certification, integrated independent CLI and UI without schema edits.

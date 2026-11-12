@@ -1,3 +1,8 @@
+## 2026-11-12 KST — Code Checker P3-07 native EXE owner NOTICE review: 71/71 roster, P95 maintained / P100 target
+- Product `hibi89/ai-code-checker@feature/retail-private-candidate-20261112`, code `ec83e83e5a0becc6e9fde61b6e2970d773633e01`, docs `64744eebd109ebbdfd6dafca23ec23329cc3ee77`, [Tests 43226330001](https://github.com/hibi89/ai-code-checker/actions/runs/43226330001) 16/16 SUCCESS, [Windows 43226330609](https://github.com/hibi89/ai-code-checker/actions/runs/43226330609) 1/1 SUCCESS; actual native EXE SHA256 `7579fb43d65a407494f7181419214e32712f2f03b5feb500de494fc1f46c8880`, 71/71 unresolved metadata names bound to exact EXE and queue/owner template/summary, forged approval/stale progress denied.
+- Stage 95% provisional engineering unchanged, next P100 actual consumer/software/redistribution license/NOTICE/Defender/SmartScreen/network and explicit owner approval unverified. RELEASE HOLD.
+- User goal-lock: `[작업중]` AI Code Checker **maintained** for P100 until actually verified; other chat rows unchanged. [Full evidence](https://github.com/hibi89/ai-code-checker/blob/feature/retail-private-candidate-20261112/docs/P3_07_REAL_EXE_NOTICE_PROGRESS_20261112.md).
+
 ## 2026-11-12 KST — ASTRA P78 further development, P95 incomplete
 - `hibi89/astra_pdf_redesigner@feature/astra-p71-pdf-source-parity-20261112` source `071978729197c671f2a41b0e1ce6ad838ce24f8b`, product documentation `736c2930025faf5f81de700411bcc916a6428ceb`.
 - Actual same-page token order swap previously undetected by global/page multisets is now flagged as an advisory risk in CLI and GUI, with tests; exact Git blob `f249d24d` local 5 PASS / 0 FAIL, 300 cases + 300000-token stress, tsc PASS. Full actual PDF.js/browser/Windows/CI latest SHA NOT VERIFIED.
