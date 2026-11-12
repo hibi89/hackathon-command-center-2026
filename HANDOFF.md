@@ -1,3 +1,15 @@
+## 2026-11-12 KST — Factory VERIFY P85 goal, 82 provisional: handoff 10 points
+1. Goal: first product W1 VERIFY targeted 85 per original acceptance; overall Factory ecosystem UNASSESSED.
+2. Done: retain W1-70; add source SHA recapture, exclusive new report/complete marker, independent unsigned receipt verify, manual local ZIP backup & new restore, Tkinter source GUI, deterministic pyz/CMD package, rights inventory.
+3. Tests: local Linux Python3.13 115 PASS/0 FAIL/0 SKIP, compileall and pyz E2E/package/backup/tamper tests PASS; no hosted CI/Windows/customer test.
+4. State: VERIFY 82% provisional (+12 from 70), W1 85 NOT met, release HOLD, whole Factory UNASSESSED.
+5. Issues/stop: initial 105/107 tests fixed fixture path and tamper error order; then 115/115 PASS. Windows environment unavailable; private CI minute cost unverified. Sequential SHA recheck not a multi-file atomic snapshot; owner spec not authenticated.
+6. Repo/branch/SHA: hibi89/factory-ax-ecosystem feature/data-verify at 06a64f9c84aef37661423ec6dde49c2c12359b65; previous c324158c...; original main unchanged. Hub commit SHA query after update.
+7. Runtime: Python>=3.11, optional Tkinter, Python -m factoryax spec/output, verify-report, backup-report, restore-backup, gui; pyz/CMD are unsigned QA only, Production N/A.
+8. Original/security: synthetic only, no secret/data transfer, payment, source copying, permission or deploy changes; previous Factory commit available via normal revert.
+9. Next: clean native Windows/NTFS/Tkinter/Defender/Korean-path/no-network and GitHub CI regression, approve costs/rights then reassess 85. Customer sale later.
+10. Last checked 2026-11-12 KST; GitHub source SHA and local synthetic tests only; Windows/CI/customer unverified, RELEASE HOLD.
+
 ## 2026-11-12 KST — PREP P85 Linux 75-case hub handoff (current; ten items)
 1. Goal: PREP standalone R01–R12 with P85 Linux SDK/report/security/evidence gate, not release.
 2. Changes: six security regression cases; explicit package files allowlist to block untracked build artifacts. No upstream source or active product changes.
