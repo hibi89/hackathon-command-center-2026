@@ -1,3 +1,17 @@
+## 2026-11-12 KST — SOVIA 95% 잠정 엔지니어링 / 10항 인수인계
+1. 목표·스택: 공개 SOVIA 오프라인 Python3.11+ 독립 AI 에이전트 감사, 비공개 Lightning Azent 실제 합성 SQLite 영수증 연결. 고객자료 사용과 실제 판매는 여전히 금지.
+2. 구현·선택: 비공개 LA 원본 직접 공개 복사는 PII/IP/인증 문제로 기각. 독립 PRIVATE HAE 기능브랜치에서 실제 영수증 검증→비식별 단계 집계/관측→PUBLIC SOVIA 공개 소스를 private CI 내부에서만 대조. 별도 0.15 ZIP으로 검수용 배포 후보 독립 구현. P41+2/P43+2/P42+1=90→95%.
+3. 실제 검증: PRIVATE feature/sovia-la-projection-p41-20261112 기능 SHA 7b27c4926ee353d537a1526d8b4d2919b9f86eeb [CI](https://github.com/hibi89/HAE/actions/runs/43215726885) Windows/Ubuntu 2/2 성공, 환경별 LA128PASS·HAE91PASS, Windows 집중1PASS. PUBLIC SOVIA a6991d062e657073fd5c5df077c87db9aa390515 [CI](https://github.com/hibi89/SOVIA_sovereign/actions/runs/43214296725) 4/4 성공, 각944 중 Windows933 PASS/11 SKIP, Ubuntu920 PASS/24 SKIP, FAIL0. 문서+아티팩트 CI SHA 97420d4d94a26a54e68eeddcf456419310e42b39, [CI](https://github.com/hibi89/SOVIA_sovereign/actions/runs/43216613567) 4/4 성공.
+4. 상태: SOVIA 전체 최종설계 대비 기술완성률 95% 잠정, 상용 RELEASE HOLD. 활성16종 총1389pp·평균86.8125%, 95이상 SOVIA/REA_Web 2종. LA 자체 85% 및 타15종 유지.
+5. 실패·복구: 초기 private P18 고정 패키지 내부 소스 추가로 8개 기존 회귀 FAIL → 신규 어댑터를 패키지 바깥 독립 모듈로 이동, 원본 P18 유지. P43 중복이벤트 테스트가 마지막 완료이벤트를 밀어 기존 검사가 먼저 실패 → 최종 완료이벤트 유지하도록 테스트 수정. 최종 정확 SHA 2/2 CI 통과. 비인가 실제 고객 인증은 해결되지 않음.
+6. 저장소·브랜치·경로: PUBLIC hibi89/SOVIA_sovereign@feature/kmong-la-review-p2-20261112, 0.15 builder/verify_portable_la_minimal.py, RUN_LA_MINIMAL.cmd, sovia_la_minimal_projection.py, docs/SOVIA_P95_FIRST_PARTY_SYNTHETIC_20261112.md. PRIVATE hibi89/HAE@feature/sovia-la-projection-p41-20261112, packages/lightning-azent/sovia_projection_private.py, sovia_semantic_projection_private.py, verify_sovia_p41_roundtrip.py. 중앙 본 브랜치 kmong-productization.
+7. Production·실행·아티팩트: Vercel/Production 해당 없음. SOVIA v0.15 synthetic-only ZIP+SHA CI 아티팩트 ID 13943916710, 14일 보관 [GitHub Actions](https://github.com/hibi89/SOVIA_sovereign/actions/runs/43216613567). 0.15 Windows RUN_LA_MINIMAL.cmd --ci는 가상 데모이며 실제 LA는 PRIVATE CI에서만 실행함. 판매 릴리스 아님.
+8. 원본·백업·비밀: PUBLIC develop/main 및 0.14 이하 패키지 원본 보존. PRIVATE 기존 LA 담당 브랜치 febb0ebe773afa47ab596377196b4c98c501028d 보존, 격리 브랜치 별도. 비공개 엔진/원본·고객자료/토큰 외부 공개 없음, 강제 push·무단 배포·권한 변경 없음.
+9. 다음 작업/승인: 실제 고객 승인 신원·동일 실행 계획 출처 인증/동의, 승인받은 실데이터와 개인정보 정책, 물리 Win10/11 Defender/SmartScreen, 설치·계약/라이선스/고객 파일럿·지원, 최종 판매자 GO 필요. 그전 100% 또는 출시 성공 아님.
+10. 갱신·검증범위: 2026-11-12 KST, 검증된 PRIVATE/PUBLIC 기능 SHA와 CI 근거 위에 기재. 중앙 문서의 SHA는 이 커밋 후 재확인. [제품 기준문서](https://github.com/hibi89/SOVIA_sovereign/blob/feature/kmong-la-review-p2-20261112/docs/SOVIA_P95_FIRST_PARTY_SYNTHETIC_20261112.md).
+
+---
+
 ## 2026-11-12 KST — 크몽 제품별 작업중 표기 정책 인수인계 (10항)
 1. 목표·확정 요구: 16종 최종완성률 표에 현재 실제 작업 중인 제품을 표시하여 채팅별 작업 중복·대기 착각 방지.
 2. 완료·설계: 행을 통째로 개편하지 않고 기존 제품명 바로 뒤 `**[작업중]**`을 넣는 최소 변경 방식을 선택. 기존 표는 보존하고 표 상단·KMONG_PRODUCTIZATION 최상단·AGENTS에 규칙 공지.
