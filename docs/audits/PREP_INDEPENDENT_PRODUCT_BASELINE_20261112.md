@@ -1,3 +1,13 @@
+## 2026-11-12 KST — PREP 로컬 코어 구현 진척(50% 최종판정은 대기)
+
+- 신규 **독립 clean-room Node.js ESM 코어**를 ChatGPT 임시 실행 환경에서 작성. 기존 Private SMAX 코드는 복사하거나 Public GitHub에 공개하지 않음.
+- 구현한 로컬 후보: 제한형 UTF-8 CSV 파서, 명시 매핑, 날짜/십진수/정수/불리언/문자열 정규화, 결측·중복·위험 수식 검토 큐, 원본 SHA-256, `inspect/run/verify` CLI, 읽기 전용 원본·새 파일만 출력.
+- 실제 Linux Node v22.16.0 `npm test` **71 PASS / 0 FAIL / 0 SKIP**; ZIP 압축 해제 후 별도 디렉터리에서 **71/71 PASS 재현**; CLI inspect/run REVIEW_REQUIRED(exit2)/verify SOURCE_BYTES_MATCH, `node --check`와 `npm pack --dry-run`, ZIP 무결성 PASS.
+- 대화 첨부 후보: `PREP_STANDALONE_CORE_LOCAL_CANDIDATE_20261112.zip`; 파일 SHA-256 `974dbad1f146a154d4f08033cd6e3d0e1f2b87b7966f3b4f7849070f477fdbe4`. **임시 다운로드물이며 GitHub에 코드 자체는 미저장**.
+- PREP 원격 문서 최신 반영 SHA `6427a4880f2a71183ed45a74b1083f99370c0b91`; 증거 [PREP 로컬 후보](https://github.com/hibi89/prep/blob/main/docs/LOCAL_CANDIDATE_EVIDENCE_20261112.md).
+- **정식 독립 PREP 최종상품 완성률: 미산정(UNASSESSED)**. GitHub에 반영된 독립 실행 기능/검증률: **0% 유지**. 로컬 구현 후보의 유의미한 진전이지만, 보안상 Public 저장소 원본 이관·업스트림 골든 동등성·GitHub SHA 코드 테스트·Windows/실고객·패키지 배포 증거가 없으므로 **50% 목표 미달 / RELEASE HOLD**.
+- 크몽 활성 16종은 기존 점수·순위·합계·평균·분모 불변. PREP는 별도 개발 후보. 별도 승인 없는 가시성 변경, 소스 공개, 유료 호출, 서비스 배포 없음.
+
 # PREP 독립 제품 — 크몽 상품화 후보 및 최종완성률 기준 (2026-11-12 KST)
 
 ## 최신 판정
