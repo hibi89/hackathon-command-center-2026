@@ -1,3 +1,8 @@
+## 2026-11-12 KST — Coin Pattern Analyzer 70→85% provisional engineering + central 16 product rollup
+- Product hibi89/candle_scraper@feature/coin-pattern-p85-forward-eval-20261112 latest confirmed product docs SHA 17ddfba71d32113e683327c75cd260b400fc0f20, canonical P1–P6 base 8eafcb075959985c4f7aa0757c2e19e192ed27fa unchanged; independent zero-network post-signal event study, hypothetical next-open→Hth-close observations, per-side fee/slippage, gap/EOF censor, per-rule/market/time summary, offline HTML/CSV/JSON/SHA receipt. No actual trading or source DB copy/upload.
+- Source/test Git blobs exactly matched isolated local Python3.13.5 run, **25 PASS / 0 FAIL / 0 SKIP**, compileall PASS. Additional 100000 synthetic minute candles and 201 synthetic signals, 0.41sec, original SQLite SHA unmodified. Full original 101 tests + legacy collector suite NOT RUN at new SHA, real Win10/11/3.6GB/EXE/chart/license, CI/customer pilot NOT VERIFIED; RELEASE HOLD / SALE NO-GO.
+- Central 16 rows now **1339pp**, mean **83.6875%**, **14 ≥85**, **2 <85**: AXMART PC CARE70, AXMART³ CUBE70. LA85 reflected, FFAX75 separate. Subjective +15p scope; not sales/customer acceptance. P85 evidence https://github.com/hibi89/candle_scraper/blob/feature/coin-pattern-p85-forward-eval-20261112/docs/COIN_P85_FORWARD_STUDY_20261112.md . Existing other 15 product rows unchanged; older dated summaries are historical.
+
 ## 2026-11-12 KST — BID AX / FlowPilot Universal / WORKNOVA Desk 크몽 신규 상품화 후보 등록
 - [독립 후보 3종 상세 설계](docs/commercial/KMONG_3_NEW_PRODUCTS_20261112.md) 및 [크몽 상품화 목록](KMONG_PRODUCTIZATION.md)에 상품명, 1회 판매 가격 가설, 유료 구매 이유, 0원 월 서버 운영 목표, 구현·검수·출시 조건을 기록.
 - 기존 **활성 16종의 완성률·집계 불변**. 기존 FFAX·별도 기술협업 2건도 유지. 세 후보는 **기획 등록만 완료 / 개발·실행·Windows·판매 미검증 / RELEASE HOLD**.
