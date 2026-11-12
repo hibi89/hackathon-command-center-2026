@@ -244,9 +244,24 @@ FFAX 안전한 AI 공급자 어댑터·로컬 검증 확장, Node96 PASS·mock12
 | 후보 제품 | 작업 상태 | 정본 저장소·브랜치 | 구분 |
 |---|---|---|---|
 | KUODRA **[작업중]** | **85% (P85 내부 엔지니어링 잠정 달성, 실기업/상용권/고객 Win 출시 미검증 · RELEASE HOLD)** | `hibi89/KUODRA@develop` 통합 기능 SHA `46889e4ea14aaa27feb7874f6bf120aee3010dee`; `main`은 설계·증거·인수인계 | P70 합성 KR DART/US SEC 정정공시·B/C·조건부 A·Guard 및 HTML/PDF 보존. **P85** 합성 기업/시간 홀드아웃·Dummy MAE/RMSE, 재무 불일치 검토 표시, 파일·무서명 영수증 해시 독립검증, 안전 입력 및 실패시 고객파일 미삭제, Windows PyInstaller onedir EXE/ZIP 한글 경로 재배치/기존파일 보존; PR #4 병합. [Actions #43286155661](https://github.com/hibi89/KUODRA/actions/runs/43286155661) 및 [병합 검증 #43286619965](https://github.com/hibi89/KUODRA/actions/runs/43286619965) 각각 Ubuntu·Windows **197 PASS/0FAIL**, Windows staging 성공. 신규 [P85 평가](https://github.com/hibi89/KUODRA/blob/main/docs/P85_ACCEPTANCE_EVIDENCE_20261113.md)는 내부 85/100 잠정으로 **실공시 이용권/실데이터/Windows10·11 고객 설치/OS IAM/금융법/판매 GO 미달**, 모든 출시 HOLD. 달성된 P85 엔지니어링 목표에 따라 KUODRA `[작업중]`만 해제; 다른 제품·활성 집계 불변. |
-| PREP | 미표시 (작업 여부 미확인) | `hibi89/prep@feature/core-extraction` | 활성16 제외; 최종상품률 미산정 |
-| FFAX | 미표시 (작업 여부 미확인) | `hibi89/frontend-foundry-ax@feature/ffax-workbench-p85-20261112` | 활성16 제외; 별도 후보 |
-| Factory AX | 미표시 (작업 여부 미확인) | `hibi89/factory-ax-ecosystem@feature/data-verify` | 활성16 제외; W1과 전체 생태계 구분 |
+| PREP **[작업중]** | **최종 UNASSESSED** · P85 로컬 구현/검증(정식 CI 미수용), P85 목표 미완 | `hibi89/prep@feature/core-extraction` HEAD `b8a637e824fc5b1ac63d31aaf188e9821039b49d`, 검증 기능 SHA `a4c71258851af4b0d8540202f36c84c1438ad9e6` | 독립 PREP Node22.16 로컬/네트워크 격리 **150/150 PASS**, SDK/CSV·JSON/HTML/receipt 오프라인 설치. 정식 GitHub-hosted CI 해당 브랜치 실행 **0건**, Windows/소비자·출시 P95/P100 미검증. 원본 승인에 따라 SMAX 완전동등성은 P85 요구 아님. P85 형식 게이트 미충족으로 수치 85 확정하지 않음, RELEASE HOLD. [원본 감사](https://github.com/hibi89/prep/blob/feature/core-extraction/docs/P85_GATE_AUDIT_20261112.md) |
+| FFAX **[작업중]** | **78% 잠정** (고정 100점 설계 기준·P85 목표 미달) | `hibi89/frontend-foundry-ax@feature/ffax-workbench-p85-20261112` HEAD `35548e453dfaaf73042f61693beb3ebe28e75b4a`, 기능 검증 SHA `a76a962037b41d474699845378c2656e439f66f1` | AC04 AI 생성14·AC09 접근성/실소유자 검수6·AC12 CI2 미통과, 총 78/100. Node105/105, 합성 Chromium30/30, 프로젝트 복원9/9 PASS는 로컬 범위. 실 LLM/axe/hosted CI/Windows·고객 미검증. P85 달성 전 `[작업중]` 유지, RELEASE HOLD. [정본](https://github.com/hibi89/frontend-foundry-ax/blob/feature/ffax-workbench-p85-20261112/docs/ACCEPTANCE_MATRIX.md) |
+| Factory AX | **전체 생태계 UNASSESSED** · **W1 CORE+VERIFY 85% 잠정** (P85 엔지니어링 합성 게이트 통과) | `hibi89/factory-ax-ecosystem@feature/data-verify` HEAD `f9577bbc4c798534b36ed1243e122453b5e4a4a9`, CI 기능 SHA `b70a059175389bf53d87f8c90dc4f5bbe6a97986` | [Actions #43178583600](https://github.com/hibi89/factory-ax-ecosystem/actions/runs/43178583600) **SUCCESS** Windows Server2025/Ubuntu 각각 138 PASS/0 FAIL/0 SKIP, unsigned pyz/CMD·Tk·합성 CSV·보고/복구. 실 Windows10/11/고객/상용권·서명 미검증, W2~W4 미개발. 과거 82%는 이전 시점, 현재 W1 85% 잠정, 전체로 승계 금지, RELEASE HOLD. [근거](https://github.com/hibi89/factory-ax-ecosystem/blob/feature/data-verify/docs/VERIFY_85_CI_ACCEPTANCE_20261112.md) |
+
+
+### 2026-11-13 Freelancer 5개 브랜드 신상품 — 기존 활성17종 점수와 분리
+
+> 기존 기업형 독립 제품·CodeChecker·AutoML 기반 기술률은 참고치일 뿐 신규 조합/납품 패키지 완성률에 승계하지 않는다. 상세 9종 정본 [KMONG_9_PRODUCT_COMPLETION_20261113.md](KMONG_9_PRODUCT_COMPLETION_20261113.md).
+
+| 새 상품 후보 | 최종상품률 | 기술 원본·기획 브랜치 | 미검증 / 판정 |
+|---|---|---|---|
+| **AZENTFLOW AX** | **UNASSESSED** | `Freelancer@product/hae-la-automation a578aee2`, HAE+LA+DBVORA | HAE 자체 85% 잠정; 기업형 연동/납품 별도 미개발, RELEASE HOLD |
+| **CITEVAULT AX** | **UNASSESSED** | `Freelancer@product/rag-enterprise-knowledge acf49366`, RAG+SMAX/PREP | RAG 자체 95% 잠정; 기업 다중권한/실소스·정식 설치 미검증, RELEASE HOLD |
+| **SITECRAFT AX** | **UNASSESSED** | `Freelancer@product/rea-website-rebuild 6e2346c3`, REA+Fable+Astra | REA 원형 85% 잠정; 고객 실제 사이트 재구축·법적권리 미검증, RELEASE HOLD |
+| **PROOFQA AX** | **UNASSESSED** | `Freelancer@product/proofqa-ax-delivery-audit 54b718f5`, CodeChecker+Graphify+agent-browser | 기존 Checker95%; 새로운 Graph/브라우저/보안 실제 통합 및 고객 인수 0회, HOLD |
+| **ONTOINSIGHT AX** | **UNASSESSED** | `Freelancer@product/ontoinsight-ax-data-analytics afda6eac`, AutoML+NVIDIA Auto Ontology 개념 | 기존 AutoML95%; 새 의미·관계/Excel·ML 누수검증 통합 0회, HOLD |
+
+**DATA2WEB Studio**는 본 문서의 활성상품 표에 이미 `UNASSESSED / 독립 실행 0%`로 기재돼 있어 중복 행을 추가하지 않음. PREP/FFAX/Factory AX는 위 후보 3행의 상태를 최신화. 해총 기존 활성17종의 개별 점수/집계·다른 담당자 `[작업중]` 및 `[사용자 개입 필요]` 표시 전부 유지. 이번 변경은 문서 동기화만이며 신규 코딩·CI/Production 없음.
 
 ## 2026-11-11 HAE P7/P8 85% 엔지니어링 잠정·출시 HOLD
 
