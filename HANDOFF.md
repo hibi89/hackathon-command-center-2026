@@ -1,3 +1,15 @@
+## 2026-11-12 KST — DBVORA P4-03 / target P95 still open (10-point hub handoff)
+1. Goal/tech: DBVORA local Python3.11+ schema, SQLite/ZIP/ZSTD, PostgreSQL read-only catalog; owner P95 target.
+2. Implementation/decision: all-file manifest allowlist instead of extension-only guard; source-attributable CPython cache exception and hardlink reject. No customer archive engine semantics or data changed. Unit and real ZIP extraction subprocess regression code committed.
+3. Evidence: Linux3.13.5 isolated rule reconstruction **19 PASS/0 FAIL**, GitHub actual source/tests patched; full original >=553 Python+Node, actual full ZIP, Windows3.11/NTFS/PG TLS/customer tests **NOT RUN**.
+4. Stage: 85% internal engineering provisional remains, P95 NOT MET, central DBVORA [작업중] must be retained, all items RELEASE HOLD.
+5. Blocker/pivot: private full checkout blocked by git DNS; no unauthorized paid GitHub CI or workflow/security changes. Used GitHub connector patch + isolated synthetic rule test; next full checkout.
+6. Repo/path/SHA: `hibi89/DBVORA@feature/p0-db-map` functional `b1b80d52dc3c3461ba4ab8eb1ef7f12d6afd0a54`, product docs HEAD `3a86dfa5f093bff4bb606cc6101f78fb039bb69f`; hub `hibi89/hackathon-command-center-2026@kmong-productization`; `docs/audits/KMONG_16_CURRENT_20261111.md`.
+7. Deploy: local developer ZIP only, no production/Vercel; actual Windows and native full ZIP build unverified.
+8. Preserve/security: feature-only git history revert, no customer DB/credentials/archives/remote services/public exposure/main/develop change, no externally copied private code.
+9. Next: authorized full exact source `python -m scripts.verify_release_gate`, full ZIP extract/subprocess, Windows3.11 NTFS/Edge file://, opt-in PostgreSQL read-only verify-full, vendor license/owner commercial release.
+10. Time/scope: 2026-11-12 KST, remote code/docs and reconstructed local test only; final hub SHA verified after write. Do not clear marker before verified P95.
+
 ## 2026-11-12 KST — AI Code Checker 작업 상태 정정·인수인계
 - 목표·확정: 사용자가 AI Code Checker **기술 P95 달성** 이후 현시점에 **P100 작업 목표가 없으므로 중앙 `[작업중]` 해제**하도록 지시. 다음 목표를 임의 설정하지 않는다.
 - 변경: `docs/audits/KMONG_16_CURRENT_20261111.md` AI Code Checker 행만 표식 삭제, P100 목표 문구를 출시검증 HOLD로 정정, 최신 상단 사용자 결정 기록. GitHub 정본 코드·테스트·상품 점수 보존.
