@@ -1,3 +1,8 @@
+## [2026-11-13 KST] 크몽 전 29종 95% **가정** 상품화 1~29 순위 및 Sol Ultra 독립검수 프로토콜 확정
+- 확인된 정본: `hibi89/hackathon-command-center-2026@kmong-productization` 활성17+후보12 총29. 현행 퍼센트/진행 상태는 **변경 없음**. 새로운 [1~29 순위](docs/strategy/KMONG_P95_HYPOTHETICAL_COMMERCIALIZATION_PRIORITY_20261113.md)는 모두 P95라는 가상의 **판매 전환 시나리오**, 실완성도/판매 승인 아님.
+- [설계 고정·Sol Ultra 품질감사 규칙](docs/strategy/KMONG_BLUEPRINT_LOCKED_SOL_ULTRA_QA_20261113.md) 도입: 해총이 설계·핵심코드·최종검수, Sol Ultra는 설계 전수 Traceability/보안·데이터무손실/UX PR 독립감사, 정확 SHA 회귀·고객 실환경 수용; 원본 대규모 재작성 금지.
+- 배치1 DATA2WEB→PREP→FlowPilot; 이번 작업은 중앙 문서 전용. 제품 코드/테스트/CI/배포/외부 모델 호출/실판매 **0**, 전체 `RELEASE HOLD`와 사용자 목표 `[작업중]`/Astra 예외를 보존. 복구는 이 작업 직전 중앙 Git commit SHA로 가능.
+
 ## [LATEST 2026-11-13 KST] REA_Web P95 사용자 목표 계속 진행 — 원형 사이트 증거 기반 독립 HTML 컴포넌트 QA 통과
 - 원형 웹사이트 분석·재구축 REA_Web `hibi89/REA_Web@feature/website-analysis-rebuild` 신규 `rea/website_component_builder.py`, `rea/website_ui_cli.py`, `tests/test_website_component_builder.py`: 로컬 합성 웹사이트 실제 P85 Chromium desktop/mobile 검색·필터·상세 6 state→Astra P4 observed screenshots SHA + Fable5.1 (기존 정적) + 정확 P95 owner review SHA/선택 Record 스코프→3개의 **신규 독립 Pro HTML 컴포넌트 트리** 생성·재검증. 원사이트 HTML/CSS/JS·문구/이미지/브랜드 복제 금지, 고객 CSV·이전 Pro/Fable/Astra/DATA2WEB 소스 보존, create-only 납품.
 - exact-tested SHA `04541195da42b702925cc62e7a39e16962cbfa31`, [Actions #43295475001](https://github.com/hibi89/REA_Web/actions/runs/43295475001) **Windows2025 94PASS/0FAIL/1WARN(Chrome·Edge owner UI 포함), Ubuntu24.04 92PASS/2SKIP/0FAIL/1WARN, 2/2 SUCCESS**. 최초 forged Astra subject+observation negative test 1FAIL→P85 independent oracle 검사 추가, Windows CRLF 파일원본 테스트 1FAIL→원본 바이트 snapshot 검사로 수정. 최종 CI PASS.

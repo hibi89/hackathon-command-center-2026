@@ -1,3 +1,5 @@
+> **[2026-11-13 KST · 크몽 29종 상품화/최종설계 잠금 운영 정책]** [가정 95% 상품화 우선순위 1~29위](docs/strategy/KMONG_P95_HYPOTHETICAL_COMMERCIALIZATION_PRIORITY_20261113.md) · [Sol Ultra 독립 누락감사+UI/UX 고도화 SOP](docs/strategy/KMONG_BLUEPRINT_LOCKED_SOL_ULTRA_QA_20261113.md). **이는 모든 29개를 실제 95%로 기록하는 변경이 아니다.** 기존 상품 최종완성률·HOLD·[작업중]·[사용자 개입 필요] 일체 보존. 우선 DATA2WEB→PREP→FlowPilot Universal 3종에 SKU 표준납품 게이트를 적용하되, 고객/법적/실 Windows/실서비스 검증과 소유자 승인 전 출시 불가. GitHub 최종설계가 기준, Sol Ultra는 독립 감사/UX PR 역할, 전체 원본 재작성·테스트 없는 PASS 주장 금지.
+
 ## [최신 2026-11-13 KST] GitHub 35개 저장소·457개 브랜치 대조 후 크몽 최종상품률 정본
 
 > 전체 [전수 감사](docs/audits/KMONG_ALL_REPO_BRANCH_COMPLETION_AUDIT_20261113.md) / [활성17 + 별도 후보 마스터 표](docs/audits/KMONG_16_CURRENT_20261111.md). **아래 2026-11-10·11의 16종 완성률 비교 표와 평균은 당시 이력**으로, 여기에 앞선 최신 17종 기준보다 우선하지 않는다. 제품 CI/소스/배포를 이번 문서 감사에서 새로 실행하거나 변경하지 않았다.

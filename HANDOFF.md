@@ -1,3 +1,15 @@
+## [2026-11-13 KST] 크몽 29종 **가정95%** 상품화 우선순위·Sol Ultra 설계 잠금 인수인계 — 10항
+1. **목표/최종요구/기술:** 사용자 확정 작업 방식(해총 원본 설계 정본·코딩/통합/검수, Sol Ultra는 전수 누락감사·UI/UX 품질 강화·독립 보안/회귀감사)과 전체 29종 모두 기술95% *가정* 시 1~29위 판매 전환순 정본 작성. 실제 P95 달성 기록 아님.
+2. **완료·결정:** 17 활성+12 후보 중복 없이 순위표 신설 `docs/strategy/KMONG_P95_HYPOTHETICAL_COMMERCIALIZATION_PRIORITY_20261113.md`; SOP `docs/strategy/KMONG_BLUEPRINT_LOCKED_SOL_ULTRA_QA_20261113.md`. 기존 P50→P70→P85→P95→P100 단계와 제품별 최종설계 동결. 전체 재작성 대신 누락 확인→최소 수정→UX PR→정확SHA 테스트.
+3. **테스트/명령·PASS/FAIL/미검증:** 중앙 문서 변경/순위 29종 identity 중복 0 및 집계 일치 JS 정적 검산. **소프트웨어 실행 테스트 0, CI 0, 고객형/Windows/브라우저 0**. 실제 제품 코드 원본 검증과 같지 않음.
+4. **완료/진행/대기/차단:** 운영 전략 문서 등록만 완료. 실제 프로그램 완성률·`[작업중]`·Astra `[사용자 개입 필요]`·`RELEASE HOLD/SALE NO-GO` 전부 그대로. 출시/판매 준비는 별도 작업·승인 대기.
+5. **오류/근거·시도·대안:** 기존 AI 통째 재구현에서 디자인은 좋아도 최종설계 항목을 누락한 사용자 경험을 예방하기 위해 `TRACEABILITY_MATRIX.md`의 REQ-ID→코드→테스트→정확 SHA 실행근거 강제. 감사 누락·원본 미확인·권리/실 PC 미검증은 `HOLD`, 재작성/거짓 PASS 반복 금지.
+6. **저장소/branch/SHA/경로:** 중앙 `hibi89/hackathon-command-center-2026@kmong-productization`, 2개 새 전략 문서 + `KMONG_PRODUCTIZATION.md`, `docs/audits/KMONG_16_CURRENT_20261111.md`, `AGENTS.md`, `STATUS.md`, `HANDOFF.md` 최상단 링크/정책. 문서 정확 SHA는 커밋/원격 readback으로 확인.
+7. **Production·URL·환경:** 중앙 GitHub Markdown 정책만; 실제 제품 빌드·Windows/브라우저/서비스·Vercel/Cloudflare Production 변화 없음, **N/A**.
+8. **원본/백업·인증·수정금지:** 변경 직전 중앙 원격 SHA를 parent로 fast-forward만 사용, commit history로 복구 가능. 비공개 제품 소스·토큰/계정/외부 모델·고객자료/원본 데이터·환경변수·연동/결제/권한 변경 금지.
+9. **다음 우선순위/절차·완료·승인:** 가정상 P95 제품군의 표준패키지 우선 DATA2WEB→PREP→FlowPilot. 실제 작업 시 소스 정본 확인→추적표→Sol Ultra 독립 4영역 감사→최소코드 수정/UX PR→실고객 환경·권리/NOTICE/가격/지원·사업자 검증→소유자 GO. 현 시점에는 개별 코드/게시/판매 자동 착수하지 않음.
+10. **갱신시점 KST·범위·기준 커밋:** 2026-11-13 KST. 대상 29개 식별자(현재 중앙 정본), GitHub 문서 readback/브랜치 SHA 기준. 정확 기준 parent는 작업 실행 당시 HEAD, 후속 문서 커밋 SHA는 실제 GitHub ref 조회. **이번 것은 가정 기반 의사결정**, 시장 판매실적·전체 29 실고객 테스트 아님.
+
 ## [LATEST 2026-11-13 KST] REA_Web P95 진행·신규 증거기반 자체 HTML 생성기 검증 — 인수인계 10항
 1. **목표/용도/기술:** REA_Web 원래 사이트분석/재구축: 권한 있는 Fable5.1 사이트 관찰→Astra P4 증거·기능 명세→owner 승인→고객 소유 자료 기반 독립 FastAPI/SQLite/HTML 웹앱 구현/실브라우저 검증. 사용자 현재 P95 목표, DATA2WEB은 별도 데이터 파일 웹상품.
 2. **완료·결정:** `rea/website_component_builder.py` new observed UI contract(Chromium 2 viewport×3 actions, Astra observed ID·screenshot SHA, 독립 P85 합성 behavior oracle·Fable Record optional packet SHA), owner opinion/contract SHA+synthetic approval 후 **REA-owned HTML DOM 직접 컴포넌트 재배치**(nav/aside/article)·본래 Pro JS/API 유지·고객 데이터 불변. `rea/website_ui_cli.py` inspect/build, 새 `tests/test_website_component_builder.py`; 원사이트 CSS/JS/HTML/브랜드/이미지 복사하지 않음.
