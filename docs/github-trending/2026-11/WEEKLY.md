@@ -1,3 +1,5 @@
+> **2026-11-13 이후 새로운 주간 기록의 정본은 [github-trending-weekly 브랜치](https://github.com/hibi89/hackathon-command-center-2026/blob/github-trending-weekly/docs/github-trending/2026-11/WEEKLY.md)입니다. 이 파일은 기존 요약의 역사적 스냅샷이며 앞으로 갱신하지 않습니다.**
+
 # GitHub Trending — 2026년 11월 주간 기록
 
 ## 2026-11-09 주간 보고(과거 보고 재구성, 미재검증)
