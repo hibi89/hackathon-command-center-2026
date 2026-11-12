@@ -1,3 +1,8 @@
+## 2026-11-13 KST — KUODRA P95 목표 부분 완료: 87/100 잠정 / 작업중 유지
+- 사용자 P95 목표에 대해 현재 공식 내부 엔지니어링 평가는 **87/100 잠정(기존 85→87)**이며 P95는 달성하지 못했다. Private 제품 hibi89/KUODRA develop 기능 병합 SHA 213e11ed5221b1d3ac668a157cac9341dfa2b652, PR #5. Premerge Actions #43292742904 및 postmerge Actions #43293290631 Ubuntu/Windows 각각 **245 PASS, 0 FAIL**, Windows unsigned EXE/ZIP 한글경로 복구와 1125 파일 SHA 검증 성공.
+- 추가 기능: SEC 10MB 제한 입력, 고객 명시 동의 SEC/DART 1회 요청 경로(모의 전송만), 환경변수 인증키 비노출, 어두운 로컬 GUI/PDF/영수증 검증, OSS 의존성 권리 점검표. 실제 SEC/DART 실원천 E2E, 상업 사용권, 고객 Win10/11 GUI/설치·한글 글꼴, OS 격리/금융법/판매승인은 미검증. RELEASE HOLD / SALE NO-GO, Production 미적용.
+- 해총 중앙표 docs/audits/KMONG_16_CURRENT_20261111.md의 KUODRA 후보 행만 **87%**, **[작업중] P95 유지**. 타 제품 데이터/진척/표식/집계 불변, KIC 원본 불변. 기준: https://github.com/hibi89/KUODRA/blob/main/docs/P95_PARTIAL_ACCEPTANCE_EVIDENCE_20261113.md
+
 ## [LATEST 2026-11-13 KST] REA_Web P95 구조 기반 독립 레이아웃 합성 브라우저 QA 성공 — 정본 85% [작업중] 유지
 - `hibi89/REA_Web@feature/website-analysis-rebuild` 새 `rea/website_site_layout.py` / `tests/test_website_site_layout.py`: 참고 합성 로컬 사이트의 nav/aside/article 구조 count→고정 SHA/P85 Astra review digest/owner opinion→3종 자체 REA CSS 레이아웃 후보 중 한 개 선택→기존 FastAPI/SQLite Pro 앱을 새 폴더로 별도 변형, 실제 Chromium 검색/필터/상세 동작 및 ZIP SHA 검수. 원본 사이트 HTML/CSS/JS·문구·이미지 복사 없음.
 - **정확 검증 SHA `de335f9b65b8991c91dd3078d0044f32522f2b50`**, [Actions #43291157984](https://github.com/hibi89/REA_Web/actions/runs/43291157984): Windows2025 **80PASS/0FAIL/1WARN** (Chrome/Edge owner UI 포함), Ubuntu24.04 **78PASS/2SKIP/0FAIL/1WARN**, 2/2 SUCCESS. 첫 #43280370831 양OS 새 구조 테스트 10FAIL=JS 중괄호를 Python `str.format`으로 파싱한 `KeyError:'title'`; placeholder-only replace로 수정 후 성공.
