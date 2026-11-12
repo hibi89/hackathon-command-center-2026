@@ -1,3 +1,5 @@
+> **2026-11-13 이후 새로운 일간 기록의 정본은 [github-trending-daily 브랜치](https://github.com/hibi89/hackathon-command-center-2026/blob/github-trending-daily/docs/github-trending/2026-11/DAILY.md)입니다. 이 파일은 기존 요약의 역사적 스냅샷이며 앞으로 갱신하지 않습니다.**
+
 # GitHub Trending — 2026년 11월 누적 일간 기록
 
 > 기준: 2026-11-13 KST. 아래 11/06~11/12 기록은 이전 ChatGPT 예약 보고에서 재구성한 **과거 보고 요약**이다. 원문에 공식 조회 성공 주장이 있어도 이번 작업에서 당시 공식 순위·스타 증가량·전체 README를 재검증하지 않았다. 따라서 과거 순위·스타 수치는 재게시하지 않으며 공식 확정 자료로 취급하지 않는다.
