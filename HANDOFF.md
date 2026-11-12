@@ -1,3 +1,15 @@
+## 2026-11-12 KST — ASTRA P82/P83 hub 10-point handoff
+1. Goal/technology: ASTRA local PDF redesign toward independently verified 95%, React/TS/Vite/Electron/PDF.js, no external documents or search/AI rights bypass.
+2. Code/decision: rejected expensive and unreliable pixel identity for redesigned document; chose count-only vector stroke-risk comparator (P82) and same-number page displacement comparator (P83). CLI+GUI and new unit/real-PDF/browser regressions included.
+3. Tests: exact GitHub source blob 0399a2c8 and test adf5c769 reconstructed, Node22.16 isolated 3 PASS 0 FAIL, standalone TypeScript PASS; independent synthetic PDF equal text but 4 vs 3 PyMuPDF drawings PASS. Full source/npm/build/PDF.js/Windows NOT VERIFIED.
+4. Status: code 36bc458da322, product docs 33650878216c, internal 85% provisional unchanged, P95 unmet, RELEASE HOLD, central ASTRA [작업중] retained.
+5. Error/evidence: no exact P83 GitHub PR-triggered workflow runs and no combined commit statuses returned by connector; neither CI PASS nor failure. No full repo checkout accessible in local runtime. Prior P75 CI only historical.
+6. Repos/paths: hibi89/astra_pdf_redesigner feature/astra-p71-pdf-source-parity-20261112, Draft PR#10; hub hibi89/hackathon-command-center-2026 kmong-productization; score path docs/audits/KMONG_16_CURRENT_20261111.md.
+7. Production/runtime: npm test, npm run build, npm run desktop:verify and Chrome/Edge/Windows workflows pending latest SHA; Vercel N/A, no commercial deployment.
+8. Source backup/data: original feature parent 6eacf9f7d and Git history recoverable; no customer PDF/IndexedDB V2/secret/license/model/permissions/other SKU sources touched.
+9. Next: exact-SHA integration CI and real document PDF structural validation, owner physical Windows, original PRO/BUSINESS design/model/licensing decision. Keep marker until 95 proven; no early deletion on switch/end.
+10. Updated 2026-11-12 KST; verified SHA/diff/helper/test + simulated PDF vector; overall product QA remains unverified.
+
 ## 2026-11-12 KST — DBVORA P4-03 / target P95 still open (10-point hub handoff)
 1. Goal/tech: DBVORA local Python3.11+ schema, SQLite/ZIP/ZSTD, PostgreSQL read-only catalog; owner P95 target.
 2. Implementation/decision: all-file manifest allowlist instead of extension-only guard; source-attributable CPython cache exception and hardlink reject. No customer archive engine semantics or data changed. Unit and real ZIP extraction subprocess regression code committed.

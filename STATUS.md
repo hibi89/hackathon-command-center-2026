@@ -1,3 +1,9 @@
+## 2026-11-12 KST — Astra P82/P83 vector structural risk, P95 still unverified
+- Code repository `hibi89/astra_pdf_redesigner@feature/astra-p71-pdf-source-parity-20261112` functional SHA `36bc458da322ebb77b9b48190857112b637ea7bf`, documentation SHA `33650878216c36867cd00ee7ccdc5821de7e6935`, Draft PR #10 not merged.
+- P82 CLI/UI PDF.js selectable text-preserving vector stroke count difference warning; P83 same-index page stroke movement advisory even if global count equal. Exact helper blob `0399a2c8` and test `adf5c769` independently verified; Linux Node22.16 isolated 3/3 PASS and tsc PASS; synthetic PDF equal selectable text but vector strokes 4 vs 3 confirmed separately in PyMuPDF.
+- Full exact latest-SHA PDF.js npm/build Chrome/Edge/Windows NSIS and owner customer documents **NOT VERIFIED**; no source/content/schema/deployment/paid/permission changes.
+- **85% provisional / target 95 NOT MET / RELEASE HOLD / ASTRA [작업중] kept** until independent goal verification. Other products and their active markers intact. Scoreboard `docs/audits/KMONG_16_CURRENT_20261111.md`, product report: [P82/P83](https://github.com/hibi89/astra_pdf_redesigner/blob/feature/astra-p71-pdf-source-parity-20261112/docs/commercial/ASTRA_P82_P83_VECTOR_SIGNALS_20261112.md).
+
 > **2026-11-12 KST — DBVORA P4-03, 최종 목표 P95 미달 / 85% 잠정 유지:** 제품 `hibi89/DBVORA@feature/p0-db-map`에서 추출 ZIP의 미등록 모든 파일(확장자 없는 파일 포함) 검증 차단, 매니페스트와 맞는 CPython 생성 캐시만 허용, 캐시 hardlink 거부. 회귀 코드 추가. **Linux 임시 폴더 19 PASS/0 FAIL(격리 재구성 규칙)**이며 원본 전체 >=553 Python+Node, 실제 ZIP·Windows3.11/NTFS·PG·고객 테스트는 **미검증**. 개발 기능 SHA `b1b80d52dc3c`, 제품 문서 HEAD `3a86dfa5f093`. **완성률85% 그대로, RELEASE HOLD**, 해총 DBVORA [작업중] 유지, 다른 상품 불변. [세부](docs/audits/KMONG_16_CURRENT_20261111.md).
 
 ## 2026-11-12 KST — AI Code Checker P95 목표 달성·[작업중] 해제 (사용자 확정)
