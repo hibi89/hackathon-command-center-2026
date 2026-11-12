@@ -1,3 +1,15 @@
+## 2026-11-12 KST — Kmong AXMART³ CUBE P95 attempt (10-point handoff)
+1. Goal/tech: choose the urgent free-to-progress CUBE from 16 active Kmong products; aim engineering 85→95 without touching concurrently marked products. Node18+ static offline owner-release preflight.
+2. Delivery/decision: source-derived byte exact product/support HTML parity + explicit Cloudflare dist allowlist; six adversarial regressions and actual main-build owner HOLD integration. Chose deterministic generator/parity versus brittle heuristic CSP substring checking, no extra external cost.
+3. Tests: eight exact GitHub code/test blob reads, 10/10 static source shape checks. **NOT RUN** exact latest SHA `npm test`, `npm run build`, Chromium/Windows; historical Node29 PASS belongs to older source. Cannot certify P95.
+4. State: **85 provisional retained, 95 NOT achieved, [작업중] retained in central table, all products SALE HOLD**.
+5. Error/cause/pivot: full private GitHub repo clone from local Node22.16 container fails DNS `Could not resolve host: github.com`. No checked-in private Actions workflow; avoid paid CI creation without approval. Next safe paths: authorized full checkout testing, approved CI runner, otherwise static audit only.
+6. Source/branches: private `hibi89/AX_MART@feature/cube-owner-preflight-p85-20261112`, exact functional SHA `b47baf54a11c6cbd28ec3b50cc9dea4e15d70506`, prior tested SHA `34dac38ffac69df00eeb6610e380fbc5d0c37705`; product docs changed afterward. Hub `hibi89/hackathon-command-center-2026@kmong-productization`, row `docs/audits/KMONG_16_CURRENT_20261111.md`.
+7. Production: Cloudflare `https://ax-mart.pages.dev/` main-linked; feature not deployed. Vercel N/A. Node >=18, npm test/build, owner review build/verify commands in product HANDOFF.
+8. Original/backup/security: Git prior feature commits and production main unchanged, PC CARE separate branch/customer data/credentials/source ownership untouched; release HOLD, no automatic destructive cleanup.
+9. Next priority: exact feature Node tests+real build+audit; real browser/Windows OS test, approved customer/license/commercial gates and only then 95 evidence/marker clearance; no score inflation.
+10. Date/scope: 2026-11-12 KST; GH blob static audits only, product SHA and hub current branch to be rechecked after docs commit.
+
 ## 2026-11-12 KST — ASTRA P82/P83 hub 10-point handoff
 1. Goal/technology: ASTRA local PDF redesign toward independently verified 95%, React/TS/Vite/Electron/PDF.js, no external documents or search/AI rights bypass.
 2. Code/decision: rejected expensive and unreliable pixel identity for redesigned document; chose count-only vector stroke-risk comparator (P82) and same-number page displacement comparator (P83). CLI+GUI and new unit/real-PDF/browser regressions included.
