@@ -1,3 +1,15 @@
+## 2026-11-12 KST — 크몽 제품별 작업중 표기 정책 인수인계 (10항)
+1. 목표·확정 요구: 16종 최종완성률 표에 현재 실제 작업 중인 제품을 표시하여 채팅별 작업 중복·대기 착각 방지.
+2. 완료·설계: 행을 통째로 개편하지 않고 기존 제품명 바로 뒤 `**[작업중]**`을 넣는 최소 변경 방식을 선택. 기존 표는 보존하고 표 상단·KMONG_PRODUCTIZATION 최상단·AGENTS에 규칙 공지.
+3. 테스트/검증: GitHub 원격 3개 정책 파일 갱신 및 SHA 확인, 표의 16개 제품 기존 수치/구현 증거 변경 없음. 제품 런타임/CI 테스트 미적용(문서 정책만 수정).
+4. 상태: 정책 반영 완료. 현 시점 다른 채팅의 실작업 여부 독립적으로 확증되지 않아 추정한 신규 작업중 표시는 없음. 제품 출시 RELEASE HOLD는 그대로.
+5. 실패/근거/대안: 채팅별 실시간 자동 동기화 기능 없음; 자동화를 성공으로 주장하지 않는다. 각 담당자가 작업 시작·전환·목표 달성·중단 시 GitHub를 직접 갱신하며 충돌 시 HEAD 재조회/병합.
+6. 저장소·브랜치·경로: `hibi89/hackathon-command-center-2026@kmong-productization`; `docs/audits/KMONG_16_CURRENT_20261111.md`, `KMONG_PRODUCTIZATION.md`, `AGENTS.md`, `STATUS.md`, `HANDOFF.md`. 문서 기준 SHA는 최종 HEAD readback으로 확인.
+7. 배포·실행: GitHub 문서만 변경, Vercel/Cloudflare Production/CI 모두 미적용.
+8. 원본·보안·백업: 기존 상품 16종 수치, 기밀 정보, 원본 구현 브랜치, 사용자 자료, 토큰, 권한·과금·도메인 변경 없음. 이전 Git HEAD로 복원 가능.
+9. 다음: 각 채팅은 작업 착수 직전 최신 표를 읽고 자신의 제품 행에만 `[작업중]`을 추가, 전환할 때 구제품 표식 제거+신제품 표식 추가, 검증 완료 또는 실제 작업 종료 시 표시를 지운다. 진행 중 표시는 진척/출시 승인 근거가 아니다.
+10. 확인 시점·범위: 2026-11-12 KST, GitHub 원격 문서 내용 및 최종 SHA만 검증. 서비스·테스트는 미적용.
+
 ## 2026-11-12 KST — AXMART³ CUBE P85 source-output safety handoff (10 items)
 1. Goal/tech: user requested other work rather than environment-blocked REA_APP; chose AXMART³ CUBE Node18+ built-in owner preflight, existing PC CARE independent.
 2. Work/design: existing recursive cleanup after `mkdirSync` vs fail-closed preserve-on-write-error; selected no-delete to avoid replacing-path race. Three adversarial filesystem tests + package npm script registration; no production/deployment change.
