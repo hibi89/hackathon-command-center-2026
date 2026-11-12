@@ -1,3 +1,8 @@
+## 2026-11-12 KST — REA_APP P95 hardening partial; 85% provisional unchanged
+- Private `hibi89/HAE@feature/rea-app-kmong-owner-delivery-20261112` code+QA `c3f83af41240d0aefd6d9b26611b70068871ada9`, product docs `53f5bcadabf76a296cd092c28865a3697239cf24`. Strict offline unsigned ZIP canonical HTML/JSON, fixed HOLD/metrics/sha, duplicate JSON and extra file rejection + six regression tests.
+- Local independent reconstructed logic 10 PASS/0 FAIL only; exact GitHub whole retail_qa/old Gate R/QA, Windows Chrome/Edge file:// and customer synthetic E2E **NOT VERIFIED**, GitHub combined statuses0/PR workflow runs0. No P95 claim; 85% provisional remains, RELEASE HOLD.
+- Central 16 rows/denominator and other concurrently owned products not changed. Exact P95 partial evidence: https://github.com/hibi89/HAE/blob/feature/rea-app-kmong-owner-delivery-20261112/docs/REA_APP_KMONG_P95_HARDENING_PARTIAL_20261112.md.
+
 > **2026-11-12 KST — Factory W1 VERIFY 85% 잠정 엔지니어링 단계 확정:** [CI #43178583600](https://github.com/hibi89/factory-ax-ecosystem/actions/runs/43178583600) Ubuntu/Windows Server 2025 각 138 PASS/0 FAIL/0 SKIP; 기능 SHA b70a059175389bf53d87f8c90dc4f5bbe6a97986, Factory 문서 0b754b4dd771d7c6863ab4d8de7fca7ca09160f4. 오프라인 후보 .pyz/CMD Tk/한글/보고서·SHA·백업 복원/차단 실패 정상. 실제 Windows10/11 PC·격리망·권리/라이선스/고객 인수 미검증, **RELEASE HOLD**. Factory 전체 W2–W4 UNASSESSED, 기존 크몽 활성16종 평균/분모 변경 없음. 정본 docs/commercial/FACTORY_AX_CANDIDATE_BASELINE_20261112.md.
 
 ## 2026-11-12 KST — Kmong REA_Web new P90 certified-scoped engineering evidence
