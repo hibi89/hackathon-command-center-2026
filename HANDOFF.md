@@ -1,3 +1,15 @@
+## 2026-11-12 KST — Astra P78 central handoff (10 points)
+1. Goal / technology: raise ASTRA PDF Redesigner 85 to 95, offline React/TS/Electron/PDF.js and owner-controlled source/output PDF review.
+2. Feature/decision: chose O(N) count-only within-page extracted order warning instead of costly false fidelity certification, integrated independent CLI and UI without schema edits.
+3. Test: exact Git blob f249d24d local Node22.16 5 PASS/0 FAIL, 300 deterministic stress and 300k tokens PASS; TypeScript source standalone PASS. Full original new-SHA npm/Chrome/Edge/Windows NOT VERIFIED.
+4. State: source committed 071978729197, 85 provisional unchanged, P95 NOT ACHIEVED, release HOLD, central Astra [작업중] retained.
+5. Blocker: GitHub connector reports no PR workflow runs/commit statuses for new SHA; local GitHub DNS unavailable, cannot certify full app. No repeated CI charges or fake status.
+6. Locations: hibi89/astra_pdf_redesigner@feature/astra-p71-pdf-source-parity-20261112 source071978729197 docs736c293002; hub hibi89/hackathon-command-center-2026@kmong-productization.
+7. Runtime: Node22 npm test/build/desktop verify, Chrome/Edge and hosted Windows NSIS. Production/Vercel N/A; no deployment.
+8. Backup/security: original parent 1151a0d6 and older baseline dc69f7 recoverable; customer PDF, local IndexedDB V2, permissions, secrets, and other products untouched.
+9. Next: full exact-SHA browser/Windows CI; real owner-approved PDF sample visual checks, PRO/BUSINESS design, approved model/fonts/licenses and release gates. No 95 until objectively verified.
+10. Updated 2026-11-12 KST; source blobs, GitHub commits and hub score verified; central HEAD after this documentation update should be read back.
+
 ## 2026-11-12 KST — Kmong RAG P90 provisional engineering / P95 pending (10-point handoff)
 1. Goal: RAG Studio AX Edition P85→P95 using local Node22 CSV/TXT cited review and buyer-oriented offline ZIP, without customer/SMAX secret source.
 2. Done/design: P5.54/55 no-delete + local file integrity (+1p), P5.56 cross-report contradictions (+2p), P5.57 strict preverified deterministic 11-file ZIP/owner CLI and extracted verifier (+2p). Selected allowlisted unsigned review-only package over copying full source folder.
