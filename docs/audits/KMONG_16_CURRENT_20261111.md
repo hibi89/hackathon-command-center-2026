@@ -1,3 +1,5 @@
+> **2026-11-12 KST — KUODRA 크몽 신규 후보 등록:** Owner가 Private `hibi89/KUODRA` 신규 repo와 상세 상용제품 설계/브랜치 작업 지시. 제품 `main@7d112f77ec54806e6edac1d0cfadffd021533ec9`, 코드 이관 `develop@48182bc2e7c33384be65e00af83c787dc257e4be`, KIC 원본 모듈5+회귀테스트5 파일 exact blob SHA 10/10 PASS(복제·무결성만). **새 기능 테스트 실행 0건**(DNS 장애), KR/US 권리·실데이터·Windows 고객검증/판매 미확인. **새 제품 5/100% 잠정**은 D0 문서/설계/리포지토리 구축만 인정, P50 목표 **[작업중]** 유지·RELEASE HOLD. 기존 활성 제품 행·완성도·작업중·집계는 수정하지 않고 별도 후보에 등록. 과거 KIC 82% 기술 완성률은 승계하지 않음. [최종 100점 설계](https://github.com/hibi89/KUODRA/blob/main/docs/BLUEPRINT_100.md).
+
 > **2026-11-12 KST — DBVORA P4-05 exact-source 추가 확인:** 정본 `scripts/portable_acceptance_gate.py` Git Blob `7e08838eae1d9d40937a34b5d7ebe41e291f6dca`, 정본 `tests/test_portable_acceptance_gate.py` Git Blob `81694c7b623edbf94894a195a11f924c0a5a41f9` **양쪽 로컬 source hash 완전 일치**. 실제 Linux Python3.13.5 실행 **원본 테스트 7/7 PASS / 0 FAIL / 0 SKIP**(모의 builder/trusted child를 사용하는 정본 단위검사), 별도 로직 격리5 PASS. **원본 전체 553+ Python+Node/완전 ZIP 빌드·Windows/PG 실사 미실행**, DBVORA 85% 잠정 유지, 목표 P95 미달·RELEASE HOLD·**[작업중] 유지**. 타 프로젝트의 상태·수치·표식 불변. [P4-05 제품 감사](https://github.com/hibi89/DBVORA/blob/feature/p0-db-map/docs/P4_05_TRUSTED_ZIP_RELEASE_GATE_20261112.md).
 
 > **2026-11-12 KST — 소유자 지시 REA_Web / DATA2WEB 상품 정체성 분리 완료:** 원래 `REA_Web`은 웹사이트 분석·재구축, 신규 `data2web_studio`는 CSV·JSON·XLSX·TSV → 오프라인 독립 웹앱이다. 기존 단일 `REA_Web 95%` 표기는 **REA Lite 역사적 좁은 범위의 기술 평가**로만 보존하며 신규 둘 중 어느 제품의 정식 완성률에도 승계하지 않는다. 최신 활성 **17개 식별자(기존 15개 점수 유지 + DATA2WEB 미산정 + 원래 REA_Web 미산정)**, **전체 평균·합계 산정 보류**. 기존 16종 통계들은 작성 당시 이력으로만 읽는다. 두 제품 정본 설계·브랜치 구성 확인, 새 제품 실행 코드/사이트→재구축 종단 E2E는 아직 미구현·미검증, 모두 RELEASE HOLD. 기타 상품 `[작업중]`·점수 변경 금지. [제품 분리 감사](docs/audits/REA_WEB_DATA2WEB_PRODUCT_SPLIT_20261112.md).
@@ -200,6 +202,7 @@ FFAX 안전한 AI 공급자 어댑터·로컬 검증 확장, Node96 PASS·mock12
 
 | 후보 제품 | 작업 상태 | 정본 저장소·브랜치 | 구분 |
 |---|---|---|---|
+| KUODRA **[작업중]** | **최종상품 5/100% 잠정 (D0 설계·정본만), P50 목표, RELEASE HOLD** | `hibi89/KUODRA@main` (`7d112f77ec54`), 코드 이관 `develop@48182bc2e7c3` | **신규 독립 크몽 후보**: 국내 DART + 미국 SEC, A/B/C/ML/Guard·Windows 로컬 100점 설계. 9개 브랜치 실재, KIC 코드·테스트 파일 10/10 원본 SHA 일치. 새 코드 실행 테스트 0회, 실데이터/권리/설치/판매 미검증; KIC 82% 승계 불가. 목표 달성 전 표식 보존, 기존 활성 제품 집계 불변 |
 | PREP | 미표시 (작업 여부 미확인) | `hibi89/prep@feature/core-extraction` | 활성16 제외; 최종상품률 미산정 |
 | FFAX | 미표시 (작업 여부 미확인) | `hibi89/frontend-foundry-ax@feature/ffax-workbench-p85-20261112` | 활성16 제외; 별도 후보 |
 | Factory AX | 미표시 (작업 여부 미확인) | `hibi89/factory-ax-ecosystem@feature/data-verify` | 활성16 제외; W1과 전체 생태계 구분 |
