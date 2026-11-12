@@ -1,3 +1,9 @@
+## 2026-11-12 KST — Factory AX Ecosystem 신규 상품화 후보·진척률 등록
+- 새 Private `hibi89/factory-ax-ecosystem@main:29b9653ccbc4bcd36a190f9e9d78954bcc4dae76` 설계 문서 29개/브랜치 10개 검증. 제조업 납품형 표준 제품이며 기존 SMAX² SELF와 별개.
+- **VERIFY 최종상품률 UNASSESSED**, Factory 신규 기능/실행 검증 **0건**, VERIFY **50% 목표 미달**. HAE/LA·보안·PC CARE·Code QA를 포함한 생태계 장기 최종완성률 역시 **UNASSESSED**. 문서 작성/타 제품 85%가 Factory 개발 진척은 아님. RELEASE HOLD.
+- 기존 크몽 **활성 16종** 최종 완성률/합계 **1369%p**/평균 **85.5625%**/85 이상 16개 및 기존 후보 PREP/FFAX/BID AX/FlowPilot Universal/WORKNOVA Desk 상태 유지. Factory는 별도 신규 후보 1종, 활성 집계 제외.
+- 다음: Factory `feature/data-verify`에 4종 제조 자료 합성 계약·독립 정답/실행 테스트, 원천 권리 확인 후 50% 단계 평가. 소스/실 고객/비밀/배포·계정 변경 없음. [후보 정본](docs/commercial/FACTORY_AX_CANDIDATE_BASELINE_20261112.md).
+
 > **2026-11-12 KST 최신 PREP Private 검증·크몽 완성률 재확인:** GitHub `hibi89/prep` 저장소가 **PRIVATE**로 전환된 사실을 직접 조회했다(사용자가 설정 변경). 기존 Public 보안 차단은 해소됐지만, **SMAX 비공개 원본 이관·코드 GitHub 반영·골든 동등성·실 Windows 검증은 아직 진행되지 않았다.** PREP의 **정식 최종상품 완성률 미산정(UNASSESSED)**, **독립 GitHub 실행코드 검증률 0%**, **50% 목표 미달** 유지. 로컬 후보 Node22 `npm test` **71/71 PASS × 원본/ZIP 재실행**은 별도 증거. PREP `main/develop/feature/core-extraction` 문서 HEAD `15e21dbe1ccac516dff93967c538b7645e756a3f`. 기존 크몽 활성16종의 최종완성률·합계·평균·분모는 **변경하지 않음**; PREP는 별도 후보. 과거 PREP 'PUBLIC' 표기는 변경 이전 이력이며 최신 사실이 아님. [PREP 최신 감사](docs/audits/PREP_INDEPENDENT_PRODUCT_BASELINE_20261112.md). **RELEASE HOLD.**
 
 ## 2026-11-12 KST — FFAX approved-provider adapter readiness / still 78 of 100
