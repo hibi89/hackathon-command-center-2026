@@ -1,3 +1,15 @@
+## 2026-11-12 KST — REA_APP P85 provisional Kmong synchronization (10-point handoff)
+1. **Goal/technology:** Active16 REA_APP 70→85 engineering target, private hibi89/HAE original REA_APP v0.3.0 Python+Node/Babel source analyzer preserved.
+2. **Delivered/decision:** Existing CLI changes(A) vs separate zero-API Python offline delivery(B); choose B. Source-free Korean HTML/JSON numeric owner report, three-report SHA256 binding, reproducible ZIP, independent verify, no original source copying.
+3. **Verification:** Exact GitHub source/test blob matched local verified Python3.13.5 23 PASS/0 FAIL/0 SKIP; Chromium injected static HTML 9 rows, 0 JS errors/outbound requests. Original full Gate R at this SHA/physical Win10/11 not executed, file:// direct navigation policy BLOCKED.
+4. **Status:** REA_APP weighted engineering85 provisional (70+15 subjective scope); full release/acceptance/100% NOT ACHIEVED; entire portfolio RELEASE HOLD, 16 active 1309%p avg81.8125%, 85+12 85-4. FFAX75 excluded; LA70 concurrently worked elsewhere.
+5. **Errors/pivot:** early fixture/test setup bugs fixed before clean23 tests; GitHub private checkout DNS unsupported in container, no automatic CI; direct file:/// ERR_BLOCKED_BY_ADMINISTRATOR, not a proven production defect.
+6. **Source:** hibi89/HAE@feature/rea-app-kmong-owner-delivery-20261112 HEAD 48162883fe4e0e84e08e4c0b99d86e76d00dbc35, base REA_APP@2fe581b683f6a49779e71058cddbfd165871593a, docs/REA_APP_KMONG_P85_OWNER_DELIVERY_20261112.md. Hub kmong-productization exact SHA to verify after write.
+7. **Production/runtime:** N/A Vercel; local Python3.13.5 synthetic scoped; Windows buyer native not run.
+8. **Original/backup/security:** Original frozen REA_APP branch, Gate R pins, wheel, credentials, customer reports and other15 scores unchanged. Feature-parent Git rollback; no external traffic/paid services/permissions.
+9. **Next:** On authorized full clone run source exact Gate R/QA/new QA + real bundle→ZIP; physical Windows file:// and ZIP, customer rights/license/PII/support; owner signoff before release. No merge or sales until verified.
+10. **Time/evidence:** 2026-11-12 KST, product HEAD exact and local synthetic evidence verified, original full-integrated Windows/CI unverified; hub document commit SHA verify separately.
+
 ## 2026-11-12 KST — FFAX P85 목표 / 검증된 P78 크몽 별도 후보 동기화 (10항)
 1. **목표·요건:** FFAX v1 AI UI 생성·시각 편집·QA·안전한 Git 반영, 고정 12개 AC 총100점. 기존 크몽 활성16종과 별도 육성 후보.
 2. **완료·설계:** P75 보존, FFAX AC11용 opt-in AI 정책/비용한도/토큰/중복·429/취소·복구/민감정보 차단 구현. 실 provider 전송 없이 로컬 mock. A 무제한 자동 호출 대신 B 명시 승인·예산·외부 유출 사전 차단 채택. TypeScript 12 브리프와 legacy React 렌더 준비 점검(AC04 미충족).
