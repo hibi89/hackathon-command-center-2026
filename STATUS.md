@@ -1,3 +1,10 @@
+## [LATEST 2026-11-13 KST] REA_Web 원래 제품 P85 합성 다중상태·반응형 QA 검증
+- 원래 REA_Web 사이트 분석·재구축 제품 `hibi89/REA_Web@feature/website-analysis-rebuild`에서 실 Playwright Chromium으로 **합성 사이트3종×Desktop1280×720/Mobile390×844×연속 검색/필터/상세** 동작, Astra P4 실제 observed evidence 6개/사이트 및 캡처 SHA, owner 합성 review digest와 원본 SHA를 거쳐 기존 pinned Fable 정적 스캔 + Pro FastAPI/SQLite 독립 앱 생성, 실제 브라우저 기능 결과 비교. 사이트와 생성 앱의 시각 차이를 수치화하고 parity 미승인 보고.
+- 정확 코드/CI SHA `1c3390fa3da933c5d0513196f0dcfc97b18b5e14`, [GitHub Actions #43273324679](https://github.com/hibi89/REA_Web/actions/runs/43273324679) **2/2 SUCCESS**, Ubuntu24.04 **52PASS/0FAIL/1WARN**, Windows2025 **52PASS/0FAIL/1WARN** (기존41+신규 P85 11). 최초 #43273113196의 49PASS/3FAIL은 Path→JSON 변수 혼동; 1줄 수정 후 양 OS PASS.
+- [중앙 활성상품 표](docs/audits/KMONG_16_CURRENT_20261111.md) **REA_Web 70→85% 엔지니어링 잠정**, 사용자 현 P85 합성 게이트 검증에 따라 **REA_Web [작업중]만 해제**, DATA2WEB 및 타 제품 점수/표식 보존.
+- **RELEASE HOLD**: 임의 실사이트 원 디자인·복합 기능 재구축/진짜 Fable --record/고객 실기기·법적 사용권/상업적 인수·Production 미검증. 본 85는 내부 단계 수용률이며 실제 전체 사이트의 자동 재구축 성공률이 아니다.
+- [원본 상세 P85 증거](https://github.com/hibi89/REA_Web/blob/feature/website-analysis-rebuild/docs/WEBSITE_P85_RESPONSIVE_ACCEPTANCE_20261113.md), 새 P95/100 사용자 지시 전 미설정.
+
 ## 2026-11-13 KST — GitHub Trending 과거 조사·수익화 후보 통합 원장 최신화
 - 기존 11/06~12 일간, 11/09 주간 보고의 상품화 아이디어 **30개** 및 GitHub 참고 저장소 **69개**를 중복 제거하여 `docs/github-trending/MONETIZATION_IDEAS_MASTER.md`, `RESEARCH_HISTORY_INDEX.md`에 기록. 이전 순위·라이선스는 미재검증 명시.
 - 일간·주간·월간 3브랜치 문서 생성 및 목차/상품 원장 연결. 예약 프롬프트 3/3 수정 성공: 일·주는 자기 브랜치 `PRODUCT_IDEAS.md`와 `RESEARCH_HISTORY_INDEX.md` 갱신, 월간이 양 브랜치를 읽어 중앙 마스터 갱신. 과거 날짜별 보고 보존.
