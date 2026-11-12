@@ -1,3 +1,15 @@
+## 2026-11-12 KST — REA_Web Lite P95 rights-scope audit handoff (10 fields)
+1. Goal: precise owner-free audit of Lite customer distribution contents and Pro license evidence.
+2. Done: source verified exact 3 Lite ZIP members; separated inline HTML/JSON plaintext from build-time Python and previously inventoried Pro runtime wheels. [Report](https://github.com/hibi89/REA_Web/blob/feature/lite-owner-delivery-p95-20261112/docs/63_LITE_SHIPPED_COMPONENTS_RIGHTS_PRECHECK_20261112.md).
+3. Tests: no new tests; exact previous code SHA cb7df1f4d1ce517c5940570af5bb1085410de268, Actions #43186105405 2/2 SUCCESS, Windows688 PASS/19 SKIP, Ubuntu677 PASS/20 SKIP.
+4. State: REA_Web engineering 95% provisional, no added percentage, sale RELEASE HOLD. Active16 total and 15 other product rates unchanged.
+5. Risks: absent root LICENSE/NOTICE, shipped template rights undetermined, customer plaintext and rights/retention unresolved; not legal clearance.
+6. Refs: hibi89/REA_Web feature/lite-owner-delivery-p95-20261112, documentation SHA 81c55c3599bc7f66b64dd2addd31aa52aac812e4, Draft PR #34 unmerged; hub hibi89/hackathon-command-center-2026 kmong-productization.
+7. Deploy: N/A; hosted cross-OS test proof only, physical nondeveloper Windows10/11 NOT_RUN.
+8. Original/backup: Pro/main and Lite baseline unchanged, Git branch retained for rollback; no customer data/secret/package sent or licenses/permissions modified.
+9. Next: human independent Win10/11 three pilots, data and code ownership/redistribution, NOTICE, pricing/refund/support final GO with evidence.
+10. Updated 2026-11-12 KST; audit source code inspected, not a new tested feature or legal approval.
+
 ## 2026-11-12 KST — REA_APP NTFS reparse security and P95 gate (hub 10-item handoff)
 1. Goal/tech: Move REA_APP P85→P95 customer offline packaging safety with frozen original P53, Python3.11+.
 2. Decision/implemented: Symlink-only A misses Windows NTFS junction metadata; shared lstat FILE_ATTRIBUTE_REPARSE_POINT+symlink guard B selected. Apply to source report/directory, output/ZIP ancestors and conservative rollback. No network or original source modification.
