@@ -1,3 +1,8 @@
+## 2026-11-12 KST — FFAX P85 재도전·실기능/로컬 QA 추가, 공식 78점 유지
+- FFAX Private `hibi89/frontend-foundry-ax@feature/ffax-workbench-p85-20261112` 기능 SHA `9733dbf72810e03d85ca29811f53ae368a8a651a`, 문서 `0d854f2263ff6799be51a478a073d3dfa097abd0`. 사용자 승인 없는 원본 수정·과금·Production 변경 없음.
+- 제한된 모델 출력 JSON 스키마·컴포넌트 검증 + 합성 화면 TSX 검사12 + Node 전체86 PASS; 기존 React UMD 렌더12/12·3폭36; Chromium 동일 소스 주입30 PASS; 접근성 기본12 PASS; 계산 색 대비738개(3테마×3폭) 0 미달 후보; 로컬 D1–D5 재현5/5 PASS. 실제 LLM/axe/실 브라우저 URL/Windows/clean CI/사용자 최종승인 미검증.
+- **고정 기준 FFAX 78/100 잠정, 85 미달, RELEASE HOLD.** 활성 크몽 기존16종 통계 변경 없음(해당 상품 기록 우선). FFAX 신규 크몽 판매·배포 등록 아님. [제품 근거](https://github.com/hibi89/frontend-foundry-ax/blob/feature/ffax-workbench-p85-20261112/docs/FFAX_P85_SECOND_PASS_20261112.md).
+
 ## 2026-11-12 KST — Coin Pattern Analyzer 70→85% provisional engineering + central 16 product rollup
 - Product hibi89/candle_scraper@feature/coin-pattern-p85-forward-eval-20261112 latest confirmed product docs SHA 17ddfba71d32113e683327c75cd260b400fc0f20, canonical P1–P6 base 8eafcb075959985c4f7aa0757c2e19e192ed27fa unchanged; independent zero-network post-signal event study, hypothetical next-open→Hth-close observations, per-side fee/slippage, gap/EOF censor, per-rule/market/time summary, offline HTML/CSV/JSON/SHA receipt. No actual trading or source DB copy/upload.
 - Source/test Git blobs exactly matched isolated local Python3.13.5 run, **25 PASS / 0 FAIL / 0 SKIP**, compileall PASS. Additional 100000 synthetic minute candles and 201 synthetic signals, 0.41sec, original SQLite SHA unmodified. Full original 101 tests + legacy collector suite NOT RUN at new SHA, real Win10/11/3.6GB/EXE/chart/license, CI/customer pilot NOT VERIFIED; RELEASE HOLD / SALE NO-GO.

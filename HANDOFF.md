@@ -1,3 +1,15 @@
+## 2026-11-12 KST — FFAX P85 재도전 결과 해총 최신화, 인수인계 10항
+1. 목표·용도: FFAX AI 프론트엔드 제작/편집/QA 시스템을 기존 최종설계 100점 기준으로 검증, 실용 상품화 후보 독립 관리.
+2. 변경·결정: 자유 HTML/JSX/무단 AI 호출보다 구조화 JSON·등록 컴포넌트·안전 승인 방식을 채택. UI 다크·오션·데이라이트 접근성 대비 보강, D1–D5 로컬 테스트 재현기 추가.
+3. 테스트: 기능 코드 SHA `9733dbf72810e03d85ca29811f53ae368a8a651a` 기준 로컬 Node86/86, 모델 합성 TSX12/12, 레거시 React 12/12·폭36, Chromium 주입30/30, 기본 접근성12/12, 대비738개 후보0, D1–D5 5/5. **공식 axe/실 AI·CI/Windows/실고객 미검증**.
+4. 상태: 기존 78/100(잠정) 그대로. AC04 0/14, AC09 0/6, AC12 0/2; 85 목표 미달. RELEASE HOLD, 크몽 활성16종 목록·합계·분모 변경 없음.
+5. 장애·시도/대안: npm registry DNS로 axe-core/lockfile 다운로드 불가, Chromium localhost URL ERR_BLOCKED_BY_ADMINISTRATOR; 동등한 성공을 주장하지 않고 제한된 브라우저 DOM 주입/자체 contrast로 전환. 유료 AI·private CI는 비용/전송 승인 없이 실행 안 함.
+6. 저장소/브랜치/SHA: Private `hibi89/frontend-foundry-ax@feature/ffax-workbench-p85-20261112`, 소스 `9733dbf72810e03d85ca29811f53ae368a8a651a`, 문서 `0d854f2263ff6799be51a478a073d3dfa097abd0`; Public 허브 `hibi89/hackathon-command-center-2026@kmong-productization`. 증거 `docs/FFAX_P85_SECOND_PASS_20261112.md`.
+7. Production: Vercel 미적용. FFAX 로컬 Node 서버는 `127.0.0.1:4173`, Chromium 직접 접속 검증 불가.
+8. 원본·백업·보안: main `191289d...`, 고객 데이터·토큰, 기존 활성16개 제품 소스/점수/배포 무변경. Public 허브에는 private 구현 코드 복제 안 함.
+9. 다음: 실 AI 공급자/데이터 전송·가격 승인→AC04 정식 검사, axe+사용자 UX 리뷰→AC09, 클린 환경 GitHub CI/E2E→AC12. 검증 전 점수 인상 금지.
+10. 갱신: 2026-11-12 KST, 제품 원격 HEAD 및 제한된 Node/Chromium local QA 확인. 허브 최신 SHA는 본 커밋 후 조회, 별도 자동 동기화 미구현.
+
 ## 2026-11-12 KST — Coin Pattern Analyzer P85 / Kmong handoff ten-point record
 1. Goal/tech: Active16 Coin Pattern Analyzer 70→85 engineering milestone, read-only Python3.11+ existing P1/P2 CSV + stable SQLite source snapshots, no paid API.
 2. Delivered/rationale: Compared in-place P1/P2 modification vs separate causal event analyzer; independent version chosen (preserve legacy), next-open to Hth future close, two-sided fees/slip, missing data/EOF censor, per-rule/market retrospective split, offline HTML/CSV/JSON/hash manifest and no output overwrite.

@@ -1,3 +1,14 @@
+## 2026-11-12 KST — FFAX P85 재도전 증거 추가, 점수 78/100 잠정 유지
+
+- **제품:** `hibi89/frontend-foundry-ax@feature/ffax-workbench-p85-20261112`; 검증 기능 SHA [`9733dbf72810e03d85ca29811f53ae368a8a651a`](https://github.com/hibi89/frontend-foundry-ax/commit/9733dbf72810e03d85ca29811f53ae368a8a651a), 인수인계/검증 문서 [`0d854f2263ff6799be51a478a073d3dfa097abd0`](https://github.com/hibi89/frontend-foundry-ax/commit/0d854f2263ff6799be51a478a073d3dfa097abd0).
+- **추가 구현:** 엄격 JSON 모델 시안(실 모델은 미연결), 컴포넌트별 허용 속성·프리뷰 승인, TypeScript 모델계약 검사, D1–D5 로컬 통합게이트, 색 대비 3테마×3폭 수정·검증.
+- **실행:** Node 86 PASS/0 FAIL/0 SKIP; 합성 모델 TSX 12/12; 기존 구버전 React UMD 실제 렌더 12/12·3폭36; Chromium injected DOM 30 PASS, keyboard/label12 PASS; 계산 텍스트 대비738/738 후보0; 로컬 D1–D5 5/5. CI·실 모델·axe·수동 사용자 UX·Windows·Production 미검증.
+- **평가:** 기존 AC 78점 **+0**. AC04 14 / AC09 6 / AC12 2는 미충족. **85 미달, RELEASE HOLD**, 상품화·매출·고객 수락 보장 없음.
+- **크몽 표 영향:** FFAX는 별도 후보. **기존 활성16종의 모든 점수·집계·분모 무변경**, 최신 다른 담당자 업데이트 보존.
+- [FFAX 세부 근거](https://github.com/hibi89/frontend-foundry-ax/blob/feature/ffax-workbench-p85-20261112/docs/FFAX_P85_SECOND_PASS_20261112.md).
+
+---
+
 # FFAX P85 목표 작업 감사 — 실제 78/100점 잠정 (2026-11-12 KST)
 
 **분류:** FFAX는 향후 크몽 상품화 후보이나 **현재 활성 16종에 포함하지 않는다**. 크몽 활성 제품 기존 완료율·합계·분모·판매 HOLD는 변경하지 않는다.
