@@ -1,3 +1,15 @@
+## 2026-11-12 KST — Coin Pattern Analyzer P85 / Kmong handoff ten-point record
+1. Goal/tech: Active16 Coin Pattern Analyzer 70→85 engineering milestone, read-only Python3.11+ existing P1/P2 CSV + stable SQLite source snapshots, no paid API.
+2. Delivered/rationale: Compared in-place P1/P2 modification vs separate causal event analyzer; independent version chosen (preserve legacy), next-open to Hth future close, two-sided fees/slip, missing data/EOF censor, per-rule/market retrospective split, offline HTML/CSV/JSON/hash manifest and no output overwrite.
+3. Tests: Locally matched source/test two Git blobs exactly, Linux Python3.13.5 25/25 PASS/0 FAIL/0 SKIP; compileall PASS; 100k synthetic candles, 201 signals in 0.41 seconds, source DB SHA unchanged. Original source-exact P1–P6 101 and full collector suite NOT RERUN at new HEAD; Win/CI/customer data not verified.
+4. State: Product 85% PROVISIONAL scope-weighted (70+15) engineering; 16 active mean 83.6875%, 14 at 85+, 2 under85 (PC CARE/CUBE); RELEASE HOLD.
+5. Faults/retry: Two initial fixture setup mistakes corrected before 25 PASS. Full native Windows/real customer integration unavailable, not declared failed. Avoid private unauthenticated git clone retry without capability.
+6. Repository SHA/path: Private hibi89/candle_scraper@feature/coin-pattern-p85-forward-eval-20261112 docs HEAD 17ddfba71d32113e683327c75cd260b400fc0f20, base feature/candle-pattern-analyzer@8eafcb075959985c4f7aa0757c2e19e192ed27fa; coin_forward_eval.py, test_coin_forward_eval.py, docs/COIN_P85_FORWARD_STUDY_20261112.md. Public hub kmong-productization final HEAD to independently verify.
+7. Runtime/Production: Linux Python3.13.5 scoped, Python3.11+ intended, Windows not tested; no Vercel/Production or live order/API.
+8. Original/backup/security: Existing P1–P6 and collector main untouched; no owner customer raw SQLite/CSV/WAL/SHM, secrets, licenses, paid CI changes. Isolated feature branch can be switched/reverted without force push.
+9. Next/approval: Authorized full original+new regression, Windows10/11, approved checkpointed customer DB copy/chart/real fee, installer/SmartScreen, pilot and rights. Obtain owner explicit GO before sale/merge.
+10. KST verified 2026-11-12, verification exact new blobs+25 scoped and synthetic benchmark only, commercial full gate remains HOLD.
+
 ## 2026-11-12 KST — 크몽 신규 상품화 후보 3종 등록: 인수인계 10항
 1. 목표·기술: 사용자 지시로 BID AX(공공입찰), FlowPilot Universal(Windows/SMB 검수), WORKNOVA Desk(견적·계약·납품)를 해총 크몽 후보에 추가. 로컬 설치형·SQLite·서버 0원/월 목표.
 2. 결정·완료: [3종 상품화 최종설계](docs/commercial/KMONG_3_NEW_PRODUCTS_20261112.md)에 제품 목적·기능·고객 가치·3티어 가격·비용/정책·설계 A/B와 50/70/85/95/100% 수락 기준 작성. 기존 제외 BID OWL은 재편입하지 않음.
