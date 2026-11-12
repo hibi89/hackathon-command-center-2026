@@ -1,3 +1,5 @@
+## KUODRA 2026-11-13 KST 최종 사후 CI — 기능 SHA `8b8801991870f1a98117b68bd23ed2e99c77cacb`, [Actions #43300053991](https://github.com/hibi89/KUODRA/actions/runs/43300053991) Ubuntu·Windows 각 275/275 PASS/0 FAIL, Windows 1125파일 ZIP SHA 및 임시 설치/검사/명시제거·고객 원본 보존 PASS. 내부 최종상품 완성률 89% 잠정, P95 미달·KUODRA `[작업중]` 유지, 실제 기업/권리/고객 Windows/법률/판매 GO 미검증, RELEASE HOLD. 다른 상품·KIC 원본 불변.
+
 ## 2026-11-13 KST — KUODRA P95 재개: 89% 잠정, 목표 미달·작업중 유지
 - `hibi89/KUODRA` Private, code `develop@8b8801991870f1a98117b68bd23ed2e99c77cacb` via PR#6. 공식 OpenDART 응답에 존재하지 않는 row `fs_div/thstrm_dt` 가정 제거, 요청 CFS/OFS 바인딩과 사용자 별도 확인 결산일 요구. 소유자 제공 OpenDART JSON 로컬 GUI/CLI, 한국어 브라우저 인쇄 HTML 및 안전 ZIP 파일명령 추가.
 - [Actions #43298114834](https://github.com/hibi89/KUODRA/actions/runs/43298114834) feature exact SHA Ubuntu·Windows 각각 **275/275 PASS, 실패0**. Windows unsigned PyInstaller EXE/ZIP 1,125 파일 SHA 검증, 한글 경로 설치·검증·명시적 제거 후 독립 사용자 파일 보존 **PASS**. 마지막 develop 문서 SHA의 독립 CI는 별도 점검; 사용자 실 Windows10/11·실기업 API/원본권리·OS IAM·금융규제/판매승인 미검증.
