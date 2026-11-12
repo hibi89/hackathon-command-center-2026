@@ -1,3 +1,15 @@
+## 2026-11-12 KST — Astra P85–P87 hub handoff (10 points)
+1. Goal/tech: Astra PDF Redesigner 95%, offline React/TypeScript/Vite/Electron/PDF.js; preserve original PDF, product V2 and other Kmong work.
+2. Finished/choices: P85 image page-local movement, P86 whole-document reading order, P87 seven-item transient owner manual PDF acceptance, count-only metadata JSON; chose no storage schema/approved-license changes over premature PRO/BUSINESS persistence.
+3. Tests: latest exact SHA 0db2acb51854; Linux #43243819225 SUCCESS 2/2, 150/150 Node PASS, real Chrome+Edge PDF and build; Windows #43243819123 SUCCESS 1/1, Node149PASS/1SKIP, desktop16PASS, 8 installed distinct A4, NSIS install/remove/update preserves owner data. Buyer physical PC and real owner PDFs untested.
+4. Status: product engineering 85% provisional unchanged, P95 NOT MET, all SKUs RELEASE HOLD, Astra [작업중] remains on Kmong scoreboard until objective target achieved.
+5. Faults/failed approach: P86 CI Linux #43243356071 one Edge CDP cold boot timeout 60s with no DevToolsActivePort, build/Chrome successful and Windows #43243355823 success; P87 new Edge run fully green. No code bug proven, do not rerun identical CI without cause.
+6. Repo/branch/SHA: hibi89/astra_pdf_redesigner feature/astra-p71-pdf-source-parity-20261112 @ 0db2acb5 source / deb87550fa48 docs, Draft PR #10; hub hibi89/hackathon-command-center-2026 @ kmong-productization, score at docs/audits/KMONG_16_CURRENT_20261111.md.
+7. Production and commands: npm test, npm run build, hosted Chrome/Edge and Windows Electron/NSIS; no Vercel deployment, production app or commercial sale. Windows automated installed test is not user's buyer PC.
+8. Originals/security: source PDF and local IndexedDB V2 unmodified; no model/download/api charge, permissions, secrets, existing main or other products changed; Git predecessor a8b1e9f00... recoverable.
+9. Next milestone/approval: 5–10 owner-approved real PDFs with visual checks; physical buyer Windows10/11, PRO20/BUSINESS30 original layouts and schema design approval, legally licensed local Korean model and font, signing/support/legal customer sale terms. Keep [작업중] until actual P95; do not lower target or mark success without owner.
+10. Updated 2026-11-12 KST; verified code+GitHub workflow logs and successful latest SHA, central marker read back after hub commit; document-only hub commit SHA differs from functional source.
+
 ## 2026-11-13 KST — DBVORA PostgreSQL P1-09, P92 provisional / P95 target still pending (10-point hub handoff)
 1. 목표·기술: local-first DBVORA PostgreSQL/SQLite catalog + read-only statistics, ZIP/ZSTD, 85→P95 사용자 지시.
 2. 기능·선택: A schema-only 정적 관제 vs B 명시적 opt-in PG live/dead row 추정/heap·index 실측+manual review+offline UI, B 구현. view/partition parent missing physical size 표시, no auto SQL/DB mutation.
