@@ -1,0 +1,19 @@
+name: Unit-test final blueprint gate
+on:
+  push:
+    paths:
+      - tools/final_blueprint_gate/**
+      - .github/workflows/test-final-blueprint-gate.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Run 6 independent failure-mode tests
+        run: python3 -m unittest discover -s tools/final_blueprint_gate -p "test_*.py" -v
