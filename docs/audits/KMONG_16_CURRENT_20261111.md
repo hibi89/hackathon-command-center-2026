@@ -1,3 +1,10 @@
+## 2026-11-12 KST — FFAX manual-AI and offline cleanroom extension; **78/100 provisional unchanged**
+- **Private repo:** `hibi89/frontend-foundry-ax@feature/ffax-workbench-p85-20261112`. code `ffd04a8f452ef3f7523201767b1f18cd3d18fb31`; docs `0dac41467e404a2521f6f458b2282b7b1601133d`. Main preserved.
+- **Feature:** owner consent before exporting safe UI-only prompt for optional manual use with ChatGPT, pasted strict model JSON rejected if secret, invalid component or absent owner design approval; visual canvas/TSX updates only after acceptance. No auto AI provider calls/billing/GitHub merge.
+- **Test:** Node 91 PASS/0 FAIL; actual Chromium injected-source browser baseline 30 PASS, manual imported-JSON UI 10 PASS; basic keyboard/labels12 PASS, text contrast 828/828, cleanroom isolated six checks PASS, D1–D5 5/5 local PASS.
+- **Limit:** no genuine runtime model API, real external customer data, axe-core, user UI approval, GitHub Actions verified run (workflow_dispatch only), native Windows or production. Objective target 85 **not reached**, rubric AC04/09/12 remain 0 and total **78/100**. RELEASE HOLD.
+- **Aggregation:** FFAX separate incubation; all original active16 scores, denominator, sum and ranking preserved. [Evidence](https://github.com/hibi89/frontend-foundry-ax/blob/feature/ffax-workbench-p85-20261112/docs/FFAX_P85_MANUAL_BRIDGE_AND_CLEANROOM_20261112.md).
+
 > **2026-11-12 KST 최신 재정합:** AXMART³ CUBE 70→85% 잠정 엔지니어링(신규 소유자 안전 검수 도구, 26 scoped Native PASS)로 활성16종 합계 **1,354%p**, 평균 **84.625%**, 85이상 **15종**, 미만 **1종(AXMART PC CARE 70%)**. PC CARE는 다른 채팅 개발 중, 최신 완료 주장 아님. FFAX는 별도 후보. 판매 전 16종 RELEASE HOLD. 기존 11/11 감사 행은 역사적 기준, 이 표의 현재 행만 최신 상태로 보정.
 
 > **2026-11-12 KST 최신 보정:** 코인 패턴 분석기 70→85% 잠정 엔지니어링은 11/11 당시 역사 감사 후의 신규 결과다. 활성 16종 합계 1,339%p, 평균 83.6875%, 85% 이상 14종, 미만 2종. FFAX 별도·LA85 반영. 실서비스 출시/CI/실 Windows/고객 데이터 검증과 별개이며 전 제품 RELEASE HOLD.

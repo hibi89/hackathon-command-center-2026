@@ -1,3 +1,10 @@
+## 2026-11-12 KST — FFAX manual-AI and offline cleanroom extension; **78/100 provisional unchanged**
+- **Private repo:** `hibi89/frontend-foundry-ax@feature/ffax-workbench-p85-20261112`. code `ffd04a8f452ef3f7523201767b1f18cd3d18fb31`; docs `0dac41467e404a2521f6f458b2282b7b1601133d`. Main preserved.
+- **Feature:** owner consent before exporting safe UI-only prompt for optional manual use with ChatGPT, pasted strict model JSON rejected if secret, invalid component or absent owner design approval; visual canvas/TSX updates only after acceptance. No auto AI provider calls/billing/GitHub merge.
+- **Test:** Node 91 PASS/0 FAIL; actual Chromium injected-source browser baseline 30 PASS, manual imported-JSON UI 10 PASS; basic keyboard/labels12 PASS, text contrast 828/828, cleanroom isolated six checks PASS, D1–D5 5/5 local PASS.
+- **Limit:** no genuine runtime model API, real external customer data, axe-core, user UI approval, GitHub Actions verified run (workflow_dispatch only), native Windows or production. Objective target 85 **not reached**, rubric AC04/09/12 remain 0 and total **78/100**. RELEASE HOLD.
+- **Aggregation:** FFAX separate incubation; all original active16 scores, denominator, sum and ranking preserved. [Evidence](https://github.com/hibi89/frontend-foundry-ax/blob/feature/ffax-workbench-p85-20261112/docs/FFAX_P85_MANUAL_BRIDGE_AND_CLEANROOM_20261112.md).
+
 ## 2026-11-12 KST — FFAX P85 재도전 증거 추가, 점수 78/100 잠정 유지
 
 - **제품:** `hibi89/frontend-foundry-ax@feature/ffax-workbench-p85-20261112`; 검증 기능 SHA [`9733dbf72810e03d85ca29811f53ae368a8a651a`](https://github.com/hibi89/frontend-foundry-ax/commit/9733dbf72810e03d85ca29811f53ae368a8a651a), 인수인계/검증 문서 [`0d854f2263ff6799be51a478a073d3dfa097abd0`](https://github.com/hibi89/frontend-foundry-ax/commit/0d854f2263ff6799be51a478a073d3dfa097abd0).

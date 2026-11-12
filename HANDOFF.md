@@ -1,3 +1,15 @@
+## 2026-11-12 KST — FFAX 78/100 provisional third-pass update (10-point handoff)
+1. **Goal/tech:** FFAX AI frontend production workbench, react component editor and QA; existing v1 100-point rubric preserved. FFAX is separate candidate (NOT active16).
+2. **Work/decision:** Private FFAX manual owner-controlled AI copy→strict JSON approval UI, no automatic model/provider connection; added fail-closed secret/output checks, cleanroom test, optional manual-only Actions workflow. Safer manual proof before external billing/data approval.
+3. **Test evidence:** Node22 Linux 91 PASS/0 FAIL/0 SKIP; Chromium same-source injection old30+manual10 PASS; basic accessibility12; computed text contrast828 no low candidates; synthetic TSX12; cleanroom6/6; local D1–D5 5/5. Real LLM, axe, actual hosted CI, Windows, Production NOT RUN.
+4. **Completion:** `78/100` provisional (+0), 85 target not reached, AC04 14 / AC09 6 / AC12 2 missing, RELEASE HOLD, active16 score unchanged.
+5. **Failure/pivot:** Prior npm/axe registry DNS and local Chromium URL navigation blocked; no repeated identical attempts. Local approval/manual adapter used instead of unapproved external model charges. No fresh build/CI claims.
+6. **Repo/branch/SHA:** `hibi89/frontend-foundry-ax@feature/ffax-workbench-p85-20261112` code `ffd04a8f452ef3f7523201767b1f18cd3d18fb31`, docs `0dac41467e404a2521f6f458b2282b7b1601133d`; public hub `hibi89/hackathon-command-center-2026@kmong-productization` SHA refresh after commit. Source and private implementation remain in private repo only.
+7. **Production:** FFAX local Node>=20 `npm start` localhost 4173; Vercel/Production N/A; Actions manual-only/unrun.
+8. **Original/backup/security:** FFAX main and external products unchanged; no customer data, tokens, permissions, payouts, external AI calls or pricing change; recover by normal revert. Sensitive regex is defense-in-depth, not perfect.
+9. **Next/approval:** real owner-approved model vendor/pricing/data policy + generated 12 React modern runtime builds (AC04); formal axe + owner UX (AC09); hosted CI manual authorization (AC12). Apply rubric only with evidence.
+10. **Timestamp/basis:** 2026-11-12 KST, product docs `0dac41467e404a2521f6f458b2282b7b1601133d`, linked evidence; actual hub SHA to verify post-push.
+
 ## 2026-11-12 KST — PC CARE P15–P18 provisional 80%, P19 85% QA gate (10-point handoff)
 1. Goal/technology: PC CARE Windows 11 local-first PS5.1/CMD/HTML/JSON health, analysis, printed owner report, read-only WinRE readiness and separately approved recovery per unchanged FINAL_SPEC_V2; 85% development target.
 2. Delivered/choice: safer offline consultation menu and script-free A4 recovery safety guide (+3pp); false-clean classification when disk collection/status missing or contradictory (+3pp); developer-only casepack network/cloud/junction path, duplicate JSON/schema guards (+2pp); internal test ZIP allowlist and safety tests (+2pp). Chose safe owner controls over real WinRE copying without physical test evidence.
