@@ -1,3 +1,5 @@
+> **2026-11-12 KST LATEST REGRESSION/UPSTREAM COMPARISON:** PREP private feature source `a9285b06c08a2483565c48eb19ebaca175ae405a` / tests `a8831717eb90e1e2f9ce57e663c3f0e6181272c1` are exactly blob-matched to Linux Node22-tested files. New **61/61 PASS**, fresh ZIP **61/61 PASS**, syntax and package dry-run PASS. Fixed false positive duplicates by matching ALL original source columns, two regression cases. Read-only SMAX original comparison confirmed distinct number/date/boolean/evidence semantics; full upstream golden parity NOT DONE. **Engineering 70% feature candidate, official PREP percentage UNASSESSED, 70% milestone NOT CERTIFIED**, RELEASE HOLD. Previous 59/59 evidence below is an earlier checkpoint; no active-16 Kmong scores changed.
+>
 # PREP candidate — 2026-11-12 KST (PUBLIC-SAFE HUB EVIDENCE)
 
 ## Current evidence
