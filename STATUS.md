@@ -1,3 +1,8 @@
+## 2026-11-12 KST — GitHub 전체 33개 저장소 크몽 목표 달성 전 [작업중] 유지 지침 반영
+- 사용자 최신 지시: 크몽 단계 목표 완성률 검증 전 `[작업중]` 표식 제거 금지. 작업 중단·보류·전환·채팅 종료에도 유지, 검증된 목표 달성 **후에만** 담당자가 중앙 최종완성률 표에서 제거·커밋한다. 구형 '종료/전환 시 해제' 지시는 폐기.
+- GitHub 소유자 `hibi89`의 33개 저장소 **전부 main AGENTS** + 현재 확인한 24개 추가 주요 브랜치(제품·KIC·PayPal·UGREEN lead·해총 크몽 브랜치) 적용, 원격 정책 존재 **57/57 PASS**. 상세 목록과 정책·검증 범위: [전체 전파 감사](docs/audits/KMONG_TARGET_GATE_GLOBAL_ROLLOUT_20261112.md).
+- 중앙 `AGENTS.md`, `KMONG_PRODUCTIZATION.md`, `docs/audits/KMONG_16_CURRENT_20261111.md`에 신규 지침 반영. 비크몽 작업은 조건부 적용. 코드·완성률·프로덕션·권한·CI·판매 RELEASE HOLD 무변경, 자동 동기화 없음.
+
 ## 2026-11-12 KST — ASTRA P76/P77 product-source progress (P95 unmet)
 - `hibi89/astra_pdf_redesigner@feature/astra-p71-pdf-source-parity-20261112`: code SHA `047d48372f4e`, latest docs `c4eaad9e`, AGENTS goal-lock `1151a0d6`. CLI/GUI per-page PDF token drift and safe owner report output no-delete HOLD; 6 changed source/test paths verified. Exact Node22 local Git blob tokenParity 6 PASS.
 - Full new-SHA npm/browser/Windows Actions checks NOT VERIFIED; prior Chrome/Edge/Windows SUCCESS belongs to prior `3b3c6f73` only. Product Astra 85% provisional unchanged, 95 target NOT MET, RELEASE HOLD; current Astra `[작업중]` preserved. Other products and 16-item total unchanged.
