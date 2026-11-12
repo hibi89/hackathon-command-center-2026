@@ -1,3 +1,17 @@
+## 2026-11-12 KST — PREP P85 121-pass Kmong handoff (latest, 10 fields)
+1. Goal: independent PREP R01–R12, P85 SDK/receipt/report/security/CI Linux acceptance, no release.
+2. Change: globally hold ambiguous mapping aliases, reject header-only data and invalid field options, direct byte caps, correct CR/CRLF lineage, add PREP-only native goldens and max-bounds tests. Original SMAX code not copied.
+3. Tests: private PREP functional SHA fd3b68c45fd9323dc67debf47171e778084266a4 and docs HEAD c8fa038e1e4972fa4c4b8a2db8e4c531a170be9c. Linux Node22.16 **121 PASS, 0 FAIL, 0 SKIP**, network-disabled Linux **121 PASS**, check PASS; local 7-file tarball offline SDK/CLI/sidecar verification PASS. Full remote docs package/hosted CI NOT_RUN.
+4. State: formal 85% NOT CERTIFIED, upstream P50/P70 parity prerequisite unresolved, canonical PREP completion UNASSESSED and RELEASE HOLD. Hub active product scores untouched; PREP not in denominator.
+5. Blocker/cause/pivot: upstream SMAX source contract differs; read-only source + test SHA inventory recorded; no rights-approved transfer or executable cross-repo golden comparison. GitHub hosted CI has zero combined statuses, no runner dispatch. Two options: independent adapter + approved comparison (recommended) vs approved selective source extraction.
+6. Repos/branches: hibi89/prep feature/core-extraction tested fd3b68c4, docs c8fa038e; central hibi89/hackathon-command-center-2026 kmong-productization. PREP paths src/index.mjs, 3 new test suites, docs/UPSTREAM_INTERFACE_INVENTORY_20261112.md. Rollback PREP b3bed36d6438b1a3603ffb686451f740becf8e4e.
+7. Environment/deploy: Linux Node22 verified, Node20/Windows/host consumer NOT_RUN, no Vercel/Production.
+8. Originals/privacy/backup: SMAX preprocessing HEAD 3830cb276f560d58e8181ba384d9cbe64815737c unchanged, PREP main/develop unchanged; synthetic-only testing, zero paid API/runner changes, no credentials, deployment, license or visibility changes.
+9. Next approval: owner choice of compatibility and rights policy; authorized private synthetic cross-execution of SMAX and PREP, then runner CI if costs approved; exact remote package docs and later Windows/pinned consumer.
+10. Updated: 2026-11-12 KST, scope native Linux 121-pass and upstream metadata-only review. New hub commit SHA will be resolved after update.
+
+---
+
 ## 2026-11-12 KST — PREP P85 104-test hub handoff (10 required fields)
 1. Goal: standalone PREP offline R01-R12, P85 SDK/report/receipt/security/Linux acceptance.
 2. Done: explicit CSV/HTML SHA sidecar and verification; JSON result-integrity checksum; Unicode-hidden spreadsheet formula protection. Existing CSV-only interface kept, no upstream source moved.

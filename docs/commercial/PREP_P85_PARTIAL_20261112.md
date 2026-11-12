@@ -1,3 +1,13 @@
+## 2026-11-12 KST — PREP P85 strict mapping and 121-case native gate (LATEST)
+- Private PREP repo hibi89/prep branch feature/core-extraction; exact tested implementation SHA **fd3b68c45fd9323dc67debf47171e778084266a4**, latest documentation HEAD **c8fa038e1e4972fa4c4b8a2db8e4c531a170be9c**.
+- Implemented dataset-level AMBIGUOUS_MAPPING REVIEW_REQUIRED with explicit source mapping preserved; header-only CSV rejected, unknown field options rejected, direct parser 2MiB guard, quoted bare CR/CRLF lineage fixed. Four frozen PREP-only golden output SHA suites, 20k-row/64-column/2MiB boundaries.
+- Exact GitHub-blob SHA match for 4 changed/new files. Native Linux Node22.16 npm test **121 PASS/0 FAIL/0 SKIP**, npm run check PASS; Linux unshare -Urn full suite **121 PASS**. npm pack --dry-run --json PASS; local 7-file runtime tarball SHA256 1acc3fae07591f12a87421182d13cf144670b96d943e67576be70cb4778e738f installed offline with SDK/report/main import and CSV+sidecar CLI verification SOURCE_AND_EXPORT_MATCH PASS. Full exact GitHub docs package NOT VERIFIED.
+- Read-only SMAX preprocessing HEAD 3830cb276f560d58e8181ba384d9cbe64815737c, private generic source, schema, tests metadata inventoried at PREP docs/UPSTREAM_INTERFACE_INVENTORY_20261112.md. Source NOT copied/migrated. These frozen PREP-only goldens **are not actual cross-repo parity**.
+- Hosted GitHub CI status count **0** at source commit, runner not dispatched (unverified costs, no authorized action), Windows native/approved consumer NOT_RUN.
+- **Formal PREP P85 85% NOT CERTIFIED, P50/P70 upstream parity gate unresolved; canonical final completion UNASSESSED; RELEASE HOLD.** No hub existing product score entries or denominators changed; PREP independent candidate excluded. No paid job, permission, release or data transfer.
+
+---
+
 ## 2026-11-12 KST — PREP P85 export proof, JSON integrity and 104 Linux tests (LATEST)
 - Private source: hibi89/prep, feature/core-extraction; code commit **9a7e6f6cc69632158211587d87a0a6c09da674ce**, docs HEAD **b3bed36d6438b1a3603ffb686451f740becf8e4e**.
 - Opt-in CSV/HTML export SHA-256 sidecar with original-source receipt; JSON normalized result/queue/mapping checksum verifier; Unicode-hidden formula risk hardening and unmapped formula review. A linked pair cannot be guaranteed crash-atomic; CSV-only output preserved by default, hash != signature.
