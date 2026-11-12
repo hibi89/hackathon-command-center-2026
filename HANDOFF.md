@@ -1,3 +1,15 @@
+## 2026-11-12 KST — DBVORA P4-05 current handoff, P95 pending (10-point)
+1. Target/stack: DBVORA Python3.11+ local SQLite/PG schema, ZIP/ZSTD recovery, internal P85→P95 goal.
+2. Changes/decision: mandatory actual ZIP build/extract/separate trusted audit/synthetic restore/tamper-fail gate, rather than optional standalone verification; product feature only.
+3. Tests: exact GitHub blobs gate `7e08838eae1d9d40937a34b5d7ebe41e291f6dca` and test `81694c7b623edbf94894a195a11f924c0a5a41f9` matched locally; Linux Python3.13.5 **original unit7 PASS 0 FAIL 0 SKIP** with stubbed builder/trusted subprocess; 5 additional isolated decision checks PASS. Entire >=553 Python/Node, real complete ZIP, Windows, PG/customer NOT RUN.
+4. State: 85% provisional engineering unchanged, P95 unmet, DBVORA [작업중] preserved, all products RELEASE HOLD.
+5. Blocker/pivot: private original checkout git DNS blocked; no repeated clone or CI expense/workflow change. Scoped exact-source tests; full original authenticated checkout or authorized Windows runner required.
+6. Repos/SHAs: `hibi89/DBVORA@feature/p0-db-map` new gate `99a47bc82bbf`, release integration `5f992036bf20`, tests `ff14d4dc3dd6`/`a1e4578a6ca6`, product docs `docs/P4_05_TRUSTED_ZIP_RELEASE_GATE_20261112.md`; hub `hibi89/hackathon-command-center-2026@kmong-productization`, `docs/audits/KMONG_16_CURRENT_20261111.md`.
+7. Deploy/environment: no Vercel/production (N/A), local Linux Python3.13.5, no customer install, no signed publisher.
+8. Preservation/security: Git feature branch revert possible; no customer DB/archive, main/develop, billing, credentials, API, deployment/permissions changed.
+9. Next: complete private checkout run `python -m scripts.verify_release_gate` (Python>=553+Node + trusted 4-check ZIP) then Windows3.11 NTFS/Edge and owner-approved readonly PG TLS and licensing, adjust completion only after verified evidence.
+10. KST 2026-11-12; source/test exact blobs + Linux scoped 7 tests, full repo/Windows/PG unverified; report current hub HEAD after final readback.
+
 ## [LATEST 2026-11-12 KST] REA_Web·DATA2WEB 독립 상품 인수인계 10항
 1. 목표: 원래 REA_Web = 허가된 웹사이트 관찰→Fable5.1→Astra P4 증거·명세→인간 승인→별도 웹앱 재구축. DATA2WEB Studio = CSV/JSON/XLSX/TSV로 로컬 HTML/ZIP 생성하는 별도 Private 상품.
 2. 변경: REA_Web main 요구/최종설계 및 feature/website-analysis-rebuild 생성. DATA2WEB main 문서·정본 최종설계/출처권리·두 개발브랜치 생성. 중앙 REA_Web Lite95 행을 DATA2WEB 미산정으로 정정, 원래 REA_Web 미산정 신규 행 추가.
