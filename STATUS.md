@@ -1,3 +1,8 @@
+## [LATEST 2026-11-13 KST] REA_Web P95 구조 기반 독립 레이아웃 합성 브라우저 QA 성공 — 정본 85% [작업중] 유지
+- `hibi89/REA_Web@feature/website-analysis-rebuild` 새 `rea/website_site_layout.py` / `tests/test_website_site_layout.py`: 참고 합성 로컬 사이트의 nav/aside/article 구조 count→고정 SHA/P85 Astra review digest/owner opinion→3종 자체 REA CSS 레이아웃 후보 중 한 개 선택→기존 FastAPI/SQLite Pro 앱을 새 폴더로 별도 변형, 실제 Chromium 검색/필터/상세 동작 및 ZIP SHA 검수. 원본 사이트 HTML/CSS/JS·문구·이미지 복사 없음.
+- **정확 검증 SHA `de335f9b65b8991c91dd3078d0044f32522f2b50`**, [Actions #43291157984](https://github.com/hibi89/REA_Web/actions/runs/43291157984): Windows2025 **80PASS/0FAIL/1WARN** (Chrome/Edge owner UI 포함), Ubuntu24.04 **78PASS/2SKIP/0FAIL/1WARN**, 2/2 SUCCESS. 첫 #43280370831 양OS 새 구조 테스트 10FAIL=JS 중괄호를 Python `str.format`으로 파싱한 `KeyError:'title'`; placeholder-only replace로 수정 후 성공.
+- **중앙 완성률 REA_Web 85% 엔지니어링 잠정 유지. 현재 사용자 P95 목표 미달·[작업중] 유지**. 본래 고객 사이트의 실제 Fable headed Record→Astra 검증→인간 계약 승인→원래 웹사이트 UI/다양한 업무 로직 **독립 재구축**은 미구현/미검증, 권리/고객 인수·상용견적·Windows10/11 실 PC·Production 미검증. RELEASE HOLD. [중앙 표](docs/audits/KMONG_16_CURRENT_20261111.md), [P95 설계/한계](https://github.com/hibi89/REA_Web/blob/feature/website-analysis-rebuild/docs/WEBSITE_P95_REVIEW_DELIVERY_SCOPE_20261113.md). 다른 프로젝트 및 DATA2WEB 점수/표식 변경 안 함.
+
 ## 2026-11-13 KST — Freelancer 브랜드 5종 + DATA2WEB/PREP/FFAX/Factory AX 총 9종 중앙 최종완성률 등록
 
 - 사용자가 지정한 두 그룹(Private `Freelancer`의 AZENTFLOW AX·CITEVAULT AX·SITECRAFT AX·PROOFQA AX·ONTOINSIGHT AX **5개**, 스크린샷의 DATA2WEB Studio·PREP·FFAX·Factory AX **4개**)을 크몽 `kmong-productization` 표에 독립 상태로 등록·최신화.
