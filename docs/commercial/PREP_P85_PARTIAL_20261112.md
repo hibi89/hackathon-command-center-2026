@@ -1,3 +1,12 @@
+## 2026-11-12 KST — PREP P85 133-test differential checkpoint (LATEST)
+- PRIVATE PREP feature/core-extraction verified code e41c57f23c4301eb5195c2c84e181ca9cf264761; docs HEAD 9193edadee3af510953e92d3630f88ea7a94152a.
+- Read-only SMAX original code logic evaluated in ephemeral V8 with SHA provider stub. 11 synthetic input cases: 6 same values/review flags, 5 contract divergences. This is NOT actual Node original-SMAX/native SHA/validator golden parity.
+- Frozen reference snapshots + 12 PREP-only regression tests + read-only native checkout comparator committed, without original private source transfer. Native comparator against real SMAX checkout NOT_RUN due absent local checkout.
+- PREP Linux Node22.16 npm test **133 PASS/0 FAIL/0 SKIP** native and network-disabled Linux **133 PASS**; syntax and npm pack dry-run PASS. Hosted CI and most recent full remote packaged install NOT_RUN.
+- Official 85% NOT CERTIFIED, canonical product completion UNASSESSED, RELEASE HOLD. Upstream/consumer/production/permissions/billing unchanged. Hub other product scores unchanged.
+
+---
+
 ## 2026-11-12 KST — PREP P85 strict mapping and 121-case native gate (LATEST)
 - Private PREP repo hibi89/prep branch feature/core-extraction; exact tested implementation SHA **fd3b68c45fd9323dc67debf47171e778084266a4**, latest documentation HEAD **c8fa038e1e4972fa4c4b8a2db8e4c531a170be9c**.
 - Implemented dataset-level AMBIGUOUS_MAPPING REVIEW_REQUIRED with explicit source mapping preserved; header-only CSV rejected, unknown field options rejected, direct parser 2MiB guard, quoted bare CR/CRLF lineage fixed. Four frozen PREP-only golden output SHA suites, 20k-row/64-column/2MiB boundaries.

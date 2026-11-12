@@ -1,3 +1,17 @@
+## 2026-11-12 KST — PREP differential 133-test hub handoff (ten items)
+1. Goal: independently reusable PREP, P85 Linux SDK/report/evidence and source compatibility acceptance.
+2. Changes: 11 synthetic comparison snapshots, 12 PREP-only tests and SHA-pinned read-only Node comparator tool; no SMAX original copied.
+3. Tests: PREP source e41c57f23c4301eb5195c2c84e181ca9cf264761, docs 9193edadee3af510953e92d3630f88ea7a94152a; Linux Node22.16 npm test 133 PASS, fail0 skip0, network-disabled 133 PASS; syntax and package dry-run PASS. Native original-SMAX comparator and hosted CI NOT_RUN.
+4. State: formal 85% NOT CERTIFIED, product score UNASSESSED, RELEASE HOLD; active Kmong product scores unchanged.
+5. Limits: SMAX source executed in isolated V8 using digest stub, 6 semantic matches and 5 differences, not native SHA/validator parity. Absent pinned local SMAX checkout and authorized hosted CI leave original acceptance open.
+6. Repos: private hibi89/prep feature/core-extraction SHA e41c57f2; docs 9193edad; hub kmong-productization. Prior rollback PREP c8fa038e.
+7. Production: none; Linux Node22 local checked, Windows/consumer and hosted GitHub Actions NOT_RUN.
+8. Source/privacy: upstream SMAX preprocessing 3830cb27 remains unchanged; PREP default branches unchanged; no new fees, access, licensing, data transfers or release.
+9. Next: execute native pinned SMAX comparator with authorized checkout, review compatibility/rights, hosted CI when approved, then Windows/consumer stages.
+10. Evidence date: 2026-11-12 KST; central hub commit SHA to be verified after update.
+
+---
+
 ## 2026-11-12 KST — PREP P85 121-pass Kmong handoff (latest, 10 fields)
 1. Goal: independent PREP R01–R12, P85 SDK/receipt/report/security/CI Linux acceptance, no release.
 2. Change: globally hold ambiguous mapping aliases, reject header-only data and invalid field options, direct byte caps, correct CR/CRLF lineage, add PREP-only native goldens and max-bounds tests. Original SMAX code not copied.
