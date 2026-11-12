@@ -1,3 +1,8 @@
+## 2026-11-13 KST — KUODRA P85 엔지니어링 잠정 목표 달성/크몽 중앙표 동기화
+- 독립 Private `hibi89/KUODRA@develop` P85 통합 기능 SHA `46889e4ea14aaa27feb7874f6bf120aee3010dee`, [PR #4](https://github.com/hibi89/KUODRA/pull/4). [CI #43286155661](https://github.com/hibi89/KUODRA/actions/runs/43286155661) 및 [병합 시점 CI #43286619965](https://github.com/hibi89/KUODRA/actions/runs/43286619965) **Ubuntu/Windows 각197 PASS·0FAIL**, Windows unsigned PyInstaller 실행, 무Python PATH, 합성 오프라인 보고서 검증, ZIP 한글 경로 재실행/원본 파일 보존 PASS.
+- KUODRA 최종 기술범위 내부 **70→85/100 잠정**(실제 시세·공시 상용 권리/실고객 Windows 설치/규제 검수는 미검증), 범위 점수 근거 `KUODRA@main/docs/P85_ACCEPTANCE_EVIDENCE_20261113.md`. 중앙 `docs/audits/KMONG_16_CURRENT_20261111.md` 후보 KUODRA 행만 85로 고치고 **P85 [작업중]만 해제**. 출시 `RELEASE HOLD / SALE NO-GO`, 코드 `main` 미병합, KIC 원본/타 제품·집계 불변.
+- 다음 P95는 신규 사용자 지시 전에는 미착수. 기존 섹터·법인/시계열 정합, 금융원본 실데이터 인증·라이선스, 법무, OS IAM, 바이어 Windows10/11 서명/설치/업그레이드/제거 및 실제 고객 수용이 차단 조건.
+
 ## [LATEST 2026-11-13 KST] REA_Web P95 사용자 작업 — 기능 확장 CI PASS / 정본 완성률 85% 유지·작업중
 - REA_Web 원래 웹사이트 분석·재구축 제품 `hibi89/REA_Web@feature/website-analysis-rebuild`, 정확 코드+CI `467ec1cf875db75623c41860659a6faec64bb834`. Fable5.1 Record mode·loopback SHA schema 검사(실 headed record 조작 아님), Astra P85 증거 digest 기반 localhost human review GUI/토큰·CSP·의견보존, owner 합성 데이터 앱의 create-only SHA Zip/검증/가격미정 HOLD, `review|record-check|package|verify` CLI 구현·보존.
 - [Actions #43278235317](https://github.com/hibi89/REA_Web/actions/runs/43278235317) **Windows2025 70PASS/0FAIL/1WARN (실 Google Chrome + Microsoft Edge GUI 리뷰저장 포함)**, Ubuntu24.04 **68PASS/2SKIP(Windows전용)/0FAIL/1WARN**, 2/2 SUCCESS. 실패 교정은 review schema override, Python cache zip 포함, test unsafe-eval↔CSP 충돌(보안 CSP 유지) 세 가지, 최신 PASS.
