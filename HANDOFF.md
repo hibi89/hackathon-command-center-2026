@@ -1,3 +1,15 @@
+## 2026-11-13 KST — KUODRA P85 크몽 허브 최신화 인수인계 (10항)
+1. 목표·확정 기술: KIC 기반 독립 KUODRA 상용상품, 한국 DART·미국 SEC 재무 근거 검증+조건부 A/B/C+ML/Guard+로컬 Windows 보고서. 정확 최종설계는 KUODRA main REQUIREMENTS/BLUEPRINT 참조.
+2. 완료 변경: P85 합성-only 그룹·시간 heldout Dummy 비교, 근거 연동 재무 경고(부정 확정 금지), HTML/PDF, 무서명 receipt·해시 검증, 파일 실패시 삭제 금지, Windows PyInstaller onedir+ZIP 한글경로 무Python 테스트. PR4 develop 병합.
+3. 테스트: Source merge `46889e4ea14aaa27feb7874f6bf120aee3010dee`, feature CI #43286155661 + PR integration #43286619965 Linux/Windows 각각197PASS/0FAIL, Windows staged EXE/ZIP PASS. 테스트는 합성/오프라인, 실기업/법률/고객 미검증.
+4. 상태·중단 지점: KUODRA 내부 엔지니어링 85/100 잠정, P85 목표 완료로 해당 [작업중] 표식 해제, RELEASE HOLD/SALE NO-GO. Main 제품 코드 미병합/배포 N/A. P95 미착수.
+5. 오류·원인·대안: 중간 Windows CI #43285839249 1FAIL(테스트 변조 HTML cp1252 기본 인코딩)→UTF-8 고정 후 197PASS 양 OS; 안전성 불확실하면 고객 파일 수동 제공·Guard HOLD·시장 A UNAVAILABLE. 실패한 중간 CI 성공으로 재사용 금지.
+6. 저장소·브랜치·SHA: `hibi89/KUODRA` Private, develop@46889e4... feature/p85-offline-desktop-20261113; 제품 main 최신 문서 HEAD별도, 중앙 `hibi89/hackathon-command-center-2026@kmong-productization`. 중앙 변경 `docs/audits/KMONG_16_CURRENT_20261111.md`, 제품 docs/P85_ACCEPTANCE_EVIDENCE_20261113.md.
+7. Production URL·환경: Vercel/배포 미적용. Python3.11 `python -m unittest discover -s tests -v`, Windows Actions onedir unsigned staging only. 실제 설치 프로그램·고객 배포 없음.
+8. 원본·인증·백업: KIC 기존 lead/kic 및 공식 제출 원본 변경 없음. 원본 기능복구 P70 SHA `cee8edc6d85d7d513fb93748d21501342624a1c1`; 실제 사용자 금융데이터/키·비밀 미입수/미전송.
+9. 다음 우선순위/승인: 실권리 SEC/DART 공시 E2E, 산업/시장 라이선스, 고객 Windows10/11 GUI·인스톨/롤백/서명, OS private no-egress, LICENSE/NOTICE, 금융법·사용자 판매 GO. 승인 필요; 다른 제품 변경 금지.
+10. 갱신: 2026-11-13 KST. GitHub SHA/CI 출처로 문서·합성 기능/ZIP만 확인, 실고객·사업권/예측/실서비스는 미검증; KUODRA P85 내부 평가 근거 기준, 중앙 최신 커밋은 별도 검증.
+
 ## [LATEST 2026-11-13 KST] REA_Web P95 업무 부분 완료 — 원래 최종상품 P85 유지 인수인계 10항
 1. **목표/요구·기술:** 원래 REA_Web은 허가된 참고 웹사이트를 Fable5.1로 관찰, Astra P4 증거·명세/인간검토, 독립 새 FastAPI/SQLite 웹앱 재구축. DATA2WEB Studio는 별도 데이터 파일→HTML 상품, 혼동 금지. 사용자 P95 목표.
 2. **완료 기능·결정 근거:** `hibi89/REA_Web@feature/website-analysis-rebuild`의 `rea/website_p95.py`, `tests/test_website_p95.py`, `tests/test_website_p95_windows_browsers.py` 추가. Fable Record metadata/schema 해시·범위 안전 검수, Astra P85 packet 연계, 127.0.0.1 인간 의견/보류·반려·합성 승인 GUI, security token+CSP, deterministic create-only SHA ZIP/independent verifier, CLI. 원본 사이트 원코드·이미지 복제 및 실고객 권리/가격 승인 금지.
