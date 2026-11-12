@@ -338,6 +338,24 @@
 - **비용/판매 현실:** 월 서버 구독 0원은 설계 목표일 뿐, 구매 가격, 정부 API 한도·키, Windows/인터넷, 크몽 수수료·세금·지원·개발 노동까지 총비용 0원은 불가능. 판매 전 실고객/Windows/상업 라이선스/원본 권리·보안·회귀 검증 필수.
 - **구분:** 2026-11-10에 제외된 BID OWL을 재편입한 게 아니라 별개 **BID AX 신규 후보**. KIC/PayPal/UGREEN 원본·기존 판매 HOLD·실서비스 설정/완성률 그대로.
 
+## 2026-11-13 KST — Freelancer 5종 + 별도 4종, 총 9종 최종완성률 최신 등록
+
+> [9개 제품별 정본 SHA·전체 수용 기준·실제 테스트/미검증 상세](docs/audits/KMONG_9_PRODUCT_COMPLETION_20261113.md). **UNASSESSED=숫자 미산정**(0%와 다름), 신규 기업형 패키지는 기반 엔진의 기존 85/95%를 승계하지 않는다. 신규 개발 코드/테스트/Production 변경 없음. 전부 RELEASE HOLD.
+
+| 후보 제품 | 신규 패키지 최종완성률 | 원본 기술 또는 별도 기능의 검증 근거 |
+|---|---|---|
+| **AZENTFLOW AX** — HAE+LA 자동화 | **UNASSESSED** | Freelancer 기획 `product/hae-la-automation@a578aee2`; HAE 기존 85% 잠정/전체 CI 2 FAIL |
+| **CITEVAULT AX** — RAG+SMAX 지식검색 | **UNASSESSED** | Freelancer 기획 `product/rag-enterprise-knowledge@acf49366`; RAG 기존 95% 엔지니어링 |
+| **SITECRAFT AX** — REA 사이트 재구축 | **UNASSESSED** | Freelancer 기획 `product/rea-website-rebuild@6e2346c3`; REA 원본 85% 잠정/P95 목표 미달 |
+| **PROOFQA AX** — 개발품 납품 검수 | **UNASSESSED** | Freelancer 기획 `product/proofqa-ax-delivery-audit@54b718f5`; CodeChecker 기존 95%, Graphify/브라우저 신규 통합 미검증 |
+| **ONTOINSIGHT AX** — Excel/CSV 인텔리전스 | **UNASSESSED** | Freelancer 기획 `product/ontoinsight-ax-data-analytics@afda6eac`; AutoML 기존 95%, ontology-lite 신규 미구현 |
+| **DATA2WEB Studio** | **UNASSESSED** (독립 실행 검증 **0%**) | `data2web_studio@main 01c9cfe0` 및 2 feature: 모두 문서 7~8파일, 실행 코드 없음 |
+| **PREP** | **UNASSESSED** (P85 **로컬 기능** 150PASS, Hosted CI 미실행) | `prep@feature/core-extraction b8a637e8`; 로컬 기능 SHA `a4c71258` |
+| **FFAX** | **78% 잠정** (P85 미달) | `frontend-foundry-ax@feature/ffax-workbench-p85-20261112 35548e45`; 고정 AC 78/100, Node105·Chromium30·복원9 PASS |
+| **Factory AX 생태계** | **전체 UNASSESSED** (**W1만 85% 잠정**) | `factory-ax-ecosystem@feature/data-verify f9577bbc`; W1 CI `b70a0591` [양OS 각138PASS](https://github.com/hibi89/factory-ax-ecosystem/actions/runs/43178583600), W2~W4 미구현 |
+
+**집계:** DATA2WEB은 현재 활성 17개 목록에 이미 있으므로 별도 활성 행을 중복 추가하지 않음. PREP/FFAX/Factory 및 5개 Freelancer 신규 패키지는 후보 테이블로 별도 추적. 기존 활성 상품의 점수·분모·합계 및 기존 모든 `[작업중]`/`[사용자 개입 필요]` 표식 변경 없음. 신규 통합 구현을 실제 시작할 때 해총 마커 정책 적용.
+
 ## GitHub 기술 협업 신규 상품화 2건
 
 1. **AI 개발품 납품 검수 서비스** — 기존 `ai-code-checker`에 **Graphify**(코드 구조·의존관계), **agent-browser**(실제 웹 UI 동작 시험), **Cloudflare Security Audit Skill**(보안 감사 방법론)을 결합. 목표: 오류 근거·위험도·수정 우선순위·납품 검수 보고서. **현재 설계 단계, 실제 통합·검증 전.**
