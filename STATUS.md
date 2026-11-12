@@ -1,3 +1,14 @@
+## [2026-11-13 KST] 전 GitHub 저장소/브랜치 기반 크몽 정합화
+
+- **현황:** GitHub 35 저장소/457 브랜치 메타데이터 열거, 구현·상품 담당 브랜치 HANDOFF/STATUS 및 주요 Actions 증거 대조. 상세 `docs/audits/KMONG_ALL_REPO_BRANCH_COMPLETION_AUDIT_20261113.md`.
+- **완료:** 활성 17종 표의 지연 수치 4건 SOVIA 75→95, EAI 70→85, AXMART PC CARE 70→85, Lightning Azent 70→85 갱신(과거 정확 테스트 SHA·Actions 성공 확인). REA_Web P95 보조 CI SHA 정합화·85% 잠정/목표95 미달 표식 유지. KUODRA 87% [작업중] 유지.
+- **누락 후보 보완:** 기존 기획에만 존재한 BID AX·FlowPilot Universal·WORKNOVA Desk 3종을 별도 후보 정본에 UNASSESSED로 등록, 기존 Freelancer 5종·PREP·FFAX·Factory·KUODRA·DATA2WEB 중복 금지.
+- **검산:** 활성17, 표기 가능16(95% 7·85% 9), DATA2WEB 1 UNASSESSED. 표기16 숫자합 1430%p, 단순 평균89.375%; 17종 전체 평균 산정 불가. 모든 RELEASE HOLD/SALE NO-GO.
+- **테스트:** 이번 중앙 문서 감사 신규 코드 테스트/CI **0건**; 원본 과거 정확 SHA 성공/미검증 구분. 전457 브랜치 전체 코드 실행·실 Windows10/11·법적권리/고객·Production 미검증. 기존 중단/진행 표식 변경 없음.
+- **GitHub 기준:** `hibi89/hackathon-command-center-2026@kmong-productization` 수정 전 원격 SHA `dc76785006d47385f925a1fc4bf1aebabdb84578`; 문서 커밋 후 원격 SHA 재조회 필수. 해커톤/제품 소스·권한·시크릿·운영배포 불변.
+
+---
+
 ## 2026-11-13 KST — KUODRA P95 목표 부분 완료: 87/100 잠정 / 작업중 유지
 - 사용자 P95 목표에 대해 현재 공식 내부 엔지니어링 평가는 **87/100 잠정(기존 85→87)**이며 P95는 달성하지 못했다. Private 제품 hibi89/KUODRA develop 기능 병합 SHA 213e11ed5221b1d3ac668a157cac9341dfa2b652, PR #5. Premerge Actions #43292742904 및 postmerge Actions #43293290631 Ubuntu/Windows 각각 **245 PASS, 0 FAIL**, Windows unsigned EXE/ZIP 한글경로 복구와 1125 파일 SHA 검증 성공.
 - 추가 기능: SEC 10MB 제한 입력, 고객 명시 동의 SEC/DART 1회 요청 경로(모의 전송만), 환경변수 인증키 비노출, 어두운 로컬 GUI/PDF/영수증 검증, OSS 의존성 권리 점검표. 실제 SEC/DART 실원천 E2E, 상업 사용권, 고객 Win10/11 GUI/설치·한글 글꼴, OS 격리/금융법/판매승인은 미검증. RELEASE HOLD / SALE NO-GO, Production 미적용.

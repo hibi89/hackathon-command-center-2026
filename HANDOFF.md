@@ -1,3 +1,17 @@
+## [2026-11-13 KST] 전체 GitHub 저장소·브랜치/크몽 완성률 정합 감사 인수인계 — 10항
+1. **목표·용도·요구·기술:** GitHub 소유 35개 저장소·457개 브랜치의 크몽 제품 누락/중복/진척/역사적 CI 분리 점검. 사용자 기준 최종설계 전체를 100점으로 유지하고 임의 상향 금지.
+2. **완료·변경·판단:** 중앙 활성17 상품표 4개 지연 수치 SOVIA75→95, EAI70→85, AXMART PC CARE70→85, Lightning Azent70→85를 정확 테스트 근거로 정합화. REA_Web P95 보조 CI 최신 SHA 교체하되 85·작업중 보존. 기존 기획 후보 BID AX·FlowPilot Universal·WORKNOVA Desk 신규 후보행 UNASSESSED 추가. Freelancer5·별도 KUODRA/PREP/FFAX/Factory 유지, 중복 방지.
+3. **테스트·성공/실패/미검증:** 이번 감사 제품 코드 테스트 실행 0·신규 Actions 0. 과거 성공 검증: [SOVIA 4/4](https://github.com/hibi89/SOVIA_sovereign/actions/runs/43214296725), [EAI Ubuntu 636 PASS/1 SKIP](https://github.com/hibi89/EAI/actions/runs/43202624144), [PC CARE Windows Python101+Node130](https://github.com/hibi89/AX_MART/actions/runs/43131173581), [LA Windows206/Linux205](https://github.com/hibi89/HAE/actions/runs/43124013493), [REA P95 보조 2/2](https://github.com/hibi89/REA_Web/actions/runs/43291157984). 모든 경우 원본 정확 SHA에 국한, 전457 브랜치 전코드 재실행 아님.
+4. **상태·진행·대기:** 활성17(평가16·DATA2WEB UNASSESSED1), 내부 잠정 95% 7종·85% 9종; 평가16 합1430%p/단순평균89.375%, 전체17 평균 미산정. KUODRA 87% [작업중], PREP UNASSESSED [작업중], FFAX78 [작업중], REA_Web85 [작업중]; Astra85 [사용자 개입 필요] 예외 유지. 모두 SALE NO-GO / RELEASE HOLD.
+5. **오류·원인·시도·대안:** 기존 17종 테이블 일부 행이 옛 develop/feature 브랜치를 가리켜 수치 4건 지연; 원본 최신 브랜치 HANDOFF·STATUS와 GitHub Actions REST `completed/success` 대조로 해결. 동시 갱신 시 HEAD 불일치 가능하므로 원격 SHA 확인 후 fast-forward만. 신규 코드를 실행하지 않았기에 테스트 통과로 과장 금지.
+6. **저장소·브랜치·SHA·경로:** 중앙 `hibi89/hackathon-command-center-2026@kmong-productization`; 수정 전 `dc76785006d47385f925a1fc4bf1aebabdb84578`, `docs/audits/KMONG_16_CURRENT_20261111.md`, `docs/audits/KMONG_ALL_REPO_BRANCH_COMPLETION_AUDIT_20261113.md`, `KMONG_PRODUCTIZATION.md`, `STATUS.md`, `HANDOFF.md`. 개별 정확 SHA/브랜치/수용 기준은 감사 문서 본문.
+7. **Production/URL·실행·환경:** GitHub metadata/Actions REST 기반 문서 감사만 수행; 새 Vercel/Cloudflare Production 배포 N/A. 제품 실행 명령을 새로 돌리지 않았으며 2026-11-13 KST 조회 기준.
+8. **원본·백업·인증/변경금지:** 이전 중앙 Git commit `dc76785006d47385f925a1fc4bf1aebabdb84578`로 복구 가능. 비공개 소스 전문·고객 원자료·토큰·환경변수 외부 공개/이동 없음. 모든 제품 브랜치·CI 과금/권한·도메인·상용판매 상태 불변.
+9. **다음 작업·완료기준·승인:** 각 미산정 상품은 자체 최종설계·실제 기능/고객형 수용테스트 후 별도 평가. 실제 고객/Windows10·11/권리·라이선스·실행형·출시 승인은 각 담당 제품의 기존 게이트에 따라 소유자 승인. 현재 변경 문서는 중앙 GitHub 커밋 및 HEAD 확인 후 완료; 기능/Production 정상으로 해석 금지.
+10. **갱신일시(KST)·확인범위·문서 기준 커밋:** 2026-11-13 KST, 소유 repo 35/브랜치457 이름·HEAD 및 관련 주요 실행 기록 범위. 문서 기준 parent `dc76785006d47385f925a1fc4bf1aebabdb84578`; 후속 새 커밋 SHA는 GitHub ref 재조회로 확인. 모든 숫자는 원래 내부 가중 엔지니어링 잠정치.
+
+---
+
 ## 2026-11-13 KST — KUODRA P95 부분 완료 인수인계 (10항)
 1. 목표/기술: hibi89/KUODRA 한국 DART + 미국 SEC 로컬 Windows 금융근거 검증 A/B/C·ML·Guard 및 보고서; 사용자의 P95 목표, 최종 100점 기준 변경 없음.
 2. 완료/결정: PR #5 develop 병합: SEC 10MB 안전 입력, 사용자 동의형 SEC/DART 단발 조회, env 키 비노출, Python CLI·스테이징 EXE 진입점, 다크 GUI PDF 검증, 미서명 ZIP SHA 매니페스트, OSS 의존 라이선스 점검. 서버 SaaS보다 로컬 고객 키 방식 선택(비용/기밀).

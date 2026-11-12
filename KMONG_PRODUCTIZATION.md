@@ -1,3 +1,29 @@
+## [최신 2026-11-13 KST] GitHub 35개 저장소·457개 브랜치 대조 후 크몽 최종상품률 정본
+
+> 전체 [전수 감사](docs/audits/KMONG_ALL_REPO_BRANCH_COMPLETION_AUDIT_20261113.md) / [활성17 + 별도 후보 마스터 표](docs/audits/KMONG_16_CURRENT_20261111.md). **아래 2026-11-10·11의 16종 완성률 비교 표와 평균은 당시 이력**으로, 여기에 앞선 최신 17종 기준보다 우선하지 않는다. 제품 CI/소스/배포를 이번 문서 감사에서 새로 실행하거나 변경하지 않았다.
+
+| 활성 상품 | 최신 내부 기술 최종완성률 | 출시 판정 |
+|---|---:|---|
+| 코인 캔들 수집기 | **95%** | 판매 HOLD |
+| HAE | **85%** | 기존 CI 2 FAIL·판매 HOLD |
+| AI Code Checker | **95%** | 판매 HOLD |
+| SMAX² | **85%** | 판매 HOLD |
+| DATA2WEB Studio | **UNASSESSED** | 별도 코드 실행 검증 0 / HOLD |
+| REA_Web [작업중] | **85%** | 목표 95 미달, 최신 합성 CI PASS / HOLD |
+| SOVIA | **95%** | 합성 단계·Windows/Linux CI PASS / HOLD |
+| AI AutoML Analyst | **95%** | 판매 HOLD |
+| REA_APP | **85%** | 목표 95 미달 / HOLD |
+| Lightning Azent | **85%** | 별도 P17~P19 CI PASS / HOLD |
+| DBVORA | **95%** | 부분 원본 QA, 상용 전체 QA 미검증 / HOLD |
+| RAG Studio AX Edition | **95%** | 판매 HOLD |
+| Astra PDF Redesigner [사용자 개입 필요] | **85%** | 목표 95 미달·사용자 명시 예외 / HOLD |
+| 코인 패턴 분석기 | **85%** | 판매 HOLD |
+| EAI | **85%** | 로컬 합성 Linux CI PASS, 실제 Windows 미검증 / HOLD |
+| AXMART PC CARE | **85%** | Windows 합성 CI PASS / HOLD |
+| AXMART³ CUBE | **95%** | 원본 CI PASS, 출시 HOLD |
+
+**현재 정합화:** SOVIA 75%→95% / EAI 70%→85% / AXMART PC CARE 70%→85% / Lightning Azent 70%→85% (이전 작업의 실제 성공 SHA·CI 근거). 기존 3개 기획 후보 **BID AX / FlowPilot Universal / WORKNOVA Desk**를 중앙 후보표에 추가(UNASSESSED); Freelancer 브랜드5 / KUODRA / PREP / FFAX / Factory / 기존 DATA2WEB 중복 없음. **출시 승인 0, 모두 RELEASE HOLD.** 평가 가능한 16종의 표기 퍼센트 합 1430%p·단순 평균 89.375%(미산정 1종을 제외한 내부 비교용 숫자), 활성17 전체 평균 미산정. [작업중]·[사용자 개입 필요]·원본 보존.
+
 > **2026-11-13 KST 원래 REA_Web 85% 단계 완료:** [정확 Windows+Ubuntu CI #43273324679](https://github.com/hibi89/REA_Web/actions/runs/43273324679) SHA `1c3390fa3da933c5d0513196f0dcfc97b18b5e14`, 각 52 PASS/0 FAIL/1 WARN, 2/2 SUCCESS. 합성 업무사이트 3종의 데스크톱·모바일 Chromium 연속 검색/필터/상세 → Astra P4 observed 증거·검토 보류→고정 Fable 정적 스캔 + Pro 독립 웹앱·동작 비교·RGB 시각차이 보고. 내부 엔지니어링 **85% 잠정**, 원래 임의 사이트 디자인/복합 업무 자동 재구축·실 고객/법적 권리·판매/Production 미검증 **RELEASE HOLD**. [중앙 17종 현황](docs/audits/KMONG_16_CURRENT_20261111.md)은 REA_Web P85 검증 목표 달성 후 해당 [작업중]만 해제, DATA2WEB 미산정·다른 상품 상태 보존. [상세 증빙](https://github.com/hibi89/REA_Web/blob/feature/website-analysis-rebuild/docs/WEBSITE_P85_RESPONSIVE_ACCEPTANCE_20261113.md).
 
 > **2026-11-13 KST REA_Web 원래 웹사이트 분석·재구축 엔진 P70 최신화:** 원래 사이트 분석 제품은 합성 로컬 사이트 3종 실제 Chromium 검색·필터·상세→Astra P4 observed review gate→고정 Fable 정적 스캔+Pro 독립 웹앱 생성·실 브라우저 기능 비교를 정확 SHA bfac1116ac7a20c7162f42a59e51277d402b24d9 [Actions #43266467950](https://github.com/hibi89/REA_Web/actions/runs/43266467950) Ubuntu/Windows 각41PASS·0FAIL, 2/2 SUCCESS. 최종상품 엔지니어링 **70% 잠정**, 현 P70 달성으로 REA_Web [작업중]만 해제. 실제 public-site 원래 디자인/고객/상용권 미검증 RELEASE HOLD. 독립 DATA2WEB Studio는 여전히 미산정, 타 상품 상태 보존. [17종 등록 정본](docs/audits/KMONG_16_CURRENT_20261111.md)·[실증](https://github.com/hibi89/REA_Web/blob/feature/website-analysis-rebuild/docs/WEBSITE_P70_BROWSER_ACCEPTANCE_20261113.md).
