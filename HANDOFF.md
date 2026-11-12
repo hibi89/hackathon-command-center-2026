@@ -1,3 +1,17 @@
+## 2026-11-12 KST — PREP P85 104-test hub handoff (10 required fields)
+1. Goal: standalone PREP offline R01-R12, P85 SDK/report/receipt/security/Linux acceptance.
+2. Done: explicit CSV/HTML SHA sidecar and verification; JSON result-integrity checksum; Unicode-hidden spreadsheet formula protection. Existing CSV-only interface kept, no upstream source moved.
+3. Tested: PRIVATE PREP implementation SHA 9a7e6f6cc69632158211587d87a0a6c09da674ce, docs HEAD b3bed36d6438b1a3603ffb686451f740becf8e4e; Linux Node22.16 npm test **104 PASS, 0 FAIL, 0 SKIP** and network-disabled **104 PASS**; syntax PASS; local new package offline install plus SDK/CLI/CSV receipt verification PASS. Hosted CI and exact full checkout package NOT RUN.
+4. Completion: P85 scope built and Linux-tested but **formal 85% NOT CERTIFIED; P70 upstream parity not certified; PREP score UNASSESSED; RELEASE HOLD**. Active16 metrics unchanged.
+5. Limits: SMAX original conversion/receipt contracts differ, source rights and actual cross-repo golden parity unverified; pair-write not crash-atomic; SHA not an authenticity signature; no CI runner dispatch.
+6. Repo: PRIVATE hibi89/prep feature/core-extraction SHA 9a7e6f6c; documentation b3bed36d. Evidence docs/commercial/PREP_P85_PARTIAL_20261112.md, prior rollback bed64033, root branch no changes.
+7. Production: N/A, no Vercel deployment; Linux local Node22 verified, Windows NOT_RUN, authorized consumer NOT_RUN.
+8. Originals/security: upstream SMAX unchanged; no private source copied, credentials, customer data, external transfers, billing, permissions or public licensing.
+9. Next: approve rights/SMAX compatibility semantics and golden fixture strategy; if billable authorize GitHub private-runner CI; Windows and first pinned consumer in later stages.
+10. Date/proof: 2026-11-12 KST; PREP source SHA above; this hub commit SHA checked after update, no numeric score change.
+
+---
+
 ## 2026-11-12 KST — Factory AX VERIFY W1 85-target follow-up hub (10 items)
 1. **Goal:** W1 VERIFY target 85 without conflating full Factory W1–W4 final blueprint.
 2. **Work:** source eca3222e5588aac41c3fbf700192cd4d707d1323, docs 84ed826aeba5a9b438e91d865a546e67fb7014df; repair backup competing-writer unlink bug, Linux Tk GUI canceled-folder/old-success output; PowerShell owner-only native QA and manual CI enhancements.

@@ -1,3 +1,13 @@
+## 2026-11-12 KST — PREP P85 export proof, JSON integrity and 104 Linux tests (LATEST)
+- Private source: hibi89/prep, feature/core-extraction; code commit **9a7e6f6cc69632158211587d87a0a6c09da674ce**, docs HEAD **b3bed36d6438b1a3603ffb686451f740becf8e4e**.
+- Opt-in CSV/HTML export SHA-256 sidecar with original-source receipt; JSON normalized result/queue/mapping checksum verifier; Unicode-hidden formula risk hardening and unmapped formula review. A linked pair cannot be guaranteed crash-atomic; CSV-only output preserved by default, hash != signature.
+- Linux Node22.16.0 **104/104 PASS, FAIL0 SKIP0**, separate network-disabled Linux namespace **104/104 PASS**, npm run check and npm pack dry-run PASS; freshly staged 7-file local runtime archive installed offline, CLI/SDK and CSV export+receipt validation PASS. Full GitHub docs package and hosted Actions CI NOT RUN.
+- SMAX private upstream code not copied or modified; read-only comparison found different date/decimal/boolean/size/receipt semantics. Six PREP contract tests are NOT executable cross-repo golden parity; rights/compatibility gate remains. No Windows/consumer/production verification.
+- PREP functional P85 candidate advanced, but official **85% NOT CERTIFIED**, 70% parity prerequisite not certified; canonical product rate **UNASSESSED**, RELEASE HOLD.
+- Existing **16 active Kmong product scores untouched** (1369 percentage points / 16 = 85.5625%); independent PREP not included in the denominator. No account permission, runner-cost, license, release or private data change.
+
+---
+
 ## 2026-11-12 KST — newer P85 Linux evidence (supersedes older 6/6-only snapshot below)
 - Source/implementation SHA: PRIVATE hibi89/prep feature/core-extraction **07255335dc3b6de4f9c8c3e8bacdf06c87d4eb0e**; updated PREP documentation HEAD **bed64033fda577e8c5c892975c809e45993bff08**.
 - Exact GitHub-blob-matched source and tests restored into controlled Linux Node22.16.0 environment. Full native npm test **75 PASS, 0 FAIL, 0 SKIP**; npm run check PASS. Repeated full 75/75 PASS in Linux network-disabled namespace. Six added security cases cover XSS/CSP, safe JSON keys, CSV formula-risk, file non-overwrite/cleanup and invalid UTF-8.

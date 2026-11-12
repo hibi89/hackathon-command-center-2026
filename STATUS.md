@@ -1,3 +1,5 @@
+> **2026-11-12 KST — PREP P85 기능 및 보안 검증 최신화:** Private PREP feature/core-extraction 기능 커밋 **9a7e6f6c**, 문서 HEAD **b3bed36d**. CSV/HTML 선택형 SHA 영수증, JSON 결과/검토큐 변조 검증, 유니코드 숨김 수식 방어. Linux Node22.16 전체 **104/104 PASS**, 네트워크 차단 환경 **104/104 PASS**, 신규 패키지 오프라인 설치·SDK/CLI/영수증 검증 PASS(로컬 실행). GitHub-hosted CI/SMAX 원본 골든동등성/Windows/소비자 연동 **미검증**. 공식 **PREP 85% 미인증, 최종완성률 UNASSESSED, RELEASE HOLD**. 크몽 활성 16종 기존 총점 **1369%p / 평균85.5625%**, PREP 분모 제외. [PREP 근거](docs/commercial/PREP_P85_PARTIAL_20261112.md).
+
 ## 2026-11-12 KST — Factory VERIFY 82% retained after native QA readiness (newest)
 - Source eca3222e5588aac41c3fbf700192cd4d707d1323; docs 84ed826aeba5a9b438e91d865a546e67fb7014df; 9 changed blobs matched local Git object SHA. Linux Python 117/117 PASS, actual Xvfb Tk GUI synthetic two invocations + cancel PASS, source hashes unchanged, offline report/backup/restore and package verifier PASS.
 - Fixed competitor ZIP backup TOCTOU deletion; added Windows owner QA script and manual-only dual-OS CI procedure. Hosted Windows/Linux GitHub Actions 0 RUN, physical Win/NTFS/Defender/PS5.1 NOT RUN; private minute costs unconfirmed.
