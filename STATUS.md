@@ -1,3 +1,10 @@
+## [LATEST 2026-11-13 KST] REA_Web 원래 웹 분석 P70 합성 실브라우저 검증 반영
+- 원형 웹사이트 분석·재구축 엔진 hibi89/REA_Web@feature/website-analysis-rebuild, 검증 소스/CI SHA bfac1116ac7a20c7162f42a59e51277d402b24d9. 실제 합성 로컬 HTML 사이트 3종 Chromium before/after 검색·필터·상세→Astra P4 observed evidence/review_required→sha·digest 합성 승인→진짜 Fable 5.1 static GET·기존 Pro 독립 웹앱 생성→실 Chromium 기능 결과 비교 완료.
+- [GitHub Actions #43266467950](https://github.com/hibi89/REA_Web/actions/runs/43266467950) Ubuntu24.04/Windows2025 각 41 PASS / 0 FAIL / 1 WARN, 2/2 SUCCESS. 원본 Pro/Fable/Astra/Data2web 브랜치 변경 없음.
+- 원래 REA_Web **최종상품 엔지니어링 잠정 50→70%** (정본 50→70 최소 로컬 3사이트 실브라우저 수용 범위), 신규 P70 사용자 목표 검증 완료로 중앙 제품명 [작업중]만 해제. DATA2WEB 독립 상품 미산정 및 동시 타 개발상품 수치·표식 보존.
+- 실제 외부 웹사이트 브라우저 방문, Fable --record 행동 인과·원 사이트 시각/디자인/고급 기능 자동 재구축, 실 고객·사용권/Windows10·11·상업 출시는 모두 미검증: RELEASE HOLD. 합성 테스트 APPROVE_SYNTHETIC_ONLY는 고객·사이트 법적 승인 아님.
+- 원본 P70 수용 기록: https://github.com/hibi89/REA_Web/blob/feature/website-analysis-rebuild/docs/WEBSITE_P70_BROWSER_ACCEPTANCE_20261113.md; 중앙 표 docs/audits/KMONG_16_CURRENT_20261111.md. 새 후속 P85 등은 사용자 별도 지시 전 자동 작업중 처리 금지.
+
 ## 2026-11-13 KST — GitHub Trending 월간 누적 아카이브·예약 프롬프트 연동
 - `docs/github-trending/`에 2026-11 DAILY/WEEKLY/MONTHLY, MONTHLY_INDEX, PRODUCT_IDEAS, AUTOMATION_POLICY 생성. 11/06~12 일간 및 11/09 주간은 과거 채팅 요약으로 보존, 공식 순위·증가량 재검증하지 않음. 월간 TOP30 미확인.
 - 기존 일간10:00/주간 월10:30/월간 1일11:00 KST 예약 3개 프롬프트에 `kmong-productization` 누적 GitHub 반영 지시 추가 성공. 예약 실행 시 실제 GitHub 쓰기 성공은 **미검증**, 권한 없으면 `GITHUB_SYNC_PENDING` 보고. 기능/CI/배포 미적용, 제품별 상태 불변.
