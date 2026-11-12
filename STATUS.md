@@ -1,3 +1,8 @@
+## [2026-11-13 KST · 사용자 지시] OWNER-FINAL-BLUEPRINT-100 전 저장소 공통 기준 적용
+- **공식 최종완성률 기준은 사용자 확정 최종설계 전체 = 100점**. 해커톤 MVP/합성 CSV·SQLite/기존 엔지니어링 P85·P95/CI 패스 수를 대신 사용 금지. [정책](docs/strategy/FINAL_BLUEPRINT_COMPLETION_STANDARD_20261113.md).
+- [공식 재산정 원장](docs/audits/KMONG_FINAL_BLUEPRINT_BASELINE_20261113.md): 활성 17/17건 최종설계 기준 재산정 대기(UNASSESSED), 옛 내부 마일스톤 기록은 보존. 현재 공식 합계·평균 산정 불가. HAE·LA 옛 P85는 범위 한정 개발 지표이며 실 LLM→LA 자동 설계·오류 왕복·전 생태계 검증 미완성.
+- 정책 전달: GitHub 접근 가능 35개 저장소의 `main/AGENTS.md`에 공통 정책 커밋 성공. 해총 `main`, `kmong-productization` 정책 정본 작성. 각 독립 작업 브랜치는 별도 적용·검증 필요. **개별 제품 최종설계 대비 수치 재채점 0건, 제품 실행 테스트 0건, 코드 수정/Production/상품 등록 0건.** 기존 [작업중]/사용자 개입/RELEASE HOLD 그대로.
+
 ## 2026-11-13 KST — KUODRA P95 개발 중단 · 사용자 개입 필요
 - 사용자가 **개입 없이 95% 불가하면 중단**을 지시함. 완료율 **89/100 잠정**, 목표 P95 **미달**, `[작업중]`을 해제하고 `[사용자 개입 필요 · P95 중단]`으로 변경. `RELEASE HOLD / SALE NO-GO`, 추가 자동 개발·출시·배포 없음.
 - 최신 KUODRA PR #7 `develop` 병합 `733104a08fb99f4baf5bf4be520b0f7d88729f56`; 기능 SHA `49d78a013ad51495d8facc0d82e3c2103a2ae99d`, [CI #43302772793](https://github.com/hibi89/KUODRA/actions/runs/43302772793) Ubuntu/Windows 각각 282/282 PASS, Windows Tk GUI 스크롤 및 unsigned ZIP 검증. 별도의 병합 후 SHA CI는 미검증.
