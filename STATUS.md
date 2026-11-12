@@ -1,3 +1,7 @@
+## 2026-11-12 KST — 크몽 최종완성률 표 [작업중] 실시간 작업 표기 운영 규칙
+- 사용자 확정 지시: 실제 상품 개발/수정/검증 착수 즉시 `docs/audits/KMONG_16_CURRENT_20261111.md` 해당 제품명 셀에 **[작업중]** 표시. 다른 제품 전환 시 종전 표식 제거+신규 표식 표시, 검증된 목표 도달 및 작업 중단/보류/종료 시 표식만 제거. 완성률/증거 SHA/RELEASE HOLD 수치는 보존.
+- 이 규칙은 표 바로 위, `KMONG_PRODUCTIZATION.md` 최상단, `AGENTS.md`에 공지했다. 다른 채팅의 진행상태를 근거 없이 표시/해제하지 않는다. GitHub 커밋 기준 수동 기록이며 자동 감시·백그라운드 작업을 의미하지 않는다. 이번 변경은 **정책 문서만**, 제품 코드/기존 16종 완성률·상태·Production/CI 변경 없음.
+
 ## 2026-11-12 KST — CUBE 85% owner-preflight destructive cleanup corrected, Node 29 scoped PASS
 - Switched from blocked REA_APP to isolated `hibi89/AX_MART@feature/cube-owner-preflight-p85-20261112`, code/tests/npm `34dac38ffac69df00eeb6610e380fbc5d0c37705`, docs HEAD `0e6a2faa20ee7deb06e8652f25fe74f92e9d6cf3`. Real synthetic source/output directory replacement could cause old recursive `rmSync` to delete unrelated directory; changed to fail-closed HOLD, leaves partial/replaced output and refuses overwrite; three new regression cases.
 - Exact Git file blob parity 4/4; Linux Node22.16 **29 PASS/0 FAIL/0 SKIP** (26 old + 3 new); old cleanup failed 2 of new 3, new code 3 PASS. Full project `npm test`/build/Windows/Cloudflare and customer sales/legal UNVERIFIED.
