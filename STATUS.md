@@ -1,3 +1,7 @@
+## 2026-11-12 KST — AI Code Checker P95 목표 달성·[작업중] 해제 (사용자 확정)
+- 중앙 활성16종 표의 AI Code Checker는 검증기록상 기술 **95% 잠정**으로, 사용자는 현시점 100% 작업 목표를 부여하지 않았으며 **[작업중] 표시 즉시 해제**를 명령. 해당 행만 표식 제거 및 'P100 목표' 표현을 **출시 검증 HOLD**로 수정·원격 확인. 별도 고객/법적/권리/판매 검증은 미완료이며 상품 출시 승인 아님.
+- 다른 상품 DBVORA·Astra PDF Redesigner·AXMART³ CUBE의 `[작업중]` 표시 보존(3개). 코드·CI·Production 변경 없음. [정본 표](docs/audits/KMONG_16_CURRENT_20261111.md).
+
 ## 2026-11-12 KST — RAG Studio P95 engineering verified and only RAG [작업중] removed
 - Source hibi89/RAG_STUDIO@feature/p546-rag-prep-mapping code SHA `0e88301059c9cb6b876dd0f9cd9181e6fb5c6dc2`; docs HEAD `4669957a0f5dd8e641903bef0c0ef21d43166dcc`; [Actions #43231121679](https://github.com/hibi89/RAG_STUDIO/actions/runs/43231121679) **2/2 SUCCESS**. Linux Ubuntu24.04 Node22.16 npm test **635 total/633 PASS/0 FAIL/2 SKIP**, Windows2025 Node22.23 **635 total/634 PASS/0 FAIL/1 SKIP**. Each Gold100/100, Negative20/20, Heldout24/24 PASS. Earlier 0-job runs caused invalid YAML (unquoted expression inside flow map); first Linux P533 FAIL5 and Windows static dir swap FAIL1 corrected and full CI reverified.
 - Product internal technical P90→P95 +5pp evidenced by P558 pre-extraction ZIP verifier, P559 CI repair, P560 old synthetic export module-boundary and no-delete fail-closed, P561 native Windows server teardown and directory identity guarded test. Customer source rights/private SMAX/End-user Win10/11/3 real verticals/NOTICE/support **NOT VERIFIED**; RELEASE HOLD. This is scoped technical P95, not sales GO/100%.
