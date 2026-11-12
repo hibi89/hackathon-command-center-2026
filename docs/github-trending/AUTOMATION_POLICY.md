@@ -21,3 +21,10 @@
 - 외부 유료 API·새 GitHub Actions workflow·토큰 발급·권한 확대를 자동으로 수행하지 않는다. 추가 자동화 인프라가 필요하면 사전 승인을 받는다.
 - 미검증 인용·상품 가격·기간은 제안으로 표시한다. 상품 판매 전 라이선스·실행 환경·품질·권리를 다시 확인한다.
 - 이력 복구: 각 브랜치 이전 commit을 확인해 개별 문서만 복구하며 force push나 브랜치 삭제를 하지 않는다.
+
+## 수익화 후보·조사 저장소 누적 보존 (2026-11-13 추가)
+- 이전 조사에서 정리한 30개 후보는 `docs/github-trending/MONETIZATION_IDEAS_MASTER.md`, 언급된 69개 저장소는 `RESEARCH_HISTORY_INDEX.md`에 중복 제거해 기록했다. 이전 보고의 사실/라이선스/랭킹을 새 검증 없이 확정하지 않는다.
+- 일간/주간 예약은 **매 실행마다** 각자의 브랜치 내 `PRODUCT_IDEAS.md`에 기존 항목과 중복되지 않는 상품화 후보 및 각 후보의 원본 repo, 조사일, 고객, 납품물, 추정 가격/기간, 라이선스 미확인 여부, 위험/다음 검증을 누적한다. 동일 브랜치의 `RESEARCH_HISTORY_INDEX.md`에 신규 조사 프로젝트·URL·조사일·검증 등급을 중복 없이 기록한다.
+- 월간 예약은 일간·주간 브랜치를 **읽기 전용** 조회해 `kmong-productization`의 `MONETIZATION_IDEAS_MASTER.md`, `PRODUCT_IDEAS.md`, `RESEARCH_HISTORY_INDEX.md`를 통합·갱신한다. 출처·기존 ID·이전 평가를 보존하고, 재추천은 새 근거가 있을 때만 추가. 날짜별 보고 파일은 별도 보존.
+- 장기 마스터의 중앙 정본은 `kmong-productization`. 일간·주간 브랜치의 동일 명칭 `MONETIZATION_IDEAS_MASTER.md`는 **2026-11-13 기준 스냅샷**이며 일별 최신 중앙 동기화가 아니다. 주간/일간의 신규 후보는 `PRODUCT_IDEAS.md`를 확인한다.
+- 자동화 편집은 기존 기록 덮어쓰기 전 최신 blob SHA 확인·동일 repo/상품 ID 중복 제거·GitHub 원격 readback 검증. 실패 시 `GITHUB_SYNC_PENDING`. 자동화 성공을 실제 실행 전 확정하지 않는다.
