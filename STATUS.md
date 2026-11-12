@@ -1,3 +1,7 @@
+## 2026-11-12 KST — Kmong Code Checker P95 attempt, full CI 16/16 green; 85% retained
+- hibi89/ai-code-checker feature/retail-private-candidate-20261112 exact feature SHA `41bb08b4c5dc5bab58a0402a4b38eef8bb4ec1ab`, [Actions #43220090428](https://github.com/hibi89/ai-code-checker/actions/runs/43220090428) **16/16 SUCCESS**, Ubuntu24 Python3.13 482/503 PASS,21 SKIP; Windows2025 Python3.13 501/503 PASS,2 SKIP; 0 FAIL. P3-04 candidate ZIP/JSON failure output path deletion risk fixed by no-auto-delete HOLD, two adversarial swaps tested.
+- Engineering **85% provisional unchanged, P95 NOT achieved, RELEASE HOLD**; buyer Windows and owner EXE/legal original source/rights unverified. Product docs HEAD `34acee6f28e4b22b9a072ad0e4c31ed2c9727d64`. This chat finished work and removed its `[작업중]` mark. Other 15 product rates and active16 denominator/sum unchanged. [Current audit](docs/audits/KMONG_16_CURRENT_20261111.md).
+
 ## 2026-11-12 KST — 크몽 [작업중] 의무 제품 저장소 전파 검증
 - 사용자 확정: 실제 크몽 상품 개발·수정·검증 착수 시 중앙 완성률 표에서 해당 제품명에 `[작업중]`을 **GitHub 커밋**으로 표시한다. 검증된 목표치 달성·종료·중단·보류·제품 전환 시 자기 표식을 제거한다. 담당 채팅이 수행하며 자동 실시간 동기화는 없다.
 - 15개 제품 저장소의 주요 작업 브랜치 **21/21 AGENTS.md 반영·원격 재조회 PASS**, 0 실패. PREP·FFAX·Factory AX는 활성16종 통계 외 별도 후보 상태표로 관리. 중앙 AGENTS/완성률 표 반영 완료. 세부 저장소·브랜치·정책 SHA는 [작업중 표기 전파 감사](docs/audits/KMONG_MARKER_ROLLOUT_20261112.md)에 고정 기록.

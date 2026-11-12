@@ -1,3 +1,15 @@
+## 2026-11-12 KST — AI Code Checker P95 attempt / 16-job CI evidence (10 points)
+1. Scope/tech: Code Checker offline Windows Python AST/Tk/PyInstaller, 85→95 target excluding concurrent coin pattern and collector work.
+2. Change/design: 3 private ZIP/JSON scripts had pathname unlink risk after concurrent replacement; compared inode-check unlink (TOCTOU persists) vs preserve-on-error HOLD (selected). Original Gemini/local scanner unchanged.
+3. Verification: source SHA `41bb08b4c5dc5bab58a0402a4b38eef8bb4ec1ab`, [Actions #43220090428](https://github.com/hibi89/ai-code-checker/actions/runs/43220090428) **16/16 SUCCESS**, Ubuntu24 Py3.13 482PASS/21SKIP/0FAIL of 503, Windows2025 501PASS/2SKIP/0FAIL of 503.
+4. State: **85% provisional unchanged**, P95 NOT achieved, RELEASE HOLD, owner+customer gates pending.
+5. Failure/pivot: initial functional SHA `fe2a7b52` CI one outdated assertion failure expected deletion; corrected to HOLD in `41bb08b4`, all CI green. No second outstanding defect claimed.
+6. Refs: `hibi89/ai-code-checker@feature/retail-private-candidate-20261112`, docs head `34acee6f28e4b22b9a072ad0e4c31ed2c9727d64`, product `docs/P3_04_SAFE_OUTPUT_HOLD_20261112.md`, central `hibi89/hackathon-command-center-2026@kmong-productization`.
+7. Deployment: production/Vercel N/A, draft PR #82 not merged, no buyer Windows device test or sale.
+8. Backup/security: source SHA rollback available; no owner original EXE/third-party license/customer data uploaded, no access/billing/secret changes; central other 15 products untouched.
+9. Next: true owner-supplied original frozen component license/NOTICE and actual EXE packaging/acceptance, clean Windows10/11 GUI/PDF/Defender/SmartScreen/network, rights/support, explicit release GO; no percent inflation from synthetic tests.
+10. Verified 2026-11-12 KST at source SHA and CI run above; hub doc SHA confirmed after central commit. [작업중] released on end.
+
 ## 2026-11-12 KST — 코인 캔들 수집기 P95 잠정 인수인계 (10항)
 1. 목표: 크몽 최종상품94→95%, 수집 엔진 기술99%와 유상 출시 승인 분리.
 2. 완료/결정: 기존 Windows EXE 3종·ZIP 3종 보존, 빌드 6단계 신규 읽기전용 ZIP/한글가이드 정확 무결성 확인. 기존 Windows 직접 검사 수정(A) 대신 독립 정적 감사(B) 선택해 비용·회귀 최소화.
