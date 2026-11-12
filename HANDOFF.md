@@ -1,3 +1,15 @@
+## 2026-11-13 KST — KUODRA P95 부분 완료 인수인계 (10항)
+1. 목표/기술: hibi89/KUODRA 한국 DART + 미국 SEC 로컬 Windows 금융근거 검증 A/B/C·ML·Guard 및 보고서; 사용자의 P95 목표, 최종 100점 기준 변경 없음.
+2. 완료/결정: PR #5 develop 병합: SEC 10MB 안전 입력, 사용자 동의형 SEC/DART 단발 조회, env 키 비노출, Python CLI·스테이징 EXE 진입점, 다크 GUI PDF 검증, 미서명 ZIP SHA 매니페스트, OSS 의존 라이선스 점검. 서버 SaaS보다 로컬 고객 키 방식 선택(비용/기밀).
+3. 테스트: 기능 병합 SHA 213e11ed5221b1d3ac668a157cac9341dfa2b652, 기능 CI #43292742904, 병합 CI #43293290631 Ubuntu 245 PASS, Windows 245 PASS, 0 FAIL; Win 스테이징 EXE/ZIP 1125파일 SHA와 한글경로 테스트 성공. 합성·모의 데이터 기반, 실원천 API 검증 아님.
+4. 완료/진행/대기: 공식 엔지니어링 87/100 잠정, 목표 95 미달로 [작업중] 유지. RELEASE HOLD/SALE NO-GO, 고객용 서명 설치파일·Production 없음.
+5. 오류/원인/대안: 초기 P95 테스트 fake SHA 64개 a 문자가 가상 키 40개 a와 겹쳐 비유출 테스트 오탐; 서로 다른 f 문자로 수정 후 245 양 OS PASS. 진짜 SEC 연락처·DART 소유 키 미확보로 실데이터 검증 미실행; 합법 고객 로컬 파일/BYOK 사용, 우회·허위 성공 금지.
+6. 저장소/브랜치/SHA: 제품 hibi89/KUODRA develop SHA 위, 제품 main 문서 분리; 허브 hibi89/hackathon-command-center-2026 kmong-productization, 후보 표 docs/audits/KMONG_16_CURRENT_20261111.md. 전체 신규 근거 제품 docs/P95_PARTIAL_ACCEPTANCE_EVIDENCE_20261113.md.
+7. Production/실행 환경: 배포 미적용, Python 3.11 unittest, Windows GitHub CI의 PyInstaller unsigned onedir만 실행; 진짜 구매자 Windows10/11 아님. Python -m kuodra.official_cli 사용 시 고객 본인 동의 및 인증키 필요.
+8. 원본/백업/인증: KIC lead/kic 원본 제출·코드 불변, KUODRA 이전 P85 SHA 46889e4ea14aaa27feb7874f6bf120aee3010dee로 이력 복구 가능. 실제 DART 키·SEC 연락처·기밀파일은 GitHub에 업로드하지 않음.
+9. 다음/승인: 합법적 실 SEC/DART 회사 공시 E2E·권리, 고객 Win10/11 GUI·한글 PDF·설치/업그레이드/제거·서명, 사설정보 OS 격리, 전체 NOTICE, 한국 금융법 및 매출/지원 검증, 판매 승인. 사용자 로컬 계정과 실장비 접근은 마지막에만 개입 요청.
+10. 갱신일시/검증: 2026-11-13 KST. 확인 범위 GitHub 기능 SHA·Linux/Windows 합성 245PASS·unsigned ZIP 1125 SHA; 실원천/상용권/고객 동작/Production 미검증. P95 [작업중] 유지.
+
 ## [LATEST 2026-11-13 KST] REA_Web P95 구조 기반 개선·실제 P95 목표 미달 — 10항
 1. 목표/용도/요구/기술: 원래 REA_Web Fable5.1 승인 관찰→Astra P4 증거·명세→인간 승인→독립 사이트 UI/업무 기능 재구축. DATA2WEB은 별도 데이터→웹 상품. 사용자 요청 P95.
 2. 완료 기능/변경/결정 근거: 기존 `rea/website_p95.py` 로컬 human review GUI·합성 Fable Record SHA/mode 검수·ZIP 검수에 `rea/website_site_layout.py` 신규 추가. nav/aside/article 합성 구조→P85 Astra SHA·review digest/owner 의견→3개 **자체 CSS** 후보→기존 독립 Pro 앱 복사본의 레이아웃 변경 및 실 Chromium 기능 비교·ZIP 검사, 원본 HTML/CSS/JS/문구·이미지 무복제. 실제 고객 사이트 레이아웃/업무 재구축 완성 아님.
