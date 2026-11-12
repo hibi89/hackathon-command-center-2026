@@ -1,3 +1,8 @@
+## 2026-11-12 KST — REA_APP P95 target one-command candidate; 39 scoped PASS, product 85 unchanged
+- Private `hibi89/HAE@feature/rea-app-kmong-owner-delivery-20261112` code+QA `78f0906cb0e713733c1543728e75ed3641e9b2d2` docs `5a436ebe2a9283c5834b6545c8f0b75d2a7fe575`; one-command offline owner report → canonical ZIP → SHA-bound verify with conservative rollback; original analyzer protected.
+- Linux Python3.13.5 scoped **39 PASS/0 FAIL/0 SKIP**, code 5 Git Blob hashes matched execution, compileall PASS; original Gate R/QA/Babel bundle, physical Windows file://, buyer, CI **NOT VERIFIED**. No real customer code transferred.
+- **85% provisional unchanged, 95 NOT ACHIEVED, RELEASE HOLD**; active 16 scores/total/denominator and 15 unrelated products unchanged. [Product audit](https://github.com/hibi89/HAE/blob/feature/rea-app-kmong-owner-delivery-20261112/docs/REA_APP_P95_SINGLE_COMMAND_CANDIDATE_20261112.md).
+
 ## 2026-11-12 KST — REA_APP P95 target security validation 32 scoped PASS (85% retained)
 - Private `hibi89/HAE@feature/rea-app-kmong-owner-delivery-20261112` product SHA `31011f67eb8cacd56a5533e4602531ad38c47483`, docs HEAD `ff21b5d323c313a9eff437d661b12f826ab63832`. Canonical whole ZIP prevents hidden suffix and preflight-to-pack byte swap fixed; synthetic source schema-shaped test added.
 - Linux Python3.13.5 **32 PASS / 0 FAIL / 0 SKIP** exact remote Git Blob 3/3 matched; original Gate R/QA and actual P53 bundle/Windows/file:// unverified; Chromium direct file navigation blocked by admin. GitHub hosted CI not executed. No commercial GO.
