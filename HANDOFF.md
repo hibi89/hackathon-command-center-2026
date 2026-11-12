@@ -1,3 +1,17 @@
+## 2026-11-12 KST — PREP 150-case central Kmong handoff (ten items)
+1. Goal: independent local-first PREP R01–R12, P85 Linux SDK/report/receipt/security proof, no production.
+2. Changes: HTML preview global ambiguous mapping HOLD now displays REVIEW_REQUIRED and AMBIGUOUS_MAPPING per row; original records and SHA receipts immutable. Two targeted tests, affected HTML golden update, existing clean output unchanged.
+3. Tests: PREP code a4c71258851af4b0d8540202f36c84c1438ad9e6, docs HEAD 41ce61909887fec1dfdf1a3bba0293f566024cd2; Linux Node22.16 native npm test **150 PASS/0 FAIL/0 SKIP**, no-network namespace **150 PASS**, npm run check and package dry-run PASS. New local 7-file runtime tarball SHA256 8087a8e84618c0916560c7c5380924442e2def0b6f308607a323cb0b2c36557f, clean offline install SDK/HTML/CSV global HOLD and receipt validation PASS; full remote docs pack NOT_RUN.
+4. State: formal 85% NOT CERTIFIED, PREP overall completion UNASSESSED, RELEASE HOLD; active central product score values and denominator unchanged.
+5. Gaps: original SMAX native Node golden and rights/compatibility policy unresolved; earlier V8 SHA/validator evidence limited. GitHub-hosted manual Actions CI NOT_DISPATCHED due approval/billing and unavailable dispatch; Windows/consumer later.
+6. Repos/branches: PRIVATE hibi89/prep feature/core-extraction exact code a4c71258851af4b0d8540202f36c84c1438ad9e6, docs 41ce61909887fec1dfdf1a3bba0293f566024cd2, prior rollback 99e0fa5e; hub hibi89/hackathon-command-center-2026 kmong-productization. Source changes src/report.mjs and two tests; SMAX preprocessing HEAD 3830cb27 unchanged.
+7. Environment/deploy: local Linux x86_64 Node22.16 PASS, no Production/Vercel, hosted CI, Node20 native Windows/consumer NOT_RUN.
+8. Originals/security: SMAX unchanged, PREP main/develop unchanged, no customer source data, tokens, paid runner, permission/public licensing change, force push or external data transfer. SHA rollback available.
+9. Next: authorized pinned SMAX local checkout native golden and approved independent/adapter policy; hosted CI if explicitly approved for potential charges; exact remote docs package, Windows & external adapter later.
+10. Date/proof: 2026-11-12 KST; code and docs SHAs above, 150 Linux native + no-network tests, offline local package smoke. Hub commit SHA verified following update.
+
+---
+
 ## 2026-11-12 KST — PREP 148-case central handoff (10 sections)
 1. Goal: independent PREP local-first engine R01–R12; P85 SDK/evidence/report/security and Linux acceptance.
 2. Changes: duplicate JSON keys fail before last-wins data loss; output evidence column names excluded from schema fields; 12 targeted regressions, normal CSV schema unchanged.
