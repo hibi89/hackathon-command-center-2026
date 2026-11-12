@@ -1,3 +1,15 @@
+## 2026-11-12 KST — Kmong Astra P79–P81 central handoff (10 required fields)
+1. Goal/tech: ASTRA PDF Redesigner 95%, offline React/TS/Electron/PDF.js. One-product scope, keep hub marker until verified target.
+2. Completed/decisions: P79 cancel stale input analysis with AbortController/PDF.js, P80 preserve numeric sign, P81 safe append after size guard, chosen over UI-only busy reset, digit-only matching and RangeError catch.
+3. Tests: exact GitHub blob 4513d760 matched, isolated Linux Node22.16 11 PASS/0 FAIL, 1000 numeric fuzz, huge-token controlled failure, standalone TypeScript PASS; full source npm/build/browser/Windows latest SHA NOT VERIFIED.
+4. Status: code source d417eb91e31f, docs 6eacf9f7dd16; product 85 provisional; target 95 NOT reached; release HOLD; ASTRA [작업중] retained.
+5. Issues: 300001 tokens reproduced RangeError in P80, fixed in P81, 11/11 afterward; file-switch stale async busy fixed with added synthetic browser regression, browser actual unverified. CI GitHub connector returns zero PR runs and empty combined statuses, not a success/failure claim.
+6. Repositories/branches/SHA: hibi89/astra_pdf_redesigner feature/astra-p71-pdf-source-parity-20261112 @ d417eb91e31f, Draft PR10, docs @6eacf9f7; hub hibi89/hackathon-command-center-2026 kmong-productization, scoreboard central record.
+7. Deploy/run: Node22 npm test, npm run build, npm run desktop:verify, Chrome/Edge CI and Windows NSIS; no Vercel production / no release.
+8. Original/backup/secrets: source parent 736c2930 recoverable, no customer original PDF, local user IndexedDB, config, secrets, rights or other products modified; no network document upload.
+9. Next: verify full exact SHA CI/browser/Windows; owner-authorized actual PDF acceptance, paid SKU designs and licensing/model decisions. Never remove ASTRA [작업중] until 95 independently verified.
+10. Date/verification: 2026-11-12 KST; GitHub code diff, SHA, isolated regression, hub record; latest hub HEAD to be verified after docs commit.
+
 ## 2026-11-12 KST — Code Checker P3-07 to P100 verification (10-point)
 1. Goal/tech: offline Windows AST/Tk/PyInstaller Code Checker, user `ㄱ` continuation after P95; P100 final consumer sale gate.
 2. Delivered: actual Windows EXE SHA-bound 71-row unresolved NOTICE owner-progress template+summary validator with forged approval/stale queue fail-closed, no user/vendor original data uploaded.
