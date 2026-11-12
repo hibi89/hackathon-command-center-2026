@@ -1,3 +1,15 @@
+## 2026-11-12 KST — ASTRA P76/P77 hub handoff (10 points)
+1. Goal/tech: Astra PDF Redesigner to P95, React/TS/Electron/PDF.js offline PDF editing.
+2. Changes/decision: P76 same-page selected text drift warning; P77 fail-closed owner output with no path deletion on second write fail, safer than inode-based cleanup.
+3. Test scope: exact `tokenParity.ts` Git blob 6/6 Node22 PASS and 6 expected GitHub code/test diff paths; full new-SHA npm/Chrome/Edge/Windows NOT VERIFIED. Old source P75 CI 2/2 browser and Windows successful at other SHA.
+4. State: product remains 85% engineering provisional, P95 NOT achieved, SALE RELEASE HOLD; central marker `[작업중]` kept under latest goal-lock rule.
+5. Limit: GitHub run lookup empty/combined statuses empty, cannot infer failure or success; local full clone DNS blocked. No repeated CI spending.
+6. Refs: hibi89/astra_pdf_redesigner feature/astra-p71-pdf-source-parity-20261112 source047d4837 docs c4eaad9e operational AGENTS1151a0d6; hub kmong-productization.
+7. Runtime: Node22 npm test/build, Chrome/Edge, Windows Electron/NSIS; Vercel/Prod N/A.
+8. Backup/security: previous source dc69f7e7 retained; original data, client docs, tokens and deployments untouched.
+9. Next: verify exact source complete CI, Windows buyer PDF samples, PRO/BUSINESS distinct layouts and rights/local LLM; no P95 score increase before all milestones.
+10. Updated 2026-11-12 KST; central documentation and source provenance checked; docs commit SHA readback pending.
+
 ## 2026-11-12 KST — AI Code Checker P3-05 native Windows release-path verification (10-point)
 1. Goal/stack: user asked Code Checker from 85 to 95 without owner involvement where possible; offline portable Windows Python AST/Tk/PyInstaller original v2 blueprint retained.
 2. Features/decision: existing Windows EXE GUI/PDF smoke + actual EXE and readonly/smoke/runtime/Defender evidence now pass through new CI-only private ZIP candidate integrated script, stream compare actual EXE bytes. Inert-only mock rejected; actual build plus invalid synthetic NOTICE selected.
