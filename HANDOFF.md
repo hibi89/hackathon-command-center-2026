@@ -1,3 +1,15 @@
+## 2026-11-12 KST — REA_Web P95 product final closeout (10-item handoff)
+1. Goal/stack: complete remaining owner-independent REA_Web Lite product P95 engineering and close documentation without modifying customer files/Pro.
+2. Done/rationale: seller HTML/ZIP one-command toolkit already verified; final physical customer/privacy/licensing/sales checklist added to docs/62, [Draft PR #34](https://github.com/hibi89/REA_Web/pull/34) left unmerged to prevent unintended release.
+3. Test proof: exact product functional SHA cb7df1f4d1ce517c5940570af5bb1085410de268, [Actions #43186105405](https://github.com/hibi89/REA_Web/actions/runs/43186105405) Windows688 PASS/19 SKIP and Ubuntu677 PASS/20 SKIP, 0 FAIL; 3 real synthetic browser downloads each OS. Documentation changes not new tested code.
+4. Status: technical 95% provisional DONE; 100% not reached; commercial/production RELEASE HOLD. Kmong16 mean86.1875%, no score changes this closeout.
+5. Failure/stop: earlier QA Windows Playwright unsafe-eval blocked by CSP; corrected in test-only code; final CI green. No repeat blind run or weakening security.
+6. Refs: hibi89/REA_Web feature/lite-owner-delivery-p95-20261112 HEAD 0d25b16edf05894e446e63cfd4600dcd79ee87d5, tested SHA cb7df1f4; hub hibi89/hackathon-command-center-2026 kmong-productization HEAD check after this docs commit.
+7. Deployment: public/Vercel N/A, hosted browser Windows2025 Ubuntu24.04 PASS, real buyer Windows10/11 NOT_RUN.
+8. Originals/secrets: Pro/main/baseline f842d288 unaffected, no customer data/tokens/API fees/rights changes; safe rollback by retaining unmerged branch. License/NOTICE still NOT_APPROVED.
+9. Next: 3 human Windows acceptance trials, actual approved customer rights/privacy, license NOTICE and seller price/support/refund, final owner sale GO. Follow https://github.com/hibi89/REA_Web/blob/feature/lite-owner-delivery-p95-20261112/docs/62_LITE_FINAL_SELLER_ACCEPTANCE_20261112.md. Do not merge or list for sale before approval.
+10. Verified at exact functional SHA cb7df1f4 on 2026-11-12 KST; docs-only SHA distinct.
+
 ## 2026-11-12 KST — REA_APP original P53 P95 gate harness hub handoff (10 items)
 1. Goal/stack: P85→P95 source-backed customer ZIP for frozen Python3.11+ REA_APP P53 with pinned Babel7.29.9.
 2. Done/decision: compared analyzer rewrite vs read-only independent full-gate harness, chose lower-risk harness. New p53_acceptance.py checks original Gate R first then real P53 6/8 reports→source-bound buyer ZIP, privacy/determinism and immutable source fixtures; two fail-closed preflight tests.
