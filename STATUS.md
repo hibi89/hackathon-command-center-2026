@@ -1,3 +1,15 @@
+## 2026-11-13 KST — Freelancer 브랜드 5종 + DATA2WEB/PREP/FFAX/Factory AX 총 9종 중앙 최종완성률 등록
+
+- 사용자가 지정한 두 그룹(Private `Freelancer`의 AZENTFLOW AX·CITEVAULT AX·SITECRAFT AX·PROOFQA AX·ONTOINSIGHT AX **5개**, 스크린샷의 DATA2WEB Studio·PREP·FFAX·Factory AX **4개**)을 크몽 `kmong-productization` 표에 독립 상태로 등록·최신화.
+- **신규 5종 상품 자체 최종완성률은 전부 UNASSESSED**: 각 `Freelancer/product/*` 브랜치에 최종설계 100% 기준 문서가 있으나 실사용 통합/고객 납품/상용 게이트 미실행. 기존 HAE(85), RAG(95), REA(85), CodeChecker(95), AutoML(95)는 다른 원본 기술 범위의 **참고 수치**, 신규 패키지에 승계하지 않음.
+- **DATA2WEB**: Private 신규 repo main `01c9cfe0`와 독립이관/XLSX feature 모두 문서만 7~8파일·새 실행검증 **0%**, 최종 **UNASSESSED**. 기존 활성상품 표 행 유지/중복 등록 금지.
+- **PREP**: Private `feature/core-extraction@b8a637e8`, exact tested feature `a4c71258`, 로컬 Node22.16 `150/150 PASS` + network-offline pass 기록. P85 로컬 엔지니어링 완료지만 GitHub-hosted CI 브랜치 run0, **최종 UNASSESSED/공식 P85 미수용**. 이전 SMAX 완전동등성 요구는 독립 PREP P85에서 제외(사용자 결정), consumer adapter는 별도.
+- **FFAX**: Private `feature/ffax-workbench-p85-20261112@35548e45`, 테스트 기능 `a76a962`, `78/100 잠정`; Node105/Chromium30/복구9 PASS. AI 실모델/axe/Windows/hosted CI 미검증, P85 미달 `[작업중]` 유지.
+- **Factory AX**: Private `feature/data-verify@f9577bbc`, W1 exact CI `b70a0591` [#43178583600](https://github.com/hibi89/factory-ax-ecosystem/actions/runs/43178583600) **Windows/Ubuntu 138PASS 각각, 2/2 SUCCESS**. W1 **85% 엔지니어링 잠정**, W2~W4 미통합이므로 **전체 UNASSESSED**, 실고객 Win10/11·라이선스/출시 미검증. 과거 82%는 이전 단계.
+- 근거/정본: [9종 독립 완성률 표](docs/audits/KMONG_9_PRODUCT_COMPLETION_20261113.md), [기존 활성·후보 표](docs/audits/KMONG_16_CURRENT_20261111.md), [마스터 9종 등록](KMONG_PRODUCTIZATION.md). 9개 상태는 17종 활성상품의 전체 평균/분모에 중복 합산하지 않음.
+- **수정 범위:** 중앙 문서만, 원본 9개 제품 코드·권한·유료 Actions·배포·개인정보·사용자 자료 변경/실행 0. 모든 제품 `RELEASE HOLD / SALE NO-GO`, Production 미적용. 다른 제품의 수치/표식·작업 브랜치 보존.
+- **다음:** 사용자 지시 시 해당 제품 HANDOFF→STATUS→AGENTS→REQUIREMENTS→정본설계→실제 소스/테스트 순서로 시작, 고객/권리/Windows/CI 검증 근거로만 최종수치 승격. CI 과금/외부 AI/제품 원본 수정 전 승인.
+
 ## 2026-11-13 KST — KUODRA P85 엔지니어링 잠정 목표 달성/크몽 중앙표 동기화
 - 독립 Private `hibi89/KUODRA@develop` P85 통합 기능 SHA `46889e4ea14aaa27feb7874f6bf120aee3010dee`, [PR #4](https://github.com/hibi89/KUODRA/pull/4). [CI #43286155661](https://github.com/hibi89/KUODRA/actions/runs/43286155661) 및 [병합 시점 CI #43286619965](https://github.com/hibi89/KUODRA/actions/runs/43286619965) **Ubuntu/Windows 각197 PASS·0FAIL**, Windows unsigned PyInstaller 실행, 무Python PATH, 합성 오프라인 보고서 검증, ZIP 한글 경로 재실행/원본 파일 보존 PASS.
 - KUODRA 최종 기술범위 내부 **70→85/100 잠정**(실제 시세·공시 상용 권리/실고객 Windows 설치/규제 검수는 미검증), 범위 점수 근거 `KUODRA@main/docs/P85_ACCEPTANCE_EVIDENCE_20261113.md`. 중앙 `docs/audits/KMONG_16_CURRENT_20261111.md` 후보 KUODRA 행만 85로 고치고 **P85 [작업중]만 해제**. 출시 `RELEASE HOLD / SALE NO-GO`, 코드 `main` 미병합, KIC 원본/타 제품·집계 불변.
