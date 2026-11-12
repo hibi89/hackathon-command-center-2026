@@ -1,3 +1,15 @@
+## 2026-11-12 KST — KUODRA commercial-product candidate registration (10-point handoff)
+1. Goal/tech: owner-created private `hibi89/KUODRA` commercial product. KR DART+US SEC filing/financial validation, common source/rights/as-of pipeline, A/B/C, optional heldout ML, Guard and local Windows evidence reports.
+2. Decisions/completion: [full 100% blueprint](https://github.com/hibi89/KUODRA/blob/main/docs/BLUEPRINT_100.md), REQUIREMENTS, AGENTS, SCHEMA, rights/release/branches docs created. Chose shared core+regional adapters vs KR-only rebuild; Windows local vs SaaS. Repo 9 branches created.
+3. Tests: transferred five KIC original Python modules and five regression tests unchanged to `develop`; 10/10 original Git blob SHA parity verified by readback. Actual new Python/Windows/browser/real data tests 0 executed (container github.com DNS fails). KIC old source SHA 808e62ef... 2397 Linux/Win tests only legacy evidence.
+4. Status: new standalone product engineering **5/100 provisional** = D0 blueprint/traceability; next P50; `[작업중]` retained; RELEASE HOLD/SALE NO-GO. Do NOT inherit legacy KIC 82/100.
+5. Risks/errors/alternatives: access rights for SEC authored text, KR DART terms, Nasdaq/KRX/Massive market data, legal financial guidance, Windows install/actual issuer E2E. DNS git clone failed; use GitHub tool exact source parity and avoid false runtime PASS; on real source blocking, local lawful customer files + UNAVAILABLE/HOLD.
+6. Repo/branch/SHA: `hibi89/KUODRA` Private `main@7d112f77ec54806e6edac1d0cfadffd021533ec9` and `develop@48182bc2e7c33384be65e00af83c787dc257e4be`; feature branches core-evidence, markets-kr-dart, markets-us-sec, stats-ml, desktop-reports, enterprise-local, qa-commercial. Hub `kmong-productization`, table `docs/audits/KMONG_16_CURRENT_20261111.md`.
+7. Runtime/Production: no new production/deploy/installation or Vercel. Tests planned Python3.11 unittest and customer Win10/11; exact run pending.
+8. Originals/backup: original public KIC lead/kic/code/PDF unchanged. Private credentials, customer data, vendor emails not copied; Git commit parent and blob SHA form provenance/rollback path.
+9. Next: run independent new repo exact SHA tests, build KR/US synth canonical adapters and B/C Guard reports, rights-gated A, visual UX/Windows packaging, customer/legal/rights release gates. No paid data/security or external release without user approval. Keep other products unchanged.
+10. Checkpoint: 2026-11-12 KST, doc/branch/file-byte verification only, functionality and marketability not verified. Update score only when requirement gates actually tested.
+
 ## 2026-11-12 KST — DBVORA P4-05 current handoff, P95 pending (10-point)
 1. Target/stack: DBVORA Python3.11+ local SQLite/PG schema, ZIP/ZSTD recovery, internal P85→P95 goal.
 2. Changes/decision: mandatory actual ZIP build/extract/separate trusted audit/synthetic restore/tamper-fail gate, rather than optional standalone verification; product feature only.
