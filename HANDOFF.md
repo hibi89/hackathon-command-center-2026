@@ -1,3 +1,17 @@
+## 2026-11-12 KST — Kmong EAI P35 ZIP security handoff (10 items)
+1. Goal/stack: advance EAI owner-free P85→P95 only with evidence, retain local Python3.11 CPU-owned source-only model.
+2. Delivered/choice: A unchanged allowlist+SHA permits hidden self-extractor-like prefix, trailing bytes and archive comment; B canonical ZIP full-byte rebuild chosen for deterministic bounded ZIP, preserving all existing goals and customer data.
+3. Executed checks: private `hibi89/EAI` exact code+test SHA `fe5b3d56ea79b50ac80aa4d0cb3df564c400243d`, [CI #43198255549](https://github.com/hibi89/EAI/actions/runs/43198255549) Ubuntu Python3.11 total624 / **623 PASS /0FAIL/1 Windows-only SKIP**, compileall, CLI and synthetic build+verify PASS.
+4. Status: engineering **85% provisional**, not 95; active16 total1379pp mean86.1875%, 95+ REA_Web only, all commercial RELEASE HOLD.
+5. Blockers: real Windows10/11, genuine localhost Qwen, customer rights/privacy/signing/sales approval NOT RUN. No fake Windows/API successes or old source hashes.
+6. Repo/branch/SHA/path: `hibi89/EAI@feature/kmong-eai-85-p31-20261112`, functional `fe5b3d56`, current product docs SHA check after writing; `scripts/verify_customer_candidate.py`, `tests/test_customer_candidate_p33.py`, `docs/P35_CANDIDATE_CANONICAL_ZIP_20261112.md`. Hub `hibi89/hackathon-command-center-2026@kmong-productization`.
+7. Production/runtime: Python3.11 private Actions only, synthetic unsigned ZIP SHA `6806459198a5214eae28cf95b7bc1000b275186a46d2df31e27b6875ace153b9`, artifact `13932949816`; Production/Vercel N/A.
+8. Backups/security: old EAI SHA `736dcf017aed` rollback; main/base unchanged, no source data/external AI secrets/fees/permissions/other product changes or release.
+9. Next: approved native Windows package/HTML validation and real local Qwen SHA-pinned CPU receipt, then buyer/legal acceptance before P95; do not inflate score for a security test.
+10. Date: 2026-11-12 KST; exact CI code SHA, docs-only HEAD separate; all four hub records sync preserving 16-product ledger.
+
+---
+
 ## 2026-11-12 KST — REA_APP 95 goal partial protected source audit (10 points)
 1. Goal/stack: REA_APP frozen P53 source/Node static parser + stdlib offline retail Python review candidate, P85→P95 intended.
 2. Implemented/decision: Existing complete local P53/locked Babel runner remains unavailable, chose no-cost independent GitHub tree provenance check vs premature hosted CI or assumed success. Original 25 protected SHA vs Git trees checked, old unchanged; local 56-case retail regression repeated, deterministic .pyz regenerated, no source code changes this turn.
