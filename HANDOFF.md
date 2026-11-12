@@ -1,3 +1,17 @@
+## 2026-11-12 KST — AXMART³ CUBE P85 source-output safety handoff (10 items)
+1. Goal/tech: user requested other work rather than environment-blocked REA_APP; chose AXMART³ CUBE Node18+ built-in owner preflight, existing PC CARE independent.
+2. Work/design: existing recursive cleanup after `mkdirSync` vs fail-closed preserve-on-write-error; selected no-delete to avoid replacing-path race. Three adversarial filesystem tests + package npm script registration; no production/deployment change.
+3. Tests: private `hibi89/AX_MART` code/tests/npm `34dac38ffac69df00eeb6610e380fbc5d0c37705`, product docs `0e6a2faa20ee7deb06e8652f25fe74f92e9d6cf3`, exact 4 Git blobs match local. Node22.16 Linux **29/29 PASS** including existing26 and new3. Original vulnerable cleanup **2 FAIL/1 PASS** in disposable fixture; fixed **3 PASS**. Full original npm test/build/browser Windows/Cloudflare not run.
+4. State: CUBE **85% provisional** unchanged, P95 not certified, RELEASE HOLD. Active16 total and other 15 unchanged, REA_APP left at 85 pending native P53.
+5. Blocker/pivot: scoped files tested but original full site/homepage build and real browser/Production not verified; no claim 95, no active merchant payment or customer data. Local security defect corrected without unrelated branch edits.
+6. Repo/branch/SHA: `hibi89/AX_MART@feature/cube-owner-preflight-p85-20261112` source `34dac38ffac69df00eeb6610e380fbc5d0c37705`, docs `0e6a2faa20ee7deb06e8652f25fe74f92e9d6cf3`, previous `04d2be272d3b` rollback, [report](https://github.com/hibi89/AX_MART/blob/feature/cube-owner-preflight-p85-20261112/docs/CUBE_OWNER_PREFLIGHT_OUTPUT_RACE_20261112.md); hub `kmong-productization`.
+7. Production/runtime: Node22.16 local scoped, Cloudflare `https://ax-mart.pages.dev/` main-linked and untouched, Vercel N/A. No hosted CI invoked or paid runner.
+8. Backup/data/security: original index/CUBE base and PC CARE branch untouched; synthetic temp data only; no customer files/PII, credentials, access, external transfer, payment or deployment.
+9. Next: exact feature checkout full `npm test`, `npm run build`, preflight build/verify on real dist, independent browser/Windows/Production read-only, owner rights/sales checkout consent before any go-live. Don't inflate percent with tests alone.
+10. Date/proof: 2026-11-12 KST; remote source exact 4/4, 29 scoped PASS and destructive regression proven; all live customer/Production gates UNVERIFIED.
+
+---
+
 ## 2026-11-12 KST — REA_APP P95 goal, actual output-deletion race remediation (10 items)
 1. Goal/technology: frozen REA_APP P53 Python3.11+/Node/Babel7.29.9 and local source-bound buyer review ZIP/pyz, target 95.
 2. Done/decision: two reproduced actual synthetic-data destructive cases: swapped review output symlink followed by cleanup erased 3 unrelated files, and replaced ZIP path erased another writer's archive on writer failure. Compared byte+inode checked rollback (still TOCTOU) vs **no automatic deletion** (selected). Original parser unchanged; failures now HOLD and manual output review with no overwrite.
