@@ -1,3 +1,17 @@
+## 2026-11-12 KST — SOVIA P38 cross-audit delta handoff (10 points)
+1. Goal/technology: advance public SOVIA offline retrospective audit owner independently to P95 where possible; preserve private LA/HAE, using Python3.11+ synthetic local reports only.
+2. Delivered/choice: A raw report/plan comparisons rejected for data exposure/unverified integrity; B byte-checked two review bundles with severity-only aggregate delta CLI + 7 tests implemented.
+3. Exact test proof: `hibi89/SOVIA_sovereign@feature/kmong-la-review-p2-20261112` source `cb41fcf85bd8f2b9cc9aeb430184ed2a5056ffa5`; [Actions #43204176313](https://github.com/hibi89/SOVIA_sovereign/actions/runs/43204176313) 4/4 SUCCESS, 924 each, Win913PASS/11SKIP & Ubuntu902PASS/22SKIP, 0 FAIL.
+4. State: SOVIA provisional engineering 85→87% (+2pp), P95 NOT verified, RELEASE HOLD; current active16 latest-derived 1381pp/86.3125%, 95+ REA_Web 1; no changes to other15.
+5. Errors/retries: intermediate #43203817892 isolated `-I` module import fail, corrected explicit module loader; #43203995169 distinct exception class in test corrected; final #43204176313 green. Do not reintroduce bad import or claim old failing runs green.
+6. Repo/branch/SHA/paths: `hibi89/SOVIA_sovereign@feature/kmong-la-review-p2-20261112`, P38 `sovia_la_review_delta.py`, `tests/test_sovia_la_review_delta.py`, `docs/SOVIA_LA_DELTA_P38_20261112.md`, product docs HEAD check later; central `hibi89/hackathon-command-center-2026@kmong-productization`.
+7. Environment/Production: no Vercel/Production. Isolated local `python -I -B sovia_la_review_delta.py --previous OLD --current NEW --synthetic-only`; original v0.13 unsigned ZIP unchanged and does not include P38.
+8. Originals/backups/auth: existing SOVIA `develop`/main and prior package versions preserved; Git SHA `45c3ca88b5533d5ac2599b248abe4c8ee57c5953` predecessor recoverable, no private LA source/customer raw data/secret/permissions/billing/release modified.
+9. Next/owner gates: separately versioned offline candidate packaging of P38, then owner-approved sanitized authenticated LA receipt contract and genuine local end-to-end test/Win10/11 security/legal/privacy/support/customer pilot, explicit sale approval.
+10. KST update 2026-11-12; verified exact feature SHA and 4-job CI; historical 11/11 central table is a snapshot, latest top notices override it. [Product evidence](https://github.com/hibi89/SOVIA_sovereign/blob/feature/kmong-la-review-p2-20261112/docs/SOVIA_LA_DELTA_P38_20261112.md).
+
+---
+
 ## 2026-11-12 KST — REA_APP final P95 Windows technical acceptance ready (10 sections)
 1. Goal/stack: frozen REA_APP P53 Python3.11+ Node locked Babel7.29.9, offline buyer review; 95 goal.
 2. Work/decision: paid GH Windows runner+install (approval needed) vs one-command existing Windows PC (selected). Added true NTFS junction/Edge Chrome file:// tests and `strict_windows_gate.py` which requires 58 discovered cases, both native IDs, zero skips/failures, original Gate R+6/8 P53 E2E, real `.pyz` and SHA evidence.
