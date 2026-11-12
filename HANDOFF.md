@@ -1,3 +1,15 @@
+## 2026-11-12 KST — AXMART³ CUBE P85 provisional central handoff 10-point
+1. Goal/stack: 16 active Kmong products, CUBE 70→85 engineering scope, private local Node>=18 built-ins Cloudflare Pages static storefront audit; real checkout still not authorized.
+2. Implemented/decision: A real Worker+D1/payment vs B owner-only local source→dist byte/policy/receipt validator. Chose B (cost0, preserve live site/PC CARE). Adds source-catalog/public projection checks, homepage/security headers, CSP/no online forms/scripts/external links, explicit sale HOLD, deterministic SHA256 owner HTML/JSON and independent verify.
+3. Tests/command: Linux Node22.16 scoped exact new 3 Git blobs, 26 PASS 0 FAIL/0 SKIP, node --check PASS; `npm run test:release` and `npm run audit:release -- build --root . --output ../NEW_PRIVATE_OWNER_REVIEW`; original full `npm test`, real `npm run build`, browser/Windows/customer/Cloudflare Production not run.
+4. State/stopping: AXMART CUBE 85% provisional weighted scope (70+15), sale HOLD; hub active16 sum1354 mean84.625%, fifteen >=85, one under85 PC CARE70 (other chat active).
+5. Error/pivot: Node18-compatible test path replaced prior Node20 import.meta.dirname, clean26 PASS. Full private native checkout/real homepage build unavailable in this tool environment; not a deployment failure.
+6. Sources: private `hibi89/AX_MART` old feature/cube-commerce-core@061addb6e19c15b537181fcd278ce52878f07707, new feature/cube-owner-preflight-p85-20261112 product HEAD `04d2be272d3b2373a6fc7dd96df968b98b6366c0`, doc docs/CUBE_P85_OWNER_PREFLIGHT_20261112.md. Hub kmong-productization final SHA to check.
+7. Production/runtime: Existing `https://ax-mart.pages.dev/` main Cloudflare project unchanged, new CUBE branch NOT deployed. Node22 Linux synthetic tests only; browser/Windows N/A/NOT VERIFIED.
+8. Originals/backup/security: main, live index, product catalog, PC CARE branch untouched; isolated feature parent rollback, no customer content/PII/token/permission/billing/external network; public metadata only.
+9. Next/gates: real owner authenticated repo npm test/build+preflight on genuine generated dist, Chrome/Edge/mobile/HTTP/Console/Network, product Windows safety, personal data/legal/support, payment/refund/entitlement and owner approval before merge/production.
+10. Timestamp/verification: 2026-11-12 KST, exact source/QA scoped only, no original full CI/buyer release. Detailed report https://github.com/hibi89/AX_MART/blob/feature/cube-owner-preflight-p85-20261112/docs/CUBE_P85_OWNER_PREFLIGHT_20261112.md.
+
 ## 2026-11-12 KST — FFAX P85 재도전 결과 해총 최신화, 인수인계 10항
 1. 목표·용도: FFAX AI 프론트엔드 제작/편집/QA 시스템을 기존 최종설계 100점 기준으로 검증, 실용 상품화 후보 독립 관리.
 2. 변경·결정: 자유 HTML/JSX/무단 AI 호출보다 구조화 JSON·등록 컴포넌트·안전 승인 방식을 채택. UI 다크·오션·데이라이트 접근성 대비 보강, D1–D5 로컬 테스트 재현기 추가.
