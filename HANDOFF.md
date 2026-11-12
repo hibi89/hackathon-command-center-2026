@@ -1,3 +1,15 @@
+## 2026-11-12 KST — Factory VERIFY 85% candidate central handoff (10 fields)
+1. **Goal:** W1 Factory CORE+VERIFY 85% stage only, not W2–W4 complete Factory AX Ecosystem.
+2. **Done/decision:** Original local Python3.11+ standalone QA engine (PREP/EAI source unbundled), four-stage order-production-inspection-shipment, source SHA, reports, Tk UI, new-only backup/restore; corrected Windows read-only os.fsync handle.
+3. **Tests:** [CI #43178583600](https://github.com/hibi89/factory-ax-ecosystem/actions/runs/43178583600) at exact code SHA b70a059175389bf53d87f8c90dc4f5bbe6a97986 Ubuntu SUCCESS and Windows Server2025 SUCCESS; **138 PASS on each/0 FAIL/0 SKIP**, compileall, .pyz SHA, Windows CMD BLOCKED=3, Tk widgets, PowerShell5.1 Korean path synthetic report/backup/restore PASS.
+4. **Status:** First W1 VERIFY **85% provisional engineering candidate**; commercial RELEASE HOLD; entire Factory AX Ecosystem UNASSESSED, incubating candidate separate from 16 active products.
+5. **Errors/constraints:** Historical Win CI fsync read-only handle failed; green latest run supersedes. Windows10/11 physical PC, NTFS ACL/junction races, large real MES/ERP, authenticated owner, third-party/license source rights and signed installer unverified; no false claim of retail readiness.
+6. **Source/branch/SHA:** Private hibi89/factory-ax-ecosystem feature/data-verify; tested b70a059175389bf53d87f8c90dc4f5bbe6a97986; Factory docs 0b754b4dd771d7c6863ab4d8de7fca7ca09160f4. Central canonical docs/commercial/FACTORY_AX_CANDIDATE_BASELINE_20261112.md updated via hub commit 49ee954a295f2ad09e96771c8ea7f106f8b9d95c.
+7. **Execution/production:** Python3.11+Tk separately installed; unsigned offline .pyz/CMD, `python scripts/run_ci_regressions.py --timeout 65`; no Vercel or Production URL, no live external API.
+8. **Backups/security:** Git history and SHA manifests preserved, no customer records/secrets/upstream source copying, no main/product/other projects modified. Input only synthetic for hosted CI. Repo remains private.
+9. **Next/approval:** 95% real Windows10/11 owner/business device, airgap, large-file and UX, NTFS/ACL/race+rollback and licensing; 100% buyer acceptance/rights/signing/pricing/support. User authorization before external customer or paid changes.
+10. **Timestamp/evidence:** 2026-11-12 KST, exact GitHub Actions Windows/Linux cross-OS tests complete, physical/contract/customer tests not run, W1 RELEASE HOLD.
+
 ## 2026-11-12 KST — Kmong REA_Web independent P95 work latest (10 items)
 1. Goal: 85->95 with no manual owner action, original product preserved, no sale permissions altered.
 2. Done: isolated REA_Web Lite safe customer handoff ZIP/manifest/verify, three synthetic customer industries, actual Windows/Linux packaged HTML file URL, 85->90 provisional. Optional companion selected instead of invasive Pro edits.
