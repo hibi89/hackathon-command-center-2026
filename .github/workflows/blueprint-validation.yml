@@ -1,0 +1,32 @@
+name: Shared final-blueprint evidence validation
+on:
+  workflow_call:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  blueprint-evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out caller repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Check out central public verifier (no private source upload)
+        uses: actions/checkout@v4
+        with:
+          repository: hibi89/hackathon-command-center-2026
+          ref: main
+          path: .final-blueprint-verifier
+          persist-credentials: false
+      - name: Validate evidence without guessing completion
+        run: python3 .final-blueprint-verifier/tools/final_blueprint_gate/verify.py --repo . --output blueprint-gate-result.json
+      - name: Archive report in caller repository only
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: final-blueprint-gate-report
+          path: blueprint-gate-result.json
+          if-no-files-found: warn
+          retention-days: 7
