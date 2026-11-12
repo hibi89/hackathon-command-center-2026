@@ -1,3 +1,15 @@
+## 2026-11-13 KST — DBVORA PostgreSQL P1-09, P92 provisional / P95 target still pending (10-point hub handoff)
+1. 목표·기술: local-first DBVORA PostgreSQL/SQLite catalog + read-only statistics, ZIP/ZSTD, 85→P95 사용자 지시.
+2. 기능·선택: A schema-only 정적 관제 vs B 명시적 opt-in PG live/dead row 추정/heap·index 실측+manual review+offline UI, B 구현. view/partition parent missing physical size 표시, no auto SQL/DB mutation.
+3. 검증: GitHub PG stats 실제 SHA 동일 로컬 Python3.13.5 **17 scoped PASS/0 FAIL**, optimizer 정확 원격 소스/테스트 **8/8 unittest PASS**. 다른 새 integrated tests GitHub에 추가, **원본 전체 Python>=553+Node, PG/Windows/browser/builder E2E NOT RUN**.
+4. 상태: 점수 내부 범위 가중 P0 24/25, P1 12/15, P2 20/20, P3 19/20, P4 17/20 = **92% 잠정**; P95 미달; DBVORA 중앙 **[작업중] 보존**; 판매 RELEASE HOLD.
+5. 장애/전환: 비공개 전체 checkout git DNS 실패; GitHub connector 원격 patch+module Git Blob parity local scope로 실진척. 무단 새 유료 CI/워크플로·권한변경 없음.
+6. 저장소/경로/SHA: `hibi89/DBVORA@feature/p0-db-map`; 신규 `dbvora/connectors/postgres_statistics.py`, `dbvora/optimization_review.py`; `dbvora/connectors/postgres_reader.py`, `dbvora/mixed_cli.py`, `dbvora/multi_engine_report.py`; `docs/P1_09_PG_STATS_OPTIMIZATION_20261113.md`; hub `hibi89/hackathon-command-center-2026@kmong-productization` roster `docs/audits/KMONG_16_CURRENT_20261111.md`. 최종 HEAD 재확인.
+7. 환경/배포: Linux3.13.5 scoped, Python3.11+ expected, PostgreSQL TLS verify-full code/mock only; Windows/Production/Vercel 미적용.
+8. 보존/복구/보안: feature branch only Git history revert; main/develop, originals/customer DB, secrets/.env, external API, paid service, permissions, Vercel unchanged; no real PG connection.
+9. 다음/완료기준: authenticated entire checkout `python -m scripts.verify_release_gate` + 553+ Python/Node, PG/CLI/HTML integration tests; separately approved synthetic PG read-only TLS verify-full; native Win3.11 NTFS/browser/package. P95 실제 근거 전 작업중 제거 금지, 고객/판매는 별도 승인.
+10. 갱신 KST: 2026-11-13; GitHub 기능 코드 체크인/정확2개 모듈 scoped Linux17+8, real E2E/PG/Windows 미검증; 해총 실제 SHA는 마지막 readback 기준.
+
 ## [LATEST 2026-11-12 KST] 크몽 원래 REA_Web P50 목표 달성·작업중 해제 인수인계 10항
 1. **목표/용도/기술:** 사용자가 원래 REA_Web 웹사이트 분석·재구축 50% 달성 지시. 사이트 관찰→Fable5.1→Astra P4 증거·명세 검토→인간 승인→독립 FastAPI/SQLite 웹앱; DATA2WEB은 CSV/XLSX 별도 독립 제품.
 2. **완료/판단 근거:** 원래 `REA_Web@feature/website-analysis-rebuild`에서 새 `rea/website_rebuild.py`/tests/CI: 허가된 synthetic local HTML Fable 실제 정적 GET 1회→Astra 추정 전용 draft(행동은 REVIEW_REQUIRED)→사용자 별도 승인 CSV3행으로 원래 Pro 생성. 원본 참고 HTML 복제 없이 별도 신규 웹앱 API, review는 서버로 노출 안 함.
