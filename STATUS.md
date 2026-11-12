@@ -1,3 +1,9 @@
+## [LATEST 2026-11-13 KST] REA_Web P95 사용자 목표 계속 진행 — 원형 사이트 증거 기반 독립 HTML 컴포넌트 QA 통과
+- 원형 웹사이트 분석·재구축 REA_Web `hibi89/REA_Web@feature/website-analysis-rebuild` 신규 `rea/website_component_builder.py`, `rea/website_ui_cli.py`, `tests/test_website_component_builder.py`: 로컬 합성 웹사이트 실제 P85 Chromium desktop/mobile 검색·필터·상세 6 state→Astra P4 observed screenshots SHA + Fable5.1 (기존 정적) + 정확 P95 owner review SHA/선택 Record 스코프→3개의 **신규 독립 Pro HTML 컴포넌트 트리** 생성·재검증. 원사이트 HTML/CSS/JS·문구/이미지/브랜드 복제 금지, 고객 CSV·이전 Pro/Fable/Astra/DATA2WEB 소스 보존, create-only 납품.
+- exact-tested SHA `04541195da42b702925cc62e7a39e16962cbfa31`, [Actions #43295475001](https://github.com/hibi89/REA_Web/actions/runs/43295475001) **Windows2025 94PASS/0FAIL/1WARN(Chrome·Edge owner UI 포함), Ubuntu24.04 92PASS/2SKIP/0FAIL/1WARN, 2/2 SUCCESS**. 최초 forged Astra subject+observation negative test 1FAIL→P85 independent oracle 검사 추가, Windows CRLF 파일원본 테스트 1FAIL→원본 바이트 snapshot 검사로 수정. 최종 CI PASS.
+- [중앙 제품 정본](docs/audits/KMONG_16_CURRENT_20261111.md) **REA_Web 최종완성률 85% 엔지니어링 잠정 유지**, 사용자 요청 P95 실제 목표 미달·[작업중] **유지**, RELEASE HOLD / Vercel Production 미적용. 실고객 권한 있는 웹사이트의 실제 Fable headed Record·Astra 복잡 업무 흐름 명세→고객 승인 UI/독립 코드 구현, Win10/11 실기기·권리/상업인수 미검증. 합성 구조3종 검증을 임의 사이트 95% 완성이라고 주장하지 않음. DATA2WEB 및 타 담당 프로젝트 표시/완성률 변경 없음.
+- [P95 실제 구현 범위·차단](https://github.com/hibi89/REA_Web/blob/feature/website-analysis-rebuild/docs/WEBSITE_P95_EVIDENCE_BOUND_COMPONENTS_20261113.md). 다음 안전한 우선 작업: 허가된 로컬/고객 원형 사이트의 실 DOM/다중상호작용 명세 지원 확대 및 고객 rights preflight; 실외부 URL·고객자료/보안권한/과금·배포 사전 승인.
+
 ## [2026-11-13 KST] 전 GitHub 저장소/브랜치 기반 크몽 정합화
 
 - **현황:** GitHub 35 저장소/457 브랜치 메타데이터 열거, 구현·상품 담당 브랜치 HANDOFF/STATUS 및 주요 Actions 증거 대조. 상세 `docs/audits/KMONG_ALL_REPO_BRANCH_COMPLETION_AUDIT_20261113.md`.
