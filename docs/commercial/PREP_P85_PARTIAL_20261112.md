@@ -1,3 +1,12 @@
+## 2026-11-12 KST — PREP P85 global HOLD and 136 native tests (LATEST)
+- Private PREP feature/core-extraction tested code SHA 63cbf3dbe7d22010ed099862f7698d12cf0bc03f, docs HEAD b94cdee808294b9338789ba07808c11bea95db46.
+- Fixed export-only global mapping ambiguity risk: CSV now emits REVIEW_REQUIRED and AMBIGUOUS_MAPPING reason for all rows if dataset-level alias ambiguity exists; HTML report prominently warns even with zero row defects. Three regression cases, intentional ambiguous CSV/HTML frozen-golden SHA updates, normal export behavior unchanged.
+- Linux Node22.16 native npm test **136 PASS/0 FAIL/0 SKIP**, network-disabled Linux **136 PASS**, syntax PASS. Fresh local 8907-byte runtime npm tarball SHA256 238ab334c84d8b9c31a0fc8a7ec60e9dd19d4b0c04eebb248616ff6daa475ba7; new client installed offline, SDK/main/report imports PASS and installed CLI CSV plus receipt verification PASS. Full exact GitHub README/SDK documentation distribution tarball not tested.
+- Read-only SMAX source V8 with SHA-256 correct known vectors: original validator/serializer **11/11 PASS** and source hash **11/11 PASS**, 6 normalized/review matches and 5 intentional policy differences. NOT native Node original-SMAX comparison, approved parity or permission for source transfer.
+- Formal PREP 85% **NOT CERTIFIED**, completion UNASSESSED, RELEASE HOLD; original-SMAX Node/compatibility policy and GitHub-hosted CI remain unverified; no CI dispatch, production or source modification. Active Kmong product percentages and denominator unchanged.
+
+---
+
 ## 2026-11-12 KST — PREP P85 133-test differential checkpoint (LATEST)
 - PRIVATE PREP feature/core-extraction verified code e41c57f23c4301eb5195c2c84e181ca9cf264761; docs HEAD 9193edadee3af510953e92d3630f88ea7a94152a.
 - Read-only SMAX original code logic evaluated in ephemeral V8 with SHA provider stub. 11 synthetic input cases: 6 same values/review flags, 5 contract divergences. This is NOT actual Node original-SMAX/native SHA/validator golden parity.

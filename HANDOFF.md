@@ -1,3 +1,17 @@
+## 2026-11-12 KST — PREP 136-test hub handoff (10 fields)
+1. Goal: PREP independent local-first R01-R12, P85 Linux/SDK/evidence/report/security with CI acceptance.
+2. Done: global AMBIGUOUS_MAPPING conflict now cannot look ready in distributed CSV or static HTML, fixed export status/reasons and added alert, preserving normal exports and input data. Three tests and revised affected goldens.
+3. Tests: exact code SHA 63cbf3dbe7d22010ed099862f7698d12cf0bc03f, docs b94cdee808294b9338789ba07808c11bea95db46; Linux Node22.16 native 136 PASS/0 FAIL/0 SKIP, network-disabled 136 PASS, syntax PASS; local tarball offline install + SDK/CLI/receipt E2E PASS. Original SMAX isolated V8 real SHA/validator 11/11, not original Node.
+4. State: P85 not formally certified, completion UNASSESSED, RELEASE HOLD. No change to active product scores.
+5. Issues: pinned native original SMAX checkout unavailable, source rights/compatibility policy open, GitHub-hosted Actions not dispatched and potential billing unapproved; full exact remote docs package unverified.
+6. Repos: PRIVATE hibi89/prep feature/core-extraction SHA 63cbf3db, docs b94cdee8; hub hibi89/hackathon-command-center-2026 kmong-productization; rollback PREP 9193edad; upstream SMAX preprocessing 3830cb27 read-only unchanged.
+7. Environment: local Linux Node22.16 verified; hosted CI/Windows/approved consumer not run; Vercel/production N/A.
+8. Original/backup/security: no private upstream source transfer, original edits, personal data, credentials, paid runner use, licensing/permissions or release changes; Git SHA rollback.
+9. Next approval: choose independent documented incompatibility vs optional SMAX adapter, allow native pinned comparison, approve CI billing if needed. Windows/consumer later.
+10. Updated: 2026-11-12 KST, exact code and doc SHAs above; current hub SHA after commit to be verified.
+
+---
+
 ## 2026-11-12 KST — PREP differential 133-test hub handoff (ten items)
 1. Goal: independently reusable PREP, P85 Linux SDK/report/evidence and source compatibility acceptance.
 2. Changes: 11 synthetic comparison snapshots, 12 PREP-only tests and SHA-pinned read-only Node comparator tool; no SMAX original copied.
