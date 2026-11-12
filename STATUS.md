@@ -1,3 +1,10 @@
+## 2026-11-13 KST — GitHub Trending 일간·주간 전용 브랜치 분리 및 예약 쓰기 라우팅
+- 사용자 직접 승인: 기존 `kmong-productization` 월간 아카이브 유지 + 같은 저장소에 **`github-trending-daily`**, **`github-trending-weekly`** 브랜치 생성 완료. 기존 원본·제품 상태·완성률 불변.
+- 일간 정본 `github-trending-daily/docs/github-trending/YYYY-MM/DAILY.md`; 주간 정본 `github-trending-weekly/docs/github-trending/YYYY-MM/WEEKLY.md`. 기존 월간은 `kmong-productization/docs/github-trending/YYYY-MM/MONTHLY.md`. 월간 예약은 일간·주간 브랜치를 읽기 전용으로 종합하며 브랜치 자동 병합 없음.
+- 전용 브랜치 각각 `BRANCH_README.md` 신설, 공통 `AUTOMATION_POLICY.md`와 `MONTHLY_INDEX.md`를 브랜치 구조에 맞게 갱신. 총괄 브랜치의 기존 DAILY/WEEKLY 파일은 **역사적 스냅샷** 표시. 구형 본문 삭제·순위 수정 없음.
+- 기존 예약 세 건 prompt 업데이트 응답 **3/3 success**: 일간 `Automation_019a9e37b9b08191b6064cc37facab22`, 주간 `Automation_b505a8e8b1d88191997b8e5654e7e51a`, 월간 `Automation_94cd8969ddd081918467dc02bd0a92d3`. 예약 시간 유지: 매일10:00, 월요일10:30, 매월1일11:00 Asia/Seoul.
+- **검증 범위:** GitHub 브랜치 생성 2/2, 브랜치 문서 생성 2/2, 공통 운영 정책/인덱스 6/6, 중앙 스냅샷 전환 2/2, 예약 prompt 변경 3/3 API 성공. 예약 실행 후 GitHub append·중복 방지·원격 readback은 아직 **미검증**, 실패 시 `GITHUB_SYNC_PENDING`. 코드/CI/Production/Vercel 미적용, 비용·권한·토큰 변경 없음.
+
 ## [LATEST 2026-11-13 KST] REA_Web 원래 웹 분석 P70 합성 실브라우저 검증 반영
 - 원형 웹사이트 분석·재구축 엔진 hibi89/REA_Web@feature/website-analysis-rebuild, 검증 소스/CI SHA bfac1116ac7a20c7162f42a59e51277d402b24d9. 실제 합성 로컬 HTML 사이트 3종 Chromium before/after 검색·필터·상세→Astra P4 observed evidence/review_required→sha·digest 합성 승인→진짜 Fable 5.1 static GET·기존 Pro 독립 웹앱 생성→실 Chromium 기능 결과 비교 완료.
 - [GitHub Actions #43266467950](https://github.com/hibi89/REA_Web/actions/runs/43266467950) Ubuntu24.04/Windows2025 각 41 PASS / 0 FAIL / 1 WARN, 2/2 SUCCESS. 원본 Pro/Fable/Astra/Data2web 브랜치 변경 없음.
