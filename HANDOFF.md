@@ -1,3 +1,17 @@
+## 2026-11-12 KST — PREP 148-case central handoff (10 sections)
+1. Goal: independent PREP local-first engine R01–R12; P85 SDK/evidence/report/security and Linux acceptance.
+2. Changes: duplicate JSON keys fail before last-wins data loss; output evidence column names excluded from schema fields; 12 targeted regressions, normal CSV schema unchanged.
+3. Evidence: PREP feature/core-extraction code 7b6a90b067c72165438b2ed9b3b5c328a9330a53, docs 99e0fa5e664b7a260c7be0b37ef35ed606dc00af; Linux Node22.16 npm test 148 PASS/0 FAIL/0 SKIP, network-disabled 148 PASS, npm run check/pack dry-run PASS. Fresh 9366-byte runtime package SHA256 e8f82a3931b19239b22b4036dae082f1208a6e16dfc5cff21192819ca48ee9c0 installed offline, SDK/report/CLI source-and-export receipt E2E PASS. Full remote docs distribution NOT_RUN.
+4. Completion: formal P85 NOT CERTIFIED, PREP completion UNASSESSED, RELEASE HOLD. Hub active product scores and denominator unchanged.
+5. Blockers: real original SMAX Node/rights-policy golden parity and GitHub-hosted CI NOT_RUN; V8 SHA/validator prior evidence is limited; no force-promotion.
+6. Repo/branch/SHA: PRIVATE hibi89/prep feature/core-extraction 7b6a90b067c72165438b2ed9b3b5c328a9330a53, docs 99e0fa5e664b7a260c7be0b37ef35ed606dc00af; rollback previous PREP b94cdee8. Hub hibi89/hackathon-command-center-2026 kmong-productization.
+7. Deploy/environment: Linux Node22 local verified; Windows native, downstream consumer, GitHub-hosted workflow unverified; no Production/Vercel.
+8. Original/privacy: SMAX preprocessing 3830cb27 unchanged, PREP main/develop unchanged; no private source migration, customer data, secrets, paid CI or access changes.
+9. Next: approved SHA-pinned SMAX native test workspace and explicit compatibility policy, authorized hosted CI, full docs archive; later Windows/consumer adapter.
+10. Evidence date: 2026-11-12 KST, PREP 148-case Linux + offline package. Hub SHA to check after commit.
+
+---
+
 ## 2026-11-12 KST — PREP 136-test hub handoff (10 fields)
 1. Goal: PREP independent local-first R01-R12, P85 Linux/SDK/evidence/report/security with CI acceptance.
 2. Done: global AMBIGUOUS_MAPPING conflict now cannot look ready in distributed CSV or static HTML, fixed export status/reasons and added alert, preserving normal exports and input data. Three tests and revised affected goldens.

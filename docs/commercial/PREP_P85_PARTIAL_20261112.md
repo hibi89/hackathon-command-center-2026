@@ -1,3 +1,12 @@
+## 2026-11-12 KST — PREP P85 148-case JSON/CSV evidence guard (LATEST)
+- PREP PRIVATE hibi89/prep feature/core-extraction verified source SHA **7b6a90b067c72165438b2ed9b3b5c328a9330a53**, docs/head **99e0fa5e664b7a260c7be0b37ef35ed606dc00af**; upstream SMAX and default branches unchanged.
+- Fixed two data integrity/security risks: duplicate decoded JSON keys in one record now fail **DUPLICATE_JSON_KEY** before last-value-wins loss; reserved CSV evidence metadata field names __status, __source_record and __reasons (also NFKC/case aliases) fail **INVALID_SCHEMA_FIELD** to prevent status/header spoofing. Separate records may reuse keys; normal CSV interface remains unchanged.
+- Linux Node22.16 x86_64 **148/148 PASS**, 0 failures/skips; network-disabled Linux namespace **148/148 PASS**, npm run check PASS, npm pack dry-run PASS. Fresh local 7-file runtime package 9366 bytes, SHA256 e8f82a3931b19239b22b4036dae082f1208a6e16dfc5cff21192819ca48ee9c0 installed offline; main/SDK/report imports, duplicate JSON negative and CLI CSV+source/export receipt verify PASS. Local release bundle excludes full remote README/SDK docs, so exact GitHub tarball NOT_VERIFIED.
+- Original SMAX read-only V8 source SHA/validator 11/11 from prior evidence, **NOT native original Node parity**. GitHub-hosted Actions CI NOT_RUN; source-rights/compatibility approval, original Node goldens, Windows/consumer NOT_RUN. **Official P85 NOT CERTIFIED; PREP canonical completion UNASSESSED; RELEASE HOLD.**
+- Existing central Kmong active product percentage scores and denominator are **UNCHANGED**, PREP remains a separate candidate outside aggregate. No paid jobs, visibility/permission changes, source migration or production.
+
+---
+
 ## 2026-11-12 KST — PREP P85 global HOLD and 136 native tests (LATEST)
 - Private PREP feature/core-extraction tested code SHA 63cbf3dbe7d22010ed099862f7698d12cf0bc03f, docs HEAD b94cdee808294b9338789ba07808c11bea95db46.
 - Fixed export-only global mapping ambiguity risk: CSV now emits REVIEW_REQUIRED and AMBIGUOUS_MAPPING reason for all rows if dataset-level alias ambiguity exists; HTML report prominently warns even with zero row defects. Three regression cases, intentional ambiguous CSV/HTML frozen-golden SHA updates, normal export behavior unchanged.
