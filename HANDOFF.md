@@ -1,3 +1,15 @@
+## 2026-11-12 KST — Factory AX 신규 크몽 육성 후보 등록 / 10항 인수인계
+1. **목표·제품:** Factory AX는 제조업/보수적 기업에 공급자가 설정·설치·검수해 납품하는 온프레미스 AX 제품군. 최초 W1 VERIFY(발주·생산·검사·출하), 이후 KNOWLEDGE/FILE, HAE+LA, Security Guard/SOVIA, PC CARE·Code Checker/콘솔 확장.
+2. **완료·결정:** Private `hibi89/factory-ax-ecosystem` `main@29b9653ccbc4bcd36a190f9e9d78954bcc4dae76`에서 29개 기준 문서·10개 브랜치 설계 확인. 기존 SMAX²와 독립, PREP 데이터 계약 재사용 후보. 중앙 해총에 별도 상품화 후보 등록하고 활성16종 변경하지 않음.
+3. **테스트:** Factory 제품 기능 소스/테스트/CI·Windows/고객 E2E **NOT RUN**, 새 Factory 기능 검증 0건. 이번 기록은 문서·원격 메타데이터 확인뿐.
+4. **단계·진도:** **Factory VERIFY 정식 최종완성률 UNASSESSED**, 첫 **50% 미달**. 전체 Factory AX Ecosystem 최종률 **UNASSESSED**, RELEASE HOLD. 기존 원천 기술의 85%를 Factory 완성도로 대입 금지.
+5. **오류·제약:** 문서/브랜치=제품 개발이 아님, PREP·EAI·HAE·LA 사용권/인터페이스·현장 보안·실기기 검증 미완. 비공개 소스의 무단 복사와 안전/보안 100% 광고 금지.
+6. **저장소·기준:** 허브 `hibi89/hackathon-command-center-2026@kmong-productization`; Factory `hibi89/factory-ax-ecosystem@main:29b9653ccbc4bcd36a190f9e9d78954bcc4dae76`; 후보 문서 `docs/commercial/FACTORY_AX_CANDIDATE_BASELINE_20261112.md`; 이 기록 커밋 후 원격 실제 HEAD 재조회 필요.
+7. **배포/환경:** Factory 설치/Production 미적용. Python 기반 로컬 일반 Windows 업무 PC는 설계 후보, 기능 실 실행 미확인. Vercel/Cloudflare/실고객 연결 없음.
+8. **원본/보안/복구:** 기존 활성 16종 점수·분모/합계 **1369%p, 평균 85.5625%, 85+ 16/16** 유지, PREP/FFAX/BID AX/FlowPilot Universal/WORKNOVA Desk 후보 유지. 원본 제품/보안·인증/비밀/고객 파일/권한 변경 없이 GitHub 이력으로 복구 가능.
+9. **다음 일/완료기준:** Factory `feature/data-verify`에서 합성 4자료/원천 계약·제조업 대사 규칙/독립 검증·고객 실행·원본 SHA 안전을 실제 구현, 증거 기반 첫 50% 판단 후 해총 진도 최신화. 자료 외부 전송/소스 복사/배포/지출 사전 승인.
+10. **기준 KST·증거:** 2026-11-12 KST, Factory Private main 설계·브랜치/허브 후보 기록만 원격 검증. 별도 Factory 코드/CI/Windows/상용 고객 시험 **0건/미검증**. [후보 정본](docs/commercial/FACTORY_AX_CANDIDATE_BASELINE_20261112.md).
+
 ## 2026-11-12 KST — PREP PRIVATE 전환 검증 및 최종상품 진척 재확인 (10항 최신)
 1. **목표·기술:** 독립 PREP(Node20+ ESM) 범용 정형 데이터 전처리 코어와 CLI/SDK를 50% 단계로 개발. 기존 크몽 활성16종 외 독립 육성 후보.
 2. **완료·결정:** 소유자가 `hibi89/prep`를 PRIVATE으로 변경했고 GitHub로 직접 확인. PREP 공개에 따른 비공개 코드 노출 차단 조건 해소. 상태 문서·보안·마이그레이션 계약 갱신. 기능 소스 이관은 아직 하지 않음.
