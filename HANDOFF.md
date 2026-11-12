@@ -1,3 +1,15 @@
+## [LATEST 2026-11-13 KST] 원래 REA_Web P85 목표 검증·중앙 최신화 인수인계 10항
+1. 목표·요구·기술: 원래 REA_Web = 허가된 사이트 관찰/Fable5.1→Astra evidence/functional spec→human approval→독립 Pro FastAPI/SQLite 앱. DATA2WEB 표형 파일·Excel 상품과 분리. 사용자 새 P85 지시의 합성 정본 게이트 진행.
+2. 완료 기능·근거: REA_Web `rea/website_p85.py` + `tests/test_website_p85.py`; 합성 사이트 catalog/inventory/directory 각각 desktop/mobile 실 Chromium 3연속 UI 조작, Astra observed 명세·PNG SHA·review digest, 소유자 승인 합성 CSV로 Pro 생성, 실 웹앱 3단계 기능 parity와 Pillow 이미지 RGB 차이 및 DOM 계수 보고. 전 사이트 UI 복제 주장 금지.
+3. 실행/테스트: SHA `1c3390fa3da933c5d0513196f0dcfc97b18b5e14`, `python -m pytest -q tests/test_website_rebuild_p50.py tests/test_website_p70.py tests/test_website_p85.py tests/test_orchestrator.py`; GitHub [Actions #43273324679](https://github.com/hibi89/REA_Web/actions/runs/43273324679) **Ubuntu 52PASS/0FAIL/1WARN, Windows2025 52PASS/0FAIL/1WARN, 2/2 SUCCESS**, 원래 P70 41+신규11.
+4. 완료·진행·차단: 사용자 현 P85 내부 로컬 합성 수용 게이트 검증 완료. 엔지니어링 85% 잠정, 중앙 [작업중] REA_Web만 해제. 실제 외부 사이트 전체 디자인·동작의 자동재구축, 실제 고객/Win10·11/라이선스/유료 판매/Production 미검증, RELEASE HOLD.
+5. 오류·시도·재시도 금지·대안: 첫 P85 GitHub Actions #43273113196 Win/Ubuntu FAIL, Ubuntu 49PASS/3FAIL(`Path` 리뷰 폴더를 JSON에 덤프). 최소 1줄 `reviewed` dict로 교체, 다음 동일 CI SHA 1c3390f Win/Ubuntu PASS. P85 visual diff는 반드시 수동 검토 후보로 남기고 source clone/근거 없는 100% 금지.
+6. 저장소·SHA·경로: `hibi89/REA_Web@feature/website-analysis-rebuild`, 정확 tested SHA 1c3390f, source `rea/website_p85.py`, `tests/test_website_p85.py`, `.github/workflows/rea-website-p50.yml`, `docs/WEBSITE_P85_RESPONSIVE_ACCEPTANCE_20261113.md`. 중앙 `hibi89/hackathon-command-center-2026@kmong-productization/docs/audits/KMONG_16_CURRENT_20261111.md`. Pro 97b6e5, frozen Fable7e6f273b/Astra f044b66e.
+7. Production/환경: Python3.11/Playwright Chromium/Pillow/FastAPI/SQLite/uvicorn/pytest, hosted Win2025/Ubuntu24.04. Vercel 및 실서비스 배포 미적용.
+8. 원본·백업·보안: 기존 Pro/Fable/Astra/REA Lite/DATA2WEB 원본/원격브랜치·고객 정보 불변. GitHub exact SHA 복구. 테스트는 synthetic local loopback, 외부 URL 표시 금지/네트워크 abort, SHA·승인/출력 create-only, 고객권리·민감 데이터 전송 없음.
+9. 다음 작업 우선·사용자 승인: 차기 P95 지시 시 진짜 Fable Record 사용자 조작 계약→Astra 명세 human workbench→고객 소유 명세로 신규 UI/상호작용 구현, 고객 Windows 실 PC/Chrome·Edge, 사용권·NOTICE·약관/지원·원본 개인정보/상용 GO 검증. 외부 사이트/유료 API·권한/배포 변경 사용자 사전 승인.
+10. 갱신 KST/검증 범위: 2026-11-13, 정확 코드·CI SHA 1c3390f(2/2 SUCCESS), 문서 SHA/HEAD는 후속 readback 별도. 전체사이트 복구 실제 사용성 85% 보증 아님.
+
 ## 2026-11-13 KST — GitHub Trending 과거 조사·수익화 총정리 (10항)
 1. 목표·기술: GitHub Markdown + ChatGPT 예약 3개로 일간/주간 전용 브랜치 및 월간 총괄 누적을 유지.
 2. 완료 기능·결정: 과거 보고의 중복 제거 상품화 가설 30개와 조사 중 언급된 repo 69개를 3브랜치에 문서화. 일·주 브랜치 지역 누적/월간 중앙 통합 방식 선택. 중앙 정본 `docs/github-trending/MONETIZATION_IDEAS_MASTER.md` / `RESEARCH_HISTORY_INDEX.md`.
