@@ -1,3 +1,5 @@
+> **2026-11-12 KST — DBVORA P95 작업 진행(85% 잠정 유지):** `hibi89/DBVORA@feature/p0-db-map` 기능 `94e1b5ddeb36`, 문서 HEAD `049efc89cf52`. 미등록 포터블 실행형 sidecar 탐지와 검증 Python `-S -B`, 단위·추출 ZIP 통합 회귀를 신규 코드로 반영. Linux 재구성 규칙 8/8 PASS이지만 원본 full Python>=553+Node, 원본 ZIP integration, Windows/PG/고객 QA **미실행**. DBVORA **85% 잠정/P95 미달/RELEASE HOLD**; 중앙 **[작업중] 유지**. [상세](docs/audits/KMONG_16_CURRENT_20261111.md), 타 제품 수치·표식 불변.
+
 ## 2026-11-12 KST — ASTRA P79–P81 engineering continuation, target 95 NOT MET
 - `hibi89/astra_pdf_redesigner@feature/astra-p71-pdf-source-parity-20261112` functional SHA `d417eb91e31f5781fded65120bcfc363a4ea97c2`; product docs SHA `6eacf9f7dd16fe17a2dcf79b85fec98ca0401e35`; Draft PR #10 still unmerged.
 - P79 PDF source/output change while analyzing no longer leaves review button disabled: AbortController and PDF.js worker cancellation; synthetic Chrome/Edge regression added.
