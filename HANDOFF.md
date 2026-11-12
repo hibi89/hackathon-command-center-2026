@@ -1,3 +1,17 @@
+## 2026-11-12 KST — REA_APP P95-target ZIP + Python zipapp verification (hub, 10 parts)
+1. Goal/tech: source-free REA_APP P85→P95 buyer review, original Python3.11+/Babel P53 analyzer frozen, retail stdlib-only.
+2. Work/decision: A signed Windows EXE now needs external Windows/build/signing validation; chose B deterministic Python zipapp. Actual corrupt DEFLATE ZIP crash fixed to controlled HOLD, implemented five-member .pyz with own source SHA manifest and offline one-command candidate. No external dependency/data transfer.
+3. Tests: private feature code+QA `53bc6edab84c4d2f78a35fe5fbb0e2be0d55f1e9`, docs HEAD `f8ad62333f04429c5f43fc7407a6a8b0c0e900a9`; four locally executed files Git Blobs exact remote. Before fix two byte corruption tests failed 1 + error 1; after fix Linux Python3.13.5 **56/56 PASS**, `python -O` 56/56, compileall PASS. Actual zipapp created, separately executed, deterministic bytes, buyer ZIP verified, reports unchanged.
+4. State: REA_APP **85% provisional** (95 target NOT met), RELEASE HOLD, active16 roster unchanged.
+5. Failure/stop-pivot: GitHub private git clone and pinned npm dependency unavailable in container; original `p53_acceptance.py` exit2 BLOCKED, cannot assert full P53 Gate R. Direct Chromium file:// admin blocked previously; native Windows/CI unverified. Avoid useless new test-count rounds; must switch to authorized P53/Windows runner for final acceptance.
+6. Repo/branches/SHA: `hibi89/HAE@feature/rea-app-kmong-owner-delivery-20261112` code `53bc6edab84c4d2f78a35fe5fbb0e2be0d55f1e9`, docs `f8ad62333f04429c5f43fc7407a6a8b0c0e900a9`; [evidence](https://github.com/hibi89/HAE/blob/feature/rea-app-kmong-owner-delivery-20261112/docs/REA_APP_P95_CORRUPT_ZIP_AND_PYZ_20261112.md). Original `REA_APP@2fe581b6` untouched; hub `kmong-productization` HEAD verify after edits.
+7. Production/env: Offline Python .pyz candidate **not Windows EXE**; Linux Python3.13.5 only. Vercel/Production N/A, no GitHub CI/paid runner used.
+8. Originals/backup/security: previous Git code SHA allows rollback; customer code/reports not packaged, no key/permission/access/license/branch merge/deployment changes.
+9. Next: full approved private checkout with exact Babel7.29.9; run original Gate R/QA + P53 six/eight actual reports→customer ZIP, then Win10/11 Python3.11/native NTFS and Edge/Chrome file://, rights/NOTICE/support/pilot; rescore 95 only when verified. Paid services/release require owner approval.
+10. Date/verification: 2026-11-12 KST; 56 scoped local PASS and exact Git file parity verified, full P53 and Windows blocked/not verified.
+
+---
+
 ## 2026-11-12 KST — REA_Web Lite P95 rights-scope audit handoff (10 fields)
 1. Goal: precise owner-free audit of Lite customer distribution contents and Pro license evidence.
 2. Done: source verified exact 3 Lite ZIP members; separated inline HTML/JSON plaintext from build-time Python and previously inventoried Pro runtime wheels. [Report](https://github.com/hibi89/REA_Web/blob/feature/lite-owner-delivery-p95-20261112/docs/63_LITE_SHIPPED_COMPONENTS_RIGHTS_PRECHECK_20261112.md).
