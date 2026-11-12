@@ -1,3 +1,15 @@
+## [LATEST 2026-11-12 KST] REA_Web·DATA2WEB 독립 상품 인수인계 10항
+1. 목표: 원래 REA_Web = 허가된 웹사이트 관찰→Fable5.1→Astra P4 증거·명세→인간 승인→별도 웹앱 재구축. DATA2WEB Studio = CSV/JSON/XLSX/TSV로 로컬 HTML/ZIP 생성하는 별도 Private 상품.
+2. 변경: REA_Web main 요구/최종설계 및 feature/website-analysis-rebuild 생성. DATA2WEB main 문서·정본 최종설계/출처권리·두 개발브랜치 생성. 중앙 REA_Web Lite95 행을 DATA2WEB 미산정으로 정정, 원래 REA_Web 미산정 신규 행 추가.
+3. 테스트: REA Lite 원형 검증 기능 cb7df1f4, Windows688PASS/19SKIP, Ubuntu677PASS/20SKIP 등 기존 역사적 소스 한정. 이번 두 신규 제품 독립 executable 및 사이트 재구축 신규 CI·browser E2E **NOT RUN**. GitHub 원격 문서·브랜치 readback으로 설정 확인.
+4. 상태: 정본/분리/브랜치·중앙 등록 DONE. DATA2WEB code transfer NOT STARTED; REA observer-Fable-Astra-Pro 실사이트 E2E NOT STARTED. 최종상품률 둘 다 UNASSESSED; 새로운 P50 검증 대기, SALE HOLD.
+5. 원인·해결: DATA 기반 Lite 95%와 원래 사이트 분석 엔진 범위 오인; 본래 제품 복원과 독립 데이터제품 분리, 숫자 승계 금지·원본 전부 유지. 기존 전체 복사 대신 최소 독립 이관+골든 QA 선택.
+6. 저장소: hibi89/REA_Web main / feature/website-analysis-rebuild (부모 Pro 97b6e5); hibi89/data2web_studio main / feature/lite-independent-migration / feature/xlsx-tsv-import; hub hibi89/hackathon-command-center-2026@kmong-productization, docs/audits/KMONG_16_CURRENT_20261111.md 및 docs/audits/REA_WEB_DATA2WEB_PRODUCT_SPLIT_20261112.md. 최종 Git HEAD는 원격 검사 시점 SHA 기록.
+7. 환경·Production: Python3.11+, 기존 Pro FastAPI/SQLite, 오프라인 HTML/Chrome·Edge; 신규 DATA2WEB 실행 CLI 미작성, Vercel/Production N/A.
+8. 원본·보안·백업: 기존 Pro·Fable/Astra·Lite 소스/PR/사용자 자료 미변경; 복구 SHA는 각 브랜치 HEAD, Private 새 repo 외부 데이터 송신·토큰/PII/유료 API·권한 설정 변경 없음.
+9. 다음: DATA2WEB 독립 CSV/flat JSON 파일→HTML/ZIP→실브라우저 Win/Ubuntu E2E(P50 첫 개발 단계); REA_Web 로컬 허가된 사이트 fixture 관찰→Fable/Astra→REVIEW/HOLD→Pro 새 앱 E2E(P50). 실고객·저작권/상용배포·외부 네트워크/과금은 별도 승인.
+10. 날짜/검증: 2026-11-12 KST. 현재 작업은 요구 설계·브랜치·중앙 데이터 등록이며 소스 개발/실행 기능 검증은 미적용. 기존 15개 점수 및 타 담당 작업 표식 불변.
+
 ## 2026-11-12 KST — Astra P84 recovered CI central handoff (10 fields)
 1. Goal/technology: one-product Kmong Astra PDF Redesigner to 95%, offline React/TS/Vite/Electron/PDF.js. Keep central [작업중] until verified milestone.
 2. Completed/decisions: P82/P83 vector stroke checker failed actual PDF.js operator integration; choose correct constructPath embedded opcode decoding instead of pixel-parity claims; GUI+CLI+tests repaired in ceef31.
