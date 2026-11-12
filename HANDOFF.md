@@ -1,3 +1,15 @@
+## 2026-11-12 KST — Kmong REA_Web P92 continuation (ten-field handoff)
+1. Goal: independent progression toward P95 on existing product, owner-free until physical/legal sale gate.
+2. Done: hosted actual file URL browser CSV rejected/accepted owner mapping, exported Blob→independent verified ZIP→file reopen, no production or original mutation.
+3. Tests: exact REA_Web code SHA c83934efd374026e2e07b7bc5174d298bcc8a2cb, [Actions #43181217685](https://github.com/hibi89/REA_Web/actions/runs/43181217685) Ubuntu+Windows 2/2 SUCCESS; Lite19/delivery16 unittest and Pro/Lite/delivery 47 pytest/6 subtests, real file URL E2E. Full Pro D1–D31 not rerun.
+4. State: REA_Web 92 provisional (previous 90), 95 NOT ACHIEVED, RELEASE HOLD; active16 sum1376pp, mean86.0%, 16>=85, 0>=95, others unchanged.
+5. Failure/recovery: stale result text in test harness; fixed. Ubuntu headless Chrome download navigation 50s timeout; test-only click suppression and actual Blob verification; physical customer download still unverified.
+6. GitHub: hibi89/REA_Web feature/lite-owner-delivery-p95-20261112 source c83934e; central hibi89/hackathon-command-center-2026 kmong-productization. Original feature/lite-offline-html baseline f842d288 unmodified.
+7. Deploy: GitHub hosted Windows2025/Ubuntu24.04 PASS, local-first no Vercel/production; owner real Win10/11 NOT_RUN.
+8. Data/backup: original Pro/Lite, other product scores, private customer data, licensing/permissions, deployment unchanged; source rollback via original SHA.
+9. Next: full Pro original source regression, real Windows person import/export/manual ZIP/download trial, 3 pilot buyers, source/vendor rights NOTICE + privacy/sale/support owner acceptance before P95.
+10. Updated 2026-11-12 KST, tested function SHA as above; central doc commit confirm after write.
+
 ## 2026-11-12 KST — REA_APP P95 hardening partial / hub handoff (10 fields)
 1. Goal: REA_APP offline private Python handoff 85→95, preserving frozen P53 analyzer and central 16 SKU scope.
 2. Work/design: chose independent retail companion security hardening over original analyzer edits for cost/maintenance/risk. Canonical unsigned ZIP review JSON/HTML/HOLD/digest/metrics, duplicate source JSON and unexpected delivery files, six added regression cases. Private details remain in product repo.

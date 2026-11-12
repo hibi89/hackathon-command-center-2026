@@ -1,3 +1,8 @@
+## 2026-11-12 KST — REA_Web P92 owner-flow exact CI, active16 current mean 86.0
+- Independent hibi89/REA_Web feature/lite-owner-delivery-p95-20261112, exact code CI SHA c83934efd374026e2e07b7bc5174d298bcc8a2cb, [Actions #43181217685](https://github.com/hibi89/REA_Web/actions/runs/43181217685) Ubuntu+Windows 2/2 SUCCESS. Original Lite19 + delivery16 unittest each, Pro+Lite+delivery47 pytest/6 subtests; actual hosted browser file URL CSV bad-HOLD, approved header import, safe injection, original HTML Blob export, ZIP integrity and reopen PASS.
+- REA_Web 90→92 provisional, 95 not achieved. Existing active16 sum 1376%p mean 86.0%, 16>=85, 0>=95. Other15 untouched. Linux headless download-click was suppressed in test-only harness while inspecting actual exported Blob; buyer physical download not proven.
+- Full original D1-D31 new-SHA, buyer Windows10/11, customer/license/privacy/seller terms and approval incomplete. No customer data or production edits. All RELEASE HOLD.
+
 ## 2026-11-12 KST — REA_APP P95 hardening partial; 85% provisional unchanged
 - Private `hibi89/HAE@feature/rea-app-kmong-owner-delivery-20261112` code+QA `c3f83af41240d0aefd6d9b26611b70068871ada9`, product docs `53f5bcadabf76a296cd092c28865a3697239cf24`. Strict offline unsigned ZIP canonical HTML/JSON, fixed HOLD/metrics/sha, duplicate JSON and extra file rejection + six regression tests.
 - Local independent reconstructed logic 10 PASS/0 FAIL only; exact GitHub whole retail_qa/old Gate R/QA, Windows Chrome/Edge file:// and customer synthetic E2E **NOT VERIFIED**, GitHub combined statuses0/PR workflow runs0. No P95 claim; 85% provisional remains, RELEASE HOLD.
