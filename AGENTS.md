@@ -48,6 +48,12 @@ KIC는 `hibi89/hibi89-kic-proofinvest` 저장소 `lead/kic` 브랜치의 [`docs/
 - UGREEN: [`hibi89/hibi89-ugreen-nas-hackathon` `lead/ugreen` `docs/roles/lead/TO_HACKATHON_LEAD.md`](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/lead/ugreen/docs/roles/lead/TO_HACKATHON_LEAD.md).
 - 두 저장소의 각 `main`과 총괄 1개·기능 3개 브랜치, 모든 역할 필수 운영 문서 원격 검증 완료. 그러나 제품 코드·실 API/SDK·CI·배포·공식 제출은 아직 없다.
 
+## 크몽 최종완성률 표의 [작업중] 표기 의무 (2026-11-12, 사용자 확정)
+- 작업자는 상품의 **실제 개발·수정·테스트를 착수하는 순간** [현재 16종 최종완성률 표](docs/audits/KMONG_16_CURRENT_20261111.md) 해당 제품명 바로 뒤에 `**[작업중]**` 표시를 GitHub `kmong-productization` 브랜치에 반영한다. 목표/예약/대기 작업은 표시하지 않는다.
+- **검증된 단계 목표 완성률에 도달하면 [작업중]을 지운다.** 목표를 달성하지 못했어도 **다른 상품으로 작업을 옮기거나 그 상품 작업을 중단·보류·종료하면 즉시 지운다.** 작업 전환 시에는 기존 표시 제거와 새 상품 표시를 동일 파일 갱신에 반영한다.
+- 다른 채팅이 실제로 작업 중인 상품의 표시는 허가·확인 없이 변경하지 않는다. 병렬로 실행 중인 상품은 개별 표시를 유지하고, 담당 범위를 추측해 표시하지 않는다. 완성률, SHA, CI 및 `RELEASE HOLD` 상태는 표시와 독립이며 반드시 보존한다.
+- 표시·해제는 **실제 GitHub 커밋 확인**까지 작업으로 간주한다. 자동 동기화·백그라운드 실행이 없으므로 기록만으로 진행 중이라고 단정하지 않는다. 정보가 없으면 신규 표시하지 않는다.
+
 ## 크몽 상품 개발 종료 시 해총 완성률 동기화 (2026-11-11)
 - 현재 활성 16종과 최신 SHA의 정본: [크몽 현재 완성률](docs/audits/KMONG_16_CURRENT_20261111.md). 상품 작업·검증·완성률 변경의 같은 완료 단위에서 제품 HANDOFF/STATUS와 해총 KMONG_PRODUCTIZATION·현행 16종 목록·해총 STATUS/HANDOFF를 함께 갱신한다.
 - [필수 검증·동기화 프로토콜](docs/audits/KMONG_COMPLETION_SYNC_PROTOCOL_20261111.md). 문서-only/테스트 건수만으로 숫자 상향 금지, 정확 SHA·CI·미검증·RELEASE HOLD 구분. 동기화 실패 시 KMONG_HUB_SYNC_PENDING로 보고하고 거짓 완료 주장 금지.
