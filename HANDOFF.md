@@ -1,3 +1,17 @@
+## 2026-11-12 KST — REA_APP P95-target security gate (hub handoff, 10 sections)
+1. Goal/tech: REA_APP Python3.11+ offline retail package validation, 85→95 planned, frozen P53 analyzer preserved.
+2. Work: chose independent companion hardening over original analyzer rewrite. Fixed ZIP trailing invisible bytes and owner preflight-to-pack time-of-check/time-of-use; canonical full ZIP bytes, refreshed source-bound contents, P53-summary-shaped synthetic QA.
+3. Tests: `hibi89/HAE` product code+QA SHA `31011f67eb8cacd56a5533e4602531ad38c47483`; three local file Git blobs match private source exactly, local Linux Python3.13.5 `python -m unittest discover -s retail_qa -p 'test_*.py' -v` **32 PASS/0FAIL/0SKIP**, compileall PASS; earlier one failure reproduced before fix. Original Gate R+QA/Windows/hosted CI NOT RUN.
+4. State: REA_APP 85% provisional retained, 95% NOT ACCEPTED, RELEASE HOLD, active 16-product totals/denominator unchanged.
+5. Blockers/pivot: direct private git clone DNS unresolved; connector per-file source+SHA works. Chromium `file://` ERR_BLOCKED_BY_ADMINISTRATOR, cannot claim real Windows buyer run. No unapproved paid CI.
+6. Repo/branch/SHA: private `hibi89/HAE@feature/rea-app-kmong-owner-delivery-20261112`, code `31011f67eb8cacd56a5533e4602531ad38c47483`, docs `ff21b5d323c313a9eff437d661b12f826ab63832`; original REA_APP branch unaffected. Public hub `kmong-productization` commit verified after writes. [Evidence](https://github.com/hibi89/HAE/blob/feature/rea-app-kmong-owner-delivery-20261112/docs/REA_APP_P95_ZIP_SECURITY_RETEST_20261112.md).
+7. Production/env: Vercel/Production N/A; local Python subset only. No live API, paid runner or customer data.
+8. Originals/backup: frozen original P53, LA/HAE/other private branches and source, tokens, licensing, permissions, release all unchanged; Git previous SHA supports rollback.
+9. Next: exact source SHA full Gate R+QA and existing 32 retail tests on Windows-approved runner, actual P53-generated 6/8 reports→ZIP E2E, Win10/11 file:// with Edge/Chrome, privacy/rights/support and buyer mock; authorize fees/publishing separately.
+10. KST/date/verification: 2026-11-12; SHA-exact local scoped 32 PASS; P95 and release still HOLD.
+
+---
+
 ## 2026-11-12 KST — REA_Web full-repo original regression follow-up (10)
 1. Goal: improve P95 confidence on existing REA_Web P92 without user intervention or changing product code.
 2. Change: existing independent branch CI expanded to full tests directory both OS, no code/production modification.
