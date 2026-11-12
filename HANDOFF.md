@@ -1,3 +1,17 @@
+## 2026-11-12 KST — REA_APP 39-case P95-target hub handoff (10 entries)
+1. Goal/stack: REA_APP P85→P95 Python3.11+ optional retail review, original P53 frozen.
+2. Implemented/decision: Compared high-risk P53/Windows integrated changes vs independent zero-cost offline `candidate_cli.py` (selected); one explicit command local report SHA→owner HTML/JSON→deterministic ZIP→source validation and SHA receipt. Conservative rollback leaves modified replacements untouched.
+3. Tests: `hibi89/HAE@feature/rea-app-kmong-owner-delivery-20261112` code `78f0906cb0e713733c1543728e75ed3641e9b2d2`, docs `5a436ebe2a9283c5834b6545c8f0b75d2a7fe575`; 5 exact Git blobs matched local. Linux Python3.13.5 scoped **39 PASS/0 FAIL/0 SKIP**, compileall PASS. Original Gate R/QA/actual Babel bundle NOT RUN.
+4. State: REA_APP 85% provisional retained / P95 not accepted / RELEASE HOLD, all other central 16-product values unchanged.
+5. Limit/recovery: GitHub private clone DNS unresolved; connector reads/writes and isolated 5-file reconstruction used. Direct file:// Chromium policy blocked; physical Windows and paid CI not run. Do not reinterpret synthetic scoped suite as source analyzer full acceptance.
+6. Repo/SHA: Private `hibi89/HAE`, product branch `feature/rea-app-kmong-owner-delivery-20261112`, code `78f0906cb0e713733c1543728e75ed3641e9b2d2`, docs `5a436ebe2a9283c5834b6545c8f0b75d2a7fe575`, [evidence](https://github.com/hibi89/HAE/blob/feature/rea-app-kmong-owner-delivery-20261112/docs/REA_APP_P95_SINGLE_COMMAND_CANDIDATE_20261112.md). Hub `kmong-productization` HEAD verify after update; original `REA_APP@2fe581b6` unchanged.
+7. Production/environment: Vercel/Production N/A; local Python3.13.5 only, Node/Babel/physical Windows NOT RUN.
+8. Backup/security: Git prior SHA, original protected; no customer data/secrets, license/access changes, paid runner, external transfer or deployment.
+9. Next: full authorized checkout exact SHA Gate R+QA+39 retail, genuine P53 synthetic report end-to-end with locked Babel, native Windows file:// and buyer/licensing/NOTICE/pilot; reassess P95 only on verified proof.
+10. Date/scope: 2026-11-12 KST; verified scoped data-flow/byte checks and code hash parity, not 95% overall.
+
+---
+
 ## 2026-11-12 KST — REA_APP P95-target security gate (hub handoff, 10 sections)
 1. Goal/tech: REA_APP Python3.11+ offline retail package validation, 85→95 planned, frozen P53 analyzer preserved.
 2. Work: chose independent companion hardening over original analyzer rewrite. Fixed ZIP trailing invisible bytes and owner preflight-to-pack time-of-check/time-of-use; canonical full ZIP bytes, refreshed source-bound contents, P53-summary-shaped synthetic QA.
