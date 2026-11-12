@@ -1,3 +1,5 @@
+> **2026-11-12 KST — Factory AX VERIFY W1 50% 잠정 엔지니어링 달성 (신규 크몽 육성 후보, 활성16종 외):** 원본 Private [feature/data-verify 기능 커밋](https://github.com/hibi89/factory-ax-ecosystem/commit/8007f82af7d07ec5d8938144038d4b419fa334dd) `8007f82af7d07ec5d8938144038d4b419fa334dd` GitHub 원격 HEAD 재확인, source Blob `dc4be03b682679211d16aed7c3efd6ac45c41f82`·tests `30e014751b2e8c7511d4493d3fde31749ed51d94` 테스트한 로컬 파일과 **정확히 일치**. 새 Python3.11 stdlib 비공개 로컬 코어: 발주·생산·검사·출하 4 승인형 CSV/제한 XLSX, profile·source SHA·행 근거, 누락·중복·단위/Decimal·주문참조·QC 5종 품질검사, OK/REVIEW_REQUIRED/BLOCKED, 새 전용 한국어 HTML/CSV/JSON 보고. Linux 합성 **54 PASS/0 FAIL/0 SKIP**, 컴파일 및 실 CSV4종 CLI OK, 원본 불변, 오염/변조/경로 거부 증거. **첫 상품 VERIFY의 50% 개발 단계만 잠정 인정**, PREP/EAI 원천 동등성·1:N/반품·Windows/실사용 고객·실 Excel·CI/상용 승인 **미검증**; **Factory AX Ecosystem 전체 완성률 UNASSESSED**, RELEASE HOLD. **기존 활성 크몽16종 합계 1369%p/평균85.5625%/16종 85% 이상 전부 불변**, FFAX/PREP/기타 육성 후보와 별도. [제품 검증 문서](https://github.com/hibi89/factory-ax-ecosystem/blob/feature/data-verify/docs/VERIFY_50_EVIDENCE_20261112.md).
+
 # Factory AX Ecosystem — 크몽 상품화 신규 후보 / 최종 완성률 등록
 > 2026-11-12 KST · 담당 Factory AX 총괄 · 기존 활성 16종에 합산하지 않는 **독립 육성 후보** · RELEASE HOLD
 
@@ -9,9 +11,9 @@
 ## 완성률 정본
 | 평가 대상 | 2026-11-12 현재 | 목표와 이유 |
 |---|---|---|
-| **Factory AX VERIFY 최종 상품 완성률** | **UNASSESSED (정식 미산정)** | 소스/통합 테스트·실 Windows·제조업 E2E가 없으므로 증거 없는 %를 만들지 않는다. |
-| **신규 Factory AX 기능 구현/실행 검증** | **0건 확인** | 합성 데이터·첫 코어 구현과 검증 전. 기존 EAI/SMAX 등 기술 테스트는 Factory 테스트가 아니다. |
-| **첫 개발 목표** | **50% 미달** | CORE/PREP 호환 매핑·EAI 검수·4파일 합성 fixture/정답 oracle/원본 SHA·보고서와 실제 자동 테스트 통과 후 기준 평가. |
+| **Factory AX VERIFY 최종 상품 완성률** | **50% 잠정 엔지니어링(W1 제한 범위)** | 새 코드/합성 CSV4·XLSX4·품질 규칙·SHA/행 근거·보고서 로컬 검증. 원천 PREP/EAI 동등성·고객 Windows·전체 4단계 대사는 미검증이며 상용 제품 적합 판정 아님. |
+| **신규 Factory AX 기능 구현/실행 검증** | **GitHub 새 코어·54 합성 PASS** | 테스트한 소스 SHA=GitHub blob 일치, 합성 CLI OK/REVIEW/BLOCKED 확인. 기존 EAI/SMAX 자체 테스트는 Factory 결과로 계산하지 않음. |
+| **첫 개발 목표** | **W1-50 잠정 도달** | 승인형 4역할·CSV/제한 XLSX·열 매핑·품질 5종·원본 SHA/행 근거·기본 내보내기 검증. PREP 실제 golden parity와 제조업 정답 oracle 10종·심화 대사는 W1-70 전 해결 대상. |
 | **Factory AX Ecosystem 장기 최종 완성률** | **UNASSESSED (정식 미산정)** | W1→W4 완성, HAE·LA·보안 Guard·RAG·NAS/FILE·PC CARE·Code QA·Console 통합 및 고객 납품 검증이 최종 100% 범위. |
 | 출고 상태 | **RELEASE HOLD** | 제품 코드·납품 설치·고객 성과·보안·권리·상용 판매 미검증. |
 
@@ -41,4 +43,4 @@
 - [Factory AX 최종 설계도](https://github.com/hibi89/factory-ax-ecosystem/blob/main/docs/PRODUCT_BLUEPRINT.md) (Private)
 - [Factory AX 100% 인수 매트릭스](https://github.com/hibi89/factory-ax-ecosystem/blob/main/docs/ACCEPTANCE_MATRIX.md) (Private)
 - [Factory AX 인수인계](https://github.com/hibi89/factory-ax-ecosystem/blob/main/HANDOFF.md) (Private)
-- 이번 중앙 해총 작업은 **후보 등록 문서만**, 신규 코드/Factory 테스트·운영 Production 없음.
+- 신규 Factory 제품 코드·테스트는 별도 Private 기능 브랜치에서 새로 구현하고 SHA로 검증; **Production·고객 설치·사용권·출시 승인 없음**.

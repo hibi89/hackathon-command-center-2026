@@ -1,3 +1,17 @@
+## 2026-11-12 KST — Factory VERIFY W1 50% separate candidate hub handoff (10 items)
+1. Goal: First Factory AX VERIFY W1 50% milestone against existing 100% blueprint; the multi-module Factory AX Ecosystem remains UNASSESSED.
+2. Delivered: New original Python3.11+ restricted offline CSV/XLSX 4-role intake, explicitly approved mapping/SHA, quality five rule families, source-row findings, new-only summary exports. No PREP/EAI code cloned.
+3. Tests: Exact local code `dc4be03b682679211d16aed7c3efd6ac45c41f82` and tests `30e014751b2e8c7511d4493d3fde31749ed51d94` match GitHub blobs, Linux synthetic unittest **54 PASS/0 FAIL/0 SKIP**, compileall PASS, synthetic CLI OK; CI/real customer Windows not run.
+4. Result: W1 VERIFY **50% provisional engineering**, whole Factory **UNASSESSED**, all RELEASE HOLD. Active 16 Kmong old score sum **1369%p**, mean **85.5625%**, all ≥85 unaltered. Factory excluded.
+5. Failures/limits: initial test expected invalid-XLSX reason differs; fixed and retested 54 PASS. Real PREP/EAI parity, XLSX variations, stage cross-reconciliation and race hardening needed. Do not present synthetic success as product release.
+6. Repo/branch/SHA: Private `hibi89/factory-ax-ecosystem@feature/data-verify:8007f82af7d07ec5d8938144038d4b419fa334dd`; original `main:29b9653ccbc4bcd36a190f9e9d78954bcc4dae76` preserved; central `hibi89/hackathon-command-center-2026@kmong-productization` update commit to be verified after write.
+7. Production/environment: Python3.11+ stdlib, local synthetic runner only; no Vercel/Cloudflare/sales deployment, no hosting or API.
+8. Source/backup/security: No modification to PREP/EAI/SMAX/other repo origins, customer files, account policy, billing; synthetic files only, independent code. Normal revert possible to baseline, no force.
+9. Next: W1-70 approval profile UI, 1:N/partial/LOT/returns/rework/date, ten independently judged oracle fixtures, upstream source/rights parity, SHA races, later Windows physical/installer and customer approval. Keep 16 commercial scores unchanged.
+10. Checked: 2026-11-12 KST, remote Factory branch source/test SHA and commit-linked author `hibi89`, local synthetic tests only. [Feature evidence](https://github.com/hibi89/factory-ax-ecosystem/commit/8007f82af7d07ec5d8938144038d4b419fa334dd).
+
+---
+
 ## 2026-11-12 KST — FFAX fourth-pass Kmong handoff (10 items)
 1. Goal: FFAX local-first frontend workbench, complete original 100-point v1 requirements; candidate outside active16.
 2. Changes/strategy: Strict local JSON archive import with owner confirmation and Undo instead of arbitrary script/JSON execution; existing other projects untouched.
