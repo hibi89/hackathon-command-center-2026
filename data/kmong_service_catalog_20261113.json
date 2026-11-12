@@ -19,7 +19,12 @@
         "PREMIUM": "복수 파일·브랜드형 리포트/인수"
       },
       "reason": "표준 납품/운영비 낮음",
-      "release_blocker": "실 Windows/파일 안전·입력권리"
+      "release_blocker": "실 Windows/파일 안전·입력권리",
+      "service_id": "KMONG-SVC-01",
+      "listing_status": "미등록",
+      "kmong_listing_url": null,
+      "published_at_kst": null,
+      "listing_history": []
     },
     {
       "rank": 2,
@@ -34,7 +39,12 @@
         "PREMIUM": "SMAX² 의미모델·계보/승인"
       },
       "reason": "동일 정제 목적의 고급기능 통합",
-      "release_blocker": "현장 입력/Windows·원본 불변"
+      "release_blocker": "현장 입력/Windows·원본 불변",
+      "service_id": "KMONG-SVC-02",
+      "listing_status": "미등록",
+      "kmong_listing_url": null,
+      "published_at_kst": null,
+      "listing_history": []
     },
     {
       "rank": 3,
@@ -48,7 +58,12 @@
         "PREMIUM": "다중 현장/업무 템플릿 검수"
       },
       "reason": "고객 입력/결과가 명확",
-      "release_blocker": "Windows/SMB 권한·경로보안"
+      "release_blocker": "Windows/SMB 권한·경로보안",
+      "service_id": "KMONG-SVC-03",
+      "listing_status": "미등록",
+      "kmong_listing_url": null,
+      "published_at_kst": null,
+      "listing_history": []
     },
     {
       "rank": 4,
@@ -62,7 +77,12 @@
         "PREMIUM": "감사 이력·복구·업무 템플릿"
       },
       "reason": "클라우드 결제 없이 로컬 SKU 가능",
-      "release_blocker": "계약·개인정보·SQLite 복구"
+      "release_blocker": "계약·개인정보·SQLite 복구",
+      "service_id": "KMONG-SVC-04",
+      "listing_status": "미등록",
+      "kmong_listing_url": null,
+      "published_at_kst": null,
+      "listing_history": []
     },
     {
       "rank": 5,
@@ -77,7 +97,12 @@
         "PREMIUM": "ONTOINSIGHT 데이터 의미/관계·고급 KPI"
       },
       "reason": "분석 깊이의 단계별 구분",
-      "release_blocker": "ML 누수·실 고객 Excel/권리"
+      "release_blocker": "ML 누수·실 고객 Excel/권리",
+      "service_id": "KMONG-SVC-05",
+      "listing_status": "미등록",
+      "kmong_listing_url": null,
+      "published_at_kst": null,
+      "listing_history": []
     },
     {
       "rank": 6,
@@ -92,7 +117,12 @@
         "PREMIUM": "CITEVAULT 기업 ACL·감사·납품"
       },
       "reason": "동일 검색 목적의 이용규모 차이",
-      "release_blocker": "문서권리·실 검색품질·권한"
+      "release_blocker": "문서권리·실 검색품질·권한",
+      "service_id": "KMONG-SVC-06",
+      "listing_status": "미등록",
+      "kmong_listing_url": null,
+      "published_at_kst": null,
+      "listing_history": []
     },
     {
       "rank": 7,
@@ -108,7 +138,12 @@
         "PREMIUM": "PROOFQA 브라우저·보안·인수검수"
       },
       "reason": "동일 개발물 검수 목적",
-      "release_blocker": "Windows·외부툴 권리·고객 스테이징 승인"
+      "release_blocker": "Windows·외부툴 권리·고객 스테이징 승인",
+      "service_id": "KMONG-SVC-07",
+      "listing_status": "미등록",
+      "kmong_listing_url": null,
+      "published_at_kst": null,
+      "listing_history": []
     },
     {
       "rank": 8,
@@ -122,7 +157,12 @@
         "PREMIUM": "증거·백업/복구 검수/자문"
       },
       "reason": "데이터베이스 관리자 대상 독립 문제",
-      "release_blocker": "실 PG TLS/고객 데이터·복구"
+      "release_blocker": "실 PG TLS/고객 데이터·복구",
+      "service_id": "KMONG-SVC-08",
+      "listing_status": "미등록",
+      "kmong_listing_url": null,
+      "published_at_kst": null,
+      "listing_history": []
     },
     {
       "rank": 9,
@@ -136,7 +176,12 @@
         "PREMIUM": "고급 레이아웃·시각감사/인수"
       },
       "reason": "문서 전후 비교 시연 용이",
-      "release_blocker": "고객 실제 PDF·폰트 권리·사용자 개입"
+      "release_blocker": "고객 실제 PDF·폰트 권리·사용자 개입",
+      "service_id": "KMONG-SVC-09",
+      "listing_status": "미등록",
+      "kmong_listing_url": null,
+      "published_at_kst": null,
+      "listing_history": []
     },
     {
       "rank": 10,
@@ -150,7 +195,12 @@
         "PREMIUM": "접근성·반응형 QA 및 개선"
       },
       "reason": "개발자 UI 제작 목적, REA 웹재구축과 다름",
-      "release_blocker": "AI 실행·고객 코드/디자인 권리"
+      "release_blocker": "AI 실행·고객 코드/디자인 권리",
+      "service_id": "KMONG-SVC-10",
+      "listing_status": "미등록",
+      "kmong_listing_url": null,
+      "published_at_kst": null,
+      "listing_history": []
     },
     {
       "rank": 11,
@@ -164,7 +214,12 @@
         "PREMIUM": "지원되는 로컬 모델 제안·검증"
       },
       "reason": "범용 목표 실행, AutoML 통계와 별개",
-      "release_blocker": "실 Qwen/Windows·모델 배포권"
+      "release_blocker": "실 Qwen/Windows·모델 배포권",
+      "service_id": "KMONG-SVC-11",
+      "listing_status": "미등록",
+      "kmong_listing_url": null,
+      "published_at_kst": null,
+      "listing_history": []
     },
     {
       "rank": 12,
@@ -178,7 +233,12 @@
         "PREMIUM": "실 LA/조직형 감사·보존"
       },
       "reason": "독립 retrospective agent audit 원 설계 보존",
-      "release_blocker": "실 로그·기밀/감사 범위·권리"
+      "release_blocker": "실 로그·기밀/감사 범위·권리",
+      "service_id": "KMONG-SVC-12",
+      "listing_status": "미등록",
+      "kmong_listing_url": null,
+      "published_at_kst": null,
+      "listing_history": []
     },
     {
       "rank": 13,
@@ -194,7 +254,12 @@
         "PREMIUM": "AZENTFLOW 기업 연동·승인/복구"
       },
       "reason": "동일 고객의 자동화 계획→실행→기업형",
-      "release_blocker": "기존 HAE CI 2 FAIL/실 OAuth·보안"
+      "release_blocker": "기존 HAE CI 2 FAIL/실 OAuth·보안",
+      "service_id": "KMONG-SVC-13",
+      "listing_status": "미등록",
+      "kmong_listing_url": null,
+      "published_at_kst": null,
+      "listing_history": []
     },
     {
       "rank": 14,
@@ -209,7 +274,12 @@
         "PREMIUM": "SITECRAFT 기업/다화면 납품"
       },
       "reason": "같은 고객 사이트 재구축 작업",
-      "release_blocker": "지적재산권·원사이트 실 브라우저/인수"
+      "release_blocker": "지적재산권·원사이트 실 브라우저/인수",
+      "service_id": "KMONG-SVC-14",
+      "listing_status": "미등록",
+      "kmong_listing_url": null,
+      "published_at_kst": null,
+      "listing_history": []
     },
     {
       "rank": 15,
@@ -223,7 +293,12 @@
         "PREMIUM": "승인 후 지원되는 안전복구 작업"
       },
       "reason": "OS 위험이 커 다른 상품과 별도",
-      "release_blocker": "실 WinRE/BitLocker·데이터 보존"
+      "release_blocker": "실 WinRE/BitLocker·데이터 보존",
+      "service_id": "KMONG-SVC-15",
+      "listing_status": "미등록",
+      "kmong_listing_url": null,
+      "published_at_kst": null,
+      "listing_history": []
     },
     {
       "rank": 16,
@@ -238,7 +313,12 @@
         "PREMIUM": "패턴 분석·전방 통계/위험고지"
       },
       "reason": "동일 수집 데이터의 분석확장",
-      "release_blocker": "거래소 상용 라이선스/금융 성과표시"
+      "release_blocker": "거래소 상용 라이선스/금융 성과표시",
+      "service_id": "KMONG-SVC-16",
+      "listing_status": "미등록",
+      "kmong_listing_url": null,
+      "published_at_kst": null,
+      "listing_history": []
     },
     {
       "rank": 17,
@@ -252,7 +332,12 @@
         "PREMIUM": "검증된 다기업·ML/근거 리포트"
       },
       "reason": "금융공시 독립 목표",
-      "release_blocker": "SEC/DART 실제 권리·금융규제"
+      "release_blocker": "SEC/DART 실제 권리·금융규제",
+      "service_id": "KMONG-SVC-17",
+      "listing_status": "미등록",
+      "kmong_listing_url": null,
+      "published_at_kst": null,
+      "listing_history": []
     },
     {
       "rank": 18,
@@ -266,7 +351,12 @@
         "PREMIUM": "버전·근거 연결 입찰 패키지"
       },
       "reason": "입찰 자격/공고 변경 업무 독립",
-      "release_blocker": "공고 데이터권리·실 자격 책임"
+      "release_blocker": "공고 데이터권리·실 자격 책임",
+      "service_id": "KMONG-SVC-18",
+      "listing_status": "미등록",
+      "kmong_listing_url": null,
+      "published_at_kst": null,
+      "listing_history": []
     },
     {
       "rank": 19,
@@ -280,7 +370,12 @@
         "PREMIUM": "HAE/LA/SOVIA 통합·설치인수"
       },
       "reason": "산업별 현장 업무/데이터 수용 차별화",
-      "release_blocker": "현장 고객·W1~W4·산업/보안/지원"
+      "release_blocker": "현장 고객·W1~W4·산업/보안/지원",
+      "service_id": "KMONG-SVC-19",
+      "listing_status": "미등록",
+      "kmong_listing_url": null,
+      "published_at_kst": null,
+      "listing_history": []
     }
   ],
   "internal_platforms": [
@@ -322,5 +417,22 @@
     "BID AX",
     "FlowPilot Universal",
     "WORKNOVA Desk"
-  ]
+  ],
+  "listing_lifecycle": {
+    "policy": "PERMANENT_RETENTION_WITH_EVIDENCE",
+    "purpose": "크몽 중복 게시 방지, 신규 상품과 기존 원천 기술 결합 시 참조",
+    "retention": "등록완료/판매중지/비공개/삭제 후에도 동일 서비스 ID의 원본 행과 과거 등록 URL·날짜·상태 변경 기록을 삭제하지 않는다",
+    "status_values": [
+      "미등록",
+      "심사중",
+      "등록완료",
+      "판매중지",
+      "비공개",
+      "게시삭제"
+    ],
+    "status_meaning": "실제 크몽 등록/게시 상태만 뜻하며 제품 개발 완성률과 무관",
+    "evidence_required_for_registered": true,
+    "future_duplicate_check": "원천29종, 19개 서비스, 옵션/모듈, 과거 등록완료 및 중단 이력을 함께 검사",
+    "verified_registered_count": 0
+  }
 }
