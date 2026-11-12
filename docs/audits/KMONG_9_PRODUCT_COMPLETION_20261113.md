@@ -28,7 +28,7 @@
 | **Factory AX (전체 생태계)** | `hibi89/factory-ax-ecosystem@feature/data-verify f9577bbc4c798534b36ed1243e122453b5e4a4a9`; Green CI 기능 SHA `b70a059175389bf53d87f8c90dc4f5bbe6a97986` | [Actions #43178583600](https://github.com/hibi89/factory-ax-ecosystem/actions/runs/43178583600) **완료 SUCCESS**, Windows Server2025·Ubuntu 각 **138 PASS/0 FAIL/0 SKIP**+합성 ZIP/CMD/Tk. **W1 CORE+VERIFY만 내부 85% 잠정**; W2 RAG/FILE, W3 HAE+LA/Guard, W4 엔드포인트/콘솔 통합 미구현. 실 구매자 Windows·권리/공급사 데이터 미검증 | **전체 UNASSESSED** | **W1만 85% 잠정**, 제품 P100·출시 미달 / HOLD |
 
 ### 근거 문서
-- [DATA2WEB 설계](https://github.com/hibi89/data2web_studio/blob/main/docs/FINAL_DESIGN.md), [원래 제품과 분리 감사](docs/REA_WEB_DATA2WEB_PRODUCT_SPLIT_20261112.md).
+- [DATA2WEB 설계](https://github.com/hibi89/data2web_studio/blob/main/docs/FINAL_DESIGN.md), [원래 제품과 분리 감사](REA_WEB_DATA2WEB_PRODUCT_SPLIT_20261112.md).
 - [PREP P85 게이트 감사](https://github.com/hibi89/prep/blob/feature/core-extraction/docs/P85_GATE_AUDIT_20261112.md), [PREP STATUS](https://github.com/hibi89/prep/blob/feature/core-extraction/STATUS.md).
 - [FFAX 100점 수용표](https://github.com/hibi89/frontend-foundry-ax/blob/feature/ffax-workbench-p85-20261112/docs/ACCEPTANCE_MATRIX.md), [로컬 증빙](https://github.com/hibi89/frontend-foundry-ax/blob/feature/ffax-workbench-p85-20261112/docs/FFAX_P85_LOCAL_PROJECT_RESTORE_20261112.md).
 - [Factory W1 85% exact CI 증거](https://github.com/hibi89/factory-ax-ecosystem/blob/feature/data-verify/docs/VERIFY_85_CI_ACCEPTANCE_20261112.md), [전체 인수표](https://github.com/hibi89/factory-ax-ecosystem/blob/main/docs/ACCEPTANCE_MATRIX.md).
