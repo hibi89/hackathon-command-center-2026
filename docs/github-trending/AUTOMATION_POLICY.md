@@ -1,12 +1,23 @@
-# GitHub Trending 예약 보고 → 해총 누적 기록 운영 규칙
+# GitHub Trending 예약 리서치·브랜치별 누적 기록 정책
 
-- 대상: `hibi89/hackathon-command-center-2026`의 기존 `kmong-productization` 브랜치. **새 브랜치·새 저장소·CI·토큰·배포·권한 변경 금지.**
-- 일간: 매일 10:00 KST, 공식 `https://github.com/trending?since=daily` TOP20. 월별 `YYYY-MM/DAILY.md`에 날짜별 append.
-- 주간: 월요일 10:30 KST, 공식 `?since=weekly` TOP30. 월별 `WEEKLY.md`에 날짜별 append.
-- 월간: 매월 1일 11:00 KST, 공식 `?since=monthly` TOP30. 해당 월 요약 `MONTHLY.md` 작성·갱신, `MONTHLY_INDEX.md` 목차 갱신.
-- 매회 공식 순위와 별 증가량, 조회 시각, README/라이선스/최근 활동, 기존 프로젝트 접목, 독립 수익화 TOP3(고객·납품물·추정 가격·난이도·기간·권리·차별화·검증)를 사실/제안으로 구분.
-- 공식 페이지가 차단되거나 항목이 부족하면 **미확인** 기록. 대체 집계는 공식 순위로 위장하지 않는다.
-- 예약 실행에서 GitHub 쓰기 권한·연결 환경이 없으면 채팅 보고만 생성하고 `GITHUB_SYNC_PENDING`을 명시한다. 자동 저장 성공을 주장하지 않는다.
-- GitHub 업데이트는 최신 blob SHA를 먼저 읽고 해당 날짜만 추가. 중복 실행은 동일 날짜·기준시간 식별자로 idempotent 처리. 충돌 시 재조회 후 1회만 안전 재시도, 실패하면 중단.
-- Public 저장소이므로 비공개 고객 정보, 개인 데이터, 비공개 소스, 토큰, 경쟁 전략의 민감 세부내용을 게시하지 않는다. 무단 외부 데이터 전송·유료 API·제품 코드 수정 없음.
-- STATUS/HANDOFF에 자동화 구성·성공/실패·마지막 검증 시각을 남기되 단순 매일 보고로 불필요한 문서 커밋을 반복하지 않는다.
+> 2026-11-13 KST 사용자 직접 지시로 기존 `새 브랜치 금지/모든 보고 kmong-productization에 저장` 규칙을 변경했다. **동일 저장소의 일간·주간 전용 브랜치만 신규 생성.** 월간은 기존 총괄 브랜치를 유지한다.
+
+| 구분 | 자동화 | 일정 (Asia/Seoul) | 정본 브랜치 | 정본 기록 |
+|---|---|---|---|---|
+| 일간 TOP20 | `Automation_019a9e37b9b08191b6064cc37facab22` | 매일 10:00 | `github-trending-daily` | `docs/github-trending/YYYY-MM/DAILY.md` |
+| 주간 TOP30 | `Automation_b505a8e8b1d88191997b8e5654e7e51a` | 월요일 10:30 | `github-trending-weekly` | `docs/github-trending/YYYY-MM/WEEKLY.md` |
+| 월간 TOP30 | `Automation_94cd8969ddd081918467dc02bd0a92d3` | 매월 1일 11:00 | `kmong-productization` | `docs/github-trending/YYYY-MM/MONTHLY.md` · `MONTHLY_INDEX.md` |
+
+## 데이터 흐름
+1. 해당 기간 공식 `github.com/trending?since=daily|weekly|monthly`를 조회하고 표시된 실제 순위를 보존한다. 부족한 순위·스타 증가·README·LICENSE·최근 커밋은 미확인 표시한다. 대체 집계는 공식 순위와 섞지 않는다.
+2. 저장소명/URL·기능·사례·인기 근거, 라이선스·상업 재배포 제약, 지난 보고 대비 변화, hibi89 기존 제품 연계와 **독립** 크몽 상품 TOP3(고객/납품물/추정 가격·개발기간/난이도/차별화/검증)를 구분하여 작성한다.
+3. **쓰기 분리:** 일간 자동화는 일간 브랜치만, 주간 자동화는 주간 브랜치만, 월간 자동화는 총괄 브랜치만 수정한다. 주간은 일간 브랜치를 읽어 비교하며, 월간은 일간·주간 브랜치를 읽어 종합한다. **Git 브랜치 자동 병합은 하지 않는다.**
+4. 각 예약 실행은 해당 정본 기록의 최신 blob SHA를 먼저 조회하고 run key(`DAILY-YYYY-MM-DD` / `WEEKLY-YYYY-MM-DD` / `MONTHLY-YYYY-MM`) 중복을 확인한다. 중복이면 별도 중복 추가하지 않고 필요한 근거 보완만 안전하게 수정한다. 충돌 재조회 후 1회 재시도한다.
+5. 실제 commit SHA와 원격 파일 readback을 확인해 기록한다. GitHub 연결·권한·중복·충돌 문제로 기록하지 못하면 `GITHUB_SYNC_PENDING` 및 원인을 보고한다. **예약 프롬프트만으로 미래 자동 저장이 검증되었다고 주장하지 않는다.**
+6. 월간 총괄 문서의 `DAILY.md`, `WEEKLY.md`는 2026-11-13 이전 자료의 **역사적 스냅샷**이다. 해당 위치에 새로운 일간·주간 보고를 추가하면 안 된다. 각 전용 브랜치 정본만 새 자료를 보관한다.
+
+## 보안·장애 복구
+- 저장소는 Public이므로 비공개 제품 코드·고객 데이터·토큰·개인정보·전략상 민감 정보를 기록하지 않는다. 다른 제품 코드·완성률·배포·권한·CI 변경 금지.
+- 외부 유료 API·새 GitHub Actions workflow·토큰 발급·권한 확대를 자동으로 수행하지 않는다. 추가 자동화 인프라가 필요하면 사전 승인을 받는다.
+- 미검증 인용·상품 가격·기간은 제안으로 표시한다. 상품 판매 전 라이선스·실행 환경·품질·권리를 다시 확인한다.
+- 이력 복구: 각 브랜치 이전 commit을 확인해 개별 문서만 복구하며 force push나 브랜치 삭제를 하지 않는다.
