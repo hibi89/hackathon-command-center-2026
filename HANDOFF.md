@@ -1,3 +1,17 @@
+## 2026-11-12 KST — REA_APP final P95 Windows technical acceptance ready (10 sections)
+1. Goal/stack: frozen REA_APP P53 Python3.11+ Node locked Babel7.29.9, offline buyer review; 95 goal.
+2. Work/decision: paid GH Windows runner+install (approval needed) vs one-command existing Windows PC (selected). Added true NTFS junction/Edge Chrome file:// tests and `strict_windows_gate.py` which requires 58 discovered cases, both native IDs, zero skips/failures, original Gate R+6/8 P53 E2E, real `.pyz` and SHA evidence.
+3. Tests: private code/test SHA `3889f932f15d11d1497f69e458ecb978072427c8`, docs `d8970cba645e375808b9683c1679e573d9a263cb`, both new blobs match local bytes. Linux Python3.13.5 **56 PASS, 2 native SKIP, 0 FAIL**, optimized same; compileall PASS; strict script BLOCKED exit2 on Linux. No native or original P53 PASS claimed.
+4. State: REA_APP 85% provisional / P95 unverified / RELEASE HOLD; other 15 products and central rollup unchanged.
+5. Blockers: sandbox cannot clone full private P53/Babel, no physical Windows; original Gate R actual execution and real Windows file:// unverified, not a CI failure. No repetitive fail-only retries or unapproved paid runner.
+6. Repo/branch/SHA: `hibi89/HAE@feature/rea-app-kmong-owner-delivery-20261112`, code `3889f932f15d11d1497f69e458ecb978072427c8`, docs `d8970cba645e375808b9683c1679e573d9a263cb`, [proof](https://github.com/hibi89/HAE/blob/feature/rea-app-kmong-owner-delivery-20261112/docs/REA_APP_P95_NATIVE_WINDOWS_FULL_GATE_20261112.md); hub `kmong-productization` SHA verify after syncing.
+7. Production/runtime: offline Python `.pyz` (not native exe), Vercel N/A; one command in clean local authorized Windows checkout: `cd tools/rea-app; python retail_qa/strict_windows_gate.py`, exact Babel already installed.
+8. Backup/security: original P53 and main/LA unchanged; synthetic tempfile only, no secrets/customer upload/source overwrite/permissions/paid CI/deploy; Git history rollback.
+9. Next: execute full gate on real Win10/11+Python3.11+Node/Babel7.29.9; collect exact SHA and PASS/FAIL/SKIP. Then NOTICE/license/customer support/pilot before releasing or P95 scoring. Paid CI fallback requires explicit approval.
+10. Evidence time: 2026-11-12 KST, local 56/58 tests + native skip2, original runtime/Windows still UNVERIFIED.
+
+---
+
 ## 2026-11-12 KST — Kmong EAI P37 native Windows acceptance tool (10 items)
 1. Goal/stack: EAI P85→P95 independently while preserving local CPU-owned Python3.11 tasks and other products.
 2. Decision/delivery: A automatic Windows Actions could consume unverified billable private runner quota; B explicit owner-approved native Windows synthetic CMD acceptance script chosen, with Korean-space path, source-only ZIP, HTML/report and repeat no-clobber checks. No additional paid runs.
