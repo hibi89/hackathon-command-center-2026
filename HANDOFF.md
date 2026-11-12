@@ -1,3 +1,15 @@
+## 2026-11-12 KST — FFAX additional P85 goal/P78 verified hub handoff (10 points)
+1. Objective: FFAX AI frontend workshop; original 12 AC / 100pt fixed definition; 85 target.
+2. Delivered: opt-in OpenAI-compatible HTTPS model transport + consent and existing policy ledger; strict output, mocked 12-screen contract, official axe harness and user UX checklist. No real vendor requests.
+3. Tests: source SHA a206561bd7efef46bb76ecba321280bb5af8f444, docs 2f568716f76d2df300fcc862d86018ec1ddb490f; 8/8 remote Git blobs match; local Node96 PASS/0 FAIL, Chromium30 injected, mocked12, React UMD12, 7 cleanroom; axe exit2 NOT VERIFIED, CI jobs0.
+4. State: **78/100 provisional (+0), 85 target not reached, RELEASE HOLD**. AC04 14/AC09 6/AC12 2 are outstanding. Active16 products unaffected.
+5. Error/root/pivot: axe-core unavailable locally; fail-closed no false PASS. Earlier source-transfer encoding failed, switched to direct verified text commits. Don't repeat uncontrolled external API/CI billing.
+6. Repo: hibi89/frontend-foundry-ax@feature/ffax-workbench-p85-20261112; source a206561bd7efef46bb76ecba321280bb5af8f444; docs 2f568716f76d2df300fcc862d86018ec1ddb490f; prior main 191289d19f7eb6203a2a6beb5e8efbcf10bc844d preserved; central hub branch kmong-productization current head must be re-read after commit.
+7. Production: no Vercel/URL; local Node>=20 127.0.0.1:4173 only. Model credentials not provided/sent; private Actions manual workflow unrun.
+8. Data/security: FFAX source remains private, central PUBLIC metadata only; customer data/keys/original repositories/permissions/payments untouched. Rollback by normal revert, no force.
+9. Next: model/domain/privacy/cost approval → real-model 12 briefs, build, render; axe install and real audit/user UI signoff; authorized Actions clean CI/D1–D5; release gates unchanged.
+10. Checked 2026-11-12 KST; remote source+documentation commits verified, local tests limited, no claim real provider/Win/Production. Other 16 products not touched.
+
 ## 2026-11-12 KST — PREP 독립 코어 로컬 후보 71 PASS / 50% 목표 미달 (해총 10항)
 1. **목표/기술:** `hibi89/prep`의 독립 로컬 Node20+ ESM 범용 CSV 전처리 코어를 50% 기준까지 개발하고 해총 크몽 후보로 추적.
 2. **실제 완료:** 새 clean-room CSV parser, 명시적 매핑/타입 정규화, 중복·결측·수식 위험 검토 큐, 바이트 SHA, CLI inspect/run/verify, 원본 불변/새 파일 출력 코드를 **ChatGPT 임시 ZIP에만 구현**. Private SMAX 소스 이동 없음.

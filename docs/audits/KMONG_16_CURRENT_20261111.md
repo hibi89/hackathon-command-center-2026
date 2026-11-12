@@ -1,3 +1,6 @@
+## 2026-11-12 FFAX 독립후보 P85 재시도: 78/100점 유지
+FFAX 안전한 AI 공급자 어댑터·로컬 검증 확장, Node96 PASS·mock12 PASS. axe/실LLM/실CI/사용자승인 미검증. **활성16종의 모든 수치·합계·분모는 아래 원문 그대로**, FFAX는 별도. [기준 커밋](https://github.com/hibi89/frontend-foundry-ax/commit/a206561bd7efef46bb76ecba321280bb5af8f444).
+
 > **2026-11-12 KST — PREP 독립 코어 로컬 후보 검증: 71/71 PASS × 최초/압축해제 2회, 정식 50% 아직 미달.** Node22.16 Linux 오프라인 CSV/타입/품질·검토 큐/SHA/CLI 새 소스는 대화 임시 ZIP에만 존재(sha256 `974dbad1f146a154d4f08033cd6e3d0e1f2b87b7966f3b4f7849070f477fdbe4`), Private SMAX 코드 이관·Public GitHub 소스 업로드 없음. PREP 제품 전체 최종완성률 **UNASSESSED**, GitHub 독립 기능 검증률 **0% 유지**; 50% 게이트는 소스 권리/Private 전환·업스트림 골든 동등성·GitHub 실행 검증 때문에 HOLD. 기존 크몽 활성16종 통계·분모·수치 불변. [PREP 독립 후보·로컬 71 PASS 진척](docs/audits/PREP_INDEPENDENT_PRODUCT_BASELINE_20261112.md).
 
 > **2026-11-12 KST — 독립 PREP 신규 후보 최신화(기존 크몽 활성16종 제외):** 새 공개 저장소 [`hibi89/prep`](https://github.com/hibi89/prep) 설계 문서 기준 HEAD `1b5d2be9ddd289aa03b95809e8fc95afc85fb8a3`. 최종 제품 설계/R01–R12 검수 기준은 문서화되어 있으나 독립 실행 코드 이관·테스트/CI/Windows/패키징 **NOT_RUN**. **독립 구현·실행 검증률 0%(검증된 기능 기준), 정식 최종상품 완성률 미산정(UNASSESSED), RELEASE HOLD**. 기존 SMAX² 50% 역사 기록 및 현행 SMAX² 85% 잠정은 PREP 수치가 아니다. PREP는 활성16종 외 별도 육성 후보로 기록; 16종 합계·평균·분모·개별 완성률 전부 **불변**. PREP가 Public이므로 Private SMAX 소스 이관 차단; 보안 설정 변경·원본 수정 없음. [근거 및 다음 작업](docs/audits/PREP_INDEPENDENT_PRODUCT_BASELINE_20261112.md).
