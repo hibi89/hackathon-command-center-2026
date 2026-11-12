@@ -1,3 +1,8 @@
+## 2026-11-13 KST — KUODRA P95 재개: 89% 잠정, 목표 미달·작업중 유지
+- `hibi89/KUODRA` Private, code `develop@8b8801991870f1a98117b68bd23ed2e99c77cacb` via PR#6. 공식 OpenDART 응답에 존재하지 않는 row `fs_div/thstrm_dt` 가정 제거, 요청 CFS/OFS 바인딩과 사용자 별도 확인 결산일 요구. 소유자 제공 OpenDART JSON 로컬 GUI/CLI, 한국어 브라우저 인쇄 HTML 및 안전 ZIP 파일명령 추가.
+- [Actions #43298114834](https://github.com/hibi89/KUODRA/actions/runs/43298114834) feature exact SHA Ubuntu·Windows 각각 **275/275 PASS, 실패0**. Windows unsigned PyInstaller EXE/ZIP 1,125 파일 SHA 검증, 한글 경로 설치·검증·명시적 제거 후 독립 사용자 파일 보존 **PASS**. 마지막 develop 문서 SHA의 독립 CI는 별도 점검; 사용자 실 Windows10/11·실기업 API/원본권리·OS IAM·금융규제/판매승인 미검증.
+- 중앙 후보 KUODRA **87→89/100 기술범위 잠정**, P95 **미달·[작업중] 유지**, `RELEASE HOLD/SALE NO-GO`. [증빙 보고서](https://github.com/hibi89/KUODRA/blob/main/docs/P95_FOLLOWUP_EVIDENCE_20261113.md), [사용자 최종 체크리스트](https://github.com/hibi89/KUODRA/blob/main/docs/P95_OWNER_FINAL_CHECKLIST_KO_20261113.md). 해총 타제품·KIC 원본/활성 집계 불변, Production 미적용.
+
 ## [2026-11-13 KST] 크몽 전 29종 95% **가정** 상품화 1~29 순위 및 Sol Ultra 독립검수 프로토콜 확정
 - 확인된 정본: `hibi89/hackathon-command-center-2026@kmong-productization` 활성17+후보12 총29. 현행 퍼센트/진행 상태는 **변경 없음**. 새로운 [1~29 순위](docs/strategy/KMONG_P95_HYPOTHETICAL_COMMERCIALIZATION_PRIORITY_20261113.md)는 모두 P95라는 가상의 **판매 전환 시나리오**, 실완성도/판매 승인 아님.
 - [설계 고정·Sol Ultra 품질감사 규칙](docs/strategy/KMONG_BLUEPRINT_LOCKED_SOL_ULTRA_QA_20261113.md) 도입: 해총이 설계·핵심코드·최종검수, Sol Ultra는 설계 전수 Traceability/보안·데이터무손실/UX PR 독립감사, 정확 SHA 회귀·고객 실환경 수용; 원본 대규모 재작성 금지.
