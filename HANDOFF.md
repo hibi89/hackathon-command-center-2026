@@ -1,3 +1,17 @@
+## 2026-11-12 KST — 코인 캔들 수집기 P95 잠정 인수인계 (10항)
+1. 목표: 크몽 최종상품94→95%, 수집 엔진 기술99%와 유상 출시 승인 분리.
+2. 완료/결정: 기존 Windows EXE 3종·ZIP 3종 보존, 빌드 6단계 신규 읽기전용 ZIP/한글가이드 정확 무결성 확인. 기존 Windows 직접 검사 수정(A) 대신 독립 정적 감사(B) 선택해 비용·회귀 최소화.
+3. 시험: GitHub 코드/테스트 Blob 36959c113e4e3043ca8a6d68673165c26d16a85e 및 4136b09620c1478d5d1621c85a93d781bd446509, Linux Python3.13.5 합성10 PASS/0 FAIL, compileall PASS. 실제 신규 Windows 전체 테스트/빌드 미실행. 기존 Windows 147 PASS는 과거 main 소스.
+4. 상태: 95% 내부 잠정 상품화(+1p 패키지 안전성), 상용 배포 RELEASE HOLD; 타15종 불변, 16종1390pp/평균86.875%, ≥95 3종.
+5. 오류/차단: private 전체 checkout DNS 접근 불가로 test-only 생성기 계약 스텁; Windows 유료 Actions 승인 없음; 법적 권리는 소스 테스트와 별개. 무의미한 CI 재실행 금지.
+6. 저장소: hibi89/candle_scraper@feature/kmong-collector-p95-delivery-integrity-20261112 docs HEAD fe03e9b0cdb7. 원본 main 1f976770db47, 핵심 audit_customer_packages.py, test_v20_customer_zip_integrity.py, build_windows.bat, docs/KMONG_P95_DELIVERY_INTEGRITY_20261112.md.
+7. 운영: 오프라인 Windows EXE; Vercel 미적용. 실 빌드 검증은 Windows Python3.11 + PyInstaller6.16 필요. 현재 Production/Sale 미적용.
+8. 백업/비밀: 고객 SQLite, Git main 원본/Library ZIP, API 키/원본 시세·고객자료 미수정, 공개 배포·유료 결제·인증 변경 없음.
+9. 다음: 승인된 Windows 실제 소스에서 unittest 예상157, build6/6/3 EXE/3 ZIP SHA/한글 경로 검증; 실패 시94 재평가. 이후 거래소 서면 상업권·고객 Win10/11/Defender/SmartScreen 및 최종 사용자 승인 없으면 판매 금지.
+10. 갱신: 2026-11-12 KST, 코드 exact Blob+Linux10 범위만 검증; 중앙 브랜치 최신 HEAD는 본 문서 갱신 후 재조회. [상세](https://github.com/hibi89/candle_scraper/blob/feature/kmong-collector-p95-delivery-integrity-20261112/docs/KMONG_P95_DELIVERY_INTEGRITY_20261112.md).
+
+---
+
 ## 2026-11-12 KST — SOVIA 95% 잠정 엔지니어링 / 10항 인수인계
 1. 목표·스택: 공개 SOVIA 오프라인 Python3.11+ 독립 AI 에이전트 감사, 비공개 Lightning Azent 실제 합성 SQLite 영수증 연결. 고객자료 사용과 실제 판매는 여전히 금지.
 2. 구현·선택: 비공개 LA 원본 직접 공개 복사는 PII/IP/인증 문제로 기각. 독립 PRIVATE HAE 기능브랜치에서 실제 영수증 검증→비식별 단계 집계/관측→PUBLIC SOVIA 공개 소스를 private CI 내부에서만 대조. 별도 0.15 ZIP으로 검수용 배포 후보 독립 구현. P41+2/P43+2/P42+1=90→95%.
