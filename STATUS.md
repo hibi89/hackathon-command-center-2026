@@ -1,3 +1,5 @@
+> **2026-11-12 KST 최신 PREP Private 검증·크몽 완성률 재확인:** GitHub `hibi89/prep` 저장소가 **PRIVATE**로 전환된 사실을 직접 조회했다(사용자가 설정 변경). 기존 Public 보안 차단은 해소됐지만, **SMAX 비공개 원본 이관·코드 GitHub 반영·골든 동등성·실 Windows 검증은 아직 진행되지 않았다.** PREP의 **정식 최종상품 완성률 미산정(UNASSESSED)**, **독립 GitHub 실행코드 검증률 0%**, **50% 목표 미달** 유지. 로컬 후보 Node22 `npm test` **71/71 PASS × 원본/ZIP 재실행**은 별도 증거. PREP `main/develop/feature/core-extraction` 문서 HEAD `15e21dbe1ccac516dff93967c538b7645e756a3f`. 기존 크몽 활성16종의 최종완성률·합계·평균·분모는 **변경하지 않음**; PREP는 별도 후보. 과거 PREP 'PUBLIC' 표기는 변경 이전 이력이며 최신 사실이 아님. [PREP 최신 감사](docs/audits/PREP_INDEPENDENT_PRODUCT_BASELINE_20261112.md). **RELEASE HOLD.**
+
 ## 2026-11-12 KST — FFAX approved-provider adapter readiness / still 78 of 100
 - Private FFAX feature source SHA `a206561bd7efef46bb76ecba321280bb5af8f444`, docs SHA `2f568716f76d2df300fcc862d86018ec1ddb490f`; GitHub 8/8 changed file blob parity against locally tested source.
 - Local Node96 PASS/FAIL0, model-transport mocked12/12, Chromium injection30/30, React UMD12/12, cleanroom7/7. Formal axe package missing => NOT VERIFIED; real LLM/Actions/owner UX/Production NOT RUN. RELEASE HOLD, **78/100 unchanged**.
