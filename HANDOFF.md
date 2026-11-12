@@ -1,3 +1,15 @@
+## 2026-11-12 KST — Kmong REA_Web independent P95 work latest (10 items)
+1. Goal: 85->95 with no manual owner action, original product preserved, no sale permissions altered.
+2. Done: isolated REA_Web Lite safe customer handoff ZIP/manifest/verify, three synthetic customer industries, actual Windows/Linux packaged HTML file URL, 85->90 provisional. Optional companion selected instead of invasive Pro edits.
+3. Tests: exact source/workflow SHA 3eb56c3515d5b9ae3a6a0d2a8f58a85ffdf8ebdc, [Actions #43178991549](https://github.com/hibi89/REA_Web/actions/runs/43178991549) Ubuntu+Windows 2/2 SUCCESS; each Lite19+delivery16 unittest PASS, Pro+Lite+delivery pytest47 PASS/6 subtests/1 warning, native browser file:// 3 rows PASS. Full Pro D1-D31 and physical buyer NOT_RUN.
+4. Completion: REA_Web **90% engineering provisional**, P95 NOT REACHED (5pp remaining), RELEASE HOLD; central active16 sum1374pp mean85.875%, all16 >=85, none>=95. Other15 unchanged.
+5. Failure/retry: first browser workflow lacked PYTHONPATH and failed before imports; corrected at tested SHA. No test inflation, real user/rights excluded.
+6. Repos: hibi89/REA_Web feature/lite-owner-delivery-p95-20261112, tested 3eb56c3; original Lite feature/lite-offline-html-20261112@f842d288 unchanged. Central hibi89/hackathon-command-center-2026 kmong-productization.
+7. Environment: hosted Win2025+Ubuntu24.04 Chrome/Chromium file:// PASS; Vercel Production N/A. Physical buyer Win10/11 unverified.
+8. Original/backup/security: unchanged Pro, Lite baseline, customer raw data and other active products; unsigned hash is only change detection; no paid API/external data, source rights or permission/production changes. Rollback via original Lite ref.
+9. Next: source-exact original Pro complete CI, nondeveloper Windows human delivery 3 cases and import/export/reopen, privacy/third-party license/NOTICE, pricing-support-refund and final seller approval. Do not promote 95/100 before evidence.
+10. Verified 2026-11-12 KST at exact tested SHA; hub docs-only SHA after final update to verify.
+
 ## 2026-11-12 KST — PREP owner approved independent P85 (ten fields, latest)
 1. **Goal:** PREP independent local-first Node20+ ESM R01–R12, current P85 Linux SDK/receipt/HTML/security validation, later P95 Windows/consumer, P100 security/licensing/release.
 2. **Decision:** Owner expressly approved architecture A, independent PREP normalizers. SMAX perfect parity/adapter is NOT P85 core gate; source transfer or consumer switch is a new, separately scoped/approved project. No technical code changes this turn.
