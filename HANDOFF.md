@@ -1,3 +1,15 @@
+## 2026-11-12 KST — PREP independent P70 functional candidate, supervisor handoff (current)
+1. Goal: standalone local-first PREP R01–R12, target 70 engineering gate, not release.
+2. Implemented: private feature branch clean-room CSV/JSON, strict typed explicit mapping and suggestions, review queue, SHA receipt, atomic new-only output and CLI, 6 exact committed files.
+3. Tests: Node22 Linux native 59/59 PASS; fresh extracted ZIP 59/59; check/pack dry-run PASS; synthetic 20k-row bench; all 6 Git blob SHA exact to local tested code. CI/Windows/consumer E2E NOT_RUN.
+4. State: **70% functional candidate; canonical PREP final-product progress UNASSESSED, 70 gate NOT CERTIFIED** because upstream SMAX source-rights/migration and golden parity unverified; RELEASE HOLD.
+5. Failure/limits: compressed byte transfer fixed and content hashes verified; no real functional test failures, receipt/CSV/Windows/authenticity security gaps noted. No false production-success claims.
+6. Repo: PRIVATE `hibi89/prep@feature/core-extraction`, implementation checkpoint `75a4e27257ddfc56014e4772eb54b4e8bdc59084`, current docs HEAD may be newer; supervisor evidence `docs/commercial/PREP_P70_CANDIDATE_20261112.md`.
+7. Production: N/A, no deploy, Node20+ target / Linux Node22 native verified only.
+8. Source/backup: `hibi89/SMAX` untouched, no private code copied, no real data or secrets, PREP pre-change ref `15e21dbe1ccac516dff93967c538b7645e756a3f`.
+9. Next: original-provenance/golden verification, receipt and security gaps, then CI/Windows/approved pinned adapter. Do not modify active 16 status or automatic publish.
+10. Time/baseline: 2026-11-12 KST; exact source/test blobs per PREP STATUS; central scoring unchanged **1369%p/16 = 85.5625%**.
+
 ## 2026-11-12 KST — Factory VERIFY W1 50% separate candidate hub handoff (10 items)
 1. Goal: First Factory AX VERIFY W1 50% milestone against existing 100% blueprint; the multi-module Factory AX Ecosystem remains UNASSESSED.
 2. Delivered: New original Python3.11+ restricted offline CSV/XLSX 4-role intake, explicitly approved mapping/SHA, quality five rule families, source-row findings, new-only summary exports. No PREP/EAI code cloned.
