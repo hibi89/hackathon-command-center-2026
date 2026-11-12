@@ -1,3 +1,17 @@
+## 2026-11-12 KST — PREP P85 original acceptance audit central handoff (10 items)
+1. Goal: standalone PREP local-first R01-R12; 85% Linux SDK/evidence/report/security, 95% Windows and consumer E2E, 100% release, no scope change.
+2. Done/decision: prior stagnant progress traced to conflating future and external gates with 85. Audited REQUIREMENTS/BLUEPRINT/ACCEPTANCE_MATRIX and wrote docs/P85_GATE_AUDIT_20261112.md; compared independent mode A (recommended, no SMAX source transfer) with parity adapter B (requires owner scope, rights).
+3. Tests: PREP code a4c71258851af4b0d8540202f36c84c1438ad9e6, docs 9696074e55d28fa1fb7fe1afda27baab0dc3b88b; Linux Node22.16 npm test 150/150 PASS, 0 fail/skip, npm check and pack dry-run PASS re-run. Earlier 150/150 network-isolated and new offline package SDK/CLI/sidecar PASS preserved. Single 20k synthetic row run 0.18s/maxRSS 65,604KiB not an SLA.
+4. Completion: independent 85% target functions locally evidenced, but formal 85% NOT_CERTIFIED; original parity/contract policy and hosted CI pending; final product completion UNASSESSED, RELEASE HOLD. Hub product scores unchanged.
+5. Stalled cause: repetitive tests did not remove missing external approval/runner and original Node checker. Stop blind incremental tests and move to two gates, not a stream of cosmetic features.
+6. Repos: private hibi89/prep feature/core-extraction docs SHA 9696074e55d28fa1fb7fe1afda27baab0dc3b88b, tested code a4c71258851af4b0d8540202f36c84c1438ad9e6; hub kmong-productization. PREP main/develop and SMAX preprocessing 3830cb27 unchanged, prior PREP docs HEAD 41ce6190.
+7. Production/OS: Linux Node22 native, hosted Actions and Windows/approved consumer unverified. No Vercel/production.
+8. Source/security: upstream private source not migrated, no original customer data, secrets, paid runner, permission, public distribution or branch rewriting. Git recovery from prior SHA.
+9. Next: owner-confirm independent PREP A vs parity adapter B; authorized hosted CI runner dispatch if potential cost, source-pinned native SMAX checker with approved private checkout; then 95 Windows and first approved consumer. Do not claim hosted PASS.
+10. Updated: 2026-11-12 KST; current hub SHA after doc commit to verify.
+
+---
+
 ## 2026-11-12 KST — PREP 150-case central Kmong handoff (ten items)
 1. Goal: independent local-first PREP R01–R12, P85 Linux SDK/report/receipt/security proof, no production.
 2. Changes: HTML preview global ambiguous mapping HOLD now displays REVIEW_REQUIRED and AMBIGUOUS_MAPPING per row; original records and SHA receipts immutable. Two targeted tests, affected HTML golden update, existing clean output unchanged.

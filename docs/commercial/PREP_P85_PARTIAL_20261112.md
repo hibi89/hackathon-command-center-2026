@@ -1,3 +1,12 @@
+## 2026-11-12 KST — PREP P85 원래 기준 재검수 / 정체 원인 확정 (LATEST)
+- Private PREP feature/core-extraction 기능 SHA **a4c71258851af4b0d8540202f36c84c1438ad9e6**, 새 판정·인수인계 HEAD **9696074e55d28fa1fb7fe1afda27baab0dc3b88b**. 신설 **docs/P85_GATE_AUDIT_20261112.md**에 원래 REQUIREMENTS/BLUEPRINT/ACCEPTANCE_MATRIX에 따른 R01–R12 단계별 검수 기록.
+- 지연의 진짜 이유: 기능 테스트는 61→150으로 반복 증가했지만, **독립 엔진 P85 로컬 기능 검증**과 **SMAX 기존 소비자 교체 전 네이티브 호환성 승인 / 실제 GitHub-hosted CI / 후속 P95 Windows 소비자 검증**을 혼동하여 무조건 공식 85%를 보류했다. 이제 85 단계와 95+ 요구를 분리하고 외부 관문에 집중.
+- Linux Node22.16 원본 코드 블롭 대조 후 당일 npm test **150 PASS/0 FAIL/0 SKIP**, npm run check PASS, npm pack --dry-run PASS. 이전 실행의 네트워크 격리 150 PASS, 독립 오프라인 설치 SDK/CLI/receipt PASS 기록 유지. 합성 20k행 148,893 byte 단회 측정 **0.18s / max RSS 65,604 KiB**, SLA 보장 아님.
+- **판정:** 독립 제품 85% 기능 요구 주요 항목 **로컬 검증 충족**. 공식 85% 인증은 hosted CI + 선행 원본 parity/독립 계약 결정 미해결로 **NOT_CERTIFIED**, 제품 최종 수치 재산정 없음, RELEASE HOLD. 기존 16개 크몽 활성 제품 점수/분모 **불변**, PREP는 별도 후보.
+- 권고 A 독립 PREP 기본 기능 유지, SMAX 차이는 승인 후 소비자 어댑터에서 다루기; B 현재 원본 완전 호환 어댑터를 85에 넣기는 비용/시간/라이선스 문제 크고 승인 필요. 원본이나 GitHub 운영 환경, 비용, 권한, 개인정보, 배포 모두 변경하지 않음.
+
+---
+
 ## 2026-11-12 KST — PREP P85 150-case HTML global HOLD evidence (LATEST)
 - PRIVATE PREP feature/core-extraction verified code **a4c71258851af4b0d8540202f36c84c1438ad9e6**, latest PREP docs HEAD **41ce61909887fec1dfdf1a3bba0293f566024cd2**. Fixed static HTML showing a dataset-level ambiguous mapping warning but individual records incorrectly labeled OK_FOR_OWNER_REVIEW. Each preview row now shows effective REVIEW_REQUIRED + AMBIGUOUS_MAPPING for global conflict; unchanged underlying source, record statuses, receipt and ordinary clean reports. Two regression cases added and affected HTML frozen golden SHA deliberately updated.
 - Linux Node22.16 native `npm test` **150/150 PASS, FAIL0/SKIP0**, separate Linux no-network full suite **150/150 PASS**, syntax and package dry-run PASS. Latest local 7-file runtime package SHA256 **8087a8e84618c0916560c7c5380924442e2def0b6f308607a323cb0b2c36557f**, freshly installed offline into independent client, SDK/main/report import, HTML and CSV global HOLD, immutable receipt and CLI help PASS. Full exact GitHub README/SDK docs packing NOT_VERIFIED.
