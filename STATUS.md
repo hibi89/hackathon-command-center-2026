@@ -1,3 +1,8 @@
+## 2026-11-12 KST — AI Code Checker P95 provisional engineering verified / owner marker lock honored
+- Native code `3d92c4c0f3886d80e499261b8b6d44b7791713c4`, [Tests #43224297929](https://github.com/hibi89/ai-code-checker/actions/runs/43224297929) 16/16 SUCCESS, [Windows #43224297880](https://github.com/hibi89/ai-code-checker/actions/runs/43224297880) 1/1 SUCCESS; actual hosted Windows EXE extracted from private synthetic ZIP and re-executed under Korean/space path with system-only PATH + no Python env vars. EXE SHA and source/ZIP/extract integrity, no-clobber PASS.
+- Code Checker stage **90→95% provisional engineering**, **RELEASE HOLD**: physical buyer Win10/11 no-installed-Python, vendor original license/NOTICE redistribution, SmartScreen/Defender buyer observations, network/personal visual QA, support/refund/pricing/owner GO unverified. Product docs `930adb18f4efa1f8330ca631823e3dc5ccdcdf2a`.
+- Latest owner marker policy says retain `[작업중]` until verified target; as **95% is now evidenced and central score synchronized in this same update**, only Code Checker marker cleared; other products' markers/scores untouched.
+
 ## 2026-11-12 KST — GitHub 전체 33개 저장소 크몽 목표 달성 전 [작업중] 유지 지침 반영
 - 사용자 최신 지시: 크몽 단계 목표 완성률 검증 전 `[작업중]` 표식 제거 금지. 작업 중단·보류·전환·채팅 종료에도 유지, 검증된 목표 달성 **후에만** 담당자가 중앙 최종완성률 표에서 제거·커밋한다. 구형 '종료/전환 시 해제' 지시는 폐기.
 - GitHub 소유자 `hibi89`의 33개 저장소 **전부 main AGENTS** + 현재 확인한 24개 추가 주요 브랜치(제품·KIC·PayPal·UGREEN lead·해총 크몽 브랜치) 적용, 원격 정책 존재 **57/57 PASS**. 상세 목록과 정책·검증 범위: [전체 전파 감사](docs/audits/KMONG_TARGET_GATE_GLOBAL_ROLLOUT_20261112.md).

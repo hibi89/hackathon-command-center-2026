@@ -1,3 +1,15 @@
+## 2026-11-12 KST — Code Checker stage95 verified/synchronized (10-point handoff)
+1. Product goal/stack: offline Windows Python3.11+/AST/Tk/PyInstaller, customer portable product; target 95% internal engineering.
+2. Changes: P3-06 run real native EXE from synthetic private ZIP extraction in Korean/space folder with system PATH excluding Python; self/gui/scenario smoke, EXE SHA cross-check; previous safe output error HOLD preserved.
+3. Exact tests: source `3d92c4c0f3886d80e499261b8b6d44b7791713c4`, [Tests #43224297929](https://github.com/hibi89/ai-code-checker/actions/runs/43224297929) 16/16 SUCCESS; [Windows #43224297880](https://github.com/hibi89/ai-code-checker/actions/runs/43224297880) 1/1 SUCCESS, no failed jobs. Native EXE digest 759c543fb7dfd0b85cce95a8e98d42eef1324d5a6d5d3536c6d87acdf48f31c5.
+4. State: Code Checker **95% provisional engineering**, P95 target evidenced, release/sales HOLD. Customer actual buyer no-Python OS, original vendor rights and owner approval NOT VERIFIED.
+5. Failures/pivot: before P3-06, PR workflow didn't trigger for source-only changes; bounded feature-branch push trigger added; actual Windows job SUCCESS. Do not rerun empty workflows.
+6. Repo/branch/SHA: hibi89/ai-code-checker@feature/retail-private-candidate-20261112 code `3d92c4c0f3886d80e499261b8b6d44b7791713c4`, docs `930adb18f4efa1f8330ca631823e3dc5ccdcdf2a`, P3-06 doc; hub hibi89/hackathon-command-center-2026@kmong-productization.
+7. Production: Vercel N/A, no artifact publish, customer install not run, source PR still draft, original main unchanged.
+8. Original/backup/security: prior source 137c88c8779cf4327c83d0af630020efa5d01085 and main adf3f4ac8fab; synthetic fake LICENSE/NOTICE only in CI temp; no customer secrets/files or vendor originals committed; no forced Git change.
+9. Next step: actual Win10/11 buyer no-Python PC + manual GUI/SmartScreen/Defender/network/PDF and original third-party rights/NOTICE, final customer ZIP, support/refund and explicit seller release GO to work toward 100%. No sales until then.
+10. KST 2026-11-12; exact code SHA/CI checked; user target lock satisfied, Code Checker marker removed only after stage 95 verified+hub updated, other rooms' markers preserved.
+
 ## 2026-11-12 KST — 크몽 목표 달성 전 [작업중] 표식 유지 지침 전체 전파 인수인계
 1. **목표·확정 요구·기술:** 연결 GitHub 전체 소유 33개 저장소의 필수 `AGENTS.md` 공지에 크몽 단계 목표 달성 **전까지** `[작업중]` 유지, 검증된 목표 달성 **후에만** 제거. 작업 종료·보류·전환으로 삭제 금지. AGENTS 공지와 중앙 최종완성률 표를 GitHub 커넥터로 수정.
 2. **완료·변경·결정:** 33개 저장소 기본 `main` + 제품/대회 리드/중앙 포함 24개 주요 브랜치의 정책 전파. 예전 '전환·종료 시 삭제' 규칙을 최신 규칙으로 교체. 크몽 아닌 작업에는 조건부 적용. 기존 제품 원본·진척 수치 불변.
