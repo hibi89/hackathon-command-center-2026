@@ -1,3 +1,7 @@
+## 2026-11-13 KST — GitHub Trending 월간 누적 아카이브·예약 프롬프트 연동
+- `docs/github-trending/`에 2026-11 DAILY/WEEKLY/MONTHLY, MONTHLY_INDEX, PRODUCT_IDEAS, AUTOMATION_POLICY 생성. 11/06~12 일간 및 11/09 주간은 과거 채팅 요약으로 보존, 공식 순위·증가량 재검증하지 않음. 월간 TOP30 미확인.
+- 기존 일간10:00/주간 월10:30/월간 1일11:00 KST 예약 3개 프롬프트에 `kmong-productization` 누적 GitHub 반영 지시 추가 성공. 예약 실행 시 실제 GitHub 쓰기 성공은 **미검증**, 권한 없으면 `GITHUB_SYNC_PENDING` 보고. 기능/CI/배포 미적용, 제품별 상태 불변.
+
 ## 2026-11-13 KST — 사용자 명시 지시: Astra 개발 종료, [사용자 개입 필요]
 - Owner 직접 지시: Astra PDF Redesigner의 중앙 최종률 표 `[작업중]` 제거, **`[사용자 개입 필요]`** 표기. 기존 목표 달성 전 잠금 규칙의 Astra 한정 명시적 예외. 중앙 `docs/audits/KMONG_16_CURRENT_20261111.md`에 반영한 상태이며 다른 상품의 표시와 점수는 수정하지 않음.
 - **완성률 85% 잠정 / P95 목표 미달 / RELEASE HOLD** 그대로. 소스 기능 SHA `0db2acb5185445d342f97062a6962ec52a08a1fe`, 제품 `AGENTS/STATUS/HANDOFF` 문서 SHA `723ef15f1442acd2776045717a8fd3ee21b45ea7`. CI [Linux Chrome/Edge #43243819225](https://github.com/hibi89/astra_pdf_redesigner/actions/runs/43243819225) SUCCESS 2/2 Node150 PASS, [Windows #43243819123](https://github.com/hibi89/astra_pdf_redesigner/actions/runs/43243819123) SUCCESS 1/1 Node149PASS/1SKIP, desktop16 PASS. 이 상태 변경에 새 기능/테스트 수행 없음.
