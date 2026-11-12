@@ -1,3 +1,15 @@
+## 2026-11-13 KST — KUODRA 독립 상용제품 70/100 개발범위 인수인계 (10항)
+1. **목표·기술:** 신규 Private `hibi89/KUODRA` 상용 한국 DART+미국 SEC 재무증거 검증기. 로컬 Python/Windows 예정, KIC canonical·재무 B/조건부 A·동종 C·Guard·KIC FDR·표/그래프·HTML/PDF.
+2. **완료/근거:** 제품 PR#2 정정 SEC/DART 공시·실제 결산일/공개일/동일 날짜 충돌 차단·PDF, PR#3 명시 승인된 공식 SEC/DART 고정 URL·모의 전송 응답 검증·소유자 로컬 FDR 연동. 공통 코어/고객로컬 선정; `main`은 릴리스/설계 문서, 새 기능 `develop`.
+3. **테스트:** 기능 `develop@cee8edc6d85d7d513fb93748d21501342624a1c1`; [CI PR3 #43277505434](https://github.com/hibi89/KUODRA/actions/runs/43277505434) **Linux/Windows 각각 146 PASS, 0 FAIL, 0 SKIP**; 병합 exact SHA [push #43277802750](https://github.com/hibi89/KUODRA/actions/runs/43277802750) / [PR #43277815520](https://github.com/hibi89/KUODRA/actions/runs/43277815520) 모두 SUCCESS. PDF는 합성 예시 1p 육안, 실제 구매자 Win GUI·서식 미검증.
+4. **상태/중단지점:** P50→**P70 개발 가중점수 70/100 잠정** (KIC 82%와 무관); P70 실 라이선스 있는 한국·미국 기업공시 API 종단검증 **대기**, RELEASE HOLD/SALE NO-GO. KUODRA 기술 P70 목표 달성으로 [작업중] 해제/미표시, 다음 P85 목표 미설정, 다른 제품 변화 없음.
+5. **오류·원인·시도·대안:** PR2 CI 최초 #43275126185 2FAIL+5ERROR (SciPy/sklearn/ReportLab 설치 누락)→의존성 복원·full CI 성공; 동일 오류 방식 반복 금지. 데이터 접근권한/사용권 없으면 사용자 소유 합법 로컬 파일/HOLD, SEC 403/429 우회 금지, 실제 DART 키 없이 모의 전송만.
+6. **저장소·브랜치·SHA·경로:** `hibi89/KUODRA` Private develop 기능 `cee8edc6d85d7d513fb93748d21501342624a1c1`, main 문서만 최신화; `kuodra/source_client.py`, `kuodra/exploration.py`, `markets/{kr,us}`, `revisions.py`, `report_pdf.py`; [P70 기술/권리 증빙](https://github.com/hibi89/KUODRA/blob/main/docs/P70_ACCEPTANCE_EVIDENCE_20261113.md); 해총 `kmong-productization` 후보 현황표만 별도 수정.
+7. **Production/명령/환경:** 웹/Vercel Production 미적용. Python3.11, `python -m pip install -r requirements-ml.txt -r requirements-report.txt 'scipy>=1.11,<2.0'`, `python -m unittest discover -s tests -v`; 고객용 no-Python 설치파일·실제 윈도우 폰트/권한 테스트 없음.
+8. **원본·백업·인증:** KIC 원본/제출 PDF 불변, KUODRA P50 기능 SHA `74c2f4db6ef419780d66a89a1e15c91fab4bd272` 및 Git 부모커밋으로 복구 가능. 고객 데이터·API키·시세/지수 라이선스 원본·비밀커밋 없음. 추가 유료/실고객 전송/권한 변경 없음.
+9. **다음 우선순위·승인:** 실권리 SEC/DART 수치 E2E(고객 API키 별도 승인)·공식 업종 비교·실 금융 홀드아웃·Windows 빌드/고객 설치·OS 자료유출 차단·제3자 라이선스/재배포·금융법/고객지원/판매 승인. 승인 없는 고객 실자료·실서비스/유료/권한 변경 금지.
+10. **KST 갱신/검증범위:** 2026-11-13. 정확 기능 SHA의 GitHub CI와 코드 로컬 합성 스코프 확인, 원천진본/법무/구매자/Production 미검증. 70은 기술 범위 내부 잠정만, **판매 완료 주장 금지**. 다른 크몽 제품 완성률·작업 표식 변경 없음.
+
 ## 2026-11-13 KST — DBVORA P95 내부 목표 달성 / 판매 RELEASE HOLD, 크몽 인수인계 10항
 1. **목표·용도·기술:** `hibi89/DBVORA@feature/p0-db-map`, SQLite/PG local read-only topology/stats/manual optimization, ZIP/ZSTD archive; 사용자 개발 목표95% 달성.
 2. **완료/결정:** A 사설 전체 clone DNS 차단 시 유료 CI/새 환경 vs B GitHub connector에서 실제 필요한 11 원본 파일 취득·바이트 SHA 증명 후 Python/Node에서 본래 생산 코드 및 테스트 실행, B. 테이블→추정 통계→FK→manual review→CSP HTML→새 파일 퍼블리시 검증.
