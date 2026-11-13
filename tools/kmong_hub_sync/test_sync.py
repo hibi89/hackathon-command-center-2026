@@ -6,7 +6,7 @@ from urllib.parse import parse_qs, unquote, urlsplit
 
 from sync import (ROOT, REGISTRY, ROSTER, GitHubAPI, Observer, collect_snapshot,
                   decode_contents, hub_path, load_registry, reconcile_hub,
-                  safe_ref, validate_registry)
+                  safe_ref, validate_registry, determine_dry_run)
 
 
 def as_content(obj, sha="a" * 40):
@@ -86,6 +86,22 @@ class SourceFake:
                 return None
             return {"type":"file", "sha":self.pin_mutations.get(repo, pin["git_blob_sha"])}
         raise AssertionError("unexpected GET " + path)
+
+
+class ExecutionModeTest(unittest.TestCase):
+    def test_cron_is_not_accidentally_dry_run(self):
+        self.assertFalse(determine_dry_run("schedule", ""))
+
+    def test_manual_defaults_to_dry_run(self):
+        self.assertTrue(determine_dry_run("workflow_dispatch", ""))
+        self.assertTrue(determine_dry_run("workflow_dispatch", "true"))
+
+    def test_manually_selected_write_is_respected(self):
+        self.assertFalse(determine_dry_run("workflow_dispatch", "false"))
+
+    def test_unexpected_event_cannot_write(self):
+        self.assertTrue(determine_dry_run("pull_request", "false"))
+        self.assertTrue(determine_dry_run("", "false"))
 
 
 class RosterTest(unittest.TestCase):

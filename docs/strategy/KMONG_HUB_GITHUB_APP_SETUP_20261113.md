@@ -48,3 +48,7 @@
 5. 29개 공식 완성률은 별도 owner-approved 100점 rubric과 실제 고객 E2E 확인 전 계속 `UNASSESSED`.
 
 **배포/고객서비스/Vercel:** 해당 없음. 실제 App 연결·일정 성공 이전에는 `KMONG_HUB_SYNC_CREDENTIALS_PENDING` / `검증 대기`로 기록.
+
+### Schedule-safe mode regression
+- GitHub `schedule` 이벤트는 dispatch input이 없으므로 실제 쓰기 모드로 해석한다. 이 조건을 별도 단위 테스트로 강제한다.
+- `workflow_dispatch`는 `dry_run=true`가 기본값이며 사용자가 `false`를 선택해야 쓰기 시도한다. 다른 이벤트는 늘 dry-run이다. `KMONG_SYNC_ENABLED=true` 전에는 어떤 스케줄 잡도 실행하지 않는다.

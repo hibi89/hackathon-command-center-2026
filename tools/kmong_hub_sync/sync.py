@@ -294,6 +294,15 @@ def reconcile_hub(api, token, snapshot, dry_run):
     return {"result": "UPDATED", "commit": commit}
 
 
+def determine_dry_run(event_name, manual_input):
+    """Scheduled trusted runs may write; manual runs default to safe read-only."""
+    if event_name == "schedule":
+        return False
+    if event_name == "workflow_dispatch":
+        return str(manual_input).lower() != "false"
+    return True
+
+
 def run():
     roster, pins = load_registry()
     source_token = os.getenv("KMONG_SOURCE_APP_TOKEN")
@@ -304,7 +313,8 @@ def run():
     index = decode_contents(api.get(hub_path(INDEX_PATH, HUB_BRANCH), hub_token))
     observer = Observer(api, source_token)
     snapshot = collect_snapshot(observer, roster, pins, index)
-    dry_run = os.getenv("KMONG_SYNC_DRY_RUN", "true").lower() != "false"
+    dry_run = determine_dry_run(os.getenv("GITHUB_EVENT_NAME", ""),
+                                os.getenv("KMONG_SYNC_DRY_RUN", ""))
     result = reconcile_hub(api, hub_token, snapshot, dry_run)
     summary = snapshot["summary"]
     print("KMONG HUB SYNC:", result["result"], "repositories:", summary["repository_count"],
