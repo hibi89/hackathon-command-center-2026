@@ -1,3 +1,9 @@
+## [2026-11-14 KST] FlowPilot Universal 사용자 0원 상용화 준비 승인·NAS 무구매 방침 확정
+
+- 최종완성률 유일 기준 사용자 원본 F01–F10 **전체 설계 고정**. 85를 만들기 위한 범위·가중치 조정 금지. 세부 사용자 승인 100점 rubrics/실고객 하드웨어·권리 증거 없으므로 **공식 UNASSESSED/목표85 미인증**.
+- **사용자 비용 조건:** 추가 현금 지출 없는 상용 준비 승인 → 라이선스/NOTICE·기존 후보 설치·자체검증·지원/환불 문서 작성 무료 범위 진행. 법무/실기기/고객 인수 이전 공개 Release·실판매·고객 자료/권한 변경·유료 서비스/서명 구매는 별도 사전 승인·검증 필요. 기존 RELEASE HOLD/SALE NO-GO.
+- **NAS 대응:** NAS 구매 요구 금지. 로컬 PC/보유 USB/허가된 Windows LAN SMB로 무료 사전 프로토콜 검증 가능하나 실제 NAS 2벤더 F09 수용으로 대체 금지. 사용자 Windows 공유 권한 설정은 명시 승인 없이 변경하지 않음. 과거 QNAP 브라우저 데모는 권한 있는 Windows UNC 실증 아님. 제품 문서 SHA `6fbb0163c891dbe25f8408fc6a724688018a1224`, 기능 `b723544735cffcf2d05c19773e5ed04336d26e7a`, 과거 Win109/Linux102+7SKIP PASS 보존. [제품 최신 STATUS](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/product/flowpilot-universal/products/flowpilot_universal/STATUS.md).
+
 ## [2026-11-14 KST] FlowPilot Universal F09 3회 검수 준비 코드·Windows/Linux CI PASS (공식 85% 미인증)
 
 - 제품 `hibi89/hibi89-ugreen-nas-hackathon@product/flowpilot-universal` 소스 SHA `b723544735cffcf2d05c19773e5ed04336d26e7a`, 문서 SHA `b1fc54ad64acc70bbde2fb48791d354dbad39b15`. 사용자 명시동의 별도 소스/보고 폴더에서 3회 SHA 전체 재검사, JSON/HTML/SQLite 원장 검증, 파일·매니페스트 변경 감지 및 create-only 로컬 요약. 기존 엔진·GUI·EXE 회귀 코드 그대로.

@@ -1,3 +1,16 @@
+## [2026-11-14 KST] FlowPilot Universal 고정 완료율·무료 상용화·NAS 진입전략 — 해총 인수인계 10항
+
+1. **목표/용도/확정 요구:** 사용자 F01–F10 최종설계 전체 100% 고정, 85% 이상 달성 요구. 승인없는 가중치 수정/축소 금지.
+2. **완료/결정:** 추가 현금 0원 조건의 상용화 *준비* 승인. 비용 없는 라이선스/NOTICE 검토, 무료 설치/검증·지원 문서 진행; 불완전 실고객 검증 상태 공개 판매·배포 GO 아님. NAS 구매 우선 X: 로컬 PC/보유 USB→허가된 무료 Windows SMB→실 NAS 확보 시 개별 검증.
+3. **테스트/근거:** 코드 `b723544735cffcf2d05c19773e5ed04336d26e7a`, GitHub Win109 PASS/Linux102 PASS+7 NTFS-only SKIP 및 추가 Tk5/portable8. 이번은 문서/권한 반영만, 신규 소스/테스트/물리 NAS 검증 0.
+4. **완료/대기/차단:** F09 실 Windows10/11·USB·2 NAS 제조사 고객 권한/ACL·경합/실측, F10 법적 권리·유료 서명 시 별도 승인·고객 인수, 원본 100점 소유자 수용점수 근거 미완. 공식 `UNASSESSED`, `[작업중]`/SALE HOLD.
+5. **오류/대안:** 예전 90분 QNAP File Station 브라우저 데모는 SMB 매핑/실 NAS 검증 아님. 권한 없는 NAS 접근/Windows 공유 설정 변경/고객 데이터 업로드 금지. 무료 SMB 테스트는 프로토콜만 인정.
+6. **저장소/브랜치/SHA:** 제품 `hibi89/hibi89-ugreen-nas-hackathon@product/flowpilot-universal` 문서 HEAD `6fbb0163c891dbe25f8408fc6a724688018a1224`, 기능 `b723544735cffcf2d05c19773e5ed04336d26e7a`. 중앙 `hibi89/hackathon-command-center-2026@kmong-productization`, 본 문서 후 HEAD 확인.
+7. **Production/실행 환경:** 로컬 Python3.11/Tk/SQLite 및 미서명 Windows runner EXE, Vercel N/A, 실 고객 배포 없음. CLI `python -m flowpilot_universal.field_trial --root <authorized> --manifest <approved.json> --output <separate-folder> --medium pc --consent`.
+8. **백업·기밀/원본:** UGREEN lead/main/Skill/제출, 고객 원본·타 제품·등록완료 기록 불변, 이전 제품 SHA `b1fc54ad64acc70bbde2fb48791d354dbad39b15` selective git revert 기준, 시크릿/고객 자료 외부 송신 없음.
+9. **다음 작업/승인:** 승인된 무료 라이선스/Notice·상용 문서 검토, 자체 테스트·무료 프로토콜 리허설(네트워크/권한 변경은 별도 승인); 실 NAS/고객 장비 이용할 수 있을 때 측정, F01–F10 고정 설계 수용점수/법적·실고객 GO 별도. 공식85 인증 전 [작업중] 제거 금지.
+10. **KST/확인:** 2026-11-14, 사용자 승인 문구 반영, 기존 기능 CI 성공만 확인. 이번 문서변경 신규테스트/실 NAS/실판매 검증 없음, 공식 UNASSESSED 유지.
+
 ## [2026-11-14 KST] FlowPilot Universal F09 3회 검사 CLI 검증 — 해총 인수인계 10항
 
 1. **목표·확정요구·기술:** 최종 F01–F10 전체 최소85% 실수용, PC/USB/허가 SMB 대상 오프라인 Python3.11/Tk/SQLite/옵션 PDF, Windows unsigned EXE 후보.
