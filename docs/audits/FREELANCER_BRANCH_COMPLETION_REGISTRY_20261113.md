@@ -8,7 +8,7 @@
 | CITEVAULT AX | `product/rag-enterprise-knowledge` | UNASSESSED | 기존 RAG 서비스에 연결, HOLD | 기존 기업형 조합 |
 | SITECRAFT AX | `product/rea-website-rebuild` | UNASSESSED | 기존 REA_Web 서비스에 연결, HOLD | 기존 기업형 조합 |
 | PROOFQA AX | `product/proofqa-ax-delivery-audit` | UNASSESSED | 기존 코드 품질감사 서비스에 연결, HOLD | 기존 기업형 조합 |
-| ONTOINSIGHT AX | `product/ontoinsight-ax-data-analytics` | UNASSESSED | 기존 데이터 AI 분석 서비스에 연결, HOLD | 기존 기업형 조합 |
+| ONTOINSIGHT AX **[작업중]** | `product/ontoinsight-ax-data-analytics` | UNASSESSED (P50 엔지니어링 목표 진행 중) | 기존 데이터 AI 분석 서비스에 연결, HOLD | 원본 AutoML 별도 기능 브랜치 P50 개발; 미검증·목표 미달 시 [작업중] 유지 |
 | ECHOHOME | `product/echohome-pawtalk-local-ai` | UNASSESSED | 미등록·HOLD | 가족 동의 음성대화 설계, 앱 미검증 |
 | PAWTALK | `product/echohome-pawtalk-local-ai` | UNASSESSED | 미등록·HOLD | 반려동물 놀이형 음성대화 설계, 앱 미검증 |
 | MYRADIO AI | `product/myradio-ai-dj` | UNASSESSED | 미등록·HOLD | 오프라인 WAV 시제품, 실 Windows/상용권리 미검증 |
