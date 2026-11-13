@@ -33,6 +33,7 @@
 - 소스 코드는 읽지 않고 Git 브랜치 HEAD, Actions run ID/SHA/conclusion 및 원본 문서의 **blob SHA만** 저장. HAE/LA 합성 테스트 PASS와 최종상품 완성을 구분.
 - 원장 갱신은 독립 파일 `data/kmong_hub_auto_observations.json` 하나에만 허용. `data/final_blueprint_product_index_20261113.json`, 19개 SKU 등록 이력, `STATUS.md`, `HANDOFF.md`, 과거 P85/P95 및 공식 `UNASSESSED`는 자동 쓰기 금지.
 - 새 증거와 기존 스냅샷이 동일하면 `NO_CHANGE`로 커밋 없음. `dry_run`은 `DRY_RUN`으로 커밋 없음.
+- **예약 실행 첫 기록 보호 (2026-11-13 보강):** 활성화 직후 `schedule`이 수동 검증 전에 실행되어도 관찰 원장 파일을 최초 생성할 수 없다. 최초 수동 `dry_run=true` 검증에 이어 `dry_run=false`로 중앙 원장 초기 기록을 완료한 후에만 예약 실행이 기존 원장을 갱신한다. 초기 원장이 없는 예약 쓰기 시도는 실패 처리하고 기존 자료를 변경하지 않는다. 실증: `main@b8667cd27e92001e39ad21f4c71fde6f034bbd62`, CI [#43357835854](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43357835854) **24/24 PASS**.
 - API/권한 실패, 중복 repo, 불일치 원장, GitHub optimistic `sha` 충돌에서는 강제 덮어쓰기 금지. 오류를 Actions에 남기고 다음 실행 전 원인 조사.
 - 소스 지문 변경이 발견되면 그 사실을 **관찰 원장에 기록**하고 강제 핀의 경우 job도 실패 처리한다. 최종설계 기준 지문을 임의 최신으로 바꾸거나 공식률을 승격하지 않는다.
 - Auth 오류는 GitHub App 설치 대상·Repository permissions/Secrets·Actions 허용부터 확인. 중앙 쓰기 403이면 기존 branch protection/Actions `GITHUB_TOKEN` 정책과 충돌했을 가능성이 있으므로 **우회하지 않고 승인받아 설정 변경**. `Ready`/CI PASS만으로 고객 기능 수용 선언 금지.
