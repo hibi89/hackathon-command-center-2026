@@ -1,3 +1,9 @@
+## [2026-11-13 KST] 최종설계 검증기 후속 강화 / 중앙 29종 추적 인덱스
+- **실증 신규 코드 변경:** 중앙 public `main@096125a27d358867e28761fde5f38fd189c015db`에서 evidence 형식 허점 4종 보완; [단위 테스트 #43340688221](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43340688221) job log **10/10 OK** / [공통 gate #43340688309](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43340688309) SUCCESS.
+- **실 실행 의미 확인:** [HAE #43326291906](https://github.com/hibi89/HAE/actions/runs/43326291906) 및 [LA #43326296472](https://github.com/hibi89/HAE/actions/runs/43326296472) 각 SUCCESS 로그는 둘 다 `Blueprint gate: UNASSESSED`, 승인 evidence manifest 404/부재. **PASS=제품 완료 아님**. 그 외 68개 branch 자동 실행은 이번 턴 미검증; 기존 설치 70/70 기록만 유지.
+- [후속 정확 SHA/CI·2안 비교 감사](docs/audits/FINAL_BLUEPRINT_GATE_FOLLOWUP_20261113.md) 및 [29개 상태 기계 판독 색인](data/final_blueprint_product_index_20261113.json) 추가: 활성17/후보12 전부 **UNASSESSED**, HAE13·LA8 요구 추적 초안, 승인된 100점 가중치 및 실제 제품 E2E 미비. 새 공식 수치 0/29.
+- A안(기존 권한 read-only 검증→개별 수동 증빙 대조/중앙 갱신) 채택; B안(GitHub App 최소 권한 cross-repo 동기화)은 **사전 승인까지 보류**(`KMONG_HUB_SYNC_PENDING`). 원본·기존 완성률 이력·19개 등록상태·[작업중]·RELEASE HOLD·배포·제품 code/권한 불변.
+
 ## [2026-11-13 KST] Final-blueprint evidence gate 자동 연결 70/70 — 공식률 별도
 - 해총 public `main`에 Python 검증기·reusable GitHub Actions·테스트 신설; 35개 기본 `main` + 35개 주요 개발 브랜치 `.github/workflows/final-blueprint-gate.yml`을 **70/70 원격 readback 확인**(동일 blob SHA `22490583d366697e3cae4fe95c7e33f273461082`). [상세 보고·10항 인수인계](docs/audits/FINAL_BLUEPRINT_AUTOGATE_ROLLOUT_20261113.md).
 - 중앙 6/6 단위 테스트 [Actions #43326468715](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43326468715) SUCCESS; HAE·LA 파일 설치 후 각 1건 [HAE #43326291906](https://github.com/hibi89/HAE/actions/runs/43326291906) / [LA #43326296472](https://github.com/hibi89/HAE/actions/runs/43326296472) **SUCCESS**. 다른 68개 Actions 실행은 미검증(대량 CI 비용 방지 위해 [skip ci] 배포); 이후 일반 push에서 실행.

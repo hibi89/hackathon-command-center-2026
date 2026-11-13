@@ -1,0 +1,42 @@
+# 최종설계 자동검증 후속 감사 — 2026-11-13 KST
+
+## 이번 실행에 확인한 정확한 증거
+- 중앙 main 이전 HEAD `f6da834109d62a344071c94200a5675e8d16d3ea`, 새 검증기 코드/테스트 HEAD [`096125a27d358867e28761fde5f38fd189c015db`](https://github.com/hibi89/hackathon-command-center-2026/commit/096125a27d358867e28761fde5f38fd189c015db).
+- [중앙 단위 테스트 Actions 43340688221](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43340688221) **SUCCESS**, 정확 HEAD `096125a...`, 실제 job log **Ran 10 tests / OK**. 과거 6개 + 신규 4개 negative regression.
+- [공통 검증 워크플로 Actions 43340688309](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43340688309) **SUCCESS**, 정확 HEAD `096125a...`.
+- [HAE Actions 43326291906](https://github.com/hibi89/HAE/actions/runs/43326291906) **SUCCESS**, 실행 SHA `019ffce2529ad18087d81451dbda00fe17617d65`. 해당 job log: `Blueprint gate: UNASSESSED; official=UNASSESSED`, `No approved evidence manifest`.
+- [LA Actions 43326296472](https://github.com/hibi89/HAE/actions/runs/43326296472) **SUCCESS**, 실행 SHA `cde06dcea7f105e7d5f539ffe385aed5fc5f1220`. job log 동일하게 `UNASSESSED` 및 manifest 없음. 각 제품 브랜치 `docs/final_blueprint_evidence.json` GitHub 404 확인. **초록 CI는 제품 완성 인증이 아님**.
+- 이번 대화에서 원격 다시 확인한 caller는 HAE·LA 각 1개이며, 다른 68개는 **기존 설치 확인 이력만 인정**, 현행 개별 실행 여부 미검증. 29종 새 제품 E2E 0건.
+
+## 기존 검증기 취약 조건 보완
+1. `schema_version: true`가 정수 1로 취급되던 Python 타입 우회를 차단.
+2. `status: []`처럼 hash 불가능한 JSON 자료형이 예외로 종료되지 않고 구조적 오류로 거부되도록 수정.
+3. `PARTIAL`에도 같은 repo CI URL·정확 SHA 형식·test ID 근거를 요구. 근거 없으면 `UNVERIFIED` 사용.
+4. `UNVERIFIED` 또는 `BLOCKED`에 함께 기재한 잘못된 형식의 증거도 거부.
+5. 형식 검증임을 명시. 실제 URL 존재/CI PASS/실험 범위/사용자 승인 문서의 진위/설계 전체 누락은 여전히 **독립적으로 검증 필요**.
+
+## 후속 아키텍처 2안 검토
+| 구분 | A. 기존 권한 기반 검증·수동 반영 | B. 제한 권한 GitHub App 중앙 자동화 |
+|---|---|---|
+| 동작 | 각 repo read-only gate + 해총의 수동 정확 SHA/CI/요구 증거 대조 후 원장 커밋 | 중앙 scheduler가 승인된 각 repo Actions/manifest read→독립 score 검증→허브에 자동 PR 또는 분리된 승인 절차 |
+| 권한/안전 | 현행 GitHub 접근만 사용, 비밀/권한 불변 | 35개 private read, 허브 write를 최소 범위로 별도 설계/승인·관리해야 함; 임의 강제 정책 변경 없음 |
+| 비용/성능 | 신규 유료 서비스 없음, 심층 검수는 사람이/AI가 수행 | 스케줄/API rate limit/Actions 시간·secret rotation/오류 복구 운영 부담 |
+| 품질 | 의미 검증이 완성될 때까지 공식률 동결; 속도는 느림 | 안정적인 갱신 가능하나 App만으로 사용자 승인·진짜 구현 검증을 대체하지 못함 |
+| 현재 판단 | **우선 채택.** 자동 score 승격 금지 | `KMONG_HUB_SYNC_PENDING`; 자격증명 발급·권한 변경은 사용자 사전 승인 필요 |
+
+대안으로 fine-grained PAT도 가능하지만 대상 repo별 read/write 분리와 만료/rotation/유출 방지 부담이 커져 App 방식보다 장기 운영에 불리할 수 있다. **현재 어느 방식도 새 자격증명을 설치하지 않았다.**
+
+## 제품 추적 색인
+- [`data/final_blueprint_product_index_20261113.json`](../../data/final_blueprint_product_index_20261113.json)에 기존 [29종 감사](ALL_REPOS_FINAL_BLUEPRINT_EVIDENCE_AUDIT_20261113.md)에서 확인된 활성17+후보12의 ID·대표 브랜치·설계 경로·과거 HEAD 접두부를 **추적 전용**으로 정규화.
+- 29/29 `UNASSESSED`, 공식 채점 0/29, 미승인 가중치는 `NOT_INDEPENDENTLY_APPROVED`. HAE 13, LA 8개 선행 추적은 **상세 초안** 2개로만 기록.
+- BID AX는 기존 감사에서 독립 구현 저장소 없음; null 유지. 이 색인은 29종별 최신 소스/CI를 새로 전수 실증했다는 뜻이 아님.
+- 기존 19개 판매 서비스 이력, [작업중], 사용자 개입 필요, 모든 이전 엔지니어링 완성률 및 RELEASE HOLD 변경 금지.
+
+## 다음 검증/완료 조건
+1. 사용자가 확정한 전체 최종설계 SHA, 요구 ID 전체, 수용조건 및 100점 가중치에 대한 독립 승인 확인. 새 불명확 조건을 담당자가 묵시적으로 승인하면 안 됨.
+2. 각 요구별 정확 source SHA→실제 GitHub Actions run HEAD·conclusion·test log→요구 범위와 일치하는지 확인하고, 합성/고객/Production 분리. HAE·LA의 실 LLM 자동 해석·LA 범용 플로/오류 왕복·SOVIA/DBVORA 독립 실행 없는 완성 주장 금지.
+3. 각 제품 private repo에 owner-approved manifest를 확정해 검증. `UNASSESSED`를 구조 검증 성공과 구분. 증거 진위 검수 전 점수 승격 금지.
+4. 검증된 공식 점수만 중앙 원장에 GitHub 원격 커밋하고 정확 SHA readback. 외부 자격증명/권한 변경은 별도 승인.
+5. Product/Production 실 검증과 검증기 구조 테스트는 별개; 현재 제품 출시/상품 등록 판정 전부 기존대로.
+
+**본 보고는 연결·검증 형식 개선과 추적 인덱스 작업에 한하며, 29개 제품의 공식 수치·실제 기능·외부 권한/배포를 바꾸지 않는다.**

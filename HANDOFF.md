@@ -1,3 +1,15 @@
+## [2026-11-13 KST] 최종설계 자동검증 후속 강화 — 해총 10항
+1. **목표·용도·확정 요구:** `OWNER-FINAL-BLUEPRINT-100` 사용자 확정 전체 최종설계만 공식 점수의 분모로 사용. 35 저장소/70 branch caller 유지, 활성17+후보12의 증거 기반 추적 강화.
+2. **완료 기능·결정:** 중앙 Python verifier에서 boolean schema 우회·비정상 JSON status 예외·근거 없는 PARTIAL·UNVERIFIED 첨부 잘못된 증거 4가지 보완; [신규 29개 추적 색인](data/final_blueprint_product_index_20261113.json), [2안 검토·실증 보고](docs/audits/FINAL_BLUEPRINT_GATE_FOLLOWUP_20261113.md). A안 read-only 검증+수동 확인 채택; B안 자동 타 repo 쓰기는 승인 보류.
+3. **테스트:** 코드 SHA `096125a27d358867e28761fde5f38fd189c015db`, Actions [#43340688221](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43340688221) **10/10 PASS**, Actions [#43340688309](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43340688309) 공통 gate SUCCESS. HAE [#43326291906](https://github.com/hibi89/HAE/actions/runs/43326291906), LA [#43326296472](https://github.com/hibi89/HAE/actions/runs/43326296472) 각 로그 `UNASSESSED`; 새 제품 기능/E2E 실행0.
+4. **완료·진행·대기·차단:** 중앙 구조 검증 강화 완료, 29종 색인 정규화(17+12 및 29개 고유 ID 정적 체크). 공식 제품 점수 29/29 UNASSESSED, HAE13/LA8은 미승인 상세 추적 초안, 68개 개별 Actions 재실행 미확인. 자동 중앙 쓰기 `KMONG_HUB_SYNC_PENDING`.
+5. **오류 근거/원인/대안:** Python bool==int(1) 허용, unhashable status 예외, PARTIAL 증거 부재 통과, 비VERIFIED 증거 객체 무검증을 test regression으로 차단. 아직 URL 존재/실 CI 성공/테스트 커버리지/원 사용자 승인 전수의 진위는 검사 불가; 자격증명·권한 없이 임의 공식률을 만들지 말 것.
+6. **저장소·브랜치·SHA·주요 경로:** `hibi89/hackathon-command-center-2026@main` 코드 위 SHA; `@kmong-productization` 기존 시작 HEAD `01b550ed3c953899185f48047c971f5029d0ce73`; 새 감사/색인, STATUS/HANDOFF 변경 commit은 원격 후속 SHA 확인 필요. `tools/final_blueprint_gate/verify.py`, `tools/final_blueprint_gate/test_verify.py`.
+7. **Production/Vercel/실행환경:** GitHub Actions Ubuntu Python stdlib, read-only caller. Vercel/Production·고객 UI·실 제품 API 검증 미적용. 기존 워크플로 70개 내용/권한 불변.
+8. **원본/백업/인증/금지:** 기존 제품 원본 소스/비공개 설계/고객 DB, API token, 상품 등록이력, 과거 85/95, 마커, RELEASE HOLD 변경 없음. Git 부모 이력으로 각 중앙 문서/코드 복구 가능. public 색인에 민감문서 원문/토큰 업로드 금지.
+9. **다음 우선순위/승인:** 사용자 확정 최종설계 요구 ID/100점 가중치 원본 승인 확인→private manifest→정확 run SHA·성공 로그·범위 독립 대조→공식 수치 산정/수동 중앙 최신화. 별도 GitHub App 또는 PAT/브랜치 보호 변경은 사용자 사전 승인 전 금지. HAE 실 LLM/LA 범용 자동설계·오류왕복·SOVIA/DBVORA 독립 통합 미완을 완료로 계산 금지.
+10. **갱신시점/범위:** 2026-11-13 KST, 새 중앙 verifier 정확 SHA CI 2/2 SUCCESS, 테스트10/10, HAE·LA 파일/기존 job logs 2개 원격 재확인; 29개 새 기능 테스트0/68 branch 새 실제 Actions 실행0. 새 hub 문서 기준 커밋은 이후 remote HEAD로 확인.
+
 ## [2026-11-13 KST] 최종설계 자동검증기 설치 인수인계 — 해총 10항
 1. **목표/확정요구:** 35개 레포 담당 AI는 기존 개발 유지, push마다 사용자 확정 최종설계 전체 100% 기준의 근거 형식 검증 자동 실행. 임의 MVP 85/95를 공식률로 인정 금지.
 2. **완료 기능/선택 근거:** 해총 public main `tools/final_blueprint_gate/verify.py` 및 재사용 `.github/workflows/blueprint-validation.yml` 구현. 전 35개 main + 35개 작업 브랜치 동일 caller 연결 `70/70` 원격 파일 readback 확인. 70개 별도 검증기 중복 배포 대신 중앙 공통 검증기 방식.
