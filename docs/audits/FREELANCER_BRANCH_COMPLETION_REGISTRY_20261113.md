@@ -14,7 +14,7 @@
 | 제품 | Freelancer 브랜치 | 공식 최종완성률 | 등록/출시 | 근거 |
 |---|---|---|---|---|
 | AZENTFLOW AX **[작업중]** | `product/hae-la-automation` | **UNASSESSED** (0→70 기술 단계 **PASS**, 공식 최종률 70% 미확정) | HAE·LA 통합 서비스, RELEASE HOLD·크몽 미등록 | [P70 양 OS 수용 증빙](https://github.com/hibi89/Freelancer/blob/product/hae-la-automation/docs/P70_ACCEPTANCE_EVIDENCE_20261113.md): HAE `12987055`, CI #43377368138 P70 Ubuntu7/7+Windows7/7 PASS, Python 각 274 PASS/2 FAIL/7 SKIP(기존 shipping parity), Node UI24 PASS; 전범위 최종설계 가중치·독립검증 미완 |
-| CITEVAULT AX **[작업중]** | `product/rag-enterprise-knowledge` | **UNASSESSED / 50% 목표 미달 · 검증 대기** | RAG SHA `c5867b39` 고정 read-only SQL/BM25/SMAX 근거 QA+PDF/DOCX CI 정의; Git blob 일치 Node22 **3 PASS/0 FAIL/3 SKIP**, 3개 통합 미실행, Actions 로그 미확인 | enterprise ACL/인증·승인된 SMAX→AX 전환·실고객 Windows/수용 미검증, RELEASE HOLD |
+| CITEVAULT AX **[작업중]** | `product/rag-enterprise-knowledge` | **공식 UNASSESSED / 사용자 70% 목표 미달 · 검증 대기** | 정책 source `enterprise/p70-policy.mjs`+원본 RAG selected-doc bridge, **순수 JS V8 24 PASS/0 FAIL**, pinned RAG P512/P538/P540/P549 CI 정의. P50 Node 3PASS/0FAIL/3SKIP 이력 보존; P70 Node hosted 통합 6개 미실행 | 실제 기업 IAM/서버측 ACL-before-load·실 PREP/SMAX 승인 AX 변환/고객 Windows 수용 없음, RELEASE HOLD |
 | SITECRAFT AX | `product/rea-website-rebuild` | UNASSESSED | 기존 REA_Web 서비스에 연결, HOLD | 기존 기업형 조합 |
 | PROOFQA AX | `product/proofqa-ax-delivery-audit` | UNASSESSED | 기존 코드 품질감사 서비스에 연결, HOLD | 기존 기업형 조합 |
 | ONTOINSIGHT AX **[작업중]** | `product/ontoinsight-ax-data-analytics` | **UNASSESSED** (P50 엔지니어링 단계 검증 PASS, 최종 50% 미확정) | 기존 데이터 AI 분석 서비스에 연결, HOLD | AutoML 기능 SHA `8da6ae98` / Ubuntu 11 PASS·Windows 11 PASS / 원본·설계 브랜치 문서 최신화 |
