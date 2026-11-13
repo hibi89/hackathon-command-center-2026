@@ -476,7 +476,32 @@
       "github_code_sync_status": "LOCAL_3MODULE_PROTOTYPE_UNSYNCED",
       "latest_local_synthetic_test_count": 130,
       "latest_local_test_verified_scope": "LINUX_PYTHON3.13.5_SYNTHETIC_MOCK_ONLY",
-      "current_official_score": "UNASSESSED"
+      "current_official_score": "UNASSESSED",
+      "latest_verified_feature_sha": "2a9852bcb47a271a4119f67dfcaf8ec35ae2a632",
+      "latest_verified_product_head": "d295a8869689272f14a37864716e69093d5ca351",
+      "local_test_evidence": {
+        "date_kst": "2026-11-14",
+        "python": "3.13.5 Linux",
+        "passed": 136,
+        "failed": 0,
+        "skipped": 0,
+        "kind": "synthetic_mock_offline",
+        "python_311_syntax_passed_files": 22,
+        "windows_real_device": "NOT_RUN",
+        "github_python_ci": "NOT_RUN",
+        "actual_government_api_requests": 0
+      },
+      "three_module_source_sync": "GITHUB_8_OF_8_PLUS_4_OF_4_CONTENT_MATCH",
+      "new_requirements_partial_implementation": [
+        "R22",
+        "R23",
+        "R24",
+        "R25",
+        "R26",
+        "R27",
+        "R28",
+        "R29"
+      ]
     },
     {
       "record_id": "CANDIDATE-11",

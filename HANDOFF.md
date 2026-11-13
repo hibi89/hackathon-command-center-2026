@@ -1,3 +1,17 @@
+## 2026-11-14 KST — BID AX v2 중앙 10항 최신 인수인계
+1. 목표·요구·스택: 로컬 공공입찰/공매/법원 문서 준비, 최종설계 R01–29 29개, Python3.11+ Tkinter/SQLite, 사용자 최종85% 목표.
+2. 완료·결정: 온비드 정규화 로컬 원장/법원 적법 문서 동의·SHA/3모듈 CLI+GUI/온비드 3종 인증키 없는 비실행 공식 쿼리 계획 코드 원격 반영; 온라인 SaaS 아닌 고객 PC 비용/기밀 우선.
+3. 테스트: Linux Python3.13.5 합성 136/136 PASS·컴파일·3.11 AST22 PASS(런타임 미검증), pyz CLI 실동작 PASS. 소스 GitHub 8/8+4/4 정확 일치. 실 Windows/API/고객/원격 Python CI NOT_RUN.
+4. 상태: 오프라인 기술 범위 진전, 전체 공식 85% **미입증**, UNASSESSED, BID AX [작업중], RELEASE HOLD·미등록.
+5. 오류/원인·대안: 이전 신규 온비드/법원 코드 GitHub 미동기화 → 두 커밋으로 해소. 공식 키/운영 권리·실원문 없어 실 검증 차단; 유료 private Actions 전 승인 필요, 새 키·원문 무단 송신 금지.
+6. 저장소·브랜치·SHA: hibi89/Freelancer private product/bid-ax-public-procurement, 기능 `2a9852bcb47a271a4119f67dfcaf8ec35ae2a632`, 문서 `d295a8869689272f14a37864716e69093d5ca351`, 핵심 bidax/onbid.py/court.py/onbid_plan.py 및 tests/test_p85_expansion.py/test_onbid_plan.py.
+7. 실행·Production: 로컬 Python CLI `python -m bidax.cli --db <local.db> gui`; Python3.11 목표, 현재 3.13.5 Linux 검증, Vercel/Production N/A, 비출시 pyz 있음, Windows EXE 미구현.
+8. 원본·백업/인증: 고객 SQLite·API 키/고객 파일/타 프로젝트/제외 BID OWL 불변, 이전 commit `1b7b2ef0...`에서 정상 revert 가능; create-only DB 복원, 외부 전송/토큰 GitHub 없음.
+9. 다음 작업/승인: 온비드·G2B 고객 API 무료 서비스별 권리·키/실 원문 계약, 공고100건/사람10건, 실제 Win10/11·EXE/PDF/ACL·법률/상업권 고객 수용, R01–29 승인 가중치 독립 수용 후 85 판정.
+10. 확인 KST/범위: 2026-11-14, 원격 12/12 코드 readback 및 Linux 로컬 모의 136 테스트; 공식 원문·실고객·실 OS/Actions 미검증. 문서 기준 중앙 커밋은 최신 원격 조회.
+
+---
+
 ## [2026-11-14 KST] FlowPilot Universal P85 최종변경·NTFS 경계 — 해총 인수인계 10항
 1. **목표/설계/스택:** 원본 F01–F10 PC·USB·권한 SMB 납품검수 전체 85%, Python3.11/Tk/SQLite/선택 ReportLab/Windows PyInstaller; 확정 100점 가중치와 실고객 인수 없으므로 UNASSESSED.
 2. **완료/변경/근거:** SHA 후 최종 소스 폴더/파일을 다시 lstat·이름 비교하여 변경 시 INCOMPLETE, 출력 JSON/HTML/SQLite/PDF/checkpoint NTFS junction 회피 방어. 기존 read-only 검수·GUI/PDF·EXE 유지; 스냅샷 불가 명시.
