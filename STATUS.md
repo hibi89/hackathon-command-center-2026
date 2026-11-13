@@ -1,3 +1,9 @@
+## [2026-11-14 KST] FlowPilot Universal F09 3회 검수 준비 코드·Windows/Linux CI PASS (공식 85% 미인증)
+
+- 제품 `hibi89/hibi89-ugreen-nas-hackathon@product/flowpilot-universal` 소스 SHA `b723544735cffcf2d05c19773e5ed04336d26e7a`, 문서 SHA `b1fc54ad64acc70bbde2fb48791d354dbad39b15`. 사용자 명시동의 별도 소스/보고 폴더에서 3회 SHA 전체 재검사, JSON/HTML/SQLite 원장 검증, 파일·매니페스트 변경 감지 및 create-only 로컬 요약. 기존 엔진·GUI·EXE 회귀 코드 그대로.
+- [정확 Actions #43506736478](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/actions/runs/43506736478) Win3.11 **109 PASS**, Linux3.11 **102 PASS+7 NTFS-only SKIP**, portable8/Tk5 각 OS PASS, compileall, 2/2 SUCCESS. 정책 #43506737121 SUCCESS는 정책만. 신규 테스트 7, 실제 물리 USB/Win10·11/승인 SMB 다벤더 시험 아님.
+- 승인 F01–F10 100점 가중치, 고객 물리 환경, F10 코드 서명·제3자 라이선스/NOTICE/고객 수락·판매 승인 부족. **공식 전체 완성률 UNASSESSED, 사용자 85% 목표 미인증, [작업중]·RELEASE HOLD·미등록 유지**. GitHub 이력 복구지점 `4aaffbd700a249f130660fb9b3e4d35d1c48537d`, UGREEN lead/main·타 상품 이력·고객 원본 불변. [증거](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/product/flowpilot-universal/products/flowpilot_universal/F09_REPEATABILITY_EVIDENCE.md).
+
 ## [2026-11-14 KST] CITEVAULT AX P85 서명 출처 검토 경계 — 신규 18PASS
 
 - 제품 `hibi89/Freelancer@product/rag-enterprise-knowledge cc0f9646643790d5372e4ac608f253692a9b05a2`에 오프라인 합성 Ed25519 source/mapping/document SHA·tenant/key/version/expiry 검증 및 허위 승인 차단 코드/테스트 추가. **성공해도 REVIEW_HOLD·rights=false·AX 미생성**; 실제 PREP/SMAX producer 계약/고객 승인으로 취급 금지.

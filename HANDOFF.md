@@ -1,3 +1,16 @@
+## [2026-11-14 KST] FlowPilot Universal F09 3회 검사 CLI 검증 — 해총 인수인계 10항
+
+1. **목표·확정요구·기술:** 최종 F01–F10 전체 최소85% 실수용, PC/USB/허가 SMB 대상 오프라인 Python3.11/Tk/SQLite/옵션 PDF, Windows unsigned EXE 후보.
+2. **완료·설계 결정:** 수작업 GUI3회 비교(A)보다 동의 조건 `field_trial.py`로 기존 엔진 변경 없이 3회 무캐시 full SHA+manifest 고정+SQLite JSON/HTML 검증+파일 SHA 대조(B) 선택. 로컬 새 보고서만 기록, 위험 실행·외부송신·가중치 조작 없음.
+3. **테스트:** `python -m unittest discover -s tests -p 'test_*.py' -v`; [#43506736478](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/actions/runs/43506736478) Windows109PASS/0FAIL/0SKIP, Linux102PASS/0FAIL+7 Windows전용 SKIP, Tk5/OS/portable8/OS/compileall PASS, 2/2SUCCESS. 신규7개 합성 테스트, 정책 CI #43506737121 SUCCESS.
+4. **완료/대기:** F09 로컬 테스트용 재현 도구 기술검증 완료, **F09 실 Win10/11·USB·다제조사/권한 SMB 고객 실증은 미완**; F10 서명/상업권/고객 계약/실사용 수락·공식 F01–F10 100점 가중치 미확정. [작업중], SALE HOLD.
+5. **오류/원인/재시도:** 신규 SHA CI 오류 0, 과거 PowerShell strict Count 실패 #43504170567은 `@(...).Count` 수선 후 #43504574468 성공. 실제 NAS 시험 또는 고객 데이터 접근을 수행한 것으로 오인 금지, Git clone container DNS 차단 시 동일 재시도 금지.
+6. **저장소/브랜치/SHA:** `hibi89/hibi89-ugreen-nas-hackathon@product/flowpilot-universal`, 소스/테스트 `b723544735cffcf2d05c19773e5ed04336d26e7a`, 제품 문서 `b1fc54ad64acc70bbde2fb48791d354dbad39b15`, `products/flowpilot_universal/{flowpilot_universal/field_trial.py,tests/test_field_trial.py,F09_REPEATABILITY_EVIDENCE.md,STATUS.md,HANDOFF.md}`.
+7. **Production/환경:** Desktop/Vercel 미적용, GitHub hosted Win/Ubuntu Python3.11, 기존 private unsigned EXE는 F09 Python CLI 미포함, 고객 배포 없음. `python -m flowpilot_universal.field_trial --root <authorized> --manifest <approved.json> --output <outside-root> --medium pc --consent`.
+8. **원본/백업·접근:** UGREEN lead/main·공식 Skill/제출, 고객 파일·크몽 다른 상품/등록기록 불변. 소스 read-only, 보고 create-only, 민감 파일 GitHub 미업로드, pretask 제품 SHA `4aaffbd700a249f130660fb9b3e4d35d1c48537d` 선택적 revert 가능.
+9. **다음/승인·완료기준:** 소유자 F01–F10 가중치 합100 사전 승인 및 실제 고객 Win10/11·USB·허가된 두 제조사 SMB 실험·ACL 경합, 보고서 대조; F10 라이선스·NOTICE·코드서명/SmartScreen/판매·지원/환불·실 고객 수락 후 공식85 판정. 권한/유료/배포 무단변경 금지.
+10. **갱신·확인 범위:** 2026-11-14 KST, Win109/Linux102+7SKIP 및 Tk5/portable8/OS 확인, F09 물리·고객/상업 승인·공식85 미검증, **UNASSESSED + [작업중] + HOLD**. [근거](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/product/flowpilot-universal/products/flowpilot_universal/F09_REPEATABILITY_EVIDENCE.md).
+
 ## [2026-11-14 KST] CITEVAULT AX 서명 출처 검증 인수인계 10항
 
 1. **목표·용도·확정 요구·기술:** 사용자 CITEVAULT AX 전체 최종설계 대비 85%, 기업 근거형 RAG+권한별 PDF/DOCX+정확 SQLite, 권리 승인된 PREP/SMAX signed AX, 실 기업 직원 IAM/한국어 실제 모델/Windows 고객 수용.
