@@ -467,7 +467,12 @@
       "added_requirements_total": 8,
       "goal": "OWNER_FINAL_BLUEPRINT_85_UNVERIFIED",
       "work_marker": "[작업중]",
-      "release": "HOLD"
+      "release": "HOLD",
+      "latest_product_docs_head": "1b7b2ef0c00162905b4d0f4116933f682311fb0f",
+      "github_code_sync_status": "LOCAL_3MODULE_PROTOTYPE_UNSYNCED",
+      "latest_local_synthetic_test_count": 130,
+      "latest_local_test_verified_scope": "LINUX_PYTHON3.13.5_SYNTHETIC_MOCK_ONLY",
+      "current_official_score": "UNASSESSED"
     },
     {
       "record_id": "CANDIDATE-11",
