@@ -426,6 +426,14 @@
           },
           "head_sha": "2c2bef5288257d9405bb912aa838ca071703e0ed",
           "status": "PRESENT"
+        },
+        {
+          "branch": "integration/astra-commercial-core",
+          "gate": {
+            "status": "NO_RUN"
+          },
+          "head_sha": "b80830ab3219dbcf88556d60ce2c47c2dcec7764",
+          "status": "PRESENT"
         }
       ]
     },
@@ -478,6 +486,14 @@
             "status": "NO_RUN"
           },
           "head_sha": "1f36b39e67914a4a24ce8d012ccdbf95e8dede4c",
+          "status": "PRESENT"
+        },
+        {
+          "branch": "feature/pc-care-p15-p18-85-20261112",
+          "gate": {
+            "status": "NO_RUN"
+          },
+          "head_sha": "72da39fcebda1e23f540e5381be9abf6422d1934",
           "status": "PRESENT"
         },
         {
@@ -549,6 +565,22 @@
           },
           "head_sha": "69f61eda448026b3200ec831d54f8da1f7de35c7",
           "status": "PRESENT"
+        },
+        {
+          "branch": "feature/coin-pattern-p85-forward-eval-20261112",
+          "gate": {
+            "status": "NO_RUN"
+          },
+          "head_sha": "a6f76576880e3dc242ea3730728e287c0914d5ee",
+          "status": "PRESENT"
+        },
+        {
+          "branch": "feature/kmong-collector-p95-delivery-integrity-20261112",
+          "gate": {
+            "status": "NO_RUN"
+          },
+          "head_sha": "1e4469d83ea6eecc8fff9be87d0cbe5666c81ff1",
+          "status": "PRESENT"
         }
       ]
     },
@@ -578,6 +610,19 @@
       },
       "repository": "hibi89/data2web_studio",
       "work_branches": [
+        {
+          "branch": "feature/final-blueprint-p85-evidence-20261113",
+          "gate": {
+            "conclusion": "success",
+            "head_sha": "265acdf2aceaf5700d97d1d9a251c2a3510c4587",
+            "matches_current_head": true,
+            "run_id": 43393104733,
+            "status": "LATEST_RUN",
+            "workflow_status": "completed"
+          },
+          "head_sha": "265acdf2aceaf5700d97d1d9a251c2a3510c4587",
+          "status": "PRESENT"
+        },
         {
           "branch": "feature/lite-independent-migration",
           "gate": {
@@ -659,6 +704,14 @@
       "repository": "hibi89/EAI",
       "work_branches": [
         {
+          "branch": "feature/kmong-eai-85-p31-20261112",
+          "gate": {
+            "status": "NO_RUN"
+          },
+          "head_sha": "57d5424f008b091b0f46066ef41e85f437b8dac8",
+          "status": "PRESENT"
+        },
+        {
           "branch": "feature/local-first-mvp",
           "gate": {
             "status": "NO_RUN"
@@ -712,6 +765,14 @@
       "repository": "hibi89/factory-ax-ecosystem",
       "work_branches": [
         {
+          "branch": "feature/data-verify",
+          "gate": {
+            "status": "NO_RUN"
+          },
+          "head_sha": "f9577bbc4c798534b36ed1243e122453b5e4a4a9",
+          "status": "PRESENT"
+        },
+        {
           "branch": "feature/hae-la",
           "gate": {
             "status": "NO_RUN"
@@ -755,6 +816,19 @@
       },
       "repository": "hibi89/Freelancer",
       "work_branches": [
+        {
+          "branch": "product/bid-ax-public-procurement",
+          "gate": {
+            "conclusion": "success",
+            "head_sha": "ab0d92a333a18e01a585a99d6a6b5812ab0c6305",
+            "matches_current_head": true,
+            "run_id": 43393695516,
+            "status": "LATEST_RUN",
+            "workflow_status": "completed"
+          },
+          "head_sha": "ab0d92a333a18e01a585a99d6a6b5812ab0c6305",
+          "status": "PRESENT"
+        },
         {
           "branch": "product/hae-la-automation",
           "gate": {
@@ -1281,6 +1355,14 @@
           "status": "PRESENT"
         },
         {
+          "branch": "feature/p546-rag-prep-mapping",
+          "gate": {
+            "status": "NO_RUN"
+          },
+          "head_sha": "4669957a0f5dd8e641903bef0c0ef21d43166dcc",
+          "status": "PRESENT"
+        },
+        {
           "branch": "feature/p550-mapped-cited-journey",
           "gate": {
             "status": "NO_RUN"
@@ -1395,6 +1477,14 @@
           },
           "head_sha": "68953d9b1f91892e7cffa2bd28e26d938ea46069",
           "status": "PRESENT"
+        },
+        {
+          "branch": "feature/kmong-la-review-p2-20261112",
+          "gate": {
+            "status": "NO_RUN"
+          },
+          "head_sha": "b235b0222e44764d7593b647fee2e257e562764b",
+          "status": "PRESENT"
         }
       ]
     },
@@ -1447,6 +1537,6 @@
     "product_refs_present": 29,
     "product_refs_unlinked": 0,
     "repository_count": 35,
-    "tracked_branch_count": 70
+    "tracked_branch_count": 80
   }
 }
