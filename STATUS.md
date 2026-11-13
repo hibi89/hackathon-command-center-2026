@@ -1,3 +1,10 @@
+## [2026-11-13 15:02 KST] 상시 GitHub 변경 감지형 해총 — 코드/CI 완료, Vercel 403 배포 차단
+- **확정 아키텍처 구현:** 기존 35개 GitHub App 읽기전용 source observer + webhook(`push`, `workflow_run:completed`) + 최소권한 별도 hub-only Actions:write GitHub App 토큰 + Vercel Node 함수 → 중앙 기존 `workflow_dispatch dry_run=false`; 매일 11:10 KST cron은 누락 복구 보조로 유지. 지속 서버 불필요, `GITHUB_TOKEN`에 소스 repo 쓰기 권한 없음.
+- **구현:** GitHub [PR #1](https://github.com/hibi89/hackathon-command-center-2026/pull/1) squash merge `main@e1ad0802cb7bdf783c1d99c6f0b259ec96daf015`. 새 `services/kmong-event-bridge/` (raw-body HMAC SHA256 timing-safe 검증, 35 리포/지정 브랜치 필터, 재귀 수집 방지, 1MB cap, delivery ID 검증, hub-only App JWT/token scope 검사, fail-closed dispatch toggle, secrets 없는 응답) 및 `.github/workflows/kmong-event-bridge-tests.yml` 추가. 기존 `tools/kmong_hub_sync/sync.py`와 스케줄 cron blob `37ce23f1f249ec39cfaeae170306556a34588d9b` 불변, 공식률/원본/등록 이력 미수정.
+- **실 CI:** `main` [브리지 #43375849224](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43375849224) **SUCCESS**, Node 16/16·기존 Python 26/26·허용목록 원장 동일성 검증; [최종설계 게이트 #43375849225](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43375849225) **SUCCESS**. 기존 manual 실 Source App DRY_RUN/UPDATED/NO_CHANGE 검증 이력은 그대로.
+- **차단:** 연결된 Vercel 팀 `hibi89`에서 전용 프로젝트 `kmong-hub-event-bridge` 생성 시도 **403 forbidden / permission denied** (요청 반복 금지). 기존 다른 프로젝트 `project08-executive` 변경 없음, 새 Vercel 프로젝트/Production URL·환경변수 **미생성**. 별도 중앙 전용 `kmong-hub-dispatcher` GitHub App Actions:write 단일 repo 설치 및 기존 source App Webhook Active/비밀키 설정도 아직 **미구성** (계정 관리자 UI 작업 필요). 실제 signed delivery → Vercel → dispatch → collector E2E 및 장애 복구 **미검증**. 테스트 PASS를 실서비스 완료라고 주장하지 않음.
+- **현 상태:** `EVENT_BRIDGE_CODE_CI_PASS / HOSTING_AND_CREDENTIALS_BLOCKED`; 원래 11:10 KST 예약 설정 유지, 실제 schedule 이벤트 별도 미검증. 구현/보안/승인 및 안전 배포 절차: [event bridge README](https://github.com/hibi89/hackathon-command-center-2026/blob/main/services/kmong-event-bridge/README.md). 제품 공식 완성률 29/29 UNASSESSED, 기존 19서비스/등록완료/작업중/RELEASE HOLD·과거 수치 보존.
+
 ## [2026-11-13 14:35 KST] GitHub App 예약 이벤트 당일 단축 시험 — 미관측·일일 cron 원상복구
 
 ## [2026-11-13 KST] CITEVAULT AX P50 사용자 목표 — [작업중], 공식률 UNASSESSED
