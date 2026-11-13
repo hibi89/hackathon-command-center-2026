@@ -1,3 +1,8 @@
+## [2026-11-13 15:22 KST] 상시 GitHub 이벤트 수신 API 공개 응답 확인 — 초기 미설정 상태 정상
+- 사용자 브라우저 스크린샷에서 `https://kmong-hub-event-bridge.vercel.app/api/webhook?utm_source=chatgpt.com` 실제 접속 후 JSON `{"status":"not_configured"}` 응답 확인. 서버리스 함수 라우트 및 코드 응답 존재 **확인**, 단 스크린샷은 HTTP 응답코드(예상 503), Production commit SHA 또는 Vercel 로그를 보여주지는 않음. 화면 `/` 404는 API 루트 미제공이며 API 경로 존재와 별개.
+- **현재 분리 상태:** 코드 main `e1ad0802cb7bdf783c1d99c6f0b259ec96daf015`, GitHub CI Node 16/16 + Python 26/26 PASS, 사용자 Vercel 프로젝트 Production UI 생성, 실제 API JSON 응답 확인까지 진행. Webhook 시크릿/별도 hub-only Actions:write App/Source App Webhook 연결/Production 환경변수/실 push→dispatch→중앙 collector E2E는 **미설정·미검증**, 상시 실행 완료 주장 금지.
+- **다음 개인 계정 단계:** GitHub Settings → Developer settings → GitHub Apps에서 별도 `kmong-hub-dispatcher` App을 생성 (Webhook 비활성, Actions Read and write, 설치는 **Only select repositories** 중앙 `hibi89/hackathon-command-center-2026` 하나). 기존 `kmong-hub-source-auditor`는 read-only 유지. App private key·새 webhook HMAC 비밀키는 채팅/Repo에 전송 금지, 추후 Vercel Production env에 직접 안전 입력. `KMONG_DISPATCH_ENABLED`는 서명/권한 E2E 시험 전 false 상태 유지. 정기 cron 설정과 제품 원장/공식률 유지.
+
 ## [2026-11-13 약 15:23 KST] AZENTFLOW AX P70 양OS 합성 기술 검증·크몽 등록원장 최신화
 
 - 사용자 목표 AZENTFLOW AX 70% 단계. 원본 `hibi89/HAE@feature/axflow-mvp` 기능/테스트 SHA `12987055802c1e2e3dbf7eb5c5820382a52daef4`; 상품 `hibi89/Freelancer@product/hae-la-automation`의 [P70 수용 기록](https://github.com/hibi89/Freelancer/blob/product/hae-la-automation/docs/P70_ACCEPTANCE_EVIDENCE_20261113.md).
