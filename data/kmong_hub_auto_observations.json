@@ -52,13 +52,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "880586d7e63f38bd2c5e20f73f5bf46aa87d5d49",
+        "head_sha": "3d5d2d657738ae27df8a527275a1e5381f36c52e",
         "matches_current_head": true,
-        "run_id": 43520778342,
+        "run_id": 43523343218,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "880586d7e63f38bd2c5e20f73f5bf46aa87d5d49",
+      "head_sha": "3d5d2d657738ae27df8a527275a1e5381f36c52e",
       "record_id": "ACTIVE-05",
       "repository": "hibi89/data2web_studio",
       "status": "PRESENT",
@@ -246,14 +246,14 @@
     },
     {
       "gate": {
-        "conclusion": "failure",
-        "head_sha": "4f7277e70a46c24b6cf0ccf394df714450a7a719",
+        "conclusion": "success",
+        "head_sha": "cea0ec09ac4a85a16e369bd302986959fca408b0",
         "matches_current_head": true,
-        "run_id": 43516796426,
+        "run_id": 43523337300,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "4f7277e70a46c24b6cf0ccf394df714450a7a719",
+      "head_sha": "cea0ec09ac4a85a16e369bd302986959fca408b0",
       "record_id": "CANDIDATE-06",
       "repository": "hibi89/Freelancer",
       "status": "PRESENT",
@@ -614,13 +614,13 @@
           "branch": "feature/final-blueprint-p85-evidence-20261113",
           "gate": {
             "conclusion": "success",
-            "head_sha": "880586d7e63f38bd2c5e20f73f5bf46aa87d5d49",
+            "head_sha": "3d5d2d657738ae27df8a527275a1e5381f36c52e",
             "matches_current_head": true,
-            "run_id": 43520778342,
+            "run_id": 43523343218,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "880586d7e63f38bd2c5e20f73f5bf46aa87d5d49",
+          "head_sha": "3d5d2d657738ae27df8a527275a1e5381f36c52e",
           "status": "PRESENT"
         },
         {
@@ -866,14 +866,14 @@
         {
           "branch": "product/rag-enterprise-knowledge",
           "gate": {
-            "conclusion": "failure",
-            "head_sha": "4f7277e70a46c24b6cf0ccf394df714450a7a719",
+            "conclusion": "success",
+            "head_sha": "cea0ec09ac4a85a16e369bd302986959fca408b0",
             "matches_current_head": true,
-            "run_id": 43516796426,
+            "run_id": 43523337300,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "4f7277e70a46c24b6cf0ccf394df714450a7a719",
+          "head_sha": "cea0ec09ac4a85a16e369bd302986959fca408b0",
           "status": "PRESENT"
         },
         {
