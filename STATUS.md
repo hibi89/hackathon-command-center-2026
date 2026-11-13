@@ -1,3 +1,10 @@
+## [2026-11-14 KST] CITEVAULT AX 최종설계 85% 추진 — Ed25519 REVIEW_HOLD 실제 HTTP/SQLite 통합
+
+- **제품 정본:** `hibi89/Freelancer@product/rag-enterprise-knowledge c213f72a4978bfbbee3004cefe6f5ecf9a8ff362`. 전체 최종설계 24개 항목 근거 `docs/FINAL_BLUEPRINT_85_ACCEPTANCE_MATRIX_20261114.md`, 신규 증거 `docs/P85_SIGNED_REVIEW_INTEGRATION_EVIDENCE_20261114.md`. `CITEVAULT AX [작업중]` / 공식 **UNASSESSED** / 85% 미검증 / RELEASE HOLD/SALE NO-GO.
+- **코드 실구현:** `p70-local-review.mjs` 실제 검토된 PREP 매핑 원문 SHA 계산·재검증; `p85-review-sql.mjs`은 P70 매출 원본 SHA+PREP mapping SHA를 별도 SQLite 고정 집계와 결속; `p85-signed-review-gate.mjs` 새 모듈 host-trusted Ed25519 키·tenant·producer version/expiry/재사용 검증; 기존 `p85-journey.mjs` `POST /v1/assess` 통합. 서명 불일치/매핑 변조/타조직이면 숫자·문서 인용 모두 불반환. 정상 서명에서도 `answer:null/REVIEW_HOLD`·실고객 승인은 false.
+- **실행 근거:** Linux Node22.16/Python3.13.5 변경 후 P85 **10개 테스트 파일 각각 완료 → 합계 138PASS/0FAIL/0SKIP**, 신규 signed-journey **9PASS**·기존 journey18/HTTP17 및 native PDF/DOCX13 등 독립 명령 완료. **전체 단일 runner 명령은 제한시간 초과로 미완료**; 이를 PASS로 작성 금지. 원격 Git blob/local SHA 신규·수정5파일 5/5 동일. ZIP `CITEVAULT_AX_P85_signed_review_integrated_20261114.zip` SHA256 `84a9ea2725fe8391451a6942f5ec4628471c86f0d66bb9bc3d3b8fab3d4aa99e` CRC OK, 압축해제 신규9PASS/운영자 demo PASS. Actions Ubuntu24.04/Windows2022 job 정의만 갱신, Hosted 실제 완료 미확인.
+- **원본 RAG 분리:** 원본 RAG Studio 과거 Actions `43231121679`의 Windows+Ubuntu job SUCCESS를 확인했지만 이는 CITEVAULT 정확 pin `c5867b3951f51bfa97cadd1aad8fb13e9cf9e604` 3SKIP과 다름. 원본 pinned test/원본 PREP/SMAX producer/실기업 IdP·권리·실한국어 LLM/Win CI·고객 수용 미검증. 과금/계정권한/고객 데이터·원본·타제품·Production/Vercel 변경 0.
+
 ## [2026-11-14 KST] FlowPilot Universal F09 Windows EXE 3회 검수 실제 CI 성공 및 F10 무료 라이선스 사전검토
 
 - 최종설계 전체 F01–F10 원본기준 유지, **공식 85% 미인증/UNASSESSED**. 제품 `hibi89/hibi89-ugreen-nas-hackathon@product/flowpilot-universal` 소스 `e8bc4f318087bd83634f9f177e73fbc87e43a95f`, 제품 문서 `3f63adaac2c079abec37d97543ee6efd18c4c47f`. Python3.11 Windows EXE `--field-trial` consent-only 3-round full-SHA, local JSON/HTML/SQLite 검증 내장; `--windowed` no stdout 안전, 기존 GUI/engine 불변.
