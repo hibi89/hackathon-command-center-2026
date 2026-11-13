@@ -1,3 +1,11 @@
+## [2026-11-13 KST] CITEVAULT AX P85 통합 검증 — 제품 1fc73ef7
+
+- 사용자 85% 목표에 대한 공식 최종완성률: UNASSESSED / 미달성 검증 대기. CITEVAULT AX [작업중], RELEASE HOLD/SALE NO-GO 보존.
+- 신규 하나의 HTTP /v1/assess: 합성 사용자/조직·그룹·프로젝트 ACL-before-read, 실 PDF 페이지+DOCX 문단 인용, P70 SMAX/PREP CSV SHA/매핑 REVIEW_HOLD, SQLite in-memory fixed query-only 총매출 검산. 정식 답변·승인은 생성하지 않고 answer:null, REVIEW_HOLD를 반환. scripts/p85-synthetic-demo.mjs --self-test 실제 localhost 동작.
+- 실제 실행: Linux Node22.16 + Python3.11 단일 통합 검증16PASS/0FAIL; 전체 P50/P70/P85 124 total/121PASS/0FAIL/3SKIP(원본 RAG checkout 필요). ZIP 독립 해제 후 직렬 실행 87PASS/0FAIL/0SKIP 및 demo selftest PASS. 신규 소스·테스트·데모 6개 Git blob/local exact match.
+- GitHub Actions: Ubuntu24.04/Windows2022 matrix에 통합 tests 및 데모 추가, 실제 Hosted CI/Windows run/log는 미확인. 원본 pinned RAG SQL/PDF/DOCX/SMAX 실통합, 실제 고객 권리·기업 IdP/한국어 모델/Win10/11 인수/사용자 승인 설계 가중치 모두 미완.
+- 정본 hibi89/Freelancer@product/rag-enterprise-knowledge 1fc73ef7c6bd43015cd7fbf3c9f505940f61982b; docs/P85_UNIFIED_EVIDENCE_20261113.md. 해총 후보 감사표/등록부 CITEVAULT 행 두 곳만 최신화, 타상품 보존. Production/Vercel 미적용.
+
 ## [2026-11-13 KST] FlowPilot Universal P85 체크리스트 승인·실 Windows junction·EXE 전체 ZIP 재배치 CI PASS / 공식 85% 미인증
 - 독립 제품 `hibi89/hibi89-ugreen-nas-hackathon@product/flowpilot-universal` 기능 SHA `458673ddbec8102dadc04c45ffe1a03f646c119a`, 문서 HEAD `44301fd666fd89bff4339b36b3bf30641dea977e`. [Linux/Windows CI](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/actions/runs/43395109341) Windows 94 unique PASS /0FAIL/0SKIP (실 NTFS junction3PASS), Ubuntu 91PASS/3SKIP(Windows 전용), Tk 실 GUI 5PASS/OS, portable8 중복 재실행/OS, compileall 및 2/2 SUCCESS.
 - Tk 편집기에 사용자 독립 승인된 계약/납품 경로+선택 SHA 입력, 중복/경로탈출/원본저장·덮어쓰기 차단 및 schema-v1 JSON 신규 저장. Win 실제 mklink /J 중첩·소스·출력 junction 3종 거부. [Windows onedir EXE](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/actions/runs/43395109335) SHA 전체 ZIP→새 폴더 압축해제→개발용 Python PATH 없이 EXE synthetic 자체검사 EXIT0, unsigned/미배포.
