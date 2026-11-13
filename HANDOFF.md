@@ -1,3 +1,14 @@
+## [2026-11-13 KST] SITECRAFT AX P70 해총 인수인계 (10항)
+1. 목표·기술: SITECRAFT AX 최종설계 중 P70 실 Chromium 합성 3사이트 검색/필터/상세 관찰→Astra P4 provenance+review digest→원형 Fable static→REA Pro 독립앱 생성 및 브라우저 기능 비교. 최종 전체 100점 분모·권리·실 고객 게이트는 유지.
+2. 완료·근거·결정: REA_Web product-specific 브랜치에 rea/sitecraft_p70.py, tests/test_sitecraft_ax_p70.py, sitecraft-ax-p70.yml, 수용 문서 구현. 기존 엔진 재사용, 3사이트 입력 별도 고정 SHA와 합성 승인 3 digest 검증, 일괄 atomic no-overwrite, 원형/기존 Pro/DATA2WEB 불변.
+3. 테스트·성공/실패: 정확 source SHA cf2c1171d92408af20bae1d4d037583f900e6e4f / https://github.com/hibi89/REA_Web/actions/runs/43377441817 GitHub Actions Ubuntu24.04 **82PASS/0FAIL/1WARN**, Windows2025 **82PASS/0FAIL/1WARN**, 2/2 SUCCESS. 실제 Chromium 참조/생성 앱 동작 검사와 P50·원형 P70/orchestrator 포함.
+4. 상태: **P70 합성 엔지니어링 게이트 충족**, 전체 사용자 최종설계 공식 완성률 **UNASSESSED**(전 100점 승인 배점/요구 추적 미충족), SITECRAFT **[작업중] 유지**, P85/95/100 별도 대기, RELEASE HOLD.
+5. 오류·원인·재시도/대안: 이번 코드 CI FAIL 0; Starlette TestClient deprecation WARN 1/OS. 실사이트 사용권/고객 접근 허가 없는 external scan, 원형 소스 복제, 수동 운영/유료 AI/배포 금지. 기존 검증된 synthetic 접근을 유지.
+6. GitHub 저장소·브랜치·SHA·경로: hibi89/REA_Web@feature/sitecraft-ax-p70-20261113 기능 SHA cf2c1171d92408af20bae1d4d037583f900e6e4f docs SHA 4639eabb8c9cb43bded6826c68fb3385571d2c95. 기획 hibi89/Freelancer@product/rea-website-rebuild SHA ca9bca5936de7b1d71580852bbf4fa6a1bb57cba. 중앙 hibi89/hackathon-command-center-2026@kmong-productization. 핵심 rea/sitecraft_p70.py/tests/test_sitecraft_ax_p70.py.
+7. Production/환경: Github-hosted Ubuntu24.04/Windows2025 Python3.11/Chromium/loopback Fable & Pro FastAPI/SQLite, pinned Astra. Production/Vercel/실 고객 운영 미적용.
+8. 원본·백업·인증·보호: REA_Web 원형 feature/website-analysis-rebuild@82fb8da349de72f45eeaf15f7e997c2d449cf488, 기존 SITECRAFT P50 branch SHA 55413aa5ba1eb293aa1f29b34fa9589bb27f39b8 분기 보존. 고객자료·쿠키·토큰·실URL 미사용, Git SHA로 원복 가능.
+9. 다음 우선순위·완료 기준: 사용자 다음 P85 승인 시 3개 전후 다중 동작 desktop/mobile·RGB 차이·XSS/외부요청 거부·Win/Ubuntu CI. 공식률 70 주장/표식 해제는 사용자 승인 100점 가중 요구별 실증 후에만, 실사이트/유료/Production 별도 승인.
+10. 확인일시·검증범위: 2026-11-13 KST, 정확 소스 SHA/CI runner logs·원격 브랜치 확인. 실제 외부 고객사이트·Fable headed record·물리 Win10/11 Chrome/Edge UAT·출시권리·Vercel 미검증. 다른 상품 목록·표시·등록이력 보존.
 ## [2026-11-13 15:15 KST] Vercel UI 신규 프로젝트 성공 확인 — 인수인계 10항
 1. **목표·확정 요구·기술:** GitHub 35개 저장소 70 refs 증거를 Source GitHub App Webhook → Vercel Serverless → Hub-only GitHub App Actions:write → 기존 collector로 이벤트시 갱신, 기존 11:10 KST 예약 fallback 보존. 공식 29/29 UNASSESSED 유지.
 2. **완료 기능·변경·근거:** 사용자 화면에 `kmong-hub-event-bridge` 신규 Vercel `hibi89` Hobby 프로젝트 `Deployed to Production` 확인. 앞선 설정 화면 Github repo `hibi89/hackathon-command-center-2026`, `main`, Root `services/kmong-event-bridge`, Other 확인. 실제 Vercel 화면 `Visit` 링크 `https://kmong-hub-event-bridge.vercel.app/` 및 `https://vercel.com/hibi89/kmong-hub-event-bridge`.
