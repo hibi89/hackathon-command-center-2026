@@ -1,4 +1,6 @@
 # WORKNOVA Desk P70 offline engineering audit — 2026-11-13 KST
+> **Final P70 checkpoint — 2026-11-13 KST:** [private feature HEAD `16d08b79621a303e190835a74885d58d75d513d9`](https://github.com/hibi89/Freelancer/commit/16d08b79621a303e190835a74885d58d75d513d9) adds safe GUI selection retention and real Tk8.6/Xvfb **full synthetic UI E2E** (customer→quote→human approval→contract activation→delivery→acceptance→manual 50 KRW collection and 60 KRW outstanding, audit verified). GUI blob `2570deb257d464e23b3c8ff9ff928d79e763166b`, E2E smoke blob `74de751c52c7d18e831bc0122343786e09c7af10`, final P70 trace blob `e9b08140261efff5d3ab30440fac4fc4a7c5df8c` independently read back. Python 37/37 PASS unchanged. Remote commit Author/Committer `hibi89` email matched connected GitHub account. Below `34d7d052` is prior first P70 implementation commit; preserve as history. Final formal progress **UNASSESSED**, `[작업중]`, RELEASE HOLD, Windows/customer NO_TEST.
+
 
 **Verdict:** Local P70 engineering scope implemented/verified; **formal final-blueprint completion UNASSESSED**, requested final 70% not certified, central **[작업중]** preserved, **RELEASE HOLD / NO SALE / no Kmong listing**. This does not reassign weights or alter the original WD-01..WD-14 buyer-facing final design.
 
