@@ -1,3 +1,15 @@
+## 2026-11-14 KST — 전체 GitHub 저장소 공개 전환 결과(10항 인수인계)
+1. 목표/기술: GitHub Actions 무료 표준 runner 활용을 위해 소유자가 `hibi89` PRIVATE 17개를 CLI에서 PUBLIC 전환. 중앙 소스/크몽 상품 코드는 보존.
+2. 검증 완료: 사용자 `17/17` PUBLIC·0 실패, GitHub 연결 원격 목록 재조회 `35 PUBLIC / 0 PRIVATE`. 감사 정본 `docs/audits/ALL_35_GITHUB_REPOSITORIES_PUBLIC_VERIFICATION_20261114.md`.
+3. 테스트: 35개 visibility 메타데이터 일치 검증 PASS. 새 공개 전환 후 35개 CI 전수/실특정 소스 작업·billing quota 해제는 NOT_RUN/UNVERIFIED. 기존 hub #43520792229 SUCCESS, 일부 Freelancer/data2web 과거 failed runs는 전환 후 CI 증거 아님.
+4. 상태: 공개 전환 완료, 새 Actions quota/실워크플로 정상화 및 비밀 유출·라이선스 감사 대기. 전체 제품 29종 공식 UNASSESSED/출시 HOLD 유지.
+5. 오류/원인·대안: 계정의 실제 Actions 결제 한도는 미조회. 실패 시 해당 exact run의 빈 job/스텝/runner 할당/로그 구별→공개 standard runner 새 CI 실행/비밀 스캔. 기존 private 기간 실패를 제품 코드 장애로 단정 금지.
+6. 저장소·브랜치·SHA: `hibi89/hackathon-command-center-2026@main`, 기록 전 `94400247583590976da15a4507fbd16b06726670`; `kmong-productization` 별도, 기존 35 repositories user ownership; 이번 문서 커밋 actual SHA는 main GitHub readback 참조.
+7. Production: Vercel `kmong-hub-event-bridge.vercel.app/api/webhook` 기존 엔드포인트/실 SHAs 미검증, 새 배포·프로젝트 생성 없음; 호스팅 서비스 동작과 저장소 공개는 독립.
+8. 원본/백업/비밀: 사용자 CLI 공개 전 목록 `$env:USERPROFILE\github-private-repos-before.txt` 저장됨(로컬 존재 자체는 미확인). 과거 커밋/Actions log 공개 위험·push ruleset 비활성화 대비 감사를 최우선; 토큰/개인정보 중앙 문서 미기록, 원본 코드 미수정.
+9. 다음/완료 조건: post-public workflow 성공·한도 해제 확인→35 repos 공개 이력/비밀/라이선스/Artifacts 보호 감사→Source Auditor/Dispatcher/Webhook E2E와 29제품 단일 원장 상태 재대조. 유료/권한·설정 변경은 사전 승인.
+10. KST/범위: 2026-11-14. 확인 범위 GitHub `visibility` API 및 해당 시점 Actions run 목록, 공식 GitHub 문서. 실보안/브라우저/전환 후 CI·Vercel **미검증**.
+
 ## 2026-11-14 KST — 미래 과제: 해총 GitHub App × AI Code Checker 자동검수 (문서 등록만)
 1. **목표/기술:** 기존 Source Auditor/Dispatcher App + GitHub Actions + `hibi89/ai-code-checker` offline v2로 repo/PR별 SHA 기반 자동 정적 검사→중앙 결과 수집. 본 설계 정본 `docs/strategy/KMONG_GITHUB_APP_CODE_CHECKER_AUTOMATED_QA_BLUEPRINT_20261114.md`.
 2. **현재/결정:** 중앙 35 repos/80 refs/29 product observations 실검증 유지. 제안 A(소스 repo에서 오프라인 스캔→중앙 최소 메타데이터) vs B(중앙 private 원문 취급) 중 A 권고. 사용자 추가 결제 0원, 외부 LLM/새 App/권한 변경 불허.
