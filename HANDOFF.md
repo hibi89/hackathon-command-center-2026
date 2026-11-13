@@ -1,3 +1,16 @@
+## [2026-11-14 KST] WORKNOVA Desk onedir EXE 빌드 실증 — 중앙 인수인계 10항
+
+1. **목표/기술:** 승인 WD01~14 총100점의 최종 구매자 수용85점, 로컬 Python/SQLite/Tk Windows 제품.
+2. **완료/결정:** 사용자 Windows Python3.11.9, PyInstaller6.22.3 `onedir --windowed` EXE 생성 및 COLLECT 완료. 기존 빌더 `PYTHONNOUSERSITE=1` import 차단은 `--plan` 원본 인자 직접 실행으로 우회(기존 코드도 별도 수정 저장).
+3. **검증:** 전달 PowerShell 빌드 `Build complete!`, `WORKNOVA-Desk.exe` 출력 존재; **파일 크기 표가 잘리고 SHA256 출력 없음**. 본 EXE 런타임·GUI·PE MZ·원격 정확 소스 SHA·무Python/Defender·OS ACL·법적/실고객 검증 NOT_RUN. 이전 Python필수 소스형 Windows 합성 11PASS×2 별도.
+4. **완료/진행/대기:** WD13 부분 구축·빌드 증거만 강화. 전체 완전 고객 수용 PASSED 항목 미확인, **0/100, 목표85 미달, [작업중]/RELEASE HOLD/판매 미등록**.
+5. **오류/원인/재시도:** 이전 사용자 사이트 경로 차단 환경변수 코드 결함. 모듈 재설치나 전역 정책 변경 필요 없음. 빌드 성공 후 동일 작업 반복 금지; EXE SHA/MZ 읽기 전용 확인으로 전환.
+6. **저장소/브랜치/SHA:** `hibi89/Freelancer@product/worknova-desk-local` 새 [증거](https://github.com/hibi89/Freelancer/blob/product/worknova-desk-local/docs/P85_WINDOWS_EXE_BUILD_RESULT_20261114.md), 제품 현 문서 HEAD `4837f20063abc5df68aa2103a4cbff526372d661`; 중앙 `docs/audits/KMONG_16_CURRENT_20261111.md`. 로컬 빌드 바이너리 SHA 미수집.
+7. **배포/환경:** EXE는 별도 %TEMP%/dist 하위 미서명 후보, 웹/Vercel Production N/A. PC 상 기존 고객 DB는 접근하지 않음.
+8. **원본/백업/비밀:** 실제 고객 원장/PayPal 원본/Freelancer main/타제품·등록완료 이력·OS 권한 보존, 추가 과금 및 고객자료 업로드 없음.
+9. **다음 우선/완료:** 읽기 전용 Length/SHA256/MZ 확인→합성 임시 LOCALAPPDATA에 실 EXE 실행→DB 보호·서명/권리/실 고객 수용. 전체 WD-01~14 완전 항목 점수 ≥85 이후만 달성.
+10. **갱신·확인:** 2026-11-14 KST, 소유자 제공 콘솔 빌드 결과로만 성공 판단, EXE 실바이트·실행 미검증. 중앙 최신 HEAD 커밋 후 재확인.
+
 ## [2026-11-14 KST] WORKNOVA Desk PyInstaller user-site 빌드 수정 — 중앙 인수인계 10항
 
 1. **목표·요구·기술:** 사용자 승인 WD-01~14 합계100점/실고객 최종 수용85점 목표. Windows Python3.11 SQLite/Tk 오프라인 제품.
