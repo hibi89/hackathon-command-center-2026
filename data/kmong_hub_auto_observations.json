@@ -51,14 +51,14 @@
     },
     {
       "gate": {
-        "conclusion": null,
-        "head_sha": "7618cffb4ecbf6043ecfaa6dffecc874db1fba79",
+        "conclusion": "success",
+        "head_sha": "997ca062cd8c086f318a548f5a952ec2ef692ba7",
         "matches_current_head": true,
-        "run_id": 43508591647,
+        "run_id": 43508718291,
         "status": "LATEST_RUN",
-        "workflow_status": "in_progress"
+        "workflow_status": "completed"
       },
-      "head_sha": "7618cffb4ecbf6043ecfaa6dffecc874db1fba79",
+      "head_sha": "997ca062cd8c086f318a548f5a952ec2ef692ba7",
       "record_id": "ACTIVE-05",
       "repository": "hibi89/data2web_studio",
       "status": "PRESENT",
@@ -246,12 +246,12 @@
     },
     {
       "gate": {
-        "conclusion": null,
+        "conclusion": "success",
         "head_sha": "a45a44dd169e4c999c79287eb9ac7b8d614d7a41",
         "matches_current_head": true,
         "run_id": 43508647850,
         "status": "LATEST_RUN",
-        "workflow_status": "in_progress"
+        "workflow_status": "completed"
       },
       "head_sha": "a45a44dd169e4c999c79287eb9ac7b8d614d7a41",
       "record_id": "CANDIDATE-06",
@@ -613,14 +613,14 @@
         {
           "branch": "feature/final-blueprint-p85-evidence-20261113",
           "gate": {
-            "conclusion": null,
-            "head_sha": "7618cffb4ecbf6043ecfaa6dffecc874db1fba79",
+            "conclusion": "success",
+            "head_sha": "997ca062cd8c086f318a548f5a952ec2ef692ba7",
             "matches_current_head": true,
-            "run_id": 43508591647,
+            "run_id": 43508718291,
             "status": "LATEST_RUN",
-            "workflow_status": "in_progress"
+            "workflow_status": "completed"
           },
-          "head_sha": "7618cffb4ecbf6043ecfaa6dffecc874db1fba79",
+          "head_sha": "997ca062cd8c086f318a548f5a952ec2ef692ba7",
           "status": "PRESENT"
         },
         {
@@ -866,12 +866,12 @@
         {
           "branch": "product/rag-enterprise-knowledge",
           "gate": {
-            "conclusion": null,
+            "conclusion": "success",
             "head_sha": "a45a44dd169e4c999c79287eb9ac7b8d614d7a41",
             "matches_current_head": true,
             "run_id": 43508647850,
             "status": "LATEST_RUN",
-            "workflow_status": "in_progress"
+            "workflow_status": "completed"
           },
           "head_sha": "a45a44dd169e4c999c79287eb9ac7b8d614d7a41",
           "status": "PRESENT"
