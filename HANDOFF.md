@@ -1,3 +1,15 @@
+## [2026-11-13 KST] BID_AX_P70_OFFLINE_20261113 — BID AX P70 인수인계 10항
+1. **목표/요건/기술:** 사용자 지시 전체 최종설계 70% 목표, R01~R21 전체·로컬 Tkinter/Python/SQLite, 중앙 29/19 체계 중 CANDIDATE-10.
+2. **완료/결정:** 원천 BID OWL 수정하지 않고 기존 P50 코어 보존, 고객 GUI·마감 임박 수동 조회·변경 diff·수동 감사 승인 아닌 검토 기록·보고서 3종·신규 경로 DB 복원/보안을 추가. 중앙 SaaS보다 고객 PC B 채택(비용·기밀/운영 용이).
+3. **검증:** Linux Python3.13.5 **45/45 PASS**, Tk8.6 Xvfb GUI 생성·종료 PASS, CLI 고객 E2E, GitHub 17/17 blob 내용 readback PASS. Remote CI/진짜 Win10/11/실공고/고객/Production NOT_RUN.
+4. **완료/진행/차단:** 엔지니어링 P70 오프라인 로컬 흐름 PASS; 정식 최종 70%는 미입증, 공식 UNASSESSED, `[작업중]` 유지, RELEASE HOLD/미등록.
+5. **오류/대안:** SQLite 연결 종료 경고 수정해 warnings-as-error PASS. 공식 API 원응답/키와 상업 계약 미확보로 온라인 자동조회는 구현 주장 금지; 사전승인 키·공식 스펙으로 후속 검증.
+6. **저장소/SHA/경로:** `hibi89/Freelancer@product/bid-ax-public-procurement` 기능 SHA `22d44f5e2fb39024703331903b881bec7bfd6521`, `bidax/{core,cli,desktop,workflow}.py`, tests, `docs/P70_STAGE_EVIDENCE_20261113.md`, 중앙 이번 기록.
+7. **운영/배포:** `python -m bidax.cli --db local.db gui`, 테스트 `python -Werror::ResourceWarning -m unittest discover -s tests -v`; Windows GUI 타겟, Linux Xvfb만 실제. Vercel Production 미적용.
+8. **원본/백업/보안:** 제외 BID OWL·기존 등록 이력·비공개 원본·고객 자료 손대지 않음, DB create-only 백업·복원, 이전 소스 SHA `d614c08e611e`로 복구 가능. 비밀/실 API 키 없음.
+9. **다음 작업:** 전체 R01~R21 가중치 합의·독립 수용, 실 나라장터 100건/자격10건, 실제 Windows GUI/EXE·원문 첨부/스케줄 복구·법률/고객 시험 후에만 공식 70% 재판정; 다른 후보 손대지 말 것.
+10. **검증 시각/범위:** 2026-11-13 KST, 로컬 Python 3.13.5/Tk8.6/Linux Xvfb와 GitHub 기능 커밋 원격 소스 17/17; CI/실공고/Windows/고객 미검증. 이번 중앙 문서 커밋 SHA는 최종 원격 HEAD에서 조회.
+
 ## [2026-11-13 KST] CITEVAULT AX 사용자 P70 — 중앙 10항 최신 인수인계
 
 1. **목표·기술:** 기업형 CITEVAULT RAG 최종설계 대비 70% 사용자 목표. RAG Studio BM25/SQLite/PDF/DOCX+PREP/SMAX 승인+기업 ACL/근거 검색. 현재 공식 최종설계 `UNASSESSED`, 70% 검증 미달.

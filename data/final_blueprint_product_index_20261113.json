@@ -427,10 +427,10 @@
       "repository": "hibi89/Freelancer",
       "tracked_branch": "product/bid-ax-public-procurement",
       "blueprint_reference": "docs/FINAL_BLUEPRINT.md",
-      "historical_seen_head_prefix": "d614c08e611e",
+      "historical_seen_head_prefix": "22d44f5e2fb3",
       "official_final_completion": "UNASSESSED",
       "owner_requirement_weights": "NOT_INDEPENDENTLY_APPROVED",
-      "detail_trace": "R01-R21_PROTO_TRACE_UNWEIGHTED"
+      "detail_trace": "R01-R21_P70_OFFLINE_45PASS_UNWEIGHTED"
     },
     {
       "record_id": "CANDIDATE-11",

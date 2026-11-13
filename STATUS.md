@@ -1,3 +1,9 @@
+## [2026-11-13 KST] BID_AX_P70_OFFLINE_20261113: BID AX 오프라인 P70 기술 단계 검증 · 공식 UNASSESSED
+- 소스: PRIVATE `hibi89/Freelancer@product/bid-ax-public-procurement` [기능 SHA `22d44f5e2fb3`](https://github.com/hibi89/Freelancer/commit/22d44f5e2fb39024703331903b881bec7bfd6521), **17/17 원격 내용 일치**. 원본 BID OWL/다른 상품 브랜치/29→19 SKU 불변.
+- 기존 19 PASS → Python3.13.5/Linux **45 PASS / 0 FAIL / 0 SKIP**, Tk8.6 Linux Xvfb GUI smoke PASS. Tkinter 고객용 흐름(기업 프로필→공고 JSON 가져오기→사전검토→수동 검토→보고서/백업), 변경 이력, 기한 알림(실행 중 조회), UUID 중복방지, SQLite 무결성·새 파일 복원, JSON/CSV/HTML 보고.
+- **목표: 최종설계 70% (미달 검증 대기)**. 기술 단계 P70만 로컬 검증; 공식 전체 **UNASSESSED**, `[작업중]` 유지, RELEASE HOLD, 크몽 미등록. 사용자 확정 R01~R21 가중치/실 공식 API·공고100/인간 자격대조10·Windows10/11·실고객·설치/권리·Production 모두 미검증. 실제 G2B API 호출/고객 데이터 전송 0건.
+- 독립 상세: [BID AX P70 구현·검증 추적](docs/audits/BID_AX_P70_OFFLINE_ACCEPTANCE_20261113.md). 기존 P50 감사·다른 상품 상태는 이력 보존.
+
 ## [2026-11-13 KST] PROOFQA AX P50→P70 실도구/합성 검증 SUCCESS — 공식률 UNASSESSED
 - P50 정확 기능 `e2b79f6c242d3d501cc2195732196abe5d0bba91` 보존, P70 신규 `hibi89/ai-code-checker@feature/proofqa-ax-p70-graph-browser` 실제 기능 SHA `1c4e9b629476ac9ac76b40a207f25408b2002a18`, [Draft PR #84](https://github.com/hibi89/ai-code-checker/pull/84) 미병합, original main/상업 브랜치 무변경.
 - `graphifyy[sql]==0.9.108` 실제 headless local AST: Python3·JS3·SQL2 위치노드, Code Checker 2 finding↔실 Graphify EXTRACTED 구조관계 2/2 (`FILE_SCOPE_APPROXIMATE`/미확정). `agent-browser@0.43.0` 실제 Chromium localhost synthetic 클릭/snapshot, HTTP GET200/GET500·POST save200·reload+GET reopen200 확인. 고객 소스·웹/실 계정 0, OS-level sandbox 미제공.
