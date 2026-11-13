@@ -1,3 +1,9 @@
+## [2026-11-14 KST] FlowPilot Universal 사용자 중단 결정 — 85 공식 수용 불가 조건이라 일단 보류
+
+- **결정:** 고정 전체 F01–F10 최종완성률 85%에 대해 남은 무장비 작업만으로 달성 검증 불가, 사용자 요청 따라 **PAUSED / OWNER HOLD**. USB 예상 11/17, NAS 없음. 실제 Windows10/11·USB·승인 NAS 2제조사/SMB F09, F10 구매자·권리·약관·허가, 기존 100점 설계 수용 증거 미확정. 공식 **UNASSESSED/목표85 미인증**.
+- **코드/검증 보존:** `hibi89/hibi89-ugreen-nas-hackathon@product/flowpilot-universal` 코드 SHA `e8bc4f318087bd83634f9f177e73fbc87e43a95f`, 문서 보류 SHA `0f2c544667c87b4d2df8fc5dc768eaa0e7821f18`, Win111PASS/Linux104PASS+7SKIP, bundled EXE selftest/ZIP/설치/안전 제거 PASS, 모두 **기존** 합성·CI 증거. 중단 문서 커밋만, 새로운 현장검증/실출시 없음.
+- **재개 경계:** 사용자 지시가 있을 때만 장비 접근/권한 승인 받아 3회 검증 재개. 자동 작업·스케줄/구매/공유 설정 변경 없음. **[작업중]**은 목표 미달 표시이므로 계속 유지하며 실제 진행 의미 아님; RELEASE/SALE HOLD, 미등록. 다른 제품 기록 불변.
+
 ## [2026-11-14 KST] WORKNOVA Desk WD-13 무료 독립 EXE 준비 — 최종설계 공식 점수 불변
 
 - **제품 코드/문서 HEAD:** `hibi89/Freelancer@product/worknova-desk-local 8455b2950b1d59d3f2167b3b4d7652262573c7c1`. 신규 3개 파일 `tools/windows_gui_entry.py`, `tools/windows_build_exe.py`, `tests/test_windows_exe_build.py` 및 [근거 문서](https://github.com/hibi89/Freelancer/blob/product/worknova-desk-local/docs/P85_WINDOWS_EXE_CANDIDATE_20261114.md). 기존 WD-01~14 승인 100점 고정, **정식 전체 고객 수용점수 0/100(구현률 의미 아님)**, 85 목표 미달.

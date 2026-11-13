@@ -1,3 +1,16 @@
+## [2026-11-14 KST] FlowPilot Universal owner-hold handoff (10 items)
+
+1. **목표·요구·기술:** 원본 F01–F10 전체 설계와 공식 ≥85% 고정, 로컬 Python3.11 Tk/SQLite/PDF/Windows PyInstaller·USB/SMB. 분모/가중치 소급변경 금지.
+2. **완료 기능·판단:** 기존 3회 SHA F09 Windows EXE 실행 경로, 라이선스 F10 공식 소스 조사. 사용자 새 지시: 장비 없이 나머지 작업으로 85 입증 못한다면 **PAUSE**. 즉시 개발 보류, 본 문서로 승인 상태 기록.
+3. **테스트:** 기능 SHA `e8bc4f318087bd83634f9f177e73fbc87e43a95f`; [CI #43511163767](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/actions/runs/43511163767) Win111 PASS/Linux104 PASS+7 Win 전용 SKIP; [EXE #43511163790](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/actions/runs/43511163790) 최초/ZIP재배치/임시설치 selftest EXIT0·안전제거 PASS. 본 변경은 문서만, 신규 검사 미실행.
+4. **완료/진행/보류/차단:** PAUSED/OWNER HOLD. F09 실제 Windows10/11·USB·2개 NAS 브랜드, F10 법/유저 인수, 고정 전체 100점 점수 근거 부재. 공식 UNASSESSED, 85 미인증, [작업중] 유지(목표미달 표식), RELEASE/SALE HOLD.
+5. **장애·근거·회피:** 소스 CI 장애 아님. 합성·runner 성공만으로 전체 구매자 수용 비율을 계산할 증거 없음. 실기기 데이터 없는 85 주장 금지; 유료장비/공유 권한변경·무의미한 합성테스트 추가 회피.
+6. **저장소/브랜치/SHA:** 제품 `hibi89/hibi89-ugreen-nas-hackathon@product/flowpilot-universal`, 기능 `e8bc4f318087bd83634f9f177e73fbc87e43a95f`, 문서 `0f2c544667c87b4d2df8fc5dc768eaa0e7821f18`; 중앙 `hibi89/hackathon-command-center-2026@kmong-productization` 이 커밋 뒤 HEAD 확인. 주요 docs 제품 `products/flowpilot_universal/{STATUS.md,HANDOFF.md}`, 중앙 ledger 이 파일.
+7. **Production/환경:** desktop offline Windows, Vercel 미적용; GitHub-hosted Windows unsigned candidate만, 공개 배포/실판매/고객 기기 설치 없음. 완료된 증거는 CI 한정.
+8. **원본·백업·접근:** 제품 전 SHA·브랜치 유지, UGREEN 해커톤 lead/main 및 타 크몽 제품과 등록 이력 불변. USB 구매 총 결제 30,550원은 사용자 개인 구매; 신규 비용·데이터 업로드·NAS/SMB 공유권한/고객원본 변경 전무.
+9. **다음 우선순위·승인:** 예상 USB 도착 2026-11-17, 배송되었다는 증거 및 사용자의 명시적 재개/접근권 승인 있을 때만 로컬 3회 실검사 지원. 실제 2 NAS 제조사 검증 가능성/고정 F01–F10 100점 수용근거 확보 전 85 산정 불가. 추가 장비 구매 불요.
+10. **갱신/검증:** 2026-11-14 KST 사용자 보류 요청. 기존 Win111/Linux104+7SKIP, EXE CI 성공만 확인, 현장 NAS/USB/공식 완성률 NOT_VERIFIED. **PAUSED**, [작업중], RELEASE HOLD.
+
 ## [2026-11-14 KST] WORKNOVA Desk WD-13 오프라인 EXE 빌드 준비 — 인수인계 10항
 
 1. **목표·설계·기술:** WD-01~14 사용자 승인 총100점(고정), 전체 구매자 수용 증거 최소85점. Python3.11+/SQLite/Tk Windows10/11 오프라인 프로그램; 비용0·외부 전송0.
