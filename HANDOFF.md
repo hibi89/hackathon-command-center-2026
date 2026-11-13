@@ -1,3 +1,16 @@
+## [2026-11-14 KST] WORKNOVA Desk PyInstaller user-site 빌드 수정 — 중앙 인수인계 10항
+
+1. **목표·요구·기술:** 사용자 승인 WD-01~14 합계100점/실고객 최종 수용85점 목표. Windows Python3.11 SQLite/Tk 오프라인 제품.
+2. **완료·기술 판단:** `pip --user`로 설치한 PyInstaller6.22.3은 부모에서 발견되지만 기존 빌드 서브프로세스 `PYTHONNOUSERSITE=1`에서 미발견. 시스템 재설치 대신 빌더가 해당 차단 변수를 제거하도록 최소 변경, 회귀 테스트1 추가. 고객 DB/업무 스키마 불변.
+3. **검증/미검증:** 사용자 제공 실제 Windows version6.22.3, plan PASS, build FAIL 로그. 수정 소스 exact Git blob `10d60c3789fb2f8c654479845ec9296dbb0c890b`에 대해 Linux3.13.5 5PASS/0FAIL mock/경로 단위, py_compile PASS 및 GitHub readback. 수정된 EXE 실제 Windows 빌드·실행/전체 제품 회귀 **NOT_RUN**. 이전 Python필수 포터블 11PASS×2는 별도 검증.
+4. **완료/진행/대기:** EXE 장애 원인 코드 수정·부분 검증; Win EXE/OS ACL/서명/고객 법률/상용폰트 미증빙. 공식 전체 항목 구매자 완전 수용 점수 **0/100**, 85 미달, **[작업중]/RELEASE HOLD/미등록**.
+5. **오류·재시도·대안:** 환경변수 차단이 근본 원인. 재설치·전역 PATH 변경 필요 없음; 기존 ZIP의 `--plan` JSON을 PowerShell로 직접 PyInstaller 호출하거나 최신 원격 ZIP 사용. 이전 실패한 `$out`은 재사용하지 않고 GUID 신규 폴더 사용. 유료 Actions 금지.
+6. **저장소·브랜치·SHA:** 제품 `hibi89/Freelancer@product/worknova-desk-local 4862937b8e1a03c59c0a68ab8d5fc58a711f52af`; 이전 복구 `d8ab09beae722607a180390dcc3807801fc569cb`, 상세 `docs/P85_PYINSTALLER_USER_SITE_FIX_20261114.md`. 중앙 원장 `docs/audits/KMONG_16_CURRENT_20261111.md` 갱신.
+7. **배포/명령:** Vercel Production 미적용. Windows에서는 고친 빌드 코드 사용하거나 기존 --plan 결과의 파이썬 실행 인자를 직접 사용 (제품 문서). 아직 실제 성공 미확인.
+8. **원본/백업/인증:** 고객 원본/DB/백업/OS 정책/PayPal 원본/Freelancer main/타 제품·등록완료 이력 수정 없음. 사용자 pip 설치 별도 유지.
+9. **다음 우선/승인:** 무료 Win 독립 onedir EXE 최초 생성/PE+SHA→격리 UI·DB 경로/보존 실동작 확인→ACL/서명·Defender/한글 Word·법적권리/실구매자 수용. 유료·실고객 자료/OS 권한 변경 승인 전 실행 금지.
+10. **일시·범위:** 2026-11-14 KST. 사용자 오류 로그+원격 소스 동일 Linux 단위 테스트만 새 증거. 중앙 최종 HEAD 본 커밋 후 재검증. 승인 WD 가중치 변경 없음.
+
 ## [2026-11-14 KST] WORKNOVA Desk owner native Windows QA 검증 인수인계 10항
 
 1. **목표·요구·기술:** 사용자 승인 WD01~14 100점 고정·최종 고객 수용85점, 오프라인 Python3.11/SQLite/Tk Windows 실기기 경로.
