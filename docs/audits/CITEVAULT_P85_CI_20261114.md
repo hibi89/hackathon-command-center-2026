@@ -1,5 +1,16 @@
 # CITEVAULT AX — 2026-11-14 KST P85 CI 교차 검증 (중앙 해총)
 
+## [2026-11-14 KST] 최신 hosted CI 실제 성공 — 기존 선실패 기록 대체
+
+- 기능 수정 source SHA: [`cea0ec09ac4a85a16e369bd302986959fca408b0`](https://github.com/hibi89/Freelancer/commit/cea0ec09ac4a85a16e369bd302986959fca408b0); 제품 상태/수용표/10항 인수인계 문서 SHA: [`2aa61be989ab72f59a6f71f722c4daec608dc9b1`](https://github.com/hibi89/Freelancer/commit/2aa61be989ab72f59a6f71f722c4daec608dc9b1).
+- [Actions CITEVAULT #43523337142](https://github.com/hibi89/Freelancer/actions/runs/43523337142) exact tested SHA: Ubuntu24.04+Windows2022 **6/6 SUCCESS, executed tests 378 PASS /0 FAIL /0 SKIP** (중복 OS 실행 합산). 원본 RAG 원본 11+24 PASS + CITEVAULT 실제 pinned source bridge36 PASS; Linux P70 contracts31, Linux/Windows P85 local 107+107, native actual PDF/DOCX/SQL 31+31.
+- [최종설계 정책 검사 #43523337300](https://github.com/hibi89/Freelancer/actions/runs/43523337300) SUCCESS (24항 실고객 최종수용 인증 아님).
+- 변경 내역: Python `-I`가 `PYTHONIOENCODING` 무시하는 Windows pipe UTF8 문제 `-X utf8` 지정; Windows SQLite test hook close-before-remove. 최신 기능 commit에서 CI 실제 양 OS PASS. 과거 #43516278650 최초 runner0 failure는 계정 지출/미납 한도 경고였으며 owner screenshot과 실제 public 전환 뒤 2차 rerun, Windows 회귀 발견으로 별도 기능 패치함.
+- **보안 주의:** 사용자 조치로 `hibi89/Freelancer` 저장소 전체 PUBLIC, 타상품 브랜치/과거 Git history 공개 위험; 전체 역사 비밀 스캔 미실시, assistant는 설정 변경/고객자료 커밋 0.
+- 최종설계 전체 공식 **UNASSESSED / 85% 미검증 / CITEVAULT AX [작업중] / RELEASE HOLD / SALE NO-GO**. 아직 실기업 직원 IdP, 고객 권리·신뢰 signed PREP/SMAX producer·승인 AX, 실 한국어 로컬 모델, 물리 Win10/11·Gold100·가중치 수용 증거 없음. 현 378 PASS는 합성/P50-P70 중심 CI이지 24항의 85%가 아님.
+- [상세 증거/남은 갭](https://github.com/hibi89/Freelancer/blob/product/rag-enterprise-knowledge/docs/P85_HOSTED_CI_RECOVERY_20261114.md). 다른 제품 수치·마커·등록 이력·개발 브랜치/Production 불변.
+
+
 - 제품 정본: [`hibi89/Freelancer@product/rag-enterprise-knowledge`](https://github.com/hibi89/Freelancer/tree/product/rag-enterprise-knowledge)
 - 기능 수정 commit: [`88564c860a3da0a8d9a7c3e4dac3c99a6b2e2cbe`](https://github.com/hibi89/Freelancer/commit/88564c860a3da0a8d9a7c3e4dac3c99a6b2e2cbe)
 - 제품 STATUS/HANDOFF 인수인계 commit: [`4f7277e70a46c24b6cf0ccf394df714450a7a719`](https://github.com/hibi89/Freelancer/commit/4f7277e70a46c24b6cf0ccf394df714450a7a719)
