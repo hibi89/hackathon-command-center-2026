@@ -5,6 +5,7 @@ import tempfile
 import unittest
 
 from verify import audit
+from canonical_scope import inspect_canonical
 
 class GateTest(unittest.TestCase):
     def setUp(self):
@@ -110,6 +111,92 @@ class GateTest(unittest.TestCase):
         data, ok = audit(self.root, "hibi89/demo")
         self.assertFalse(ok)
         self.assertIn("invalid same-repo proof", "\n".join(data["errors"]))
+
+
+class CanonicalScopeTest(unittest.TestCase):
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tmp.cleanup)
+        self.root = Path(self.tmp.name) / "caller"
+        self.root.mkdir()
+        (self.root / "docs").mkdir()
+        self.main = Path(self.tmp.name) / "main"
+        (self.main / "docs").mkdir(parents=True)
+        self.original = b"OWNER-CANONICAL-HAE\n"
+        (self.main / "docs/ECOSYSTEM_CANONICAL.md").write_bytes(self.original)
+        self.pins = Path(self.tmp.name) / "pins.json"
+        self.save_pin()
+
+    def save_pin(self, pins=None):
+        if pins is None:
+            digest = hashlib.sha1(b"blob " + str(len(self.original)).encode() + b"\0" + self.original).hexdigest()
+            pins = [{"repository":"hibi89/HAE", "ref":"main",
+                     "path":"docs/ECOSYSTEM_CANONICAL.md", "git_blob_sha":digest}]
+        self.pins.write_text(json.dumps({"schema_version":1, "pins":pins}), encoding="utf-8")
+
+    def check(self):
+        return audit(self.root, "hibi89/HAE", canonical_root=self.main, pins_path=self.pins)
+
+    def test_matching_main_only_document_without_manifest_is_unassessed(self):
+        data, ok = self.check()
+        self.assertTrue(ok)
+        self.assertEqual(data["gate"], "UNASSESSED")
+        self.assertEqual(data["canonical_blueprint"]["status"], "MATCHED")
+        self.assertEqual(data["official_final_completion"], "UNASSESSED")
+
+    def test_changed_canonical_rejected_even_without_manifest(self):
+        (self.main / "docs/ECOSYSTEM_CANONICAL.md").write_text("MODIFIED")
+        data, ok = self.check()
+        self.assertFalse(ok)
+        self.assertEqual(data["gate"], "CANONICAL_SCOPE_INVALID")
+        self.assertEqual(data["canonical_blueprint"]["status"], "DRIFT_DETECTED")
+
+    def test_missing_main_checkout_rejected(self):
+        data, ok = audit(self.root, "hibi89/HAE", pins_path=self.pins)
+        self.assertFalse(ok)
+        self.assertEqual(data["canonical_blueprint"]["status"], "CHECKOUT_MISSING")
+
+    def test_missing_main_blueprint_rejected(self):
+        (self.main / "docs/ECOSYSTEM_CANONICAL.md").unlink()
+        data, ok = self.check()
+        self.assertFalse(ok)
+        self.assertEqual(data["canonical_blueprint"]["status"], "FILE_MISSING_OR_UNSAFE")
+
+    def test_removed_pin_cannot_silently_disable_hae(self):
+        self.save_pin([{"repository":"hibi89/demo","ref":"main","path":"README.md","git_blob_sha":"a"*40}])
+        data, ok = self.check()
+        self.assertFalse(ok)
+        self.assertEqual(data["canonical_blueprint"]["status"], "PIN_MISSING_OR_DUPLICATE")
+
+    def test_duplicate_repo_pin_rejected(self):
+        p = json.loads(self.pins.read_text())["pins"][0]
+        self.save_pin([p,p])
+        data, ok = self.check()
+        self.assertFalse(ok)
+        self.assertIn("duplicated", " ".join(data["errors"]))
+
+    def test_unpinned_repo_stays_unassessed_without_checkout(self):
+        data, ok = audit(self.root, "hibi89/demo", pins_path=self.pins)
+        self.assertTrue(ok)
+        self.assertEqual(data["canonical_blueprint"]["status"], "NOT_CONFIGURED")
+        self.assertEqual(data["gate"], "UNASSESSED")
+
+    def test_altered_fingerprint_rejected(self):
+        p = json.loads(self.pins.read_text())["pins"][0]
+        p["git_blob_sha"] = "b"*40
+        self.save_pin([p])
+        data, ok = self.check()
+        self.assertFalse(ok)
+        self.assertEqual(data["canonical_blueprint"]["status"], "DRIFT_DETECTED")
+
+    def test_manifest_cannot_bypass_canonical_drift(self):
+        manifest = {"schema_version":1,"product":"HAE",
+                    "official_final_completion":"UNASSESSED"}
+        (self.root / "docs/final_blueprint_evidence.json").write_text(json.dumps(manifest))
+        (self.main / "docs/ECOSYSTEM_CANONICAL.md").write_text("MODIFIED")
+        data, ok = self.check()
+        self.assertFalse(ok)
+        self.assertEqual(data["gate"], "CANONICAL_SCOPE_INVALID")
 
 if __name__ == "__main__":
     unittest.main()

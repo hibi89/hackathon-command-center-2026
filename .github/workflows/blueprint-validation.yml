@@ -20,8 +20,15 @@ jobs:
           ref: main
           path: .final-blueprint-verifier
           persist-credentials: false
-      - name: Validate evidence without guessing completion
-        run: python3 .final-blueprint-verifier/tools/final_blueprint_gate/verify.py --repo . --output blueprint-gate-result.json
+      - name: Read caller main canonical blueprint without expanding permissions
+        if: github.repository == 'hibi89/HAE'
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: .final-blueprint-canonical
+          persist-credentials: false
+      - name: Validate evidence and canonical scope without guessing completion
+        run: python3 .final-blueprint-verifier/tools/final_blueprint_gate/verify.py --repo . --canonical-root .final-blueprint-canonical --output blueprint-gate-result.json
       - name: Archive report in caller repository only
         if: always()
         uses: actions/upload-artifact@v4

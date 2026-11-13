@@ -11,6 +11,7 @@ from pathlib import Path
 import re
 import sys
 from urllib.parse import urlparse
+from canonical_scope import inspect_canonical
 
 VERSION = 1
 MANIFEST = "docs/final_blueprint_evidence.json"
@@ -31,13 +32,19 @@ def valid_proof(proof, repo):
     m = re.fullmatch(r"/([^/]+/[^/]+)/actions/runs/[0-9]+/?", parsed.path)
     return bool(m and (not repo or m.group(1).lower() == repo.lower()))
 
-def audit(root, repo):
+def audit(root, repo, canonical_root=None, pins_path=None):
     out = {
         "schema_version": VERSION, "repo": repo or "unknown",
         "manifest": MANIFEST, "official_final_completion": "UNASSESSED",
         "gate": "UNASSESSED", "errors": [],
         "notes": ["Structural evidence check only; not independent feature acceptance."]
     }
+    canonical, canonical_errors = inspect_canonical(repo, canonical_root, pins_path)
+    out["canonical_blueprint"] = canonical
+    out["errors"].extend(canonical_errors)
+    if canonical_errors:
+        out["gate"] = "CANONICAL_SCOPE_INVALID"
+        return out, False
     p = root / MANIFEST
     if not p.is_file():
         out["notes"].append("No approved evidence manifest; no official score.")
@@ -120,8 +127,11 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--repo", type=Path, default=Path("."))
     parser.add_argument("--output", type=Path, default=Path("blueprint-gate-result.json"))
+    parser.add_argument("--canonical-root", type=Path, default=None)
+    parser.add_argument("--pins", type=Path, default=None)
     args = parser.parse_args()
-    data, ok = audit(args.repo.resolve(), os.getenv("GITHUB_REPOSITORY", ""))
+    data, ok = audit(args.repo.resolve(), os.getenv("GITHUB_REPOSITORY", ""),
+                     args.canonical_root, args.pins)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"Blueprint gate: {data['gate']}; official=UNASSESSED")

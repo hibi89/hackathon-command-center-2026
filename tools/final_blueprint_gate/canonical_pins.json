@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "kind": "AUDITED_GIT_BLOB_NOT_OWNER_SIGNED",
+  "pins": [
+    {
+      "repository": "hibi89/HAE",
+      "ref": "main",
+      "path": "docs/ECOSYSTEM_CANONICAL.md",
+      "git_blob_sha": "0d31062b0e3c6a570b37a35ace6fbfbe59ec2116",
+      "observed_main_head": "ff763ba8ec6002a01a0b08a02146e98193174e50",
+      "approval_status": "INDEPENDENT_VERIFICATION_PENDING"
+    }
+  ]
+}

@@ -46,3 +46,10 @@ write permissions are used.
 - Reject boolean `schema_version=true` and unhashable requirement status values as structured invalid inputs instead of mistakenly accepting or throwing an unhandled exception.
 - Four added negative regression tests bring the structural unit-test suite from 6 to 10 cases. These checks do **not** verify whether a CI run exists or passed, whether a SHA matches that run, whether all owner-approved requirements were retained, or whether a user actually approved the blueprint. They cannot certify a numeric official score.
 - No caller workflow, private product code, product manifests, permissions, external API calls, secret, production deployment, central ledger score, or previous history changed.
+
+## Read-only same-repository canonical fingerprint gate (2026-11-13 KST)
+- For the audited HAE ecosystem, `canonical_pins.json` records the observed Git blob SHA of `hibi89/HAE@main/docs/ECOSYSTEM_CANONICAL.md`; it is **not a signed owner approval or an approved 100-point rubric**.
+- The reusable workflow checks out the caller's own `main` into `.final-blueprint-canonical` **only for `hibi89/HAE`**, using the existing read-only caller token. Private bytes stay inside that caller job; the public repo stores only a file path and fingerprint.
+- The additional check fails closed for a missing/moved main blueprint, missing/duplicated required pin, inaccessible checkout, unsafe path, or changed Git blob. It runs **before** manifest inspection; no manifest still means official `UNASSESSED`, not certification.
+- The other 34 repositories are not yet pinned and remain `NOT_CONFIGURED`. Updating the central registry without independent review is not secure approval; branch protection/signatures would require separate consent.
+- The check does not prove semantic requirement coverage, CI evidence authenticity, the user's rubric approval, functional completion or product readiness. It does not automatically write into `kmong-productization` or change any product score.

@@ -15,5 +15,5 @@ jobs:
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
-      - name: Run 6 independent failure-mode tests
+      - name: Run blueprint and canonical-fingerprint regression tests
         run: python3 -m unittest discover -s tools/final_blueprint_gate -p "test_*.py" -v
