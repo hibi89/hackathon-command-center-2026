@@ -213,6 +213,18 @@ class WriteTest(unittest.TestCase):
         self.assertNotIn("sha", api.writes[0])
         self.assertEqual(api.writes[0]["branch"], "kmong-productization")
 
+    def test_schedule_cannot_initialize_first_snapshot(self):
+        api = HubFake()
+        with self.assertRaisesRegex(RuntimeError, "scheduled sync cannot create"):
+            reconcile_hub(api, "central-write-token", self.snapshot, False, scheduled=True)
+        self.assertEqual(api.writes, [])
+
+    def test_schedule_can_update_after_manual_initialization(self):
+        api = HubFake(existing={"schema_version": 1, "generated_by": "kmong-hub-sync"})
+        result = reconcile_hub(api, "central-write-token", self.snapshot, False, scheduled=True)
+        self.assertEqual(result["result"], "UPDATED")
+        self.assertEqual(len(api.writes), 1)
+
     def test_repeated_equal_snapshot_makes_no_commit(self):
         api = HubFake(existing=self.snapshot)
         result = reconcile_hub(api, "central-write-token", self.snapshot, False)
