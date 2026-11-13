@@ -1,3 +1,10 @@
+## [2026-11-13 KST] CITEVAULT AX P85 원본 문서형 실검증 추가 — 105 PASS / 3 SKIP
+
+- **정본:** `hibi89/Freelancer@product/rag-enterprise-knowledge 22151f77eeccf4a248ca02a86ca40fc9b2290d77`; original RAG pinned `c5867b3951f51bfa97cadd1aad8fb13e9cf9e604`. 해총 크몽 감사표/프리랜서 상품 등록부 CITEVAULT 행만 최신화. 최종설계 85% 사용자 목표 **공식 UNASSESSED/미검증**, `[작업중]`, `RELEASE HOLD`.
+- **신규 실코드:** 합성 P85 기업보관소에서 tenant/user/group/project 사전 ACL 및 원본 SHA 검증 후 **실제 PDF 페이지 1,2 / DOCX 한국어 문단**을 독립 Python 오프라인 버퍼 파서로 추출. 기존 실제 로컬 SQLite 복구/계정 철회·퇴출/문서 버전 기능 회귀 보존. native PDF/DOCX 신규13PASS, P50/P70/P85 전체 **108 TOTAL/105PASS/0FAIL/3SKIP**. 3SKIP은 pinned original RAG SQL/BM25/SMAX 실제 checkout. 원격 GitHub 6개 blob/local SHA exact match.
+- **CI:** GitHub Actions Ubuntu24.04+Windows2022 `p85-native-evidence` Node22/Python3.11/pypdf5.9/python-docx1.2/reportlab4.4.9 job 추가. Hosted actual run/job/Windows 결과는 **미확인**. `docs/P85_NATIVE_EVIDENCE_20261113.md` 상세.
+- **남은 실제 목표:** 원본 RAG PDF/DOCX/SQL/SMAX 정본 통합 실실행, 실 직원 IAM·동의 문서 권리·signed AX 승인 생산, 한국어 실제 모델/권리/골드 평가, 물리 Windows10/11 설치·보안/백업/인수와 최종설계 사용자 승인 점수. 기존 상품 변경/배포/판매/외부 데이터송신 없음.
+
 ## [2026-11-13 KST] FlowPilot Universal 한국어 PDF·실 Windows EXE 통합 CI / 목표 85% 공식 미인증
 - 독립 제품 `hibi89/hibi89-ugreen-nas-hackathon@product/flowpilot-universal` 테스트 소스 `e87f5a2debe445bf749b3466b6a6f19b2febee7d`, 문서 HEAD `d2db1d70d95a6733cd83a9bf80acf68a7b5cecfc`. [Linux/Windows CI](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/actions/runs/43391290337) 각 71 고유 PASS + portable8 중복재실행 + native Tk3 PASS/OS, compileall, 2/2 SUCCESS, 0 FAIL.
 - 신규 ReportLab 4.4.9 선택 PDF: 한국어 다중페이지, XML 이스케이프, 900/200 표시 제한, 원본 외부 폴더 create-only, 구 JSON/HTML SQLite 원장 유지 + PDF SHA 검증. [Windows PyInstaller EXE CI](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/actions/runs/43391157492) actual unsigned onedir EXE synthetic Tk/scan/PDF/ledger self-test EXIT0, EXE temporary only; 고객 배포/생산 서비스 없음.
