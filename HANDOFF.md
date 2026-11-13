@@ -1,3 +1,15 @@
+## [2026-11-13 KST] FlowPilot Universal P70 GUI CI 확장 및 해총 정합 — 10항 추가 인수인계
+1. **목표·최종설계:** F01–F10 전체 Windows/PC/USB/SMB 제품, 공식 70% 목표. 승인가중치 없는 공식 최종율 UNASSESSED.
+2. **변경:** 제품 `tests/gui_click_smoke.py`와 `.github/workflows/flowpilot-universal.yml`에 Xvfb 실제 Tk GUI 위젯/이벤트 루프 테스트 추가. 기존 P50/P70 오프라인 엔진, 해커톤 lead/main/Skill 무수정.
+3. **검증:** `python -m unittest discover -s tests -p 'test_*.py' -v` 양 OS 각30PASS; `xvfb-run -a python -m unittest discover -s tests -p 'gui_click_smoke.py' -v` Linux 1PASS; Python compileall 양 OS PASS. 소스 SHA `18273d2c7a9909a5d65bdba4aecc2a8097f9a157`, 최종 문서 SHA `885f382e45246935aa9a34c840e5f5876fe57e1c`, [Actions #43380817028](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/actions/runs/43380817028) 2/2 SUCCESS, [정책 #43380817171](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/actions/runs/43380817171) SUCCESS.
+4. **상태:** 가상 GUI E2E 1/1 검증·이전 30회귀 유지. 원래 70% 최종설계 목표 미입증·P70 내부 일부. 중앙 [작업중]·RELEASE HOLD 지속.
+5. **실패/원인:** 과거 Windows fixture 경로·sqlite 핸들/디렉터리 재목록 이슈는 이전 30/30 성공으로 해결. 이번 Tk Xvfb E2E 최초 실제 run PASS. 물리 Windows GUI 성공으로 일반화 금지.
+6. **저장소/브랜치:** `hibi89/hibi89-ugreen-nas-hackathon@product/flowpilot-universal` SHA `885f382e45246935aa9a34c840e5f5876fe57e1c`; 해총 `hibi89/hackathon-command-center-2026@kmong-productization` 본 감사 4문서, GitHub 최종 원격 HEAD 확인 후 정합 완료.
+7. **Production·환경:** Python3.11 Ubuntu Xvfb 가상 GUI, Windows GitHub Actions 헤드리스 회귀; 물리 고객 Windows/SMB와 Vercel/웹 Production N/A.
+8. **원본/복구:** source read-only, 새 증거·SQLite 백업 외 기존 자료/원본·등록완료/다른 제품 기록 불변. 롤백은 제품 브랜치와 중앙 변경 커밋 역사 활용; 비밀/실고객 데이터 없음.
+9. **다음 우선순위:** 실제 고객형 Windows10/11 Tk GUI/USB/승인된 SMB E2E, 중단 후 증분 복원, 권리/설치/PDF/사용자 가중치·최종 독립 QA. 고객권한·외부 전송·유료·릴리스 GO는 별도 승인.
+10. **KST 증빙범위:** 2026-11-13 KST, synthetic Xvfb real Tk click/GUI workflow 1/1, OS 각30 PASS, 0 FAIL. 공식률 UNASSESSED이고 타 28종과 집계/상품 등록이력 보존.
+
 ## [2026-11-13 KST] FlowPilot Universal P70 독립기술·중앙 완성률 동기화 — 인수인계 10항
 1. **목표·최종설계·기술:** F01–F10 전체 최종설계 고객용 파일/USB/권한 있는 SMB 납품검수, Windows 로컬 Python3.11 stdlib Tkinter/SQLite. 사용자 목표 공식 최종완성률 70%; 승인된 100점 가중치 부재로 공식률 UNASSESSED.
 2. **구현/선택:** 대회 원본과 격리된 `product/flowpilot-universal` 브랜치에 기존 P50 오프라인 SHA/검수 원리 보존. GUI·명시 동의·SQLite 검사 원장/새 JSON·HTML/명시적 백업·취소시 INCOMPLETE/전체 재검사·폴더 재목록 및 25k 상한 추가. 로컬 Tk 방식은 localhost 서버 노출·구독비·NAS API 의존 회피.
