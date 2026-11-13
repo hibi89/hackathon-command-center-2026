@@ -1,3 +1,16 @@
+## [2026-11-14 KST] WORKNOVA Desk owner native Windows QA 검증 인수인계 10항
+
+1. **목표·요구·기술:** 사용자 승인 WD01~14 100점 고정·최종 고객 수용85점, 오프라인 Python3.11/SQLite/Tk Windows 실기기 경로.
+2. **완료·판단:** 소유자 실제 Windows PowerShell에서 기존 안전 검증기 두 번 실행, 각 11PASS. 기본 Tk·포터블15 SHA·합성 안전 설치/복구·암호화 백업; 별도 PyInstaller onedir EXE 준비 소스 3파일 이미 구현했으나 EXE 미생성. 원본 기능/DB 그대로.
+3. **테스트·범위:** 사용자 제공 Windows10.0.26200.9974/Python3.11/PowerShell5.1 JSON `platform=win32,ok=true`; **11PASS×2(같은 11종 반복), 0FAIL/0SKIP**. 호스팅 CI/실제 설치된 산출물 SHA/전체 Tk 실제 업무 UI/독립 EXE NOT_RUN. 이전 Linux153/Tk5/ZIP15 및 신규 빌드 준비 Linux12는 별도 기록.
+4. **완료·대기:** WD09/11/13 Windows 합성 검증 부분 진전; 전체 구매자 수용 전부 완료 항목 없음. 공식 **0/100, 목표85 미달, [작업중]·RELEASE HOLD·크몽 미등록**.
+5. **오류·원인·대안:** 초기 ZIP 두 겹 경로로 `windows_acceptance.py` 못찾았으나 절대경로 확인 후 수정. `bidax.cli` 오류는 타제품. 유료 CI/보안 권한변경 불허. 허위 Windows 전체 PASS/85 산정 금지.
+6. **저장소·브랜치·SHA:** `hibi89/Freelancer@product/worknova-desk-local`, 새 제품 HEAD `d8ab09beae722607a180390dcc3807801fc569cb`, 증거 `docs/P85_WINDOWS_OWNER_CONSOLE_20261114.md`, 중앙 원장 `docs/audits/KMONG_16_CURRENT_20261111.md` 원장 변경 커밋 `f584a5b679d2171cb39770ea6a7423d0c384580b`.
+7. **실행·배포 환경:** Windows 검증 명령 `py -3 -B .\\Freelancer-product-worknova-desk-local\\tools\\windows_acceptance.py`(ZIP 외부 폴더), 결과 현장 통과. Prod/Vercel 미적용; 다음 한 명령 `py -3 -m PyInstaller --version` (읽기 확인만).
+8. **원본·백업·비밀:** 실제 고객 데이터/백업, main, PayPal 원본, 타 상품/등록완료 이력·Git 비밀·OS 보안설정 불변, 고객 자료 저장소 업로드 0.
+9. **다음 작업·승인:** PyInstaller 사용가능 여부 확인 후 비용 없는 Windows onedir 독립 EXE 실빌드·격리 GUI 테스트, 추가 OS ACL/상시DB 보안·서명/Word·폰트 상용권·실고객 승인. 유료비용/원본 수정·보안 변경 승인 선행. 전체 항목 완전 PASS 점수 ≥85에서만 달성 보고.
+10. **확인시점·증거 기준:** 2026-11-14 KST, 소유자 전달 콘솔 2회만 실기기 증빙; 본 GitHub 수정은 코드 자체 재실행 아님. 중앙 최종 SHA는 이 문서 커밋 후 원격 확인.
+
 ## [2026-11-14 KST] FlowPilot Universal owner-hold handoff (10 items)
 
 1. **목표·요구·기술:** 원본 F01–F10 전체 설계와 공식 ≥85% 고정, 로컬 Python3.11 Tk/SQLite/PDF/Windows PyInstaller·USB/SMB. 분모/가중치 소급변경 금지.
