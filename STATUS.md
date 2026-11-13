@@ -1,3 +1,9 @@
+## [2026-11-14 KST] FlowPilot Universal F09 Windows EXE 3회 검수 실제 CI 성공 및 F10 무료 라이선스 사전검토
+
+- 최종설계 전체 F01–F10 원본기준 유지, **공식 85% 미인증/UNASSESSED**. 제품 `hibi89/hibi89-ugreen-nas-hackathon@product/flowpilot-universal` 소스 `e8bc4f318087bd83634f9f177e73fbc87e43a95f`, 제품 문서 `3f63adaac2c079abec37d97543ee6efd18c4c47f`. Python3.11 Windows EXE `--field-trial` consent-only 3-round full-SHA, local JSON/HTML/SQLite 검증 내장; `--windowed` no stdout 안전, 기존 GUI/engine 불변.
+- [CI #43511163767](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/actions/runs/43511163767): Win111/111 PASS, Linux104 PASS+7 Windows NTFS-only SKIP, 0FAIL, portable8/Tk5 각 OS PASS, 2/2 jobs 성공. [실 Windows EXE #43511163790](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/actions/runs/43511163790) 패키지 초기·SHA ZIP 이주·임시 설치 내 모두 F09 포함 자체 테스트 EXIT0, 사용자 파일 발견 시 제거 거부 후 정상 제거 성공.
+- **F10 0원 사전검토:** 공식 PyInstaller 상용 번들 예외·ReportLab BSD·Nanum OFL 상업 가능 확인; 전체 frozen 라이브러리 NOTICE·Windows Malgun PDF 임베딩 권리·첫째 소유권·EULA/지원/환불/상용 법률·인증서/SmartScreen 및 고객 테스트 필요. 무료 개발 승인 범위에서 진행, 실판매/공개 배포·유료/권한 변경 없음. 실제 고객 Win10/11/USB·승인된 NAS 2제조사/SMB ACL·실사용 수용 미진행. **[작업중], RELEASE/SALE HOLD, 미등록 유지**. 다른 상품 기록 불변. [제품 원문](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/product/flowpilot-universal/products/flowpilot_universal/F08_F09_EXE_AND_F10_RIGHTS_20261114.md).
+
 ## [2026-11-14 KST] CITEVAULT AX 최종설계 85% 추진 — 로컬 사용자관리·BM25·UI 129PASS
 
 - **사용자 목표/공식 판정:** 사용자 최종설계 전체 100% 대비 85% 목표, 공식 **UNASSESSED/85% 달성 미검증**, `CITEVAULT AX [작업중]`, `RELEASE HOLD/SALE NO-GO`. 24개 요구별 완성 근거/미검증은 제품 `docs/FINAL_BLUEPRINT_85_ACCEPTANCE_MATRIX_20261114.md` 정본.
