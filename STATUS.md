@@ -1,3 +1,10 @@
+## [2026-11-14 KST] CITEVAULT AX P85 서명 출처 검토 경계 — 신규 18PASS
+
+- 제품 `hibi89/Freelancer@product/rag-enterprise-knowledge cc0f9646643790d5372e4ac608f253692a9b05a2`에 오프라인 합성 Ed25519 source/mapping/document SHA·tenant/key/version/expiry 검증 및 허위 승인 차단 코드/테스트 추가. **성공해도 REVIEW_HOLD·rights=false·AX 미생성**; 실제 PREP/SMAX producer 계약/고객 승인으로 취급 금지.
+- Linux Node22.16 신규 서명 검증 **18PASS/0FAIL/0SKIP**, 원격/로컬 exact blob 2개 비교. 기존 전체 P85 89PASS는 변경 전 기록; 이번 전체 직렬 suite는 HTTP 이후 native 구간에서 제한시간 초과하여 **전체 재검증 미완료**. Hosted CI Ubuntu/Windows 실행 결과 미확인, workflow 정의만 업데이트.
+- 감사표/등록부 CITEVAULT 행만 갱신, `[작업중]`, 공식 최종설계 완성률 **UNASSESSED**, 목표 85% **미달성 검증 대기**, `RELEASE HOLD/SALE NO-GO`. 고객 실 직원 IdP/소스 이용권/실생산자 trusted key/서명 승인 AX, 정확 원본 RAG SQL/PDF/DOCX/SMAX 3SKIP, 한국어 실제 모델/물리 Windows 고객 인수/Gold 미완.
+- 원본·타상품·실고객 자료/권한/환경변수·Production/Vercel 변동 없음. 증거 `docs/P85_SIGNATURE_GATE_20261114.md`; 복구 기준 이전 HEAD `90581406daa9d755adec7845c5bf1ac0758710a9`.
+
 ## [2026-11-14 KST] CITEVAULT AX P85 조직 매출 접근 경계 보강 — 89/89 PASS
 
 - 정본 `hibi89/Freelancer@product/rag-enterprise-knowledge`, `docs/P85_TENANT_PATH_AND_QA_20261114.md`: 합성 tenant/group/project ACL이 통과해도 잘못 지정된 타조직 `salesDirectory` CSV를 읽지 않도록, 조직별 `<root>/<tenantId>/sales-only` 절대 경로·비심볼릭 디렉터리 검사로 보강(원문 읽기 전 검사). 타조직 경로/심볼릭 링크 부정 테스트2 추가.
