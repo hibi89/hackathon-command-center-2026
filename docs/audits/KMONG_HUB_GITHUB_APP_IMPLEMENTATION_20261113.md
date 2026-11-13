@@ -1,3 +1,10 @@
+## [2026-11-13 KST] 실제 GitHub App 토큰 Dry-run 성공 · 최초 중앙 기록 대기
+- **실제 실행 증거:** [workflow_dispatch #43363161824](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43363161824), `main@2ce63078eeaced49cc46faeef5070c0c65ee9d7a`, job `sync` **SUCCESS**, GitHub API 원격 결과/Job steps/로그 각각 확인. 사용자의 브라우저에서 해당 URL 순간 404가 표시되었지만 API run `completed/success`였으므로 동기화 실패로 분류하지 않음.
+- **인증 실제 성공:** Repository Variable `KMONG_SYNC_APP_CLIENT_ID` + Secret `KMONG_SYNC_APP_PRIVATE_KEY` + `KMONG_SYNC_ENABLED=true`가 사용된 workflow. `actions/create-github-app-token@v3` 단계를 성공적으로 통과하여 App 설치 토큰 발급 실증. 사용자는 GitHub App을 **All repositories/read-only**로 설치한다고 명시적으로 승인·설치했으며, Action에서는 기존 정책대로 `repositories:` 35개를 지정하여 **실 토큰을 35개로 한정**. 소스 쓰기 권한 없음. Client ID/PEM/토큰 실제 값 기록 금지.
+- **수집 로그 원문 요약:** `KMONG HUB SYNC: DRY_RUN repositories: 35 tracked branches: 70 product records: 29 linked refs: 28 unlinked refs: 1 fingerprint alerts: 0 official scores: UNMODIFIED`. 사전 단위테스트 **26/26 PASS**. 정본 fingerprint 경고 0건(설정된 31 pin 조회 경로), 제품 `BID AX`의 기존 미연결 1건 보존. 수집 내역은 중앙 원장 파일에 **쓰기 전** 상태.
+- **남은 검증:** `kmong-productization/data/kmong_hub_auto_observations.json` 원격 404(초기 파일 미생성). 수동 `dry_run=false` 첫 원장 commit+readback, 동일 데이터 `NO_CHANGE`, 실제 schedule 11:10 KST 실행, 네트워크/권한 실패 복구 실증 모두 **미검증**. 정본 가중치 및 공식 제품률 29/29 UNASSESSED, 19 서비스 분류·등록 이력·[작업중]·HOLD 전부 불변.
+- **다음 단계:** 운영자가 Actions workflow `main`을 선택하고 **dry_run 체크 해제(false)** 후 단 한 차례 실행. 실제 GitHub commit/readback 및 결과를 검증한 다음 같은 데이터의 NO_CHANGE 확인. 재실행 사이 다른 repo SHA/CI가 바뀌면 신규 관찰로 UPDATE 가능하므로 결과·차이를 판정해야 함. 강제 푸시·PAT/원본 수정/보안 설정 추가 변경은 금지.
+
 ## [2026-11-13 KST] GitHub 연결 계정 기반 사전 실조회 · 제품 연결 상태 집계 보정
 - **검증 도구/한계:** 연결된 GitHub 사용자 자격으로 REST Git refs 목록과 지정 정본 파일(blob SHA)을 읽는 사전 점검. **전용 GitHub App 설치 토큰/35 저장소 지정 설치/실제 예약 워크플로 검증 아님**. GET만 사용, 제품 저장소·원본·권한 변경 없음.
 - **35/35 저장소** Git refs 목록 응답 확인, 고정 등록된 기본 `main` 35개 + 주요 작업 브랜치 35개 = **70/70 SHA 확인**, 미존재 0·접근실패 0. App 읽기 scope가 정확히 35개인지는 여전히 미검증.
