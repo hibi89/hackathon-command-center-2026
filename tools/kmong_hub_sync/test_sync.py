@@ -158,6 +158,25 @@ class CollectorTest(unittest.TestCase):
         self.assertEqual(first["summary"]["canonical_not_configured"], 4)
         self.assertNotIn("official_final_completion", json.dumps(first))
 
+    def test_one_unlinked_product_is_not_counted_as_linked(self):
+        self.index["records"][-1]["repository"] = None
+        self.index["records"][-1]["tracked_branch"] = None
+        snapshot = collect_snapshot(self.observer, self.roster, self.pins, self.index)
+        self.assertEqual(snapshot["summary"]["product_links"], 29)
+        self.assertEqual(snapshot["summary"]["product_refs_present"], 28)
+        self.assertEqual(snapshot["summary"]["product_refs_missing"], 0)
+        self.assertEqual(snapshot["summary"]["product_refs_unlinked"], 1)
+        self.assertEqual(snapshot["products"][-1]["status"], "NOT_LINKED")
+
+    def test_missing_product_ref_is_distinct_from_unlinked(self):
+        self.index["records"][0]["repository"] = self.roster[0]["repository"]
+        self.index["records"][0]["tracked_branch"] = "feature/missing-product-branch"
+        snapshot = collect_snapshot(self.observer, self.roster, self.pins, self.index)
+        self.assertEqual(snapshot["summary"]["product_refs_present"], 28)
+        self.assertEqual(snapshot["summary"]["product_refs_missing"], 1)
+        self.assertEqual(snapshot["summary"]["product_refs_unlinked"], 0)
+        self.assertEqual(snapshot["products"][0]["status"], "MISSING")
+
     def test_app_installation_missing_repo_blocks_whole_sync(self):
         self.api.roster = self.roster[:-1]
         with self.assertRaisesRegex(RuntimeError, "35 approved"):
