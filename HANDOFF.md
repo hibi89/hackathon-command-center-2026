@@ -1,3 +1,16 @@
+## [2026-11-14 KST] WORKNOVA Desk Windows SQLite v2 integrity 체크 PASS — 중앙 인수인계 10항
+
+1. **목표·용도·요구/기술:** 사용자 승인 WORKNOVA Desk WD01~14 전체100점·고객 수용85점 목표, 오프라인 Windows Tk/SQLite 견적·계약·납품/수금.
+2. **완료·결정:** 실제 Win onedir EXE 빌드/파일 SHA/MZ/GUI 화면/종료0/임시 DB 생성 확인 후, 같은 DB에 `sqlite3 mode=ro` 검사해서 `integrity_check ok`·`user_version 2` 확보, 원본 운영 DB는 변경 없음.
+3. **테스트 PASS/FAIL·미검증:** 사용자 콘솔 `integrity_check: ok`, `user_version: 2`. 소유자 PC 실 결과, DB 원본 파일/바이너리 미수신. GUI 거래처 CRUD·견적/계약/수금 E2E 및 재실행 데이터 지속성/Windows ACL/활성 DB 암호화/코드서명·Defender/타PC 실고객법률·글꼴 상용권 NOT_RUN.
+4. **완료/진행/대기:** WD08/09/11/13 부분 수용 보강, 고정100점에서 고객 완전 수용 항목 0건: 공식 **0/100, 85미달, [작업중]·RELEASE HOLD·판매 미등록**.
+5. **오류 근거/원인/시도·재시도 금지/대안:** 구형 ZIP 이중 폴더와 빌드 래퍼 `PYTHONNOUSERSITE=1` 수정/우회 후 성공. 같은 빌드 재시도 금지. 임시 DB 무결성 정상; 다음 GUI 가짜 거래처1건 생성 및 read-only 조회·재기동.
+6. **저장소·브랜치·SHA·경로:** 제품 `hibi89/Freelancer@product/worknova-desk-local 16a51cf8d9921f85ce91c0d58c47d84949e7b403`, 증거 `docs/P85_WINDOWS_EXE_BUILD_RESULT_20261114.md`. 중앙 `docs/audits/KMONG_16_CURRENT_20261111.md` WORKNOVA 단일 행.
+7. **Production URL/실행명령/환경:** Vercel/웹 미적용. Windows EXE onedir unsigned 후보, 자식 프로세스 TEMP LOCALAPPDATA에서 로컬 SQLite v2 생성. 사용자 SQLite 검사 `sqlite3.connect(...?mode=ro,uri=True)`.
+8. **원본·백업/인증·수정금지:** 고객 원장/백업·OS 정책/개인 자료·원본 PayPal/Freelancer main·타 상품/등록완료 이력·민감 GitHub 업로드 및 유료 Actions 변경 없음.
+9. **다음 작업/승인·완료:** 합성 재기동 GUI+가짜 거래처 입력→종료0/읽기전용 DB 조회→재실행 지속성; 그 후 합성 견적/계약·보안/권리·실고객 수용. WD 전체 항목 완전 PASS 배점 합≥85만 완료, 실고객/보안·유료 작업 별도 승인.
+10. **갱신일시 KST·확인범위·기준커밋:** 2026-11-14 KST. 새 근거는 사용자의 Windows `integrity_check:ok`와 버전2, 업무기능/재실행 미검증. 중앙 최종 HEAD는 본 기록 반영 후 원격 조회.
+
 ## [2026-11-14 KST] WORKNOVA Desk 실제 Windows EXE ExitCode0 + 임시 DB 생성 검증 — 중앙 10항
 
 1. **목표·용도·요구·기술:** 승인 WD01~14 100점 고정, 완전 구매자 수용85점 목표. Python/SQLite/Tk Windows 독립 EXE·오프라인 견적→계약→납품/수금.
