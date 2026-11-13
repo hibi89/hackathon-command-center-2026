@@ -81,13 +81,15 @@ test("ignore untrusted repo and branches, reject tags", () => {
   assert.equal(eligibleEvent("push", { ...payload(), ref: "refs/tags/v1" }), false);
   assert.equal(eligibleEvent("push", payload()), true);
 });
-test("ignore generated observation commits on central hub but accept genuine hub changes", () => {
-  assert.ok(HUB?.branches?.includes("kmong-productization"));
+test("ignore non-tracked central hub branch and generated observation commits", () => {
+  assert.ok(HUB);
+  assert.equal(HUB.branches.includes("kmong-productization"), false);
   const p = payload(HUB_REPO, "kmong-productization");
   p.head_commit.message = "chore(kmong): refresh read-only GitHub evidence snapshot [skip ci]";
   assert.equal(eligibleEvent("push", p), false);
   p.head_commit.message = "docs: user status update";
-  assert.equal(eligibleEvent("push", p), true);
+  assert.equal(eligibleEvent("push", p), false);
+  assert.equal(eligibleEvent("push", payload(HUB_REPO, "main")), true);
 });
 test("only final blueprint completed runs are relevant", () => {
   const r = {
