@@ -133,27 +133,29 @@
       },
       "technical_milestone_latest": {
         "user_target": "OWNER_FINAL_BLUEPRINT_AT_LEAST_85_PERCENT",
-        "verified_result": "OFFICIAL_85_NOT_CERTIFIED",
+        "verified_result": "INCREASED_REAL_IMPLEMENTATION_OFFICIAL_85_NOT_CERTIFIED",
         "official_final_completion": "UNASSESSED",
         "owner_requirement_weights": "NOT_INDEPENDENTLY_APPROVED",
         "source_branch": "feature/final-blueprint-p85-evidence-20261113",
-        "verified_code_sha": "0ee4a9d8810d78c47b35cbd41bc69725674db4cc",
-        "documentation_head": "9688c752966686776b033e5557e89f28e8bfdf48",
-        "action_run_id": 43388705727,
+        "verified_code_sha": "d311c47f1b85382f1d4ce43dfacdabcdc7e85612",
+        "documentation_head": "265acdf2aceaf5700d97d1d9a251c2a3510c4587",
+        "action_run_id": 43392272159,
         "python_tests": {
-          "windows_pass": 190,
-          "ubuntu_pass": 190,
+          "windows_pass": 210,
+          "ubuntu_pass": 210,
           "fail": 0,
           "skip": 0
         },
-        "browser_end_to_end": "HOSTED_WINDOWS_CHROME_EDGE_AND_UBUNTU_CHROMIUM_ACTUAL_FILE_LOCAL_SYNTHETIC_PASS",
-        "newly_verified_scope": "NONVALUE_PROFILE;2_TO_10_INDIVIDUALLY_SHA_APPROVED_SAME_SCHEMA_APPEND;MULTI_CATEGORY_FILTER;CREATE_ONLY_DELIVERY_FOLDER_RECEIPT;REPARSE_PATH_GUARDS;DETERMINISTIC_PYTHON_ZIPAPP",
+        "browser_end_to_end": "HOSTED_WINDOWS_CHROME_EDGE_AND_UBUNTU_CHROMIUM_SINGLE_AND_MULTISOURCE_DELIVERY_PASS",
+        "newly_verified_scope": "SINGLE_FLAT_JSON_OBJECT;NONFINITE_JSON_HOLD;OWNER_SHA_PINNED_SINGLE_SOURCE_CUSTOMER_FOLDER;XLSX_SHEET_FAIL_BEFORE_DIRECTORY;ORIGINAL_LITE_REAL_RUNTIME_CSV_JSON_BROWSER_REPLACE_REOPEN_GOLDEN;PRIOR_MULTI_SOURCE_KPI_PATH_GUARDS_PYTHON_ZIPAPP",
         "official_weighted_acceptance": "BLOCKED_OWNER_APPROVAL",
-        "remaining_requirements": "CUSTOMER_WIN10_11;REA_LITE_FULL_REAL_RUNTIME;DATA_RIGHTS;PRIVACY_RETENTION;SKU_SUPPORT_REFUND;LICENSE_NOTICE;OWNER_WEIGHT_SUM_100",
+        "remaining_requirements": "OWNER_WEIGHTS_SUM100;ACTUAL_CUSTOMER_WIN10_11;REAL_EXCEL;RIGHTS_PRIVACY_RETENTION;LICENSE_NOTICE;SKU_SUPPORT_REFUND;CUSTOMER_ACCEPTANCE",
         "release_status": "RELEASE_HOLD",
         "in_progress": true,
         "product_pr": "https://github.com/hibi89/data2web_studio/pull/4",
-        "evidence": "docs/FINAL_BLUEPRINT_R01_R33_ACCEPTANCE_20261113.md"
+        "evidence": "docs/FINAL_BLUEPRINT_85_REASSESSMENT_20261113.md",
+        "upstream_lite_actual_runtime": "PUBLIC_PINNED_7b6b68111efd906f9d929b5e2f577699b26399ee_EXECUTED_COMMON_CSV_JSON_GOLDEN_PASS",
+        "central_marker": "[작업중]"
       }
     },
     {
