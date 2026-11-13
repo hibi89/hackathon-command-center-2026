@@ -14,7 +14,7 @@
 | 제품 | Freelancer 브랜치 | 공식 최종완성률 | 등록/출시 | 근거 |
 |---|---|---|---|---|
 | AZENTFLOW AX **[작업중]** | `product/hae-la-automation` | **UNASSESSED** (0→50 구간 기술 수용 PASS; 공식 최종률 50% 미확정) | 기존 HAE·LA 통합 서비스 연결, RELEASE HOLD·크몽 미등록 | [실 SHA·양 OS 증빙](https://github.com/hibi89/Freelancer/blob/product/hae-la-automation/docs/P50_ACCEPTANCE_EVIDENCE_20261113.md): HAE `91963ae3`, CI #43375517050 신규 Ubuntu 3/3+Windows 3/3 PASS; 전체 Python 각 267 PASS/2 FAIL/7 SKIP(배송 ZIP/pyz parity), 사용자 승인 전체 100점 추적/가중치 미완 |
-| CITEVAULT AX | `product/rag-enterprise-knowledge` | UNASSESSED | 기존 RAG 서비스에 연결, HOLD | 기존 기업형 조합 |
+| CITEVAULT AX **[작업중]** | `product/rag-enterprise-knowledge` | **UNASSESSED / 50% 목표 미달 · 검증 대기** | RAG SHA `c5867b39` 고정 read-only SQL/BM25/SMAX 근거 QA+PDF/DOCX CI 정의; Git blob 일치 Node22 **3 PASS/0 FAIL/3 SKIP**, 3개 통합 미실행, Actions 로그 미확인 | enterprise ACL/인증·승인된 SMAX→AX 전환·실고객 Windows/수용 미검증, RELEASE HOLD |
 | SITECRAFT AX | `product/rea-website-rebuild` | UNASSESSED | 기존 REA_Web 서비스에 연결, HOLD | 기존 기업형 조합 |
 | PROOFQA AX | `product/proofqa-ax-delivery-audit` | UNASSESSED | 기존 코드 품질감사 서비스에 연결, HOLD | 기존 기업형 조합 |
 | ONTOINSIGHT AX **[작업중]** | `product/ontoinsight-ax-data-analytics` | **UNASSESSED** (P50 엔지니어링 단계 검증 PASS, 최종 50% 미확정) | 기존 데이터 AI 분석 서비스에 연결, HOLD | AutoML 기능 SHA `8da6ae98` / Ubuntu 11 PASS·Windows 11 PASS / 원본·설계 브랜치 문서 최신화 |
