@@ -303,12 +303,12 @@
       "gate": {
         "conclusion": "success",
         "head_sha": "04d5b5e563be70ff32b08e49ea46c6e3f37693e9",
-        "matches_current_head": true,
+        "matches_current_head": false,
         "run_id": 43508494543,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "04d5b5e563be70ff32b08e49ea46c6e3f37693e9",
+      "head_sha": "e3ffb4fa1a6c20f640746f990cef5f0f9e88f8b3",
       "record_id": "CANDIDATE-10",
       "repository": "hibi89/Freelancer",
       "status": "PRESENT",
@@ -821,12 +821,12 @@
           "gate": {
             "conclusion": "success",
             "head_sha": "04d5b5e563be70ff32b08e49ea46c6e3f37693e9",
-            "matches_current_head": true,
+            "matches_current_head": false,
             "run_id": 43508494543,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "04d5b5e563be70ff32b08e49ea46c6e3f37693e9",
+          "head_sha": "e3ffb4fa1a6c20f640746f990cef5f0f9e88f8b3",
           "status": "PRESENT"
         },
         {
