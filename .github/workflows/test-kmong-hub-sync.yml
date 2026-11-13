@@ -1,0 +1,19 @@
+name: Test Kmong hub source observer
+on:
+  push:
+    paths:
+      - 'tools/kmong_hub_sync/**'
+      - '.github/workflows/test-kmong-hub-sync.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Run read-only observer tests (no tokens or private access required)
+        run: python3 -B -m unittest discover -s tools/kmong_hub_sync -p "test_*.py" -v

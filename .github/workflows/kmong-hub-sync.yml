@@ -1,0 +1,80 @@
+name: Kmong hub cross-repository evidence sync
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Read and validate only (do not update hub branch)"
+        type: boolean
+        required: true
+        default: true
+  schedule:
+    - cron: '10 2 * * *'  # 11:10 KST daily, only after explicit enable
+permissions:
+  contents: write  # THIS repository only; App token is source-repo read-only
+concurrency:
+  group: kmong-hub-source-evidence
+  cancel-in-progress: false
+jobs:
+  sync:
+    if: ${{ vars.KMONG_SYNC_ENABLED == 'true' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out trusted central main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: false
+      - name: Run unit and fail-closed registry tests
+        run: python3 -B -m unittest discover -s tools/kmong_hub_sync -p "test_*.py" -v
+      - name: Create source-only GitHub App installation token
+        id: source-token
+        uses: actions/create-github-app-token@v3
+        with:
+          client-id: ${{ vars.KMONG_SYNC_APP_CLIENT_ID }}
+          private-key: ${{ secrets.KMONG_SYNC_APP_PRIVATE_KEY }}
+          owner: ${{ github.repository_owner }}
+          permission-contents: read
+          permission-actions: read
+          repositories: |
+            AI_AutoML_Analyst
+            ai-code-checker
+            astra_pdf_redesigner
+            astra_web_catcher
+            AX_MART
+            Bid_Owl
+            candle_scraper
+            data2web_studio
+            DBVORA
+            EAI
+            fable5.1_web_catcher
+            factory-ax-ecosystem
+            Freelancer
+            frontend-foundry-ax
+            gongbaek-sanggwon
+            hackathon-command-center-2026
+            HAE
+            hibi89-kic-proofinvest
+            hibi89-paypal-ai-hackathon
+            hibi89-ugreen-nas-hackathon
+            KUODRA
+            NAON2-Character-Studio
+            ohora-nail-intelligence-v4
+            ohora-trend-analyzer
+            ohora-trend-catcher
+            ohora-trend-catcher-classic
+            prep
+            project-book
+            RAG_STUDIO
+            REA_Web
+            self-hosted-n8n-reliability-lab
+            SMAX
+            SOVIA_sovereign
+            web-rea-studio
+            work-hell-dungeon
+      - name: Scan sources, report evidence and conditionally update hub observation
+        env:
+          KMONG_SOURCE_APP_TOKEN: ${{ steps.source-token.outputs.token }}
+          KMONG_HUB_TOKEN: ${{ github.token }}
+          KMONG_SYNC_DRY_RUN: ${{ inputs.dry_run }}
+        run: python3 -B tools/kmong_hub_sync/sync.py
