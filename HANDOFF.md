@@ -1,3 +1,16 @@
+## [2026-11-14 KST] CITEVAULT AX 서명 출처 검증 인수인계 10항
+
+1. **목표·용도·확정 요구·기술:** 사용자 CITEVAULT AX 전체 최종설계 대비 85%, 기업 근거형 RAG+권한별 PDF/DOCX+정확 SQLite, 권리 승인된 PREP/SMAX signed AX, 실 기업 직원 IAM/한국어 실제 모델/Windows 고객 수용.
+2. **완료 기능/변경/설계 비교:** 위조 가능한 JSON 승인(A)은 불채택, Node built-in Ed25519 `SYNTHETIC_ONLY` 소스·매핑·문서 해시, 조직·신뢰 key ID·유효기간·버전 서명 검증(B) 구현. real IdP + 서명 승인 PREP/SMAX producer(C)는 고객 신분/자료권리/비밀키 보안 승인 필요해 미실행. 성공에도 REVIEW_HOLD/rights=false/answer=null/AX 미생성 고정, 정상 existing P85 기능 코드 불변.
+3. **명령·테스트 성공/실패·미검증:** Linux Node22.16 `node --check enterprise/p85-signed-provenance.mjs` PASS, `node --test tests/p85-signed-provenance.test.mjs` **18PASS/0FAIL/0SKIP**. 실제 Ed25519 key generation/test, altered SHA, signed key/tenant mismatch, fake approval, expired/replay/duplicate documents. 원격 Git SHA exact match. 이전 합성 P85 89PASS는 변경 이전 기록이며 이번 전체 테스트는 HTTP 뒤 native 구간 timeout으로 **미완료**. Hosted Actions/Windows/원본 pinned RAG 3SKIP 미검증.
+4. **완료/진행/대기/차단:** 독립 로컬 합성 서명 리뷰 게이트 기술 검증 완료, 그러나 원본 PREP/SMAX 실제 producer, 고객 실승인·IdP/rights/한국어 local model/고객 Win10/11/Gold 미구현. `CITEVAULT AX [작업중]`·공식 `UNASSESSED`·RELEASE HOLD.
+5. **오류 근거·시도/재시도 금지·대안:** Github.com DNS 통한 original RAG checkout 불가라는 기존 차단 유지; same failed clone 반복 금지. `mcp__GitHub__create_file` ReadTimeout 후 원격 blob 조회로 커밋 성공 확인, 중복 파일 재생성 금지. full suite timeout을 PASS로 오인하지 말고 개별18PASS만 새 증거로 삼을 것.
+6. **저장소/브랜치/SHA/주요 경로:** `hibi89/Freelancer@product/rag-enterprise-knowledge` 문서 commit `cc0f9646643790d5372e4ac608f253692a9b05a2` (최종 HEAD 별도 재확인). 이전 복구 SHA `90581406daa9d755adec7845c5bf1ac0758710a9`. 신규 source blob `78b777505a4325230ad7f780907bf08538dc7783`, test blob `ef21059e67ce5b2e4c7b5043d6ed0e738c151232`. `docs/P85_SIGNATURE_GATE_20261114.md`, 원본 RAG pin `c5867b3951f51bfa97cadd1aad8fb13e9cf9e604`.
+7. **Production/URL·Vercel·환경·명령:** 로컬 Linux Node22 experimental crypto Ed25519, 추가 설치/유료 API 0. CI Ubuntu24.04/Windows2022 테스트 정의만 변경, actual hosted result unknown. Production/Vercel/도메인 미적용.
+8. **원본·백업·인증/수정 금지:** GitHub P85 이전 SHA 안전 복구지점; 실 고객 소스·계정·키/토큰/SMAX/PREP/RAG 원본과 크몽 다른 상품·등록 이력 무변경. 테스트 사설키 메모리에서 임시 생성, GitHub 업로드 안 함. 독립 ZIP `CITEVAULT_AX_P85_sign_gate_20261114.zip` 임시 대화 산출물, Library 자동 영구화 없음.
+9. **다음 우선순위·절차·완료기준·사전승인:** 정확 pinned RAG 원본+CI SQL/native/SMAX 검증 3SKIP→실 고객 데이터/임직원 IdP/서명 producer 공개키·권리 승인(형 사전 승인 필수)→실 한국어 로컬 모델 asset 및 라이선스·성능 측정→실 Windows10/11 인수·보안·백업/복구·Gold→owner 가중치로 최종85 판정. 합성 서명 18PASS ≠ final85.
+10. **갱신 KST·확인 범위·문서 기준 커밋:** 2026-11-14 KST. Linux 신규18PASS, GitHub exact blob 소스/테스트, CI workflow 정의와 중앙 원장 동기화. 전체 suite 실행 미완/Hosted Win/실기업·실모델·original RAG·Production/최종85 미검증. 근거 product `docs/P85_SIGNATURE_GATE_20261114.md`.
+
 ## [2026-11-14 KST] CITEVAULT P85 조직별 매출 경로 보안 수정 — 중앙 인수인계 10항
 
 1. **목표·확정요구·기술:** 사용자 최종설계 전체 대비 85% 목표, 기업형 로컬 PDF/DOCX/검증 SQL+PREP/SMAX 권리승인·직원 IAM/ACL·한국어 로컬모델·Windows 수용. 공식 완성률 **UNASSESSED**.
