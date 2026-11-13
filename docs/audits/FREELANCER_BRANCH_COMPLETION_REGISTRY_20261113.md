@@ -42,7 +42,7 @@
 | PAWTALK | `product/echohome-pawtalk-local-ai` | UNASSESSED | 미등록·HOLD | 반려동물 놀이형 음성대화 설계, 앱 미검증 |
 | MYRADIO AI | `product/myradio-ai-dj` | UNASSESSED | 미등록·HOLD | 오프라인 WAV 시제품, 실 Windows/상용권리 미검증 |
 | AXNODE | `product/axnode-sector-runtime` | UNASSESSED | 미등록·HOLD | 사용자 A안 독자 바이너리 `.axnode` 최종설계 R01~R29, 별도 로컬 POC 19 PASS; GitHub 브랜치에 실행 소스/CI 미반영, 원격/3GB/Windows 미검증 |
-| WORKNOVA Desk **[작업중]** | `product/worknova-desk-local` | **UNASSESSED** (별도 P70 엔지니어링 게이트 Linux 37/37 PASS + Tk8.6/Xvfb 합성 GUI 전체흐름 PASS; 공식 최종설계 70%는 미확정) | 크몽 **미등록·RELEASE HOLD** | [Private 제품 HEAD `16d08b79621a303e190835a74885d58d75d513d9`](https://github.com/hibi89/Freelancer/commit/16d08b79621a303e190835a74885d58d75d513d9): 견적 가역 아닌 버전·승인, 계약원장, 명시적 v1 백업이관, SHA 검증 복원(기존DB 덮어쓰기 금지), GUI/한글 HTML; WD-01..14 공식 가중치·실 Win10/11 고객/문서/출시는 미검증. [P70 중앙감사](WORKNOVA_DESK_P70_EVIDENCE_20261113.md) |
+| WORKNOVA Desk **[작업중]** | `product/worknova-desk-local` | **UNASSESSED** (P85 엔지니어링 Linux 52 PASS/Tk E2E PASS, 공식 85% 미달성·미확정) | 크몽 **미등록·RELEASE HOLD** | Private [P85 소스 `106e6a8f`](https://github.com/hibi89/Freelancer/commit/106e6a8f3c0b2b547344b8ef40dcf15c22b0529a) / docs `7fdea1bf`, [상세](WORKNOVA_DESK_P85_EVIDENCE_20261113.md). DOCX/PDF·SHA-verified Windows Python portable candidate, actual Windows/고객/법률/상업권리/정식 EXE NOT_RUN; P70 역사 보존 |
 
 **현재 GitHub 확인: product/* 10개 브랜치 / 대응 제품 11개(공유 브랜치 ECHOHOME+PAWTALK 포함, BID AX·WORKNOVA Desk 신규 생성).** 이전 8개/9개는 초기 등록 이력이다. ECHOHOME과 PAWTALK는 같은 브랜치를 사용하므로 브랜치 1개=상품 1개로 가정하지 않는다. 모든 행은 현재 확인된 GitHub 브랜치와 Freelancer `main/docs/PRODUCT_INDEX.md`·`HANDOFF.md`를 기준으로 등록했다. 등록완료는 실제 크몽 게시 증거가 있을 때만 기록한다.
 
