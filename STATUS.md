@@ -1,3 +1,8 @@
+## [2026-11-14 KST] WORKNOVA Desk native EXE 메인 GUI 스크린샷 시각 검증
+
+- 사용자 제공 실제 Windows 이미지에서 `WORKNOVA Desk — 로컬 계약·납품 장부` 메인 GUI 최초 표시 확인. 한글 오프라인 안내·거래처 검색·4업무 탭·견적·계약·납품·수금·백업 버튼 렌더링. 직전 사용자 빌드/EXE 크기7,107,722/SHA256 `A7CD6B052108E5630E4AD50151841F0B812654F22E87CFE8338E22CB12A5C23E`/MZ PASS의 후속 실 EXE GUI 증거, 상세 `hibi89/Freelancer@product/worknova-desk-local` [기록](https://github.com/hibi89/Freelancer/blob/product/worknova-desk-local/docs/P85_WINDOWS_EXE_BUILD_RESULT_20261114.md), 제품 HEAD `ed49e1e4879d8b0c309090fe5c845f51440ea9bc`.
+- 스크린샷은 ChatGPT에만 제공, 민감 브라우저 UI가 있어 GitHub에 이미지 업로드 없음. **EXE 종료코드·격리 SQLite 파일 존재/재기동·버튼 E2E·ACL·실고객/라이선스·서명 등은 아직 미검증.** WD11/13 부분 PASS, 승인 WD01~14 엄격한 완전 수용 정식 0/100·85점 미달, **[작업중]/RELEASE HOLD/미등록**. 타 제품/등록완료 상태 불변.
+
 ## [2026-11-14 KST] WORKNOVA Desk Windows EXE 파일 크기/SHA256/MZ 현장 확인
 
 - 사용자가 Windows 10.0.26200에서 PyInstaller6.22.3 onedir 빌드한 `WORKNOVA-Desk.exe`에 대해 **Length 7,107,722 bytes**, **SHA256 `A7CD6B052108E5630E4AD50151841F0B812654F22E87CFE8338E22CB12A5C23E`**, **MZ header PASS**를 PowerShell에서 재확인. 바이너리 파일 자체는 전달받지 않았으며 전체 PE/코드서명·Defender/SmartScreen 안전성·런타임은 미검증. [제품 증거](https://github.com/hibi89/Freelancer/blob/product/worknova-desk-local/docs/P85_WINDOWS_EXE_BUILD_RESULT_20261114.md), 제품 HEAD `e21aff02b7049ca2b4a917c00c5cf5013d43270b`.
