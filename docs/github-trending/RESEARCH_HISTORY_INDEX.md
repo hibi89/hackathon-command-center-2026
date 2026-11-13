@@ -86,3 +86,14 @@
 - [수익화 아이디어 통합 마스터](MONETIZATION_IDEAS_MASTER.md)
 - [일간 정본](https://github.com/hibi89/hackathon-command-center-2026/blob/github-trending-daily/docs/github-trending/2026-11/DAILY.md)
 - [주간 정본](https://github.com/hibi89/hackathon-command-center-2026/blob/github-trending-weekly/docs/github-trending/2026-11/WEEKLY.md)
+
+
+## 2026-11-13 검색 색인에서 새로 관찰한 저장소 (당일 공식 순위 미확정)
+| nvm-sh/nvm | 2026-11-13 | https://github.com/nvm-sh/nvm | GitHub Trending 검색 색인 확인; README/LICENSE/최근 커밋 미확인 |
+| pookjw/HermesEnabler | 2026-11-13 | https://github.com/pookjw/HermesEnabler | GitHub Trending 검색 색인 확인; README/LICENSE/최근 커밋 미확인 |
+| QwenLM/qwen-code | 2026-11-13 | https://github.com/QwenLM/qwen-code | GitHub Trending 검색 색인 확인; README/LICENSE/최근 커밋 미확인 |
+| ashhart/TensorFold | 2026-11-13 | https://github.com/ashhart/TensorFold | GitHub Trending 검색 색인 확인; README/LICENSE/최근 커밋 미확인 |
+| nodejs/node | 2026-11-13 | https://github.com/nodejs/node | GitHub Trending 검색 색인 확인; README/LICENSE/최근 커밋 미확인 |
+| CopilotKit/OpenBot | 2026-11-13 | https://github.com/CopilotKit/OpenBot | GitHub Trending 검색 색인 확인; README/LICENSE/최근 커밋 미확인 |
+| Alishahryar1/free-claude-code | 2026-11-13 | https://github.com/Alishahryar1/free-claude-code | GitHub Trending 검색 색인 확인; README/LICENSE/최근 커밋 미확인 |
+| ggml-org/llama.cpp | 2026-11-13 | https://github.com/ggml-org/llama.cpp | GitHub Trending 검색 색인 확인; README/LICENSE/최근 커밋 미확인 |
