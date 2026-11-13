@@ -8,7 +8,7 @@
 | CITEVAULT AX | `product/rag-enterprise-knowledge` | UNASSESSED | 기존 RAG 서비스에 연결, HOLD | 기존 기업형 조합 |
 | SITECRAFT AX | `product/rea-website-rebuild` | UNASSESSED | 기존 REA_Web 서비스에 연결, HOLD | 기존 기업형 조합 |
 | PROOFQA AX | `product/proofqa-ax-delivery-audit` | UNASSESSED | 기존 코드 품질감사 서비스에 연결, HOLD | 기존 기업형 조합 |
-| ONTOINSIGHT AX **[작업중]** | `product/ontoinsight-ax-data-analytics` | UNASSESSED (P50 엔지니어링 목표 진행 중) | 기존 데이터 AI 분석 서비스에 연결, HOLD | 원본 AutoML 별도 기능 브랜치 P50 개발; 미검증·목표 미달 시 [작업중] 유지 |
+| ONTOINSIGHT AX **[작업중]** | `product/ontoinsight-ax-data-analytics` | **UNASSESSED** (P50 엔지니어링 단계 검증 PASS, 최종 50% 미확정) | 기존 데이터 AI 분석 서비스에 연결, HOLD | AutoML 기능 SHA `8da6ae98` / Ubuntu 11 PASS·Windows 11 PASS / 원본·설계 브랜치 문서 최신화 |
 | ECHOHOME | `product/echohome-pawtalk-local-ai` | UNASSESSED | 미등록·HOLD | 가족 동의 음성대화 설계, 앱 미검증 |
 | PAWTALK | `product/echohome-pawtalk-local-ai` | UNASSESSED | 미등록·HOLD | 반려동물 놀이형 음성대화 설계, 앱 미검증 |
 | MYRADIO AI | `product/myradio-ai-dj` | UNASSESSED | 미등록·HOLD | 오프라인 WAV 시제품, 실 Windows/상용권리 미검증 |
@@ -41,3 +41,9 @@
 - **검증:** [GitHub Actions #43375517050](https://github.com/hibi89/HAE/actions/runs/43375517050) Ubuntu/Windows `test_azentflow_p50_acceptance.py` 각각 3 PASS/0 FAIL/0 SKIP. API/LA schema handshake `axflow.ir.v0`↔`azent.api.v0`, synthetic CSV preview/approve→LA→SQLite 실 2행, runtime/business 분리, 무승인 403·입력 digest 변경 409·replay 후 행중복 0 검증. 기존 HTTP smoke 6/6 각 PASS. Node UI24 PASS.
 - **출시 차단 보존:** 전체 CI 각 OS Python 267 PASS/2 FAIL/7 SKIP, 보존된 ZIP/pyz 출고물 parity 2건으로 workflow FAILURE. 실제 고객/Windows 설치 배포·상용 OAuth/DBVORA/SOVIA·전체 요구별 100점 가중치 미검증. P50 기술 게이트 통과를 전체 제품 공식 50%로 전환하지 않음.
 - **우선순위:** 공식 가중치/요구 전수 독립검증 → 50→70 독립 LA 복구/두 업무/실 UI·경합 → 원본 배송물 백업 후 패리티 복구 → 라이선스/고객 인수. 이 변경은 AZENTFLOW 한 행과 감사 섹션만 갱신하며 나머지 제품/판매 이력·HOLD를 보존한다.
+
+## ONTOINSIGHT AX 2026-11-13 P50 검증 기록
+
+- 신규 제품 소스 정본: `hibi89/AI_AutoML_Analyst@feature/ontoinsight-ax-p50-20261113`, 검증된 기능 SHA `8da6ae98e308f68b52af159a662fe58c20f5bc74` 및 문서 인수인계 SHA `8defbec4a943e081a12a6aaff1ae59f135ef05d0`. 기획 브랜치 `hibi89/Freelancer@product/ontoinsight-ax-data-analytics` 문서 SHA `fc80f5004e99261a581b8cbe109841f038baa497`.
+- [CI #43375766099](https://github.com/hibi89/AI_AutoML_Analyst/actions/runs/43375766099): Ubuntu24.04 11 PASS·Windows Server2025 11 PASS, 0 FAIL/0 SKIP. 기존 AutoML CSV 파서 재사용+추론 매핑 REVIEW_HOLD+원본 SHA+합성 KPI 5종 독립 재계산. 고객 실분석/승인/최종 출시는 하지 않음.
+- **전체 최종설계 100% 공식 가중치·전체 추적표 미승인 → UNASSESSED** 유지. P50은 엔지니어링 단계로만 통과, 50% 공식 판정 아님. 사용자 목표 미달이므로 **[작업중] 해제 금지**, HOLD 및 기존 원천 29종/19개 판매 분류, 타 프로젝트 마커·등록 이력 모두 불변.
