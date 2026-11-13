@@ -497,7 +497,7 @@
       "blueprint_reference": "docs/FINAL_BLUEPRINT.md",
       "historical_seen_head_prefix": "acdb8a61270a",
       "official_final_completion": "UNASSESSED",
-      "owner_requirement_weights": "NOT_INDEPENDENTLY_APPROVED",
+      "owner_requirement_weights": "NOT_USED_OWNER_FIXED_SCOPE",
       "detail_trace": "docs/BID_AX_EXPANSION_REASSESSMENT_20261113.md",
       "blueprint_version": "v2_20261113_3_MODULES",
       "blueprint_requirement_count": 29,
@@ -507,7 +507,7 @@
       "latest_blueprint_commit_sha": "ab0d92a333a18e01a585a99d6a6b5812ab0c6305",
       "added_requirements_implemented": 0,
       "added_requirements_total": 8,
-      "goal": "OWNER_FINAL_BLUEPRINT_85_UNVERIFIED",
+      "goal": "85_PERCENT_FULL_BLUEPRINT_UNPROVEN",
       "work_marker": "[작업중]",
       "release": "HOLD",
       "latest_product_docs_head": "1b7b2ef0c00162905b4d0f4116933f682311fb0f",
@@ -550,7 +550,25 @@
       "latest_acceptance_trace": "docs/BID_AX_FULL_BLUEPRINT_29_ACCEPTANCE_20261114.md",
       "latest_acceptance_scope": "LOCAL_SYNTHETIC_167_PASS_NOT_REAL_API_WINDOWS_CUSTOMER",
       "target": "OWNER_FINAL_85_UNVERIFIED",
-      "kmong_published": false
+      "kmong_published": false,
+      "latest_verified_code_sha": "e3ffb4fa1a6c20f640746f990cef5f0f9e88f8b3",
+      "shared_portal_key_confirmation": "FOUR_APPLICATIONS_SAME_ACCOUNT_KEY_NO_KEY_COPIED",
+      "approved_api_dataset_ids": [
+        15129394,
+        15157220,
+        15157252,
+        15157254
+      ],
+      "api_gateway_mode": "MANUAL_EXPLICIT_OPT_IN_NO_AUTO_IMPORT",
+      "api_gateway_offline_tests": {
+        "tests_passed": 188,
+        "failed": 0,
+        "skipped": 0,
+        "platform": "Linux Python3.13.5",
+        "actual_api_calls": 0
+      },
+      "api_announcement_operation": "BLOCKED_PENDING_VERIFICATION_15157220",
+      "owner_scoring_instruction": "FIXED_FULL_BLUEPRINT_R01_R29_NO_SEPARATE_WEIGHTS_REQUESTED_20261114"
     },
     {
       "record_id": "CANDIDATE-11",
