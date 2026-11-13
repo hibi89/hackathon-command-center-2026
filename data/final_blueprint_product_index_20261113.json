@@ -19,7 +19,11 @@
     "canonical_enforced_repositories": 9,
     "canonical_observed_repositories": 22,
     "canonical_no_anchor_repositories": 4,
-    "canonical_live_pilot_repositories": 2
+    "canonical_live_pilot_repositories": 2,
+    "hub_app_sync_engine": "CI_TESTED_CREDENTIALS_PENDING",
+    "hub_app_sync_live_success_runs": 0,
+    "hub_app_sync_roster_repositories": 35,
+    "hub_app_sync_tracked_work_branches": 35
   },
   "notes": [
     "Fields reflect prior central audit evidence rather than a fresh scan of all 29 product HEADs.",
@@ -29,7 +33,8 @@
     "All certified scores remain UNASSESSED until independent complete acceptance.",
     "2026-11-13: HAE and LA representative case outcomes were checked against exact historical Actions runs and private trace docs, not newly executed feature acceptance. Existing official UNASSESSED unchanged.",
     "2026-11-13 canonical source integrity pilot only: HAE same-repository main read-only checkout verified at LA feature SHA 6508b27..., artifact MATCHED, official UNASSESSED. Other 34 repos have no central canonical pins yet.",
-    "2026-11-13 main-tree inventory: 35 inspected; 31 documentation fingerprints (28 main, 3 feature), only 9 enforced and 22 monitored. This is not a signed owner-approved whole-scope proof. 4 repos have no defensible anchor in scanned scope."
+    "2026-11-13 main-tree inventory: 35 inspected; 31 documentation fingerprints (28 main, 3 feature), only 9 enforced and 22 monitored. This is not a signed owner-approved whole-scope proof. 4 repos have no defensible anchor in scanned scope.",
+    "2026-11-13: GitHub App hub sync code and 22 regression tests passed on central main e28781d0...; app key/install/variables NOT yet configured or verified. No automatic source traversal or central hub snapshot write claimed."
   ],
   "records": [
     {

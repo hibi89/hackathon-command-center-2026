@@ -1,3 +1,15 @@
+## [2026-11-13 KST] GitHub App 크몽 중앙 증거 자동화 개발 — 필수 인수인계 10항
+1. **목표·확정 요구/기술:** 35 저장소+35 작업브랜치/70 추적 참조와 최종설계 31 지문·29상품 브랜치를 최소 권한 읽기, 해총 `kmong-productization` 별도 자동 관찰 원장만 수정. 100% 최종설계/공식률 독립 승인 원칙.
+2. **완료 기능·변경·선택:** 중앙 `main`에 `tools/kmong_hub_sync/sync.py`, `test_sync.py`, `source_repositories.json`, `.github/workflows/kmong-hub-sync.yml`, `.github/workflows/test-kmong-hub-sync.yml` 및 App 설치 문서 추가. PAT보다 GitHub App+중앙 `GITHUB_TOKEN` 분리; 원본 write 금지. Idempotent `NO_CHANGE`, dry-run, 35개 read scope 강제, 원격 readback 확인 구현.
+3. **테스트 명령·실행:** `python3 -B -m unittest discover -s tools/kmong_hub_sync -p "test_*.py" -v` → Actions [#43352459675](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43352459675) `22/22 PASS`, 공통 gate [#43352459689](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43352459689) SUCCESS, 정확 코드 SHA `e28781d0af0904894251c48ab20a0360915a0671`. Source 35 API live / 실제 App token / hub auto write 미실행.
+4. **완료/진행/대기/차단:** 중앙 동기화 코드와 무자격 모의 테스트 완료, `KMONG_HUB_SYNC_CREDENTIALS_PENDING`/실 인증·원격변경 검증 대기. 29 공식 상품률 UNASSESSED, 기존 31 document fingerprint 중 9 enforce/22 observe 그대로.
+5. **실패/근거·원인·시도·대안:** GitHub 커넥터 App 생성·비밀키 발급·Actions Secrets 등록 불지원 → user GitHub UI 설정으로 전환. 토큰 값 임의 발급/가정 금지; 설정 미완 시 workflow job gate SKIPPED. 오류 시 권한·repo 설치 범위 확인, 구조적 오류/원장 충돌은 source 보호 후 차단; force push 금지.
+6. **저장소·브랜치/SHA·경로:** `hibi89/hackathon-command-center-2026@main` `e28781d0af0904894251c48ab20a0360915a0671`; `@kmong-productization` 작업 전 `32a1cb1cd35f7b2fd342797e739821f8438e6f69`, 이번 허브 commit SHA는 원격 readback 확인할 것. 위 5개 코드/설정 및 `docs/strategy/KMONG_HUB_GITHUB_APP_SETUP_20261113.md`, `docs/audits/KMONG_HUB_GITHUB_APP_IMPLEMENTATION_20261113.md`.
+7. **Production·실행환경:** GitHub-hosted Ubuntu Actions Python 표준 라이브러리, 하루 1회 11:10 KST (enable 이후), manual dry-run 기본. 소스 GitHub App read-only/허브 GITHUB_TOKEN write; Vercel·고객 production 미적용.
+8. **원본·백업·인증 관리·수정금지:** 기존 코드·데이터·19 서비스 이력·29 공식률·HAE/LA E2E·branch protections/CI source 70 callers 불변. GitHub 히스토리로 복구 가능. App PEM 키는 GitHub Actions repository Secret에만 저장, 채팅/코드/문서 노출 금지. 신규 `data/kmong_hub_auto_observations.json`은 live successful run 전 생성하지 않음.
+9. **다음 우선순위·승인:** 사용자 승인 의사 이미 확인. 단 사용자 계정으로 App 등록/35 repo 설치/Client ID var/PEM secret/enable var 수행 필요. [설치 가이드](https://github.com/hibi89/hackathon-command-center-2026/blob/main/docs/strategy/KMONG_HUB_GITHUB_APP_SETUP_20261113.md)대로 setup 후 수동 `dry_run=true`→실 API 35/70/31/29→`dry_run=false` commit/readback→NO_CHANGE/스케줄 검증. GitHub Actions GITHUB_TOKEN write 제한시 설정 우회하지 말고 재승인.
+10. **갱신일시/확인 시점/범위:** 2026-11-13 KST, 신설 sync 22 PASS 및 공통 gate SUCCESS 두 CI 실제 로그, main GitHub author/committer 계정 연결, hub 문서 원격 조회 후 SHA 확인. 실 App·키·스케줄/자동 원장 변경은 **미검증**.
+
 ## [2026-11-13 KST] 전체 정본 지문 35저장소 감사·31등록 — 중앙 10항 인수인계
 1. **목표/확정요구·기술:** 35 저장소의 사용자 최종설계 파일 무단 변동 감지, 최종 설계 전체100점 기준 유지. `Git Trees`/Git blob 지문, Python stdlib GitHub Actions shared verifier.
 2. **완료/선택 근거:** 두 접근 중 feature별 정본 복제(드리프트·운영비 증가) 대신 caller의 동일 repo 브랜치 read-only checkout + 중앙 pin 사용. GitHub main 35 조사, 31개 지문(28 main+3 feature), 9 강제/22 관찰, 4 미지정. 검증기/워크플로 중앙 main 수정; 기존 70 callers 불변.
