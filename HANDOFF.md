@@ -1,3 +1,16 @@
+## [2026-11-14 KST] CITEVAULT P85 조직별 매출 경로 보안 수정 — 중앙 인수인계 10항
+
+1. **목표·확정요구·기술:** 사용자 최종설계 전체 대비 85% 목표, 기업형 로컬 PDF/DOCX/검증 SQL+PREP/SMAX 권리승인·직원 IAM/ACL·한국어 로컬모델·Windows 수용. 공식 완성률 **UNASSESSED**.
+2. **완료 기능·선택근거:** 기존 P85 localhost PDF/DOCX+SQLite REVIEW_HOLD 통합 경로를 보존하면서 CSV 매출 `salesDirectory`의 타조직 오참조 경계 수정. 단순 tenant label 허용(A) 대신 **고정 tenant 소유 `sales-only` 절대경로 및 symlink/디렉터리 검사(B)**, 완전 IDP 스토리지 격리(C)는 고객 권한 승인까지 보류. CLI/원본 RAG/PREP/SMAX 무변경.
+3. **테스트/성공·실패·SKIP:** Linux Node22.16/Python3.13.5 `node --test tests/p85-journey.test.mjs` **18PASS/0FAIL/0SKIP** (타조직 경로+symlink 신규2), `node --test --test-concurrency=1 tests/*.test.mjs` **89PASS/0FAIL/0SKIP**, HTTP `--self-test` PASS. 타 vault27/HTTP17/SQLite14/native PDF/DOCX13 전부 PASS. 테스트 fixture 각 test 독립 파일 보존하면서 중복 생성만 줄여 journey 실행 약66.7→28초. RAG 이전 결합 124total/121PASS/0FAIL/3SKIP은 이번 변경 이후 전수 재실행 아님. Remote source 3개 Git blobs/local hashes 일치.
+4. **완료/진행/대기/차단:** 합성 P85 데이터 경로·기본 ACL/SQLite/실 PDF·DOCX/HTTP 실행 검증 일부 완료. 원본 pin SQL/BM25 native 3SKIP, 실제 기업 IDP/서명 승인 PREP-SMAX→AX·실모델/Gold/물리 Windows 고객 수용 미완; `[작업중]`, RELEASE HOLD.
+5. **오류 근거·시도·재시도 금지·대안:** 타조직 salesDirectory를 권한 policy 문자열만으로 접근할 수 있는 문제 발견→정확 파일시스템 경로 결속과 부정 테스트. container 원본 Github.com DNS 차단 과거 확인, 동일 clone 재시도 금지. 로컬 전체 ZIP 초기 실행 제한시간 지연은 테스트별 분리·fixture 최적화 후 89/89 직렬 PASS. Hosted CI 로그 미확인, 성공 간주 금지.
+6. **저장소·브랜치·SHA·주요 경로:** 제품 `hibi89/Freelancer@product/rag-enterprise-knowledge`, 이번 착수 전 `1fc73ef7c6bd43015cd7fbf3c9f505940f61982b` 복구 기준, 최신 P85 파일 hashes vault `3256d1e52fed8bcf4748060478b381e9c5afe542`, journey `7e194a8def953e851e8413f217212338d033a994`, test `40a171cadb662275f34c62f5f602ae3cdb7ab4d8`. 원본 RAG pin `c5867b39...`, develop `bb8529ed...` diverged. 근거 `docs/P85_TENANT_PATH_AND_QA_20261114.md`.
+7. **Production·환경·실행:** Linux Node22.16/Python3.13.5, CI Ubuntu24.04/Windows2022 Node22/Python3.11 workflow 정의만. 테스트 `node --test --test-concurrency=1 tests/*.test.mjs`, `node scripts/p85-synthetic-demo.mjs --self-test`. Vercel/Production URL 미적용, 요금/외부송신 변경 없음.
+8. **원본·백업·인증/수정금지:** 원본 고객자료·기존 RAG/PREP/SMAX·실계정/토큰/환경변수·기타 크몽 상품 진척/등록기록 불변. GitHub 이전 commit이 안전 revert 지점. 전달용 `CITEVAULT_AX_P85_tenant_guard_20261114.zip`은 합성·임시 다운로드 산출물이며 Library 저장/원본 고객 데이터 포함 없음.
+9. **다음 작업 우선순위/절차/승인·완료 조건:** 실제 pinned RAG SQL/native/SMAX integration 3SKIP 및 Hosted CI run/job logs→고객 권리/보안·권한 승인 후 실 employee IDP·signed PREP/SMAX AX→실 Korean model/라이선스/Gold/악성문서 격리→실 물리 Win10/11/백업·복구/고객 인수→owner 승인 전체 최종설계 가중치 기반 85 판정. 합성 89PASS는 최종완성률 아님.
+10. **갱신시각·검증범위·기준:** 2026-11-14 KST. 정확 Git blobs, Linux 실제 89PASS/0FAIL, demo selftest, 원본 RAG branch drift 확인; Hosted CI/Win/고객원본/실모델/Production/공식85%는 미검증. 근거 제품 `docs/P85_TENANT_PATH_AND_QA_20261114.md`.
+
 ## [2026-11-14 KST] FlowPilot Universal P85 최종 CI 수정·해총 간결 인수인계
 1. 목표/설계: 사용자 원본 F01–F10 전체 85%, Python3.11/Tk/SQLite/ReportLab/Windows unsigned EXE, 승인 100점 가중치와 실고객 수용 없어서 공식 UNASSESSED.
 2. 구현/근거: 소스 파일/디렉터리 종료 재확인으로 늦은 변경 INCOMPLETE, 추가 실제 NTFS reparse 원본/출력/PDF/history/checkpoint 보호, 기존 F02/F04/F06/F07/F08 보존.
