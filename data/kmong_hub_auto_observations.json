@@ -17,13 +17,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "019ffce2529ad18087d81451dbda00fe17617d65",
-        "matches_current_head": false,
-        "run_id": 43326291906,
+        "head_sha": "f659028351c480b35431f706e911ce5e0c036774",
+        "matches_current_head": true,
+        "run_id": 43383322061,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "e0a177808b1ee5b3c27c45a63ee6473961a86fc5",
+      "head_sha": "f659028351c480b35431f706e911ce5e0c036774",
       "record_id": "ACTIVE-02",
       "repository": "hibi89/HAE",
       "status": "PRESENT",
@@ -51,13 +51,18 @@
     },
     {
       "gate": {
-        "status": "NO_RUN"
+        "conclusion": "success",
+        "head_sha": "90ed56892066761164419b147ca1351e65662e6f",
+        "matches_current_head": true,
+        "run_id": 43385637985,
+        "status": "LATEST_RUN",
+        "workflow_status": "completed"
       },
-      "head_sha": "2bf9ab26b21bf8d46ffe27695d53159794ffde97",
+      "head_sha": "90ed56892066761164419b147ca1351e65662e6f",
       "record_id": "ACTIVE-05",
       "repository": "hibi89/data2web_studio",
       "status": "PRESENT",
-      "tracked_branch": "feature/xlsx-tsv-import"
+      "tracked_branch": "feature/p85-ui-crossbrowser-20261113"
     },
     {
       "gate": {
@@ -226,9 +231,14 @@
     },
     {
       "gate": {
-        "status": "NO_RUN"
+        "conclusion": "success",
+        "head_sha": "9160cf77cbb5c62e09e1f9451643b37b5ddeecbb",
+        "matches_current_head": true,
+        "run_id": 43383446098,
+        "status": "LATEST_RUN",
+        "workflow_status": "completed"
       },
-      "head_sha": "a6c69d5bfccd81a637095701245a1e86a8488e77",
+      "head_sha": "9160cf77cbb5c62e09e1f9451643b37b5ddeecbb",
       "record_id": "CANDIDATE-05",
       "repository": "hibi89/Freelancer",
       "status": "PRESENT",
@@ -236,9 +246,14 @@
     },
     {
       "gate": {
-        "status": "NO_RUN"
+        "conclusion": "success",
+        "head_sha": "f2ccc5623440b44433ea41ebf814e4de61c74541",
+        "matches_current_head": true,
+        "run_id": 43386832188,
+        "status": "LATEST_RUN",
+        "workflow_status": "completed"
       },
-      "head_sha": "1195f767c7ebc6b1965936cc2166db53853c6e53",
+      "head_sha": "f2ccc5623440b44433ea41ebf814e4de61c74541",
       "record_id": "CANDIDATE-06",
       "repository": "hibi89/Freelancer",
       "status": "PRESENT",
@@ -246,9 +261,14 @@
     },
     {
       "gate": {
-        "status": "NO_RUN"
+        "conclusion": "success",
+        "head_sha": "6e94d0066cbc80e91fed28b3358b36fc76235515",
+        "matches_current_head": true,
+        "run_id": 43383645708,
+        "status": "LATEST_RUN",
+        "workflow_status": "completed"
       },
-      "head_sha": "44754f06efd82b91d9a4ee9e5c5e6130bd48d30e",
+      "head_sha": "6e94d0066cbc80e91fed28b3358b36fc76235515",
       "record_id": "CANDIDATE-07",
       "repository": "hibi89/Freelancer",
       "status": "PRESENT",
@@ -256,9 +276,14 @@
     },
     {
       "gate": {
-        "status": "NO_RUN"
+        "conclusion": "success",
+        "head_sha": "2daf969d0d48afd66a35213e77e129b3ced8cdb2",
+        "matches_current_head": true,
+        "run_id": 43384291708,
+        "status": "LATEST_RUN",
+        "workflow_status": "completed"
       },
-      "head_sha": "bcff81660f854213d40e6f9226b5cdb53103bd2f",
+      "head_sha": "2daf969d0d48afd66a35213e77e129b3ced8cdb2",
       "record_id": "CANDIDATE-08",
       "repository": "hibi89/Freelancer",
       "status": "PRESENT",
@@ -268,17 +293,26 @@
       "gate": {
         "status": "NO_RUN"
       },
-      "head_sha": "ba882562be8ddee685520c0bce18348ab6e56dd6",
+      "head_sha": "740ca7c3c4d969b3c51d9be017d950fea50297a1",
       "record_id": "CANDIDATE-09",
       "repository": "hibi89/Freelancer",
       "status": "PRESENT",
       "tracked_branch": "product/ontoinsight-ax-data-analytics"
     },
     {
+      "gate": {
+        "conclusion": "success",
+        "head_sha": "a5266b4044cfb4217aa620d555094407beaab71e",
+        "matches_current_head": true,
+        "run_id": 43386439951,
+        "status": "LATEST_RUN",
+        "workflow_status": "completed"
+      },
+      "head_sha": "a5266b4044cfb4217aa620d555094407beaab71e",
       "record_id": "CANDIDATE-10",
-      "repository": null,
-      "status": "NOT_LINKED",
-      "tracked_branch": null
+      "repository": "hibi89/Freelancer",
+      "status": "PRESENT",
+      "tracked_branch": "product/bid-ax-public-procurement"
     },
     {
       "gate": {
@@ -547,17 +581,27 @@
         {
           "branch": "feature/lite-independent-migration",
           "gate": {
-            "status": "NO_RUN"
+            "conclusion": "success",
+            "head_sha": "f613305dee8c8ceb8636632bce001b1c02532e35",
+            "matches_current_head": true,
+            "run_id": 43378427013,
+            "status": "LATEST_RUN",
+            "workflow_status": "completed"
           },
-          "head_sha": "5c6e28fb5cf81a62e2af6d938b72927579037565",
+          "head_sha": "f613305dee8c8ceb8636632bce001b1c02532e35",
           "status": "PRESENT"
         },
         {
           "branch": "feature/xlsx-tsv-import",
           "gate": {
-            "status": "NO_RUN"
+            "conclusion": "success",
+            "head_sha": "0fee0f84c35f377bdfffea7b1a66e62191abb81a",
+            "matches_current_head": true,
+            "run_id": 43382127277,
+            "status": "LATEST_RUN",
+            "workflow_status": "completed"
           },
-          "head_sha": "2bf9ab26b21bf8d46ffe27695d53159794ffde97",
+          "head_sha": "0fee0f84c35f377bdfffea7b1a66e62191abb81a",
           "status": "PRESENT"
         }
       ]
@@ -688,7 +732,7 @@
     {
       "canonical": {
         "expected_git_blob_sha": "9e12d3dbd88367e405a27a59c62141ce8c6d4b31",
-        "head_sha": "db434ca0d40b2a87f1a1d090d0896a60ea2d2596",
+        "head_sha": "204f70169d4c7bff2d1ad58d024a184c32360a50",
         "mode": "observe",
         "observed_git_blob_sha": "9e12d3dbd88367e405a27a59c62141ce8c6d4b31",
         "owner_approval_verified": false,
@@ -700,13 +744,13 @@
         "branch": "main",
         "gate": {
           "conclusion": "success",
-          "head_sha": "db434ca0d40b2a87f1a1d090d0896a60ea2d2596",
+          "head_sha": "204f70169d4c7bff2d1ad58d024a184c32360a50",
           "matches_current_head": true,
-          "run_id": 43361506269,
+          "run_id": 43377671034,
           "status": "LATEST_RUN",
           "workflow_status": "completed"
         },
-        "head_sha": "db434ca0d40b2a87f1a1d090d0896a60ea2d2596",
+        "head_sha": "204f70169d4c7bff2d1ad58d024a184c32360a50",
         "status": "PRESENT"
       },
       "repository": "hibi89/Freelancer",
@@ -714,9 +758,14 @@
         {
           "branch": "product/hae-la-automation",
           "gate": {
-            "status": "NO_RUN"
+            "conclusion": "success",
+            "head_sha": "9160cf77cbb5c62e09e1f9451643b37b5ddeecbb",
+            "matches_current_head": true,
+            "run_id": 43383446098,
+            "status": "LATEST_RUN",
+            "workflow_status": "completed"
           },
-          "head_sha": "a6c69d5bfccd81a637095701245a1e86a8488e77",
+          "head_sha": "9160cf77cbb5c62e09e1f9451643b37b5ddeecbb",
           "status": "PRESENT"
         },
         {
@@ -724,31 +773,46 @@
           "gate": {
             "status": "NO_RUN"
           },
-          "head_sha": "ba882562be8ddee685520c0bce18348ab6e56dd6",
+          "head_sha": "740ca7c3c4d969b3c51d9be017d950fea50297a1",
           "status": "PRESENT"
         },
         {
           "branch": "product/proofqa-ax-delivery-audit",
           "gate": {
-            "status": "NO_RUN"
+            "conclusion": "success",
+            "head_sha": "2daf969d0d48afd66a35213e77e129b3ced8cdb2",
+            "matches_current_head": true,
+            "run_id": 43384291708,
+            "status": "LATEST_RUN",
+            "workflow_status": "completed"
           },
-          "head_sha": "bcff81660f854213d40e6f9226b5cdb53103bd2f",
+          "head_sha": "2daf969d0d48afd66a35213e77e129b3ced8cdb2",
           "status": "PRESENT"
         },
         {
           "branch": "product/rag-enterprise-knowledge",
           "gate": {
-            "status": "NO_RUN"
+            "conclusion": "success",
+            "head_sha": "f2ccc5623440b44433ea41ebf814e4de61c74541",
+            "matches_current_head": true,
+            "run_id": 43386832188,
+            "status": "LATEST_RUN",
+            "workflow_status": "completed"
           },
-          "head_sha": "1195f767c7ebc6b1965936cc2166db53853c6e53",
+          "head_sha": "f2ccc5623440b44433ea41ebf814e4de61c74541",
           "status": "PRESENT"
         },
         {
           "branch": "product/rea-website-rebuild",
           "gate": {
-            "status": "NO_RUN"
+            "conclusion": "success",
+            "head_sha": "6e94d0066cbc80e91fed28b3358b36fc76235515",
+            "matches_current_head": true,
+            "run_id": 43383645708,
+            "status": "LATEST_RUN",
+            "workflow_status": "completed"
           },
-          "head_sha": "44754f06efd82b91d9a4ee9e5c5e6130bd48d30e",
+          "head_sha": "6e94d0066cbc80e91fed28b3358b36fc76235515",
           "status": "PRESENT"
         }
       ]
@@ -809,7 +873,7 @@
     {
       "canonical": {
         "expected_git_blob_sha": "521ba0cb458bea384639a0ef897ce7500d33b8f1",
-        "head_sha": "2ce63078eeaced49cc46faeef5070c0c65ee9d7a",
+        "head_sha": "e1ad0802cb7bdf783c1d99c6f0b259ec96daf015",
         "mode": "observe",
         "observed_git_blob_sha": "521ba0cb458bea384639a0ef897ce7500d33b8f1",
         "owner_approval_verified": false,
@@ -821,13 +885,13 @@
         "branch": "main",
         "gate": {
           "conclusion": "success",
-          "head_sha": "2ce63078eeaced49cc46faeef5070c0c65ee9d7a",
+          "head_sha": "e1ad0802cb7bdf783c1d99c6f0b259ec96daf015",
           "matches_current_head": true,
-          "run_id": 43359427770,
+          "run_id": 43375849225,
           "status": "LATEST_RUN",
           "workflow_status": "completed"
         },
-        "head_sha": "2ce63078eeaced49cc46faeef5070c0c65ee9d7a",
+        "head_sha": "e1ad0802cb7bdf783c1d99c6f0b259ec96daf015",
         "status": "PRESENT"
       },
       "repository": "hibi89/hackathon-command-center-2026",
@@ -858,13 +922,13 @@
           "branch": "feature/axflow-mvp",
           "gate": {
             "conclusion": "success",
-            "head_sha": "019ffce2529ad18087d81451dbda00fe17617d65",
-            "matches_current_head": false,
-            "run_id": 43326291906,
+            "head_sha": "f659028351c480b35431f706e911ce5e0c036774",
+            "matches_current_head": true,
+            "run_id": 43383322061,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "e0a177808b1ee5b3c27c45a63ee6473961a86fc5",
+          "head_sha": "f659028351c480b35431f706e911ce5e0c036774",
           "status": "PRESENT"
         },
         {
@@ -1380,8 +1444,8 @@
     "canonical_not_configured": 4,
     "product_links": 29,
     "product_refs_missing": 0,
-    "product_refs_present": 28,
-    "product_refs_unlinked": 1,
+    "product_refs_present": 29,
+    "product_refs_unlinked": 0,
     "repository_count": 35,
     "tracked_branch_count": 70
   }
