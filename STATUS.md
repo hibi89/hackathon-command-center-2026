@@ -1,3 +1,10 @@
+## [2026-11-14 KST] CITEVAULT AX 최종설계 85% 추진 — 로컬 사용자관리·BM25·UI 129PASS
+
+- **사용자 목표/공식 판정:** 사용자 최종설계 전체 100% 대비 85% 목표, 공식 **UNASSESSED/85% 달성 미검증**, `CITEVAULT AX [작업중]`, `RELEASE HOLD/SALE NO-GO`. 24개 요구별 완성 근거/미검증은 제품 `docs/FINAL_BLUEPRINT_85_ACCEPTANCE_MATRIX_20261114.md` 정본.
+- **실제 기술 개발:** `hibi89/Freelancer@product/rag-enterprise-knowledge 9f66120ad9319bcfe36f81a8afacf621f4fee10b`에서 기존 합성 localhost PDF/DOCX+SQLite review HOLD를 보존하며, 관리자 로컬 계정 발급·SQLite scrypt 사용자 추가·그룹/프로젝트/등급 변경·즉시 세션/교차 인스턴스 권한 재검증·철회/감사, 실제 SHA-verified 허용 citations BM25 Korean ngram 검색, localhost 로그인/근거 조회/관리 UI(CSP/no-store) 구현. 실제 기업 IdP 아닌 로컬 합성 운영자.
+- **실제 테스트:** Linux Node22.16/Python3.13.5 P85 standalone **129PASS/0FAIL/0SKIP**, `node scripts/p85-operator-demo.mjs --self-test` PASS, GitHub remote/local 9 modified-source/test/demo Git blob 9/9 exact. 독립 ZIP `CITEVAULT_AX_P85_operator_bm25_20261114.zip` SHA256 `161bb8bc4069e8e6e51fa3b70d54e77911d9e884155c042517170b3119b2d5ca`: 압축해제 selftest PASS, BM25+UI12PASS. CI Ubuntu24.04+Windows2022 행렬 workflow 정의만, 실제 hosted run/log 미확인. 실 Chromium UI는 기관/조직 정책 `127.0.0.1` 차단으로 미검증.
+- **미완:** 정확 pinned original RAG SQL/BM25/native/SMAX **3SKIP**, 실 고객 자료 rights/employee IdP·authenticated approved PREP/SMAX→AX, 실제 한국어 ML weights/rights/mini quality, Hosted Windows CI·물리 Win10/11 설치·Gold100/고객 서명. 기존 크몽 다른 상품·등록완료 이력, 원본 RAG/PREP/SMAX/실데이터·토큰·환경변수·Prod/Vercel 변경 없음.
+
 ## [2026-11-14 KST] FlowPilot Universal 사용자 0원 상용화 준비 승인·NAS 무구매 방침 확정
 
 - 최종완성률 유일 기준 사용자 원본 F01–F10 **전체 설계 고정**. 85를 만들기 위한 범위·가중치 조정 금지. 세부 사용자 승인 100점 rubrics/실고객 하드웨어·권리 증거 없으므로 **공식 UNASSESSED/목표85 미인증**.
