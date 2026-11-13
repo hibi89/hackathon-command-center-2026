@@ -85,3 +85,11 @@
 ## Freelancer 추가 상품 및 브랜치 자동 등록 정책 (2026-11-13)
 
 [Freelancer 7개 product 브랜치 / 8개 상품 전체 등록부](../audits/FREELANCER_BRANCH_COMPLETION_REGISTRY_20261113.md)를 크몽 **최종완성률 보조 원장**으로 연결한다. ECHOHOME·PAWTALK·MYRADIO AI는 기존 29개/19개에 없던 신규 3종으로, 각각 공식 최종완성률 **UNASSESSED**, 미등록, 출시 HOLD다. 기존 기업형 5종은 위 19개 통합 서비스에 연결되어 중복 집계하지 않는다. 향후 product 브랜치 생성 즉시 누락 없이 등록하는 정책을 적용하되, 실제 무인 자동 실행은 GitHub 교차 저장소 인증·트리거·검증을 구성하기 전까지 **미구현**이다. 기존 게시 순위·등록완료 증빙 이력·상품별 원래 완성률은 보존한다.
+
+
+## 2026-11-13 신규 연구 후보 AXNODE (29→19 정본 불변)
+
+- 신규 독립 **AXNODE**(가칭 `.axnode` 단일 독자 바이너리 섹터형 프로그램 패키징/실행기)는 `hibi89/Freelancer@product/axnode-sector-runtime`의 [전체 최종설계 R01~R29](https://github.com/hibi89/Freelancer/blob/product/axnode-sector-runtime/docs/FINAL_BLUEPRINT.md)에 별도로 등록했다. 사용자 A안 승인(구성/기술적 방향)과 상품 전체 완료·판매 승인은 다른 것. 현재 공식 완성률 **UNASSESSED**, `HOLD`, `미등록`.
+- AXNODE는 19개 기존 서비스 순위·원천 29종의 고유 매핑을 수정하지 않는 **신규 기술 후보 1종**으로 [Freelancer 신상품 등록부](../audits/FREELANCER_BRANCH_COMPLETION_REGISTRY_20261113.md)에서 영구 추적한다. 소비자형 신규 3종과 합친 전체 추적 대상은 **33종**(기존 29+3+AXNODE). Freelancer 내부는 8개 product 브랜치/9개 제품.
+- 상용화 판단: 독자 파일 규격의 소프트웨어 배포/프로그램 지연 실행/기업형 AX 설치·복구 품질과 수요가 실증된 뒤 기존 승인형 자동화 서비스의 PREMIUM 옵션과 별도 상품 중 **중복 없는 구성**으로 재평가. 기존 1~19 크몽 상품의 등록 상태/순위·진척률·작업중 표식 불변.
+- 별도 로컬 POC에서 19 unittest PASS/5섹터 CSV 시험 기록은 존재하나 이 등록 자체로 GitHub 코드/CI·Windows·실 3GB·원격 Actions·고객 납품 성공을 인증하지 않는다. 무제한 무료 클라우드·용량 '소멸' 약속 금지.
