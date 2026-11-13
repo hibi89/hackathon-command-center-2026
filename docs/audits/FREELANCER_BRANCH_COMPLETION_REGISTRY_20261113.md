@@ -1,3 +1,5 @@
+> **[BID_AX_P85_LOCAL_80PASS_20261113] BID AX P85 로컬 기술 보강 · 공식 최종완성률 UNASSESSED:** Private `hibi89/Freelancer@product/bid-ax-public-procurement` 기능·문서 HEAD [`acdb8a61270a`](https://github.com/hibi89/Freelancer/commit/acdb8a61270a86ebc4e7300c43fb99b71377d2b1), GitHub **17/17 파일 본문 일치**. Linux Python3.13.5 합성+mock **80 PASS/0 FAIL/0 SKIP**, compileall PASS, Tk8.6 Xvfb 기본 실행 PASS. 추가: 7일 제한·페이지 완전성/UUID 체크포인트·중복/변조·재시작 복구, 명시적 로컬 마감 알림 중복 방지, 기본 비활성 선택적 공식 API 전송 라이브러리(키 비저장·host 고정·시도예산·재시도 mock), Windows 수동 패키징 스크립트 및 SHA256 원본 ZIP. 실제 정부 API 호출 0건/Win10·11/Python3.11/EXE/공고100건·자격10건/실고객/실 Python GitHub CI **NOT_RUN**; **P85는 오프라인 일부 기술 게이트이며 최종설계 85% 근거 아님. 공식 `UNASSESSED`, 목표 85% `[작업중]` 유지, RELEASE HOLD/크몽 미등록.** [상세](docs/audits/BID_AX_P85_20261113.md). CANDIDATE-10 및 KMONG-SVC-18 연결과 기존 29→19/등록완료 이력·타 제품 표식 불변.
+
 ## [2026-11-13 KST] BID AX 70% 목표 재진행 — 오프라인 안전·기업 프로필 강화 / 최종률 UNASSESSED
 
 - 원천 29종 중 **CANDIDATE-10 BID AX**, 판매 서비스 KMONG-SVC-18 연결 **불변**. PRIVATE 제품 브랜치 hibi89/Freelancer@product/bid-ax-public-procurement 코드 SHA 027c4592e7aed1d806a9218269efe534952a8f04, 최신 문서 HEAD 766032d6256d634469366b1125639f9aa9a6ef1c.
