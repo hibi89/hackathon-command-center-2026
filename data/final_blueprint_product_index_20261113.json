@@ -566,7 +566,7 @@
       "blueprint_requirement_ids": "R01-R29",
       "historical_design_requirement_count": 21,
       "user_approved_expansion": "ONBID_OFFICIAL_FREE_API_PLUS_COURT_CONSENTED_LOCAL_DOCUMENTS",
-      "latest_blueprint_commit_sha": "fbac278dd21f48cea13a8f2f491585f053e630b9",
+      "latest_blueprint_commit_sha": "e650fdbe65de25885bef0e6a4eb758c6bd4a1afa",
       "added_requirements_implemented": 0,
       "added_requirements_total": 8,
       "goal": "85_PERCENT_FULL_BLUEPRINT_UNPROVEN",
@@ -636,7 +636,11 @@
       "latest_evidence": "docs/P85_API_RESPONSE_QUARANTINE_AUDIT_20261114.md",
       "latest_run_windows": "NOT_RUN",
       "latest_run_real_api": "NOT_RUN",
-      "final_completion_rule": "R01_R29_FIXED_FULL_BLUEPRINT_NO_NEW_WEIGHT_APPROVAL"
+      "final_completion_rule": "R01_R29_FIXED_FULL_BLUEPRINT_NO_NEW_WEIGHT_APPROVAL",
+      "latest_live_api_observation": "2026-11-14_ONBID_15157252_ONE_HTTP_RESPONSE_QUARANTINED_UNRECOGNIZED_ENVELOPE",
+      "live_api_observation_count": 1,
+      "live_api_field_mapping_verified": false,
+      "local_mock_tests_latest": 208
     },
     {
       "record_id": "CANDIDATE-11",
