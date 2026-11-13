@@ -1,3 +1,8 @@
+## [2026-11-14 KST] WORKNOVA Desk 소유자 Windows 합성 QA 11개×2 PASS
+
+- 사용자 제공 Windows 콘솔(`win32`, `ok:true`)에서 `tools/windows_acceptance.py` **11PASS/0FAIL/0SKIP ×2회**, Tk 기본 창·15 소스파일 ZIP 무결성·Python 필수 PowerShell 비관리자 합성 설치/업그레이드/삭제·장부 무결성·AES 백업/복원·기존 합성 장부 보존/임시 정리 확인. **실 소유 Windows 출력만**, GitHub CI 및 사용자 ZIP의 정확 Git SHA 직접 검증은 아직 없음. [상세 증거](https://github.com/hibi89/Freelancer/blob/product/worknova-desk-local/docs/P85_WINDOWS_OWNER_CONSOLE_20261114.md).
+- 제품 HEAD `d8ab09beae722607a180390dcc3807801fc569cb`, 중앙 `docs/audits/KMONG_16_CURRENT_20261111.md`에서 WORKNOVA 단일 행만 갱신. 승인 고정 WD01~14 전체100점, 항목 전체 구매자 수용 점수 **0/100(구현률 0 아님)**; **85 목표 미달, [작업중], RELEASE HOLD, 미등록**. 실제 독립 EXE·GUI 전수·OS ACL/상시 DB 암호화/서명·Defender·Word·실구매자/권리·법률 미검증. 다음 사용자 최소 동작은 `py -3 -m PyInstaller --version`으로 설치 확인, 무단 pip/유료 Actions 없음.
+
 ## [2026-11-14 KST] FlowPilot Universal 사용자 중단 결정 — 85 공식 수용 불가 조건이라 일단 보류
 
 - **결정:** 고정 전체 F01–F10 최종완성률 85%에 대해 남은 무장비 작업만으로 달성 검증 불가, 사용자 요청 따라 **PAUSED / OWNER HOLD**. USB 예상 11/17, NAS 없음. 실제 Windows10/11·USB·승인 NAS 2제조사/SMB F09, F10 구매자·권리·약관·허가, 기존 100점 설계 수용 증거 미확정. 공식 **UNASSESSED/목표85 미인증**.
