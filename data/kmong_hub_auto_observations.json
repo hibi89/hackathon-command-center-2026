@@ -1,0 +1,1388 @@
+{
+  "blocking_repositories": [],
+  "generated_by": "kmong-hub-sync",
+  "no_official_score_authorization": true,
+  "policy": "OWNER-FINAL-BLUEPRINT-100",
+  "products": [
+    {
+      "gate": {
+        "status": "NO_RUN"
+      },
+      "head_sha": "1e4469d83ea6eecc8fff9be87d0cbe5666c81ff1",
+      "record_id": "ACTIVE-01",
+      "repository": "hibi89/candle_scraper",
+      "status": "PRESENT",
+      "tracked_branch": "feature/kmong-collector-p95-delivery-integrity-20261112"
+    },
+    {
+      "gate": {
+        "conclusion": "success",
+        "head_sha": "019ffce2529ad18087d81451dbda00fe17617d65",
+        "matches_current_head": false,
+        "run_id": 43326291906,
+        "status": "LATEST_RUN",
+        "workflow_status": "completed"
+      },
+      "head_sha": "e0a177808b1ee5b3c27c45a63ee6473961a86fc5",
+      "record_id": "ACTIVE-02",
+      "repository": "hibi89/HAE",
+      "status": "PRESENT",
+      "tracked_branch": "feature/axflow-mvp"
+    },
+    {
+      "gate": {
+        "status": "NO_RUN"
+      },
+      "head_sha": "e18fe74f1b1d1105d37017573e8c7ab6b5f85f11",
+      "record_id": "ACTIVE-03",
+      "repository": "hibi89/ai-code-checker",
+      "status": "PRESENT",
+      "tracked_branch": "feature/retail-private-candidate-20261112"
+    },
+    {
+      "gate": {
+        "status": "NO_RUN"
+      },
+      "head_sha": "21a10dfdbca25166ad97c1ff65dc4e4e87664b6b",
+      "record_id": "ACTIVE-04",
+      "repository": "hibi89/SMAX",
+      "status": "PRESENT",
+      "tracked_branch": "feature/prep-self-owner-mapping-p8"
+    },
+    {
+      "gate": {
+        "status": "NO_RUN"
+      },
+      "head_sha": "2bf9ab26b21bf8d46ffe27695d53159794ffde97",
+      "record_id": "ACTIVE-05",
+      "repository": "hibi89/data2web_studio",
+      "status": "PRESENT",
+      "tracked_branch": "feature/xlsx-tsv-import"
+    },
+    {
+      "gate": {
+        "status": "NO_RUN"
+      },
+      "head_sha": "82fb8da349de72f45eeaf15f7e997c2d449cf488",
+      "record_id": "ACTIVE-06",
+      "repository": "hibi89/REA_Web",
+      "status": "PRESENT",
+      "tracked_branch": "feature/website-analysis-rebuild"
+    },
+    {
+      "gate": {
+        "status": "NO_RUN"
+      },
+      "head_sha": "b235b0222e44764d7593b647fee2e257e562764b",
+      "record_id": "ACTIVE-07",
+      "repository": "hibi89/SOVIA_sovereign",
+      "status": "PRESENT",
+      "tracked_branch": "feature/kmong-la-review-p2-20261112"
+    },
+    {
+      "gate": {
+        "status": "NO_RUN"
+      },
+      "head_sha": "a3ddd8b9d20fee591ad246becab2b4adc89b56d8",
+      "record_id": "ACTIVE-08",
+      "repository": "hibi89/AI_AutoML_Analyst",
+      "status": "PRESENT",
+      "tracked_branch": "feature/kmong-p6e50-owner-delivery-20261112"
+    },
+    {
+      "gate": {
+        "status": "NO_RUN"
+      },
+      "head_sha": "fac8a9ccb67565ad56cf6d350ba82a9cfb80dc27",
+      "record_id": "ACTIVE-09",
+      "repository": "hibi89/HAE",
+      "status": "PRESENT",
+      "tracked_branch": "feature/rea-app-kmong-owner-delivery-20261112"
+    },
+    {
+      "gate": {
+        "conclusion": "success",
+        "head_sha": "6508b27b9a36567f57e926eb3613b10f3b265689",
+        "matches_current_head": false,
+        "run_id": 43346193465,
+        "status": "LATEST_RUN",
+        "workflow_status": "completed"
+      },
+      "head_sha": "fe0693eab0df738ee981f93169b60f95c7a63cea",
+      "record_id": "ACTIVE-10",
+      "repository": "hibi89/HAE",
+      "status": "PRESENT",
+      "tracked_branch": "feature/la-p17-audit-evidence-20261112"
+    },
+    {
+      "gate": {
+        "status": "NO_RUN"
+      },
+      "head_sha": "b69ee453f460cc4a97ccfea6b4ab5748a2420c2e",
+      "record_id": "ACTIVE-11",
+      "repository": "hibi89/DBVORA",
+      "status": "PRESENT",
+      "tracked_branch": "feature/p0-db-map"
+    },
+    {
+      "gate": {
+        "status": "NO_RUN"
+      },
+      "head_sha": "4669957a0f5dd8e641903bef0c0ef21d43166dcc",
+      "record_id": "ACTIVE-12",
+      "repository": "hibi89/RAG_STUDIO",
+      "status": "PRESENT",
+      "tracked_branch": "feature/p546-rag-prep-mapping"
+    },
+    {
+      "gate": {
+        "status": "NO_RUN"
+      },
+      "head_sha": "b80830ab3219dbcf88556d60ce2c47c2dcec7764",
+      "record_id": "ACTIVE-13",
+      "repository": "hibi89/astra_pdf_redesigner",
+      "status": "PRESENT",
+      "tracked_branch": "integration/astra-commercial-core"
+    },
+    {
+      "gate": {
+        "status": "NO_RUN"
+      },
+      "head_sha": "a6f76576880e3dc242ea3730728e287c0914d5ee",
+      "record_id": "ACTIVE-14",
+      "repository": "hibi89/candle_scraper",
+      "status": "PRESENT",
+      "tracked_branch": "feature/coin-pattern-p85-forward-eval-20261112"
+    },
+    {
+      "gate": {
+        "status": "NO_RUN"
+      },
+      "head_sha": "57d5424f008b091b0f46066ef41e85f437b8dac8",
+      "record_id": "ACTIVE-15",
+      "repository": "hibi89/EAI",
+      "status": "PRESENT",
+      "tracked_branch": "feature/kmong-eai-85-p31-20261112"
+    },
+    {
+      "gate": {
+        "status": "NO_RUN"
+      },
+      "head_sha": "72da39fcebda1e23f540e5381be9abf6422d1934",
+      "record_id": "ACTIVE-16",
+      "repository": "hibi89/AX_MART",
+      "status": "PRESENT",
+      "tracked_branch": "feature/pc-care-p15-p18-85-20261112"
+    },
+    {
+      "gate": {
+        "status": "NO_RUN"
+      },
+      "head_sha": "1f36b39e67914a4a24ce8d012ccdbf95e8dede4c",
+      "record_id": "ACTIVE-17",
+      "repository": "hibi89/AX_MART",
+      "status": "PRESENT",
+      "tracked_branch": "feature/cube-owner-preflight-p85-20261112"
+    },
+    {
+      "gate": {
+        "status": "NO_RUN"
+      },
+      "head_sha": "53b2262d847b40b45f5138d5f6cb4c16a8249813",
+      "record_id": "CANDIDATE-01",
+      "repository": "hibi89/KUODRA",
+      "status": "PRESENT",
+      "tracked_branch": "develop"
+    },
+    {
+      "gate": {
+        "status": "NO_RUN"
+      },
+      "head_sha": "79f65ca284bc65c651054d281e0b9e95b04469cb",
+      "record_id": "CANDIDATE-02",
+      "repository": "hibi89/prep",
+      "status": "PRESENT",
+      "tracked_branch": "feature/core-extraction"
+    },
+    {
+      "gate": {
+        "status": "NO_RUN"
+      },
+      "head_sha": "db7e0204bc861a3a42efb11a412663caa2cbd795",
+      "record_id": "CANDIDATE-03",
+      "repository": "hibi89/frontend-foundry-ax",
+      "status": "PRESENT",
+      "tracked_branch": "feature/ffax-workbench-p85-20261112"
+    },
+    {
+      "gate": {
+        "status": "NO_RUN"
+      },
+      "head_sha": "f9577bbc4c798534b36ed1243e122453b5e4a4a9",
+      "record_id": "CANDIDATE-04",
+      "repository": "hibi89/factory-ax-ecosystem",
+      "status": "PRESENT",
+      "tracked_branch": "feature/data-verify"
+    },
+    {
+      "gate": {
+        "status": "NO_RUN"
+      },
+      "head_sha": "a6c69d5bfccd81a637095701245a1e86a8488e77",
+      "record_id": "CANDIDATE-05",
+      "repository": "hibi89/Freelancer",
+      "status": "PRESENT",
+      "tracked_branch": "product/hae-la-automation"
+    },
+    {
+      "gate": {
+        "status": "NO_RUN"
+      },
+      "head_sha": "1195f767c7ebc6b1965936cc2166db53853c6e53",
+      "record_id": "CANDIDATE-06",
+      "repository": "hibi89/Freelancer",
+      "status": "PRESENT",
+      "tracked_branch": "product/rag-enterprise-knowledge"
+    },
+    {
+      "gate": {
+        "status": "NO_RUN"
+      },
+      "head_sha": "44754f06efd82b91d9a4ee9e5c5e6130bd48d30e",
+      "record_id": "CANDIDATE-07",
+      "repository": "hibi89/Freelancer",
+      "status": "PRESENT",
+      "tracked_branch": "product/rea-website-rebuild"
+    },
+    {
+      "gate": {
+        "status": "NO_RUN"
+      },
+      "head_sha": "bcff81660f854213d40e6f9226b5cdb53103bd2f",
+      "record_id": "CANDIDATE-08",
+      "repository": "hibi89/Freelancer",
+      "status": "PRESENT",
+      "tracked_branch": "product/proofqa-ax-delivery-audit"
+    },
+    {
+      "gate": {
+        "status": "NO_RUN"
+      },
+      "head_sha": "ba882562be8ddee685520c0bce18348ab6e56dd6",
+      "record_id": "CANDIDATE-09",
+      "repository": "hibi89/Freelancer",
+      "status": "PRESENT",
+      "tracked_branch": "product/ontoinsight-ax-data-analytics"
+    },
+    {
+      "record_id": "CANDIDATE-10",
+      "repository": null,
+      "status": "NOT_LINKED",
+      "tracked_branch": null
+    },
+    {
+      "gate": {
+        "status": "NO_RUN"
+      },
+      "head_sha": "d6b42798c633172d6d918d00316d5e3a973be426",
+      "record_id": "CANDIDATE-11",
+      "repository": "hibi89/hibi89-ugreen-nas-hackathon",
+      "status": "PRESENT",
+      "tracked_branch": "lead/ugreen"
+    },
+    {
+      "gate": {
+        "status": "NO_RUN"
+      },
+      "head_sha": "c320382792024a30c5bc195a302a217b34f38b07",
+      "record_id": "CANDIDATE-12",
+      "repository": "hibi89/hibi89-paypal-ai-hackathon",
+      "status": "PRESENT",
+      "tracked_branch": "lead/paypal"
+    }
+  ],
+  "repositories": [
+    {
+      "canonical": {
+        "expected_git_blob_sha": "dc2820f0b353a3c76429f68e84032a46998c323e",
+        "head_sha": "37a360da884d1c372a3df76e71d180d57ffcf9c5",
+        "mode": "enforce",
+        "observed_git_blob_sha": "dc2820f0b353a3c76429f68e84032a46998c323e",
+        "owner_approval_verified": false,
+        "path": "FINAL_PRODUCT_BLUEPRINT.md",
+        "ref": "main",
+        "status": "MATCHED"
+      },
+      "main": {
+        "branch": "main",
+        "gate": {
+          "status": "NO_RUN"
+        },
+        "head_sha": "37a360da884d1c372a3df76e71d180d57ffcf9c5",
+        "status": "PRESENT"
+      },
+      "repository": "hibi89/ai-code-checker",
+      "work_branches": [
+        {
+          "branch": "feature/retail-private-candidate-20261112",
+          "gate": {
+            "status": "NO_RUN"
+          },
+          "head_sha": "e18fe74f1b1d1105d37017573e8c7ab6b5f85f11",
+          "status": "PRESENT"
+        }
+      ]
+    },
+    {
+      "canonical": {
+        "expected_git_blob_sha": "cb61342f9cf3c71278be61a21397068ec9de752c",
+        "head_sha": "a3ddd8b9d20fee591ad246becab2b4adc89b56d8",
+        "mode": "observe",
+        "observed_git_blob_sha": "cb61342f9cf3c71278be61a21397068ec9de752c",
+        "owner_approval_verified": false,
+        "path": "REQUIREMENTS.md",
+        "ref": "feature/kmong-p6e50-owner-delivery-20261112",
+        "status": "MATCHED"
+      },
+      "main": {
+        "branch": "main",
+        "gate": {
+          "status": "NO_RUN"
+        },
+        "head_sha": "470d868e7919638faccc963f9c64a85bdbb7f66d",
+        "status": "PRESENT"
+      },
+      "repository": "hibi89/AI_AutoML_Analyst",
+      "work_branches": [
+        {
+          "branch": "feature/kmong-p6e50-owner-delivery-20261112",
+          "gate": {
+            "status": "NO_RUN"
+          },
+          "head_sha": "a3ddd8b9d20fee591ad246becab2b4adc89b56d8",
+          "status": "PRESENT"
+        }
+      ]
+    },
+    {
+      "canonical": {
+        "expected_git_blob_sha": "b2d6bd5de2d5b74a8004d0fe5ca5643d0a94ea02",
+        "head_sha": "b07b43e22ec1b23c7069f14093c6cd384897e294",
+        "mode": "enforce",
+        "observed_git_blob_sha": "b2d6bd5de2d5b74a8004d0fe5ca5643d0a94ea02",
+        "owner_approval_verified": false,
+        "path": "docs/BLUEPRINT.md",
+        "ref": "main",
+        "status": "MATCHED"
+      },
+      "main": {
+        "branch": "main",
+        "gate": {
+          "status": "NO_RUN"
+        },
+        "head_sha": "b07b43e22ec1b23c7069f14093c6cd384897e294",
+        "status": "PRESENT"
+      },
+      "repository": "hibi89/astra_pdf_redesigner",
+      "work_branches": [
+        {
+          "branch": "feature/astra-p71-pdf-source-parity-20261112",
+          "gate": {
+            "status": "NO_RUN"
+          },
+          "head_sha": "2c2bef5288257d9405bb912aa838ca071703e0ed",
+          "status": "PRESENT"
+        }
+      ]
+    },
+    {
+      "canonical": {
+        "expected_git_blob_sha": "c8f89f7162813b2baa5ae323069366050ad637c0",
+        "head_sha": "a8bfb5bf920322086f2ac427f18a59ef704703e2",
+        "mode": "enforce",
+        "observed_git_blob_sha": "c8f89f7162813b2baa5ae323069366050ad637c0",
+        "owner_approval_verified": false,
+        "path": "docs/ASTRA_CANONICAL_DESIGN_2026-10-18.md",
+        "ref": "main",
+        "status": "MATCHED"
+      },
+      "main": {
+        "branch": "main",
+        "gate": {
+          "status": "NO_RUN"
+        },
+        "head_sha": "a8bfb5bf920322086f2ac427f18a59ef704703e2",
+        "status": "PRESENT"
+      },
+      "repository": "hibi89/astra_web_catcher",
+      "work_branches": []
+    },
+    {
+      "canonical": {
+        "expected_git_blob_sha": "c50e8f998971e3938b880bdde95f725a958fdffa",
+        "head_sha": "48d84725c404fbfa6ae96d1bfe4b16f7644a1b2b",
+        "mode": "observe",
+        "observed_git_blob_sha": "c50e8f998971e3938b880bdde95f725a958fdffa",
+        "owner_approval_verified": false,
+        "path": "REQUIREMENTS.md",
+        "ref": "main",
+        "status": "MATCHED"
+      },
+      "main": {
+        "branch": "main",
+        "gate": {
+          "status": "NO_RUN"
+        },
+        "head_sha": "48d84725c404fbfa6ae96d1bfe4b16f7644a1b2b",
+        "status": "PRESENT"
+      },
+      "repository": "hibi89/AX_MART",
+      "work_branches": [
+        {
+          "branch": "feature/cube-owner-preflight-p85-20261112",
+          "gate": {
+            "status": "NO_RUN"
+          },
+          "head_sha": "1f36b39e67914a4a24ce8d012ccdbf95e8dede4c",
+          "status": "PRESENT"
+        },
+        {
+          "branch": "feature/pc-care-usb",
+          "gate": {
+            "status": "NO_RUN"
+          },
+          "head_sha": "a1f5e96a224036697d959d143d7ffb56c116a572",
+          "status": "PRESENT"
+        }
+      ]
+    },
+    {
+      "canonical": {
+        "expected_git_blob_sha": "dd6bfa2ec9758287c7d600b54f1b947f01fec62c",
+        "head_sha": "b18df78dd854e5604eeddded42e88be314a19bd4",
+        "mode": "observe",
+        "observed_git_blob_sha": "dd6bfa2ec9758287c7d600b54f1b947f01fec62c",
+        "owner_approval_verified": false,
+        "path": "REQUIREMENTS.md",
+        "ref": "main",
+        "status": "MATCHED"
+      },
+      "main": {
+        "branch": "main",
+        "gate": {
+          "status": "NO_RUN"
+        },
+        "head_sha": "b18df78dd854e5604eeddded42e88be314a19bd4",
+        "status": "PRESENT"
+      },
+      "repository": "hibi89/Bid_Owl",
+      "work_branches": [
+        {
+          "branch": "feature/disclosure-lightning",
+          "gate": {
+            "status": "NO_RUN"
+          },
+          "head_sha": "763760457ba883923604cb7beb6030ed58288ccb",
+          "status": "PRESENT"
+        }
+      ]
+    },
+    {
+      "canonical": {
+        "expected_git_blob_sha": "dc683d57812919bb8096ba01e73158c903632086",
+        "head_sha": "498713c871e241409ec3773081b9f7f5ba4ebe8d",
+        "mode": "observe",
+        "observed_git_blob_sha": "dc683d57812919bb8096ba01e73158c903632086",
+        "owner_approval_verified": false,
+        "path": "REQUIREMENTS.md",
+        "ref": "main",
+        "status": "MATCHED"
+      },
+      "main": {
+        "branch": "main",
+        "gate": {
+          "status": "NO_RUN"
+        },
+        "head_sha": "498713c871e241409ec3773081b9f7f5ba4ebe8d",
+        "status": "PRESENT"
+      },
+      "repository": "hibi89/candle_scraper",
+      "work_branches": [
+        {
+          "branch": "feature/candle-pattern-analyzer",
+          "gate": {
+            "status": "NO_RUN"
+          },
+          "head_sha": "69f61eda448026b3200ec831d54f8da1f7de35c7",
+          "status": "PRESENT"
+        }
+      ]
+    },
+    {
+      "canonical": {
+        "expected_git_blob_sha": "7cd26804f5fea7ed2ec18911bb03d438a49aa646",
+        "head_sha": "0cf4adbfe745c10fdb103db09185ea495fb769aa",
+        "mode": "enforce",
+        "observed_git_blob_sha": "7cd26804f5fea7ed2ec18911bb03d438a49aa646",
+        "owner_approval_verified": false,
+        "path": "docs/FINAL_DESIGN.md",
+        "ref": "main",
+        "status": "MATCHED"
+      },
+      "main": {
+        "branch": "main",
+        "gate": {
+          "conclusion": "success",
+          "head_sha": "3400ab7eb84fb7141acacfc0df213e0b0186da83",
+          "matches_current_head": false,
+          "run_id": 43348157583,
+          "status": "LATEST_RUN",
+          "workflow_status": "completed"
+        },
+        "head_sha": "0cf4adbfe745c10fdb103db09185ea495fb769aa",
+        "status": "PRESENT"
+      },
+      "repository": "hibi89/data2web_studio",
+      "work_branches": [
+        {
+          "branch": "feature/lite-independent-migration",
+          "gate": {
+            "status": "NO_RUN"
+          },
+          "head_sha": "5c6e28fb5cf81a62e2af6d938b72927579037565",
+          "status": "PRESENT"
+        },
+        {
+          "branch": "feature/xlsx-tsv-import",
+          "gate": {
+            "status": "NO_RUN"
+          },
+          "head_sha": "2bf9ab26b21bf8d46ffe27695d53159794ffde97",
+          "status": "PRESENT"
+        }
+      ]
+    },
+    {
+      "canonical": {
+        "expected_git_blob_sha": "8e8e61f30c504fa5fe0acbaa6c85047801e921d6",
+        "head_sha": "2c58799cde343ae0a176759e195202ecab97c345",
+        "mode": "observe",
+        "observed_git_blob_sha": "8e8e61f30c504fa5fe0acbaa6c85047801e921d6",
+        "owner_approval_verified": false,
+        "path": "REQUIREMENTS.md",
+        "ref": "main",
+        "status": "MATCHED"
+      },
+      "main": {
+        "branch": "main",
+        "gate": {
+          "status": "NO_RUN"
+        },
+        "head_sha": "2c58799cde343ae0a176759e195202ecab97c345",
+        "status": "PRESENT"
+      },
+      "repository": "hibi89/DBVORA",
+      "work_branches": [
+        {
+          "branch": "feature/p0-db-map",
+          "gate": {
+            "status": "NO_RUN"
+          },
+          "head_sha": "b69ee453f460cc4a97ccfea6b4ab5748a2420c2e",
+          "status": "PRESENT"
+        }
+      ]
+    },
+    {
+      "canonical": {
+        "expected_git_blob_sha": "20b6fbdb690f6a3d032a374f773bf3f6586af2bf",
+        "head_sha": "57d5424f008b091b0f46066ef41e85f437b8dac8",
+        "mode": "observe",
+        "observed_git_blob_sha": "20b6fbdb690f6a3d032a374f773bf3f6586af2bf",
+        "owner_approval_verified": false,
+        "path": "REQUIREMENTS.md",
+        "ref": "feature/kmong-eai-85-p31-20261112",
+        "status": "MATCHED"
+      },
+      "main": {
+        "branch": "main",
+        "gate": {
+          "status": "NO_RUN"
+        },
+        "head_sha": "dea2e2d2440b510ae0ffcab247751ee4b90d39f2",
+        "status": "PRESENT"
+      },
+      "repository": "hibi89/EAI",
+      "work_branches": [
+        {
+          "branch": "feature/local-first-mvp",
+          "gate": {
+            "status": "NO_RUN"
+          },
+          "head_sha": "5cf122eec9b61fc9c8cd9cc10a7ae3f4701ec5e1",
+          "status": "PRESENT"
+        }
+      ]
+    },
+    {
+      "canonical": {
+        "expected_git_blob_sha": "2da774a58de076b400e838bc53061e18228b11cf",
+        "head_sha": "47b0a428368fa184f3927e91d931d9b725acd5ed",
+        "mode": "observe",
+        "observed_git_blob_sha": "2da774a58de076b400e838bc53061e18228b11cf",
+        "owner_approval_verified": false,
+        "path": "REQUIREMENTS.md",
+        "ref": "main",
+        "status": "MATCHED"
+      },
+      "main": {
+        "branch": "main",
+        "gate": {
+          "status": "NO_RUN"
+        },
+        "head_sha": "47b0a428368fa184f3927e91d931d9b725acd5ed",
+        "status": "PRESENT"
+      },
+      "repository": "hibi89/fable5.1_web_catcher",
+      "work_branches": []
+    },
+    {
+      "canonical": {
+        "expected_git_blob_sha": "dee90598d9411313f644bc5e84339e38130128be",
+        "head_sha": "5f5e9ac838e3949f133dd9e055a17cd1b6857c73",
+        "mode": "enforce",
+        "observed_git_blob_sha": "dee90598d9411313f644bc5e84339e38130128be",
+        "owner_approval_verified": false,
+        "path": "docs/PRODUCT_BLUEPRINT.md",
+        "ref": "main",
+        "status": "MATCHED"
+      },
+      "main": {
+        "branch": "main",
+        "gate": {
+          "status": "NO_RUN"
+        },
+        "head_sha": "5f5e9ac838e3949f133dd9e055a17cd1b6857c73",
+        "status": "PRESENT"
+      },
+      "repository": "hibi89/factory-ax-ecosystem",
+      "work_branches": [
+        {
+          "branch": "feature/hae-la",
+          "gate": {
+            "status": "NO_RUN"
+          },
+          "head_sha": "1fbccafb41b723471713c376290b34188c43a2d5",
+          "status": "PRESENT"
+        },
+        {
+          "branch": "integration/develop",
+          "gate": {
+            "status": "NO_RUN"
+          },
+          "head_sha": "31b8229eedfd7bd598642a7e23f93efe5c5aa390",
+          "status": "PRESENT"
+        }
+      ]
+    },
+    {
+      "canonical": {
+        "expected_git_blob_sha": "9e12d3dbd88367e405a27a59c62141ce8c6d4b31",
+        "head_sha": "db434ca0d40b2a87f1a1d090d0896a60ea2d2596",
+        "mode": "observe",
+        "observed_git_blob_sha": "9e12d3dbd88367e405a27a59c62141ce8c6d4b31",
+        "owner_approval_verified": false,
+        "path": "REQUIREMENTS.md",
+        "ref": "main",
+        "status": "MATCHED"
+      },
+      "main": {
+        "branch": "main",
+        "gate": {
+          "conclusion": "success",
+          "head_sha": "db434ca0d40b2a87f1a1d090d0896a60ea2d2596",
+          "matches_current_head": true,
+          "run_id": 43361506269,
+          "status": "LATEST_RUN",
+          "workflow_status": "completed"
+        },
+        "head_sha": "db434ca0d40b2a87f1a1d090d0896a60ea2d2596",
+        "status": "PRESENT"
+      },
+      "repository": "hibi89/Freelancer",
+      "work_branches": [
+        {
+          "branch": "product/hae-la-automation",
+          "gate": {
+            "status": "NO_RUN"
+          },
+          "head_sha": "a6c69d5bfccd81a637095701245a1e86a8488e77",
+          "status": "PRESENT"
+        },
+        {
+          "branch": "product/ontoinsight-ax-data-analytics",
+          "gate": {
+            "status": "NO_RUN"
+          },
+          "head_sha": "ba882562be8ddee685520c0bce18348ab6e56dd6",
+          "status": "PRESENT"
+        },
+        {
+          "branch": "product/proofqa-ax-delivery-audit",
+          "gate": {
+            "status": "NO_RUN"
+          },
+          "head_sha": "bcff81660f854213d40e6f9226b5cdb53103bd2f",
+          "status": "PRESENT"
+        },
+        {
+          "branch": "product/rag-enterprise-knowledge",
+          "gate": {
+            "status": "NO_RUN"
+          },
+          "head_sha": "1195f767c7ebc6b1965936cc2166db53853c6e53",
+          "status": "PRESENT"
+        },
+        {
+          "branch": "product/rea-website-rebuild",
+          "gate": {
+            "status": "NO_RUN"
+          },
+          "head_sha": "44754f06efd82b91d9a4ee9e5c5e6130bd48d30e",
+          "status": "PRESENT"
+        }
+      ]
+    },
+    {
+      "canonical": {
+        "expected_git_blob_sha": "1ae97c0f1bc0a4f1aba44a0e5bd1d219fb1abecd",
+        "head_sha": "63212dff011d3a0c00981e56ffda248cb108386f",
+        "mode": "observe",
+        "observed_git_blob_sha": "1ae97c0f1bc0a4f1aba44a0e5bd1d219fb1abecd",
+        "owner_approval_verified": false,
+        "path": "docs/PRODUCT_SPEC_V1.md",
+        "ref": "main",
+        "status": "MATCHED"
+      },
+      "main": {
+        "branch": "main",
+        "gate": {
+          "status": "NO_RUN"
+        },
+        "head_sha": "63212dff011d3a0c00981e56ffda248cb108386f",
+        "status": "PRESENT"
+      },
+      "repository": "hibi89/frontend-foundry-ax",
+      "work_branches": [
+        {
+          "branch": "feature/ffax-workbench-p85-20261112",
+          "gate": {
+            "status": "NO_RUN"
+          },
+          "head_sha": "db7e0204bc861a3a42efb11a412663caa2cbd795",
+          "status": "PRESENT"
+        }
+      ]
+    },
+    {
+      "canonical": {
+        "expected_git_blob_sha": "e257a6482fbb5f6fdbab00816e0981e692f7a144",
+        "head_sha": "24ec1aa95b679305ea5e16a7650e4e82c7c0b5de",
+        "mode": "observe",
+        "observed_git_blob_sha": "e257a6482fbb5f6fdbab00816e0981e692f7a144",
+        "owner_approval_verified": false,
+        "path": "REQUIREMENTS.md",
+        "ref": "main",
+        "status": "MATCHED"
+      },
+      "main": {
+        "branch": "main",
+        "gate": {
+          "status": "NO_RUN"
+        },
+        "head_sha": "24ec1aa95b679305ea5e16a7650e4e82c7c0b5de",
+        "status": "PRESENT"
+      },
+      "repository": "hibi89/gongbaek-sanggwon",
+      "work_branches": []
+    },
+    {
+      "canonical": {
+        "expected_git_blob_sha": "521ba0cb458bea384639a0ef897ce7500d33b8f1",
+        "head_sha": "2ce63078eeaced49cc46faeef5070c0c65ee9d7a",
+        "mode": "observe",
+        "observed_git_blob_sha": "521ba0cb458bea384639a0ef897ce7500d33b8f1",
+        "owner_approval_verified": false,
+        "path": "REQUIREMENTS.md",
+        "ref": "main",
+        "status": "MATCHED"
+      },
+      "main": {
+        "branch": "main",
+        "gate": {
+          "conclusion": "success",
+          "head_sha": "2ce63078eeaced49cc46faeef5070c0c65ee9d7a",
+          "matches_current_head": true,
+          "run_id": 43359427770,
+          "status": "LATEST_RUN",
+          "workflow_status": "completed"
+        },
+        "head_sha": "2ce63078eeaced49cc46faeef5070c0c65ee9d7a",
+        "status": "PRESENT"
+      },
+      "repository": "hibi89/hackathon-command-center-2026",
+      "work_branches": []
+    },
+    {
+      "canonical": {
+        "expected_git_blob_sha": "0d31062b0e3c6a570b37a35ace6fbfbe59ec2116",
+        "head_sha": "ff763ba8ec6002a01a0b08a02146e98193174e50",
+        "mode": "enforce",
+        "observed_git_blob_sha": "0d31062b0e3c6a570b37a35ace6fbfbe59ec2116",
+        "owner_approval_verified": false,
+        "path": "docs/ECOSYSTEM_CANONICAL.md",
+        "ref": "main",
+        "status": "MATCHED"
+      },
+      "main": {
+        "branch": "main",
+        "gate": {
+          "status": "NO_RUN"
+        },
+        "head_sha": "ff763ba8ec6002a01a0b08a02146e98193174e50",
+        "status": "PRESENT"
+      },
+      "repository": "hibi89/HAE",
+      "work_branches": [
+        {
+          "branch": "feature/axflow-mvp",
+          "gate": {
+            "conclusion": "success",
+            "head_sha": "019ffce2529ad18087d81451dbda00fe17617d65",
+            "matches_current_head": false,
+            "run_id": 43326291906,
+            "status": "LATEST_RUN",
+            "workflow_status": "completed"
+          },
+          "head_sha": "e0a177808b1ee5b3c27c45a63ee6473961a86fc5",
+          "status": "PRESENT"
+        },
+        {
+          "branch": "feature/dbvora-integration",
+          "gate": {
+            "status": "NO_RUN"
+          },
+          "head_sha": "32aea9e674231aad42ed60468aae41b56e041cef",
+          "status": "PRESENT"
+        },
+        {
+          "branch": "feature/la-p17-audit-evidence-20261112",
+          "gate": {
+            "conclusion": "success",
+            "head_sha": "6508b27b9a36567f57e926eb3613b10f3b265689",
+            "matches_current_head": false,
+            "run_id": 43346193465,
+            "status": "LATEST_RUN",
+            "workflow_status": "completed"
+          },
+          "head_sha": "fe0693eab0df738ee981f93169b60f95c7a63cea",
+          "status": "PRESENT"
+        },
+        {
+          "branch": "feature/lightning-azent",
+          "gate": {
+            "status": "NO_RUN"
+          },
+          "head_sha": "36f9882eb50e0de9e85eedb320a5778c8321cda5",
+          "status": "PRESENT"
+        },
+        {
+          "branch": "feature/rea-app-kmong-owner-delivery-20261112",
+          "gate": {
+            "status": "NO_RUN"
+          },
+          "head_sha": "fac8a9ccb67565ad56cf6d350ba82a9cfb80dc27",
+          "status": "PRESENT"
+        },
+        {
+          "branch": "feature/sovia-la-projection-p41-20261112",
+          "gate": {
+            "status": "NO_RUN"
+          },
+          "head_sha": "07657271a2ab8bd622938044b56275cdca263cd1",
+          "status": "PRESENT"
+        }
+      ]
+    },
+    {
+      "canonical": {
+        "expected_git_blob_sha": "a21561cc04b82a41eb9a8caa889235db4d896040",
+        "head_sha": "176df74c4e561e7d04618bfcf01c3b06ac6b173a",
+        "mode": "observe",
+        "observed_git_blob_sha": "a21561cc04b82a41eb9a8caa889235db4d896040",
+        "owner_approval_verified": false,
+        "path": "REQUIREMENTS.md",
+        "ref": "main",
+        "status": "MATCHED"
+      },
+      "main": {
+        "branch": "main",
+        "gate": {
+          "status": "NO_RUN"
+        },
+        "head_sha": "176df74c4e561e7d04618bfcf01c3b06ac6b173a",
+        "status": "PRESENT"
+      },
+      "repository": "hibi89/hibi89-kic-proofinvest",
+      "work_branches": [
+        {
+          "branch": "lead/kic",
+          "gate": {
+            "status": "NO_RUN"
+          },
+          "head_sha": "579d027a976ecb85ab9cfd0c3c788b2685267bee",
+          "status": "PRESENT"
+        }
+      ]
+    },
+    {
+      "canonical": {
+        "expected_git_blob_sha": "b8c6d452177b9a00129855f02ccba40031712813",
+        "head_sha": "4e78d128d577940806a4474c79ff432c97f83422",
+        "mode": "observe",
+        "observed_git_blob_sha": "b8c6d452177b9a00129855f02ccba40031712813",
+        "owner_approval_verified": false,
+        "path": "REQUIREMENTS.md",
+        "ref": "main",
+        "status": "MATCHED"
+      },
+      "main": {
+        "branch": "main",
+        "gate": {
+          "status": "NO_RUN"
+        },
+        "head_sha": "4e78d128d577940806a4474c79ff432c97f83422",
+        "status": "PRESENT"
+      },
+      "repository": "hibi89/hibi89-paypal-ai-hackathon",
+      "work_branches": [
+        {
+          "branch": "lead/paypal",
+          "gate": {
+            "status": "NO_RUN"
+          },
+          "head_sha": "c320382792024a30c5bc195a302a217b34f38b07",
+          "status": "PRESENT"
+        }
+      ]
+    },
+    {
+      "canonical": {
+        "expected_git_blob_sha": "fae8b6e38a72c97662103e5937d8214c44bb5151",
+        "head_sha": "ca9a6bb3cbb96ca1db79fa696527a31e1d8827d6",
+        "mode": "observe",
+        "observed_git_blob_sha": "fae8b6e38a72c97662103e5937d8214c44bb5151",
+        "owner_approval_verified": false,
+        "path": "REQUIREMENTS.md",
+        "ref": "main",
+        "status": "MATCHED"
+      },
+      "main": {
+        "branch": "main",
+        "gate": {
+          "status": "NO_RUN"
+        },
+        "head_sha": "ca9a6bb3cbb96ca1db79fa696527a31e1d8827d6",
+        "status": "PRESENT"
+      },
+      "repository": "hibi89/hibi89-ugreen-nas-hackathon",
+      "work_branches": [
+        {
+          "branch": "lead/ugreen",
+          "gate": {
+            "status": "NO_RUN"
+          },
+          "head_sha": "d6b42798c633172d6d918d00316d5e3a973be426",
+          "status": "PRESENT"
+        }
+      ]
+    },
+    {
+      "canonical": {
+        "expected_git_blob_sha": "1c12a144f8ac4fff78e2fb244b0debfe1ae50f72",
+        "head_sha": "0ddf73c36e4ae77fce37f9cf5d9a83dea713f26a",
+        "mode": "enforce",
+        "observed_git_blob_sha": "1c12a144f8ac4fff78e2fb244b0debfe1ae50f72",
+        "owner_approval_verified": false,
+        "path": "docs/BLUEPRINT_100.md",
+        "ref": "main",
+        "status": "MATCHED"
+      },
+      "main": {
+        "branch": "main",
+        "gate": {
+          "status": "NO_RUN"
+        },
+        "head_sha": "0ddf73c36e4ae77fce37f9cf5d9a83dea713f26a",
+        "status": "PRESENT"
+      },
+      "repository": "hibi89/KUODRA",
+      "work_branches": [
+        {
+          "branch": "develop",
+          "gate": {
+            "status": "NO_RUN"
+          },
+          "head_sha": "53b2262d847b40b45f5138d5f6cb4c16a8249813",
+          "status": "PRESENT"
+        }
+      ]
+    },
+    {
+      "canonical": {
+        "expected_git_blob_sha": "e610139fe2f55876ab34c81d745fb1ff78d05456",
+        "head_sha": "8e7000e47a242553b06a058e387b958f97a6b14a",
+        "mode": "observe",
+        "observed_git_blob_sha": "e610139fe2f55876ab34c81d745fb1ff78d05456",
+        "owner_approval_verified": false,
+        "path": "character/MASTER_PRODUCTION_SPEC.md",
+        "ref": "main",
+        "status": "MATCHED"
+      },
+      "main": {
+        "branch": "main",
+        "gate": {
+          "status": "NO_RUN"
+        },
+        "head_sha": "8e7000e47a242553b06a058e387b958f97a6b14a",
+        "status": "PRESENT"
+      },
+      "repository": "hibi89/NAON2-Character-Studio",
+      "work_branches": []
+    },
+    {
+      "canonical": {
+        "expected_git_blob_sha": "04c30ab2ff8c064e93448dbfc6640629c27210a8",
+        "head_sha": "51fc3ef98a11dad55922e071f3f016a74527c0a1",
+        "mode": "observe",
+        "observed_git_blob_sha": "04c30ab2ff8c064e93448dbfc6640629c27210a8",
+        "owner_approval_verified": false,
+        "path": "docs/V4_PIXEL_SPEC.md",
+        "ref": "main",
+        "status": "MATCHED"
+      },
+      "main": {
+        "branch": "main",
+        "gate": {
+          "status": "NO_RUN"
+        },
+        "head_sha": "51fc3ef98a11dad55922e071f3f016a74527c0a1",
+        "status": "PRESENT"
+      },
+      "repository": "hibi89/ohora-nail-intelligence-v4",
+      "work_branches": []
+    },
+    {
+      "canonical": {
+        "expected_git_blob_sha": "f4540237f597b0b5e8d844d312fca6daaf7d9fb1",
+        "head_sha": "612dc784883127585713709c066b0687a1fa8801",
+        "mode": "observe",
+        "observed_git_blob_sha": "f4540237f597b0b5e8d844d312fca6daaf7d9fb1",
+        "owner_approval_verified": false,
+        "path": "docs/INTERNAL_DASHBOARD_SPEC.md",
+        "ref": "main",
+        "status": "MATCHED"
+      },
+      "main": {
+        "branch": "main",
+        "gate": {
+          "status": "NO_RUN"
+        },
+        "head_sha": "612dc784883127585713709c066b0687a1fa8801",
+        "status": "PRESENT"
+      },
+      "repository": "hibi89/ohora-trend-analyzer",
+      "work_branches": []
+    },
+    {
+      "canonical": {
+        "expected_git_blob_sha": "c4b25df025c8255103d952a078af9eef61ff0798",
+        "head_sha": "4d04f946dd14126faed1dfa2862121130853aa37",
+        "mode": "observe",
+        "observed_git_blob_sha": "c4b25df025c8255103d952a078af9eef61ff0798",
+        "owner_approval_verified": false,
+        "path": "REQUIREMENTS.md",
+        "ref": "main",
+        "status": "MATCHED"
+      },
+      "main": {
+        "branch": "main",
+        "gate": {
+          "status": "NO_RUN"
+        },
+        "head_sha": "4d04f946dd14126faed1dfa2862121130853aa37",
+        "status": "PRESENT"
+      },
+      "repository": "hibi89/ohora-trend-catcher",
+      "work_branches": []
+    },
+    {
+      "canonical": {
+        "expected_git_blob_sha": "81dfaf058ba5392506920bffc0b376d73741ddf7",
+        "head_sha": "358387af2949b8deaf7901d90a1c37ae9119f0f2",
+        "mode": "observe",
+        "observed_git_blob_sha": "81dfaf058ba5392506920bffc0b376d73741ddf7",
+        "owner_approval_verified": false,
+        "path": "ohora-trend-catcher-classic-safe/REQUIREMENTS.md",
+        "ref": "main",
+        "status": "MATCHED"
+      },
+      "main": {
+        "branch": "main",
+        "gate": {
+          "status": "NO_RUN"
+        },
+        "head_sha": "358387af2949b8deaf7901d90a1c37ae9119f0f2",
+        "status": "PRESENT"
+      },
+      "repository": "hibi89/ohora-trend-catcher-classic",
+      "work_branches": []
+    },
+    {
+      "canonical": {
+        "expected_git_blob_sha": "26b53937664dd7f11f42ee0ba6bfef93ebe50be2",
+        "head_sha": "e25b874a8322b72340fb0d897ea9c9820bf6552c",
+        "mode": "enforce",
+        "observed_git_blob_sha": "26b53937664dd7f11f42ee0ba6bfef93ebe50be2",
+        "owner_approval_verified": false,
+        "path": "docs/FINAL_PRODUCT_BLUEPRINT.md",
+        "ref": "main",
+        "status": "MATCHED"
+      },
+      "main": {
+        "branch": "main",
+        "gate": {
+          "status": "NO_RUN"
+        },
+        "head_sha": "e25b874a8322b72340fb0d897ea9c9820bf6552c",
+        "status": "PRESENT"
+      },
+      "repository": "hibi89/prep",
+      "work_branches": [
+        {
+          "branch": "feature/core-extraction",
+          "gate": {
+            "status": "NO_RUN"
+          },
+          "head_sha": "79f65ca284bc65c651054d281e0b9e95b04469cb",
+          "status": "PRESENT"
+        }
+      ]
+    },
+    {
+      "canonical": {
+        "status": "NOT_CONFIGURED"
+      },
+      "main": {
+        "branch": "main",
+        "gate": {
+          "status": "NO_RUN"
+        },
+        "head_sha": "e26734c3c1834dd6ec5e77ca2fbff25ec9fdfe6f",
+        "status": "PRESENT"
+      },
+      "repository": "hibi89/project-book",
+      "work_branches": []
+    },
+    {
+      "canonical": {
+        "status": "NOT_CONFIGURED"
+      },
+      "main": {
+        "branch": "main",
+        "gate": {
+          "status": "NO_RUN"
+        },
+        "head_sha": "03f3ae2e02d6cc9ad82b9abf7c8873be73fe1cda",
+        "status": "PRESENT"
+      },
+      "repository": "hibi89/RAG_STUDIO",
+      "work_branches": [
+        {
+          "branch": "develop",
+          "gate": {
+            "status": "NO_RUN"
+          },
+          "head_sha": "bb8529ed689c1e95ccd7bbb722d4d6616eb46130",
+          "status": "PRESENT"
+        },
+        {
+          "branch": "feature/p550-mapped-cited-journey",
+          "gate": {
+            "status": "NO_RUN"
+          },
+          "head_sha": "c5867b3951f51bfa97cadd1aad8fb13e9cf9e604",
+          "status": "PRESENT"
+        }
+      ]
+    },
+    {
+      "canonical": {
+        "expected_git_blob_sha": "59cae0260a494edbaa6456b8aeae4afe12e2f8ac",
+        "head_sha": "19d4759140b00d9a258071bbc37217d2492fc038",
+        "mode": "enforce",
+        "observed_git_blob_sha": "59cae0260a494edbaa6456b8aeae4afe12e2f8ac",
+        "owner_approval_verified": false,
+        "path": "docs/ORIGINAL_FINAL_DESIGN.md",
+        "ref": "main",
+        "status": "MATCHED"
+      },
+      "main": {
+        "branch": "main",
+        "gate": {
+          "status": "NO_RUN"
+        },
+        "head_sha": "19d4759140b00d9a258071bbc37217d2492fc038",
+        "status": "PRESENT"
+      },
+      "repository": "hibi89/REA_Web",
+      "work_branches": [
+        {
+          "branch": "feature/website-analysis-rebuild",
+          "gate": {
+            "status": "NO_RUN"
+          },
+          "head_sha": "82fb8da349de72f45eeaf15f7e997c2d449cf488",
+          "status": "PRESENT"
+        }
+      ]
+    },
+    {
+      "canonical": {
+        "status": "NOT_CONFIGURED"
+      },
+      "main": {
+        "branch": "main",
+        "gate": {
+          "status": "NO_RUN"
+        },
+        "head_sha": "9e5a81a700d4fcff2f0e0e5ef07c4f8e720c2ad6",
+        "status": "PRESENT"
+      },
+      "repository": "hibi89/self-hosted-n8n-reliability-lab",
+      "work_branches": []
+    },
+    {
+      "canonical": {
+        "expected_git_blob_sha": "2f16ea3b112394bb0164c6d61d5c7a6e16e6dc62",
+        "head_sha": "21a10dfdbca25166ad97c1ff65dc4e4e87664b6b",
+        "mode": "observe",
+        "observed_git_blob_sha": "2f16ea3b112394bb0164c6d61d5c7a6e16e6dc62",
+        "owner_approval_verified": false,
+        "path": "REQUIREMENTS.md",
+        "ref": "feature/prep-self-owner-mapping-p8",
+        "status": "MATCHED"
+      },
+      "main": {
+        "branch": "main",
+        "gate": {
+          "status": "NO_RUN"
+        },
+        "head_sha": "68181210a34300c2788eef8d810b4fcff345991d",
+        "status": "PRESENT"
+      },
+      "repository": "hibi89/SMAX",
+      "work_branches": [
+        {
+          "branch": "feature/prep-self-owner-mapping-p8",
+          "gate": {
+            "status": "NO_RUN"
+          },
+          "head_sha": "21a10dfdbca25166ad97c1ff65dc4e4e87664b6b",
+          "status": "PRESENT"
+        }
+      ]
+    },
+    {
+      "canonical": {
+        "expected_git_blob_sha": "53447ab218947746adcbf588d132092606a8d2f1",
+        "head_sha": "7b4e408edf073bb530470a76791269a7cfc6cf3a",
+        "mode": "observe",
+        "observed_git_blob_sha": "53447ab218947746adcbf588d132092606a8d2f1",
+        "owner_approval_verified": false,
+        "path": "REQUIREMENTS.md",
+        "ref": "main",
+        "status": "MATCHED"
+      },
+      "main": {
+        "branch": "main",
+        "gate": {
+          "status": "NO_RUN"
+        },
+        "head_sha": "7b4e408edf073bb530470a76791269a7cfc6cf3a",
+        "status": "PRESENT"
+      },
+      "repository": "hibi89/SOVIA_sovereign",
+      "work_branches": [
+        {
+          "branch": "develop",
+          "gate": {
+            "status": "NO_RUN"
+          },
+          "head_sha": "68953d9b1f91892e7cffa2bd28e26d938ea46069",
+          "status": "PRESENT"
+        }
+      ]
+    },
+    {
+      "canonical": {
+        "expected_git_blob_sha": "6b6567e53e8c1771661804e10fef80813fd34548",
+        "head_sha": "5c914b05cdc5241a2a508f34b48809a9b15678da",
+        "mode": "observe",
+        "observed_git_blob_sha": "6b6567e53e8c1771661804e10fef80813fd34548",
+        "owner_approval_verified": false,
+        "path": "REQUIREMENTS.md",
+        "ref": "main",
+        "status": "MATCHED"
+      },
+      "main": {
+        "branch": "main",
+        "gate": {
+          "status": "NO_RUN"
+        },
+        "head_sha": "5c914b05cdc5241a2a508f34b48809a9b15678da",
+        "status": "PRESENT"
+      },
+      "repository": "hibi89/web-rea-studio",
+      "work_branches": []
+    },
+    {
+      "canonical": {
+        "status": "NOT_CONFIGURED"
+      },
+      "main": {
+        "branch": "main",
+        "gate": {
+          "status": "NO_RUN"
+        },
+        "head_sha": "2b366884b52f319b91d278b51e004b679fa5ff42",
+        "status": "PRESENT"
+      },
+      "repository": "hibi89/work-hell-dungeon",
+      "work_branches": []
+    }
+  ],
+  "schema_version": 1,
+  "scope": "GitHub ref, Actions and blueprint fingerprint observations only",
+  "summary": {
+    "blocking_fingerprint_issues": 0,
+    "canonical_matched": 31,
+    "canonical_not_configured": 4,
+    "product_links": 29,
+    "product_refs_missing": 0,
+    "product_refs_present": 28,
+    "product_refs_unlinked": 1,
+    "repository_count": 35,
+    "tracked_branch_count": 70
+  }
+}
