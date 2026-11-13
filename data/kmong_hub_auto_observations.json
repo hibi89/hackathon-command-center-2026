@@ -53,12 +53,12 @@
       "gate": {
         "conclusion": "success",
         "head_sha": "0cb09f86280f860b008e008da6ccaea8be068e29",
-        "matches_current_head": true,
+        "matches_current_head": false,
         "run_id": 43524908506,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "0cb09f86280f860b008e008da6ccaea8be068e29",
+      "head_sha": "e676010fb5069ae8f337e4ae7f0c22a0fb1fac85",
       "record_id": "ACTIVE-05",
       "repository": "hibi89/data2web_studio",
       "status": "PRESENT",
@@ -615,12 +615,12 @@
           "gate": {
             "conclusion": "success",
             "head_sha": "0cb09f86280f860b008e008da6ccaea8be068e29",
-            "matches_current_head": true,
+            "matches_current_head": false,
             "run_id": 43524908506,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "0cb09f86280f860b008e008da6ccaea8be068e29",
+          "head_sha": "e676010fb5069ae8f337e4ae7f0c22a0fb1fac85",
           "status": "PRESENT"
         },
         {
