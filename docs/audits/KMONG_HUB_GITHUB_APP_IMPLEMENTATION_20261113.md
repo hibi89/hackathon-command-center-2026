@@ -1,3 +1,9 @@
+## 2026-11-13 후속 안전성 검증 (실 인증 이전)
+- 현행 코드 main@b8667cd27e92001e39ad21f4c71fde6f034bbd62: 예약 실행의 최초 관찰 원장 생성 차단. 최초 수동 dry_run=true 검증 후 수동 dry_run=false 원장 초기화가 선행되어야 예약 갱신 가능. 설치 가이드 보완 main@8c012e9296aaba186417d2d5523ae6ccd87bc5b1.
+- [단위 회귀 CI #43357835854](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43357835854) **24/24 PASS** (예약 최초 생성 금지·초기화 후 예약 갱신 2건 추가), [공통 게이트 #43357835850](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43357835850) **SUCCESS**.
+- 미완료/미검증: 전용 GitHub App 생성 및 35개 지정 저장소 설치, Actions 변수·Secret 등록, 설치 토큰, 실제 35/70/31/29 조회, 최초 중앙 원장 commit/readback, NO_CHANGE와 일일 스케줄 검증. data/kmong_hub_auto_observations.json 원격 조회 404 (미생성).
+- 공식률 29/29 UNASSESSED, 과거 85·95 수치, 19 서비스, 작업중·사용자 개입 필요·RELEASE HOLD 보존. 제품 소스/권한/인증/고객 데이터/Vercel 변경 없음. 사용자 계정 설정 후 실제 Actions 결과로 최종 확인.
+
 # Github App 기반 중앙 증거 자동 동기화 — 구현 및 실제 인증 상태
 **2026-11-13 KST · 중앙 코드 `main@e28781d0af0904894251c48ab20a0360915a0671` · Hub 기록 기준 `32a1cb1cd35f7b2fd342797e739821f8438e6f69`**
 
