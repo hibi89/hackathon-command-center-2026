@@ -51,14 +51,14 @@
     },
     {
       "gate": {
-        "conclusion": null,
-        "head_sha": "f528b5bb75fad5423dee06e1c8891f63fd7b5655",
-        "matches_current_head": false,
-        "run_id": 43391785837,
+        "conclusion": "success",
+        "head_sha": "d311c47f1b85382f1d4ce43dfacdabcdc7e85612",
+        "matches_current_head": true,
+        "run_id": 43392272759,
         "status": "LATEST_RUN",
-        "workflow_status": "in_progress"
+        "workflow_status": "completed"
       },
-      "head_sha": "b40545527a1c27d29603cbeaa841fd938d79702c",
+      "head_sha": "d311c47f1b85382f1d4ce43dfacdabcdc7e85612",
       "record_id": "ACTIVE-05",
       "repository": "hibi89/data2web_studio",
       "status": "PRESENT",
@@ -247,13 +247,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "6fb66efd14dd95dd64ebfb1305ef872478ff1524",
+        "head_sha": "9bb959be950f9ab36068a2b5c37d6c89f1546062",
         "matches_current_head": true,
-        "run_id": 43390609393,
+        "run_id": 43392674760,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "6fb66efd14dd95dd64ebfb1305ef872478ff1524",
+      "head_sha": "9bb959be950f9ab36068a2b5c37d6c89f1546062",
       "record_id": "CANDIDATE-06",
       "repository": "hibi89/Freelancer",
       "status": "PRESENT",
@@ -793,13 +793,13 @@
           "branch": "product/rag-enterprise-knowledge",
           "gate": {
             "conclusion": "success",
-            "head_sha": "6fb66efd14dd95dd64ebfb1305ef872478ff1524",
+            "head_sha": "9bb959be950f9ab36068a2b5c37d6c89f1546062",
             "matches_current_head": true,
-            "run_id": 43390609393,
+            "run_id": 43392674760,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "6fb66efd14dd95dd64ebfb1305ef872478ff1524",
+          "head_sha": "9bb959be950f9ab36068a2b5c37d6c89f1546062",
           "status": "PRESENT"
         },
         {
@@ -873,7 +873,7 @@
     {
       "canonical": {
         "expected_git_blob_sha": "521ba0cb458bea384639a0ef897ce7500d33b8f1",
-        "head_sha": "546498f78a7389f81a4bf37d35fe3a39341d1637",
+        "head_sha": "83c8cc55af9181eb6cb2041dc9bab3a1e0877969",
         "mode": "observe",
         "observed_git_blob_sha": "521ba0cb458bea384639a0ef897ce7500d33b8f1",
         "owner_approval_verified": false,
@@ -885,13 +885,13 @@
         "branch": "main",
         "gate": {
           "conclusion": "success",
-          "head_sha": "546498f78a7389f81a4bf37d35fe3a39341d1637",
+          "head_sha": "83c8cc55af9181eb6cb2041dc9bab3a1e0877969",
           "matches_current_head": true,
-          "run_id": 43391521658,
+          "run_id": 43392689862,
           "status": "LATEST_RUN",
           "workflow_status": "completed"
         },
-        "head_sha": "546498f78a7389f81a4bf37d35fe3a39341d1637",
+        "head_sha": "83c8cc55af9181eb6cb2041dc9bab3a1e0877969",
         "status": "PRESENT"
       },
       "repository": "hibi89/hackathon-command-center-2026",
