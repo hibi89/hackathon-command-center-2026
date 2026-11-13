@@ -424,13 +424,13 @@
       "record_id": "CANDIDATE-10",
       "phase": "candidate",
       "product": "BID AX",
-      "repository": null,
-      "tracked_branch": null,
-      "blueprint_reference": "중앙 KMONG_PRODUCTIZATION.md 후보 설계",
-      "historical_seen_head_prefix": "-",
+      "repository": "hibi89/Freelancer",
+      "tracked_branch": "product/bid-ax-public-procurement",
+      "blueprint_reference": "docs/FINAL_BLUEPRINT.md",
+      "historical_seen_head_prefix": "d614c08e611e",
       "official_final_completion": "UNASSESSED",
       "owner_requirement_weights": "NOT_INDEPENDENTLY_APPROVED",
-      "detail_trace": "SUMMARY_ONLY"
+      "detail_trace": "R01-R21_PROTO_TRACE_UNWEIGHTED"
     },
     {
       "record_id": "CANDIDATE-11",

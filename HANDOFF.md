@@ -1,3 +1,15 @@
+## [2026-11-13 KST] BID AX 50% 목표 개발 인수인계 — 필수 10항
+1. **목표·기술·요구:** 독립 BID AX 공공입찰 준비 솔루션의 전체 R01~R21 최종설계를 100%로 설정. 사용자 최종 50% 달성 지시, Python3.11+ stdlib + SQLite local-first, 현 단계 API 미호출.
+2. **완료 기능·결정:** 고객 키/클라우드 수탁 SaaS(A)보다 로컬(B) 선택. 허용 공식 HTTPS URL, 7일 기간 API 요청계획, 엄격 notice/profile JSON, 불변 SHA256 버전 원장, 중복/원자적 삽입, 지역/면허/예산/서류/마감 사전검토, JSON report, no-overwrite 백업.
+3. **테스트·범위:** 로컬 unittest 19/19 PASS, CLI import/screen/history/backup PASS. GitHub 12파일 원본 콘텐츠 readback 12/12. 신설 CI 0, Windows·실 조달청·100 실제 공고/10 자격 사례·보안 실무/판매·Production 미검증.
+4. **완료/진행/대기:** 오프라인 50-stage 핵심 엔진 구축·테스트 완료. **공식 최종완성률 UNASSESSED, 목표 50% [작업중] 유지**. 상업용/실고객/최종 정확 가중치 수용 대기, RELEASE HOLD·미등록.
+5. **오류·원인·시도·대안:** API 키·실사용 자격/약관과 실제 원천 데이터 미확보. 2026-11-10 정부 API 검색기간 1개월→7일로 조정; fail-closed/절대 실 자격 보증 금지. 무권한 스크래핑/키 포함 EXE/유료·고객 전송 금지. 우선 고객 승인 샘플과 공식 응답 contract test.
+6. **저장소·SHA·경로:** `hibi89/Freelancer@product/bid-ax-public-procurement`, 확인 코드 `d614c08e611ef15d388865034ada215e10c8da6e`; `bidax/core.py`, `bidax/cli.py`, `tests/test_core.py`, `docs/FINAL_BLUEPRINT.md`. 해총 `kmong-productization` 등록부와 제품 인덱스 연결. 원본 BID OWL 미수정.
+7. **배포·환경:** Python3.11+, local SQLite CLI; Vercel/Production·API 서비스·호스팅·자동 알림 없음. 고객 Windows10/11/EXE 미검증.
+8. **원본·백업·보안:** 독립 branch 이전 main SHA `db434ca0d40b2a87f1a1d090d0896a60ea2d2596` 참조·Git 이력 복구. 개인 고객 자료/키 없음. `backup`는 신규 경로만 허용, SQLite 원본 덮어쓰기 없음. 29/19/등록완료 이력 변동 금지.
+9. **다음 작업·승인/수용:** R01-R21 전체 사용자 승인 가중치/독립 trace→키 승인 후 공식 7일 API/429 재시도/100 공고·10 대조→GUI/Windows/첨부 원문·서류 근거·복원/고객 실증/권리·가격·판매 승인. 전체 점수 50 이상을 **검증하기 전 [작업중] 유지**.
+10. **갱신 KST·검증 기준:** 2026-11-13 KST, 원격 코드 `d614c08e611ef15d388865034ada215e10c8da6e` 확인; 로컬 합성 Python19 PASS/0 FAIL/0 SKIP; GitHub Actions/실API/실Windows/고객 E2E 0/미검증. 중앙 commit SHA는 본 작업 remote ref 확인 값으로 후속 보고.
+
 ## [2026-11-13 KST] SITECRAFT AX P50 중앙 인수인계 10항
 1. 목표/기술: 최종설계의 SITECRAFT P50 합성 로컬 HTML→실 Fable static→Astra REVIEW_REQUIRED→별도 승인 CSV→REA Pro 독립 앱.
 2. 완료/결정: REA_Web 전용 feature/sitecraft-ax-p50-20261113에 모듈·테스트·CI·문서 4파일; 원본 REA/Fable/Astra/Pro/DATA2WEB 미수정.

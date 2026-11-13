@@ -1,3 +1,10 @@
+## [2026-11-13 KST] BID AX 50% 목표 단계 — 오프라인 코드 검증, 공식 최종률 UNASSESSED
+- 신규 독립 PRIVATE `hibi89/Freelancer@product/bid-ax-public-procurement` HEAD `d614c08e611ef15d388865034ada215e10c8da6e` 확인. 기존 BID OWL 소스 변경·복제 없음; 제품 본체 Python 표준라이브러리+SQLite.
+- 정상/증거: 합성 로컬 19 PASS/0 FAIL/0 SKIP + CLI import/screen/history/backup PASS; GitHub 12개 blob readback 내용 전부 일치. GitHub Actions CI 새 작업 **0/미실행**.
+- 권리/API 맥락: 공식 data.go.kr 2026-11-10 조회 최대 7일/무료/개발 기본 1,000 기록. 실제 고객 키·공공 API 데이터 조회 **0건**, 법적 재사용·고객 납품 별도 승인.
+- **전체 최종설계 R01-R21 공식률 UNASSESSED, 사용자 목표 50% 미달 판정대기, [작업중] 보존, 상품 미등록/RELEASE HOLD**. 사용자 승인 가중치와 전수 실제 수용 증거 없이 퍼센트로 승격 금지. 중앙 29/19 원장·다른 상품 성과·마커 불변.
+- 향후: API 원본 어댑터·실공고 100/자격 10건, 분명한 근거, 휴먼 검수/Windows GUI·보안/백업복구, 고객/라이선스/출시 수락. 독립 설계는 Freelancer 해당 브랜치 `docs/FINAL_BLUEPRINT.md`.
+
 ## [2026-11-13 KST] SITECRAFT AX 독립 P50 합성 기술 CI PASS, 공식률 UNASSESSED
 - REA_Web feature/sitecraft-ax-p50-20261113 기능 SHA a5c5a718dc33778fb1df59c601feee57944603db, https://github.com/hibi89/REA_Web/actions/runs/43375663779 Ubuntu+Windows 각 50PASS/0FAIL/1WARN, 2/2 SUCCESS. 실제 Fable 정적 local GET→Astra 검토→합성 허가 데이터 Pro FastAPI/SQLite HTTP/API.
 - 기획 Freelancer product/rea-website-rebuild 391d64f17. 내부 P50 합성 기술 게이트 검증, **공식 100점 최종설계 완성률 UNASSESSED**. SITECRAFT [작업중] 유지, RELEASE HOLD. 실고객·실사이트·법적권리·Win10/11·Production 미검증, 다른 제품/등록이력 불변.

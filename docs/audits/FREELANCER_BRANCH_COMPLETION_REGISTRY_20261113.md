@@ -1,3 +1,12 @@
+## 2026-11-13 BID AX 신규 구현 브랜치 등록 — 목표 50% [작업중]
+
+- 상품/안정 ID: **BID AX / CANDIDATE-10** (기존 29개 원천제품 포함, 신규 판매 글 증가 0). 기존 BID OWL과 별도.
+- GitHub PRIVATE `hibi89/Freelancer@product/bid-ax-public-procurement`; 원격 소스 커밋 [`d614c08e611e`](https://github.com/hibi89/Freelancer/commit/d614c08e611ef15d388865034ada215e10c8da6e), 전체 **12개 파일 원격 readback 로컬본 일치(12/12)**.
+- 100% 최종설계: [R01~R21](https://github.com/hibi89/Freelancer/blob/product/bid-ax-public-procurement/docs/FINAL_BLUEPRINT.md). 50-stage 별도 엔지니어링: 원문 출처 허용목록·API 7일 요청계획(네트워크 없음)·엄격 JSON 계약·SQLite 중복/버전·원자적 import·기업 사전검토·서류/마감·JSON 보고·백업.
+- Python 로컬 합성 `python -m unittest discover -s tests -v` **19 PASS / 0 FAIL / 0 SKIP**, CLI import/screen/history/backup 정상. GitHub CI **NOT_RUN**, 실제 조달청 API·실공고100건·10건 자격 대조·Windows GUI/EXE/고객 검증 **NOT_RUN**.
+- **요청 목표: 최종설계 기준 50%; 공식 최종완성률: UNASSESSED / [작업중] 유지 / 출시 HOLD / 미등록**. 사용자 승인 R01-R21 가중치·실원문/실고객/정확 SHA 전수 수용 증거 없이 50% 달성 주장 금지.
+- 기존 Freelancer 8 branch/9 product에 **BID AX 1 branch/1 product 추가 → Freelancer product/* 9 branch/10 product**, 원천 29개·판매19+내부1 매핑 및 등록 이력 별도 불변. 자동 관찰원장 35/70 스냅샷은 갱신 전 기존 수집 기록이므로 이 신규 연결을 아직 반영하지 않았을 수 있음.
+
 # Freelancer 신규 브랜치 → 크몽 최종완성률 등록 원장 (2026-11-13 KST)
 
 **목적:** Freelancer `product/*` 브랜치가 생성되면 최종완성률을 산정하지 못했더라도 누락 없이 중앙 크몽 원장에 등록한다. 기존 29개 원천제품/19개 판매 서비스·등록 이력은 삭제하거나 덮어쓰지 않는다. 이 원장은 신규 제품의 별도 보조 등록부이며 판매 게시글 수를 뜻하지 않는다.
