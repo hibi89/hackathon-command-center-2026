@@ -52,13 +52,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "441506eda275b1e3766a4d018741ebfa1ae030b7",
+        "head_sha": "b08c6ba0a2bef1474a00ee8b4339a56fabb96ede",
         "matches_current_head": true,
-        "run_id": 43501098386,
+        "run_id": 43502140068,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "441506eda275b1e3766a4d018741ebfa1ae030b7",
+      "head_sha": "b08c6ba0a2bef1474a00ee8b4339a56fabb96ede",
       "record_id": "ACTIVE-05",
       "repository": "hibi89/data2web_studio",
       "status": "PRESENT",
@@ -614,13 +614,13 @@
           "branch": "feature/final-blueprint-p85-evidence-20261113",
           "gate": {
             "conclusion": "success",
-            "head_sha": "441506eda275b1e3766a4d018741ebfa1ae030b7",
+            "head_sha": "b08c6ba0a2bef1474a00ee8b4339a56fabb96ede",
             "matches_current_head": true,
-            "run_id": 43501098386,
+            "run_id": 43502140068,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "441506eda275b1e3766a4d018741ebfa1ae030b7",
+          "head_sha": "b08c6ba0a2bef1474a00ee8b4339a56fabb96ede",
           "status": "PRESENT"
         },
         {
@@ -947,7 +947,7 @@
     {
       "canonical": {
         "expected_git_blob_sha": "521ba0cb458bea384639a0ef897ce7500d33b8f1",
-        "head_sha": "cb3624574ca2ae02bbd8f725b4d3497c27d2f010",
+        "head_sha": "94400247583590976da15a4507fbd16b06726670",
         "mode": "observe",
         "observed_git_blob_sha": "521ba0cb458bea384639a0ef897ce7500d33b8f1",
         "owner_approval_verified": false,
@@ -965,7 +965,7 @@
           "status": "LATEST_RUN",
           "workflow_status": "completed"
         },
-        "head_sha": "cb3624574ca2ae02bbd8f725b4d3497c27d2f010",
+        "head_sha": "94400247583590976da15a4507fbd16b06726670",
         "status": "PRESENT"
       },
       "repository": "hibi89/hackathon-command-center-2026",
