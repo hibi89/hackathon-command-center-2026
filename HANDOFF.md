@@ -1,3 +1,15 @@
+## [2026-11-13 15:22 KST] Vercel 상시 이벤트 수신 공개 API 확인 — 10항 인수인계
+1. **목표·기술·확정 요구:** GitHub App Webhook push/CI→Vercel Serverless→별도 중앙-only GitHub App Actions:write→기존 Source App 읽기전용 35 repo 중앙 수집, 일일 11:10 KST 점검 fallback.
+2. **완료 기능·결정 근거:** 사용자 UI Vercel Production 배포에 이어 공개 `GET /api/webhook`에서 실제 `{"status":"not_configured"}` 화면 표시됨. 코드의 fail-closed 초기 상태와 일치. 앱 빌드/접근 라우팅 증거지만 실제 Webhook 인증/실행 증거는 아님. 기존 Source App 권한 넓히지 않고 중앙 전용 App 별도 생성 정책 유지.
+3. **테스트·수·미검증:** 코드 main SHA `e1ad0802cb7bdf783c1d99c6f0b259ec96daf015`, GitHub CI Node 16 PASS / Python 26 PASS / Gate SUCCESS 기존 확인. 새 사용자 브라우저 JSON 화면 1건. HTTP 상태코드(예상 503), Vercel Production SHA, 서명 HMAC POST 및 GitHub API E2E는 미검증.
+4. **상태·중단 지점:** Vercel 전용 프로젝트 생성 및 API JSON 응답 완료. GitHub App2 생성/설치, GitHub App1 Webhook 활성·이벤트 구독, Vercel 환경변수, 실 push→workflow_dispatch→원장 readback은 미완료. 상시 자동 운영 **미완성**.
+5. **오류·원인·시도·재시도 금지·대안:** `not_configured`는 설정 부족 상태를 의도적으로 보고한 결과이며 서버 오류로 단정 금지. Vercel API 권한 403/404 연결과 사용자 UI 배포 성공의 차이는 그대로 기록. 비밀키를 GitHub 코드/채팅으로 받는 방식 금지. 미검증 성공 선언 금지.
+6. **저장소·브랜치·SHA·경로:** `hibi89/hackathon-command-center-2026` `main@e1ad0802cb7bdf783c1d99c6f0b259ec96daf015`; event-bridge `services/kmong-event-bridge/{api/webhook.js,lib/receiver.js,README.md}`, `kmong-productization` STATUS 관련 커밋 `5be4aba7acdfccfbdda3c030e28858206816b700`; HANDOFF 결과 SHA는 재조회.
+7. **Production URL·환경·실행:** Vercel `kmong-hub-event-bridge`, 공개 `https://kmong-hub-event-bridge.vercel.app/api/webhook` JSON 확인. `/`의 404는 API 함수 존재 여부와 별도. Vercel 변수 미설정 상태. 로컬 Node test `npm test --prefix services/kmong-event-bridge`; GitHub collector Python suite 26 PASS.
+8. **원본·백업·인증 관리·수정 금지:** 기존 daily cron, 동기화 스냅샷, 29/29 공식 UNASSESSED, 등록완료·작업중·RELEASE HOLD 보존. GitHub PR commit 이력으로 rollback. App PEM/HMAC secret/단기 토큰을 채팅이나 Repo에 올리지 않음.
+9. **다음 단계·승인·완료 기준:** 사용자 계정에서 `kmong-hub-dispatcher` GitHub App 생성: Webhook OFF, Actions Read and write, 설치 범위 Only select `hibi89/hackathon-command-center-2026`; 기존 read-only source App 유지. App 비밀키는 Vercel Production Secret으로만 입력, Source App Webhook URL/서명 secret 설정, `KMONG_DISPATCH_ENABLED`는 유효 서명/출처/실 E2E 검증 전 false. 실 API POST→Actions trigger success→중앙 snapshot readback 필수.
+10. **시점·검증 범위·기준 커밋:** 2026-11-13 15:22 KST, 사용자 공개 API 스크린샷의 JSON, 기존 GitHub main/CI 기록과 STATUS 업데이트 근거. API HTTP status/Production SHA/E2E 미확인; `DEPLOYED_ROUTE_RESPONSE_CONFIRMED / CREDENTIALS_PENDING`.
+
 ## [2026-11-13 약 15:23 KST] AZENTFLOW AX P70 중앙 인수인계 10항
 1. **목표·용도·확정 요구·기술:** 사용자 AZENTFLOW AX 70% 단계. Freelancer HAE+LA 승인형 로컬 자동화 최종설계의 synthetic 50→70 기준, 공식 전체 100점 분모 보존.
 2. **완료 기능·변경·결정:** `hibi89/HAE`에 7개 P70 통합 게이트; 2개 지원 업무, 실제 LA 별도 자식 프로세스 CLI, 동시 같은 승인 요청/중복 0, HAE 서버 재시작 원장·감사, 실패상태 재승인, 입력 상한. 복제 엔진 대신 기존 독립 HAE/LA 실 코드 계약 재사용. 사용자 원본과 다른 제품 무수정.
