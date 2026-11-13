@@ -1,3 +1,15 @@
+## 2026-11-14 KST — 공개 후 Actions 및 보안 1·2차 감사 (10항 인수인계)
+1. **목표/기술:** 전체 PUBLIC 35에서 GitHub Actions 무료 표준 runner 실제 작동과 공개 파일 노출 위험·자동 수집을 추가 검증.
+2. **완료/결정:** GitHub 원격 PUBLIC35/PRIVATE0. `data2web_studio` Windows/Ubuntu 브라우저 포함 4 job SUCCESS, `Freelancer` evidence gate 1 job SUCCESS, hub sync 1 job SUCCESS. 35 main+45 tracked refs 이름 패턴 감사 80/80, 일치0; 콘텐츠/이력 안전판정 아님.
+3. **테스트 증거:** DATA2WEB #43523342553 (4/4 jobs), Freelancer #43523875124 (1/1), hub #43523793011 (1/1) 및 8개 step SUCCESS. 최신 snapshot 35 repos/80 refs/29 product links, 0 missing·0 fingerprint alerts. 35×전체 workflows/test suites 새 SHA 검증은 NOT_RUN.
+4. **완료/대기:** Runner 재가동 **표본 확인**, 35 전체/사용량 과금 차단 해제는 미검증. 기본브랜치·추적 refs의 파일명 수준 보안 검수 완료; 역사/로그/Secret Scanning·모든 refs/고객권리 감사 대기. 해총 29개 공식 최종완성률 UNASSESSED.
+5. **오류·원인·대안:** 과거 Freelancer/data2web failed runs의 정확한 Billing 원인은 미확인, 새 CI PASS만 확인. GitHub Code Search `incomplete_results=true`이므로 0건을 무검출 증거로 금지. Secret scanning alerts API 400 미지원, 2개 branch-protection 403; 전환 대상 17곳 `rulesets` 반환 목록 0. 계정 관리자 UI/공식 Secret Scanning 검토 필요.
+6. **저장소·브랜치·SHA:** `hibi89/hackathon-command-center-2026@main` 기준 문서 작성 전 HEAD `47c9d7d8f42a8df97b332a115b5dc566b3341366`; `kmong-productization` 검증 당시 `64e824e22c79450bae8695ece15c972dbf24fdf2`; `docs/audits/PUBLIC_35_ACTIONS_SECURITY_FIRST_PASS_20261114.md` 원본 기록.
+7. **Production/실행:** 실 Actions는 GitHub hosted Job이 완료됐고, Vercel Producer/Receiver 실 Production SHA·신규 webhook E2E는 여전히 미검증; 환경/계정 설정·배포 변경 없음.
+8. **원본/백업/비밀:** 80 tracked trees 명명 스캔에서 패턴0, 과거 Git 이력·Actions 공개 로그·압축파일 `gongbaek-sanggwon` 등 **미검증**. 원본문서·실키·고객 데이터 다운로드·변경 0; push ruleset 비활성화 및 Branch Protection 403 확인. 공개는 사용자가 직접 시행, 되돌리지 않음.
+9. **다음 작업/기준:** ① 관리자 Secret Scanning 및 과거 history/CI log/ZIP·License·고객권리 검증 ② 17 repo Ruleset/보호 설정 점검(쓰기/권한변경 전 소유자 승인) ③ 추가 공개 후 CI·계정 Billing 확인 ④ GitHub App/cron/Webhook 실제 운영재검증. 증빙 없으면 UNVERIFIED, 원래 score/HOLD/등록완료 변동 금지.
+10. **시각/범위:** 2026-11-14 KST. 35 repo default tree, 45 last-observed tracked SHA tree, GitHub Actions live run ID/steps, Ruleset GET 17 repos. 모든 refs/역사·내용·Production·Secrets는 미검증. GitHub HEAD 재조회 후 문서 커밋 SHA 확인.
+
 ## 2026-11-14 KST — 전체 GitHub 저장소 공개 전환 결과(10항 인수인계)
 1. 목표/기술: GitHub Actions 무료 표준 runner 활용을 위해 소유자가 `hibi89` PRIVATE 17개를 CLI에서 PUBLIC 전환. 중앙 소스/크몽 상품 코드는 보존.
 2. 검증 완료: 사용자 `17/17` PUBLIC·0 실패, GitHub 연결 원격 목록 재조회 `35 PUBLIC / 0 PRIVATE`. 감사 정본 `docs/audits/ALL_35_GITHUB_REPOSITORIES_PUBLIC_VERIFICATION_20261114.md`.
