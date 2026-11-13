@@ -52,13 +52,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "e676010fb5069ae8f337e4ae7f0c22a0fb1fac85",
-        "matches_current_head": true,
-        "run_id": 43525292643,
+        "head_sha": "2ee4950475a34f8a2870b85ac3f67996ff346afe",
+        "matches_current_head": false,
+        "run_id": 43527124449,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "e676010fb5069ae8f337e4ae7f0c22a0fb1fac85",
+      "head_sha": "96e2e1dff9976773bf3d3b2670ba6763ee69292d",
       "record_id": "ACTIVE-05",
       "repository": "hibi89/data2web_studio",
       "status": "PRESENT",
@@ -614,13 +614,13 @@
           "branch": "feature/final-blueprint-p85-evidence-20261113",
           "gate": {
             "conclusion": "success",
-            "head_sha": "e676010fb5069ae8f337e4ae7f0c22a0fb1fac85",
-            "matches_current_head": true,
-            "run_id": 43525292643,
+            "head_sha": "2ee4950475a34f8a2870b85ac3f67996ff346afe",
+            "matches_current_head": false,
+            "run_id": 43527124449,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "e676010fb5069ae8f337e4ae7f0c22a0fb1fac85",
+          "head_sha": "96e2e1dff9976773bf3d3b2670ba6763ee69292d",
           "status": "PRESENT"
         },
         {
