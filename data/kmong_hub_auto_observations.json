@@ -52,13 +52,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "e4af8b3495c3d498556506544e506fba13ecf537",
+        "head_sha": "7e4ce95a14e1a3aa9860246f906aeb56d4193961",
         "matches_current_head": true,
-        "run_id": 43510139101,
+        "run_id": 43510415311,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "e4af8b3495c3d498556506544e506fba13ecf537",
+      "head_sha": "7e4ce95a14e1a3aa9860246f906aeb56d4193961",
       "record_id": "ACTIVE-05",
       "repository": "hibi89/data2web_studio",
       "status": "PRESENT",
@@ -247,13 +247,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "896e1f4cf2fbff9c51f10a8169772db33af52f8b",
-        "matches_current_head": false,
-        "run_id": 43510289250,
+        "head_sha": "f2f838f5296e7de7226aa11d81055265f9a699df",
+        "matches_current_head": true,
+        "run_id": 43510426611,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "65d74460d8e74b042f02fae99e79323ca5b68315",
+      "head_sha": "f2f838f5296e7de7226aa11d81055265f9a699df",
       "record_id": "CANDIDATE-06",
       "repository": "hibi89/Freelancer",
       "status": "PRESENT",
@@ -614,13 +614,13 @@
           "branch": "feature/final-blueprint-p85-evidence-20261113",
           "gate": {
             "conclusion": "success",
-            "head_sha": "e4af8b3495c3d498556506544e506fba13ecf537",
+            "head_sha": "7e4ce95a14e1a3aa9860246f906aeb56d4193961",
             "matches_current_head": true,
-            "run_id": 43510139101,
+            "run_id": 43510415311,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "e4af8b3495c3d498556506544e506fba13ecf537",
+          "head_sha": "7e4ce95a14e1a3aa9860246f906aeb56d4193961",
           "status": "PRESENT"
         },
         {
@@ -867,13 +867,13 @@
           "branch": "product/rag-enterprise-knowledge",
           "gate": {
             "conclusion": "success",
-            "head_sha": "896e1f4cf2fbff9c51f10a8169772db33af52f8b",
-            "matches_current_head": false,
-            "run_id": 43510289250,
+            "head_sha": "f2f838f5296e7de7226aa11d81055265f9a699df",
+            "matches_current_head": true,
+            "run_id": 43510426611,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "65d74460d8e74b042f02fae99e79323ca5b68315",
+          "head_sha": "f2f838f5296e7de7226aa11d81055265f9a699df",
           "status": "PRESENT"
         },
         {
