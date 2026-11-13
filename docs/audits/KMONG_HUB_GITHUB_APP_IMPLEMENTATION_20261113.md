@@ -1,3 +1,10 @@
+## 2026-11-13 KST — GitHub App 최초 실제 중앙 자동 기록 검증
+- 실행 [#43363676185](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43363676185), 이벤트 `workflow_dispatch`, 입력 `dry_run=false`, 코드 `main@2ce63078eeaced49cc46faeef5070c0c65ee9d7a`. GitHub 원격 REST API `completed/success`; job `sync`의 모든 단계 SUCCESS. 모의 테스트 26/26 PASS.
+- 실제 job log: `KMONG HUB SYNC: UPDATED repositories: 35 tracked branches: 70 product records: 29 linked refs: 28 unlinked refs: 1 fingerprint alerts: 0 official scores: UNMODIFIED`; 출력 커밋 `05bcd3c0846ebad6c86d7b4711b45fd2dfbf4e8f`.
+- 원격 재조회: `kmong-productization@05bcd3c0846ebad6c86d7b4711b45fd2dfbf4e8f`; 신규 `data/kmong_hub_auto_observations.json` 본문 35개 저장소, 70개 branch, 31 MATCHED, 4 NOT_CONFIGURED, enforced drift 0, 제품 29개 중 PRESENT 28 / MISSING 0 / NOT_LINKED 1 (BID AX), missing branch 0. 변경 파일은 이 신규 관찰 JSON 1개뿐 (`github-actions[bot]` author); 공식 완료율·상품 등록 이력·기존 원본 수정 0.
+- 전용 GitHub App 설치 권한 `All repositories`는 사용자 명시적 승인 후 적용. **실행 토큰**의 scope는 Action의 `repositories:` 35개 명시로 축소되어 실제 관찰 범위 35개를 유지. 앱 설치 범위 자체가 35개인 것은 아님. 권한은 Contents/Actions read-only, 중앙 `GITHUB_TOKEN contents:write` 분리.
+- 다음 필수 실 검증: 현재 소스·워크플로 참조값이 동일할 때 `dry_run=false` 재실행 로그 `NO_CHANGE`와 commit 미발생 검증. `schedule` 이벤트의 실제 11:10 KST 실행, 장애 상황 복구는 아직 미검증. 이번 섹션 작성은 별도 문서 커밋이며 제품 코드 변경은 아님.
+
 ## [2026-11-13 KST] 실제 GitHub App 토큰 Dry-run 성공 · 최초 중앙 기록 대기
 - **실제 실행 증거:** [workflow_dispatch #43363161824](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43363161824), `main@2ce63078eeaced49cc46faeef5070c0c65ee9d7a`, job `sync` **SUCCESS**, GitHub API 원격 결과/Job steps/로그 각각 확인. 사용자의 브라우저에서 해당 URL 순간 404가 표시되었지만 API run `completed/success`였으므로 동기화 실패로 분류하지 않음.
 - **인증 실제 성공:** Repository Variable `KMONG_SYNC_APP_CLIENT_ID` + Secret `KMONG_SYNC_APP_PRIVATE_KEY` + `KMONG_SYNC_ENABLED=true`가 사용된 workflow. `actions/create-github-app-token@v3` 단계를 성공적으로 통과하여 App 설치 토큰 발급 실증. 사용자는 GitHub App을 **All repositories/read-only**로 설치한다고 명시적으로 승인·설치했으며, Action에서는 기존 정책대로 `repositories:` 35개를 지정하여 **실 토큰을 35개로 한정**. 소스 쓰기 권한 없음. Client ID/PEM/토큰 실제 값 기록 금지.
