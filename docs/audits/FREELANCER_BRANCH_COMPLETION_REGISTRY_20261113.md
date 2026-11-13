@@ -4,7 +4,7 @@
 
 | 제품 | Freelancer 브랜치 | 공식 최종완성률 | 등록/출시 | 근거 |
 |---|---|---|---|---|
-| AZENTFLOW AX **[작업중]** | `product/hae-la-automation` | UNASSESSED (P50 수용 검증 진행) | 기존 HAE·LA 통합 서비스에 연결, RELEASE HOLD | 목표: HAE↔LA 버전/계약 + 합성 CSV→승인→SQLite E2E + runtime/business DB 분리 + stale-source/무승인 안전성 + 정확 SHA·CI; P50 검증 전 표식 유지 |
+| AZENTFLOW AX **[작업중]** | `product/hae-la-automation` | **UNASSESSED** (0→50 구간 기술 수용 PASS; 공식 최종률 50% 미확정) | 기존 HAE·LA 통합 서비스 연결, RELEASE HOLD·크몽 미등록 | [실 SHA·양 OS 증빙](https://github.com/hibi89/Freelancer/blob/product/hae-la-automation/docs/P50_ACCEPTANCE_EVIDENCE_20261113.md): HAE `91963ae3`, CI #43375517050 신규 Ubuntu 3/3+Windows 3/3 PASS; 전체 Python 각 267 PASS/2 FAIL/7 SKIP(배송 ZIP/pyz parity), 사용자 승인 전체 100점 추적/가중치 미완 |
 | CITEVAULT AX | `product/rag-enterprise-knowledge` | UNASSESSED | 기존 RAG 서비스에 연결, HOLD | 기존 기업형 조합 |
 | SITECRAFT AX | `product/rea-website-rebuild` | UNASSESSED | 기존 REA_Web 서비스에 연결, HOLD | 기존 기업형 조합 |
 | PROOFQA AX | `product/proofqa-ax-delivery-audit` | UNASSESSED | 기존 코드 품질감사 서비스에 연결, HOLD | 기존 기업형 조합 |
@@ -33,3 +33,11 @@
 - 2026-11-13 로컬 POC에 대해 5섹터·852-byte CSV 분석 / Python unittest **19 PASS/0 FAIL/0 SKIP**를 재확인. 이 성공은 로컬 샌드박스 시험이며 GitHub 브랜치의 코드 CI나 고객 Windows/3GB/원격 Actions/HAE-LA 상용 동작 증거가 아니다. 시제품 코드는 로컬 ZIP 별도 산출물이고 이 브랜치에는 설계/인수인계 문서가 등록됨.
 - 이 제품은 **기존 29개 원천제품 / 19개 판매 서비스와 별도 신규 후보**다. 앞서 추가된 소비자형 3종과 합하면 중앙 추적 제품은 **33개 (29+3+1)**, Freelancer `product/*`는 **8개 브랜치, 9개 제품**이다. 기존 상품 등록완료/마커/진도/출시 상태, 원본 29→19 매핑 불변.
 - 이 원장 반영은 담당자 수행 동기화이며 GitHub Webhook/GitHub Actions 무인 신규 브랜치 등록 기능이 실제 활성화된 것이 아님.
+
+## [2026-11-13 약 15:03 KST] AZENTFLOW AX 단계 50 실증 동기화
+
+- **목표:** 사용자 명시 `AZENTFLOW AX 최종완성률 50%` 착수. 최종설계 `0→50` 기술 기준만 검증; 승인된 100점 공식 최종완성률 독립 산정 전에는 공식 `UNASSESSED` 유지, `[작업중]` 삭제하지 않음.
+- **정본:** `hibi89/Freelancer@product/hae-la-automation`의 `docs/FINAL_BLUEPRINT.md`, `docs/ACCEPTANCE_AND_ROADMAP.md`, `docs/P50_ACCEPTANCE_EVIDENCE_20261113.md`; HAE 테스트 코드 `hibi89/HAE@feature/axflow-mvp@91963ae3ba656b384c2c5db092c9bc6cdcdc1e39`; 독립 LA `feature/lightning-azent` 조회 HEAD `36f9882eb50e0de9e85eedb320a5778c8321cda5`.
+- **검증:** [GitHub Actions #43375517050](https://github.com/hibi89/HAE/actions/runs/43375517050) Ubuntu/Windows `test_azentflow_p50_acceptance.py` 각각 3 PASS/0 FAIL/0 SKIP. API/LA schema handshake `axflow.ir.v0`↔`azent.api.v0`, synthetic CSV preview/approve→LA→SQLite 실 2행, runtime/business 분리, 무승인 403·입력 digest 변경 409·replay 후 행중복 0 검증. 기존 HTTP smoke 6/6 각 PASS. Node UI24 PASS.
+- **출시 차단 보존:** 전체 CI 각 OS Python 267 PASS/2 FAIL/7 SKIP, 보존된 ZIP/pyz 출고물 parity 2건으로 workflow FAILURE. 실제 고객/Windows 설치 배포·상용 OAuth/DBVORA/SOVIA·전체 요구별 100점 가중치 미검증. P50 기술 게이트 통과를 전체 제품 공식 50%로 전환하지 않음.
+- **우선순위:** 공식 가중치/요구 전수 독립검증 → 50→70 독립 LA 복구/두 업무/실 UI·경합 → 원본 배송물 백업 후 패리티 복구 → 라이선스/고객 인수. 이 변경은 AZENTFLOW 한 행과 감사 섹션만 갱신하며 나머지 제품/판매 이력·HOLD를 보존한다.
