@@ -12,7 +12,9 @@
     "official_unassessed": 29,
     "detailed_unweighted_trace_drafts": 2,
     "detailed_ci_evidence_drafts": 2,
-    "detailed_trace_items": 21
+    "detailed_trace_items": 21,
+    "canonical_pinned_repositories": 1,
+    "canonical_live_pilot_runs": 1
   },
   "notes": [
     "Fields reflect prior central audit evidence rather than a fresh scan of all 29 product HEADs.",
@@ -20,7 +22,8 @@
     "detail_trace is unapproved requirement inventory, not an owner-approved 100-point rubric.",
     "No product source or private content copied into this public index.",
     "All certified scores remain UNASSESSED until independent complete acceptance.",
-    "2026-11-13: HAE and LA representative case outcomes were checked against exact historical Actions runs and private trace docs, not newly executed feature acceptance. Existing official UNASSESSED unchanged."
+    "2026-11-13: HAE and LA representative case outcomes were checked against exact historical Actions runs and private trace docs, not newly executed feature acceptance. Existing official UNASSESSED unchanged.",
+    "2026-11-13 canonical source integrity pilot only: HAE same-repository main read-only checkout verified at LA feature SHA 6508b27..., artifact MATCHED, official UNASSESSED. Other 34 repos have no central canonical pins yet."
   ],
   "records": [
     {
@@ -183,6 +186,21 @@
         "id_type": "AUDITOR_TRACE_ID_NOT_APPROVED_FINAL_REQUIREMENT",
         "official_completion": "UNASSESSED",
         "scope": "code-and-test blob presence + historical GitHub CI logs; no new full-suite E2E or official certification"
+      },
+      "canonical_fingerprint_pilot": {
+        "repository": "hibi89/HAE",
+        "source_ref": "main",
+        "canonical_path": "docs/ECOSYSTEM_CANONICAL.md",
+        "expected_git_blob_sha": "0d31062b0e3c6a570b37a35ace6fbfbe59ec2116",
+        "validation_commit_sha": "6508b27b9a36567f57e926eb3613b10f3b265689",
+        "github_actions_run_id": 43346193465,
+        "run_conclusion": "success",
+        "artifact_canonical_status": "MATCHED",
+        "artifact_gate": "UNASSESSED",
+        "artifact_errors": [],
+        "handoff_commit_sha": "fe0693eab0df738ee981f93169b60f95c7a63cea",
+        "official_final_completion": "UNASSESSED",
+        "scope": "same-repository main file fingerprint only; not functional product acceptance"
       }
     },
     {

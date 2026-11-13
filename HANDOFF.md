@@ -1,3 +1,15 @@
+## [2026-11-13 KST] 정본 지문 자동검증 실증 — 해총 인수인계 10항
+1. **목표/확정 요구/기술:** 사용자 확정 전체 최종설계 100점 기준이 임의 축소/변경되지 않도록 SHA 기반 읽기 전용 확인; HAE 자연어→실 모델→LA 일반 플로/오류 왕복→SOVIA/DBVORA 원래 범위 보존.
+2. **완료/설계 선택:** 각 feature 브랜치 정본 복제안 대비, 같은 private repo `main` read-only 추가 checkout + 중앙 fingerprint registry 방식으로 구현; `canonical_scope.py`/공통 workflow·unit fixture 추가. 라이선스/권한/비용/운영 유리, private 원문 public 미복제. 29개 원장 LA 항목에 실제 pilot 링크/결과 기록.
+3. **실제 테스트:** 중앙 `main@4f2438574c24559ff819cad6ca5b766ff327ca4c` [Actions #43345994721](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43345994721) 19/19 PASS; [#43345994705](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43345994705) shared gate SUCCESS. 실제 private LA `HAE@6508b27b9a36567f57e926eb3613b10f3b265689` [#43346193465](https://github.com/hibi89/HAE/actions/runs/43346193465) SUCCESS, downloaded result JSON `canonical.status=MATCHED`, `errors=[]`, `gate=UNASSESSED`.
+4. **완료/진행/대기/차단:** 정본 해시 감지 HAE 1 repo 파일럿 완료, 전체 35 저장소 중 중앙 pin 1 / 나머지34 NO_PIN; 70 thin caller 기존 기록 유지, 나머지 68개 신규 실행 미검증. 29/29 공식률 UNASSESSED. 고객/실 LLM E2E 불가 증거 및 실 판매 HOLD 불변.
+5. **실패 근거/원인/재시도/대안:** feature checkout에는 main-only canonical이 존재하지 않아 local-only hash 한계 → same-repo read-only checkout으로 해결. CI fixture는 누락·변조 fail-closed 검증, 실제 사용자 정본을 고의로 변경해 시험하지 않음. 핵심 외부 부족: 사용자 승인 100점 가중치·정본별 승인, 실제 기능 test coverage 및 독립 reviewer. 중앙 pin 자체는 서명/브랜치보호가 없으므로 완전한 무단변경방지 아님.
+6. **저장소/브랜치/SHA/경로:** central `hibi89/hackathon-command-center-2026@main` SHA `4f2438574c24559ff819cad6ca5b766ff327ca4c`; `@kmong-productization` 작업 전 `3f17aebb22ede2bad3f6c8ed2f7d0e203b94b6ae`; LA pilot `6508b27...`, private docs SHA `fe0693eab0df738ee981f93169b60f95c7a63cea`. 중앙 경로 `tools/final_blueprint_gate/canonical_scope.py`, `canonical_pins.json`, `.github/workflows/blueprint-validation.yml`.
+7. **Production/환경:** GitHub Actions Ubuntu/Python3 stdlib 및 same-repo `contents:read`; Vercel·Production·고객 브라우저/API/유료 live 서비스 미적용.
+8. **원본/백업/인증·금지:** 기존 70 caller workflow·HAE/LA 코드·main private blueprint 원문·Git history·DB/고객자료/토큰/권한/시크릿/등록이력·설계 100점 원칙·RELEASE HOLD 불변. 백업은 부모 SHA/깃 이력, 강제 이력 수정 금지. Public repo는 repo/path/blob만 저장.
+9. **다음 작업/승인:** 나머지 34 repo별 canonical 정본/승인 확인 후 지문 지정; owner-approved 100점 전수 rubric·CI SHA와 요구 수용조건 실증; HAE/LA 실 LLM/범용 LA 수정/독립 SOVIA/DBVORA E2E. 중앙 자동 write는 GitHub App 최소권한 우선 비교, credential/branch protection 변경 전 사용자 승인.
+10. **갱신 시각/검증 범위:** 2026-11-13 KST, 중앙 CI 2개와 LA private Actions 1개, artifact ZIP/JSON 직접 검사. 단위19 PASS 및 실제 one repo SHA match, 29 전체 의미 검증/68개 신규 Actions 미실행. 신규 hub 문서 SHA 추후 remote readback.
+
 ## [2026-11-13 KST] HAE·LA 21개 CI 증거 대조 중앙 인수인계 10항
 1. **목표·확정 요구/기술:** 사용자 확정 전체 최종설계 100점에 근거한 검증; HAE 실 LLM 자연어→LA 범용 플로·오류 왕복→SOVIA·DBVORA 독립 안전 실행이 목표.
 2. **완료/결정:** 두 private branch에 각각 증거 추적 JSON(HAE 13/LA 감사ID8)·STATUS/HANDOFF 반영, 중앙 29종 JSON은 HAE·LA의 문서 SHA·기존 기능 SHA/CI 집계만 참조하여 공개 비밀 보존. 점수/가중치 동결.
