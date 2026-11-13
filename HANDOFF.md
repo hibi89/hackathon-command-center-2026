@@ -1,3 +1,15 @@
+## [2026-11-13 KST] FlowPilot Universal P85 PDF + Windows EXE 검증 — 해총 인수인계 10항
+1. **목표·용도·설계·기술:** F01–F10 독립 Windows/PC/USB/권한 SMB 파일 납품검수 최종설계 85% 사용자 목표; Python3.11/Tkinter/SQLite + 선택 ReportLab4.4.9 + PyInstaller6.22.3. 확정된 100점 항목별 가중치/독립 고객 수락 없음: 공식 UNASSESSED, 85% 미인정.
+2. **완료 기능·변경·결정:** 원본 read-only/hash/문서 감사 보존, 한국어 PDF(OS TTF, 배포 폰트 없음) 페이지·파일·이슈/escapes 구현, PDF SHA 새 테이블과 기존 JSON/HTML 2종 이력 호환, GUI opt-in; Python 의존 없는 unsigned Windows onedir EXE 내부 구현. 다른 대회/제품 불변.
+3. **실제 테스트:** [Linux/Windows 최종 CI](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/actions/runs/43391290337) at `e87f5a2debe445bf749b3466b6a6f19b2febee7d`, 각 71/71 unique PASS, 8/8 portable 반복/OS, 3/3 Tk 실제 GUI/OS, compileall PASS, 2/2 SUCCESS. [Windows EXE PDF](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/actions/runs/43391157492) at `6f9a15d85507fd3df4b1baceb42e8684a9cb8203` 실제 생성 EXE --self-test EXIT0; EXE SHA `988BC1CE7F7AAA1068B74194C83BC6FA384DD3B5CFE9724C7943BD4D56660E69`. 물리 장비·SMB NOT_RUN.
+4. **완료·진행·대기·차단:** P85 PDF·EXE 일부 기술 CI 성공. 미서명/미배포, 실 고객 Windows10/11·USB·SMB, 설치/권리/법무/고객 수락/100점 rubric 미검증. 공식 85% 미도달·미산정, [작업중] 유지, RELEASE HOLD.
+5. **오류 근거·원인·시도·전환:** 첫 PDF [#43391157600](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/actions/runs/43391157600) 71 중 1 FAIL/OS는 안전하게 문자로 출력한 `<script>`를 테스트가 잘못 거부한 기대오류; assertions만 수정해 #43391290337 전부 성공, 이스케이프 보안 제거 없음. 이전 Windows CLI Unicode·YAML 문제는 제품 HANDOFF 역사 기록.
+6. **저장소/브랜치/SHA/경로:** `hibi89/hibi89-ugreen-nas-hackathon@product/flowpilot-universal`, 기능 `e87f5a2debe445bf749b3466b6a6f19b2febee7d`, 문서 `d2db1d70d95a6733cd83a9bf80acf68a7b5cecfc`. `products/flowpilot_universal/{flowpilot_universal/pdf_report.py,session.py,gui.py,desktop_entry.py,tests/test_pdf_report.py,P85_PDF_EVIDENCE.md,STATUS.md,HANDOFF.md}`. 해총 `hibi89/hackathon-command-center-2026@kmong-productization` 본 커밋 후 HEAD 확인.
+7. **Production·URL·환경:** 웹/Vercel N/A, hosted Linux/Windows CI Python3.11, Windows PyInstaller EXE+ReportLab 포함; Windows 실제 고객 EXE는 미배포, 서명/인증 없음. `python -m flowpilot_universal.gui`, PDF 옵션은 로컬 `reportlab==4.4.9`+OS 한국어 TTF 필요.
+8. **원본/백업/보안·수정금지:** UGREEN lead/ugreen·main·공식 Skill/제출, 타 크몽 목록/등록완료/원본 고객 데이터 불변. 원본 스캔 read-only, PDF/JSON/HTML create-only, SQLite 작업 기록 local, 데이터 업로드/유료 API 없음. 영구 보고서 삭제·원본 덮기·권한/배포설정 변경 금지. Pre-PDF product SHA `9436fce4146cd0c3f38208d0e5812b9bf0c7d8d4` 롤백 근거.
+9. **다음 작업·승인·완료기준:** 승인한 실제 Win10/11 USB·UNC NAS multi-vendor 검증, 코드서명/설치/SmartScreen·Defender 검증, 한국어 OS 폰트 임베딩 상업권+부속 라이선스/NOTICE, 고객 보고서 시각·수용·보존정책, F01–F10 100점 승인 가중치/독립 감사. 검증 전 공식 85%, 판매등록·배포 금지.
+10. **KST/확인시점·범위·문서 기준:** 2026-11-13 KST, 테스트 소스 `e87f5a2debe445bf749b3466b6a6f19b2febee7d` 71+반복8+Tk3/OS, Windows EXE 내부 PDF EXIT0, 코드/문서 SHA 위. 물리/권리/배포 미검증, 공식 UNASSESSED; 중앙 원격 SHA/FlowPilot 행 재조회 후 실 반영 확정.
+
 ## [2026-11-13 KST] CITEVAULT AX P85 영속 원장 — 중앙 10항 인수인계
 
 1. **목표·확정 요구·기술:** 기업용 CITEVAULT AX 최종설계 대비 85% 사용자 요청. 실제 기업 인증/ACL, 고객 허가된 PREP/SMAX→AX, RAG 문서 PDF/DOCX+정형 SQL, 한국어 모델, Windows 인수까지 전체 기준. 공식 완성률 **UNASSESSED**.

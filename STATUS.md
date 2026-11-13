@@ -1,3 +1,8 @@
+## [2026-11-13 KST] FlowPilot Universal 한국어 PDF·실 Windows EXE 통합 CI / 목표 85% 공식 미인증
+- 독립 제품 `hibi89/hibi89-ugreen-nas-hackathon@product/flowpilot-universal` 테스트 소스 `e87f5a2debe445bf749b3466b6a6f19b2febee7d`, 문서 HEAD `d2db1d70d95a6733cd83a9bf80acf68a7b5cecfc`. [Linux/Windows CI](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/actions/runs/43391290337) 각 71 고유 PASS + portable8 중복재실행 + native Tk3 PASS/OS, compileall, 2/2 SUCCESS, 0 FAIL.
+- 신규 ReportLab 4.4.9 선택 PDF: 한국어 다중페이지, XML 이스케이프, 900/200 표시 제한, 원본 외부 폴더 create-only, 구 JSON/HTML SQLite 원장 유지 + PDF SHA 검증. [Windows PyInstaller EXE CI](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/actions/runs/43391157492) actual unsigned onedir EXE synthetic Tk/scan/PDF/ledger self-test EXIT0, EXE temporary only; 고객 배포/생산 서비스 없음.
+- 인증 정체: 실제 소비자 Win10/11, 고객 USB/승인 SMB NAS, SmartScreen/Defender/installer/signature, OS font embedding licenses, 독립 고객 수용·원본 최종설계 100점 가중치 미확정. **공식 UNASSESSED, 85% 미인정**, `FlowPilot Universal [작업중]`, RELEASE HOLD, 상품 미등록. UGREEN lead/main/Skill, 타 28제품 상태/등록 완료 기록/가격 불변. [P85 정본](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/product/flowpilot-universal/products/flowpilot_universal/P85_PDF_EVIDENCE.md).
+
 ## [2026-11-13 KST] CITEVAULT AX 사용자 85% 후속 — 합성 영속보관소 Node 58PASS
 
 - **정본:** `hibi89/Freelancer@product/rag-enterprise-knowledge 6fb66efd14dd95dd64ebfb1305ef872478ff1524`, P85 addendum `docs/P85_DURABLE_EVIDENCE_20261113.md`. 해총 후보/관리 원장 2곳 CITEVAULT 행만 최신화, 다른 서비스/상품/등록완료 기록은 불변.
