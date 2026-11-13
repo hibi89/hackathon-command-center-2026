@@ -1,3 +1,15 @@
+## [2026-11-13 KST] CITEVAULT P50 원본 코드 동등 로컬 확인 · 최신 10항
+1. **목표/최종설계:** CITEVAULT AX 기업 RAG 전체 설계 기준 사용자 요청 50% (공식 요구별 가중치 승인/실기능 테스트 전 UNASSESSED).
+2. **기능/결정:** 독립 제품 `Freelancer@product/rag-enterprise-knowledge`에 RAG pinned source 기반 근거 검사 모듈, 6개 Node 테스트, GitHub Actions, 요구 매트릭스 구현; RAG/PREP/SMAX 원본 복사/변경 없음.
+3. **실 시험:** Node22.16 Linux, 원격 blob `5e9080f00fcda6c92ad575e88bc6be35024f7600`/`a26c758cfe9a1a79d5b83f459236a27160712a93` hash match + `node --check` 2 pass + **6 tests: 3 PASS/0 FAIL/3 SKIP**. SKIP 3개는 RAG 원본 checkout 필요. GitHub Actions 실 run/원본 PDF/DOCX test **미검증**.
+4. **상태:** P50 목표 미달/검증 대기, 후보 **[작업중]** 유지, 공식 **UNASSESSED**, RELEASE HOLD/판매 미등록.
+5. **실패/대안:** container GitHub DNS 불가로 원본 checkout 못함. GitHub connector readback+로컬 isolated unit으로 전환; 정확 CI run 확인 전 통합 PASS 금지.
+6. **위치/SHA:** 제품 설계+코드+HANDOFF `hibi89/Freelancer@product/rag-enterprise-knowledge` HEAD 문서 `6c36d02e71a751c8473b0bb36c9dc8b2c5ed460c`(후속 HEAD 재확인), RAG pin `c5867b3951f51bfa97cadd1aad8fb13e9cf9e604`; workflow `54cd494e47c27a3dd89846d9d02aeda0c955f8f4`. 중앙 후보표/규정은 최신 ref 조회.
+7. **Production/환경:** Node22.16, GitHub Ubuntu24.04 Actions definition only. Vercel/Production 미적용, paid API/실고객 데이터 전송 없음.
+8. **백업/보안:** 기존 제품 분기 시작 `1195f767c7ebc6b1965936cc2166db53853c6e53` 복구 SHA, Private PREP/SMAX·원본 RAG 불변, 고객 자료/비밀값 저장 없음.
+9. **다음/완료 기준:** hosted RAG 원본 포함 6개 통합 tests+native PDF/DOCX code tests 로그 검증, 승인된 PREP/SMAX→AX 한 건, 기업 IAM/ACL 권한 테스트, 사용자 확정 REQ 100점 분모 승인 후 재판정.
+10. **시점/미검증:** 2026-11-13 KST. 로컬 exact blob/isolated 3 PASS만 증명, hosted CI·Windows·실기업 사용자·릴리스 검증 없음.
+
 ## [2026-11-13 KST] PROOFQA AX P50 합성 검증·중앙 동기화 10항
 
 1. **목표·용도·확정 요구·기술:** Private `Freelancer`의 PROOFQA AX 설계 전체 100점 중 P50 체크포인트 구현. 최종 제품은 Code Checker·Graphify·agent-browser·Cloudflare 검증법·고객 인수; 이번 구현은 로컬 정적 안전 입력/근거 납품.
