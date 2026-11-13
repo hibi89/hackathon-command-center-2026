@@ -51,12 +51,12 @@
     },
     {
       "gate": {
-        "conclusion": null,
+        "conclusion": "success",
         "head_sha": "184bd4ffffc8ea6a902fcdd3178cdda94527c462",
         "matches_current_head": true,
         "run_id": 43396155168,
         "status": "LATEST_RUN",
-        "workflow_status": "in_progress"
+        "workflow_status": "completed"
       },
       "head_sha": "184bd4ffffc8ea6a902fcdd3178cdda94527c462",
       "record_id": "ACTIVE-05",
@@ -247,13 +247,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "6fd0d1cef4ccfc889a6765f0d4d56adefb792ced",
+        "head_sha": "c0f4e2e23db6cffb111f194638e1187c38206c35",
         "matches_current_head": true,
-        "run_id": 43396127901,
+        "run_id": 43396271357,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "6fd0d1cef4ccfc889a6765f0d4d56adefb792ced",
+      "head_sha": "c0f4e2e23db6cffb111f194638e1187c38206c35",
       "record_id": "CANDIDATE-06",
       "repository": "hibi89/Freelancer",
       "status": "PRESENT",
@@ -613,12 +613,12 @@
         {
           "branch": "feature/final-blueprint-p85-evidence-20261113",
           "gate": {
-            "conclusion": null,
+            "conclusion": "success",
             "head_sha": "184bd4ffffc8ea6a902fcdd3178cdda94527c462",
             "matches_current_head": true,
             "run_id": 43396155168,
             "status": "LATEST_RUN",
-            "workflow_status": "in_progress"
+            "workflow_status": "completed"
           },
           "head_sha": "184bd4ffffc8ea6a902fcdd3178cdda94527c462",
           "status": "PRESENT"
@@ -867,13 +867,13 @@
           "branch": "product/rag-enterprise-knowledge",
           "gate": {
             "conclusion": "success",
-            "head_sha": "6fd0d1cef4ccfc889a6765f0d4d56adefb792ced",
+            "head_sha": "c0f4e2e23db6cffb111f194638e1187c38206c35",
             "matches_current_head": true,
-            "run_id": 43396127901,
+            "run_id": 43396271357,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "6fd0d1cef4ccfc889a6765f0d4d56adefb792ced",
+          "head_sha": "c0f4e2e23db6cffb111f194638e1187c38206c35",
           "status": "PRESENT"
         },
         {
