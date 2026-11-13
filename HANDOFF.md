@@ -1,3 +1,15 @@
+## [2026-11-13 KST] FlowPilot Universal P50 독립 개발·최종설계 판정 인수인계 — 필수 10항
+1. **목표·확정·기술:** FlowPilot Universal Windows/USB/권한 있는 SMB 공유폴더 파일납품 검수, 소유자 최종설계 전체를 분모100으로 한 최종완성률 **50%** 목표. Python3.11 stdlib 독립 로컬 스캐너·SHA256·증거 출력, 기존 UGREEN Skill 비의존.
+2. **완료·변경·결정:** UGREEN 전용 브랜치 `product/flowpilot-universal`에 신규 6개 실행/테스트/CI 파일과 별도 설계·STATUS·10항 HANDOFF 작성. Uliya NAS Skill 종속(A) 대비 로컬 독립(B) 선택: 서버/유료 API 0, 원본 대회 분리. 엄격 manifest v1, 읽기 전용 제한, 필수/해시·중복/버전·링크/실패 판정, 덮어쓰기 없는 JSON·HTML.
+3. **검증·명령/성공/실패:** `cd products/flowpilot_universal && python -m unittest discover -s tests -p 'test_*.py' -v && python -m compileall -q flowpilot_universal`. 정확 기능 SHA `b041870d9f04709ddc592f7e2b7c1250c43668a3`, [실제 Actions](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/actions/runs/43376584918) Ubuntu 15/15 PASS, Windows 15/15 PASS, 두 job SUCCESS, 각각 compileall PASS. 최초 Windows CI에서 5FAIL+1ERROR 기록 후 재검증 완료. 물리 Win10/11/USB/SMB·실고객·브라우저·Prod 테스트 0.
+4. **완료/진행/차단:** 합성 기반 **내부 P50 엔진 게이트 충족**. 전체 최종설계 사용자 승인 요구가중치 부재로 **공식 최종완성률 UNASSESSED·50% 미인정**, 중앙 **[작업중]** 보존, RELEASE HOLD/SALE NO-GO.
+5. **오류·근거·시도·재시도 금지·대안:** 최초 Windows 경로-vs-FD 메타데이터 불일치와 Windows 불법 '<' 파일명 fixture로 실패. Windows size/mtime 비교와 합성 HTML 경로 주입 변경 후 2/2 CI PASS. 이 수정을 완전한 TOCTOU·junction 안전 보장이라 광고 금지. 실 Windows security 게이트는 다음 단계 독립 검증.
+6. **저장소/브랜치/SHA/경로:** `hibi89/hibi89-ugreen-nas-hackathon@product/flowpilot-universal`, 기능 `b041870d9f04709ddc592f7e2b7c1250c43668a3`, 문서 HEAD `6409b3e5a4a4714cc08315606e16ff357f2eab01`; `products/flowpilot_universal/{flowpilot_universal,tests,README.md,BLUEPRINT.md,STATUS.md,HANDOFF.md}`, `.github/workflows/flowpilot-universal.yml`; 해총 `hibi89/hackathon-command-center-2026@kmong-productization` 정본 `docs/audits/KMONG_16_CURRENT_20261111.md`.
+7. **Production·환경/실행:** Python3.11/Linux·Windows GitHub-hosted Actions 통과, 고객 사용 CLI `python -m flowpilot_universal --root <authorized-root> --manifest <input.json> --json <new-report.json> [--html <new-report.html>]`. Vercel/운영 URL **미적용**. 실 NAS/PC 프로덕션 미배포.
+8. **원본·백업/인증·수정금지:** 대회 `lead/ugreen` 베이스 `d6b42798c633172d6d918d00316d5e3a973be426`·`main`·공식 Skill 정본/고객 원본 불변. 작업 브랜치 Git 이력으로 복구. 시크릿·자격증명·고객 개인자료/임의 공유 전송 없음, 다른 크몽 제품 상태/등록완료 이력 불변.
+9. **다음 작업/승인·완료 기준:** F01~F10 요구별 최종설계 승인 100점 가중치 확보, 본체 GUI/로컬 이력·백업·중단재개, 실제 Win10/11/USB/권한 있는 UNC SMB와 다중 NAS READ 검증, 상품 패키징·라이선스·고객 납품 수용. 공식 목표 50%는 승인된 전체 설계 수용증거 전에는 불인정, [작업중] 제거 금지.
+10. **갱신 KST·검증 범위·기준:** 2026-11-13 KST, 개발 증거 `b041870d9f04709ddc592f7e2b7c1250c43668a3`, 문서 `6409b3e5a4a4714cc08315606e16ff357f2eab01`, Actions #43376584918 성공. 현재 15개 합성 케이스×2 OS, 실제 고객 기기/고객 데이터/외부 권한/출시 **NOT_RUN**. 중앙 문서 커밋 후 원격 SHA 별도 확인.
+
 ## [2026-11-13 KST] CITEVAULT P50 원본 코드 동등 로컬 확인 · 최신 10항
 1. **목표/최종설계:** CITEVAULT AX 기업 RAG 전체 설계 기준 사용자 요청 50% (공식 요구별 가중치 승인/실기능 테스트 전 UNASSESSED).
 2. **기능/결정:** 독립 제품 `Freelancer@product/rag-enterprise-knowledge`에 RAG pinned source 기반 근거 검사 모듈, 6개 Node 테스트, GitHub Actions, 요구 매트릭스 구현; RAG/PREP/SMAX 원본 복사/변경 없음.
