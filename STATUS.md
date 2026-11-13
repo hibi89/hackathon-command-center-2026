@@ -1,3 +1,8 @@
+## [2026-11-14 KST] WORKNOVA Desk 실제 Windows SQLite integrity_check ok / schema version 2
+
+- 사용자가 네이티브 WORKNOVA Desk EXE의 격리 TEMP 환경에서 생성된 `desk.sqlite`를 Windows Python3.11 `sqlite3 mode=ro`로 열고 **`PRAGMA integrity_check: ok`**, **`PRAGMA user_version: 2`** 실제 출력 전달. EXE 빌드/해시/MZ, 첫 장부 확인창/실 Tk GUI/ExitCode0/새 격리 DB 존재까지 이전 증거에 덧붙여 무결성·제품 스키마 버전 확인. [제품 증거](https://github.com/hibi89/Freelancer/blob/product/worknova-desk-local/docs/P85_WINDOWS_EXE_BUILD_RESULT_20261114.md), 제품 HEAD `16a51cf8d9921f85ce91c0d58c47d84949e7b403`.
+- GUI 실제 거래처 입력/견적·계약·수금 기능, EXE 재실행 파일/내용 보존, Python 없는 타PC, OS ACL·DB 보호/서명·Defender·실고객/라이선스 수용은 여전히 미검증. 사용자 승인 WD01~14 100점 엄격한 전항 완전수용 **0/100(구현률0 아님), 목표85 미달, [작업중]/RELEASE HOLD/판매 미등록**. 중앙 크몽 WORKNOVA 한 행만 갱신, 타 제품·등록완료 이력 보존.
+
 ## [2026-11-14 KST] WORKNOVA Desk 네이티브 EXE 정상 종료·격리 SQLite 생성 성공
 
 - 사용자 Win10.0.26200 소유자 콘솔: WORKNOVA EXE onedir 빌드/MZ/SHA256 확인→첫 빈 장부 생성 동의 후 Tk GUI 메인 한글/4탭 표시→EXE 창 X 종료, `$p.WaitForExit()` 뒤 **`ExitCode : 0`**, **`TestDatabaseExists : True`**. EXE 자식 `LOCALAPPDATA` 환경변수만 신규 `TEMP/worknova-gui-qa-<GUID>` 경로로 지정; 기존 실 고객 장부와 분리. 공식 [제품 실행 증거](https://github.com/hibi89/Freelancer/blob/product/worknova-desk-local/docs/P85_WINDOWS_EXE_BUILD_RESULT_20261114.md), 제품 SHA `9fe4925038c4f72344b4529a2892365b5473f3f1`.
