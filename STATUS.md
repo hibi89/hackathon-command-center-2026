@@ -1,3 +1,8 @@
+## [2026-11-14 KST] WORKNOVA Desk 사용자 native Windows EXE 빌드 최초 성공 (실행은 미검증)
+
+- 사용자 Windows 10.0.26200/Python3.11.9/PyInstaller6.22.3 `--onedir --windowed` 직접 빌드 로그에서 EXE·COLLECT `completed successfully`, `Build complete!`와 EXE 파일 존재 확인. 이전 build wrapper `PYTHONNOUSERSITE=1`로 PyInstaller 모듈 미발견 문제를 `--plan` 인자 직접 실행으로 우회. 새 증거 `hibi89/Freelancer@product/worknova-desk-local` [EXE 빌드 원장](https://github.com/hibi89/Freelancer/blob/product/worknova-desk-local/docs/P85_WINDOWS_EXE_BUILD_RESULT_20261114.md).
+- 실제 EXE 실행·GUI/PE SHA256·정확 크기/무Python 환경·Windows ACL/DB 암호화/서명·Defender·고객/법무·라이선스는 미검증. 로컬 구형 ZIP으로 빌드하여 빌드 원본과 최신 GitHub SHA 일치 미확인. 승인 WD01~14/100 최종 수용 **0/100(구현률0 뜻 아님), 목표85 미달, [작업중], RELEASE HOLD, 미등록**. 중앙 원장 WORKNOVA 단일 행 최신화, 다른 상품/등록 이력 수정 없음.
+
 ## [2026-11-14 KST] WORKNOVA Desk Windows PyInstaller 사용자 설치 인식 오류 최소 수정
 
 - 사용자 Win10.0.26200.9974 / Python3.11의 PyInstaller6.22.3 사용 가능·--plan PASS, 실제 빌드에서 `No module named PyInstaller` FAIL 증거 확인. 빌드 코드가 설정한 `PYTHONNOUSERSITE=1`로 pip --user 패키지 경로를 숨긴 원인. 제거·회귀테스트1개 추가, 정확 소스 blob `10d60c3789fb2f8c654479845ec9296dbb0c890b`를 Linux3.13에서 5 mock/경로 PASS·compile PASS, 파일 원격 readback 일치.
