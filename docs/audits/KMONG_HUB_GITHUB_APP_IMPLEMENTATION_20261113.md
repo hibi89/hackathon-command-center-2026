@@ -1,3 +1,11 @@
+## [2026-11-13 KST] 실 GitHub App 재실행 NO_CHANGE 검증 — 불필요한 자동 커밋 없음
+- [Actions #43364386625](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43364386625) `workflow_dispatch` / `main@2ce63078eeaced49cc46faeef5070c0c65ee9d7a` / `dry_run=false`: GitHub API `completed/success`; job 전 단계 SUCCESS, 회귀 테스트 **26/26 PASS**.
+- 실제 로그: `KMONG HUB SYNC: NO_CHANGE repositories: 35 tracked branches: 70 product records: 29 linked refs: 28 unlinked refs: 1 fingerprint alerts: 0 official scores: UNMODIFIED`.
+- 실행 종료 직후 중앙 브랜치 `kmong-productization` SHA는 **`67d60fb4ace04824ecc180d355b156247dd32ca6`** (재실행 직전 문서 기준 HEAD와 동일). 기존 `data/kmong_hub_auto_observations.json` 내용 35/70/31 MATCHED/4 NOT_CONFIGURED/29 records(28 PRESENT, 1 NOT_LINKED) 그대로. **동일 증거 재실행으로 새로운 관찰 원장 커밋을 만들지 않은 점 실증**.
+- 최초 자동 `UPDATED`는 [#43363676185](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43363676185), 원장 신규 기록 SHA `05bcd3c0846ebad6c86d7b4711b45fd2dfbf4e8f`. 전용 App 토큰 인증·일회 쓰기·원격 readback·실제 `NO_CHANGE`는 각각 검증 완료.
+- 아직 **미검증**: 실제 예약 `schedule` 이벤트의 11:10 KST 실행 성공, 권한/네트워크 실패·동시 충돌 복구의 실제 E2E. 주어진 워크플로 cron `10 2 * * *`는 한국시간 매일 11:10에 해당(정시 실행 보장 아님). KST 2026-11-13 오후 1시대 검증 당시 오늘 예정시각은 지났으며 다음 예정일은 2026-11-14. 검증 없는 완료 주장 금지.
+- 관찰은 소스 GitHub App Contents/Actions read-only, 설치 범위 전체(사용자 승인)와 발급 토큰의 35개 명시 scope 구분. 제품 공식률 29/29 UNASSESSED 및 등록완료·작업중·기존 상태 보존. 이 문서 반영은 원장 봇 쓰기와 무관한 문서 변경.
+
 ## 2026-11-13 KST — GitHub App 최초 실제 중앙 자동 기록 검증
 - 실행 [#43363676185](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43363676185), 이벤트 `workflow_dispatch`, 입력 `dry_run=false`, 코드 `main@2ce63078eeaced49cc46faeef5070c0c65ee9d7a`. GitHub 원격 REST API `completed/success`; job `sync`의 모든 단계 SUCCESS. 모의 테스트 26/26 PASS.
 - 실제 job log: `KMONG HUB SYNC: UPDATED repositories: 35 tracked branches: 70 product records: 29 linked refs: 28 unlinked refs: 1 fingerprint alerts: 0 official scores: UNMODIFIED`; 출력 커밋 `05bcd3c0846ebad6c86d7b4711b45fd2dfbf4e8f`.
