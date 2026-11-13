@@ -81,3 +81,7 @@
 - 본 커밋은 **문서/JSON만**, 실제 코드 테스트 0·새 GitHub Actions/유료 호출 0·크몽 판매 게시 0·운영 Production/인증/권한 변경 0. 실제 중앙 퍼센트/진행 마커·판매 HOLD 변경 없음.
 
 **확인 근거:** 중앙 29개 활성/후보 상품 목록, 기존 개별 29종 상품화 우선순위, 관련 GitHub 제품 REQUIREMENTS·Freelancer FINAL_BLUEPRINT, 실제 공개 크몽 서비스의 3등급 사례. 실제 29개 제품 각각의 코드/최신 QA 전체 독립 재실행 및 구매수요/크몽 심사는 미검증.
+
+## Freelancer 추가 상품 및 브랜치 자동 등록 정책 (2026-11-13)
+
+[Freelancer 7개 product 브랜치 / 8개 상품 전체 등록부](../audits/FREELANCER_BRANCH_COMPLETION_REGISTRY_20261113.md)를 크몽 **최종완성률 보조 원장**으로 연결한다. ECHOHOME·PAWTALK·MYRADIO AI는 기존 29개/19개에 없던 신규 3종으로, 각각 공식 최종완성률 **UNASSESSED**, 미등록, 출시 HOLD다. 기존 기업형 5종은 위 19개 통합 서비스에 연결되어 중복 집계하지 않는다. 향후 product 브랜치 생성 즉시 누락 없이 등록하는 정책을 적용하되, 실제 무인 자동 실행은 GitHub 교차 저장소 인증·트리거·검증을 구성하기 전까지 **미구현**이다. 기존 게시 순위·등록완료 증빙 이력·상품별 원래 완성률은 보존한다.
