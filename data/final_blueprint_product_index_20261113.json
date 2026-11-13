@@ -138,7 +138,7 @@
         "owner_requirement_weights": "NOT_INDEPENDENTLY_APPROVED",
         "source_branch": "feature/final-blueprint-p85-evidence-20261113",
         "verified_code_sha": "23a2d1293755294a58a20b98dc34e229a1e54f82",
-        "documentation_head": "7e4ce95a14e1a3aa9860246f906aeb56d4193961",
+        "documentation_head": "e55aa5f4570eeba19120fd6d0dffd620cfe27be7",
         "action_run_id": 43392272159,
         "python_tests": {
           "windows_pass": 269,
@@ -182,7 +182,22 @@
         "windows_bundle": "UNSIGNED_PYTHON311_PYZ_3_CMD_MANIFEST_HOSTED_WINDOWS_CMD_SELF_CHECK_CHROME_EDGE_PASS",
         "customer_source_used": false,
         "commercial_status": "RELEASE_HOLD_SALE_NO_GO",
-        "next_owner_gates": "SUM100_REQUIREMENT_WEIGHTS;CUSTOMER_WIN10_11;REAL_EXCEL;LEGAL_RIGHTS_LICENSE_NOTICE;PRIVACY_RETENTION;SKU_SUPPORT_REFUNDS;CUSTOMER_SIGNOFF"
+        "next_owner_gates": "SUM100_REQUIREMENT_WEIGHTS;CUSTOMER_WIN10_11;REAL_EXCEL;LEGAL_RIGHTS_LICENSE_NOTICE;PRIVACY_RETENTION;SKU_SUPPORT_REFUNDS;CUSTOMER_SIGNOFF",
+        "user_policy_request": "OWNER_DELEGATED_ITEM3_BUSINESS_DATA_REFUND_SUPPORT_POLICY_DESIGN",
+        "commercial_policy_state": "INTERNAL_DRAFT_CHOSEN_DEFAULTS_NOT_PUBLISHED_NOT_LEGAL_APPROVAL",
+        "commercial_policy_file": "docs/COMMERCIAL_OPERATION_POLICY_DRAFT_20261114.md",
+        "commercial_policy_product_choice": "CUSTOM_DELIVERABLE_OFFLINE_HTML_ZIP_SINGLE_PURCHASE",
+        "program_binary_resale": "HOLD_UNSIGNED_EXE_CUSTOMER_OS_LICENSE_NOT_APPROVED",
+        "commercial_policy_sku_prices_krw": {
+          "BASIC": 49000,
+          "PRO": 129000,
+          "BUSINESS": 249000
+        },
+        "customer_data_default": "NO_RAW_REMOTE_UPLOAD_UNCLEAR_RIGHTS_OR_PERSONAL_DATA_HOLD",
+        "refund_policy": "BEFORE_SERVICE_FULL_REFUND_AFTER_SERVICE_APPLY_CONSUMER_LAW_AND_PLATFORM_NOT_BLANKET_NONREFUNDABLE",
+        "source_rights_licensing": "REQUIRE_AUTHORSHIP_CHAIN_LICENSE_NOTICE_APPROVAL_BEFORE_COMMERCIAL_DELIVERY",
+        "status": "[작업중]",
+        "actual_kmong_listing": "NOT_POSTED"
       }
     },
     {
