@@ -10,7 +10,7 @@
 |---|---|---|---|---|
 | **AZENTFLOW AX** | `hibi89/Freelancer@product/hae-la-automation` `a578aee2300ae053bafe5cdaf1dd8e23385ff47b` | HAE+Lightning Azent+DBVORA; HAE 내부 85% 잠정, 전체 Python CI 2 FAIL/패키지 parity 미해결 | **UNASSESSED** (기업 패키지/고객 통합 기능·테스트 미실행) | HOLD |
 | **CITEVAULT AX** | `hibi89/Freelancer@product/rag-enterprise-knowledge` `acf4936670bf1205f648d0dff5ca7e48b62fa83a` | RAG Studio+SMAX²/PREP+SQL/검색; RAG 원본 엔지니어링 95% 잠정 | **UNASSESSED** (기업 IAM/실 데이터·모델/납품 확장 미실행) | HOLD |
-| **SITECRAFT AX** | `hibi89/Freelancer@product/rea-website-rebuild` `6e2346c3b9d50dea1bde8d5ecb47b47f1567f774` | REA_Web+Fable5.1+Astra P4+Playwright+REA Pro; 원형 웹 재구축 제품 P85 잠정/P95 핵심 미달 | **UNASSESSED** (기업 납품 패키지별 독립 인수 검증 없음) | HOLD |
+| **SITECRAFT AX [작업중]** | `Freelancer@product/rea-website-rebuild` docs `391d64f17bae5f63ca66bd502793e3230b040f49`; REA source `feature/sitecraft-ax-p50-20261113` SHA `a5c5a718dc33` | 내부 P50 synthetic frozen Fable→Astra→Pro FastAPI/SQLite HTTP E2E; [CI #43375663779](https://github.com/hibi89/REA_Web/actions/runs/43375663779) Ubuntu/Windows 각 50PASS/0FAIL/1WARN, 2/2 SUCCESS | **공식 UNASSESSED** (P50 내부 단계≠최종설계 공식 50%·고객 인수 미실시) | HOLD |
 | **PROOFQA AX** | `hibi89/Freelancer@product/proofqa-ax-delivery-audit` `54b718f5d5520fae912d1fcc2e70a87ebd8f173c` | AI Code Checker 기존 기술 P95 잠정+Graphify+agent-browser+Cloudflare 감사 방법론 | **UNASSESSED** (신규 외부 기술 통합·독립 보안/브라우저 검증 0회) | HOLD |
 | **ONTOINSIGHT AX** | `hibi89/Freelancer@product/ontoinsight-ax-data-analytics` `afda6eac0802d50cbcd44eb0b99d3daeffbf0922` | AI AutoML Analyst 기존 P95 잠정+NVIDIA Auto Ontology **개념**+선택 PREP/SMAX² | **UNASSESSED** (새 Excel·다중 파일·온톨로지/ML 누수 검증 0회) | HOLD |
 

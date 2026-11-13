@@ -1,3 +1,14 @@
+## [2026-11-13 KST] SITECRAFT AX P50 중앙 인수인계 10항
+1. 목표/기술: 최종설계의 SITECRAFT P50 합성 로컬 HTML→실 Fable static→Astra REVIEW_REQUIRED→별도 승인 CSV→REA Pro 독립 앱.
+2. 완료/결정: REA_Web 전용 feature/sitecraft-ax-p50-20261113에 모듈·테스트·CI·문서 4파일; 원본 REA/Fable/Astra/Pro/DATA2WEB 미수정.
+3. 테스트: code SHA a5c5a718dc33778fb1df59c601feee57944603db, https://github.com/hibi89/REA_Web/actions/runs/43375663779 Ubuntu24.04/Windows2025 각 50PASS/0FAIL/1WARN, 2/2 SUCCESS. 실제 FastAPI/SQLite HTTP 합성 E2E.
+4. 상태: 내부 합성 P50 기술 PASS, 전체 최종설계 공식률 UNASSESSED, 중앙 [작업중] 유지; P70/85/95/100 별도 미수용. RELEASE HOLD.
+5. 오류/재시도/대안: 신규 CI FAIL 0, TestClient 의존성 deprecation 1 WARN/OS. 무허가 실사이트/실 고객 콘텐츠 수집·복제/무단 Production 금지.
+6. repo/branch/SHA: central hibi89/hackathon-command-center-2026@kmong-productization, design Freelancer@product/rea-website-rebuild docs SHA 391d64f17bae5f63ca66bd502793e3230b040f49, code REA_Web@feature/sitecraft-ax-p50-20261113 기능 SHA 상기, source docs SHA 55413aa5ba1eb293aa1f29b34fa9589bb27f39b8.
+7. Production/환경: Actions Ubuntu24.04/Windows2025 Python3.11 frozen Fable/Astra + FastAPI/SQLite; Vercel/Production 미적용.
+8. 원본/백업/보안: REA_Web 원래 feature/website-analysis-rebuild@82fb8da349de72f45eeaf15f7e997c2d449cf488 보존, Git SHA 복구 가능. 비밀·고객 자료 불사용.
+9. 다음: 별도 P70 승인 시 3 합성 사이트 Chromium before/after 검증. 공식률 가중치/요구추적 전 변경 금지, 실외부 사이트/유료/운영 별도 승인.
+10. KST 2026-11-13 원격 SHA, CI jobs/log 근거 검증. 실고객/실사이트/Win10-11 실기기/Production 미검증. 이력·다른 제품 표식 변경 없음.
 ## [2026-11-13 15:02 KST] 상시 이벤트 기반 중앙 동기화 인수인계 — 필수 10항
 1. **목표·용도·요구·기술:** 사용자 승인 후 35개 GitHub repo/70 HEAD/31 정본/29 제품의 변경 즉시 수집을 목표로, 기존 GitHub Source App(읽기), GitHub Webhook(push/workflow_run:completed), Vercel 서버리스, 별도 hub-only Actions:write App 및 기존 중앙 workflow_dispatch 수집기 결합. 하루 11:10 KST 일일 점검 보존, 공식률/이력 자동 변경 금지.
 2. **완료 기능·변경·결정 근거:** 기존 소스 App Actions:write 확장은 전체 설치 저장소에 권한 확대가 되어 불채택; hub-only 두 번째 App 설치 방식 선택. SHA256 HMAC timing-safe 검증, 1MB body cap, UUID 검증, 35 repo/추적브랜치 필터, snapshot 자기재귀 차단, RSA JWT/단일 repo Actions:write 토큰 검사, fail-closed enable toggle, 무비밀 로그. 코드 경로 services/kmong-event-bridge. 기존 중앙 Python 수집기/하루 cron 수정 없음.

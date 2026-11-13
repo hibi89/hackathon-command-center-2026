@@ -286,7 +286,7 @@ FFAX 안전한 AI 공급자 어댑터·로컬 검증 확장, Node96 PASS·mock12
 |---|---|---|---|
 | **AZENTFLOW AX** | **UNASSESSED** | `Freelancer@product/hae-la-automation a578aee2`, HAE+LA+DBVORA | HAE 자체 85% 잠정; 기업형 연동/납품 별도 미개발, RELEASE HOLD |
 | **CITEVAULT AX** | **UNASSESSED** | `Freelancer@product/rag-enterprise-knowledge acf49366`, RAG+SMAX/PREP | RAG 자체 95% 잠정; 기업 다중권한/실소스·정식 설치 미검증, RELEASE HOLD |
-| **SITECRAFT AX [작업중]** | **UNASSESSED · 목표 P50 (검증 전)** | `Freelancer@product/rea-website-rebuild` / `REA_Web` 전용 격리 브랜치 예정, REA+Fable+Astra | 사용자 2026-11-13 P50 개발 지시. 합성 허가 fixture→pinned Fable 정적 GET→Astra 검토 초안→독립 Pro 앱 E2E 증거 구축 중. P50·공식률 아직 검증 안 됨; 원형 REA 85% 승계 금지, RELEASE HOLD |
+| **SITECRAFT AX [작업중]** | **공식 UNASSESSED · 별도 합성 기술 P50 PASS** | `Freelancer@product/rea-website-rebuild 391d64f17` · `REA_Web@feature/sitecraft-ax-p50-20261113` 기능 `a5c5a718dc33` | **[Actions #43375663779](https://github.com/hibi89/REA_Web/actions/runs/43375663779) Ubuntu/Windows 각 50PASS/0FAIL/1WARN·2/2 SUCCESS**: pinned Fable 정적 local GET→Astra P4 REVIEW_REQUIRED→승인 합성 CSV→독립 FastAPI/SQLite/API. SITECRAFT P50 합성 기술 게이트만 PASS. **공식 50% 아님**(승인 100점 요구별 추적 미완), `[작업중]` 유지·실고객/실사이트/Production 미검증·RELEASE HOLD |
 | **PROOFQA AX [작업중]** | **UNASSESSED · P50 목표(최종설계 기준 검증 대기)** | `Freelancer@product/proofqa-ax-delivery-audit 54b718f5`, CodeChecker+Graphify+agent-browser | 기존 Checker95%; 새로운 Graph/브라우저/보안 실제 통합 및 고객 인수 0회, HOLD |
 | **ONTOINSIGHT AX** | **UNASSESSED** | `Freelancer@product/ontoinsight-ax-data-analytics afda6eac`, AutoML+NVIDIA Auto Ontology 개념 | 기존 AutoML95%; 새 의미·관계/Excel·ML 누수검증 통합 0회, HOLD |
 
