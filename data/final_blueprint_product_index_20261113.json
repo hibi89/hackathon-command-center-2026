@@ -512,7 +512,12 @@
         "R27",
         "R28",
         "R29"
-      ]
+      ],
+      "latest_implementation_sha": "2de90f3e1231d945b8fcec322f02194003b37098",
+      "latest_verified_local_tests": "151 PASS / 0 FAIL / 0 SKIP (Linux Python3.13.5 optional PDF dependencies installed)",
+      "latest_sync_readback": "11/11 exact code and docs matched at 2de90f3e",
+      "latest_pdf_evidence": "hibi89/Freelancer@product/bid-ax-public-procurement/docs/P85_PDF_LOCAL_ACCEPTANCE_20261114.md",
+      "last_verified_as_of_kst": "2026-11-14"
     },
     {
       "record_id": "CANDIDATE-11",
