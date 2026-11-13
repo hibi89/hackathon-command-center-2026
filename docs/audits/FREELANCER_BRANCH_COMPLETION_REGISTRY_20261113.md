@@ -34,7 +34,7 @@
 | PAWTALK | `product/echohome-pawtalk-local-ai` | UNASSESSED | 미등록·HOLD | 반려동물 놀이형 음성대화 설계, 앱 미검증 |
 | MYRADIO AI | `product/myradio-ai-dj` | UNASSESSED | 미등록·HOLD | 오프라인 WAV 시제품, 실 Windows/상용권리 미검증 |
 | AXNODE | `product/axnode-sector-runtime` | UNASSESSED | 미등록·HOLD | 사용자 A안 독자 바이너리 `.axnode` 최종설계 R01~R29, 별도 로컬 POC 19 PASS; GitHub 브랜치에 실행 소스/CI 미반영, 원격/3GB/Windows 미검증 |
-| WORKNOVA Desk **[작업중]** | `product/worknova-desk-local` | **UNASSESSED** (P50 독립 엔진 로컬 18 PASS·정확 원격 11/11 SHA, 전체 공식 50% 미확정) | 크몽 미등록·RELEASE HOLD | [비공개 제품 브랜치](https://github.com/hibi89/Freelancer/tree/product/worknova-desk-local) 기능 SHA `6b7f86738fb6`: KRW/VAT·명시적 승인·계약/납품·수금·감사·SQLite 백업; Linux Python3.13.5 18 PASS, Windows/실고객/회계·문서·CI 미검증 |
+| WORKNOVA Desk **[작업중]** | `product/worknova-desk-local` | **UNASSESSED** (별도 P70 엔지니어링 게이트 Linux 37/37 PASS + Tk8.6/Xvfb 합성 GUI 전체흐름 PASS; 공식 최종설계 70%는 미확정) | 크몽 **미등록·RELEASE HOLD** | [Private 제품 HEAD `16d08b79621a303e190835a74885d58d75d513d9`](https://github.com/hibi89/Freelancer/commit/16d08b79621a303e190835a74885d58d75d513d9): 견적 가역 아닌 버전·승인, 계약원장, 명시적 v1 백업이관, SHA 검증 복원(기존DB 덮어쓰기 금지), GUI/한글 HTML; WD-01..14 공식 가중치·실 Win10/11 고객/문서/출시는 미검증. [P70 중앙감사](WORKNOVA_DESK_P70_EVIDENCE_20261113.md) |
 
 **현재 GitHub 확인: product/* 10개 브랜치 / 대응 제품 11개(공유 브랜치 ECHOHOME+PAWTALK 포함, BID AX·WORKNOVA Desk 신규 생성).** 이전 8개/9개는 초기 등록 이력이다. ECHOHOME과 PAWTALK는 같은 브랜치를 사용하므로 브랜치 1개=상품 1개로 가정하지 않는다. 모든 행은 현재 확인된 GitHub 브랜치와 Freelancer `main/docs/PRODUCT_INDEX.md`·`HANDOFF.md`를 기준으로 등록했다. 등록완료는 실제 크몽 게시 증거가 있을 때만 기록한다.
 
@@ -91,3 +91,11 @@
 - [CI #43378733016](https://github.com/hibi89/AI_AutoML_Analyst/actions/runs/43378733016) 동일 원본 SHA, Ubuntu24.04 **44 PASS/0 FAIL/0 SKIP**, Windows Server2025 **44 PASS/0 FAIL/0 SKIP**, compileall 양 OS 통과, 전체 2/2 SUCCESS. P50 11 + P70 core31 + CLI2. 기존 AutoML P95 과거 기록·다른 제품·마커·등록완료 이력 불변.
 - CSV/XLSX 2~3개 입력, source SHA/로컬 승인 의미 매핑, 1:N 환불 안전 주문 집계, 채널 1:1 관계, Decimal 합계 검증, 3단계 CLI 원본 변경/덮어쓰기 방지. 원본 생산 데이터 사용 없음, 오프라인 유료 API 0.
 - 제한: 로컬 actor attestation은 법적 서명/신원 인증 아님, 동일한 환불 이벤트 중복 여부는 별도 ID 없으면 모호함. 전체 기존 AutoML 회귀, 실제 고객·Windows10/11, 라이선스, PDF/Excel/HTML, ML 누수 검증 및 실제 배포는 미검증 또는 P85+ 대기. 다음 목표 P85 독립 ML gate/보고서/핵심보안 30 테스트.
+
+
+## 2026-11-13 WORKNOVA Desk P70 독립 코드 검증 최신화
+
+- 제품: `hibi89/Freelancer@product/worknova-desk-local`; HEAD `16d08b79621a303e190835a74885d58d75d513d9`. 이전 P50 source SHA `6b7f86738fb6ed6c7b965523955efcae3285d1f7`와 역대 기록은 보존.
+- Python3.13.5 Linux synthetic local **37 PASS/0 FAIL/0 SKIP** (기존18 + 신규19), Tk8.6 Xvfb 실제 UI 선택→견적→승인→계약→활성→납품→검수→수기 수금 **PASS**. 복구 새 경로 SHA 검수, 원본 승인 견적 금액 불변·오류/변조 재현, 로컬 GUI 선택 항목 유지. Source/GUI/test/docs remote SHA readback 확인.
+- 정식 최종완성률 **UNASSESSED**; 사용자 70% 목표 공식 달성 전이므로 **[작업중] 유지**. Windows/실고객/문서 DOCX/PDF/라이선스/설치/세금검토·Production NOT_RUN, **RELEASE HOLD**, 크몽 등록완료 아님.
+- 이 갱신은 기존 29원천/19 판매분류 및 Freelance 10 branch/11 products 집계와 다른 상품의 완성률·등록이력을 변경하지 않는다.
