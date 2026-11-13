@@ -1,3 +1,10 @@
+## [2026-11-13 KST] CITEVAULT AX 사용자 P70 목표 — 신규 정책 부분 구현, 공식률 UNASSESSED
+
+- 대상 `hibi89/Freelancer@product/rag-enterprise-knowledge` 제품 HEAD 문서 반영 `f3dce9d01ab2d40a4c53f0337b36592a21be8bc0`, 기존 P70 시작 `6c36d02e71a751c8473b0bb36c9dc8b2c5ed460c`. 사용자의 전체 최종설계 **70% 목표**는 **검증 미달**; 현재 **공식률 UNASSESSED**, CITEVAULT 단독 **[작업중]** 유지, `RELEASE HOLD`.
+- 실제 변경: `enterprise/p70-policy.mjs`에 합성 권한·부서/프로젝트/등급/테넌트 격리, 무권한·미확인 문서 차단, 전체 허가 코퍼스 상충 보류, 로컬 모델 없는 citation-only fallback, 미승인 PREP/SMAX `REVIEW_HOLD`; 별도 `enterprise/p70-rag-bridge.mjs`는 원본 RAG 고정 pin `c5867b3951f51bfa97cadd1aad8fb13e9cf9e604` 검색 API를 합성 허가 스코프로만 호출. `docs/P70_EVIDENCE_MATRIX.md` 정본.
+- 실제 테스트 증거: 원격 코드 조회 후 V8 순수 JS 로직+신규 `tests/p70.test.mjs` **24 PASS/0 FAIL**. Node22 테스트는 새 6개 RAG bridge + 기존 original P512 PDF/DOCX, P538 상충, P540 다중 native, P549 PREP/SMAX review-HOLD를 CI에 **설정만** 했고 Hosted 실행/로그 **미확인**. 기존 P50 Node 단독 3 PASS / 0 FAIL / 3 SKIP는 역사 범위 한정.
+- **여전히 미완:** 실 직원 IAM, 기업별 ACL-before-load/index(기존 RAG `loadPackage`는 선택 전 전체 자료 로딩), 실 PREP/SMAX 인증자 승인·AX 승격, 실 고객 Windows/Gold·모델. 오프라인 synthetic 스코프를 기업 인증으로 과장 금지. 타 후보/활성 제품·19 서비스 등록완료 이력/점수·작업 표시/Production 변경 없음.
+
 ## [2026-11-13 15:22 KST] 상시 GitHub 이벤트 수신 API 공개 응답 확인 — 초기 미설정 상태 정상
 - 사용자 브라우저 스크린샷에서 `https://kmong-hub-event-bridge.vercel.app/api/webhook?utm_source=chatgpt.com` 실제 접속 후 JSON `{"status":"not_configured"}` 응답 확인. 서버리스 함수 라우트 및 코드 응답 존재 **확인**, 단 스크린샷은 HTTP 응답코드(예상 503), Production commit SHA 또는 Vercel 로그를 보여주지는 않음. 화면 `/` 404는 API 루트 미제공이며 API 경로 존재와 별개.
 - **현재 분리 상태:** 코드 main `e1ad0802cb7bdf783c1d99c6f0b259ec96daf015`, GitHub CI Node 16/16 + Python 26/26 PASS, 사용자 Vercel 프로젝트 Production UI 생성, 실제 API JSON 응답 확인까지 진행. Webhook 시크릿/별도 hub-only Actions:write App/Source App Webhook 연결/Production 환경변수/실 push→dispatch→중앙 collector E2E는 **미설정·미검증**, 상시 실행 완료 주장 금지.
