@@ -1,3 +1,18 @@
+## [2026-11-13 KST] PROOFQA AX P50 합성 검증·중앙 동기화 10항
+
+1. **목표·용도·확정 요구·기술:** Private `Freelancer`의 PROOFQA AX 설계 전체 100점 중 P50 체크포인트 구현. 최종 제품은 Code Checker·Graphify·agent-browser·Cloudflare 검증법·고객 인수; 이번 구현은 로컬 정적 안전 입력/근거 납품.
+2. **완료 기능·변경·결정 근거:** Code Checker 본체 수정 없이 신규 `proofqa_p50.py`, `scripts/proofqa_p50_dev_runner.py`, `tests/test_proofqa_p50.py`, `docs/PROOFQA_P50_DEV_GUIDE.md` 별도 기능 브랜치에 추가. ZIP path/link/bomb/duplicate 차단, 입력 SHA 전후, 기존 scanner·report 재사용, HTML+JSON·manifest, overwrite 거부, 120초 child process. 원본 엔진 직접 수정·AI 단번 감사보다 회귀·비용·보안 경계가 낮음.
+3. **테스트·수/검증:** Exact code SHA `e2b79f6c242d3d501cc2195732196abe5d0bba91`; [Tests #43376145439](https://github.com/hibi89/ai-code-checker/actions/runs/43376145439) **16/16 SUCCESS**(15 Linux/Windows Python 환경 + dependency audit), Ubuntu/Windows 각각 **512 tests PASS, 0 FAIL**(신규9). [Blueprint #43376145805](https://github.com/hibi89/ai-code-checker/actions/runs/43376145805) SUCCESS. 실제 고객/Win10·11/Graphify/브라우저/Production NOT_RUN.
+4. **완료/진행/대기/차단:** P50 로드맵 내부 기능·합성 CI 게이트 충족; 공식 `최종완성률 UNASSESSED`(사용자 승인 100점 독립 가중치/인수 미확정), 중앙 PROOFQA `[작업중]` 유지. P70~P100·판매 출시 HOLD.
+5. **오류/원인/시도/재시도 금지/대안:** ZIP Windows 경로 문자 과잉 escape 문제를 readback으로 발견·코드포인트 비교로 수정, Windows UTF8 child flag 추가, 정확 SHA full CI 성공. 비밀/실 고객 코드 외부 AI 전송·샌드박스 없는 실행/유료 기능 무승인 적용·근거 없는 공식50% 주장 금지.
+6. **저장소/브랜치/SHA/경로:** `hibi89/Freelancer@product/proofqa-ax-delivery-audit` 제품 [STATUS](https://github.com/hibi89/Freelancer/blob/product/proofqa-ax-delivery-audit/STATUS.md)/[HANDOFF](https://github.com/hibi89/Freelancer/blob/product/proofqa-ax-delivery-audit/HANDOFF.md) 최신화, 해당 제품 인수인계 commit `25a7aee82ce8beaaf8dd075fd438ae79b1466cc5`. `hibi89/ai-code-checker@feature/proofqa-ax-p50-evidence-intake` exact source `e2b79f6c242d3d501cc2195732196abe5d0bba91`, [Draft PR #83](https://github.com/hibi89/ai-code-checker/pull/83). 중앙 행 commit `3810c54c68b7b30947903b91e93b5734e8080084`, STATUS `418e4e109de59f65a48776df78ce06e4b4b08626`.
+7. **Production·Vercel·환경:** 미적용. `python -m unittest discover -s tests -v`; `python proofqa_p50.py project.zip --output-dir <local>` 또는 `python -m scripts.proofqa_p50_dev_runner...`, Python3.11+, 외부 API/배포 비용 0. 개발용 프로세스 분리 ≠ OS 강제 네트워크 차단.
+8. **원본·백업·인증/변경 금지:** Source base `hibi89/ai-code-checker@feature/retail-private-candidate-20261112 e18fe74f1b1d1105d37017573e8c7ab6b5f85f11`/main 원형·이력 보존. 고객·비공개 원본, 인증키, 다른 28개 제품 상태·등록이력·19 서비스 및 29 공식률 불변. Git 브랜치 commit으로 롤백 추적.
+9. **다음 작업·우선순위·승인/완료 기준:** 사용자 독립 100점 가중치/인수 승인 전 공식 50 표시·[작업중] 해제 금지. P70은 pinned Graphify AST/impact와 허가 합성 localhost real browser/network, P85 독립 보안 findings, P95~P100 실고객/물리 Windows10·11/법적·상용 인수. 고객 권리/실사이트/유료/권한 변경 사용자 승인 필요.
+10. **갱신 일시·검증 시점/범위·기준 commit:** 2026-11-13 KST, source `e2b79f6c` Actions 실 API 상태/로그에서 `completed/success`/Windows·Linux `Ran 512 tests` 확인. 중앙 본 HANDOFF 문서 commit은 원격 readback으로 별도 확인. 공식 29/29 UNASSESSED 유지, 실제 P70 이상·customer/Vercel 미검증.
+
+---
+
 ## [2026-11-13 KST] BID AX 50% 목표 개발 인수인계 — 필수 10항
 1. **목표·기술·요구:** 독립 BID AX 공공입찰 준비 솔루션의 전체 R01~R21 최종설계를 100%로 설정. 사용자 최종 50% 달성 지시, Python3.11+ stdlib + SQLite local-first, 현 단계 API 미호출.
 2. **완료 기능·결정:** 고객 키/클라우드 수탁 SaaS(A)보다 로컬(B) 선택. 허용 공식 HTTPS URL, 7일 기간 API 요청계획, 엄격 notice/profile JSON, 불변 SHA256 버전 원장, 중복/원자적 삽입, 지역/면허/예산/서류/마감 사전검토, JSON report, no-overwrite 백업.
