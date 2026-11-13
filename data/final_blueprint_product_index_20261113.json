@@ -111,7 +111,7 @@
       "phase": "active",
       "product": "DATA2WEB Studio",
       "repository": "hibi89/data2web_studio",
-      "tracked_branch": "feature/xlsx-tsv-import",
+      "tracked_branch": "feature/p85-ui-crossbrowser-20261113",
       "blueprint_reference": "main/docs/FINAL_DESIGN.md",
       "historical_seen_head_prefix": "053d37a84595",
       "official_final_completion": "UNASSESSED",
@@ -132,22 +132,27 @@
         "scope": "same-repo main fingerprint only; no product E2E"
       },
       "technical_milestone_latest": {
-        "milestone": "P70_SCOPE_VERIFIED_NOT_OFFICIAL_PERCENT",
-        "verified_code_sha": "42b832c5e18521d3edcf53b69cbf92c272f245cb",
-        "documentation_branch_head": "0fee0f84c35f377bdfffea7b1a66e62191abb81a",
-        "branch": "feature/xlsx-tsv-import",
-        "github_actions_run_id": 43381537805,
-        "documentation_run_id": 43382126920,
-        "dual_os_python_tests": {
+        "milestone": "P85_SCOPE_VERIFIED_NOT_OFFICIAL_PERCENT",
+        "verified_code_sha": "709b2e5d5540893b9f7ad1b391584c6400899672",
+        "docs_branch_head": "90ed56892066761164419b147ca1351e65662e6f",
+        "github_actions_code_run_id": 43385035408,
+        "github_actions_final_head_run_id": 43385637419,
+        "python_tests": {
           "windows_pass": 145,
           "ubuntu_pass": 145,
-          "fail": 0,
-          "skip": 0
+          "total_fail": 0,
+          "total_skip": 0
         },
-        "chromium_local_file_e2e": "PASS_CSV_JSON_AND_XLSX_TSV_SYNTHETIC",
+        "browser_end_to_end": "PASS_WINDOWS_CHROME_MS_EDGE_UBUNTU_CHROMIUM_SYNTHETIC",
+        "supported_inputs": "CSV_JSON_XLSX_TSV_STRICT_OFFLINE",
+        "generated_ui": "KPI_FILTERED_BAR_CHART_NONNEGATIVE_NUMERIC_APPROX_SUM_PRINT_MOBILE",
+        "large_data_sample": "10000_ROWS_X_20_COLUMNS_GITHUB_UBUNTU_SINGLE_RUN_PASS",
+        "runtime_external_api_calls": 0,
+        "delivery": "STANDALONE_HTML_PLUS_DETERMINISTIC_ZIP",
+        "central_marker": "[작업중]",
         "release_status": "RELEASE_HOLD",
-        "official_completion": "UNASSESSED",
-        "remaining": "OWNER_APPROVED_WEIGHTS_AND_REAL_EXCEL_WIN10_11_CUSTOMER_ACCEPTANCE"
+        "official_final_completion": "UNASSESSED",
+        "outstanding": "OWNER_WEIGHTS_CLIENT_WIN10_11_REAL_EXCEL_GOLDEN_LICENSE_SUPPORT"
       }
     },
     {
