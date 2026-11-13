@@ -23,7 +23,7 @@
 | CITEVAULT AX **[작업중]** | `product/rag-enterprise-knowledge` | **공식 UNASSESSED / 사용자 70% 목표 미달 · 검증 대기** | 정책 source `enterprise/p70-policy.mjs`+원본 RAG selected-doc bridge, **순수 JS V8 24 PASS/0 FAIL**, pinned RAG P512/P538/P540/P549 CI 정의. P50 Node 3PASS/0FAIL/3SKIP 이력 보존; P70 Node hosted 통합 6개 미실행 | 실제 기업 IAM/서버측 ACL-before-load·실 PREP/SMAX 승인 AX 변환/고객 Windows 수용 없음, RELEASE HOLD |
 | SITECRAFT AX | `product/rea-website-rebuild` | UNASSESSED | 기존 REA_Web 서비스에 연결, HOLD | 기존 기업형 조합 |
 | PROOFQA AX | `product/proofqa-ax-delivery-audit` | UNASSESSED | 기존 코드 품질감사 서비스에 연결, HOLD | 기존 기업형 조합 |
-| ONTOINSIGHT AX **[작업중]** | `product/ontoinsight-ax-data-analytics` | **UNASSESSED** (P50 엔지니어링 단계 검증 PASS, 최종 50% 미확정) | 기존 데이터 AI 분석 서비스에 연결, HOLD | AutoML 기능 SHA `8da6ae98` / Ubuntu 11 PASS·Windows 11 PASS / 원본·설계 브랜치 문서 최신화 |
+| ONTOINSIGHT AX **[작업중]** | `product/ontoinsight-ax-data-analytics` | **UNASSESSED** (P70 엔지니어링 단계 검증 PASS, 최종 70% 미확정) | 기존 데이터 AI 분석 서비스에 연결, RELEASE HOLD·미등록 | [Linux/Windows 각 44 PASS, 기능 SHA `34e7b16a`](https://github.com/hibi89/AI_AutoML_Analyst/actions/runs/43378733016) / [P70 수용증빙](https://github.com/hibi89/Freelancer/blob/product/ontoinsight-ax-data-analytics/docs/P70_ACCEPTANCE_EVIDENCE_20261113.md) |
 | ECHOHOME | `product/echohome-pawtalk-local-ai` | UNASSESSED | 미등록·HOLD | 가족 동의 음성대화 설계, 앱 미검증 |
 | PAWTALK | `product/echohome-pawtalk-local-ai` | UNASSESSED | 미등록·HOLD | 반려동물 놀이형 음성대화 설계, 앱 미검증 |
 | MYRADIO AI | `product/myradio-ai-dj` | UNASSESSED | 미등록·HOLD | 오프라인 WAV 시제품, 실 Windows/상용권리 미검증 |
@@ -77,3 +77,11 @@
 - **내용:** 독립 Lightning Azent CLI child process run/status/resume, 2개 합성 업무(고객 CSV 전체 import, 한국어 조건부 매출 CSV), 루프백 UI HTML/JS + preview, 승인 없는 쓰기 0, 동일 승인 동시 2요청 row 중복0, 입력/계획 SHA 변경 거부, 서버 restart 후 durable audit/receipt 조회, 합성 failed 상태 재승인, 과대 CSV/20초 로컬 상한.
 - **판정 분리:** `0→70 synthetic technical acceptance PASS`는 정식 **최종완성률 70%**와 다르다. 공식 전체 100점 확정 설계/사용자 승인 가중치/독립 전수검증 미완으로 **UNASSESSED 유지**, 사용자 설정 `[작업중]` 절대 해제 안 함, **RELEASE HOLD/크몽 미등록**. 고객/실 Chrome·OS reboot/원격 OAuth·DBVORA/SOVIA/패키지 정상성은 미검증.
 - **안전/백업/다음:** HAE/LA 코어·고객 데이터·권한·Vercel·기존 출고물 불변, 테스트·문서만 갱신. HAE 시작 HEAD `cfa9881b701c9520f67e44a38619c333b65cbdf6`, Git history 복원 가능. 다음 목표 70→85 3업무·DBVORA mock·감사/스케줄; 별도 패키지 parity 2FAIL 안전 복구, LA SHA pin/공식 가중치 승인. 나머지 Freelancer 제품/중앙 29 정본/19 판매·등록완료 상태 변경하지 않음.
+
+## [2026-11-13 KST] ONTOINSIGHT AX P70 엔지니어링 단계 증빙 동기화
+
+- 본 제품의 최종 설계 100% 정본은 Private `hibi89/Freelancer@product/ontoinsight-ax-data-analytics/docs/FINAL_BLUEPRINT.md`이며, P70 달성은 **단계 기술 수용 완료**이지 전체 최종완성률 70% 확정이 아니다. 공식 가중치·요구 전수 코드/수용 증거 미승인 → **UNASSESSED**. `[작업중]` 해제 금지, 판매 미등록/RELEASE HOLD 유지.
+- 원본 실행 정본: `hibi89/AI_AutoML_Analyst@feature/ontoinsight-ax-p70-20261113`, 기능 SHA `34e7b16a2fef5e1b0d21f4e6d097c6faaaaf9012`, 문서 최신 SHA `0e831106c03efb5ba6cba4d840dcfecf73ec235f`. 기획 문서 HEAD `hibi89/Freelancer@product/ontoinsight-ax-data-analytics` SHA `0a4348cdd94b5005167dee74c27bc76e73378ea7`.
+- [CI #43378733016](https://github.com/hibi89/AI_AutoML_Analyst/actions/runs/43378733016) 동일 원본 SHA, Ubuntu24.04 **44 PASS/0 FAIL/0 SKIP**, Windows Server2025 **44 PASS/0 FAIL/0 SKIP**, compileall 양 OS 통과, 전체 2/2 SUCCESS. P50 11 + P70 core31 + CLI2. 기존 AutoML P95 과거 기록·다른 제품·마커·등록완료 이력 불변.
+- CSV/XLSX 2~3개 입력, source SHA/로컬 승인 의미 매핑, 1:N 환불 안전 주문 집계, 채널 1:1 관계, Decimal 합계 검증, 3단계 CLI 원본 변경/덮어쓰기 방지. 원본 생산 데이터 사용 없음, 오프라인 유료 API 0.
+- 제한: 로컬 actor attestation은 법적 서명/신원 인증 아님, 동일한 환불 이벤트 중복 여부는 별도 ID 없으면 모호함. 전체 기존 AutoML 회귀, 실제 고객·Windows10/11, 라이선스, PDF/Excel/HTML, ML 누수 검증 및 실제 배포는 미검증 또는 P85+ 대기. 다음 목표 P85 독립 ML gate/보고서/핵심보안 30 테스트.
