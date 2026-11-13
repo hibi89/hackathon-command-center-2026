@@ -247,13 +247,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "c1058a7bf82f6c347800bf9cc6166dc009a05a27",
+        "head_sha": "046dd44e881c4b2ae1e490bb8c5d44a4736f43e8",
         "matches_current_head": true,
-        "run_id": 43504520466,
+        "run_id": 43504700476,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "c1058a7bf82f6c347800bf9cc6166dc009a05a27",
+      "head_sha": "046dd44e881c4b2ae1e490bb8c5d44a4736f43e8",
       "record_id": "CANDIDATE-06",
       "repository": "hibi89/Freelancer",
       "status": "PRESENT",
@@ -302,13 +302,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "d295a8869689272f14a37864716e69093d5ca351",
+        "head_sha": "2de90f3e1231d945b8fcec322f02194003b37098",
         "matches_current_head": true,
-        "run_id": 43501246664,
+        "run_id": 43504668031,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "d295a8869689272f14a37864716e69093d5ca351",
+      "head_sha": "2de90f3e1231d945b8fcec322f02194003b37098",
       "record_id": "CANDIDATE-10",
       "repository": "hibi89/Freelancer",
       "status": "PRESENT",
@@ -820,13 +820,13 @@
           "branch": "product/bid-ax-public-procurement",
           "gate": {
             "conclusion": "success",
-            "head_sha": "d295a8869689272f14a37864716e69093d5ca351",
+            "head_sha": "2de90f3e1231d945b8fcec322f02194003b37098",
             "matches_current_head": true,
-            "run_id": 43501246664,
+            "run_id": 43504668031,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "d295a8869689272f14a37864716e69093d5ca351",
+          "head_sha": "2de90f3e1231d945b8fcec322f02194003b37098",
           "status": "PRESENT"
         },
         {
@@ -867,13 +867,13 @@
           "branch": "product/rag-enterprise-knowledge",
           "gate": {
             "conclusion": "success",
-            "head_sha": "c1058a7bf82f6c347800bf9cc6166dc009a05a27",
+            "head_sha": "046dd44e881c4b2ae1e490bb8c5d44a4736f43e8",
             "matches_current_head": true,
-            "run_id": 43504520466,
+            "run_id": 43504700476,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "c1058a7bf82f6c347800bf9cc6166dc009a05a27",
+          "head_sha": "046dd44e881c4b2ae1e490bb8c5d44a4736f43e8",
           "status": "PRESENT"
         },
         {
