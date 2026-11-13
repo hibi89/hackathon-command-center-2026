@@ -133,29 +133,33 @@
       },
       "technical_milestone_latest": {
         "user_target": "OWNER_FINAL_BLUEPRINT_AT_LEAST_85_PERCENT",
-        "verified_result": "INCREASED_REAL_IMPLEMENTATION_OFFICIAL_85_NOT_CERTIFIED",
+        "verified_result": "REAL_GUI_AND_CUSTOMER_FOLDER_EVIDENCE_INCREASED_OFFICIAL_85_NOT_CERTIFIED",
         "official_final_completion": "UNASSESSED",
         "owner_requirement_weights": "NOT_INDEPENDENTLY_APPROVED",
         "source_branch": "feature/final-blueprint-p85-evidence-20261113",
-        "verified_code_sha": "d311c47f1b85382f1d4ce43dfacdabcdc7e85612",
-        "documentation_head": "265acdf2aceaf5700d97d1d9a251c2a3510c4587",
+        "verified_code_sha": "74f5f5a6b4625be3d510be5f59f1983be150b26e",
+        "documentation_head": "184bd4ffffc8ea6a902fcdd3178cdda94527c462",
         "action_run_id": 43392272159,
         "python_tests": {
-          "windows_pass": 210,
-          "ubuntu_pass": 210,
+          "windows_pass": 235,
+          "ubuntu_pass": 235,
           "fail": 0,
           "skip": 0
         },
-        "browser_end_to_end": "HOSTED_WINDOWS_CHROME_EDGE_AND_UBUNTU_CHROMIUM_SINGLE_AND_MULTISOURCE_DELIVERY_PASS",
+        "browser_end_to_end": "HOSTED_WINDOWS_CHROME_EDGE_UBUNTU_CHROMIUM_LOCAL_FILE_SYNTHETIC_PASS",
         "newly_verified_scope": "SINGLE_FLAT_JSON_OBJECT;NONFINITE_JSON_HOLD;OWNER_SHA_PINNED_SINGLE_SOURCE_CUSTOMER_FOLDER;XLSX_SHEET_FAIL_BEFORE_DIRECTORY;ORIGINAL_LITE_REAL_RUNTIME_CSV_JSON_BROWSER_REPLACE_REOPEN_GOLDEN;PRIOR_MULTI_SOURCE_KPI_PATH_GUARDS_PYTHON_ZIPAPP",
         "official_weighted_acceptance": "BLOCKED_OWNER_APPROVAL",
-        "remaining_requirements": "OWNER_WEIGHTS_SUM100;ACTUAL_CUSTOMER_WIN10_11;REAL_EXCEL;RIGHTS_PRIVACY_RETENTION;LICENSE_NOTICE;SKU_SUPPORT_REFUND;CUSTOMER_ACCEPTANCE",
+        "remaining_requirements": "OWNER_WEIGHTS_SUM100;ACTUAL_CUSTOMER_WIN10_11;REAL_EXCEL;RIGHTS_LICENSE_NOTICE;PRIVACY_RETENTION;SKU_SUPPORT_REFUND;CUSTOMER_ACCEPTANCE",
         "release_status": "RELEASE_HOLD",
         "in_progress": true,
         "product_pr": "https://github.com/hibi89/data2web_studio/pull/4",
-        "evidence": "docs/FINAL_BLUEPRINT_85_REASSESSMENT_20261113.md",
-        "upstream_lite_actual_runtime": "PUBLIC_PINNED_7b6b68111efd906f9d929b5e2f577699b26399ee_EXECUTED_COMMON_CSV_JSON_GOLDEN_PASS",
-        "central_marker": "[작업중]"
+        "evidence": "docs/FINAL_BLUEPRINT_GUI_DELIVERY_20261113.md",
+        "upstream_lite_actual_runtime": "PUBLIC_PINNED_7b6b68111efd906f9d929b5e2f577699b26399ee_COMMON_CSV_JSON_GOLDEN_PASS",
+        "central_marker": "[작업중]",
+        "github_actions_code_run_id": 43395679294,
+        "github_actions_docs_run_id": 43396154570,
+        "desktop_gui": "HOSTED_WINDOWS_SERVER_2025_TK_41_WIDGET_RENDER_PASS_NOT_CLIENT_OS",
+        "customer_integrity": "HTML_ZIP_RECEIPT_INDEPENDENT_CROSS_CHECK_TAMPER_FAIL_CLOSED"
       }
     },
     {
