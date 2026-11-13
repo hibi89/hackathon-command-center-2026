@@ -247,13 +247,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "79b079568ee0f04a48e40bf28be368f3da375b1f",
+        "head_sha": "928b05a0c749f3f8a4ae0d4bf278c94132dae767",
         "matches_current_head": true,
-        "run_id": 43514532684,
+        "run_id": 43514612379,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "79b079568ee0f04a48e40bf28be368f3da375b1f",
+      "head_sha": "928b05a0c749f3f8a4ae0d4bf278c94132dae767",
       "record_id": "CANDIDATE-06",
       "repository": "hibi89/Freelancer",
       "status": "PRESENT",
@@ -302,13 +302,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "04d5b5e563be70ff32b08e49ea46c6e3f37693e9",
-        "matches_current_head": false,
-        "run_id": 43508494543,
+        "head_sha": "fbac278dd21f48cea13a8f2f491585f053e630b9",
+        "matches_current_head": true,
+        "run_id": 43514650785,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "e3ffb4fa1a6c20f640746f990cef5f0f9e88f8b3",
+      "head_sha": "fbac278dd21f48cea13a8f2f491585f053e630b9",
       "record_id": "CANDIDATE-10",
       "repository": "hibi89/Freelancer",
       "status": "PRESENT",
@@ -820,13 +820,13 @@
           "branch": "product/bid-ax-public-procurement",
           "gate": {
             "conclusion": "success",
-            "head_sha": "04d5b5e563be70ff32b08e49ea46c6e3f37693e9",
-            "matches_current_head": false,
-            "run_id": 43508494543,
+            "head_sha": "fbac278dd21f48cea13a8f2f491585f053e630b9",
+            "matches_current_head": true,
+            "run_id": 43514650785,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "e3ffb4fa1a6c20f640746f990cef5f0f9e88f8b3",
+          "head_sha": "fbac278dd21f48cea13a8f2f491585f053e630b9",
           "status": "PRESENT"
         },
         {
@@ -867,13 +867,13 @@
           "branch": "product/rag-enterprise-knowledge",
           "gate": {
             "conclusion": "success",
-            "head_sha": "79b079568ee0f04a48e40bf28be368f3da375b1f",
+            "head_sha": "928b05a0c749f3f8a4ae0d4bf278c94132dae767",
             "matches_current_head": true,
-            "run_id": 43514532684,
+            "run_id": 43514612379,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "79b079568ee0f04a48e40bf28be368f3da375b1f",
+          "head_sha": "928b05a0c749f3f8a4ae0d4bf278c94132dae767",
           "status": "PRESENT"
         },
         {
