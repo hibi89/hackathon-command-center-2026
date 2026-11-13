@@ -456,7 +456,18 @@
       "historical_seen_head_prefix": "acdb8a61270a",
       "official_final_completion": "UNASSESSED",
       "owner_requirement_weights": "NOT_INDEPENDENTLY_APPROVED",
-      "detail_trace": "R01-R21_P85_LOCAL_80PASS_UNWEIGHTED"
+      "detail_trace": "docs/BID_AX_EXPANSION_REASSESSMENT_20261113.md",
+      "blueprint_version": "v2_20261113_3_MODULES",
+      "blueprint_requirement_count": 29,
+      "blueprint_requirement_ids": "R01-R29",
+      "historical_design_requirement_count": 21,
+      "user_approved_expansion": "ONBID_OFFICIAL_FREE_API_PLUS_COURT_CONSENTED_LOCAL_DOCUMENTS",
+      "latest_blueprint_commit_sha": "ab0d92a333a18e01a585a99d6a6b5812ab0c6305",
+      "added_requirements_implemented": 0,
+      "added_requirements_total": 8,
+      "goal": "OWNER_FINAL_BLUEPRINT_85_UNVERIFIED",
+      "work_marker": "[작업중]",
+      "release": "HOLD"
     },
     {
       "record_id": "CANDIDATE-11",
