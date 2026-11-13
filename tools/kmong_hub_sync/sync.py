@@ -57,8 +57,8 @@ def validate_registry(roster, registry):
             if not safe_ref(branch) or branch == "main" or (name.lower(), branch) in branches:
                 raise ValueError("unsafe or duplicate work branch")
             branches.add((name.lower(), branch))
-    if len(branches) != 35:
-        raise ValueError("expected 35 explicitly tracked work branches")
+    if len(branches) != 45:
+        raise ValueError("expected 45 explicitly tracked work branches")
     pinned = set()
     for pin in pins:
         name, ref, path, blob = (pin.get(k) for k in ("repository", "ref", "path", "git_blob_sha"))

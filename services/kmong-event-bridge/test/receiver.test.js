@@ -64,8 +64,38 @@ test("source allowlist mirrors canonical roster without widening inventory", () 
   const original = JSON.parse(readFileSync(new URL("../../../tools/kmong_hub_sync/source_repositories.json", import.meta.url)));
   assert.deepEqual(roster, original);
   assert.equal(roster.repositories.length, 35);
-  assert.equal(roster.repositories.reduce((n, r) => n + r.branches.length, 0), 35);
+  assert.equal(roster.repositories.reduce((n, r) => n + r.branches.length, 0), 45);
 });
+
+test("newly covered product branches accept only approved push and blueprint workflow events", () => {
+  const required = [
+    ["hibi89/candle_scraper", "feature/kmong-collector-p95-delivery-integrity-20261112"],
+    ["hibi89/data2web_studio", "feature/final-blueprint-p85-evidence-20261113"],
+    ["hibi89/SOVIA_sovereign", "feature/kmong-la-review-p2-20261112"],
+    ["hibi89/RAG_STUDIO", "feature/p546-rag-prep-mapping"],
+    ["hibi89/astra_pdf_redesigner", "integration/astra-commercial-core"],
+    ["hibi89/candle_scraper", "feature/coin-pattern-p85-forward-eval-20261112"],
+    ["hibi89/EAI", "feature/kmong-eai-85-p31-20261112"],
+    ["hibi89/AX_MART", "feature/pc-care-p15-p18-85-20261112"],
+    ["hibi89/factory-ax-ecosystem", "feature/data-verify"],
+    ["hibi89/Freelancer", "product/bid-ax-public-procurement"],
+  ];
+  assert.equal(required.length, 10);
+  for (const [repo, branch] of required) {
+    assert.equal(eligibleEvent("push", payload(repo, branch)), true, repo + "@" + branch);
+    assert.equal(eligibleEvent("workflow_run", {
+      repository: { full_name: repo },
+      action: "completed",
+      workflow_run: {
+        head_branch: branch,
+        path: repo + "/.github/workflows/final-blueprint-gate.yml@main",
+      },
+    }), true, repo + "@" + branch);
+  }
+  assert.equal(eligibleEvent("push", payload(HUB_REPO, "kmong-productization")), false);
+  assert.equal(eligibleEvent("push", payload(required[0][0], "unrelated-unsafe-branch")), false);
+});
+
 test("signature validation constant-time, rejects missing and tampered input", () => {
   const raw = Buffer.from('{"ok":true}');
   const sig = "sha256=" + createHmac("sha256", "key").update(raw).digest("hex");

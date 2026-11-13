@@ -71,3 +71,7 @@
 8. **Source/backup/security:** old main and kmong HEADs preserved; never change GitHub App permissions, secret or source product repos without approval. Do not reveal credentials.
 9. **Next steps/acceptance:** obtain approval for A (preferred) or B; code + tests + review before authorized deploy; check next real cron event 2026-11-14 11:10 KST.
 10. **KST/time/source:** 2026-11-13 after 17:15 KST; read-only GitHub refs and latest hub snapshots, Actions log; documentation baseline commit requires readback.
+
+## 7. 2026-11-13 KST approved zero-paid-change A implementation
+
+Owner confirmed best effort **free-only** operation. Minimum change applied to trusted main: both shared 35-repository JSON allowlists now include exactly 10 previously omitted *already existing* product branches, keeping every previous branch. Python `validate_registry` expects 45 extra work refs and reports 80 refs; Python/Node regression tests pin those ten event-eligible refs and fail if skipped; Node security scope and exact 35 source repos preserved. Pre-commit cross-file comparison succeeded: 35 repos, 45 extra refs, 29/29 product branches covered, 0 new GitHub branches. This is a code change and test addition only; **GitHub hosted CI/Production SHA/actual post-deploy webhooks remain to be verified**. Existing Vercel API 404 was seen again under known team; no renewed configuration or fee. Official final-blueprint completion data untouched.

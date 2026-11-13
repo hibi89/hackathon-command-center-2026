@@ -105,11 +105,31 @@ class ExecutionModeTest(unittest.TestCase):
 
 
 class RosterTest(unittest.TestCase):
-    def test_roster_has_exact_35_repositories_and_35_extra_branches(self):
+    def test_roster_has_exact_35_repositories_and_45_extra_branches(self):
         repos, pins = load_registry()
         self.assertEqual(len(repos), 35)
         self.assertEqual(len(pins), 31)
-        self.assertEqual(sum(len(x["branches"]) for x in repos), 35)
+        self.assertEqual(sum(len(x["branches"]) for x in repos), 45)
+
+
+    def test_required_product_delivery_branches_stay_allowlisted(self):
+        repos, _ = load_registry()
+        allowed = {(x["repository"].lower(), branch) for x in repos
+                   for branch in ["main", *x["branches"]]}
+        required = {
+            ("hibi89/candle_scraper", "feature/kmong-collector-p95-delivery-integrity-20261112"),
+            ("hibi89/data2web_studio", "feature/final-blueprint-p85-evidence-20261113"),
+            ("hibi89/sovia_sovereign", "feature/kmong-la-review-p2-20261112"),
+            ("hibi89/rag_studio", "feature/p546-rag-prep-mapping"),
+            ("hibi89/astra_pdf_redesigner", "integration/astra-commercial-core"),
+            ("hibi89/candle_scraper", "feature/coin-pattern-p85-forward-eval-20261112"),
+            ("hibi89/eai", "feature/kmong-eai-85-p31-20261112"),
+            ("hibi89/ax_mart", "feature/pc-care-p15-p18-85-20261112"),
+            ("hibi89/factory-ax-ecosystem", "feature/data-verify"),
+            ("hibi89/freelancer", "product/bid-ax-public-procurement"),
+        }
+        self.assertEqual(len(required), 10)
+        self.assertTrue(required.issubset(allowed), required - allowed)
 
     def test_all_inventory_repositories_are_unique_and_covered(self):
         roster = json.loads(ROSTER.read_text())
@@ -152,7 +172,7 @@ class CollectorTest(unittest.TestCase):
         first = collect_snapshot(self.observer, self.roster, self.pins, self.index)
         self.assertEqual(first, collect_snapshot(self.observer, self.roster, self.pins, self.index))
         self.assertEqual(first["summary"]["repository_count"], 35)
-        self.assertEqual(first["summary"]["tracked_branch_count"], 70)
+        self.assertEqual(first["summary"]["tracked_branch_count"], 80)
         self.assertEqual(first["summary"]["product_links"], 29)
         self.assertEqual(first["summary"]["canonical_matched"], 31)
         self.assertEqual(first["summary"]["canonical_not_configured"], 4)
