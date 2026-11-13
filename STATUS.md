@@ -1,3 +1,8 @@
+## [2026-11-14 KST] WORKNOVA Desk Windows PyInstaller 사용자 설치 인식 오류 최소 수정
+
+- 사용자 Win10.0.26200.9974 / Python3.11의 PyInstaller6.22.3 사용 가능·--plan PASS, 실제 빌드에서 `No module named PyInstaller` FAIL 증거 확인. 빌드 코드가 설정한 `PYTHONNOUSERSITE=1`로 pip --user 패키지 경로를 숨긴 원인. 제거·회귀테스트1개 추가, 정확 소스 blob `10d60c3789fb2f8c654479845ec9296dbb0c890b`를 Linux3.13에서 5 mock/경로 PASS·compile PASS, 파일 원격 readback 일치.
+- 제품 정본 `hibi89/Freelancer@product/worknova-desk-local 4862937b8e1a03c59c0a68ab8d5fc58a711f52af`; 중앙 원장 WORKNOVA 단일 행 수정. 수정 후 **실 Windows EXE 빌드/GUI는 아직 NOT_RUN**. 기존 native Windows 포터블 합성 11PASS×2 이력 유효. 승인 WD-01~14 최종 100점/엄격한 완료0점, 목표85 미달, **[작업중]/RELEASE HOLD/미등록**; 사용자 재설치·환경변수 OS 변경·유료CI 0건, 타상품/등록완료 기록 불변. [원인·조치](https://github.com/hibi89/Freelancer/blob/product/worknova-desk-local/docs/P85_PYINSTALLER_USER_SITE_FIX_20261114.md).
+
 ## [2026-11-14 KST] WORKNOVA Desk 소유자 Windows 합성 QA 11개×2 PASS
 
 - 사용자 제공 Windows 콘솔(`win32`, `ok:true`)에서 `tools/windows_acceptance.py` **11PASS/0FAIL/0SKIP ×2회**, Tk 기본 창·15 소스파일 ZIP 무결성·Python 필수 PowerShell 비관리자 합성 설치/업그레이드/삭제·장부 무결성·AES 백업/복원·기존 합성 장부 보존/임시 정리 확인. **실 소유 Windows 출력만**, GitHub CI 및 사용자 ZIP의 정확 Git SHA 직접 검증은 아직 없음. [상세 증거](https://github.com/hibi89/Freelancer/blob/product/worknova-desk-local/docs/P85_WINDOWS_OWNER_CONSOLE_20261114.md).
