@@ -1,3 +1,11 @@
+## [2026-11-13 KST] BID AX 70% 목표 재진행 — 오프라인 안전·기업 프로필 강화 / 최종률 UNASSESSED
+
+- 원천 29종 중 **CANDIDATE-10 BID AX**, 판매 서비스 KMONG-SVC-18 연결 **불변**. PRIVATE 제품 브랜치 hibi89/Freelancer@product/bid-ax-public-procurement 코드 SHA 027c4592e7aed1d806a9218269efe534952a8f04, 최신 문서 HEAD 766032d6256d634469366b1125639f9aa9a6ef1c.
+- [제품 수용근거](https://github.com/hibi89/Freelancer/blob/product/bid-ax-public-procurement/docs/P70_HARDENING_EVIDENCE_20261113.md): 안전한 공식형 **로컬 JSON 응답 스냅샷** 파서(외부 HTTP/API키 0건), 잘못된 공고·URL·시간/페이지 거부, 원본 SHA256 보존, 입찰 자격 미확인 항목은 무조건 추가 확인(REVIEW_HOLD). 다중 기업 프로필 SQLite 버전 저장·재사용·변조 검사/복원, JSON 중복 키 거부.
+- 정확한 6개 Git blob과 로컬 검사 원본 **6/6 일치**. Linux Python3.13.5 **60 PASS/0 FAIL/0 SKIP**(기존45 + 신규15), compileall PASS, Tk8.6 Xvfb 단순 GUI smoke PASS. GitHub Python CI / 실제 Win10·11 / Python3.11 / 공식 API 원문100건·자격10건 / 고객 인수·법적 권리 **NOT_RUN**.
+- **정식 최종설계 R01–R21 승인된 100점 가중치가 없고 실 API·고객 검증이 없으므로 목표 70% 공식 달성 불인정. 공식 UNASSESSED / BID AX [작업중] 유지 / RELEASE HOLD / 크몽 미등록.** 이전 P50/P70 기술 단계 기록은 역사로 보존.
+- 타 Freelancer 상품·제외 BID OWL·해커톤 원본·기존 29종 공식률·19개 판매 상태·등록완료/타 [작업중] 표식 무변경. 프로필은 로컬 **평문**이므로 실제 고객 PC 폴더 권한과 비밀 별도 관리.
+
 ## 2026-11-13 BID AX P70 인수인계 SHA 정합 (문서 전용 후속)
 
 - private `hibi89/Freelancer@product/bid-ax-public-procurement` 최신 **문서 HEAD `0b09ae630184333aa6c147579a429c20bddb016e`**, [GitHub Actions 증거 게이트 #43380097753](https://github.com/hibi89/Freelancer/actions/runs/43380097753) SUCCESS (기능 Python 테스트 CI 아님).

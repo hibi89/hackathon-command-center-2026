@@ -1,3 +1,16 @@
+## [2026-11-13 KST] BID AX P70 재진행 인수인계 — 10항
+
+1. 목표/기술: 사용자 전체 최종설계 70% 목표. BID AX R01–R21 최종설계 및 Python3.11+ 목표, SQLite/Tkinter 로컬 아키텍처.
+2. 완료/결정: 기존 P70 프로그램 유지, 로컬 G2B형 JSON 스냅샷 검역·자격 REVIEW_HOLD, SQLite 다중 기업 프로필 버전/변조 확인·GUI/CLI 재사용, JSON 중복키 거절. SaaS A 대신 기존 로컬 B 유지(비용·보안·유지관리).
+3. 검증: Linux Python3.13.5 60 PASS/0 FAIL/0 SKIP, Tk8.6 Xvfb 단순 생성/종료 smoke, compileall, Git blob 6/6 정확 일치. GitHub Python CI·실 Windows·API·고객 테스트 미실시.
+4. 상태: 기술 P70 후속 구현 완료, **공식 최종 70% 미확정/UNASSESSED**, BID AX [작업중] 유지, RELEASE HOLD/크몽 미등록.
+5. 실패/근거/대안: 실 API 운영키·원문/첨부·확정 API 계약·권리/가중치 없어 실제 자격 판정 불가 → 미확인 항목 강제 REVIEW_HOLD. 무단 외부호출/결제/CI 반복/가짜 실적 금지.
+6. 저장소·SHA·경로: hibi89/Freelancer private product/bid-ax-public-procurement, 기능 027c4592e7aed1d806a9218269efe534952a8f04, 최신 문서 766032d6256d634469366b1125639f9aa9a6ef1c. 핵심 bidax/core.py, bidax/official.py, bidax/desktop.py, tests/test_p70_hardening.py, docs/P70_HARDENING_EVIDENCE_20261113.md.
+7. 실행·Production: 로컬 Python unittest/CLI·Tk UI, Vercel 미적용. Python3.11, 실제 Win10/11·EXE 미검증.
+8. 백업·보안: 원본 브랜치/BID OWL 미변경, 기존 P70 이전 HEAD로 Git 이력 복구, SQLite 새 DB로 백업 복원, 고객 프로필 평문 로컬·키/실 고객 GitHub 유출 금지.
+9. 다음·승인사항: R01–R21 사용자 승인 100점 가중치/독립검수, 공식 API 1.3 real response+quota/retry, 100공고/자격10건, 실제 Windows/PDF/EXE/납품·상용 검증. 공식률/판매 승인은 보류.
+10. 갱신 일시/확인: 2026-11-13 KST, 로컬 60개 합성 검사·6/6 GitHub source SHA + branch HEAD readback 확인, 고객/실API/Production 0건. 중앙 문서 SHA는 본 커밋 원격 재확인값.
+
 ## [2026-11-13 KST] CITEVAULT AX P70 2차 담당 인수인계 — 10항
 
 1. **목표·용도·설계·기술:** 사용자 최종설계 전부 100% 중 70 목표. 근거 RAG BM25/SQLite/PDF/DOCX + PREP/SMAX source 승인 + 기업 IAM/ACL + 로컬 fallback. 공식 UNASSESSED.
