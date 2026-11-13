@@ -4,7 +4,7 @@
 
 | 제품 | Freelancer 브랜치 | 공식 최종완성률 | 등록/출시 | 근거 |
 |---|---|---|---|---|
-| AZENTFLOW AX | `product/hae-la-automation` | UNASSESSED | 기존 HAE·LA 통합 서비스에 연결, HOLD | 기존 기업형 조합 |
+| AZENTFLOW AX **[작업중]** | `product/hae-la-automation` | UNASSESSED (P50 수용 검증 진행) | 기존 HAE·LA 통합 서비스에 연결, RELEASE HOLD | 목표: HAE↔LA 버전/계약 + 합성 CSV→승인→SQLite E2E + runtime/business DB 분리 + stale-source/무승인 안전성 + 정확 SHA·CI; P50 검증 전 표식 유지 |
 | CITEVAULT AX | `product/rag-enterprise-knowledge` | UNASSESSED | 기존 RAG 서비스에 연결, HOLD | 기존 기업형 조합 |
 | SITECRAFT AX | `product/rea-website-rebuild` | UNASSESSED | 기존 REA_Web 서비스에 연결, HOLD | 기존 기업형 조합 |
 | PROOFQA AX | `product/proofqa-ax-delivery-audit` | UNASSESSED | 기존 코드 품질감사 서비스에 연결, HOLD | 기존 기업형 조합 |
