@@ -33,7 +33,7 @@
 
 | 제품 | Freelancer 브랜치 | 공식 최종완성률 | 등록/출시 | 근거 |
 |---|---|---|---|---|
-| AZENTFLOW AX **[작업중]** | `product/hae-la-automation` | **UNASSESSED** (0→70 기술 단계 **PASS**, 공식 최종률 70% 미확정) | HAE·LA 통합 서비스, RELEASE HOLD·크몽 미등록 | [P70 양 OS 수용 증빙](https://github.com/hibi89/Freelancer/blob/product/hae-la-automation/docs/P70_ACCEPTANCE_EVIDENCE_20261113.md): HAE `12987055`, CI #43377368138 P70 Ubuntu7/7+Windows7/7 PASS, Python 각 274 PASS/2 FAIL/7 SKIP(기존 shipping parity), Node UI24 PASS; 전범위 최종설계 가중치·독립검증 미완 |
+| AZENTFLOW AX **[작업중]** | `product/hae-la-automation` | **UNASSESSED** (0→85 **합성 기술 수용 PASS**, 공식 전체 최종률 85% 미확정) | HAE·독립 LA 승인형 서비스, RELEASE HOLD·크몽 미등록 | [P85 양 OS 실제 검증](https://github.com/hibi89/Freelancer/blob/product/hae-la-automation/docs/P85_ACCEPTANCE_EVIDENCE_20261113.md): 원본 HAE `a640666d`, CI #43382552489 Windows·Ubuntu 각각 P85 7/7 PASS, Python 전체 각 281 PASS/2 FAIL/7 SKIP(기존 출고 ZIP/pyz parity), Node UI24 PASS. 3개 합성 업무 + DBVORA 계약 mock + LA audit/영수증 + bounded schedule 2+1; 전범위 100점 가중치 독립검증 미완 |
 | CITEVAULT AX **[작업중]** | `product/rag-enterprise-knowledge` | **공식 UNASSESSED / 사용자 70% 목표 미달 · 검증 대기** | strict citation `p70-citation-contract` 실제 Node 14PASS, local source-byte PREP/SMAX review-only `p70-local-review` Node 17PASS; P50 Node 3PASS/3SKIP, 합계 **37total/34PASS/0FAIL/3SKIP**. 원본 RAG BM25/충돌 source in-memory 5PASS. Hosted Actions original RAG checkout/P512/P538/P540/P549 로그 미검증 | 실 고객 인증/권한 전 로드 차단, signed SMAX→승인 AX, 실제 PDF/DOCX+고객 PC/법적 인수 미완·RELEASE HOLD |
 | SITECRAFT AX | `product/rea-website-rebuild` | UNASSESSED | 기존 REA_Web 서비스에 연결, HOLD | 기존 기업형 조합 |
 | PROOFQA AX | `product/proofqa-ax-delivery-audit` | UNASSESSED | 기존 코드 품질감사 서비스에 연결, HOLD | 기존 기업형 조합 |
@@ -107,3 +107,11 @@
 - Python3.13.5 Linux synthetic local **37 PASS/0 FAIL/0 SKIP** (기존18 + 신규19), Tk8.6 Xvfb 실제 UI 선택→견적→승인→계약→활성→납품→검수→수기 수금 **PASS**. 복구 새 경로 SHA 검수, 원본 승인 견적 금액 불변·오류/변조 재현, 로컬 GUI 선택 항목 유지. Source/GUI/test/docs remote SHA readback 확인.
 - 정식 최종완성률 **UNASSESSED**; 사용자 70% 목표 공식 달성 전이므로 **[작업중] 유지**. Windows/실고객/문서 DOCX/PDF/라이선스/설치/세금검토·Production NOT_RUN, **RELEASE HOLD**, 크몽 등록완료 아님.
 - 이 갱신은 기존 29원천/19 판매분류 및 Freelance 10 branch/11 products 집계와 다른 상품의 완성률·등록이력을 변경하지 않는다.
+
+## [2026-11-13 KST] AZENTFLOW AX P85 양OS 독립 실행 기술 게이트 검증·중앙 상태 갱신
+
+- **정확한 실행 근거:** `hibi89/HAE@feature/axflow-mvp@a640666db7a1bf2011c5d2abc944f13199ce455f`, 신규 `apps/ax-flow/tests/test_azentflow_p85_acceptance.py` 7개, 독립 LA branch `feature/lightning-azent@36f9882eb50e0de9e85eedb320a5778c8321cda5` 사후 조회(워크플로 checkout SHA pin assert 미실시). [실 GitHub Actions #43382552489](https://github.com/hibi89/HAE/actions/runs/43382552489); [Freelancer P85 근거](https://github.com/hibi89/Freelancer/blob/product/hae-la-automation/docs/P85_ACCEPTANCE_EVIDENCE_20261113.md).
+- **검증된 70→85 구간:** 합성 업무 3종(고객 CSV SQLite 저장/금액 조건부 SQLite 저장/읽기 전용 검색), HAE localhost→독립 LA 실행, DBVORA `p0-01.v1` read-only HTTP 계약을 localhost mock과 검증(계약 거절/연결상실 fail-safe), 독립 LA 감사/승인 영수증·사업 데이터 중복0, 독립 CLI bounded schedule 2회 + 새 프로세스 1회 재개, 승인/횟수 초과/미지원 외부 작업 거절. **Ubuntu P85 7/7, Windows P85 7/7 PASS**, 기존 P50/P70 3/3+7/7 유지.
+- **출고 실패 명시:** Ubuntu·Windows 전체 Python 각 `290=281PASS/2FAIL/7SKIP`, Node 모의 UI race 24 PASS. 두 OS **전체 CI FAILURE**: 기존 배송 ZIP/pyz가 현행 source와 다름. 원본 2개 바이너리 무단 overwrite/skip 금지. 실제 DBVORA 독립 프로세스, 고객 Windows 실 설치 및 Chrome/Edge 클릭, OAuth/고객 영수증/OS reboot 미검증.
+- **정책:** **P85 synthetic technical acceptance PASS**와 사용자 **최종설계 전체 100점 기준 공식 최종완성률 `UNASSESSED`**를 분리. 중앙 `AZENTFLOW AX **[작업중]**` 절대 해제하지 않음, 상용 `RELEASE HOLD`·크몽 `미등록`. 기존 29개 기초 항목/19개 판매 서비스의 `등록완료` 이력·다른 담당 상품·기존 완성도 보존.
+- **오류/복구·다음:** 첫 P85 코드 `39d9b4f6...` 테스트 응답 필드 오인 1 ERROR → 테스트만 수정 `a640666db7a1bf2011c5d2abc944f13199ce455f`에서 양 OS 7/7 성공. HAE 시작 HEAD `980faee4e6163a5cd7126b6ac6be10b5ace4e012`, Freelancer 시작 HEAD `24a726cc852f4474f623cc59f6a39dc3971d870e`, Git 히스토리 복구 가능. 고객 자료/시크릿·권한·원본 코어·Production/Vercel·외부 유료 API 변경0. 다음 P95 패키지 parity 2FAIL 안전해결+전체 CI0FAIL+실 DBVORA service/고객 Windows/OAuth 조건부 인증, 공식 승인 가중치 독립검수.
