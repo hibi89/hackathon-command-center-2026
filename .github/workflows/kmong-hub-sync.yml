@@ -8,7 +8,7 @@ on:
         required: true
         default: true
   schedule:
-    - cron: '10 2 * * *'  # 11:10 KST daily, only after explicit enable
+    - cron: '*/5 5 13 11 *'  # TEMP: Nov 13 2026, 14:00-14:59 KST, every five minutes; restore original immediately after live schedule verification
 permissions:
   contents: write  # THIS repository only; App token is source-repo read-only
 concurrency:
