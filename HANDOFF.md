@@ -1,4 +1,18 @@
 ## [2026-11-13 14:35 KST] 해총 GitHub App 예약 이벤트 당일 실험/복구 — 10항 인수인계
+
+## [2026-11-13 KST] CITEVAULT AX 후보 P50 구현 일부 · 해총 10항 인수인계
+
+1. **목표/설계:** `CITEVAULT AX` 최종설계 전체 대비 사용자의 P50(50%) 개발 지시. 기준 `hibi89/Freelancer@product/rag-enterprise-knowledge/docs/FINAL_BLUEPRINT.md`; 공식률은 승인 가중치×기능 SHA 검증이 완료되기 전 `UNASSESSED`.
+2. **변경/선택:** 독립 구현 코어를 재작성하지 않고 pinned `RAG_STUDIO` 코드를 동적 로드하는 read-only QA gate와 테스트 6개, CI workflow, 증거 매트릭스 추가. SMAX/PREP 코드 비복제; 합성 데이터 및 원본 읽기 전용.
+3. **테스트:** `node --test tests/p50.test.mjs` (Node22.16, `RAG_STUDIO_ROOT` pinned checkout), 단위/통합 테스트 코드 **6개 작성**, GitHub Actions 실행 결과 **확인 불가/NOT VERIFIED**. 코드 등록은 성공했으나 PASS/FAIL 수치 산출 금지.
+4. **단계/중단점:** P50 목표 **검증 미달**, 후보 `[작업중]` 유지, `RELEASE HOLD / SALE NO-GO`. RAG 핵심 고정 SQL·BM25·인용·SMAX REVIEW_HOLD 판정 경로 정적 확인, PDF/DOCX 실제 통합 테스트·프로듀서 서명 인가 변환·기업 ACL/권한은 아직 미검증.
+5. **오류/시도/대안:** 컨테이너 git 원격 checkout은 github.com DNS 실패; 연결 GitHub connector로 readback/쓰기. Connector `fetch_commit_workflow_runs`는 PR event에만 대응하여 이번 push workflow 조회 결과 empty는 실패/미실행 판정 불가. 동일 방식 무한 재시도 금지; 정확 Actions run/job log 혹은 로컬 RAG checkout으로 시험.
+6. **저장소/브랜치/SHA:** 제품 `hibi89/Freelancer@product/rag-enterprise-knowledge` 시작 `1195f767c7ebc6b1965936cc2166db53853c6e53`, 제품 인수 문서 반영 `f3f2c321b64153d0a4c802f56e2ff6440d9d7b00`. 엔진 pin `hibi89/RAG_STUDIO@c5867b3951f51bfa97cadd1aad8fb13e9cf9e604`. 중앙 scoreboard `81ec1e513a720b08199ff365e975a6e8d11bde58`, STATUS `5647155a495bf350af81b925309ac3703fa0f8c1`. 본 HANDOFF 이후 HEAD 재확인.
+7. **환경/Production:** Node22.16+ 합성 QA, 별도 공개 RAG checkout, private CITE 브랜치. Vercel/고객 설치/실사용 미적용, 유료 API 호출/계정·권한 변경 없음.
+8. **백업/원본/보안:** 기존 제품·중앙 Git 이전 SHA 복구 기준; 원본 RAG/PREP/SMAX/실고객 자료 변경·복제 0. 출시·권한·토큰 변경 없음. 일반 RAG 개발 Bearer는 기업 IAM 아님.
+9. **다음/완료기준:** CI 실 run 및 SHA 수용 → PDF/DOCX source citation gate, 원본 보존 negative → 승인 확인된 PREP/SMAX→AX 단일 계약/권한 계약 → 실 고객 접근모델/단계 수용 → 공식률 재산정. 기존 19 서비스 등록완료 이력/29 제품 정본/다른 작업중 표시 불변.
+10. **일시/확인범위:** 2026-11-13 KST, GitHub source/branch/commit/fixture 참조 정적 확인, CITEVAULT 신규 코드 원격 반영 확인. 6개 테스트의 **실 PASS, Hosted CI, Windows, 고객 IAM, 모델/외부 API, Production은 미검증**.
+
 1. **목표·확정요구·기술:** GitHub App(read-only)로 35 소스 저장소/70 branch/31 canonical blob/29 제품 CI 증거를 GitHub Actions 수집하고 중앙 관찰 JSON만 최신화. 이번 작업은 다음날까지 기다리지 않고 실제 `schedule` 트리거가 되는지 일시적으로 cron을 단축해 검증, 일일 원래 시각 복원.
 2. **시행·근거·최종 결정:** `main` cron 원본 `10 2 * * *`(매일 11:10 KST)을 2026-11-13 14:24 KST `*/5 5 13 11 *`(14시대 매 5분)로 임시 변경한 커밋 `4d036f7c0f1a11126ce3f94a4456d3e14d8f00e3`. 소스 코드/수집 정책·자격증명/제품 데이터 변경 없음. 14:25·14:30·14:35 UTC 05시대 슬롯 관측 뒤 원래 cron 복구 커밋 `98d353001f9ea8fd2b74dc1e7517a0fbdff5e64e` 원격 확인.
 3. **테스트·성공/실패·범위:** GitHub Actions runs REST API를 예정 시각 이후 반복 확인했으나 새 `event=schedule` 실행 **0건 관측**, 따라서 이번 **예약 실행 실검증은 미완료**. 기본 브랜치 `main`, cron 구문, 연결된 `hibi89` author/committer 확인. 기존 manual dry-run run #43363161824, 첫 `UPDATED` #43363676185, `NO_CHANGE` #43364386625와 유닛 26/26 PASS 유지. 신규 Schedule Job 로그/테스트 수 없음.
