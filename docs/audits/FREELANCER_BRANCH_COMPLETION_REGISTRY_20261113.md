@@ -37,7 +37,7 @@
 | CITEVAULT AX **[작업중]** | `product/rag-enterprise-knowledge` | **공식 UNASSESSED / 사용자 70% 목표 미달 · 검증 대기** | strict citation `p70-citation-contract` 실제 Node 14PASS, local source-byte PREP/SMAX review-only `p70-local-review` Node 17PASS; P50 Node 3PASS/3SKIP, 합계 **37total/34PASS/0FAIL/3SKIP**. 원본 RAG BM25/충돌 source in-memory 5PASS. Hosted Actions original RAG checkout/P512/P538/P540/P549 로그 미검증 | 실 고객 인증/권한 전 로드 차단, signed SMAX→승인 AX, 실제 PDF/DOCX+고객 PC/법적 인수 미완·RELEASE HOLD |
 | SITECRAFT AX | `product/rea-website-rebuild` | UNASSESSED | 기존 REA_Web 서비스에 연결, HOLD | 기존 기업형 조합 |
 | PROOFQA AX | `product/proofqa-ax-delivery-audit` | UNASSESSED | 기존 코드 품질감사 서비스에 연결, HOLD | 기존 기업형 조합 |
-| ONTOINSIGHT AX **[작업중]** | `product/ontoinsight-ax-data-analytics` | **UNASSESSED** (P70 엔지니어링 단계 검증 PASS, 최종 70% 미확정) | 기존 데이터 AI 분석 서비스에 연결, RELEASE HOLD·미등록 | [Linux/Windows 각 44 PASS, 기능 SHA `34e7b16a`](https://github.com/hibi89/AI_AutoML_Analyst/actions/runs/43378733016) / [P70 수용증빙](https://github.com/hibi89/Freelancer/blob/product/ontoinsight-ax-data-analytics/docs/P70_ACCEPTANCE_EVIDENCE_20261113.md) |
+| ONTOINSIGHT AX **[작업중]** | `product/ontoinsight-ax-data-analytics` | **UNASSESSED** (P85 엔지니어링 단계 검증 PASS, 공식 최종 85% 미확정) | 기존 데이터 AI 분석 서비스 연결, RELEASE HOLD·미등록 | [Linux/Windows 각 93 PASS + core30 각 30 PASS, 소스 `8d1bdc80`](https://github.com/hibi89/AI_AutoML_Analyst/actions/runs/43383793303) / [P85 수용 증빙](https://github.com/hibi89/Freelancer/blob/product/ontoinsight-ax-data-analytics/docs/P85_ACCEPTANCE_EVIDENCE_20261113.md) |
 | ECHOHOME | `product/echohome-pawtalk-local-ai` | UNASSESSED | 미등록·HOLD | 가족 동의 음성대화 설계, 앱 미검증 |
 | PAWTALK | `product/echohome-pawtalk-local-ai` | UNASSESSED | 미등록·HOLD | 반려동물 놀이형 음성대화 설계, 앱 미검증 |
 | MYRADIO AI | `product/myradio-ai-dj` | UNASSESSED | 미등록·HOLD | 오프라인 WAV 시제품, 실 Windows/상용권리 미검증 |
@@ -115,3 +115,11 @@
 - **출고 실패 명시:** Ubuntu·Windows 전체 Python 각 `290=281PASS/2FAIL/7SKIP`, Node 모의 UI race 24 PASS. 두 OS **전체 CI FAILURE**: 기존 배송 ZIP/pyz가 현행 source와 다름. 원본 2개 바이너리 무단 overwrite/skip 금지. 실제 DBVORA 독립 프로세스, 고객 Windows 실 설치 및 Chrome/Edge 클릭, OAuth/고객 영수증/OS reboot 미검증.
 - **정책:** **P85 synthetic technical acceptance PASS**와 사용자 **최종설계 전체 100점 기준 공식 최종완성률 `UNASSESSED`**를 분리. 중앙 `AZENTFLOW AX **[작업중]**` 절대 해제하지 않음, 상용 `RELEASE HOLD`·크몽 `미등록`. 기존 29개 기초 항목/19개 판매 서비스의 `등록완료` 이력·다른 담당 상품·기존 완성도 보존.
 - **오류/복구·다음:** 첫 P85 코드 `39d9b4f6...` 테스트 응답 필드 오인 1 ERROR → 테스트만 수정 `a640666db7a1bf2011c5d2abc944f13199ce455f`에서 양 OS 7/7 성공. HAE 시작 HEAD `980faee4e6163a5cd7126b6ac6be10b5ace4e012`, Freelancer 시작 HEAD `24a726cc852f4474f623cc59f6a39dc3971d870e`, Git 히스토리 복구 가능. 고객 자료/시크릿·권한·원본 코어·Production/Vercel·외부 유료 API 변경0. 다음 P95 패키지 parity 2FAIL 안전해결+전체 CI0FAIL+실 DBVORA service/고객 Windows/OAuth 조건부 인증, 공식 승인 가중치 독립검수.
+
+## [2026-11-13 KST] ONTOINSIGHT AX P85 단계 검증·인수인계 동기화
+
+- **사용자 전체 최종설계 공식 완성률: UNASSESSED.** P85는 기존 `docs/ACCEPTANCE_AND_ROADMAP.md` 내부 엔지니어링 단계의 합성/CI 검증 완료, 전체 사용자 100% 설계의 승인 가중치·요구별 실제 검증 미확보. 크몽 미등록, **[작업중] 유지**, `RELEASE HOLD` 유지; 과거 P50/P70 단계 PASS 이력과 다른 상품 마커/등록 상태 그대로.
+- 실제 소스 `hibi89/AI_AutoML_Analyst@feature/ontoinsight-ax-p85-20261113`, 검증된 기능 SHA `8d1bdc80ed345485591f739aace632e91112a604`, 문서/HANDOFF SHA `d027481b886bd86b75f5e44b73250e4e3c0948b3`. 설계 정본 `hibi89/Freelancer@product/ontoinsight-ax-data-analytics` 문서 SHA `740ca7c3c4d969b3c51d9be017d950fea50297a1`.
+- [실제 GitHub Actions #43383793303](https://github.com/hibi89/AI_AutoML_Analyst/actions/runs/43383793303): Ubuntu24.04 **93 PASS/0 FAIL/0 SKIP**, Windows Server2025 **93 PASS/0 FAIL/0 SKIP**, 2/2 SUCCESS; 별도 엄격 30 시나리오 선택자 재검증 **각 OS 30/30 PASS**. 30 selected test paths are within the 93, not 30 new independent functions. 양쪽 compileall PASS. 의도된 중복 ZIP 음성 시험 경고 1개.
+- 기능: P50/P70 원본 보존, 대상/시간/그룹별 ML 누수 보류+Dummy 기준선과 train-only CV 및 heldout, 오프라인 집계-only HTML/XLSX/PDF/JSON/검증 manifest ZIP·CLI. 실제 고객 데이터 및 외부 유료 API 전송 0. 허위 수익·인과 주장 없음.
+- 제한: core30은 36개 카탈로그 중 선택된 경로를 재실행했으나 실제 암호화 XLSX(현재 invalid OOXML만), 고객 Windows10/11, 실 개인정보·환불 이벤트 유일성·원본 전체 AutoML regression·PDF 시각/폰트·라이선스/NOTICE·상용권리/GO **미검증**. 최종 85% 공식 점수나 판매 적합 판정 금지. 다음 P95 고객형 독립 36/36 감사·실사용·법적 근거.
