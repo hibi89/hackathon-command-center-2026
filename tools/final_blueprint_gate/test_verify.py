@@ -5,7 +5,7 @@ import tempfile
 import unittest
 
 from verify import audit
-from canonical_scope import inspect_canonical
+from canonical_scope import inspect_canonical, REQUIRED_REPOS
 
 class GateTest(unittest.TestCase):
     def setUp(self):
@@ -197,6 +197,54 @@ class CanonicalScopeTest(unittest.TestCase):
         data, ok = self.check()
         self.assertFalse(ok)
         self.assertEqual(data["gate"], "CANONICAL_SCOPE_INVALID")
+
+
+class CentralPinRegistryTest(unittest.TestCase):
+    def setUp(self):
+        self.registry = json.loads((Path(__file__).with_name("canonical_pins.json")).read_text(encoding="utf-8"))
+        self.pins = self.registry["pins"]
+
+    def test_registered_repository_pins_are_unique(self):
+        repo_names = [x["repository"].lower() for x in self.pins]
+        self.assertEqual(len(repo_names), len(set(repo_names)))
+        self.assertEqual(len(repo_names), 28)
+
+    def test_enforced_repos_match_fail_closed_code_list(self):
+        enforced = {x["repository"].lower() for x in self.pins if x["mode"] == "enforce"}
+        self.assertEqual(enforced, REQUIRED_REPOS)
+        self.assertEqual(len(enforced), 10)
+
+    def test_unpinned_repos_separate_from_pins(self):
+        pinned = {x["repository"].lower() for x in self.pins}
+        missing = {x.lower() for x in self.registry["not_pinned_main"]}
+        self.assertFalse(pinned & missing)
+        self.assertEqual(len(missing), 7)
+
+    def test_git_blob_fingerprint_and_main_paths_are_valid(self):
+        from canonical_scope import SHA40
+        for pin in self.pins:
+            self.assertEqual(pin["ref"], "main")
+            self.assertRegex(pin["git_blob_sha"], SHA40)
+            self.assertTrue(pin["path"].endswith((".md", ".txt")))
+            self.assertIn(pin["mode"], ("enforce", "observe"))
+
+    def test_observe_mode_reports_drift_without_certifying_or_blocking(self):
+        with tempfile.TemporaryDirectory() as d:
+            root = Path(d)
+            (root / "docs").mkdir()
+            file = root / "docs/REQUIREMENTS.md"
+            file.write_text("changed")
+            pins = root / "pins.json"
+            pins.write_text(json.dumps({"schema_version":1,"pins":[{"repository":"hibi89/demo",
+               "ref":"main","path":"docs/REQUIREMENTS.md","git_blob_sha":"a"*40,"mode":"observe"}]}))
+            state, errors = inspect_canonical("hibi89/demo", root, pins)
+            self.assertEqual(state["status"], "DRIFT_REVIEW_REQUIRED")
+            self.assertEqual(errors, [])
+
+    def test_workflow_checkout_repos_match_registry(self):
+        workflow = (Path(__file__).parents[2] / ".github/workflows/blueprint-validation.yml").read_text()
+        for pin in self.pins:
+            self.assertIn(pin["repository"], workflow)
 
 if __name__ == "__main__":
     unittest.main()

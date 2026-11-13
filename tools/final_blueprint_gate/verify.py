@@ -134,7 +134,7 @@ def main():
                      args.canonical_root, args.pins)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"Blueprint gate: {data['gate']}; official=UNASSESSED")
+    print(f"Blueprint gate: {data['gate']}; canonical={data['canonical_blueprint']['status']}; official=UNASSESSED")
     for note in data["notes"]:
         print("NOTE:", note)
     for err in data["errors"]:

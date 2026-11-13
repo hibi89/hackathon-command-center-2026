@@ -21,7 +21,7 @@ jobs:
           path: .final-blueprint-verifier
           persist-credentials: false
       - name: Read caller main canonical blueprint without expanding permissions
-        if: github.repository == 'hibi89/HAE'
+        if: ${{ contains(fromJSON('["hibi89/Bid_Owl","hibi89/ohora-nail-intelligence-v4","hibi89/ohora-trend-catcher","hibi89/web-rea-studio","hibi89/NAON2-Character-Studio","hibi89/gongbaek-sanggwon","hibi89/astra_web_catcher","hibi89/fable5.1_web_catcher","hibi89/astra_pdf_redesigner","hibi89/ohora-trend-catcher-classic","hibi89/ohora-trend-analyzer","hibi89/hibi89-kic-proofinvest","hibi89/hackathon-command-center-2026","hibi89/hibi89-paypal-ai-hackathon","hibi89/hibi89-ugreen-nas-hackathon","hibi89/REA_Web","hibi89/SOVIA_sovereign","hibi89/ai-code-checker","hibi89/DBVORA","hibi89/Freelancer","hibi89/HAE","hibi89/AX_MART","hibi89/candle_scraper","hibi89/frontend-foundry-ax","hibi89/prep","hibi89/factory-ax-ecosystem","hibi89/data2web_studio","hibi89/KUODRA"]'), github.repository) }}
         uses: actions/checkout@v4
         with:
           ref: main

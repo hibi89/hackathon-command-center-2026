@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 import re
 
-REQUIRED_REPOS = frozenset({"hibi89/hae"})
+REQUIRED_REPOS = frozenset(['hibi89/astra_web_catcher','hibi89/astra_pdf_redesigner','hibi89/rea_web','hibi89/ai-code-checker','hibi89/hae','hibi89/prep','hibi89/factory-ax-ecosystem','hibi89/data2web_studio','hibi89/kuodra'])
 SHA40 = re.compile(r"^[0-9a-f]{40}$")
 MAX_BYTES = 2 * 1024 * 1024
 
@@ -45,8 +45,9 @@ def inspect_canonical(repo, canonical_root=None, pins_path=None):
     pin = matches[0]
     result = {"status": "PENDING", "repository": name, "ref": pin.get("ref"),
               "path": pin.get("path"), "expected_git_blob_sha": pin.get("git_blob_sha"),
-              "scope": "file identity only; owner acceptance not certified"}
-    if pin.get("ref") != "main" or not isinstance(pin.get("git_blob_sha"), str) or not SHA40.fullmatch(pin["git_blob_sha"]):
+              "scope": "file identity only; owner acceptance not certified",
+              "mode": pin.get("mode", "observe")}
+    if pin.get("ref") != "main" or pin.get("mode") not in ("observe", "enforce") or not isinstance(pin.get("git_blob_sha"), str) or not SHA40.fullmatch(pin["git_blob_sha"]):
         return {**result, "status": "INVALID_PIN"}, ["invalid canonical pin ref or fingerprint"]
     if canonical_root is None:
         return {**result, "status": "CHECKOUT_MISSING"}, ["same-repository main checkout required"]
@@ -61,6 +62,8 @@ def inspect_canonical(repo, canonical_root=None, pins_path=None):
         return {**result, "status": "UNREADABLE"}, ["canonical file unreadable"]
     digest = hashlib.sha1(b"blob " + str(len(raw)).encode("ascii") + b"\0" + raw).hexdigest()
     if digest != pin["git_blob_sha"]:
+        if pin.get("mode") == "observe":
+            return {**result, "status": "DRIFT_REVIEW_REQUIRED", "observed_git_blob_sha": digest}, []
         return {**result, "status": "DRIFT_DETECTED", "observed_git_blob_sha": digest}, [
             "canonical file changed versus audited fingerprint; independent review required"]
     return {**result, "status": "MATCHED"}, []

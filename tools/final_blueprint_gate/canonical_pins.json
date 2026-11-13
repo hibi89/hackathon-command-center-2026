@@ -1,14 +1,240 @@
 {
   "schema_version": 1,
-  "kind": "AUDITED_GIT_BLOB_NOT_OWNER_SIGNED",
+  "kind": "OBSERVED_GIT_BLOB_NOT_OWNER_SIGNED",
+  "note": "All paths/blobs are observed main-tree identities, not independent proof that the file contains the complete user-approved blueprint. Enforced pins require independent change review; generic requirements are observed only.",
   "pins": [
+    {
+      "repository": "hibi89/Bid_Owl",
+      "ref": "main",
+      "path": "REQUIREMENTS.md",
+      "git_blob_sha": "dd6bfa2ec9758287c7d600b54f1b947f01fec62c",
+      "mode": "observe",
+      "approval_status": "INDEPENDENT_SCOPE_APPROVAL_NOT_CERTIFIED"
+    },
+    {
+      "repository": "hibi89/ohora-nail-intelligence-v4",
+      "ref": "main",
+      "path": "docs/V4_PIXEL_SPEC.md",
+      "git_blob_sha": "04c30ab2ff8c064e93448dbfc6640629c27210a8",
+      "mode": "observe",
+      "approval_status": "INDEPENDENT_SCOPE_APPROVAL_NOT_CERTIFIED"
+    },
+    {
+      "repository": "hibi89/ohora-trend-catcher",
+      "ref": "main",
+      "path": "REQUIREMENTS.md",
+      "git_blob_sha": "c4b25df025c8255103d952a078af9eef61ff0798",
+      "mode": "observe",
+      "approval_status": "INDEPENDENT_SCOPE_APPROVAL_NOT_CERTIFIED"
+    },
+    {
+      "repository": "hibi89/web-rea-studio",
+      "ref": "main",
+      "path": "REQUIREMENTS.md",
+      "git_blob_sha": "6b6567e53e8c1771661804e10fef80813fd34548",
+      "mode": "observe",
+      "approval_status": "INDEPENDENT_SCOPE_APPROVAL_NOT_CERTIFIED"
+    },
+    {
+      "repository": "hibi89/NAON2-Character-Studio",
+      "ref": "main",
+      "path": "character/MASTER_PRODUCTION_SPEC.md",
+      "git_blob_sha": "e610139fe2f55876ab34c81d745fb1ff78d05456",
+      "mode": "observe",
+      "approval_status": "INDEPENDENT_SCOPE_APPROVAL_NOT_CERTIFIED"
+    },
+    {
+      "repository": "hibi89/gongbaek-sanggwon",
+      "ref": "main",
+      "path": "REQUIREMENTS.md",
+      "git_blob_sha": "e257a6482fbb5f6fdbab00816e0981e692f7a144",
+      "mode": "observe",
+      "approval_status": "INDEPENDENT_SCOPE_APPROVAL_NOT_CERTIFIED"
+    },
+    {
+      "repository": "hibi89/astra_web_catcher",
+      "ref": "main",
+      "path": "docs/ASTRA_CANONICAL_DESIGN_2026-10-18.md",
+      "git_blob_sha": "c8f89f7162813b2baa5ae323069366050ad637c0",
+      "mode": "enforce",
+      "approval_status": "INDEPENDENT_SCOPE_APPROVAL_NOT_CERTIFIED"
+    },
+    {
+      "repository": "hibi89/fable5.1_web_catcher",
+      "ref": "main",
+      "path": "REQUIREMENTS.md",
+      "git_blob_sha": "2da774a58de076b400e838bc53061e18228b11cf",
+      "mode": "observe",
+      "approval_status": "INDEPENDENT_SCOPE_APPROVAL_NOT_CERTIFIED"
+    },
+    {
+      "repository": "hibi89/astra_pdf_redesigner",
+      "ref": "main",
+      "path": "docs/BLUEPRINT.md",
+      "git_blob_sha": "b2d6bd5de2d5b74a8004d0fe5ca5643d0a94ea02",
+      "mode": "enforce",
+      "approval_status": "INDEPENDENT_SCOPE_APPROVAL_NOT_CERTIFIED"
+    },
+    {
+      "repository": "hibi89/ohora-trend-catcher-classic",
+      "ref": "main",
+      "path": "ohora-trend-catcher-classic-safe/REQUIREMENTS.md",
+      "git_blob_sha": "81dfaf058ba5392506920bffc0b376d73741ddf7",
+      "mode": "observe",
+      "approval_status": "INDEPENDENT_SCOPE_APPROVAL_NOT_CERTIFIED"
+    },
+    {
+      "repository": "hibi89/ohora-trend-analyzer",
+      "ref": "main",
+      "path": "docs/INTERNAL_DASHBOARD_SPEC.md",
+      "git_blob_sha": "f4540237f597b0b5e8d844d312fca6daaf7d9fb1",
+      "mode": "observe",
+      "approval_status": "INDEPENDENT_SCOPE_APPROVAL_NOT_CERTIFIED"
+    },
+    {
+      "repository": "hibi89/hibi89-kic-proofinvest",
+      "ref": "main",
+      "path": "REQUIREMENTS.md",
+      "git_blob_sha": "a21561cc04b82a41eb9a8caa889235db4d896040",
+      "mode": "observe",
+      "approval_status": "INDEPENDENT_SCOPE_APPROVAL_NOT_CERTIFIED"
+    },
+    {
+      "repository": "hibi89/hackathon-command-center-2026",
+      "ref": "main",
+      "path": "REQUIREMENTS.md",
+      "git_blob_sha": "521ba0cb458bea384639a0ef897ce7500d33b8f1",
+      "mode": "observe",
+      "approval_status": "INDEPENDENT_SCOPE_APPROVAL_NOT_CERTIFIED"
+    },
+    {
+      "repository": "hibi89/hibi89-paypal-ai-hackathon",
+      "ref": "main",
+      "path": "REQUIREMENTS.md",
+      "git_blob_sha": "b8c6d452177b9a00129855f02ccba40031712813",
+      "mode": "observe",
+      "approval_status": "INDEPENDENT_SCOPE_APPROVAL_NOT_CERTIFIED"
+    },
+    {
+      "repository": "hibi89/hibi89-ugreen-nas-hackathon",
+      "ref": "main",
+      "path": "REQUIREMENTS.md",
+      "git_blob_sha": "fae8b6e38a72c97662103e5937d8214c44bb5151",
+      "mode": "observe",
+      "approval_status": "INDEPENDENT_SCOPE_APPROVAL_NOT_CERTIFIED"
+    },
+    {
+      "repository": "hibi89/REA_Web",
+      "ref": "main",
+      "path": "docs/ORIGINAL_FINAL_DESIGN.md",
+      "git_blob_sha": "59cae0260a494edbaa6456b8aeae4afe12e2f8ac",
+      "mode": "enforce",
+      "approval_status": "INDEPENDENT_SCOPE_APPROVAL_NOT_CERTIFIED"
+    },
+    {
+      "repository": "hibi89/SOVIA_sovereign",
+      "ref": "main",
+      "path": "REQUIREMENTS.md",
+      "git_blob_sha": "53447ab218947746adcbf588d132092606a8d2f1",
+      "mode": "observe",
+      "approval_status": "INDEPENDENT_SCOPE_APPROVAL_NOT_CERTIFIED"
+    },
+    {
+      "repository": "hibi89/ai-code-checker",
+      "ref": "main",
+      "path": "FINAL_PRODUCT_BLUEPRINT.md",
+      "git_blob_sha": "dc2820f0b353a3c76429f68e84032a46998c323e",
+      "mode": "enforce",
+      "approval_status": "INDEPENDENT_SCOPE_APPROVAL_NOT_CERTIFIED"
+    },
+    {
+      "repository": "hibi89/DBVORA",
+      "ref": "main",
+      "path": "REQUIREMENTS.md",
+      "git_blob_sha": "8e8e61f30c504fa5fe0acbaa6c85047801e921d6",
+      "mode": "observe",
+      "approval_status": "INDEPENDENT_SCOPE_APPROVAL_NOT_CERTIFIED"
+    },
+    {
+      "repository": "hibi89/Freelancer",
+      "ref": "main",
+      "path": "REQUIREMENTS.md",
+      "git_blob_sha": "9e12d3dbd88367e405a27a59c62141ce8c6d4b31",
+      "mode": "observe",
+      "approval_status": "INDEPENDENT_SCOPE_APPROVAL_NOT_CERTIFIED"
+    },
     {
       "repository": "hibi89/HAE",
       "ref": "main",
       "path": "docs/ECOSYSTEM_CANONICAL.md",
       "git_blob_sha": "0d31062b0e3c6a570b37a35ace6fbfbe59ec2116",
-      "observed_main_head": "ff763ba8ec6002a01a0b08a02146e98193174e50",
-      "approval_status": "INDEPENDENT_VERIFICATION_PENDING"
+      "mode": "enforce",
+      "approval_status": "INDEPENDENT_SCOPE_APPROVAL_NOT_CERTIFIED"
+    },
+    {
+      "repository": "hibi89/AX_MART",
+      "ref": "main",
+      "path": "REQUIREMENTS.md",
+      "git_blob_sha": "c50e8f998971e3938b880bdde95f725a958fdffa",
+      "mode": "observe",
+      "approval_status": "INDEPENDENT_SCOPE_APPROVAL_NOT_CERTIFIED"
+    },
+    {
+      "repository": "hibi89/candle_scraper",
+      "ref": "main",
+      "path": "REQUIREMENTS.md",
+      "git_blob_sha": "dc683d57812919bb8096ba01e73158c903632086",
+      "mode": "observe",
+      "approval_status": "INDEPENDENT_SCOPE_APPROVAL_NOT_CERTIFIED"
+    },
+    {
+      "repository": "hibi89/frontend-foundry-ax",
+      "ref": "main",
+      "path": "docs/PRODUCT_SPEC_V1.md",
+      "git_blob_sha": "1ae97c0f1bc0a4f1aba44a0e5bd1d219fb1abecd",
+      "mode": "observe",
+      "approval_status": "INDEPENDENT_SCOPE_APPROVAL_NOT_CERTIFIED"
+    },
+    {
+      "repository": "hibi89/prep",
+      "ref": "main",
+      "path": "docs/FINAL_PRODUCT_BLUEPRINT.md",
+      "git_blob_sha": "26b53937664dd7f11f42ee0ba6bfef93ebe50be2",
+      "mode": "enforce",
+      "approval_status": "INDEPENDENT_SCOPE_APPROVAL_NOT_CERTIFIED"
+    },
+    {
+      "repository": "hibi89/factory-ax-ecosystem",
+      "ref": "main",
+      "path": "docs/PRODUCT_BLUEPRINT.md",
+      "git_blob_sha": "dee90598d9411313f644bc5e84339e38130128be",
+      "mode": "enforce",
+      "approval_status": "INDEPENDENT_SCOPE_APPROVAL_NOT_CERTIFIED"
+    },
+    {
+      "repository": "hibi89/data2web_studio",
+      "ref": "main",
+      "path": "docs/FINAL_DESIGN.md",
+      "git_blob_sha": "7cd26804f5fea7ed2ec18911bb03d438a49aa646",
+      "mode": "enforce",
+      "approval_status": "INDEPENDENT_SCOPE_APPROVAL_NOT_CERTIFIED"
+    },
+    {
+      "repository": "hibi89/KUODRA",
+      "ref": "main",
+      "path": "docs/BLUEPRINT_100.md",
+      "git_blob_sha": "1c12a144f8ac4fff78e2fb244b0debfe1ae50f72",
+      "mode": "enforce",
+      "approval_status": "INDEPENDENT_SCOPE_APPROVAL_NOT_CERTIFIED"
     }
+  ],
+  "not_pinned_main": [
+    "hibi89/AI_AutoML_Analyst",
+    "hibi89/self-hosted-n8n-reliability-lab",
+    "hibi89/project-book",
+    "hibi89/SMAX",
+    "hibi89/RAG_STUDIO",
+    "hibi89/EAI",
+    "hibi89/work-hell-dungeon"
   ]
 }
