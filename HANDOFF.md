@@ -1,3 +1,15 @@
+## [2026-11-13 15:15 KST] Vercel UI 신규 프로젝트 성공 확인 — 인수인계 10항
+1. **목표·확정 요구·기술:** GitHub 35개 저장소 70 refs 증거를 Source GitHub App Webhook → Vercel Serverless → Hub-only GitHub App Actions:write → 기존 collector로 이벤트시 갱신, 기존 11:10 KST 예약 fallback 보존. 공식 29/29 UNASSESSED 유지.
+2. **완료 기능·변경·근거:** 사용자 화면에 `kmong-hub-event-bridge` 신규 Vercel `hibi89` Hobby 프로젝트 `Deployed to Production` 확인. 앞선 설정 화면 Github repo `hibi89/hackathon-command-center-2026`, `main`, Root `services/kmong-event-bridge`, Other 확인. 실제 Vercel 화면 `Visit` 링크 `https://kmong-hub-event-bridge.vercel.app/` 및 `https://vercel.com/hibi89/kmong-hub-event-bridge`.
+3. **테스트·성공/실패·미검증:** GitHub main PR #1 코드 CI Node16/16, Python26/26 및 blueprint gate SUCCESS. 신규 Vercel UI는 배포 성공을 표시했지만 root 404 `This page doesn't exist`이며 API-only 서버에 `/` route 부재가 원인일 수 있음. 실제 `GET https://kmong-hub-event-bridge.vercel.app/api/webhook` 응답과 Production SHA/실 Event E2E는 확인 불가. 설계상 no env 시 503 `not_configured` 예상; 검증 전 200으로 가정 금지.
+4. **완료·진행·대기·차단:** Vercel UI 프로젝트 생성 및 Production 배포 생성 단계 통과. 하지만 필요한 runtime 환경·Webhook 연결·두 번째 hub-only Actions:write App·실 push E2E는 미완료. 실제 자동 상시 수집은 **아직 검증 대기**.
+5. **오류·시도·원인·대안:** 과거 Vercel MCP 생성 403, 이번 사용자 UI에서는 성공. MCP `get_project` 404 / `list_deployments` 403 / 신규 목록 비노출이므로 연결 권한/세션 차이. MCP 동일 권한으로 재시도 반복/배포 실패 단정 금지. 사용자 브라우저에서 공개 API 경로 HTTP 상태 검증 또는 권한 교정 후 Vercel 연결 검증.
+6. **저장소·브랜치·SHA·주요 경로:** `hibi89/hackathon-command-center-2026` `main@e1ad0802cb7bdf783c1d99c6f0b259ec96daf015` GitHub 코드, `services/kmong-event-bridge/api/webhook.js` 및 `lib/receiver.js`, `.github/workflows/kmong-event-bridge-tests.yml`. 중앙 `kmong-productization` STATUS 관련 갱신 `ee5c5e97a2b509fcfdadadd48d79145eb7aa8127`; HANDOFF 커밋 후 HEAD 재조회.
+7. **Production URL·Vercel 프로젝트·실행명령·환경:** `kmong-hub-event-bridge`, `https://kmong-hub-event-bridge.vercel.app/`; API `/api/webhook`. 실제 배포 SHA/UI 상태 추가 확인 필요, 기본 root 404는 API 정상 판정을 뜻하지 않음. CI `npm test --prefix services/kmong-event-bridge`.
+8. **원본·백업·인증·수정금지:** GitHub PR/commit 보존, 기존 collector/cron 및 등록이력/29 공식률 변경 없음. Vercel Secret·Github App PEM·토큰은 절대 채팅·원장/Repo 기록 금지. 기존 다른 Vercel 프로젝트 건드리지 않음.
+9. **다음 우선순위·절차·완료기준:** 우선 API 직접 접속 시 현재 503 `not_configured`가 나오는지 확인(401/403/404면 라우팅/보호/배포 조사). 이어서 최소권한 hub-only dispatch App 생성, 기존 Source App에서 Webhook Active+서명 secret+push/workflow_run event, Vercel Production secret/enable (초기 false) 구성, 유효/무효 서명과 GitHub Actions 생성·실 성공·readback까지 검증. 추가 비용/권한 확대는 사전 승인.
+10. **갱신 일시·검증 범위·문서기준:** 2026-11-13 15:15 KST, 사용자 직접 캡처와 브라우저 Vercel Success 페이지 텍스트, 연결 Vercel API 403/404, GitHub 기존 CI/SHA 참조. 상태 **VERCEL_UI_DEPLOYED / ENDPOINT_UNVERIFIED / AUTOMATION_INCOMPLETE**.
+
 ## [2026-11-13 KST] FlowPilot Universal P50 독립 개발·최종설계 판정 인수인계 — 필수 10항
 1. **목표·확정·기술:** FlowPilot Universal Windows/USB/권한 있는 SMB 공유폴더 파일납품 검수, 소유자 최종설계 전체를 분모100으로 한 최종완성률 **50%** 목표. Python3.11 stdlib 독립 로컬 스캐너·SHA256·증거 출력, 기존 UGREEN Skill 비의존.
 2. **완료·변경·결정:** UGREEN 전용 브랜치 `product/flowpilot-universal`에 신규 6개 실행/테스트/CI 파일과 별도 설계·STATUS·10항 HANDOFF 작성. Uliya NAS Skill 종속(A) 대비 로컬 독립(B) 선택: 서버/유료 API 0, 원본 대회 분리. 엄격 manifest v1, 읽기 전용 제한, 필수/해시·중복/버전·링크/실패 판정, 덮어쓰기 없는 JSON·HTML.
