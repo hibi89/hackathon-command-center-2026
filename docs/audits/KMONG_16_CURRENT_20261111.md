@@ -287,7 +287,7 @@ FFAX 안전한 AI 공급자 어댑터·로컬 검증 확장, Node96 PASS·mock12
 | **AZENTFLOW AX** | **UNASSESSED** | `Freelancer@product/hae-la-automation a578aee2`, HAE+LA+DBVORA | HAE 자체 85% 잠정; 기업형 연동/납품 별도 미개발, RELEASE HOLD |
 | **CITEVAULT AX** | **UNASSESSED** | `Freelancer@product/rag-enterprise-knowledge acf49366`, RAG+SMAX/PREP | RAG 자체 95% 잠정; 기업 다중권한/실소스·정식 설치 미검증, RELEASE HOLD |
 | **SITECRAFT AX [작업중]** | **UNASSESSED · 목표 P50 (검증 전)** | `Freelancer@product/rea-website-rebuild` / `REA_Web` 전용 격리 브랜치 예정, REA+Fable+Astra | 사용자 2026-11-13 P50 개발 지시. 합성 허가 fixture→pinned Fable 정적 GET→Astra 검토 초안→독립 Pro 앱 E2E 증거 구축 중. P50·공식률 아직 검증 안 됨; 원형 REA 85% 승계 금지, RELEASE HOLD |
-| **PROOFQA AX** | **UNASSESSED** | `Freelancer@product/proofqa-ax-delivery-audit 54b718f5`, CodeChecker+Graphify+agent-browser | 기존 Checker95%; 새로운 Graph/브라우저/보안 실제 통합 및 고객 인수 0회, HOLD |
+| **PROOFQA AX [작업중]** | **UNASSESSED · P50 목표(최종설계 기준 검증 대기)** | `Freelancer@product/proofqa-ax-delivery-audit 54b718f5`, CodeChecker+Graphify+agent-browser | 기존 Checker95%; 새로운 Graph/브라우저/보안 실제 통합 및 고객 인수 0회, HOLD |
 | **ONTOINSIGHT AX** | **UNASSESSED** | `Freelancer@product/ontoinsight-ax-data-analytics afda6eac`, AutoML+NVIDIA Auto Ontology 개념 | 기존 AutoML95%; 새 의미·관계/Excel·ML 누수검증 통합 0회, HOLD |
 
 **DATA2WEB Studio**는 본 문서의 활성상품 표에 이미 `UNASSESSED / 독립 실행 0%`로 기재돼 있어 중복 행을 추가하지 않음. PREP/FFAX/Factory AX는 위 후보 3행의 상태를 최신화. 해총 기존 활성17종의 개별 점수/집계·다른 담당자 `[작업중]` 및 `[사용자 개입 필요]` 표시 전부 유지. 이번 변경은 문서 동기화만이며 신규 코딩·CI/Production 없음.
