@@ -1,3 +1,15 @@
+## [2026-11-13 KST] AZENTFLOW AX P85 중앙 인수인계 필수 10항
+1. **목표·용도·확정 요구·기술:** Freelancer 상품 AZENTFLOW AX P85, 전체 승인 100점 정본 유지. HAE 로컬 승인형 UI+LA 독립 SQLite 실행+DBVORA read-only 계약 mock/감사/제한형 schedule.
+2. **완료 기능·결정근거:** 원본 HAE/LA/DBVORA 복제(A: 성능/보안 drift/유지관리 부담)보다 기존 원본 HAE→LA 실 실행+별도 localhost DBVORA mock(B: 외부 SaaS비 0, 소스 보호, 프로토콜만 분리) 채택. 3개 합성 업무, 모의 계약 정상/이상, audit/receipt, schedule 2+1, 미승인/용량/외부 작업 거절을 신규 P85 7 테스트로 구현·검증.
+3. **테스트 명령·성공/실패·미검증:** `cd apps/ax-flow && python -m unittest discover -s tests -p test_azentflow_p85_acceptance.py -v` (LA source staged). 실 SHA `a640666db7a1bf2011c5d2abc944f13199ce455f`; [Actions #43382552489](https://github.com/hibi89/HAE/actions/runs/43382552489) Windows & Ubuntu 각 P85 7PASS/0FAIL/0SKIP, P50/P70 10PASS, Node UI24PASS, full Python 각 290=281PASS/2FAIL/7SKIP. 전체 CI FAILURE 2는 ZIP/pyz parity. 실 고객 물리 Windows/Chrome/Edge/OS reboot/DBVORA 실 프로세스 미검증.
+4. **완료/진행/대기/차단:** `P85 synthetic technical gate PASS`; 공식 최종완성률 사용자 100점 기준 **UNASSESSED**. AZENTFLOW `[작업중]` 유지, 판매/배포 RELEASE HOLD, 크몽 미등록. 타 제품/기존 등록완료 표식 불변.
+5. **오류 증거·원인·시도·재시도 금지·대안:** 첫 P85 기능 SHA `39d9b4f6...` 테스트 response nested key 오류 1 ERROR, `a640666db7a1bf2011c5d2abc944f13199ce455f`에서 테스트만 수정 후 양OS 7/7. 기존 shipped zipapp/ZIP vs 소스 2 FAIL; skip·force push·무백업 바이너리 덮어쓰기 금지. 기존 출고물 backup+SHA, 별도 안전 build 및 실제 Windows 확인.
+6. **저장소/브랜치/SHA/경로:** HAE `hibi89/HAE@feature/axflow-mvp@a640666db7a1bf2011c5d2abc944f13199ce455f`, `apps/ax-flow/tests/test_azentflow_p85_acceptance.py`, LA `hibi89/HAE@feature/lightning-azent@36f9882eb50e0de9e85eedb320a5778c8321cda5` 조회(동적 checkout SHA assert 미실시). 제품 `hibi89/Freelancer@product/hae-la-automation/docs/P85_ACCEPTANCE_EVIDENCE_20261113.md`; 중앙 `docs/audits/FREELANCER_BRANCH_COMPLETION_REGISTRY_20261113.md`. 문서 최신 HEAD push 후 확인.
+7. **Production URL/Vercel/실행 환경:** GitHub Actions Ubuntu/Windows Python3.11 Node22, localhost HAE/DBVORA mock, 독립 LA CLI subprocess. 고객 Production URL/Vercel **미적용**.
+8. **원본·백업·인증 관리/수정 금지:** HAE 최초 HEAD `980faee4e6163a5cd7126b6ac6be10b5ace4e012`, Freelancer 이전 HEAD `24a726cc852f4474f623cc59f6a39dc3971d870e`; Git 복구 가능. 제품 원본 고객 자료·키·데이터/실 공급자·코어/ZIP·권한·환경변수·배포/요금 변화 없음.
+9. **다음 우선순위·절차·완료 기준·승인 사항:** P95 목표: 기존 출고 패키지 비교·backup 후 safe rebuild, CI0FAIL, 독립 DBVORA 실 서버와 backup/restore, OAuth 포함 시 사용자 승인 실 API, Windows10/11 Chrome/Edge 설치·검증·업데이트, 공식 100점 요구 추적·사용자 승인 배점 독립 검수. 완료 전 공식률 상승/표식 해제 불가. 외부 전송/원본 덮어쓰기/권한·요금 사전 승인.
+10. **갱신 시각(KST)·확인 범위·문서 기준 SHA:** 2026-11-13 KST. 원본 실 GitHub SHA `a640666db7a1bf2011c5d2abc944f13199ce455f` 및 Actions #43382552489 2 Jobs 검증, Freelancer P85 보고서/중앙 원장 근거. 출고물 parity/실 고객·Production/SOVIA/DBVORA 실 서비스 미검증. 본 문서 push 이후 GitHub remote SHA로 최종 확정.
+
 ## [2026-11-13 KST] BID AX P70 재진행 인수인계 — 10항
 
 1. 목표/기술: 사용자 전체 최종설계 70% 목표. BID AX R01–R21 최종설계 및 Python3.11+ 목표, SQLite/Tkinter 로컬 아키텍처.
