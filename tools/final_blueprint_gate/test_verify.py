@@ -207,7 +207,7 @@ class CentralPinRegistryTest(unittest.TestCase):
     def test_registered_repository_pins_are_unique(self):
         repo_names = [x["repository"].lower() for x in self.pins]
         self.assertEqual(len(repo_names), len(set(repo_names)))
-        self.assertEqual(len(repo_names), 28)
+        self.assertEqual(len(repo_names), 31)
 
     def test_enforced_repos_match_fail_closed_code_list(self):
         enforced = {x["repository"].lower() for x in self.pins if x["mode"] == "enforce"}
@@ -218,12 +218,12 @@ class CentralPinRegistryTest(unittest.TestCase):
         pinned = {x["repository"].lower() for x in self.pins}
         missing = {x.lower() for x in self.registry["not_pinned_main"]}
         self.assertFalse(pinned & missing)
-        self.assertEqual(len(missing), 7)
+        self.assertEqual(len(missing), 4)
 
     def test_git_blob_fingerprint_and_main_paths_are_valid(self):
         from canonical_scope import SHA40
         for pin in self.pins:
-            self.assertEqual(pin["ref"], "main")
+            self.assertTrue(pin["ref"] == "main" or pin["ref"].startswith("feature/"))
             self.assertRegex(pin["git_blob_sha"], SHA40)
             self.assertTrue(pin["path"].endswith((".md", ".txt")))
             self.assertIn(pin["mode"], ("enforce", "observe"))

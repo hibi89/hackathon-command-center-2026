@@ -27,6 +27,27 @@ jobs:
           ref: main
           path: .final-blueprint-canonical
           persist-credentials: false
+      - name: Read AI_AutoML_Analyst audited feature scope (read-only)
+        if: github.repository == 'hibi89/AI_AutoML_Analyst'
+        uses: actions/checkout@v4
+        with:
+          ref: feature/kmong-p6e50-owner-delivery-20261112
+          path: .final-blueprint-canonical
+          persist-credentials: false
+      - name: Read SMAX audited feature scope (read-only)
+        if: github.repository == 'hibi89/SMAX'
+        uses: actions/checkout@v4
+        with:
+          ref: feature/prep-self-owner-mapping-p8
+          path: .final-blueprint-canonical
+          persist-credentials: false
+      - name: Read EAI audited feature scope (read-only)
+        if: github.repository == 'hibi89/EAI'
+        uses: actions/checkout@v4
+        with:
+          ref: feature/kmong-eai-85-p31-20261112
+          path: .final-blueprint-canonical
+          persist-credentials: false
       - name: Validate evidence and canonical scope without guessing completion
         run: python3 .final-blueprint-verifier/tools/final_blueprint_gate/verify.py --repo . --canonical-root .final-blueprint-canonical --output blueprint-gate-result.json
       - name: Archive report in caller repository only

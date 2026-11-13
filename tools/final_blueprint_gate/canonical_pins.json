@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "kind": "OBSERVED_GIT_BLOB_NOT_OWNER_SIGNED",
-  "note": "All paths/blobs are observed main-tree identities, not independent proof that the file contains the complete user-approved blueprint. Enforced pins require independent change review; generic requirements are observed only.",
+  "note": "31 audited file fingerprints across 35 repositories: 28 anchored at main and three observed in identified feature branches; none proves all user-confirmed final requirements. 9 definitive documents enforce, 22 other candidates observe. 4 do not have a defensible canonical anchor.",
   "pins": [
     {
       "repository": "hibi89/Bid_Owl",
@@ -226,15 +226,36 @@
       "git_blob_sha": "1c12a144f8ac4fff78e2fb244b0debfe1ae50f72",
       "mode": "enforce",
       "approval_status": "INDEPENDENT_SCOPE_APPROVAL_NOT_CERTIFIED"
+    },
+    {
+      "repository": "hibi89/AI_AutoML_Analyst",
+      "ref": "feature/kmong-p6e50-owner-delivery-20261112",
+      "path": "REQUIREMENTS.md",
+      "git_blob_sha": "cb61342f9cf3c71278be61a21397068ec9de752c",
+      "mode": "observe",
+      "approval_status": "INDEPENDENT_SCOPE_APPROVAL_NOT_CERTIFIED"
+    },
+    {
+      "repository": "hibi89/SMAX",
+      "ref": "feature/prep-self-owner-mapping-p8",
+      "path": "REQUIREMENTS.md",
+      "git_blob_sha": "2f16ea3b112394bb0164c6d61d5c7a6e16e6dc62",
+      "mode": "observe",
+      "approval_status": "INDEPENDENT_SCOPE_APPROVAL_NOT_CERTIFIED"
+    },
+    {
+      "repository": "hibi89/EAI",
+      "ref": "feature/kmong-eai-85-p31-20261112",
+      "path": "REQUIREMENTS.md",
+      "git_blob_sha": "20b6fbdb690f6a3d032a374f773bf3f6586af2bf",
+      "mode": "observe",
+      "approval_status": "INDEPENDENT_SCOPE_APPROVAL_NOT_CERTIFIED"
     }
   ],
   "not_pinned_main": [
-    "hibi89/AI_AutoML_Analyst",
     "hibi89/self-hosted-n8n-reliability-lab",
     "hibi89/project-book",
-    "hibi89/SMAX",
     "hibi89/RAG_STUDIO",
-    "hibi89/EAI",
     "hibi89/work-hell-dungeon"
   ]
 }

@@ -47,7 +47,7 @@ def inspect_canonical(repo, canonical_root=None, pins_path=None):
               "path": pin.get("path"), "expected_git_blob_sha": pin.get("git_blob_sha"),
               "scope": "file identity only; owner acceptance not certified",
               "mode": pin.get("mode", "observe")}
-    if pin.get("ref") != "main" or pin.get("mode") not in ("observe", "enforce") or not isinstance(pin.get("git_blob_sha"), str) or not SHA40.fullmatch(pin["git_blob_sha"]):
+    if (not isinstance(pin.get("ref"), str) or not re.fullmatch(r"(?:main|feature/[A-Za-z0-9._/-]+)", pin["ref"]) or ".." in pin["ref"].split("/")) or pin.get("mode") not in ("observe", "enforce") or not isinstance(pin.get("git_blob_sha"), str) or not SHA40.fullmatch(pin["git_blob_sha"]):
         return {**result, "status": "INVALID_PIN"}, ["invalid canonical pin ref or fingerprint"]
     if canonical_root is None:
         return {**result, "status": "CHECKOUT_MISSING"}, ["same-repository main checkout required"]
