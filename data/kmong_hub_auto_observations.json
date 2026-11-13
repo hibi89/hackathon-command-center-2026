@@ -246,12 +246,12 @@
     },
     {
       "gate": {
-        "conclusion": null,
+        "conclusion": "success",
         "head_sha": "0cf969fb2908cca985f4655d2c713ad7e030d168",
         "matches_current_head": true,
         "run_id": 43525453685,
         "status": "LATEST_RUN",
-        "workflow_status": "in_progress"
+        "workflow_status": "completed"
       },
       "head_sha": "0cf969fb2908cca985f4655d2c713ad7e030d168",
       "record_id": "CANDIDATE-06",
@@ -866,12 +866,12 @@
         {
           "branch": "product/rag-enterprise-knowledge",
           "gate": {
-            "conclusion": null,
+            "conclusion": "success",
             "head_sha": "0cf969fb2908cca985f4655d2c713ad7e030d168",
             "matches_current_head": true,
             "run_id": 43525453685,
             "status": "LATEST_RUN",
-            "workflow_status": "in_progress"
+            "workflow_status": "completed"
           },
           "head_sha": "0cf969fb2908cca985f4655d2c713ad7e030d168",
           "status": "PRESENT"
