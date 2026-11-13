@@ -1,3 +1,16 @@
+## [2026-11-14 KST] WORKNOVA Desk WD-13 오프라인 EXE 빌드 준비 — 인수인계 10항
+
+1. **목표·설계·기술:** WD-01~14 사용자 승인 총100점(고정), 전체 구매자 수용 증거 최소85점. Python3.11+/SQLite/Tk Windows10/11 오프라인 프로그램; 비용0·외부 전송0.
+2. **완료·변경·결정:** A) 로컬 Windows PyInstaller --onedir EXE 후보와 B) 비공개 Actions Windows 빌드 비교. 월 포함분 초과 과금 위험 없는 A의 **소스 빌드 준비**만 수행. 새 진입점·빌드 도구·경로보호 테스트3파일, 원래 소스 ZIP/DB/GUI 업무 로직·최종 배점 불변. 실제 EXE **미생성**.
+3. **테스트 실적:** Linux Python3.13.5 새 스크립트 격리 **12PASS/0FAIL/0SKIP**·compileall·plan PASS; GitHub 3파일 readback 일치. 제품 전체 153PASS/Tk5/ZIP15는 이전 SHA 증거이며 신규 코드 통합 테스트는 **NOT_RUN**. 실제 Win10/11 PyInstaller·앱 설치/복구·Word/Defender/ACL/실고객·서명은 NOT_RUN.
+4. **완료/진행/대기/차단:** 제품 WD-13 부분 준비만. 전체 WD별 구매자 완전 수용 PASS 항목 0, 공식 **0/100**, 목표85 미달, **[작업중] / RELEASE HOLD / 실상품 미등록**. 구현률이 0이라는 뜻 아님.
+5. **실패 근거·재시도·대안:** 현재 Linux 호스트, PyInstaller 미설치·비크로스 컴파일러, private runner 비용 미승인. --plan 저장소 내부 경로 거부는 의도된 fail-closed, 외부 경로에서 PASS. 유료 CI/환경변수/OS 보안 정책 변경 또는 성공 허위 표시 금지.
+6. **레포·브랜치·SHA·경로:** `hibi89/Freelancer@product/worknova-desk-local`, 신규 테스트 소스 SHA `59513923fa36c26da980080123cd0f7897755fe1`, 제품 문서 HEAD `8455b2950b1d59d3f2167b3b4d7652262573c7c1`; 복구 기준 `a1517ad41c26a9d8de374c29c44f98ca1b07971c`. 중앙 `hibi89/hackathon-command-center-2026@kmong-productization` [최종 원장](https://github.com/hibi89/hackathon-command-center-2026/blob/kmong-productization/docs/audits/KMONG_16_CURRENT_20261111.md).
+7. **Production/환경·명령:** Vercel/Production N/A. 실 Win 시험 전용 `py -3 -B tools\\windows_acceptance.py` 및 설치된 PyInstaller가 있을 경우 `py -3 -B tools\\windows_build_exe.py --out NEW_NONEXISTENT_DIRECTORY`; Win 실행 미확인. 테스트 명령 제품 문서 참조.
+8. **원본·백업·인증 변경금지:** 기존 실제 고객 데이터/백업, PayPal 해커톤 원본, Freelancer main/다른 제품/등록완료 이력, 토큰·사용자 폰트·서명 인증서, OS 설정 전부 불변. 원본 코드 git SHA로 복구 가능. 제품의 실제 DB는 평문이며 OS 보안 책임 미검증.
+9. **다음 우선/승인·완료조건:** 실제 소유 Win10/11 비관리자 GUI/EXE·PowerShell 설치/복구·권한 시험, 독립 서명·실제 Word/PDF·상업 폰트/LICENSE·실구매자 10건/지원·환불 승인. WD-01~14 각 항목 전체 완전 검증점수 합 >=85 + 안전 승인 이후만 인증/판매. 유료·고객자료·OS 정책 변경은 사전 승인.
+10. **갱신일·범위·문서 SHA:** 2026-11-14 KST. 제품 코드 12 신규 Linux unit tests와 정확 GitHub readback만 새 근거, 실 Windows/사용자/법률 및 전체 통합 회귀 미검증. 중앙 원장 이전 제품 HEAD 대비 1행 수정 완료; **본 중앙 HANDOFF 문서 커밋 후 원격 HEAD 재조회**.
+
 ## [2026-11-14 KST] CITEVAULT AX P85 Ed25519 PREP/SMAX 실 HTTP 연결 — 인수인계 10항
 
 1. **목표·용도·확정 요구·기술:** 사용자 CITEVAULT AX 전체 최종설계 100% 대비 85% 목표. 실제 기업 계정·문서 ACL, 검증된 원본 RAG BM25/native/SQL, signed PREP/SMAX→승인 AX, 한국어 로컬 모델·Windows/고객 Gold 수용 필요. 공식 UNASSESSED, 85% 미검증.
