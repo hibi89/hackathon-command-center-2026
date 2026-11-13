@@ -1,3 +1,15 @@
+## [2026-11-13 KST] FlowPilot Universal P70 독립기술·중앙 완성률 동기화 — 인수인계 10항
+1. **목표·최종설계·기술:** F01–F10 전체 최종설계 고객용 파일/USB/권한 있는 SMB 납품검수, Windows 로컬 Python3.11 stdlib Tkinter/SQLite. 사용자 목표 공식 최종완성률 70%; 승인된 100점 가중치 부재로 공식률 UNASSESSED.
+2. **구현/선택:** 대회 원본과 격리된 `product/flowpilot-universal` 브랜치에 기존 P50 오프라인 SHA/검수 원리 보존. GUI·명시 동의·SQLite 검사 원장/새 JSON·HTML/명시적 백업·취소시 INCOMPLETE/전체 재검사·폴더 재목록 및 25k 상한 추가. 로컬 Tk 방식은 localhost 서버 노출·구독비·NAS API 의존 회피.
+3. **테스트:** `cd products/flowpilot_universal && python -m unittest discover -s tests -p 'test_*.py' -v && python -m compileall -q flowpilot_universal`. 정확 기능 SHA `e6d4d450cf2014d985f9cf97be1d91d5ab4d63ec`, 문서 HEAD `563bf7f6c73eba4871b459d030c868852f9c10b2`, [최종 HEAD #43380053271](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/actions/runs/43380053271) Linux30/30 Windows30/30 0FAIL/0SKIP, 2/2 SUCCESS; 문서 규칙 [#43380053520](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/actions/runs/43380053520) SUCCESS. 실제 GUI 고객 PC/NAS 미검증.
+4. **현황:** P70 내부 기술 하위범위는 구현·합성 CI 검증. 전체 P70/공식 최종 70%는 승인 가중치·증분 재개·실현장 E2E 부재로 미달/미산정. `FlowPilot Universal [작업중]` 잠금 유지, RELEASE HOLD/SALE NO-GO.
+5. **실패·원인·개선:** P70 최초 Windows #43378833989 1FAIL/2ERROR → 디렉터리 시각·Windows Temp 8.3 경로 테스트 및 SQLite 연결 미종료 원인; 재목록·핸들 닫기·경로 독립 race fixture 개선. #43379066990 1FAIL/1ERROR, #43379228038 1FAIL 이후 #43379366921 27PASS/OS, #43379604599 30PASS/OS. 실패 기록은 보존, 진정 원자적 디렉터리 스냅샷 보장은 금지.
+6. **레포·브랜치·SHA:** 소스 `hibi89/hibi89-ugreen-nas-hackathon@product/flowpilot-universal` HEAD `563bf7f6c73eba4871b459d030c868852f9c10b2`; 파일 `products/flowpilot_universal/{BLUEPRINT.md,P70_EVIDENCE.md,STATUS.md,HANDOFF.md,flowpilot_universal/{engine,session,gui}.py,tests/test_session.py}`. 중앙 `hibi89/hackathon-command-center-2026@kmong-productization`, 본 4문서 동기화 이후 HEAD 재조회.
+7. **Production·환경:** Python3.11 Linux/Windows Actions, `python -m flowpilot_universal.gui`, 호스팅/고객 배포/Vercel URL **미적용**. 실제 GUI 클릭 테스트 미실행, Headless import PASS.
+8. **원본·복구·보안:** 읽기 전용 원본 스캔, 새 파일만 출력, 고객명/해시는 민감하므로 로컬에만; source/리포트 삭제·덮어쓰기 자동화 없음. SQLite는 명시적 create-only 백업(자동 파괴 복원 금지). 롤백은 독립 제품 커밋 되돌리기; 기존 대회 `lead/ugreen` 및 `main`·UGREEN Skill/원본 코드, 타 제품·토큰·Production 변경 없음.
+9. **다음 과제/완료:** 안전한 증분 resume 또는 사용자 공식 수용기준 변경, Windows10/11 실 GUI·USB·승인된 실제 SMB 다기종, 권리/기밀·고객 PDF/EXE·백업 검증, 고정 F01-F10 사용자 가중치와 독립 검수 후 공식 70% 판정. 권한·유료·외부공개는 별도 승인.
+10. **검증시점/범위/문서 기준:** 2026-11-13 KST, 원격 코드/CI 정확 일치. 현재 해총 29원천/19게시글 후보·다른 제품·등록완료 및 [작업중] 마커/수치 불변; 이 중앙 커밋 후 실제 HEAD와 내용 확인해야 인수인계 완료. GUI 물리 윈도우·고객/NAS·판매는 미검증.
+
 ## [2026-11-13 KST] PROOFQA AX P70 실제 CLI·Chromium 검증 및 해총 동기화 — 필수 10항
 
 1. **목표/용도/최종 요구/기술:** Private `hibi89/Freelancer@product/proofqa-ax-delivery-audit` 원래 `docs/FINAL_BLUEPRINT.md`의 P70. P50 기존 안전 ZIP 정적 CodeChecker→Graphify 실제 AST 관계→agent-browser 실제 합성 staging UI/HTTP 검증, 외부 서버/고객 코드 기본 금지. 상위 최종 100점 설계/보안/고객 인수 범위 보존.
