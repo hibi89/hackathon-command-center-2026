@@ -1,3 +1,8 @@
+## [2026-11-13 KST] FlowPilot Universal P85 체크리스트 승인·실 Windows junction·EXE 전체 ZIP 재배치 CI PASS / 공식 85% 미인증
+- 독립 제품 `hibi89/hibi89-ugreen-nas-hackathon@product/flowpilot-universal` 기능 SHA `458673ddbec8102dadc04c45ffe1a03f646c119a`, 문서 HEAD `44301fd666fd89bff4339b36b3bf30641dea977e`. [Linux/Windows CI](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/actions/runs/43395109341) Windows 94 unique PASS /0FAIL/0SKIP (실 NTFS junction3PASS), Ubuntu 91PASS/3SKIP(Windows 전용), Tk 실 GUI 5PASS/OS, portable8 중복 재실행/OS, compileall 및 2/2 SUCCESS.
+- Tk 편집기에 사용자 독립 승인된 계약/납품 경로+선택 SHA 입력, 중복/경로탈출/원본저장·덮어쓰기 차단 및 schema-v1 JSON 신규 저장. Win 실제 mklink /J 중첩·소스·출력 junction 3종 거부. [Windows onedir EXE](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/actions/runs/43395109335) SHA 전체 ZIP→새 폴더 압축해제→개발용 Python PATH 없이 EXE synthetic 자체검사 EXIT0, unsigned/미배포.
+- 공식 최종설계 100점 승인 가중치 및 물리 Win10/11·USB·권한 SMB NAS·설치/서명/AV/라이선스·고객 인수 미검증. **공식 UNASSESSED, 85% 미인증, FlowPilot [작업중] 유지, RELEASE HOLD/미등록.** 기타 등록완료/상품 수치·UGREEN lead/main/공식 Skill·원본 불변. [근거](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/product/flowpilot-universal/products/flowpilot_universal/P85_GUI_NTFS_RELOCATED_EVIDENCE.md).
+
 ## [2026-11-13 KST] CITEVAULT AX P85 원본 문서형 실검증 추가 — 105 PASS / 3 SKIP
 
 - **정본:** `hibi89/Freelancer@product/rag-enterprise-knowledge 22151f77eeccf4a248ca02a86ca40fc9b2290d77`; original RAG pinned `c5867b3951f51bfa97cadd1aad8fb13e9cf9e604`. 해총 크몽 감사표/프리랜서 상품 등록부 CITEVAULT 행만 최신화. 최종설계 85% 사용자 목표 **공식 UNASSESSED/미검증**, `[작업중]`, `RELEASE HOLD`.
