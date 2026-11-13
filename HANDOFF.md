@@ -1,3 +1,16 @@
+## [2026-11-13 KST] CITEVAULT AX P85 영속 원장 — 중앙 10항 인수인계
+
+1. **목표·확정 요구·기술:** 기업용 CITEVAULT AX 최종설계 대비 85% 사용자 요청. 실제 기업 인증/ACL, 고객 허가된 PREP/SMAX→AX, RAG 문서 PDF/DOCX+정형 SQL, 한국어 모델, Windows 인수까지 전체 기준. 공식 완성률 **UNASSESSED**.
+2. **완료·변경·설계 선택:** 기존 RAG 전체 선로딩 후 ACL 방식을 폐기하고, 독립 local synthetic tenant vault의 원문 읽기 전 검사 유지. JSON 스냅샷보다 SQLite 트랜잭션 선택, P85 durable metadata·계정 revocation/문서 버전 폐기/재색인·원자 audit. 기존 원본 RAG·PREP·SMAX 수정 없음.
+3. **테스트 명령·검증 수:** Node22.16 `node --test tests/p85-vault.test.mjs tests/p85-loopback.test.mjs tests/p85-state-store.test.mjs` **58PASS/0FAIL/0SKIP**. P50/P70/P85 로컬 통합 **95total/92PASS/0FAIL/3SKIP**, SKIP은 pinned 원본 RAG checkout 3건. GitHub SHA와 로컬 6개 코드/테스트 blob 동일. 독립 소스 ZIP 압축 해제 후 58PASS. GitHub Actions hosted/Windows **미검증**.
+4. **진행·대기·차단:** 합성 계정/접근·문서 상태 영속화 일부 구현, 상용 진짜 employee IAM/IdP, source rights/producer 승인 AX, 실제 RAG PDF/DOCX+SQL 연결, 한국어 모델/고객 Win10/11 Gold 미완. **[작업중], RELEASE HOLD**.
+5. **오류·근거·시도·대안:** P85 폐기된 문서의 `CATALOG_INVALID` 회귀 수정, stale generation 원자 transaction+감사 기록 테스트, 다른 프로세스 계정 철회/폐기 즉시 차단 검증. 원본 RAG checkout container DNS 실패는 이전부터 확인되어 동일 방법 무의미 반복 금지; hosted Actions 결과를 코드만으로 추정하지 말 것. 승인 없는 실권한 변경 금지.
+6. **저장소·브랜치·SHA·경로:** 제품 `hibi89/Freelancer@product/rag-enterprise-knowledge` 문서 commit `6fb66efd14dd95dd64ebfb1305ef872478ff1524`, 복구 기준 P85 추가 개발 전 `f2ccc5623440b44433ea41ebf814e4de61c74541`. Pinned RAG `c5867b3951f51bfa97cadd1aad8fb13e9cf9e604`. 근거 정본 `docs/P85_DURABLE_EVIDENCE_20261113.md`; central candidate audit/registry 최신 CITEVAULT row, 본 인수인계 커밋 이후 정확 HEAD 재확인.
+7. **Production URL·Vercel·실행/환경:** Production 배포/URL/Vercel 미적용, Node 22 built-in `node:sqlite` 실험적, Linux local test/127.0.0.1 합성 HTTP ephemeral 포트, GitHub Actions Linux/Windows matrix 정의만. 외부 서비스/요금/권한 변경 없음.
+8. **원본·백업·비밀·금지:** 기존 RAG/PREP/SMAX 원본 데이터, 고객 계정/실문서, 원격 배포/도메인/환경변수·크몽 타 제품/등록 기록 불변. Git 작업 시작 SHA 복구점. SQLite는 합성 메타데이터·scrypt verifiers만, 세션 키/실고객 데이터 저장 0.
+9. **다음 작업·승인·완료 조건:** 원본 pinned RAG PDF/DOCX 2+ 실제 CI logs/SQL/SMAX 검증→실 직원 IdP 및 실제 고객 데이터/승인·서명 AX 전환은 보안·권한/외부 데이터 사전 승인→한국어 실제 모델 라이선스/벤치, Win10/11 고객 Gold·보안·백업→사용자 확정 전체 100% 가중치 기반 85% 검수. [작업중] 목표 전 제거 금지.
+10. **시각·검증 범위:** 2026-11-13 KST, 코드 exact Git blob, P85 58PASS, 합계 92PASS/3SKIP, ZIP 재현. Hosted Windows, CI push logs, 고객 IAM, 원본 RAG/native PDF/DOCX/SMAX, 실제 모델, 상품 배포, 최종 85 **미검증**.
+
 ## 2026-11-13 KST — WORKNOVA DESK P85 HARDENING affb062c6251 (별도 제품 인수인계)
 1. 목표: 최종 WD01..14 85%, 공식 **UNASSESSED** / 완료 불인정
 2. 변경: 독립 DB 여섯 테이블 해시 체크포인트·변경탐지, 포터블 v2 파일 검증; 클라우드 공증 대비 로컬 비용·보안 장단점 비교 후 오프라인안 채택
