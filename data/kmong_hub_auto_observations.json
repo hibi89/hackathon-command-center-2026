@@ -52,13 +52,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "265acdf2aceaf5700d97d1d9a251c2a3510c4587",
+        "head_sha": "3be54cf79a31f0a7f6b680991e7220aede973d7b",
         "matches_current_head": true,
-        "run_id": 43393104733,
+        "run_id": 43394653204,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "265acdf2aceaf5700d97d1d9a251c2a3510c4587",
+      "head_sha": "3be54cf79a31f0a7f6b680991e7220aede973d7b",
       "record_id": "ACTIVE-05",
       "repository": "hibi89/data2web_studio",
       "status": "PRESENT",
@@ -614,13 +614,13 @@
           "branch": "feature/final-blueprint-p85-evidence-20261113",
           "gate": {
             "conclusion": "success",
-            "head_sha": "265acdf2aceaf5700d97d1d9a251c2a3510c4587",
+            "head_sha": "3be54cf79a31f0a7f6b680991e7220aede973d7b",
             "matches_current_head": true,
-            "run_id": 43393104733,
+            "run_id": 43394653204,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "265acdf2aceaf5700d97d1d9a251c2a3510c4587",
+          "head_sha": "3be54cf79a31f0a7f6b680991e7220aede973d7b",
           "status": "PRESENT"
         },
         {
@@ -947,7 +947,7 @@
     {
       "canonical": {
         "expected_git_blob_sha": "521ba0cb458bea384639a0ef897ce7500d33b8f1",
-        "head_sha": "9400e1a6383a9a6bd85091ffb31165a0bc3160f9",
+        "head_sha": "cb3624574ca2ae02bbd8f725b4d3497c27d2f010",
         "mode": "observe",
         "observed_git_blob_sha": "521ba0cb458bea384639a0ef897ce7500d33b8f1",
         "owner_approval_verified": false,
@@ -960,12 +960,12 @@
         "gate": {
           "conclusion": "success",
           "head_sha": "9400e1a6383a9a6bd85091ffb31165a0bc3160f9",
-          "matches_current_head": true,
+          "matches_current_head": false,
           "run_id": 43394173506,
           "status": "LATEST_RUN",
           "workflow_status": "completed"
         },
-        "head_sha": "9400e1a6383a9a6bd85091ffb31165a0bc3160f9",
+        "head_sha": "cb3624574ca2ae02bbd8f725b4d3497c27d2f010",
         "status": "PRESENT"
       },
       "repository": "hibi89/hackathon-command-center-2026",
