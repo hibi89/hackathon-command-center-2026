@@ -1,3 +1,16 @@
+## [2026-11-13 KST] CITEVAULT AX 사용자 P70 — 중앙 10항 최신 인수인계
+
+1. **목표·기술:** 기업형 CITEVAULT RAG 최종설계 대비 70% 사용자 목표. RAG Studio BM25/SQLite/PDF/DOCX+PREP/SMAX 승인+기업 ACL/근거 검색. 현재 공식 최종설계 `UNASSESSED`, 70% 검증 미달.
+2. **완료·설계 선택:** RAG 코어 재작성 대신 private Freelancer 브랜치에 P70 synthetic-only policy/검색 wrapper/테스트 추가, 원본 RAG 코드 pin 참조·안전한 별도 CI. 성능/유지비·원본 보존 우선. 원본 RAG/PREP/SMAX/고객자료 불변.
+3. **테스트:** 원격 기준 실제 V8 pure JS 정책 `tests/p70.test.mjs` 24PASS/0FAIL; Node host 원본 bridge 6개 및 P512/P538/P540/P549 CI source tests는 작성/설정했으나 run/job log 미확인. 과거 P50 Node 단독 3PASS/3SKIP 별도, 70% 증거로 미전용.
+4. **진행/차단:** CITEVAULT **[작업중]** 유지, P70 미달·RELEASE HOLD/SALE NO-GO. 핵심 corporate IAM/인가 source package·권한 전 로딩 차단·고객 Windows 수용 미완. P70 가중치/제품 E2E 공식 산정 대기.
+5. **실패 시도/대안:** container github.com DNS 실패로 원본 checkout 미실행; connected GitHub API로 소스/커밋·blob 검증, pure policy V8 실행. PR-run 전용 조회에서 push CI 상태 결론 불가; GitHub Actions run ID 확보 또는 정상 checkout으로 정확 코드 test 필요. 허위 CI PASS/재시도 반복 금지.
+6. **저장소·브랜치·SHA:** `hibi89/Freelancer@product/rag-enterprise-knowledge` 제품 P70 문서 SHA `f3dce9d01ab2d40a4c53f0337b36592a21be8bc0`, RAG 원본 `c5867b3951f51bfa97cadd1aad8fb13e9cf9e604`; 중앙 후보 표 commit `42efe015614a09d7ac59faf1d1bf5bf2a6a61750`, 별도 후보 등록부 `8c25ae1c5a5b239fda53009b76c97cbdc3a65751`. 본 문서 이후 최신 HEAD 재확인.
+7. **실행/배포 환경:** Node 22, Ubuntu Actions YAML만 구성, 원본 PDF.js/Mammoth 시험 정의, 유료 LLM/외부 송신 0. Vercel/Production 미적용.
+8. **원본·복구·보안:** P70 작업 전 Git 제품 SHA `6c36d02e71a751c8473b0bb36c9dc8b2c5ed460c` 복구 기준, 공개/비공개 원본·권한·자격증명·실자료·기존 서비스 기록 유지. `SYNTHETIC_ONLY` 주장만으로 실제 신원을 인증하지 않음.
+9. **다음 작업·승인:** CI run/job 정확 PASS 근거 확인→실 승인된 PREP/SMAX→AX 계약 서명·폐기 및 기업 IAM/ACL-before-read 아키텍처 구현은 보안 변경 사전 승인→실 고객 디바이스 QA→사용자 승인된 가중치 기준 70 재판정. 타 프로젝트 작업중/미등록/등록완료 이력 보호.
+10. **갱신 시간/범위:** 2026-11-13 KST, GitHub 코드·설계·원본 pinned source 조회, 독립 V8 24/24 결과, 제품·중앙 Git commit readback. Hosted Actions, Windows, PDF/DOCX 실제 통합, 승인 고객 자료, Production, 공식 70 **미검증**.
+
 ## [2026-11-13 15:22 KST] Vercel 상시 이벤트 수신 공개 API 확인 — 10항 인수인계
 1. **목표·기술·확정 요구:** GitHub App Webhook push/CI→Vercel Serverless→별도 중앙-only GitHub App Actions:write→기존 Source App 읽기전용 35 repo 중앙 수집, 일일 11:10 KST 점검 fallback.
 2. **완료 기능·결정 근거:** 사용자 UI Vercel Production 배포에 이어 공개 `GET /api/webhook`에서 실제 `{"status":"not_configured"}` 화면 표시됨. 코드의 fail-closed 초기 상태와 일치. 앱 빌드/접근 라우팅 증거지만 실제 Webhook 인증/실행 증거는 아님. 기존 Source App 권한 넓히지 않고 중앙 전용 App 별도 생성 정책 유지.
