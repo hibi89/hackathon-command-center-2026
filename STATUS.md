@@ -1,3 +1,8 @@
+## [2026-11-14 KST] WORKNOVA Desk Windows EXE 파일 크기/SHA256/MZ 현장 확인
+
+- 사용자가 Windows 10.0.26200에서 PyInstaller6.22.3 onedir 빌드한 `WORKNOVA-Desk.exe`에 대해 **Length 7,107,722 bytes**, **SHA256 `A7CD6B052108E5630E4AD50151841F0B812654F22E87CFE8338E22CB12A5C23E`**, **MZ header PASS**를 PowerShell에서 재확인. 바이너리 파일 자체는 전달받지 않았으며 전체 PE/코드서명·Defender/SmartScreen 안전성·런타임은 미검증. [제품 증거](https://github.com/hibi89/Freelancer/blob/product/worknova-desk-local/docs/P85_WINDOWS_EXE_BUILD_RESULT_20261114.md), 제품 HEAD `e21aff02b7049ca2b4a917c00c5cf5013d43270b`.
+- 다음 Windows 테스트는 기존 고객 DB 접근 차단을 위해 **자식 EXE 프로세스 한정** 새 %TEMP% LOCALAPPDATA 디렉터리로 실행, 새 빈 합성 장부 GUI 및 파일 생성 확인. 아직 EXE 직접 실행은 NOT_RUN. 사용자 승인 WD01~14 총100점, WD13은 PARTIAL/0, 공식 **0/100·85미달·[작업중]/RELEASE HOLD/미등록** 불변. 중앙 WORKNOVA 한 행 갱신, 타 제품/등록완료 이력 불변.
+
 ## [2026-11-14 KST] WORKNOVA Desk 사용자 native Windows EXE 빌드 최초 성공 (실행은 미검증)
 
 - 사용자 Windows 10.0.26200/Python3.11.9/PyInstaller6.22.3 `--onedir --windowed` 직접 빌드 로그에서 EXE·COLLECT `completed successfully`, `Build complete!`와 EXE 파일 존재 확인. 이전 build wrapper `PYTHONNOUSERSITE=1`로 PyInstaller 모듈 미발견 문제를 `--plan` 인자 직접 실행으로 우회. 새 증거 `hibi89/Freelancer@product/worknova-desk-local` [EXE 빌드 원장](https://github.com/hibi89/Freelancer/blob/product/worknova-desk-local/docs/P85_WINDOWS_EXE_BUILD_RESULT_20261114.md).
