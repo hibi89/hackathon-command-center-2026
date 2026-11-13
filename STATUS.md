@@ -1,3 +1,8 @@
+## [2026-11-14 KST] WORKNOVA Desk 네이티브 EXE 정상 종료·격리 SQLite 생성 성공
+
+- 사용자 Win10.0.26200 소유자 콘솔: WORKNOVA EXE onedir 빌드/MZ/SHA256 확인→첫 빈 장부 생성 동의 후 Tk GUI 메인 한글/4탭 표시→EXE 창 X 종료, `$p.WaitForExit()` 뒤 **`ExitCode : 0`**, **`TestDatabaseExists : True`**. EXE 자식 `LOCALAPPDATA` 환경변수만 신규 `TEMP/worknova-gui-qa-<GUID>` 경로로 지정; 기존 실 고객 장부와 분리. 공식 [제품 실행 증거](https://github.com/hibi89/Freelancer/blob/product/worknova-desk-local/docs/P85_WINDOWS_EXE_BUILD_RESULT_20261114.md), 제품 SHA `9fe4925038c4f72344b4529a2892365b5473f3f1`.
+- **범위:** Windows EXE의 GUI 시작/화면/정상종료 및 임시 SQLite 파일 존재까지만 PASS. DB 내용/무결성·업무 기능(견적/계약/수금)·데이터 재실행·Windows ACL/상시DB암호화/서명·Defender·권리/실고객·무Python PC는 미검증. WD11/13 부분; 사용자 승인 WD01~14 고정100점 엄격한 전체 인수 공식 **0/100, 85 미달, [작업중], RELEASE HOLD, 크몽 미등록**. 중앙 감사표 WORKNOVA 한 행만 갱신, 다른 제품/등록완료 이력 불변.
+
 ## [2026-11-14 KST] WORKNOVA Desk native EXE 메인 GUI 스크린샷 시각 검증
 
 - 사용자 제공 실제 Windows 이미지에서 `WORKNOVA Desk — 로컬 계약·납품 장부` 메인 GUI 최초 표시 확인. 한글 오프라인 안내·거래처 검색·4업무 탭·견적·계약·납품·수금·백업 버튼 렌더링. 직전 사용자 빌드/EXE 크기7,107,722/SHA256 `A7CD6B052108E5630E4AD50151841F0B812654F22E87CFE8338E22CB12A5C23E`/MZ PASS의 후속 실 EXE GUI 증거, 상세 `hibi89/Freelancer@product/worknova-desk-local` [기록](https://github.com/hibi89/Freelancer/blob/product/worknova-desk-local/docs/P85_WINDOWS_EXE_BUILD_RESULT_20261114.md), 제품 HEAD `ed49e1e4879d8b0c309090fe5c845f51440ea9bc`.
