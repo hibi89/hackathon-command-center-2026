@@ -52,13 +52,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "e85c6545512a93f273fc3472103aeab3347fafc9",
+        "head_sha": "b5218a9c1f3d400c3fc9a4371a1c1e8435048672",
         "matches_current_head": true,
-        "run_id": 43390734856,
+        "run_id": 43391495434,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "e85c6545512a93f273fc3472103aeab3347fafc9",
+      "head_sha": "b5218a9c1f3d400c3fc9a4371a1c1e8435048672",
       "record_id": "ACTIVE-05",
       "repository": "hibi89/data2web_studio",
       "status": "PRESENT",
@@ -302,13 +302,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "0a05797a3a30e886c81dead9c266905ef2235f8c",
+        "head_sha": "42fa2aaa3e7077721ebfeb10f9bacc09ad109a8b",
         "matches_current_head": true,
-        "run_id": 43390786313,
+        "run_id": 43391077158,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "0a05797a3a30e886c81dead9c266905ef2235f8c",
+      "head_sha": "42fa2aaa3e7077721ebfeb10f9bacc09ad109a8b",
       "record_id": "CANDIDATE-10",
       "repository": "hibi89/Freelancer",
       "status": "PRESENT",
@@ -873,7 +873,7 @@
     {
       "canonical": {
         "expected_git_blob_sha": "521ba0cb458bea384639a0ef897ce7500d33b8f1",
-        "head_sha": "e1ad0802cb7bdf783c1d99c6f0b259ec96daf015",
+        "head_sha": "546498f78a7389f81a4bf37d35fe3a39341d1637",
         "mode": "observe",
         "observed_git_blob_sha": "521ba0cb458bea384639a0ef897ce7500d33b8f1",
         "owner_approval_verified": false,
@@ -885,13 +885,13 @@
         "branch": "main",
         "gate": {
           "conclusion": "success",
-          "head_sha": "e1ad0802cb7bdf783c1d99c6f0b259ec96daf015",
+          "head_sha": "546498f78a7389f81a4bf37d35fe3a39341d1637",
           "matches_current_head": true,
-          "run_id": 43375849225,
+          "run_id": 43391521658,
           "status": "LATEST_RUN",
           "workflow_status": "completed"
         },
-        "head_sha": "e1ad0802cb7bdf783c1d99c6f0b259ec96daf015",
+        "head_sha": "546498f78a7389f81a4bf37d35fe3a39341d1637",
         "status": "PRESENT"
       },
       "repository": "hibi89/hackathon-command-center-2026",
