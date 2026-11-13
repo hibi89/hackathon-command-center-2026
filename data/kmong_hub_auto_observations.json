@@ -947,7 +947,7 @@
     {
       "canonical": {
         "expected_git_blob_sha": "521ba0cb458bea384639a0ef897ce7500d33b8f1",
-        "head_sha": "94400247583590976da15a4507fbd16b06726670",
+        "head_sha": "47c9d7d8f42a8df97b332a115b5dc566b3341366",
         "mode": "observe",
         "observed_git_blob_sha": "521ba0cb458bea384639a0ef897ce7500d33b8f1",
         "owner_approval_verified": false,
@@ -965,7 +965,7 @@
           "status": "LATEST_RUN",
           "workflow_status": "completed"
         },
-        "head_sha": "94400247583590976da15a4507fbd16b06726670",
+        "head_sha": "47c9d7d8f42a8df97b332a115b5dc566b3341366",
         "status": "PRESENT"
       },
       "repository": "hibi89/hackathon-command-center-2026",
