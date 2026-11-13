@@ -51,14 +51,14 @@
     },
     {
       "gate": {
-        "conclusion": null,
-        "head_sha": "a3363574c9f3b2132b82da38d5539bfdb951b622",
+        "conclusion": "success",
+        "head_sha": "e85c6545512a93f273fc3472103aeab3347fafc9",
         "matches_current_head": true,
-        "run_id": 43390662599,
+        "run_id": 43390734856,
         "status": "LATEST_RUN",
-        "workflow_status": "in_progress"
+        "workflow_status": "completed"
       },
-      "head_sha": "a3363574c9f3b2132b82da38d5539bfdb951b622",
+      "head_sha": "e85c6545512a93f273fc3472103aeab3347fafc9",
       "record_id": "ACTIVE-05",
       "repository": "hibi89/data2web_studio",
       "status": "PRESENT",
@@ -302,13 +302,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "78247ce6132fc1af2b05cd7fb65729711355caf6",
+        "head_sha": "0a05797a3a30e886c81dead9c266905ef2235f8c",
         "matches_current_head": true,
-        "run_id": 43387898960,
+        "run_id": 43390786313,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "78247ce6132fc1af2b05cd7fb65729711355caf6",
+      "head_sha": "0a05797a3a30e886c81dead9c266905ef2235f8c",
       "record_id": "CANDIDATE-10",
       "repository": "hibi89/Freelancer",
       "status": "PRESENT",
