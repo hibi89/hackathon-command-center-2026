@@ -1,3 +1,16 @@
+## [2026-11-14 KST] WORKNOVA Desk Windows EXE 파일 해시/MZ 확보 — 중앙 인수인계 10항
+
+1. **목표·용도·확정 요구:** Windows 로컬 수기 견적/계약/납품/수금 WORKNOVA Desk, 사용자 승인 WD01~14 고정100점·항목별 완전 수용 85점 목표.
+2. **완료 기능·변경·근거:** 실제 사용자가 onedir/미서명 EXE 빌드 완료 후 파일 크기/SHA256/처음 MZ 바이트까지 검사. 기존 버그 `PYTHONNOUSERSITE=1`은 빌드 호출 우회 후 원격 코드에서 수정됨. 고객 원본/기능 불변.
+3. **검증/미검증:** 사용자 Windows 콘솔 `Length=7107722`, `SHA256=A7CD6B052108E5630E4AD50151841F0B812654F22E87CFE8338E22CB12A5C23E`, `MZ header: PASS`. 파일 원문 미수신(별도 실제 바이너리 재해시 못함), EXE GUI·DB 새 생성/재실행·Python 없는 PC/서명·Defender·Windows ACL/개인정보·실고객 전부 NOT_RUN. 이전 Python필수 Windows 합성 11PASS×2.
+4. **완료·진행·대기:** WD13 실 Windows 빌드와 기본 해시/MZ 확인 일부 확보, 공식 항목 전체 PASS는 미확인. **0/100(구현률0 뜻 아님), 85 미달, [작업중]/RELEASE HOLD/크몽 미등록**.
+5. **오류·시도·대안:** 기존 PyInstaller 사용자 설치 인식 오류는 빌드 래퍼 자식 PYTHONNOUSERSITE 차단. 코드 패치 및 `--plan` 인자 직접 실행으로 진전, 재설치/재빌드 반복 금지. 다음 격리 EXE GUI 확인.
+6. **저장소·브랜치·SHA:** 제품 `hibi89/Freelancer@product/worknova-desk-local`, 기능/최신 점수 문서 HEAD `e21aff02b7049ca2b4a917c00c5cf5013d43270b`, 증거 `docs/P85_WINDOWS_EXE_BUILD_RESULT_20261114.md`. 중앙 크몽 감사표 `docs/audits/KMONG_16_CURRENT_20261111.md`; 최종 중앙 HEAD는 마지막 문서 변경 후 확인.
+7. **Production/환경/명령:** Vercel/Prod 미적용. PyInstaller onedir EXE는 사용자 TEMP 폴더에만 존재, 별도 배포·서명 없음. 차기 `System.Diagnostics.ProcessStartInfo`의 `EnvironmentVariables['LOCALAPPDATA']`를 임시 QA로 변경해서 실행.
+8. **원본·백업·인증:** 기존 고객 SQLite/백업·실 LOCALAPPDATA/OS 보안 정책·원본 PayPal·다른 상품/main·비밀·등록완료 이력 불변. 산출물 EXE는 아직 사용자 PC에만 있음, GitHub에 바이너리 업로드하지 않음.
+9. **다음 작업 우선순위·완료 기준:** 사용자가 격리 GUI 실행·첫 장부 생성 허용→창 표시·비종료/SQLite 생성·닫기 후 종료 및 독립 재실행 상태를 보고. 다음 사후 보안/이식/실고객/권리 검증, WD 전체 완전 PASS 합 >=85일 때만 달성.
+10. **갱신 일시 KST/검증/문서 기준:** 2026-11-14 KST, 사용자 원본 PowerShell 출력의 기본 EXE 파일 무결성 증거만 확인. 새 실 GUI 검증은 아직. GitHub 동기화 후 SHA 재조회.
+
 ## [2026-11-14 KST] WORKNOVA Desk onedir EXE 빌드 실증 — 중앙 인수인계 10항
 
 1. **목표/기술:** 승인 WD01~14 총100점의 최종 구매자 수용85점, 로컬 Python/SQLite/Tk Windows 제품.
