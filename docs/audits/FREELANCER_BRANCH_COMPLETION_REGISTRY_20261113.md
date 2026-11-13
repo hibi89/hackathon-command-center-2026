@@ -22,8 +22,9 @@
 | PAWTALK | `product/echohome-pawtalk-local-ai` | UNASSESSED | 미등록·HOLD | 반려동물 놀이형 음성대화 설계, 앱 미검증 |
 | MYRADIO AI | `product/myradio-ai-dj` | UNASSESSED | 미등록·HOLD | 오프라인 WAV 시제품, 실 Windows/상용권리 미검증 |
 | AXNODE | `product/axnode-sector-runtime` | UNASSESSED | 미등록·HOLD | 사용자 A안 독자 바이너리 `.axnode` 최종설계 R01~R29, 별도 로컬 POC 19 PASS; GitHub 브랜치에 실행 소스/CI 미반영, 원격/3GB/Windows 미검증 |
+| WORKNOVA Desk **[작업중]** | `product/worknova-desk-local` | **UNASSESSED** (P50 독립 엔진 로컬 18 PASS·정확 원격 11/11 SHA, 전체 공식 50% 미확정) | 크몽 미등록·RELEASE HOLD | [비공개 제품 브랜치](https://github.com/hibi89/Freelancer/tree/product/worknova-desk-local) 기능 SHA `6b7f86738fb6`: KRW/VAT·명시적 승인·계약/납품·수금·감사·SQLite 백업; Linux Python3.13.5 18 PASS, Windows/실고객/회계·문서·CI 미검증 |
 
-**브랜치 수 8개 / 제품 9개.** ECHOHOME과 PAWTALK는 같은 브랜치를 사용하므로 브랜치 1개=상품 1개로 가정하지 않는다. 모든 행은 현재 확인된 GitHub 브랜치와 Freelancer `main/docs/PRODUCT_INDEX.md`·`HANDOFF.md`를 기준으로 등록했다. 등록완료는 실제 크몽 게시 증거가 있을 때만 기록한다.
+**현재 GitHub 확인: product/* 10개 브랜치 / 대응 제품 11개(공유 브랜치 ECHOHOME+PAWTALK 포함, BID AX·WORKNOVA Desk 신규 생성).** 이전 8개/9개는 초기 등록 이력이다. ECHOHOME과 PAWTALK는 같은 브랜치를 사용하므로 브랜치 1개=상품 1개로 가정하지 않는다. 모든 행은 현재 확인된 GitHub 브랜치와 Freelancer `main/docs/PRODUCT_INDEX.md`·`HANDOFF.md`를 기준으로 등록했다. 등록완료는 실제 크몽 게시 증거가 있을 때만 기록한다.
 
 ## 앞으로의 자동 등록 규칙 (정책 확정, 무인 실행은 미구현)
 
@@ -56,3 +57,9 @@
 - 신규 제품 소스 정본: `hibi89/AI_AutoML_Analyst@feature/ontoinsight-ax-p50-20261113`, 검증된 기능 SHA `8da6ae98e308f68b52af159a662fe58c20f5bc74` 및 문서 인수인계 SHA `8defbec4a943e081a12a6aaff1ae59f135ef05d0`. 기획 브랜치 `hibi89/Freelancer@product/ontoinsight-ax-data-analytics` 문서 SHA `fc80f5004e99261a581b8cbe109841f038baa497`.
 - [CI #43375766099](https://github.com/hibi89/AI_AutoML_Analyst/actions/runs/43375766099): Ubuntu24.04 11 PASS·Windows Server2025 11 PASS, 0 FAIL/0 SKIP. 기존 AutoML CSV 파서 재사용+추론 매핑 REVIEW_HOLD+원본 SHA+합성 KPI 5종 독립 재계산. 고객 실분석/승인/최종 출시는 하지 않음.
 - **전체 최종설계 100% 공식 가중치·전체 추적표 미승인 → UNASSESSED** 유지. P50은 엔지니어링 단계로만 통과, 50% 공식 판정 아님. 사용자 목표 미달이므로 **[작업중] 해제 금지**, HOLD 및 기존 원천 29종/19개 판매 분류, 타 프로젝트 마커·등록 이력 모두 불변.
+
+
+## 2026-11-13 WORKNOVA Desk 독립 오프라인 P50 소스·검증 동기화
+- 비공개 `hibi89/Freelancer@product/worknova-desk-local`, 소스 첫 기능 커밋 `6b7f86738fb6ed6c7b965523955efcae3285d1f7`. PayPal 원본 공개 해커톤 `lead/paypal`은 조회만 했고 파일 변경 0건.
+- 로컬 Python3.13.5/합성 SQLite `PYTHONPATH=. python -m unittest discover -s tests -v` **18 PASS/0 FAIL/0 SKIP**. `core.py`/CLI/테스트/설계·인수인계 **11/11 원격 blob SHA가 로컬 git hash-object와 일치**함을 독립 재조회 확인. 원격 CI/Windows/실고객/실은행 입금·법률·DOCX/PDF·Vercel **NOT_RUN/NOT_APPLICABLE**.
+- 사용자의 50% 목표에 대응하는 **P50 엔지니어링 코어 단계 통과**, 사용자 확정 전체 WD-01..14 공식 가중치와 전수 기능 고객 수용이 미완이어서 **공식 최종완성률 UNASSESSED; [작업중] 유지; RELEASE HOLD; 실제 판매 등록 0건**. 원천29/판매19와 타 사용자 표시·비율 변경 없음.
