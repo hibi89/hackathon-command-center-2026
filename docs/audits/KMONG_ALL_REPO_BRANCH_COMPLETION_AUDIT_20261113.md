@@ -12,7 +12,7 @@
 | HAE | **85%** | 기존 CI 2 FAIL·판매 HOLD |
 | AI Code Checker | **95%** | 판매 HOLD |
 | SMAX² | **85%** | 판매 HOLD |
-| DATA2WEB Studio **[작업중]** | **UNASSESSED** | P50 기술 단계 CSV/JSON→HTML→ZIP·독립 verifier 구현 검증; [Windows·Ubuntu 각97PASS + 실 Chromium PASS](https://github.com/hibi89/data2web_studio/actions/runs/43377913444), 소스 `90da878ffa29926dda39f6c67913353ec7a3b390`. 전체 최종설계 공식 50% 미판정·XLSX/TSV/사용자 가중치/실고객/권리 미검증; RELEASE HOLD |
+| DATA2WEB Studio **[작업중]** | **UNASSESSED** | P70 기술 범위 CSV/JSON + **XLSX·TSV 실제 OOXML 합성 파일 파싱·시트/헤더/원본 SHA·캐시 명시승인·매크로/외부링크/ZIP 공격 차단 구현**. [정확 코드 SHA `42b832c5` CI #43381537805](https://github.com/hibi89/data2web_studio/actions/runs/43381537805) Windows/Ubuntu 각 **145 PASS**, 기존·XLSX/TSV 실제 Chromium `file://` **PASS**. [기술 P70 증거](https://github.com/hibi89/data2web_studio/blob/feature/xlsx-tsv-import/docs/P70_XLSX_TSV_ACCEPTANCE_20261113.md), Draft [PR #2](https://github.com/hibi89/data2web_studio/pull/2). **공식 최종설계 70%는 미판정(가중치 미승인), 실고객 Excel/Win10·11·권리/지원 미검증; RELEASE HOLD** |
 | REA_Web [작업중] | **85%** | 목표 95 미달, 최신 합성 CI PASS / HOLD |
 | SOVIA | **95%** | 합성 단계·Windows/Linux CI PASS / HOLD |
 | AI AutoML Analyst | **95%** | 판매 HOLD |
