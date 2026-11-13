@@ -1,3 +1,10 @@
+## [2026-11-13 KST] CITEVAULT AX 사용자 85% 후속 — 합성 영속보관소 Node 58PASS
+
+- **정본:** `hibi89/Freelancer@product/rag-enterprise-knowledge 6fb66efd14dd95dd64ebfb1305ef872478ff1524`, P85 addendum `docs/P85_DURABLE_EVIDENCE_20261113.md`. 해총 후보/관리 원장 2곳 CITEVAULT 행만 최신화, 다른 서비스/상품/등록완료 기록은 불변.
+- **실제 신규 구현:** `enterprise/p85-state-store.mjs` (Node22 built-in SQLite) 최초 합성 계정/문서 시드, 재시작 후 버전·폐기·관리자 사용자 철회 보존, 두 프로세스의 stale revision 차단, 단일 SQLite 트랜잭션으로 감사 기록과 관리자 상태 변경 원자화. 기존 `p85-vault.mjs` ACL-before-file-read 유지, `p85-loopback.mjs` 로컬 관리자 revoke API 추가. 실제 고객·RAG/PREP/SMAX 원본/인증/Production 변경 없음.
+- **검증:** 로컬 Linux Node22.16.0 P85 **58PASS/0FAIL/0SKIP**, P50/P70 포함 결합 **95total/92PASS/0FAIL/3SKIP**(원본 RAG checkout 필요). 신규/수정 코드/테스트 6개 정확 원격 Git blob/local `git hash-object` 일치, ZIP 독립 해제 58PASS. Ubuntu/Windows GitHub Actions 정의 반영이나 **실 hosted run/Windows PASS 미확인**.
+- **판정:** 공식 `UNASSESSED`, 전체 최종설계 대비 85% **달성 미확정**, 해총 `CITEVAULT AX [작업중]`, `RELEASE HOLD`. 실 직원 IdP·고객 원본 PDF/DOCX+SQL/SMAX 승인 AX·실 한국어 로컬 모델/Windows 고객인수·가중치 재평가 미구현/미검증.
+
 > **2026-11-13 KST — WORKNOVA DESK P85 HARDENING affb062c6251 (공식률 UNASSESSED / RELEASE HOLD):** 비공개 Freelancer@product/worknova-desk-local 독립 해시 체크포인트·포터블 v2 엄격 검증 신규 기능 SHA [affb062c6251](https://github.com/hibi89/Freelancer/commit/affb062c6251bc5ff253a8d855c7672298afe39d); Linux Python3.13.5 **68 PASS/0 FAIL/0 SKIP**, Tk8.6 Xvfb E2E PASS, GUI/원화/VAT·DOCX/PDF 기존 기능 보존. 소스 파일 Git blob 14/14 일치 확인. 실제 Win10/11/PowerShell·고객/실 법률·폰트 권리/서명 EXE/Production **미검증/미적용**; 최종 WD01..14 100점 승인 가중치 미비. **정식 최종85% 달성 주장은 금지·[작업중] 유지·미등록/출시 HOLD**. 기존 29원천/19서비스/타 프로젝트/PayPal 원본 불변. [상세](docs/audits/WORKNOVA_DESK_P85_HARDENING_20261113.md).
 
 ## [2026-11-13 KST] FlowPilot Universal P85 체크포인트 재개·미서명 Windows EXE GitHub CI E2E / 공식 UNASSESSED
