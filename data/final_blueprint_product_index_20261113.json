@@ -130,6 +130,24 @@
         "post_pilot_documentation_sha": "0cf4adbfe745c10fdb103db09185ea495fb769aa",
         "official_final_completion": "UNASSESSED",
         "scope": "same-repo main fingerprint only; no product E2E"
+      },
+      "technical_milestone_latest": {
+        "milestone": "P70_SCOPE_VERIFIED_NOT_OFFICIAL_PERCENT",
+        "verified_code_sha": "42b832c5e18521d3edcf53b69cbf92c272f245cb",
+        "documentation_branch_head": "0fee0f84c35f377bdfffea7b1a66e62191abb81a",
+        "branch": "feature/xlsx-tsv-import",
+        "github_actions_run_id": 43381537805,
+        "documentation_run_id": 43382126920,
+        "dual_os_python_tests": {
+          "windows_pass": 145,
+          "ubuntu_pass": 145,
+          "fail": 0,
+          "skip": 0
+        },
+        "chromium_local_file_e2e": "PASS_CSV_JSON_AND_XLSX_TSV_SYNTHETIC",
+        "release_status": "RELEASE_HOLD",
+        "official_completion": "UNASSESSED",
+        "remaining": "OWNER_APPROVED_WEIGHTS_AND_REAL_EXCEL_WIN10_11_CUSTOMER_ACCEPTANCE"
       }
     },
     {
