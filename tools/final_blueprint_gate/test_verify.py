@@ -78,5 +78,38 @@ class GateTest(unittest.TestCase):
         self.assertFalse(ok)
         self.assertIn("VERIFIED requires", "\n".join(data["errors"]))
 
+
+    def test_bool_schema_version_rejected(self):
+        p = self.payload()
+        p["schema_version"] = True
+        self.save(p)
+        data, ok = audit(self.root, "hibi89/demo")
+        self.assertFalse(ok)
+        self.assertIn("schema_version", "\n".join(data["errors"]))
+
+    def test_unhashable_status_returns_structured_error(self):
+        p = self.payload()
+        p["requirements"][0]["status"] = []
+        self.save(p)
+        data, ok = audit(self.root, "hibi89/demo")
+        self.assertFalse(ok)
+        self.assertIn("status invalid", "\n".join(data["errors"]))
+
+    def test_partial_claim_requires_actual_proof_reference(self):
+        p = self.payload()
+        p["requirements"][0]["status"] = "PARTIAL"
+        self.save(p)
+        data, ok = audit(self.root, "hibi89/demo")
+        self.assertFalse(ok)
+        self.assertIn("PARTIAL requires", "\n".join(data["errors"]))
+
+    def test_unverified_malformed_proof_rejected(self):
+        p = self.payload()
+        p["requirements"][0]["evidence"] = [{"source_sha": "b" * 40, "test_id": "t", "ci_run_url": "https://invalid.example/runs/1"}]
+        self.save(p)
+        data, ok = audit(self.root, "hibi89/demo")
+        self.assertFalse(ok)
+        self.assertIn("invalid same-repo proof", "\n".join(data["errors"]))
+
 if __name__ == "__main__":
     unittest.main()

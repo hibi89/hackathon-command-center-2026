@@ -39,3 +39,10 @@ stays unchanged until evidence is independently verified and authorized.
 
 No secrets, paid API, new credential, deployment, branch protection, or
 write permissions are used.
+
+## Schema hardening — 2026-11-13 KST
+
+- Every provided evidence item is now syntactically checked, including `UNVERIFIED` and `BLOCKED` entries. `PARTIAL` claims, like `VERIFIED`, require same-repository CI run URL, test ID and exact source-SHA-shaped reference; otherwise mark `UNVERIFIED`.
+- Reject boolean `schema_version=true` and unhashable requirement status values as structured invalid inputs instead of mistakenly accepting or throwing an unhandled exception.
+- Four added negative regression tests bring the structural unit-test suite from 6 to 10 cases. These checks do **not** verify whether a CI run exists or passed, whether a SHA matches that run, whether all owner-approved requirements were retained, or whether a user actually approved the blueprint. They cannot certify a numeric official score.
+- No caller workflow, private product code, product manifests, permissions, external API calls, secret, production deployment, central ledger score, or previous history changed.

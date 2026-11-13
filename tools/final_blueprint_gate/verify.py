@@ -51,7 +51,7 @@ def audit(root, repo):
     if not isinstance(obj, dict):
         errors.append("manifest must be a JSON object")
         return out, False
-    if obj.get("schema_version") != VERSION:
+    if type(obj.get("schema_version")) is not int or obj["schema_version"] != VERSION:
         errors.append("schema_version must be 1")
     if not isinstance(obj.get("product"), str) or not obj["product"].strip():
         errors.append("product must be named")
@@ -98,14 +98,16 @@ def audit(root, repo):
         else:
             total += weight
         state = item.get("status")
-        if state not in STATES:
+        if not isinstance(state, str) or state not in STATES:
             errors.append(f"{tag}.status invalid")
             continue
         proof = item.get("evidence", [])
-        if state == "VERIFIED" and (not isinstance(proof, list) or not proof or not all(valid_proof(x, repo) for x in proof)):
-            errors.append(f"{tag}.VERIFIED requires exact-SHA test ID and same-repo CI run URL")
-        elif proof and not isinstance(proof, list):
+        if state in {"VERIFIED", "PARTIAL"} and (not isinstance(proof, list) or not proof or not all(valid_proof(x, repo) for x in proof)):
+            errors.append(f"{tag}.{state} requires exact-SHA test ID and same-repo CI run URL")
+        elif not isinstance(proof, list):
             errors.append(f"{tag}.evidence must be an array")
+        elif any(not valid_proof(x, repo) for x in proof):
+            errors.append(f"{tag}.evidence contains invalid same-repo proof")
     if total != 100:
         errors.append(f"rubric must represent entire approved blueprint and sum to 100, got {total}")
     if obj.get("official_final_completion", "UNASSESSED") != "UNASSESSED":
