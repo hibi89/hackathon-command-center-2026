@@ -1,3 +1,15 @@
+## [2026-11-13 14:35 KST] 해총 GitHub App 예약 이벤트 당일 실험/복구 — 10항 인수인계
+1. **목표·확정요구·기술:** GitHub App(read-only)로 35 소스 저장소/70 branch/31 canonical blob/29 제품 CI 증거를 GitHub Actions 수집하고 중앙 관찰 JSON만 최신화. 이번 작업은 다음날까지 기다리지 않고 실제 `schedule` 트리거가 되는지 일시적으로 cron을 단축해 검증, 일일 원래 시각 복원.
+2. **시행·근거·최종 결정:** `main` cron 원본 `10 2 * * *`(매일 11:10 KST)을 2026-11-13 14:24 KST `*/5 5 13 11 *`(14시대 매 5분)로 임시 변경한 커밋 `4d036f7c0f1a11126ce3f94a4456d3e14d8f00e3`. 소스 코드/수집 정책·자격증명/제품 데이터 변경 없음. 14:25·14:30·14:35 UTC 05시대 슬롯 관측 뒤 원래 cron 복구 커밋 `98d353001f9ea8fd2b74dc1e7517a0fbdff5e64e` 원격 확인.
+3. **테스트·성공/실패·범위:** GitHub Actions runs REST API를 예정 시각 이후 반복 확인했으나 새 `event=schedule` 실행 **0건 관측**, 따라서 이번 **예약 실행 실검증은 미완료**. 기본 브랜치 `main`, cron 구문, 연결된 `hibi89` author/committer 확인. 기존 manual dry-run run #43363161824, 첫 `UPDATED` #43363676185, `NO_CHANGE` #43364386625와 유닛 26/26 PASS 유지. 신규 Schedule Job 로그/테스트 수 없음.
+4. **완료·대기·중단:** App 인증/실 35·70 수집/첫 원장 write/readback/NO_CHANGE/문서 최신화 완료. 임시 5분 간격 cron 테스트는 기대한 `schedule` 이벤트가 생기지 않아 미확인. 복구는 원격 확인 완료. 원래 일일 11:10 KST 설정 정상 보존, 실제 일일 schedule 및 API 오류·권한·동시 충돌 복구 실증 대기.
+5. **오류·원인·시도·재시도 금지·대안:** 예정된 짧은 window에서 GitHub Actions 자체 `schedule` run이 생성되지 않음. 해당 서비스는 지연·누락될 수 있음(공식 docs schedule). **코드 오류/키 실패로 단정 금지**, manual `workflow_dispatch` 성공과 예약 이벤트는 별개. 결과 없이 cron을 계속 무한히 변경하거나 유료 외부 서비스/권한 확대/PAT 우회 금지. 실제 schedule run이 나타나면 로그로 확인.
+6. **저장소·브랜치·SHA·주요 경로:** `hibi89/hackathon-command-center-2026`; 코드 `main@98d353001f9ea8fd2b74dc1e7517a0fbdff5e64e`, 원복 파일 `.github/workflows/kmong-hub-sync.yml` blob `37ce23f1f249ec39cfaeae170306556a34588d9b` (시험 전과 동일), central `kmong-productization` 감사 최신화 `ea156e4527f245a4a7330a476b8ca8b83e35a7f4`, STATUS `78bd36f56b24cd3fc70be74dc02a377adc8ed2ea`, 본 HANDOFF 커밋 이후 HEAD 재조회.
+7. **Production·환경·실행 명령:** GitHub-hosted Ubuntu Actions/Python stdlib. 원래 cron `10 2 * * *` GitHub UTC(Asia/Seoul 11:10), `workflow_dispatch` 수동 기본 dry-run. 고객 Vercel/Production 미적용, GitHub의 예약 서비스 동작은 외부 종속으로 시각 지연 가능.
+8. **백업·인증·원본·수정금지:** 임시 수정 전 `main@2ce63078eeaced49cc46faeef5070c0c65ee9d7a`, 복구 후 workflow blob 위 SHA 원형 일치. App PEM/Secret 값 저장·채팅 금지, source repo/29 공식 UNASSESSED/19개 서비스/등록완료·작업중·HOLD·과거 85/95 기록 그대로.
+9. **다음 우선순위·절차·승인·완료기준:** 일일 cron 활성 상태와 GitHub Actions `event=schedule` 실제 run 확인 후 35/70/31/29·Job SUCCESS, 저장 원장 비교 검증; 지연·미실행이면 GitHub schedule의 best-effort 특성 및 repo/workflow 상태를 다시 진단. 권한 확대/추가 서비스 전 사전 승인 필요. 실제 장애 주입 대신 existing fail-closed 단위 검증 유지.
+10. **갱신 시간·확인·미검증·문서 기준:** 2026-11-13 약 14:35 KST. temporary cron 작성 원격 SHA, GitHub run 목록 반복 조회, 원 cron 복구 commit/blob 확인, 감사를 중앙 문서에 반영. **예약 이벤트의 실제 성공과 장애 복구는 미검증**.
+
 ## [2026-11-13 KST] GitHub App 중앙 원장 실 NO_CHANGE 통과 — 필수 인수인계 10항
 1. **목표·확정 요구·기술:** 35개 GitHub 소스 저장소·70 추적 ref·31 정본 blob 지문과 29개 제품 연결의 SHA/CI 관찰 증거를 read-only App 토큰으로 수집, 중앙 `kmong-productization` 별도 JSON에만 갱신. 공식 100점 최종설계 승인·독립 수용 시험 전 공식률 29/29 UNASSESSED.
 2. **완료 기능·근거·결정:** GitHub App read-only 전체 설치(사용자 명시 승인)와 Actions `repositories` 35개 installation token scope 제한 분리. 실 App token 발급/35 소스·70 ref 수집, 첫 `UPDATED` bot 원장 JSON 단독 커밋/readback, 후속 **`NO_CHANGE` 커밋 0건** 확인. 중복 검사 로직·등록 이력 보호·최초 예약 쓰기 차단 보존.
