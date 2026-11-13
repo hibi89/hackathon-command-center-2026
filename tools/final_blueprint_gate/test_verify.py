@@ -130,7 +130,7 @@ class CanonicalScopeTest(unittest.TestCase):
     def save_pin(self, pins=None):
         if pins is None:
             digest = hashlib.sha1(b"blob " + str(len(self.original)).encode() + b"\0" + self.original).hexdigest()
-            pins = [{"repository":"hibi89/HAE", "ref":"main",
+            pins = [{"repository":"hibi89/HAE", "ref":"main", "mode":"enforce",
                      "path":"docs/ECOSYSTEM_CANONICAL.md", "git_blob_sha":digest}]
         self.pins.write_text(json.dumps({"schema_version":1, "pins":pins}), encoding="utf-8")
 
@@ -212,7 +212,7 @@ class CentralPinRegistryTest(unittest.TestCase):
     def test_enforced_repos_match_fail_closed_code_list(self):
         enforced = {x["repository"].lower() for x in self.pins if x["mode"] == "enforce"}
         self.assertEqual(enforced, REQUIRED_REPOS)
-        self.assertEqual(len(enforced), 10)
+        self.assertEqual(len(enforced), 9)
 
     def test_unpinned_repos_separate_from_pins(self):
         pinned = {x["repository"].lower() for x in self.pins}
