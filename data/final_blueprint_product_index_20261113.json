@@ -10,14 +10,17 @@
     "candidate": 12,
     "official_certified": 0,
     "official_unassessed": 29,
-    "detailed_unweighted_trace_drafts": 2
+    "detailed_unweighted_trace_drafts": 2,
+    "detailed_ci_evidence_drafts": 2,
+    "detailed_trace_items": 21
   },
   "notes": [
     "Fields reflect prior central audit evidence rather than a fresh scan of all 29 product HEADs.",
     "historical_seen_head_prefix is an old observation, never a current exact SHA or proof of passed CI.",
     "detail_trace is unapproved requirement inventory, not an owner-approved 100-point rubric.",
     "No product source or private content copied into this public index.",
-    "All certified scores remain UNASSESSED until independent complete acceptance."
+    "All certified scores remain UNASSESSED until independent complete acceptance.",
+    "2026-11-13: HAE and LA representative case outcomes were checked against exact historical Actions runs and private trace docs, not newly executed feature acceptance. Existing official UNASSESSED unchanged."
   ],
   "records": [
     {
@@ -42,7 +45,28 @@
       "historical_seen_head_prefix": "8d50927697b1",
       "official_final_completion": "UNASSESSED",
       "owner_requirement_weights": "NOT_INDEPENDENTLY_APPROVED",
-      "detail_trace": "HAE_R01_R13_DRAFT"
+      "detail_trace": "HAE_R01_R13_DRAFT",
+      "latest_verified_trace": {
+        "review_date_kst": "2026-11-13",
+        "repository": "hibi89/HAE",
+        "branch": "feature/axflow-mvp",
+        "documentation_commit_sha": "e0a177808b1ee5b3c27c45a63ee6473961a86fc5",
+        "trace_draft_path": "docs/evidence/HAE_FINAL_BLUEPRINT_CI_TRACE_DRAFT_20261113.json",
+        "trace_item_count": 13,
+        "representative_cases_only": {
+          "ok": 11,
+          "fail": 1,
+          "not_mapped": 1
+        },
+        "functional_ci": {
+          "run_id": 42990527614,
+          "head_sha": "2384e9d245ca60fc9b2055e9b82c4541b33bd6bd",
+          "conclusion": "failure"
+        },
+        "id_type": "OWNER_REQUIREMENT_FROM_FEATURE_REQUIREMENTS",
+        "official_completion": "UNASSESSED",
+        "scope": "code-and-test blob presence + historical GitHub CI logs; no new full-suite E2E or official certification"
+      }
     },
     {
       "record_id": "ACTIVE-03",
@@ -138,7 +162,28 @@
       "historical_seen_head_prefix": "14d8c0f44509",
       "official_final_completion": "UNASSESSED",
       "owner_requirement_weights": "NOT_INDEPENDENTLY_APPROVED",
-      "detail_trace": "LA_T01_T08_DRAFT"
+      "detail_trace": "LA_T01_T08_DRAFT",
+      "latest_verified_trace": {
+        "review_date_kst": "2026-11-13",
+        "repository": "hibi89/HAE",
+        "branch": "feature/la-p17-audit-evidence-20261112",
+        "documentation_commit_sha": "abe6aa12bf43c6482a6129e48ed768dc62cc1426",
+        "trace_draft_path": "docs/lightning-azent/evidence/LA_FINAL_BLUEPRINT_CI_TRACE_DRAFT_20261113.json",
+        "trace_item_count": 8,
+        "representative_cases_only": {
+          "ok": 7,
+          "fail": 0,
+          "not_mapped": 1
+        },
+        "functional_ci": {
+          "run_id": 43124013493,
+          "head_sha": "c32e27c8156a4ed27d6f2bca7752e7a4eccf6dc7",
+          "conclusion": "success"
+        },
+        "id_type": "AUDITOR_TRACE_ID_NOT_APPROVED_FINAL_REQUIREMENT",
+        "official_completion": "UNASSESSED",
+        "scope": "code-and-test blob presence + historical GitHub CI logs; no new full-suite E2E or official certification"
+      }
     },
     {
       "record_id": "ACTIVE-11",

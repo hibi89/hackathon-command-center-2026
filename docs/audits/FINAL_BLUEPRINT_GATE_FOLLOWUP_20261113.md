@@ -40,3 +40,12 @@
 5. Product/Production 실 검증과 검증기 구조 테스트는 별개; 현재 제품 출시/상품 등록 판정 전부 기존대로.
 
 **본 보고는 연결·검증 형식 개선과 추적 인덱스 작업에 한하며, 29개 제품의 공식 수치·실제 기능·외부 권한/배포를 바꾸지 않는다.**
+
+## HAE·LA 21개 항목 실제 CI 로그 매핑 — 2026-11-13 KST
+- 동일 비공개 repo `hibi89/HAE`의 서로 다른 브랜치에 2개 **공식 manifest가 아닌 감사 JSON 초안** 반영: HAE `feature/axflow-mvp@e0a177808b1ee5b3c27c45a63ee6473961a86fc5`, LA `feature/la-p17-audit-evidence-20261112@abe6aa12bf43c6482a6129e48ed768dc62cc1426`.
+- HAE R-01..R-13: **대표 테스트 11 OK / 1 FAIL / 1 unmapped**. 정확 CI run [42990527614](https://github.com/hibi89/HAE/actions/runs/42990527614) 기능 SHA `2384e9d245ca60fc9b2055e9b82c4541b33bd6bd`, **전체 FAILURE** (Ubuntu/Windows 각 264 PASS·2 FAIL·7 SKIP). 실패한 출고 ZIP/pyz 정합 테스트는 수용 실패 상태 유지.
+- LA-T01..T08: **대표 테스트 7 OK / 0 FAIL / 1 unmapped**. 정확 CI run [43124013493](https://github.com/hibi89/HAE/actions/runs/43124013493) 기능 SHA `c32e27c8156a4ed27d6f2bca7752e7a4eccf6dc7`, 양 OS 합성 범위 SUCCESS (Ubuntu205 / Windows206). **LA-T ID는 감사자가 붙인 추적 ID이며 사용자 승인된 전 요구 ID/100점 분모 아님**.
+- 각 소스/테스트 Git blob SHA는 **기능 CI SHA 체크아웃**의 원격 디렉터리에서 확인. 정확한 대표 case 이름과 outcome은 Ubuntu job logs로 대조. 최신 문서 커밋에 새 전체 기능 CI를 실행했다고 주장하지 않음; doc commits `[skip ci]`로 불필요한 비용을 피함.
+- 확정 최종설계 `hibi89/HAE@main/docs/ECOSYSTEM_CANONICAL.md` 원본은 두 feature 브랜치에서 파일 **없음(404)**. main HEAD `ff763ba8ec6002a01a0b08a02146e98193174e50`, Git blob `0d31062b0e3c6a570b37a35ace6fbfbe59ec2116`. 임의 복제/단순 `REQUIREMENTS.md`만으로 전체 blueprint 승인 인증 금지. 현 구조의 `local path SHA256` gate는 main-only canonical drift를 검증하지 못함. 정본 별도 checkout/해시 대조 or read-only 검수 프로토콜 후 full rubric 승인 필요.
+- 중앙 [29제품 기계 원장](../../data/final_blueprint_product_index_20261113.json)에서 HAE·LA 2개에만 연결된 비밀 없는 메타데이터 추가. **공식 수치 29/29 UNASSESSED, 승인 가중치 0/29, 새로운 기능 E2E 0/29**. 19개 판매상품 등록이력·[작업중]·RELEASE HOLD·과거 85/95·제품 소스·권한·유료 API·배포 불변.
+- 개선 선택지 ① **현재 채택:** 다른 repo 접근권한 확대 없이 GitHub 원격 정본 SHA/blob과 exact CI evidence를 작업자가 수동 독립 대조해 중앙 원장에 반영. ② **후속 설계안:** 같은 private 저장소 `main`의 정본을 read-only 별도 checkout하고, SHA 고정·승인된 100점 전체 rubric을 자동 비교하도록 gate 확대. 자동 숫자 승격은 별도 독립 수용/권한 승인 없이는 금지. GitHub App cross-repo 자동 쓰기는 계속 `KMONG_HUB_SYNC_PENDING`.
