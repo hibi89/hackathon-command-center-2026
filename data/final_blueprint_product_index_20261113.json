@@ -111,12 +111,12 @@
       "phase": "active",
       "product": "DATA2WEB Studio",
       "repository": "hibi89/data2web_studio",
-      "tracked_branch": "feature/p85-ui-crossbrowser-20261113",
+      "tracked_branch": "feature/final-blueprint-p85-evidence-20261113",
       "blueprint_reference": "main/docs/FINAL_DESIGN.md",
       "historical_seen_head_prefix": "053d37a84595",
       "official_final_completion": "UNASSESSED",
       "owner_requirement_weights": "NOT_INDEPENDENTLY_APPROVED",
-      "detail_trace": "SUMMARY_ONLY",
+      "detail_trace": "R01_R33_FULL_TRACE_VERIFIED_SCOPE_WITH_UNAPPROVED_WEIGHTS",
       "canonical_fingerprint_pilot": {
         "repository": "hibi89/data2web_studio",
         "source_ref": "main",
@@ -132,27 +132,28 @@
         "scope": "same-repo main fingerprint only; no product E2E"
       },
       "technical_milestone_latest": {
-        "milestone": "P85_SCOPE_VERIFIED_NOT_OFFICIAL_PERCENT",
-        "verified_code_sha": "709b2e5d5540893b9f7ad1b391584c6400899672",
-        "docs_branch_head": "90ed56892066761164419b147ca1351e65662e6f",
-        "github_actions_code_run_id": 43385035408,
-        "github_actions_final_head_run_id": 43385637419,
-        "python_tests": {
-          "windows_pass": 145,
-          "ubuntu_pass": 145,
-          "total_fail": 0,
-          "total_skip": 0
-        },
-        "browser_end_to_end": "PASS_WINDOWS_CHROME_MS_EDGE_UBUNTU_CHROMIUM_SYNTHETIC",
-        "supported_inputs": "CSV_JSON_XLSX_TSV_STRICT_OFFLINE",
-        "generated_ui": "KPI_FILTERED_BAR_CHART_NONNEGATIVE_NUMERIC_APPROX_SUM_PRINT_MOBILE",
-        "large_data_sample": "10000_ROWS_X_20_COLUMNS_GITHUB_UBUNTU_SINGLE_RUN_PASS",
-        "runtime_external_api_calls": 0,
-        "delivery": "STANDALONE_HTML_PLUS_DETERMINISTIC_ZIP",
-        "central_marker": "[작업중]",
-        "release_status": "RELEASE_HOLD",
+        "user_target": "OWNER_FINAL_BLUEPRINT_AT_LEAST_85_PERCENT",
+        "verified_result": "OFFICIAL_85_NOT_CERTIFIED",
         "official_final_completion": "UNASSESSED",
-        "outstanding": "OWNER_WEIGHTS_CLIENT_WIN10_11_REAL_EXCEL_GOLDEN_LICENSE_SUPPORT"
+        "owner_requirement_weights": "NOT_INDEPENDENTLY_APPROVED",
+        "source_branch": "feature/final-blueprint-p85-evidence-20261113",
+        "verified_code_sha": "0ee4a9d8810d78c47b35cbd41bc69725674db4cc",
+        "documentation_head": "9688c752966686776b033e5557e89f28e8bfdf48",
+        "action_run_id": 43388705727,
+        "python_tests": {
+          "windows_pass": 190,
+          "ubuntu_pass": 190,
+          "fail": 0,
+          "skip": 0
+        },
+        "browser_end_to_end": "HOSTED_WINDOWS_CHROME_EDGE_AND_UBUNTU_CHROMIUM_ACTUAL_FILE_LOCAL_SYNTHETIC_PASS",
+        "newly_verified_scope": "NONVALUE_PROFILE;2_TO_10_INDIVIDUALLY_SHA_APPROVED_SAME_SCHEMA_APPEND;MULTI_CATEGORY_FILTER;CREATE_ONLY_DELIVERY_FOLDER_RECEIPT;REPARSE_PATH_GUARDS;DETERMINISTIC_PYTHON_ZIPAPP",
+        "official_weighted_acceptance": "BLOCKED_OWNER_APPROVAL",
+        "remaining_requirements": "CUSTOMER_WIN10_11;REA_LITE_FULL_REAL_RUNTIME;DATA_RIGHTS;PRIVACY_RETENTION;SKU_SUPPORT_REFUND;LICENSE_NOTICE;OWNER_WEIGHT_SUM_100",
+        "release_status": "RELEASE_HOLD",
+        "in_progress": true,
+        "product_pr": "https://github.com/hibi89/data2web_studio/pull/4",
+        "evidence": "docs/FINAL_BLUEPRINT_R01_R33_ACCEPTANCE_20261113.md"
       }
     },
     {
