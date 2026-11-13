@@ -247,13 +247,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "f2ccc5623440b44433ea41ebf814e4de61c74541",
+        "head_sha": "4085aa4e26c4ed008f76edfe9ed825731500a3b3",
         "matches_current_head": true,
-        "run_id": 43386832188,
+        "run_id": 43389022361,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "f2ccc5623440b44433ea41ebf814e4de61c74541",
+      "head_sha": "4085aa4e26c4ed008f76edfe9ed825731500a3b3",
       "record_id": "CANDIDATE-06",
       "repository": "hibi89/Freelancer",
       "status": "PRESENT",
@@ -302,13 +302,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "a5266b4044cfb4217aa620d555094407beaab71e",
+        "head_sha": "78247ce6132fc1af2b05cd7fb65729711355caf6",
         "matches_current_head": true,
-        "run_id": 43386439951,
+        "run_id": 43387898960,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "a5266b4044cfb4217aa620d555094407beaab71e",
+      "head_sha": "78247ce6132fc1af2b05cd7fb65729711355caf6",
       "record_id": "CANDIDATE-10",
       "repository": "hibi89/Freelancer",
       "status": "PRESENT",
@@ -793,13 +793,13 @@
           "branch": "product/rag-enterprise-knowledge",
           "gate": {
             "conclusion": "success",
-            "head_sha": "f2ccc5623440b44433ea41ebf814e4de61c74541",
+            "head_sha": "4085aa4e26c4ed008f76edfe9ed825731500a3b3",
             "matches_current_head": true,
-            "run_id": 43386832188,
+            "run_id": 43389022361,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "f2ccc5623440b44433ea41ebf814e4de61c74541",
+          "head_sha": "4085aa4e26c4ed008f76edfe9ed825731500a3b3",
           "status": "PRESENT"
         },
         {
