@@ -1,0 +1,205 @@
+{
+  "schema_version": 1,
+  "source": "OWNER_FINAL_BLUEPRINT_POLICY_PROPAGATION_20261113.md",
+  "purpose": "READ_ONLY_GITHUB_EVIDENCE_OBSERVATION",
+  "owner": "hibi89",
+  "repositories": [
+    {
+      "repository": "hibi89/AI_AutoML_Analyst",
+      "branches": [
+        "feature/kmong-p6e50-owner-delivery-20261112"
+      ]
+    },
+    {
+      "repository": "hibi89/ai-code-checker",
+      "branches": [
+        "feature/retail-private-candidate-20261112"
+      ]
+    },
+    {
+      "repository": "hibi89/astra_pdf_redesigner",
+      "branches": [
+        "feature/astra-p71-pdf-source-parity-20261112"
+      ]
+    },
+    {
+      "repository": "hibi89/astra_web_catcher",
+      "branches": []
+    },
+    {
+      "repository": "hibi89/AX_MART",
+      "branches": [
+        "feature/cube-owner-preflight-p85-20261112",
+        "feature/pc-care-usb"
+      ]
+    },
+    {
+      "repository": "hibi89/Bid_Owl",
+      "branches": [
+        "feature/disclosure-lightning"
+      ]
+    },
+    {
+      "repository": "hibi89/candle_scraper",
+      "branches": [
+        "feature/candle-pattern-analyzer"
+      ]
+    },
+    {
+      "repository": "hibi89/data2web_studio",
+      "branches": [
+        "feature/lite-independent-migration",
+        "feature/xlsx-tsv-import"
+      ]
+    },
+    {
+      "repository": "hibi89/DBVORA",
+      "branches": [
+        "feature/p0-db-map"
+      ]
+    },
+    {
+      "repository": "hibi89/EAI",
+      "branches": [
+        "feature/local-first-mvp"
+      ]
+    },
+    {
+      "repository": "hibi89/fable5.1_web_catcher",
+      "branches": []
+    },
+    {
+      "repository": "hibi89/factory-ax-ecosystem",
+      "branches": [
+        "feature/hae-la",
+        "integration/develop"
+      ]
+    },
+    {
+      "repository": "hibi89/Freelancer",
+      "branches": [
+        "product/hae-la-automation",
+        "product/ontoinsight-ax-data-analytics",
+        "product/proofqa-ax-delivery-audit",
+        "product/rag-enterprise-knowledge",
+        "product/rea-website-rebuild"
+      ]
+    },
+    {
+      "repository": "hibi89/frontend-foundry-ax",
+      "branches": [
+        "feature/ffax-workbench-p85-20261112"
+      ]
+    },
+    {
+      "repository": "hibi89/gongbaek-sanggwon",
+      "branches": []
+    },
+    {
+      "repository": "hibi89/hackathon-command-center-2026",
+      "branches": []
+    },
+    {
+      "repository": "hibi89/HAE",
+      "branches": [
+        "feature/axflow-mvp",
+        "feature/dbvora-integration",
+        "feature/la-p17-audit-evidence-20261112",
+        "feature/lightning-azent",
+        "feature/rea-app-kmong-owner-delivery-20261112",
+        "feature/sovia-la-projection-p41-20261112"
+      ]
+    },
+    {
+      "repository": "hibi89/hibi89-kic-proofinvest",
+      "branches": [
+        "lead/kic"
+      ]
+    },
+    {
+      "repository": "hibi89/hibi89-paypal-ai-hackathon",
+      "branches": [
+        "lead/paypal"
+      ]
+    },
+    {
+      "repository": "hibi89/hibi89-ugreen-nas-hackathon",
+      "branches": [
+        "lead/ugreen"
+      ]
+    },
+    {
+      "repository": "hibi89/KUODRA",
+      "branches": [
+        "develop"
+      ]
+    },
+    {
+      "repository": "hibi89/NAON2-Character-Studio",
+      "branches": []
+    },
+    {
+      "repository": "hibi89/ohora-nail-intelligence-v4",
+      "branches": []
+    },
+    {
+      "repository": "hibi89/ohora-trend-analyzer",
+      "branches": []
+    },
+    {
+      "repository": "hibi89/ohora-trend-catcher",
+      "branches": []
+    },
+    {
+      "repository": "hibi89/ohora-trend-catcher-classic",
+      "branches": []
+    },
+    {
+      "repository": "hibi89/prep",
+      "branches": [
+        "feature/core-extraction"
+      ]
+    },
+    {
+      "repository": "hibi89/project-book",
+      "branches": []
+    },
+    {
+      "repository": "hibi89/RAG_STUDIO",
+      "branches": [
+        "develop",
+        "feature/p550-mapped-cited-journey"
+      ]
+    },
+    {
+      "repository": "hibi89/REA_Web",
+      "branches": [
+        "feature/website-analysis-rebuild"
+      ]
+    },
+    {
+      "repository": "hibi89/self-hosted-n8n-reliability-lab",
+      "branches": []
+    },
+    {
+      "repository": "hibi89/SMAX",
+      "branches": [
+        "feature/prep-self-owner-mapping-p8"
+      ]
+    },
+    {
+      "repository": "hibi89/SOVIA_sovereign",
+      "branches": [
+        "develop"
+      ]
+    },
+    {
+      "repository": "hibi89/web-rea-studio",
+      "branches": []
+    },
+    {
+      "repository": "hibi89/work-hell-dungeon",
+      "branches": []
+    }
+  ]
+}

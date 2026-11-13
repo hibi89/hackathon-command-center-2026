@@ -1,0 +1,32 @@
+name: Test Kmong event-driven webhook bridge
+on:
+  push:
+    branches:
+      - main
+      - feature/kmong-realtime-webhook-20261113
+    paths:
+      - 'services/kmong-event-bridge/**'
+      - 'tools/kmong_hub_sync/source_repositories.json'
+      - '.github/workflows/kmong-event-bridge-tests.yml'
+  pull_request:
+    paths:
+      - 'services/kmong-event-bridge/**'
+      - 'tools/kmong_hub_sync/source_repositories.json'
+      - '.github/workflows/kmong-event-bridge-tests.yml'
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify app event allowlist cannot drift from collector roster
+        run: cmp tools/kmong_hub_sync/source_repositories.json services/kmong-event-bridge/source_repositories.json
+      - name: Node webhook signature/dispatch tests
+        run: npm test --prefix services/kmong-event-bridge
+      - name: Existing collector regression suite
+        run: python3 -B -m unittest discover -s tools/kmong_hub_sync -p 'test_*.py' -v
