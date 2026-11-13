@@ -1,0 +1,10 @@
+# WORKNOVA Desk — P85 복구/Windows 패키지 안전성 후속 증빙 (2026-11-13 KST)
+
+- 제품: 비공개 `hibi89/Freelancer@product/worknova-desk-local`; 정확 기능 SHA [`09a22bbd399e08b81eb979cd78184f788faf8423`](https://github.com/hibi89/Freelancer/commit/09a22bbd399e08b81eb979cd78184f788faf8423), 이전 안전성 패치 SHA `85a2a115d32d3378544ae68bb453466499aebcb8`. 기능/문서 Git tree `871c2bb54de8f7f81cc38c078a8dc4a1c60b8a10` 실제 확인.
+- 개선 A (기존 패치): 이전 Windows PowerShell 설치안은 `verify_portable.py` 허용 목록 누락 및 `FILE_MANIFEST.json` 설치 복사 누락으로 실행 불가 가능. 수정, 설치 전/스테이지 해시 검사 및 launcher 경로 인용 보완. 기존 DB가 분실된 경우 SQLite가 조용히 빈 DB를 만들지 못하도록 거부, GUI 신규 장부 생성에는 확인 필요.
+- 개선 B (이번 패치): SQLite 새 백업 파일을 `O_EXCL`+POSIX `0600`으로 생성, 기존 DB/기존 백업 덮어쓰기 금지. 사용자 명시 지정한 기존·비공유 로컬 폴더에서 개인 임시 작업공간을 만들어 백업 SHA-pin 복원과 여섯 테이블 해시/감사 이벤트 일치 검증 후 임시 복사본 삭제. 네트워크 송신·자동 결제 없음. 임시 폴더에도 평문 고객 데이터가 복사되므로 OS 암호화/비공유 위치를 사용자 스스로 보장해야 함.
+- 오프라인 제품 테스트 (Linux Python3.13.5): `PYTHONPATH=. python -m unittest discover -s tests -v` **104 PASS/0 FAIL/0 SKIP** (이전 97+복구 7). `xvfb-run -a python tests/gui_smoke_xvfb.py`, `gui_lifecycle_evidence_xvfb.py`, `gui_initialization_xvfb.py` 합성 Tk 실제 위젯 3종 **PASS**. `compileall` PASS.
+- 배포 후보 (Windows Python 필수, 무서명): `python -B scripts/build_portable.py --out NEW.zip` ZIP v3/14 members = 정확 소스·스크립트 13 + `FILE_MANIFEST.json`. 새 로컬 폴더에서 해제 후 `verify_portable.py --root` **13/13 PASS**, 독립 `python -B -m worknova_desk --db NEW.sqlite init` 및 `rehearse-restore` **PASS**. Linux의 Windows 설치 스테이징 *모사* 검증이며 실제 PowerShell 실행이 아님.
+- Windows 10/11 설치·복구/NTFS ACL·BitLocker/Defender, 한국어 Word·PDF 권리, 독립 서명 EXE, 진짜 고객 수용 10사례, 감사의 독립 서명·실제 금융거래 및 라이선스/세무 법률 검토는 **미검증**. Vercel/Production 미적용. 별도 유료 CI 미수행.
+- 사용자 최종설계 기준 WD-01~WD-14 **100점 가중치 미승인**. P85 명칭은 *엔지니어링 이정표*이지 최종 완성률 85% 실측 증거가 아니므로 **공식 완료율 UNASSESSED / 85% 미달 / [작업중] 유지 / RELEASE HOLD / 크몽 미등록**. 기존 다른 상품 원장·등록이력·PayPal 원형 변경 없음.
+- 복구: 코드 이전 SHA `85a2a115...`로 되돌릴 수 있으나 고객 DB/백업은 손대지 않는다. v2 DB에 구형 v1 writer 사용 금지. 상세 근거: Private 제품 `docs/P85_INSTALL_DB_SAFETY_20261113.md`, `docs/P85_RECOVERY_DRILL_20261113.md`, `STATUS.md`, `HANDOFF.md`.
