@@ -1,3 +1,16 @@
+## [2026-11-14 KST] WORKNOVA Desk 실제 Windows EXE ExitCode0 + 임시 DB 생성 검증 — 중앙 10항
+
+1. **목표·용도·요구·기술:** 승인 WD01~14 100점 고정, 완전 구매자 수용85점 목표. Python/SQLite/Tk Windows 독립 EXE·오프라인 견적→계약→납품/수금.
+2. **완료·기술결정:** Win PyInstaller6.22.3 onedir EXE 빌드·MZ·7,107,722바이트·SHA256 확보 이후 새 합성 LOCALAPPDATA 경로 최초 GUI 실행/정상 종료 및 임시 장부 파일 생성까지 확인. 고객 DB/제품 기능/OS 권한 불변.
+3. **테스트 PASS/FAIL·미검증:** 사용자 PowerShell `WaitForExit()`, `ExitCode : 0`, `TestDatabaseExists : True` (자식 `LOCALAPPDATA=$qaRoot`, `$qaRoot/WORKNOVA Desk/Data/desk.sqlite`), 화면 Tk 메인/4탭 표시. 바이너리 파일/DB 자체는 미수신; SQLite `PRAGMA integrity_check`/거래처 E2E/재실행·무Python PC/서명·Defender/ACL/법률·실고객 검증 **NOT_RUN**. 기존 Windows Python 필수 합성 11PASS×2/EXE MZ 검증 이력 별도.
+4. **완료·진행·대기:** WD11/13 네이티브 EXE GUI와 데이터파일 초기 생성 일부 실증. 최종 공식 전체 항목 완전 수용 **0/100(구현률0 뜻 아님), 목표85 미달, [작업중]/RELEASE HOLD/미등록**.
+5. **오류/원인/시도·대안:** 초기 ZIP 깊이 오류와 PyInstaller 사용자 사이트 가림(`PYTHONNOUSERSITE=1`) 해결해 현재 GUI까지 구동. 같은 빌드/설치 반복 금지. 다음은 기존 테스트 DB 읽기 전용 SQLite 무결성·스키마 점검 및 격리 합성 거래처/견적 시나리오.
+6. **저장소·브랜치·SHA:** `hibi89/Freelancer@product/worknova-desk-local`, 제품 최신 증거 HEAD `9fe4925038c4f72344b4529a2892365b5473f3f1`; 상세 `docs/P85_WINDOWS_EXE_BUILD_RESULT_20261114.md`. 중앙 `docs/audits/KMONG_16_CURRENT_20261111.md` WORKNOVA 행만 업데이트.
+7. **Production URL·환경·실행:** Vercel/웹 배포 미적용, Windows onedir unsigned EXE + TEMP 자식환경 QA. 실 업무/고객 데이터/Prod 사용 안함.
+8. **원본·백업·인증·금지:** 실제 고객 SQLite/백업·일반 OS LOCALAPPDATA·PayPal 원본/Freelancer main/다른 제품/등록완료 이력 변경·개인정보 GitHub 업로드·유료 CI 없음.
+9. **다음 우선순위·완료조건·승인:** 읽기 전용 새 DB integrity/schema→격리 합성 GUI CRUD·견적·계약·수금 및 재실행 데이터 지속성→Windows 접근통제/보안·법무/권리/실고객 수용. 유료·실데이터·보안정책 변경 사전 승인. WD별 전체 PASS 배점합85 이상만 달성.
+10. **갱신 일시 KST·근거·SHA:** 2026-11-14 KST, 사용자 실제 PowerShell ExitCode0+새 격리 DB `True`만 추가 증거, 직접 바이너리/DB 미수신·전체기능 미검증. 중앙 최종 SHA는 이 문서 커밋 후 재조회.
+
 ## [2026-11-14 KST] WORKNOVA Desk EXE GUI 메인 창 표시 시각 확인 — 중앙 10항 인수인계
 
 1. **목표/기술:** Windows 오프라인 WORKNOVA 견적·계약·납품·수금, 승인 WD01~14 전체100점 중 실구매자 완전 수용85점 목표.
