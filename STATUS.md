@@ -1,3 +1,10 @@
+## [2026-11-13 KST] GitHub App 최초 실 토큰 Dry-run 성공 — 자동 원장 기록 단계 대기
+- **인증·실행 검증 완료:** 사용자가 `kmong-hub-source-auditor` 앱 생성·설치(All repositories, Contents/Actions read-only) 및 중앙 GitHub Actions 변수·Secret 3개 등록. [수동 dry-run #43363161824](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43363161824) `main@2ce63078eeaced49cc46faeef5070c0c65ee9d7a` **completed/SUCCESS**, Job에서 App installation token 생성 단계 성공 및 실제 API 수집 단계 성공. `26/26 PASS` 단위 테스트 병행.
+- Job 로그: `DRY_RUN repositories: 35 tracked branches: 70 product records: 29 linked refs: 28 unlinked refs: 1 fingerprint alerts: 0 official scores: UNMODIFIED`. App 설치의 전체 저장소 권한은 사용자가 명시적으로 승인했으나, 실제 workflow 발급 토큰은 `repositories:` 화이트리스트 35개로 축소되어 기존 수집 범위를 유지. 모델/제품 공식 최종완성률 `29/29 UNASSESSED`, BID AX 미연결 1개·9 enforce/22 observe 정본·4 미지정 및 모든 과거 수치·등록 이력 보존.
+- 사용자 브라우저의 Actions run URL 404는 작업 실패 근거가 아님: 해당 run을 GitHub API, jobs, 실제 로그로 SUCCESS 확인. `data/kmong_hub_auto_observations.json` **아직 없음(404)** — dry-run이므로 의도대로 새 원장 쓰기 0.
+- **남은 P1/P2:** 수동 `dry_run=false` 실행으로 hub 관찰 JSON 최초 commit·remote readback 확인, 동일 관찰값 `NO_CHANGE`와 schedule 11:10 KST 실제 실행 확인, API 장애/권한 충돌 복구 미검증. 중앙 GitHub Actions의 자동 실행/오류 복구 완성 주장 금지. [감사 상세](docs/audits/KMONG_HUB_GITHUB_APP_IMPLEMENTATION_20261113.md).
+- 코드·Vercel·원본 소스·고객자료·제품 공식률·작업중/사용자 개입·RELEASE HOLD·등록완료 기록 변경 없음. 운영 상태: **인증/Dry-run 완료, 최초 원장 기록 대기**.
+
 ## [2026-11-13 KST] 해총 App 동기화 P0 후속 — GitHub 연결 계정 사전 검증 35/70/31, 제품 28/29 링크, CI 26/26 PASS
 - GitHub 사용자 연결로 35개 고정 저장소의 `main` 35 + 주요 브랜치 35 = **70/70 실존 SHA** 조회 성공, 31개 정본 Git blob 지문 **31/31 MATCHED** (9 enforce, 22 observe), 미지정 4개 유지. 제품 인덱스 **29개 중 28개 실존 브랜치**, `CANDIDATE-10 BID AX` 원래 null 링크 1건을 `NOT_LINKED`로 분리. 읽기 전용 **사전 점검**이며 실제 전용 GitHub App 권한/토큰으로 확인한 결과가 아님.
 - 코드 `main@2ce63078eeaced49cc46faeef5070c0c65ee9d7a`: 상품 기록 29개와 실제 연결/미연결 수를 분리해 수집 결과의 오인 방지. GitHub [CI #43359427752](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43359427752) **26/26 PASS, 0 FAIL**, [공통 게이트 #43359427770](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43359427770) **SUCCESS**. 예약 최초 기록 전 수동 검증 보호와 기존 토큰 읽기/쓰기 분리는 유지.
