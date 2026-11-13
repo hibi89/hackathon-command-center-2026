@@ -1,3 +1,12 @@
+## [2026-11-13 KST] GitHub 연결 계정 기반 사전 실조회 · 제품 연결 상태 집계 보정
+- **검증 도구/한계:** 연결된 GitHub 사용자 자격으로 REST Git refs 목록과 지정 정본 파일(blob SHA)을 읽는 사전 점검. **전용 GitHub App 설치 토큰/35 저장소 지정 설치/실제 예약 워크플로 검증 아님**. GET만 사용, 제품 저장소·원본·권한 변경 없음.
+- **35/35 저장소** Git refs 목록 응답 확인, 고정 등록된 기본 `main` 35개 + 주요 작업 브랜치 35개 = **70/70 SHA 확인**, 미존재 0·접근실패 0. App 읽기 scope가 정확히 35개인지는 여전히 미검증.
+- **정본 파일 지문 31/31 MATCHED**: enforced 9, observed 22. 정본 미지정 4개 `self-hosted-n8n-reliability-lab`, `project-book`, `RAG_STUDIO`, `work-hell-dungeon`은 이전과 같이 NOT_CONFIGURED. 이는 정본의 owner 승인 및 제품 수용 완료를 뜻하지 않음.
+- **제품 29개 인덱스 대조:** 28개 제품의 `repository`+`tracked_branch` 실존 SHA 조회 성공, `CANDIDATE-10 (BID AX)` 1개는 원래 `repository=null`, `tracked_branch=null`로 NOT_LINKED. 해당 1건을 임의 연결하거나 삭제하지 않음. 공식 최종완성률은 계속 **29/29 UNASSESSED**.
+- **코드 보강:** 기존 `summary.product_links=29`는 실제 연결수로 오인될 수 있어 하위 호환(29개 기록 수)을 보존하면서 `product_refs_present=28`, `product_refs_missing=0`, `product_refs_unlinked=1` 통계 추가. GitHub Actions 출력에도 연결·미연결 분리. 기능 외 범위나 원본 기준 축소 없음.
+- **실 테스트:** 중앙 `main@2ce63078eeaced49cc46faeef5070c0c65ee9d7a`, [observer run #43359427752](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43359427752) **26/26 PASS** (기존 24개+연결 누락/브랜치 없음 구별 2개), [공통 gate #43359427770](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43359427770) **SUCCESS**. 합성 회귀 테스트와 연결 계정 사전 검증을 GitHub App 자동 동기화 성공으로 주장하지 않음.
+- **잔여 차단:** `data/kmong_hub_auto_observations.json` 404, 자동 동기화 workflow 실제 run/토큰 발급·최초 원장 write/readback·NO_CHANGE·일일 schedule 성공 미확인. 사용자 GitHub 계정에서 전용 App 생성·35 저장소 설치·Actions App Client ID 변수/PEM Secret/Enable 변수 등록이 필요. 권한 확장·PAT 금지.
+
 ## 2026-11-13 후속 안전성 검증 (실 인증 이전)
 - 현행 코드 main@b8667cd27e92001e39ad21f4c71fde6f034bbd62: 예약 실행의 최초 관찰 원장 생성 차단. 최초 수동 dry_run=true 검증 후 수동 dry_run=false 원장 초기화가 선행되어야 예약 갱신 가능. 설치 가이드 보완 main@8c012e9296aaba186417d2d5523ae6ccd87bc5b1.
 - [단위 회귀 CI #43357835854](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43357835854) **24/24 PASS** (예약 최초 생성 금지·초기화 후 예약 갱신 2건 추가), [공통 게이트 #43357835850](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43357835850) **SUCCESS**.
