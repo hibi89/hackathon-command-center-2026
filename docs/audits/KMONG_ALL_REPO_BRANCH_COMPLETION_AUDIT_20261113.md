@@ -12,7 +12,7 @@
 | HAE | **85%** | 기존 CI 2 FAIL·판매 HOLD |
 | AI Code Checker | **95%** | 판매 HOLD |
 | SMAX² | **85%** | 판매 HOLD |
-| DATA2WEB Studio **[작업중]** | **UNASSESSED** | 독립 CSV/JSON 코드 구현, Windows cp1252 CI FAIL 원인 확인·수정 중. 목표 최종설계 50%, 검증 전 달성 금지 / RELEASE HOLD |
+| DATA2WEB Studio **[작업중]** | **UNASSESSED** | P50 기술 단계 CSV/JSON→HTML→ZIP·독립 verifier 구현 검증; [Windows·Ubuntu 각97PASS + 실 Chromium PASS](https://github.com/hibi89/data2web_studio/actions/runs/43377913444), 소스 `90da878ffa29926dda39f6c67913353ec7a3b390`. 전체 최종설계 공식 50% 미판정·XLSX/TSV/사용자 가중치/실고객/권리 미검증; RELEASE HOLD |
 | REA_Web [작업중] | **85%** | 목표 95 미달, 최신 합성 CI PASS / HOLD |
 | SOVIA | **95%** | 합성 단계·Windows/Linux CI PASS / HOLD |
 | AI AutoML Analyst | **95%** | 판매 HOLD |
