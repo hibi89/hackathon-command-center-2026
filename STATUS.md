@@ -1,3 +1,9 @@
+## [2026-11-13 KST] FlowPilot Universal P85: Python portable·보안·검수 보고 무결성 Linux/Windows CI 성공 / 공식 UNASSESSED
+- Product `hibi89/hibi89-ugreen-nas-hackathon@product/flowpilot-universal`, 기능 SHA `b66ba07b1cef34f0dff7683a9edc5e44684ac852`, 문서 SHA `6aee3e1d887502d32fd6303b9676a2f19d5215d2`. [최종 SHA CI](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/actions/runs/43384595692) Ubuntu/Windows 각 55 고유 PASS / 0 FAIL / 0 SKIP; 별도 8개 package 재실행/OS, 실제 Tk 위젯 1건/OS PASS (Windows hosted/Ubuntu Xvfb), 2/2 SUCCESS, compileall. [정책](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/actions/runs/43384595989) SUCCESS.
+- 기존 P50/P70 독립 엔진·원본 유지. 결정적 `.pyz` 패키지+사전 SHA/embedded manifest, ZIP/manifest/adversarial path hardening, JSON+HTML evidence vs SQLite ledger integrity check, GUI history verifier 추가. `.pyz`는 Python3.11+ 필요, signed Windows EXE/installer **NOT BUILT**.
+- 최종설계 F01–F10 전체의 승인 가중치/실 고객 Win10/11·USB·허가 SMB/NAS·증분 resume·PDF·정품 라이선스/설치/사용자 수락 미검증. 따라서 **공식 최종완성률 UNASSESSED, 85% 목표 미확정**, 중앙 FlowPilot `[작업중]` 유지, RELEASE HOLD / SALE NO-GO. [상세](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/product/flowpilot-universal/products/flowpilot_universal/P85_EVIDENCE.md).
+- 기존 29종 원천·19게시글·타 제품 지표/마커·등록완료/과거 기록, UGREEN `lead/ugreen/main` 및 정본 Skill/제출 불변. 배포/Production/Vercel N/A.
+
 ## [2026-11-13 KST] PROOFQA AX P85 합성·실도구 감사 검증 성공 · 공식 최종상품률 UNASSESSED
 
 - 개발 구현 정본 `hibi89/ai-code-checker@feature/proofqa-ax-p85-independent-audit` 정확 기능 **`5bce80a870d46702eb1ef5a51faa7cae54755691`**, 이전 P70 `1c4e9b629476ac9ac76b40a207f25408b2002a18` 기반, P50·CodeChecker 원본 유지. [Draft PR #85](https://github.com/hibi89/ai-code-checker/pull/85) 미병합, main/상업 원본 불변.
