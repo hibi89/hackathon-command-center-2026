@@ -1,3 +1,10 @@
+## [2026-11-13 KST] CITEVAULT AX 85% 사용자 목표 — 합성 보관소 42PASS, 공식 UNASSESSED
+
+- 제품 정본 `hibi89/Freelancer@product/rag-enterprise-knowledge f2ccc5623440b44433ea41ebf814e4de61c74541`, 원본 RAG pin `c5867b3951f51bfa97cadd1aad8fb13e9cf9e604`. 신규 `enterprise/p85-vault.mjs` 및 `enterprise/p85-loopback.mjs`: 합성 scrypt 로그인·세션, 테넌트/그룹/프로젝트/등급 ACL **원문 읽기 전에 적용**, 실제 로컬 파일 SHA 검증, 문서 버전·폐기·관리자 재색인, 조직별 감사 분리, `127.0.0.1` 테스트 HTTP.
+- **로컬 실행 증거:** Linux Node v22.16.0에서 신규 P85 `42PASS/0FAIL/0SKIP`, P50/P70 포함 종합 `79 TOTAL/76PASS/0FAIL/3SKIP`(3 SKIP은 실제 원본 RAG checkout). 신규 source/test 4개 GitHub blob과 로컬 `git hash-object` **정확 일치**. Ubuntu24.04/Windows2022 Actions CI matrix 코드 등록, hosted run/job·Windows 실검증 **미확인**. 문서 `docs/P85_EVIDENCE_MATRIX.md`.
+- **최종설계 미충족:** 실제 고객 IDP/IAM·영속권한/세션/감사·진짜 PDF/DOCX 원본 RAG 연결, 서명된 PREP/SMAX Native→승인 AX, 한국어 실제 모델/권리/Windows 물리 고객 인수 모두 추가 구현·검증 필요. 합성 사전 인증기·in-memory version을 실제 기업 서비스로 착각 금지.
+- **판정:** **공식 최종완성률 UNASSESSED**, 사용자 **85% 목표 미달·검증대기**, `CITEVAULT AX [작업중]`, `RELEASE HOLD/SALE NO-GO`. 중앙 원장의 다른 상품 진척·등록완료 이력은 그대로 보존.
+
 > **[BID_AX_P85_LOCAL_80PASS_20261113] BID AX P85 로컬 기술 보강 · 공식 최종완성률 UNASSESSED:** Private `hibi89/Freelancer@product/bid-ax-public-procurement` 기능·문서 HEAD [`acdb8a61270a`](https://github.com/hibi89/Freelancer/commit/acdb8a61270a86ebc4e7300c43fb99b71377d2b1), GitHub **17/17 파일 본문 일치**. Linux Python3.13.5 합성+mock **80 PASS/0 FAIL/0 SKIP**, compileall PASS, Tk8.6 Xvfb 기본 실행 PASS. 추가: 7일 제한·페이지 완전성/UUID 체크포인트·중복/변조·재시작 복구, 명시적 로컬 마감 알림 중복 방지, 기본 비활성 선택적 공식 API 전송 라이브러리(키 비저장·host 고정·시도예산·재시도 mock), Windows 수동 패키징 스크립트 및 SHA256 원본 ZIP. 실제 정부 API 호출 0건/Win10·11/Python3.11/EXE/공고100건·자격10건/실고객/실 Python GitHub CI **NOT_RUN**; **P85는 오프라인 일부 기술 게이트이며 최종설계 85% 근거 아님. 공식 `UNASSESSED`, 목표 85% `[작업중]` 유지, RELEASE HOLD/크몽 미등록.** [상세](docs/audits/BID_AX_P85_20261113.md). CANDIDATE-10 및 KMONG-SVC-18 연결과 기존 29→19/등록완료 이력·타 제품 표식 불변.
 
 ## [2026-11-13 KST] FlowPilot Universal P85: Python portable·보안·검수 보고 무결성 Linux/Windows CI 성공 / 공식 UNASSESSED
