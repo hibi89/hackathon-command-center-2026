@@ -1,3 +1,10 @@
+## [2026-11-13 14:35 KST] GitHub Actions `schedule` 임시 단축 실험 — 실행 미관측·원래 cron 복구 완료
+- **목적:** 수동 `workflow_dispatch` 성공과 구별해 실제 GitHub 예약 이벤트를 같은 날 검증하려고 사용자 지시에 따라 일일 cron을 임시 단축. 시작 전 `main@2ce63078eeaced49cc46faeef5070c0c65ee9d7a`, 원래 `.github/workflows/kmong-hub-sync.yml` cron `10 2 * * *`(KST 매일 11:10), 원래 workflow blob `37ce23f1f249ec39cfaeae170306556a34588d9b` 확인.
+- **시도:** 2026-11-13 14:24 KST 임시 `*/5 5 13 11 *` (UTC 05시/한국시간 14시대 5분 간격)로 **cron만** 변경, `main@4d036f7c0f1a11126ce3f94a4456d3e14d8f00e3` 원격 확인. 기본 브랜치 `main`과 커밋 author/committer `hibi89` 및 기존 `KMONG_SYNC_ENABLED` 활성(앞선 수동 성공) 확인.
+- **실행 여부 관측:** 한국시간 14:25, 14:30, 14:35 예정 슬롯 이후 GitHub Actions runs API를 조회했으나 **`event=schedule` 새 run 없음**(관측 기준 2026-11-13 약 14:35 KST). 예약 API가 해당 시각에 발행되지 않은 것이며, Job 실패·실행 결과 SUCCESS 아님. GitHub는 schedule 지연·누락 가능하다고 문서화: https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule . 새 run이 늦게 생길 수 있으므로 장애 원인 확정하지 않음.
+- **복구:** 곧바로 원래 cron `10 2 * * *`를 **내용 동일**하게 복구한 `main@98d353001f9ea8fd2b74dc1e7517a0fbdff5e64e` 원격 확인, workflow blob **`37ce23f1f249ec39cfaeae170306556a34588d9b`** 원복. 코드는 미변경, 임시 스케줄 유지하지 않음, 불필요한 수동 워크플로 실행 없음.
+- **판정:** 실 GitHub App 인증, 35 repos/70 refs, 최초 `UPDATED`, 동일 증거 `NO_CHANGE` 검증은 이전과 같이 PASS. **실제 `schedule` 트리거는 미검증**. 예약 스케줄이 구성된 것과 실제 수행 성공은 구분. 다음 일일 실행 시 이벤트·Job 로그·관찰 원장 및 추가 커밋 여부 확인. 29/29 제품 공식률 UNASSESSED, 등록 이력, 고객 원본·권한·키·Vercel 불변. 남은 경합/네트워크 실패 복구 실증도 미검증.
+
 ## [2026-11-13 KST] 실 GitHub App 재실행 NO_CHANGE 검증 — 불필요한 자동 커밋 없음
 - [Actions #43364386625](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43364386625) `workflow_dispatch` / `main@2ce63078eeaced49cc46faeef5070c0c65ee9d7a` / `dry_run=false`: GitHub API `completed/success`; job 전 단계 SUCCESS, 회귀 테스트 **26/26 PASS**.
 - 실제 로그: `KMONG HUB SYNC: NO_CHANGE repositories: 35 tracked branches: 70 product records: 29 linked refs: 28 unlinked refs: 1 fingerprint alerts: 0 official scores: UNMODIFIED`.
