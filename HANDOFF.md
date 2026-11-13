@@ -1,3 +1,15 @@
+## [2026-11-13 KST] 전체 정본 지문 35저장소 감사·31등록 — 중앙 10항 인수인계
+1. **목표/확정요구·기술:** 35 저장소의 사용자 최종설계 파일 무단 변동 감지, 최종 설계 전체100점 기준 유지. `Git Trees`/Git blob 지문, Python stdlib GitHub Actions shared verifier.
+2. **완료/선택 근거:** 두 접근 중 feature별 정본 복제(드리프트·운영비 증가) 대신 caller의 동일 repo 브랜치 read-only checkout + 중앙 pin 사용. GitHub main 35 조사, 31개 지문(28 main+3 feature), 9 강제/22 관찰, 4 미지정. 검증기/워크플로 중앙 main 수정; 기존 70 callers 불변.
+3. **테스트/정확 결과:** `main@47d623acae6a4bae9c45e5fa70852e29c3c2313d` [unit #43348476892](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43348476892) 25/25 PASS, [shared #43348476874](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43348476874) SUCCESS. 실제 DATA2WEB `main@3400ab7eb84fb7141acacfc0df213e0b0186da83` [Actions #43348157583](https://github.com/hibi89/data2web_studio/actions/runs/43348157583) SUCCESS, log `canonical=MATCHED`, official UNASSESSED; HAE/LA 기존 real pilot #43346193465 SUCCESS. 다른 3 feature-ref 경로의 caller 실 CI 미검증.
+4. **완료/진행/대기/차단:** central 31 지문 tracking, 사용자 가중치 미승인·제품 공식률 **29/29 UNASSESSED**. 4 repo 앵커 부재, 나머지 68 Thin caller 미실행 검증. 중앙 자동 sync `KMONG_HUB_SYNC_PENDING`.
+5. **실패/원인/시도/재시도/대안:** 첫 28-pin 코드 테스트 25개 중 6 FAIL (기존 테스트의 새 mode 필드 미반영, 시행 개수 10 vs 실제9) → 최소 수정 후 25/25 PASS [#43347933309](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43347933309), 추가 feature 개선 CI PASS. 근거 없는 정본으로 4개 등록 금지. 자동 타repo write는 GitHub App 설치 자격증명 없으므로 미구현; 수동 검증 원장 반영 유지.
+6. **저장소/브랜치/SHA·경로:** `hibi89/hackathon-command-center-2026@main` 기능 `47d623acae6a4bae9c45e5fa70852e29c3c2313d`, `@kmong-productization` 이전 HEAD `e6defd462cc1dc7ea35566a90e611d6820dc9a90`, 새 문서 HEAD 후속 원격 확인. `tools/final_blueprint_gate/canonical_scope.py`, `canonical_pins.json`, `.github/workflows/blueprint-validation.yml`, `docs/audits/FINAL_BLUEPRINT_35REPO_PINS_AUDIT_20261113.md`.
+7. **Production/환경:** GitHub-hosted ubuntu Python stdlib Actions, caller `contents:read`; Vercel/Production 미적용, 고객 실서비스 기능 검증0. 무의미한 rerun/유료 API 없음.
+8. **원본/백업/인증 관리/수정금지:** source/test/고객 DB/secret/.env, 기존 19 크몽 등록 기록, [작업중]/사용자 개입, 85/95 역사값 및 HOLD 불변. Git 커밋 부모 SHA로 롤백, 강제 push 금지. Public registry에는 파일 경로+블롭 메타데이터만 기록.
+9. **다음 우선순위/승인:** (i) RAG 등 미지정4 repo 소유자 기준 정본 유무 재확인, (ii) 22 observe 항목의 최종설계 승인/가중치 인증 후 enforce 여부 결정, (iii) GitHub App `contents:read,actions:read` source + 중앙 `GITHUB_TOKEN contents:write` hub 갱신 설계는 최소권한 승인·Secret 설정 실제 확인 이후 별도 작동검증, (iv) 제품 실 E2E→공식률 산정.
+10. **KST 갱신시각/범위:** 2026-11-13 KST. 35 main tree API 응답, 중앙 실제 CI 25PASS, DATA2WEB 실 CI SUCCESS, 중앙 JSON/브랜치 원격 확인. 31개 개별 caller 실행/전체 최종설계 수용/허브 자동화는 아직 성공 주장 금지.
+
 ## [2026-11-13 KST] 정본 지문 자동검증 실증 — 해총 인수인계 10항
 1. **목표/확정 요구/기술:** 사용자 확정 전체 최종설계 100점 기준이 임의 축소/변경되지 않도록 SHA 기반 읽기 전용 확인; HAE 자연어→실 모델→LA 일반 플로/오류 왕복→SOVIA/DBVORA 원래 범위 보존.
 2. **완료/설계 선택:** 각 feature 브랜치 정본 복제안 대비, 같은 private repo `main` read-only 추가 checkout + 중앙 fingerprint registry 방식으로 구현; `canonical_scope.py`/공통 workflow·unit fixture 추가. 라이선스/권한/비용/운영 유리, private 원문 public 미복제. 29개 원장 LA 항목에 실제 pilot 링크/결과 기록.

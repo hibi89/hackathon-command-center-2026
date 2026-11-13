@@ -1,0 +1,29 @@
+# 35 repositories — read-only final-blueprint fingerprint rollout audit
+
+> **2026-11-13 KST · Document identity only, not final-product acceptance.** Repository `hibi89/hackathon-command-center-2026@main` exactly `47d623acae6a4bae9c45e5fa70852e29c3c2313d`. Source [pin registry](https://github.com/hibi89/hackathon-command-center-2026/blob/main/tools/final_blueprint_gate/canonical_pins.json).
+
+## Scope observed and mode assignment
+- Existing repository inventory **35/35 main Git Trees queried** via GitHub API, no source edits or added runtime privileges. There are **31 observed anchors**: 28 `main` paths and 3 explicitly selected `feature/*` requirements on AI AutoML, SMAX and EAI. 4 repository anchors are still not confirmed. Different products may share one repository; **31 is not 31 approved products**.
+- **9 enforced** clearly named existing canonical/final/blueprint anchors. Fingerprint mismatch, missing canonical checkout or missing enforced pin fails the shared job. This is an *observed original file identity pin*, not independent user signature.
+- **22 observe-only** generic requirements/specification anchors. When bytes drift, the reporter produces `DRIFT_REVIEW_REQUIRED` without blocking other product work; these are **not** asserted to be the user's complete approved final blueprint.
+- A pin checks a file's bytes (Git blob SHA), not semantic coverage or authentic approval. The original human-approved requirements and complete weighted rubric are still required. **No product percentages recalculated**.
+- **4 not pinned:** `hibi89/self-hosted-n8n-reliability-lab`, `hibi89/project-book`, `hibi89/RAG_STUDIO`, `hibi89/work-hell-dungeon`. RAG Studio has substantive feature code/tests but **no single owner-approved canonical final blueprint verified** by this scan; the other three are peripheral/research projects. Do not infer missing implementation from missing document.
+
+## Exact GitHub results
+1. Central implementation `47d623acae6a4bae9c45e5fa70852e29c3c2313d`, [unit CI #43348476892](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43348476892) **25/25 PASS / zero failures** (actual job log), [shared gate #43348476874](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43348476874) **SUCCESS**, exact same SHA.
+2. Real non-HAE `hibi89/data2web_studio@main` pilot commit `3400ab7eb84fb7141acacfc0df213e0b0186da83`, [Actions #43348157583](https://github.com/hibi89/data2web_studio/actions/runs/43348157583) **SUCCESS**. All steps succeeded including existing-token same-repo checkout, validation, and private report archive. Actual job log: `Blueprint gate: UNASSESSED; canonical=MATCHED; official=UNASSESSED`. The `docs/FINAL_DESIGN.md` observed Git blob matched `7cd26804f5fea7ed2ec18911bb03d438a49aa646`.
+3. Earlier HAE repository LA-branch pilot [#43346193465](https://github.com/hibi89/HAE/actions/runs/43346193465) **SUCCESS**, report artifact canonical `MATCHED`, `gate=UNASSESSED`. **These two private pilots have different central verifier SHAs**: the DATA2WEB job exercised the prior 28-pin generalization, not automatically every new 3-feature-branch case. Those three new checkouts have **unit/static verification only; runtime unverified**.
+4. DATA2WEB docs-only completion `0cf4adbfe745c10fdb103db09185ea495fb769aa` marked `[skip ci]`, not a second product functional execution.
+5. Existing thin caller workflows **70 previously installed**, remain unmodified; only central reusable workflow and central verifier changed. Real 2 repository pilot success does not prove all 70 future executions.
+
+## Safe architecture / authorization
+- Option A (implemented): caller same-repository read-only checkout from main or selected feature, central public verifier with *fingerprint metadata only*. No customer/private document bytes published; no PAT, extra App installation, permissions, deployment, SaaS fee or secret transfer. Existing `contents:read` for callers.
+- Option B (separate final approval/credential setup): **cross-repository hub automation**. The normal caller `GITHUB_TOKEN` cannot write to `kmong-productization` in another repo. Least-privilege architecture: central private-source **read-only GitHub App** installation credentials to query repo/Actions, and central repository's own `GITHUB_TOKEN` for writing its hub branch (requires specifically scoped `contents:write` workflow permission); write only independently verified evidence by commit/PR with dedupe and rollback. **Current ChatGPT GitHub connector authorization does not expose an Actions-usable private key or automatically install App secrets.** User verbal authorization does not materialize credentials. No such deployment claimed.
+- Default to read-only/manual central reconciliation until secure setup is truly available. New API secrets, branch rules and external customer data are outside this commit. User's permission willingness noted but no unauthorized credential fabricated.
+
+## Pending completion
+1. Resolve final user-confirmed blueprint reference and weights for RAG Studio and other source-unclear products. Non-product projects remain `NOT_CONFIGURED` appropriately.
+2. Refine approved requirement IDs, per-criterion weights 100, real CI SHA/pass and customer E2E; gate still structural/fingerprint, not semantics. 29/29 official completion `UNASSESSED` remains unchanged.
+3. Set up a credential with separately verified scopes to perform periodic hub writes, with approval for installed secrets and branch-scoped write. Until there is a real execution, `KMONG_HUB_SYNC_PENDING`.
+
+**Production/Vercel:** not applicable to validator. **Source/rights/records:** original apps, customer data, 19 product registered-history, historical 85/95 engineering percentages, work-in-progress marks, RELEASE HOLD and release settings unchanged.

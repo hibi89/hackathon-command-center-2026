@@ -13,8 +13,13 @@
     "detailed_unweighted_trace_drafts": 2,
     "detailed_ci_evidence_drafts": 2,
     "detailed_trace_items": 21,
-    "canonical_pinned_repositories": 1,
-    "canonical_live_pilot_runs": 1
+    "canonical_pinned_repositories": 31,
+    "canonical_live_pilot_runs": 1,
+    "canonical_inventory_repositories": 35,
+    "canonical_enforced_repositories": 9,
+    "canonical_observed_repositories": 22,
+    "canonical_no_anchor_repositories": 4,
+    "canonical_live_pilot_repositories": 2
   },
   "notes": [
     "Fields reflect prior central audit evidence rather than a fresh scan of all 29 product HEADs.",
@@ -23,7 +28,8 @@
     "No product source or private content copied into this public index.",
     "All certified scores remain UNASSESSED until independent complete acceptance.",
     "2026-11-13: HAE and LA representative case outcomes were checked against exact historical Actions runs and private trace docs, not newly executed feature acceptance. Existing official UNASSESSED unchanged.",
-    "2026-11-13 canonical source integrity pilot only: HAE same-repository main read-only checkout verified at LA feature SHA 6508b27..., artifact MATCHED, official UNASSESSED. Other 34 repos have no central canonical pins yet."
+    "2026-11-13 canonical source integrity pilot only: HAE same-repository main read-only checkout verified at LA feature SHA 6508b27..., artifact MATCHED, official UNASSESSED. Other 34 repos have no central canonical pins yet.",
+    "2026-11-13 main-tree inventory: 35 inspected; 31 documentation fingerprints (28 main, 3 feature), only 9 enforced and 22 monitored. This is not a signed owner-approved whole-scope proof. 4 repos have no defensible anchor in scanned scope."
   ],
   "records": [
     {
@@ -105,7 +111,21 @@
       "historical_seen_head_prefix": "053d37a84595",
       "official_final_completion": "UNASSESSED",
       "owner_requirement_weights": "NOT_INDEPENDENTLY_APPROVED",
-      "detail_trace": "SUMMARY_ONLY"
+      "detail_trace": "SUMMARY_ONLY",
+      "canonical_fingerprint_pilot": {
+        "repository": "hibi89/data2web_studio",
+        "source_ref": "main",
+        "canonical_path": "docs/FINAL_DESIGN.md",
+        "expected_git_blob_sha": "7cd26804f5fea7ed2ec18911bb03d438a49aa646",
+        "validation_commit_sha": "3400ab7eb84fb7141acacfc0df213e0b0186da83",
+        "github_actions_run_id": 43348157583,
+        "run_conclusion": "success",
+        "log_canonical_status": "MATCHED",
+        "log_gate": "UNASSESSED",
+        "post_pilot_documentation_sha": "0cf4adbfe745c10fdb103db09185ea495fb769aa",
+        "official_final_completion": "UNASSESSED",
+        "scope": "same-repo main fingerprint only; no product E2E"
+      }
     },
     {
       "record_id": "ACTIVE-06",
