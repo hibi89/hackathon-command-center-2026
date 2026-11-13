@@ -1,3 +1,7 @@
+## [2026-11-13 KST] CITEVAULT AX P50 정확 Git blob 로컬 검증 · 목표 미달
+- 원본 `Freelancer@product/rag-enterprise-knowledge` 로컬 Node v22.16 동일 SHA 소스/테스트 재구성 및 blob match, 구문검사 2 PASS, `node --test tests/p50.test.mjs`: **6중 3 PASS / 0 FAIL / 3 SKIP**(RAG 통합 3개 미실행). 워크플로 `54cd494e47c27a3dd89846d9d02aeda0c955f8f4`에서 pinned RAG PDF/DOCX source parser tests 추가, Hosted CI run/log 미검증.
+- 제품 최신 문서 SHA `6c36d02e71a751c8473b0bb36c9dc8b2c5ed460c`, 원본 RAG pin `c5867b3951f51bfa97cadd1aad8fb13e9cf9e604`. `CITEVAULT AX [작업중]`은 50% 검증 전 유지, **공식 UNASSESSED · RELEASE HOLD**. 실 SMAX 승인 AX 패키지, 기업 IAM/ACL/Windows 고객 E2E 미검증. 다른 작업/등록 이력 불변.
+
 ## [2026-11-13 KST] PROOFQA AX P50 내부 합성 게이트 달성 — 공식 100점률 UNASSESSED
 - 기존 Private `hibi89/Freelancer@product/proofqa-ax-delivery-audit` 최종설계 P50 그대로. 구현 `hibi89/ai-code-checker@feature/proofqa-ax-p50-evidence-intake` 정확 SHA `e2b79f6c242d3d501cc2195732196abe5d0bba91`: 로컬 ZIP 안전 사전검증+기존 offline_core/report·원본 SHA256 전후 검증+HTML/JSON+독립 manifest+120초 제한 개발자 subprocess. 기존 Code Checker main/원본 branch 무변경, [Draft PR #83](https://github.com/hibi89/ai-code-checker/pull/83) 미병합.
 - [Tests #43376145439](https://github.com/hibi89/ai-code-checker/actions/runs/43376145439) Ubuntu24/26·Windows2025, Python3.11~3.15 **16/16 SUCCESS**(15 테스트 매트릭스+1 의존성 감사), Linux/Windows 로그 각각 `512 tests PASS`(신규 PROOFQA 9 포함). [Blueprint gate #43376145805](https://github.com/hibi89/ai-code-checker/actions/runs/43376145805) SUCCESS.
