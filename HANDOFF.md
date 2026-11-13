@@ -1,3 +1,15 @@
+## [2026-11-14 KST] FlowPilot Universal P85 최종 CI 수정·해총 간결 인수인계
+1. 목표/설계: 사용자 원본 F01–F10 전체 85%, Python3.11/Tk/SQLite/ReportLab/Windows unsigned EXE, 승인 100점 가중치와 실고객 수용 없어서 공식 UNASSESSED.
+2. 구현/근거: 소스 파일/디렉터리 종료 재확인으로 늦은 변경 INCOMPLETE, 추가 실제 NTFS reparse 원본/출력/PDF/history/checkpoint 보호, 기존 F02/F04/F06/F07/F08 보존.
+3. 검증: 코드 SHA `bd74a05fcacc426a101c070beaaad49e54283cbe`, 테스트 수선 SHA `62aa06416d5906f514eacf05a9260eab55cfc4a7`; [CI](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/actions/runs/43501501318) Win102PASS/0FAIL/0SKIP, Linux95PASS/7 Windows-only SKIP, portable8 반복/OS, Tk5/OS, compileall/2 jobs PASS; [EXE](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/actions/runs/43500327639) 초기/ZIP 재해제 재배치 EXIT0.
+4. 완료/진행/차단: F03/F05 강화 내부 검증 PASS. F09 실 구매자 Win10/11·USB·허가 NAS SMB/대용량/ACL, F10 서명/설치/상업권/고객인수/가중치 BLOCKED; [작업중]·판매 HOLD.
+5. 오류/원인/시도·회피: 문서 HEAD `a068c7c1...` [#43501017921](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/actions/runs/43501017921) Windows 1 FAIL: 기존 fixture `scandir==2`가 신규 마지막 recheck Windows 3회 호출을 오검출; 테스트 호출 횟수만 >=2 수정, 실제 변경 탐지·INCOMPLETE 불변, #43501501318 PASS. 재도입 금지.
+6. 저장소/브랜치/SHA: `hibi89/hibi89-ugreen-nas-hackathon@product/flowpilot-universal`, 기능 `bd74a05fcacc426a101c070beaaad49e54283cbe`, 최종테스트 `62aa06416d5906f514eacf05a9260eab55cfc4a7`, 제품 docs `d152c8b3885afdd399631b49b42f36b99497ff9c`, `products/flowpilot_universal/{engine.py,session.py,checkpoint.py,pdf_report.py,tests/test_final_consistency.py,tests/test_ntfs_junction.py,tests/test_session.py,P85_FINAL_CONSISTENCY_EVIDENCE.md,STATUS.md,HANDOFF.md}`; 중앙 해총 `kmong-productization` 이 HEAD 커밋.
+7. Production/실행: 웹/Vercel 미적용(독립 데스크톱); CI GitHub hosted Linux/Win Python3.11/unsigned onedir EXE. 외부 배포·첨부·인증서 없음.
+8. 원본/백업/인증: UGREEN lead/main·공식 Skill/제출, 고객 원본·타 상품 이력 보존. 파일 read-only, 증거/SQLite create-only/로컬, 개인정보/시크릿 외부 전송 없음. 원본 제품 pre-task SHA `44301fd6...`, 복구는 이력 selectively revert.
+9. 다음 우선순위/승인/완료기준: 사용자 승인 Win10/11·USB·실 UNC SMB 2벤더 테스트, 권한/경합/보고서 대조, 코드서명·설치·SmartScreen/AV·폰트/타사 NOTICE/지원 정책, 전체 F01–F10 공식 100점 수락 가중치 승인 후 85% 결정. 승인 없는 과금·접근 변경·판매 공개 금지.
+10. 갱신시점/범위: 2026-11-14 KST, 정확 테스트 SHA와 CI 위 참조, 고객/실 NAS/권리/상용 출시는 NOT_VERIFIED. 중앙 원격 SHA·FlowPilot 원장 행 readback 필요.
+
 ## 2026-11-14 KST — BID AX v2 중앙 10항 최신 인수인계
 1. 목표·요구·스택: 로컬 공공입찰/공매/법원 문서 준비, 최종설계 R01–29 29개, Python3.11+ Tkinter/SQLite, 사용자 최종85% 목표.
 2. 완료·결정: 온비드 정규화 로컬 원장/법원 적법 문서 동의·SHA/3모듈 CLI+GUI/온비드 3종 인증키 없는 비실행 공식 쿼리 계획 코드 원격 반영; 온라인 SaaS 아닌 고객 PC 비용/기밀 우선.
