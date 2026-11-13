@@ -1,3 +1,7 @@
+## [2026-11-13 KST] SITECRAFT AX P85 합성 반응형·보안 기술 단계 실검증 중앙 최신화
+- source hibi89/REA_Web@feature/sitecraft-ax-p85-20261113 exact tested SHA a3f31c4c676fb28c2ddded052f9cd0a0942370ad; https://github.com/hibi89/REA_Web/actions/runs/43382914205 Ubuntu24.04 116PASS/0FAIL/1WARN + Windows2025 116PASS/0FAIL/1WARN, 2/2 SUCCESS. Final blueprint evidence workflow SUCCESS at same SHA.
+- 합성 3개 사이트×desktop/mobile 각 실제 Chromium search/filter/detail 18 상태 전이, Astra P4 observed+review digest, Fable5.1 static GET, Pro FastAPI/SQLite 독립앱 실 브라우저 비교, 48 PNG·24 RGB 차이보고와 보수적 HUMAN_REVIEW_REQUIRED. 위조/외부 URL/iframe/XSS-as-text·atomic no-overwrite 안전 검사. 기존 P50/P70/원형 P85 회귀 포함.
+- product master hibi89/Freelancer@product/rea-website-rebuild SHA 6e94d0066cbc80e91fed28b3358b36fc76235515; SITECRAFT source documentation SHA a59d5279325e35c0fc65e81c36c7f74e21cbb0b9. **P85 합성 엔지니어링 마일스톤 PASS**, 전체 사용자 최종설계 공식률 **UNASSESSED**(100점 사용자 승인 배점·요구별 근거 추적 미완), SITECRAFT **[작업중] 유지**·RELEASE HOLD. 원형 REA_Web/다른 상품/기존 등록이력·DATA2WEB 불변. 실제 고객·실사이트·물리 Win10/11/Production 미검증.
 ## [2026-11-13 KST] AZENTFLOW AX P85 합성 기술 단계 양 OS 검증·크몽 원장 최신화
 
 - `hibi89/HAE@feature/axflow-mvp` 정확 테스트/기능 SHA `a640666db7a1bf2011c5d2abc944f13199ce455f`, [Actions #43382552489](https://github.com/hibi89/HAE/actions/runs/43382552489) Windows/Ubuntu 각각 신규 **P85 7/7 PASS**, P50 3/3+P70 7/7, Node UI24 PASS. Full Python 각 **290 = 281 PASS / 2 FAIL / 7 SKIP**, 전체 CI **FAILURE**(기존 출고물 ZIP/pyz stale source parity 2).

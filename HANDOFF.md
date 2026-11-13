@@ -1,3 +1,14 @@
+## [2026-11-13 KST] SITECRAFT AX P85 해총 인수인계 — 필수10항
+1. 목표·확정요구·기술: SITECRAFT 허가형 사이트 분석·독립 재구축, P85 합성 desktop/mobile 3사이트×3행동/스크린샷·RGB·Astra 보수 증거·SHA/승인 digest/보안. 전체 공식 최종설계는 원본 100점 분모 유지.
+2. 완료·변경·선택: REA_Web isolated P85 feature 브랜치에 sitecraft_p85.py/tests/workflow/acceptance doc; 원형 website_p85 Chromium/Astra/Fable STATIC/Pro/Pillow 재사용. 3사이트 atomic bundle, forged input/source/permission reject. REA 원형·engine·DATA2WEB·타 상품 변경 없이 보존.
+3. 테스트·성공/실패 수: exact functional SHA a3f31c4c676fb28c2ddded052f9cd0a0942370ad, https://github.com/hibi89/REA_Web/actions/runs/43382914205 Ubuntu24.04 **116 PASS 0 FAIL 1 WARN**, Windows2025 **116 PASS 0 FAIL 1 WARN** 2/2 SUCCESS. 총 실제 18 Chromium 상태전이·48 PNG·24 Pillow RGB difference, P50/P70/원형 P85/orchestrator 회귀.
+4. 완료/진행/대기: **P85 합성 엔지니어링 게이트 검증 통과**, 사용자 전체 최종설계 공식 완성률 UNASSESSED(100점 가중치+추적 부족). 중앙 SITECRAFT `[작업중]` 유지·RELEASE HOLD. P95 고객 승인/Record/GUI/패키지 및 P100 배포/인수 대기.
+5. 오류 근거·원인·금지·대안: CI FAIL 0, 1 nonblocking Starlette/httpx TestClient deprecation warning/OS. Pixel equality/외부사이트 권리/Fable Record 가정 금지. 합성 로컬 범위에서 증거 수집만 확인, 미승인 외부 고객 사이트 수집·복제·유료 API/배포 금지.
+6. 저장소·브랜치·SHA·경로: hibi89/REA_Web@feature/sitecraft-ax-p85-20261113 source a3f31c4c676fb28c2ddded052f9cd0a0942370ad docs a59d5279325e35c0fc65e81c36c7f74e21cbb0b9; hibi89/Freelancer@product/rea-website-rebuild 6e94d0066cbc80e91fed28b3358b36fc76235515; central hibi89/hackathon-command-center-2026@kmong-productization. rea/sitecraft_p85.py/tests/test_sitecraft_ax_p85.py/.github/workflows/sitecraft-ax-p85.yml.
+7. Production URL/Vercel/실행·환경: GitHub Actions https://github.com/hibi89/REA_Web/actions/runs/43382914205 Python3.11, ubuntu24.04/windows2025 Playwright Chromium/Pillow, Fable 5.1 static/Astra P4/REA Pro FastAPI+SQLite loopback. Production/Vercel 미적용(N/A).
+8. 원본·백업·인증·수정금지: REA_Web original feature/website-analysis-rebuild@82fb8da349de72f45eeaf15f7e997c2d449cf488, SITECRAFT P70 docs SHA 4639eabb8c9cb43bded6826c68fb3385571d2c95 보존. 롤백 정확 SHA, 원본 고객데이터·토큰·인증·외부사이트 미사용/원본 변경 금지.
+9. 다음 작업 우선순위·절차·완료조건: 사용자 P95 요청 시 실제 적법 권한·Fable --record capability 확인, 승인 GUI/Actor, 반응형 설계 세부/UI, Win10/11 Chrome/Edge 패키지·인수 등 증거 기반, 유료/외부 전송/원본 수정·Production 사전 승인. 공식률은 100점 배점+요구별 SHA 추적 승인 전 UNASSESSED.
+10. KST 갱신 2026-11-13, 정확 GitHub 소스 SHA와 두 Actions job logs 확인, 2/2 SUCCESS. 미검증 실고객·합법권리·물리 Windows10/11·Fable record·진짜 시각 동등성·Vercel. 문서 SHA와 기능 검증 SHA 구분, 타 상품 표시·등록이력 유지.
 ## [2026-11-13 KST] AZENTFLOW AX P85 중앙 인수인계 필수 10항
 1. **목표·용도·확정 요구·기술:** Freelancer 상품 AZENTFLOW AX P85, 전체 승인 100점 정본 유지. HAE 로컬 승인형 UI+LA 독립 SQLite 실행+DBVORA read-only 계약 mock/감사/제한형 schedule.
 2. **완료 기능·결정근거:** 원본 HAE/LA/DBVORA 복제(A: 성능/보안 drift/유지관리 부담)보다 기존 원본 HAE→LA 실 실행+별도 localhost DBVORA mock(B: 외부 SaaS비 0, 소스 보호, 프로토콜만 분리) 채택. 3개 합성 업무, 모의 계약 정상/이상, audit/receipt, schedule 2+1, 미승인/용량/외부 작업 거절을 신규 P85 7 테스트로 구현·검증.
