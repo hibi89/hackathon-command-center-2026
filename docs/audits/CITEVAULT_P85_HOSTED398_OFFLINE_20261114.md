@@ -1,5 +1,16 @@
 # CITEVAULT AX — 최종설계 P85 추가 실검증 (2026-11-14 KST)
 
+## [2026-11-14 KST] 최신: Chromium 실제 브라우저+권한대시보드 CI 421 PASS
+
+- 제품 정본 `hibi89/Freelancer@product/rag-enterprise-knowledge`, 기능 SHA [`49918ad4d0de23b8bc462830fa0789e93ebd7936`](https://github.com/hibi89/Freelancer/commit/49918ad4d0de23b8bc462830fa0789e93ebd7936), 제품 문서/수용표 HEAD [`119410fce937a8edfc073518f255a8e937a2db95`](https://github.com/hibi89/Freelancer/commit/119410fce937a8edfc073518f255a8e937a2db95).
+- [GitHub Actions #43529432977](https://github.com/hibi89/Freelancer/actions/runs/43529432977) exact-SHA **7/7 SUCCESS, 421 executions PASS /0 FAIL /0 SKIP** (Windows/Linux 중복 테스트 포함). 신규 ACL library8PASS/OS, 실제 Chrome browser1PASS.
+- 사용자의 **실제 UI 기능**: 최신 권한을 확인한 `GET /v1/library`, 조직·그룹·프로젝트·등급·문서 active 필터링; 허용 문서 KPI/컬렉션 차트·문서 선택·로그아웃 데이터 제거. 같은 브랜치의 원본 RAG/SQL/PDF-DOCX/Ed25519 합성 경로·Windows native 기존 기능 회귀 통과.
+- 실 Chromium Ubuntu hosted: 로그인→허용 문서 대시보드→원문 선택·권한 있는 검색→390px 모바일 무가로 오버플로→로그아웃, Chrome JS runtime 오류0/외부 HTTP 요청0, PNG 스크린샷 SHA `dacfed126a5c6763bd6117e0645ac0b4f3cb532b1bbb573d163151570fa46a65`. 테스트 로컬 Chrome은 조직정책 `ERR_BLOCKED_BY_ADMINISTRATOR`로 blocked, **hosted actual Chrome PASS**. 브라우저 Windows10/11 물리환경과 고객 자료 인수는 미검증.
+- [제품 상세 검증·REQ16 수용표](https://github.com/hibi89/Freelancer/blob/product/rag-enterprise-knowledge/docs/P85_CHROMIUM_DASHBOARD_ACCEPTANCE_20261114.md). REQ16 합성 UI 범위 실제 검증 강화됐지만 24항 전체 최종설계 공식률 **UNASSESSED, 85% 미인증, CITEVAULT AX [작업중]·RELEASE HOLD/SALE NO-GO**.
+- 미완: 고객 실직원 IdP·문서 이용권/서명 승인 PREP/SMAX producer/AX, licensed Korean model, 물리 Win10/11/customer Gold100·보안/라이선스/법무 최종수용, 사용자 확정 가중치. 공개 Freelancer 전체 브랜치/이력 노출 위험은 그대로, 타제품·원본/고객자료·비용·Production 변경 없음.
+- **해총의 이전 398/404PASS 증거는 과거 정확 SHA의 이력이며 본 421PASS가 최신**. 다른 모든 제품 최종률/등록완료·[작업중] 이력·판매정책 불변.
+
+
 ## [2026-11-14 KST 추가] CITEVAULT P85 SQLite catalog consistency 정확 SHA 검증 — 404 PASS
 
 - 기능 `hibi89/Freelancer@product/rag-enterprise-knowledge` [`d32f530e2425da0129a4eb2e9a4a7aef6708dab8`](https://github.com/hibi89/Freelancer/commit/d32f530e2425da0129a4eb2e9a4a7aef6708dab8), STATUS/HANDOFF/24항 수용표 [`aca47c3b5bef32c98ed7a3ac09a0a6ac56a4fe46`](https://github.com/hibi89/Freelancer/commit/aca47c3b5bef32c98ed7a3ac09a0a6ac56a4fe46).
