@@ -1,3 +1,15 @@
+## [2026-11-13 약 15:23 KST] AZENTFLOW AX P70 중앙 인수인계 10항
+1. **목표·용도·확정 요구·기술:** 사용자 AZENTFLOW AX 70% 단계. Freelancer HAE+LA 승인형 로컬 자동화 최종설계의 synthetic 50→70 기준, 공식 전체 100점 분모 보존.
+2. **완료 기능·변경·결정:** `hibi89/HAE`에 7개 P70 통합 게이트; 2개 지원 업무, 실제 LA 별도 자식 프로세스 CLI, 동시 같은 승인 요청/중복 0, HAE 서버 재시작 원장·감사, 실패상태 재승인, 입력 상한. 복제 엔진 대신 기존 독립 HAE/LA 실 코드 계약 재사용. 사용자 원본과 다른 제품 무수정.
+3. **테스트·성공/실패/미검증:** 실 SHA `12987055802c1e2e3dbf7eb5c5820382a52daef4`; [Actions #43377368138](https://github.com/hibi89/HAE/actions/runs/43377368138), Ubuntu/Windows 각 P70 7PASS/0FAIL/0SKIP, 이전 P50 3 PASS, smoke6 PASS, adapter5 PASS, Node UI24 PASS. Python 전체 각283 =274PASS/2FAIL/7SKIP, CI FAILURE 2는 배송ZIP/pyz parity; 실 고객 Windows 브라우저/외부 API 미검증.
+4. **완료/진행/대기/차단:** **70 합성 기술 단계 PASS**, 최종설계 공식률 **UNASSESSED** (전체 요구 승인 가중치/독립 수용 부족), AZENTFLOW `[작업중]`, RELEASE HOLD/크몽 미등록 유지.
+5. **오류 근거/원인/시도/재시도 금지/대안:** 최초 P70 SHA `4d7c824a...`의 테스트 변경 시나리오 자체가 unsupported 422, 유효한 다른 IR로 테스트만 바꾸고 `12987055...` 양 OS 성공. 기존 shipping parity 2건 회귀 FAIL 계속, 무조건 성공/검사 skip/무백업 ZIP 덮어쓰기/강제 푸시 금지, 백업·side-by-side 재빌드.
+6. **저장소·브랜치·SHA/주요 경로:** `hibi89/HAE@feature/axflow-mvp@12987055802c1e2e3dbf7eb5c5820382a52daef4`, `apps/ax-flow/tests/test_azentflow_p70_acceptance.py`; `hibi89/Freelancer@product/hae-la-automation/docs/P70_ACCEPTANCE_EVIDENCE_20261113.md`; 해총 `hibi89/hackathon-command-center-2026@kmong-productization/docs/audits/FREELANCER_BRANCH_COMPLETION_REGISTRY_20261113.md`. 최신 docs SHA는 후속 실제 ref 확인.
+7. **Production URL/Vercel/실행·환경:** GitHub-hosted Ubuntu+Windows Python3.11/Node22, 로컬 127.0.0.1 HTTP + 독립 LA subprocess; 외부 고객 Production/Vercel **미적용**.
+8. **원본/백업·인증/수정금지:** HAE 테스트 전 HEAD `cfa9881b701c9520f67e44a38619c333b65cbdf6`, Freelancer 전 HEAD `507d857a091b18886cfaf2357f6b856ce47f90f8`, Git 이력 복구; 원본 코드·고객 DB/PII/키·기존 바이너리·비용/권한·배포 변경 없음.
+9. **다음 작업 우선순위·절차·완료/승인:** 고객용 70→85 3 합성 워크플로/DBVORA protocol mock/SOVIA 감사/스케줄·양OS 검증, 기존 배송 parity 수리·LA SHA 고정. 공식 전체 100점 독립 승인 배점 전 공식 % 산정 불가; 실제 고객·유료·원본덮어쓰기·보안/권한은 재승인.
+10. **시각(KST)·검증 범위·문서 SHA:** 2026-11-13 약 15:23 KST; P70 Actions #43377368138 Windows+Ubuntu two jobs 로그/readback, HAE GitHub 원본 SHA, Freelancer 보고서 및 등록원장 확인. Vercel/실 고객/실 DBVORA·SOVIA/윈도우 실제 데스크톱 설치 미검증. 본 문서 최신 HEAD는 작성후 재조회.
+
 ## [2026-11-13 KST] SITECRAFT AX P70 해총 인수인계 (10항)
 1. 목표·기술: SITECRAFT AX 최종설계 중 P70 실 Chromium 합성 3사이트 검색/필터/상세 관찰→Astra P4 provenance+review digest→원형 Fable static→REA Pro 독립앱 생성 및 브라우저 기능 비교. 최종 전체 100점 분모·권리·실 고객 게이트는 유지.
 2. 완료·근거·결정: REA_Web product-specific 브랜치에 rea/sitecraft_p70.py, tests/test_sitecraft_ax_p70.py, sitecraft-ax-p70.yml, 수용 문서 구현. 기존 엔진 재사용, 3사이트 입력 별도 고정 SHA와 합성 승인 3 digest 검증, 일괄 atomic no-overwrite, 원형/기존 Pro/DATA2WEB 불변.
