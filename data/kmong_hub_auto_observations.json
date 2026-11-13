@@ -53,12 +53,12 @@
       "gate": {
         "conclusion": "success",
         "head_sha": "3d5d2d657738ae27df8a527275a1e5381f36c52e",
-        "matches_current_head": true,
+        "matches_current_head": false,
         "run_id": 43523343218,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "3d5d2d657738ae27df8a527275a1e5381f36c52e",
+      "head_sha": "914c0e1dfea3c7d3e6e105eb0182e5ff498e2659",
       "record_id": "ACTIVE-05",
       "repository": "hibi89/data2web_studio",
       "status": "PRESENT",
@@ -302,13 +302,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "fbac278dd21f48cea13a8f2f491585f053e630b9",
+        "head_sha": "e650fdbe65de25885bef0e6a4eb758c6bd4a1afa",
         "matches_current_head": true,
-        "run_id": 43514650785,
+        "run_id": 43524818113,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "fbac278dd21f48cea13a8f2f491585f053e630b9",
+      "head_sha": "e650fdbe65de25885bef0e6a4eb758c6bd4a1afa",
       "record_id": "CANDIDATE-10",
       "repository": "hibi89/Freelancer",
       "status": "PRESENT",
@@ -615,12 +615,12 @@
           "gate": {
             "conclusion": "success",
             "head_sha": "3d5d2d657738ae27df8a527275a1e5381f36c52e",
-            "matches_current_head": true,
+            "matches_current_head": false,
             "run_id": 43523343218,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "3d5d2d657738ae27df8a527275a1e5381f36c52e",
+          "head_sha": "914c0e1dfea3c7d3e6e105eb0182e5ff498e2659",
           "status": "PRESENT"
         },
         {
@@ -820,13 +820,13 @@
           "branch": "product/bid-ax-public-procurement",
           "gate": {
             "conclusion": "success",
-            "head_sha": "fbac278dd21f48cea13a8f2f491585f053e630b9",
+            "head_sha": "e650fdbe65de25885bef0e6a4eb758c6bd4a1afa",
             "matches_current_head": true,
-            "run_id": 43514650785,
+            "run_id": 43524818113,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "fbac278dd21f48cea13a8f2f491585f053e630b9",
+          "head_sha": "e650fdbe65de25885bef0e6a4eb758c6bd4a1afa",
           "status": "PRESENT"
         },
         {
