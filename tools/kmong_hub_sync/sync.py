@@ -266,7 +266,7 @@ def hub_path(path, branch=None):
     return f"/repos/{HUB_REPO}/contents/{path}{suffix}"
 
 
-def reconcile_hub(api, token, snapshot, dry_run):
+def reconcile_hub(api, token, snapshot, dry_run, scheduled=False):
     if not token:
         raise RuntimeError("central GITHUB_TOKEN is missing")
     path = hub_path(SNAPSHOT_PATH)
@@ -277,6 +277,8 @@ def reconcile_hub(api, token, snapshot, dry_run):
             raise RuntimeError("destination is not a managed evidence snapshot; refuse overwrite")
         if current == snapshot:
             return {"result": "NO_CHANGE", "commit": None}
+    if scheduled and existing is None and not dry_run:
+        raise RuntimeError("scheduled sync cannot create the first snapshot; initialize via manual dry_run=false after a successful dry_run=true")
     if dry_run:
         return {"result": "DRY_RUN", "commit": None}
     raw = json.dumps(snapshot, ensure_ascii=False, sort_keys=True, indent=2) + "\n"
@@ -315,7 +317,8 @@ def run():
     snapshot = collect_snapshot(observer, roster, pins, index)
     dry_run = determine_dry_run(os.getenv("GITHUB_EVENT_NAME", ""),
                                 os.getenv("KMONG_SYNC_DRY_RUN", ""))
-    result = reconcile_hub(api, hub_token, snapshot, dry_run)
+    result = reconcile_hub(api, hub_token, snapshot, dry_run,
+                           scheduled=os.getenv("GITHUB_EVENT_NAME") == "schedule")
     summary = snapshot["summary"]
     print("KMONG HUB SYNC:", result["result"], "repositories:", summary["repository_count"],
           "tracked branches:", summary["tracked_branch_count"],
