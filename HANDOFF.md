@@ -1,3 +1,16 @@
+## [2026-11-14 KST] WORKNOVA Desk EXE GUI 메인 창 표시 시각 확인 — 중앙 10항 인수인계
+
+1. **목표/기술:** Windows 오프라인 WORKNOVA 견적·계약·납품·수금, 승인 WD01~14 전체100점 중 실구매자 완전 수용85점 목표.
+2. **완료/결정:** PyInstaller6.22.3 Windows onedir EXE 실제 빌드/파일 길이·SHA/MZ를 사용자 검증했고, 새 빈 장부 확인창에 이어 GUI 메인 화면의 한글/4탭/기능 버튼 표시를 스크린샷으로 확인. 운영 장부/원본 제품 변경 없음.
+3. **검증/미검증:** 채팅 원본 이미지로 `WORKNOVA Desk — 로컬 계약·납품 장부` 메인 화면 렌더링 확인. 종료코드·TEST SQLite 존재/보존/재실행, 실제 기능 버튼·무Python PC·OS ACL/서명·Defender·권리/실고객 acceptance NOT_RUN. 이미지 개인정보 UI 포함으로 원본 GitHub 업로드하지 않음.
+4. **진행·대기:** WD11/13 GUI 시작 단계 PARTIAL. 승인100점 완전 수용 점수 **0/100, 목표85 미달, [작업중]/RELEASE HOLD/미등록**.
+5. **오류·원인·조치:** 이전 PyInstaller 하위환경 `PYTHONNOUSERSITE=1` 가림 원인은 제품 코드에서 수정, 형이 build plan 인자 직접 실행으로 실 Windows EXE 확보·실행. 반복 설치/빌드 불필요.
+6. **저장소·SHA:** 제품 `hibi89/Freelancer@product/worknova-desk-local ed49e1e4879d8b0c309090fe5c845f51440ea9bc`, 증거 `docs/P85_WINDOWS_EXE_BUILD_RESULT_20261114.md`. 중앙 `docs/audits/KMONG_16_CURRENT_20261111.md` WORKNOVA 단일 행 수정.
+7. **배포·환경:** Windows10.0.26200 네이티브 Tk EXE, %TEMP% onedir 후보. Vercel/Production N/A, 실제 판매/등록 없음. 다음은 자식 LOCALAPPDATA 새 임시 폴더가 실제 SQLite를 생성했는지 확인.
+8. **원본·백업·인증:** 실제 고객 DB·백업, 운영 LOCALAPPDATA·OS 보안 설정, PayPal 원본/Freelancer main/타상품·등록완료 이력 무변경, 화면 원본 업로드 금지.
+9. **다음 우선/완료 기준:** 사용자 GUI X 종료 → 기존 PowerShell `ExitCode`, `TestDatabaseExists` 출력 제출→이후 합성 거래처/견적 실 기능/재실행 지속성·보안/권리 단계. WD 항목 완전 PASS 배점 >=85 전 RELEASE HOLD 유지.
+10. **갱신·확인범위:** 2026-11-14 KST, 사용자가 제공한 GUI 스크린샷만 새 증거. GitHub 중앙 최종 SHA 후 확인, 정확 OS/runtime 전체·DB 미검증 구분.
+
 ## [2026-11-14 KST] WORKNOVA Desk Windows EXE 파일 해시/MZ 확보 — 중앙 인수인계 10항
 
 1. **목표·용도·확정 요구:** Windows 로컬 수기 견적/계약/납품/수금 WORKNOVA Desk, 사용자 승인 WD01~14 고정100점·항목별 완전 수용 85점 목표.
