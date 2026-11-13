@@ -1,3 +1,17 @@
+## 2026-11-13 KST — WORKNOVA DESK P85 HARDENING affb062c6251 (별도 제품 인수인계)
+1. 목표: 최종 WD01..14 85%, 공식 **UNASSESSED** / 완료 불인정
+2. 변경: 독립 DB 여섯 테이블 해시 체크포인트·변경탐지, 포터블 v2 파일 검증; 클라우드 공증 대비 로컬 비용·보안 장단점 비교 후 오프라인안 채택
+3. 검증: Linux Python3.13.5 **68 PASS/0 FAIL/0 SKIP**, Tk8.6 GUI E2E 및 compileall PASS; GitHub Blob 14/14; 실제 Windows/고객/제품 CI NOT RUN
+4. 상태: [작업중] 유지 / RELEASE HOLD / 미등록 / 공식85% 미달성
+5. 장애: 스프레드시트 런타임 부팅 방해 제거 후 전체 테스트 정상; 동시 DB+체크포인트 재기록 공격은 보호 불충분; Windows/EXE/폰트 실사용 대안 별도 검증 필요
+6. 정본: Private hibi89/Freelancer@product/worknova-desk-local@affb062c6251bc5ff253a8d855c7672298afe39d; 중앙 kmong-productization 원장 본 변경 SHA 확인 필요
+7. 배포: Production N/A, 외부 계정·유료 CI 미사용, 로컬 Python3.11+ CLI/Tk
+8. 원본/백업: 기존 DB/PayPal 원본·Freelancer main/타 브랜치 불변; 이전 기능 HEAD 7fdea1bf 보존, 비밀/고객 데이터 미포함
+9. 다음: Windows10/11 실제 설치/업그레이드/롤백 및 고객 데이터 SHA 보존·문서 권리·WD01/06/09/13·가중치 승인·정식 P85 수용
+10. KST: 2026-11-13, 원격 코드 SHA 확인·Linux 테스트 범위, 서명 EXE/실고객·CI/Production 미검증. [상세](docs/audits/WORKNOVA_DESK_P85_HARDENING_20261113.md)
+
+---
+
 ## [2026-11-13 KST] FlowPilot Universal P85 부분 재개·실 EXE 내장 Windows CI 성공 — 해총 인수인계 10항
 1. **목표·최종설계/기술:** PC/USB/승인 SMB F01–F10 전체 최종설계의 85% 사용자 목표, Python3.11 Tk/SQLite. 사용자 승인 100점 가중치와 독립 전체 인수 없으므로 공식률 UNASSESSED.
 2. **완료기능/결정:** source SHA `a96e727ba89bb87a4914e85c31da0898ce41c45d`; 동의한 출력폴더에 per-file SQLite checkpoint 저장, 중단 복구 후 재사용 해시 `NEEDS_REVIEW`·원본 전체 재해시 `READY`; PyInstaller6.22.3 Windows unsigned onedir EXE CI 후보(표준lib .pyz와 분리). 재사용 SHA는 암호학적 인증 없음, 전체 검증 기준 축소 금지.
