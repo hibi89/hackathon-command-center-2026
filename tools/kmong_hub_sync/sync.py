@@ -254,6 +254,9 @@ def collect_snapshot(observer, roster, pins, index):
             "summary": {"repository_count": len(rows),
                         "tracked_branch_count": len(rows) + sum(len(r["work_branches"]) for r in rows),
                         "product_links": len(linked),
+                        "product_refs_present": sum(p["status"] == "PRESENT" for p in linked),
+                        "product_refs_missing": sum(p["status"] == "MISSING" for p in linked),
+                        "product_refs_unlinked": sum(p["status"] == "NOT_LINKED" for p in linked),
                         "canonical_matched": sum(r["canonical"]["status"] == "MATCHED" for r in rows),
                         "canonical_not_configured": sum(r["canonical"]["status"] == "NOT_CONFIGURED" for r in rows),
                         "blocking_fingerprint_issues": len(issues)},
@@ -322,7 +325,9 @@ def run():
     summary = snapshot["summary"]
     print("KMONG HUB SYNC:", result["result"], "repositories:", summary["repository_count"],
           "tracked branches:", summary["tracked_branch_count"],
-          "product links:", summary["product_links"],
+          "product records:", summary["product_links"],
+          "linked refs:", summary["product_refs_present"],
+          "unlinked refs:", summary["product_refs_unlinked"],
           "fingerprint alerts:", summary["blocking_fingerprint_issues"],
           "official scores: UNMODIFIED")
     if result["commit"]:
@@ -332,7 +337,7 @@ def run():
             f.write("### Read-only Kmong evidence sync\n")
             f.write(f"- Outcome: **{result['result']}**\n")
             f.write(f"- Repositories: {summary['repository_count']} / tracked refs: {summary['tracked_branch_count']}\n")
-            f.write(f"- Product links: {summary['product_links']} / fingerprint alerts: {summary['blocking_fingerprint_issues']}\n")
+            f.write(f"- Product records: {summary['product_links']} / refs present: {summary['product_refs_present']} / missing: {summary['product_refs_missing']} / unlinked: {summary['product_refs_unlinked']} / fingerprint alerts: {summary['blocking_fingerprint_issues']}\n")
             f.write("- Official completion and registered-product history: **unchanged**\n")
     if summary["blocking_fingerprint_issues"]:
         raise RuntimeError("enforced canonical fingerprint drift detected; official scores unchanged")
