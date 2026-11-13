@@ -246,14 +246,14 @@
     },
     {
       "gate": {
-        "conclusion": null,
-        "head_sha": "97c4f6305923cc38f9fbb4e848d7908cd2128a2b",
-        "matches_current_head": true,
-        "run_id": 43513968881,
+        "conclusion": "success",
+        "head_sha": "2309b388cfbf2a8d219808c2f8fc46a575b28af8",
+        "matches_current_head": false,
+        "run_id": 43514020550,
         "status": "LATEST_RUN",
-        "workflow_status": "in_progress"
+        "workflow_status": "completed"
       },
-      "head_sha": "97c4f6305923cc38f9fbb4e848d7908cd2128a2b",
+      "head_sha": "f56635f72c6d605a2cd8f5d50e819dee6bfbd8f7",
       "record_id": "CANDIDATE-06",
       "repository": "hibi89/Freelancer",
       "status": "PRESENT",
@@ -866,14 +866,14 @@
         {
           "branch": "product/rag-enterprise-knowledge",
           "gate": {
-            "conclusion": null,
-            "head_sha": "97c4f6305923cc38f9fbb4e848d7908cd2128a2b",
-            "matches_current_head": true,
-            "run_id": 43513968881,
+            "conclusion": "success",
+            "head_sha": "2309b388cfbf2a8d219808c2f8fc46a575b28af8",
+            "matches_current_head": false,
+            "run_id": 43514020550,
             "status": "LATEST_RUN",
-            "workflow_status": "in_progress"
+            "workflow_status": "completed"
           },
-          "head_sha": "97c4f6305923cc38f9fbb4e848d7908cd2128a2b",
+          "head_sha": "f56635f72c6d605a2cd8f5d50e819dee6bfbd8f7",
           "status": "PRESENT"
         },
         {
