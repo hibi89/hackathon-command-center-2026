@@ -52,17 +52,17 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "90ed56892066761164419b147ca1351e65662e6f",
+        "head_sha": "9688c752966686776b033e5557e89f28e8bfdf48",
         "matches_current_head": true,
-        "run_id": 43385637985,
+        "run_id": 43389604966,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "90ed56892066761164419b147ca1351e65662e6f",
+      "head_sha": "9688c752966686776b033e5557e89f28e8bfdf48",
       "record_id": "ACTIVE-05",
       "repository": "hibi89/data2web_studio",
       "status": "PRESENT",
-      "tracked_branch": "feature/p85-ui-crossbrowser-20261113"
+      "tracked_branch": "feature/final-blueprint-p85-evidence-20261113"
     },
     {
       "gate": {
@@ -247,13 +247,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "2e74f630981d384d6a98ece3a45078185684f272",
-        "matches_current_head": false,
-        "run_id": 43389791753,
+        "head_sha": "fdbc5e5788c8a3a8bb83fea88f96c62af807922d",
+        "matches_current_head": true,
+        "run_id": 43389980669,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "9125870ee7c20b5d35642d1301bce9df5ed489f2",
+      "head_sha": "fdbc5e5788c8a3a8bb83fea88f96c62af807922d",
       "record_id": "CANDIDATE-06",
       "repository": "hibi89/Freelancer",
       "status": "PRESENT",
@@ -793,13 +793,13 @@
           "branch": "product/rag-enterprise-knowledge",
           "gate": {
             "conclusion": "success",
-            "head_sha": "2e74f630981d384d6a98ece3a45078185684f272",
-            "matches_current_head": false,
-            "run_id": 43389791753,
+            "head_sha": "fdbc5e5788c8a3a8bb83fea88f96c62af807922d",
+            "matches_current_head": true,
+            "run_id": 43389980669,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "9125870ee7c20b5d35642d1301bce9df5ed489f2",
+          "head_sha": "fdbc5e5788c8a3a8bb83fea88f96c62af807922d",
           "status": "PRESENT"
         },
         {
