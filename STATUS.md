@@ -1,3 +1,6 @@
+## [2026-11-14 KST] FlowPilot Universal F03/F05 P85 증거 최신화 — 공식 전체 85% UNASSESSED
+- 기능 코드 `bd74a05fcacc426a101c070beaaad49e54283cbe`·문서 SHA `a068c7c105d01419c50c4b7e5e2c7d8d4417e162`, 브랜치 `hibi89/hibi89-ugreen-nas-hackathon@product/flowpilot-universal`. [Linux+Windows CI](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/actions/runs/43500327638) Windows102 PASS/0FAIL/0SKIP (실 NTFS junction7), Linux95 PASS+7SKIP(Windows 전용), Tk5/OS, 포터블8 중복, compileall, 2/2 SUCCESS. [Windows EXE](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/actions/runs/43500327639) ZIP SHA 검증·재해제 EXE EXIT0. 최종 파일/폴더 재검증으로 탐지 가능한 동시 변경은 INCOMPLETE, SQLite/PDF/이력·checkpoint 출력 경로 정션 거부. 여전히 atomic snapshot/실 UNC SMB/Win10·11·상용 서명/라이선스/고객 수용/확정 100점 가중치 부재: **공식 UNASSESSED, 85% 미인증, FlowPilot [작업중] 유지·출시 HOLD/미등록**. UGREEN/다른 크몽 항목 불변. [증거](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/blob/product/flowpilot-universal/products/flowpilot_universal/P85_FINAL_CONSISTENCY_EVIDENCE.md).
+
 ## [2026-11-13 KST] CITEVAULT AX P85 통합 검증 — 제품 1fc73ef7
 
 - 사용자 85% 목표에 대한 공식 최종완성률: UNASSESSED / 미달성 검증 대기. CITEVAULT AX [작업중], RELEASE HOLD/SALE NO-GO 보존.

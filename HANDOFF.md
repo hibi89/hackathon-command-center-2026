@@ -1,3 +1,15 @@
+## [2026-11-14 KST] FlowPilot Universal P85 최종변경·NTFS 경계 — 해총 인수인계 10항
+1. **목표/설계/스택:** 원본 F01–F10 PC·USB·권한 SMB 납품검수 전체 85%, Python3.11/Tk/SQLite/선택 ReportLab/Windows PyInstaller; 확정 100점 가중치와 실고객 인수 없으므로 UNASSESSED.
+2. **완료/변경/근거:** SHA 후 최종 소스 폴더/파일을 다시 lstat·이름 비교하여 변경 시 INCOMPLETE, 출력 JSON/HTML/SQLite/PDF/checkpoint NTFS junction 회피 방어. 기존 read-only 검수·GUI/PDF·EXE 유지; 스냅샷 불가 명시.
+3. **명령/성패/증거:** `cd products/flowpilot_universal && python -m unittest discover -s tests -p 'test_*.py' -v && python -m compileall -q flowpilot_universal` SHA `bd74a05fcacc426a101c070beaaad49e54283cbe` [CI](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/actions/runs/43500327638) Win102PASS/0FAIL/0SKIP, Linux95PASS/7SKIP (NTFS 전용), Tk5/OS, portable8 중복 PASS/OS, 2/2 SUCCESS. [Win EXE](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/actions/runs/43500327639) 초기 및 relocated 자체실행 EXIT0, ZIP SHA 검증. [정책](https://github.com/hibi89/hibi89-ugreen-nas-hackathon/actions/runs/43500328207) SUCCESS(완성률 근거 아님).
+4. **완료/진행/대기/차단:** F03/F05 내부 보안 CI PASS. F09 구매자 실 Win10/11·USB/권한 SMB NAS 다기종, F10 서명·설치·라이선스/고객 수용/원본전체 100점 rubric 부족. 공식 목표 미인증, [작업중]·RELEASE HOLD·판매 미등록.
+5. **오류/원인/시도/대안:** 본 SHA Linux/Windows/EXE 실패 없음. 강건성은 best-effort 메타데이터+directory relist이며 hostile metadata spoof/SMB race/후속 변경은 방어 미보장. 위험 변경 없이 실 PC에서 사용자 허가범위 독립검증 필요; 합성 PASS를 고객 출시로 오인하지 말 것.
+6. **저장소·SHA·경로:** `hibi89/hibi89-ugreen-nas-hackathon@product/flowpilot-universal` 코드 `bd74a05fcacc426a101c070beaaad49e54283cbe`, 문서 `a068c7c105d01419c50c4b7e5e2c7d8d4417e162`, `products/flowpilot_universal/{flowpilot_universal/engine.py,session.py,checkpoint.py,pdf_report.py,tests/test_final_consistency.py,tests/test_ntfs_junction.py,P85_FINAL_CONSISTENCY_EVIDENCE.md,STATUS.md,HANDOFF.md}`; 중앙 `hibi89/hackathon-command-center-2026@kmong-productization` 본 기록 commit/head 재확인.
+7. **Production URL/Vercel/환경:** 독립 오프라인 데스크톱, 웹 Production/Vercel 미적용. GitHub hosted Ubuntu/Windows Python3.11, unsigned EXE onedir CI만(배포 파일 미게시), 사용법 `python -m flowpilot_universal.gui`.
+8. **원본/백업/인증/금지:** UGREEN `lead/ugreen`/`main`/공식 Skill·제출, 고객 원본 및 타 상품/등록완료 이력 불변. 스캔 source read-only, 보고·백업 create-only, SQLite 로컬. Pre-task product SHA `44301fd666fd89bff4339b36b3bf30641dea977e` 복구 참조, 고객 데이터 삭제/토큰 저장/공개 배포 금지.
+9. **다음/완료기준/승인:** 물리 Windows10/11·실 USB·고객 승인 UNC SMB 2종 이상, 최종 보고서 원문 비교/파일레이스·ACL, 코드서명/설치·SmartScreen/AV·폰트/타사 라이선스·지원/환불·실고객 인수, 사용자 확정 F01–F10 100점 가중치 후 공식 85 계산. 유료/권한 변경/외부 공유는 사전 승인.
+10. **일시/범위/검증기준:** 2026-11-14 KST, 기능 `bd74a05fcacc426a101c070beaaad49e54283cbe`, 제품문서 `a068c7c105d01419c50c4b7e5e2c7d8d4417e162`, Win102/Linux95+7SKIP/Tk5/OS/EXE 이주 EXIT0; 고객/권리/실 NAS/공식률 미검증, 중앙 원격 SHA/FlowPilot 행 재조회 후 동기화 확정.
+
 ## [2026-11-13 KST] CITEVAULT AX P85 통합 실행 인수인계 (10항)
 
 1. 목표/용도/최종설계/기술: 기업용 로컬 근거형 PDF/DOCX+fixed SQL RAG, 실 고객 PREP/SMAX 승인 AX, 직원 IdP·tenant/group/project ACL, 실제 한국어 모델·Windows 인수. 사용자 최종설계 전체 기준 85% 목표, 공식 UNASSESSED.

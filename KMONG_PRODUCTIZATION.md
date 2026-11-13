@@ -391,7 +391,7 @@
 | 새 후보 | 고객·판매자 월 서비스 고정비 0원 목표 구조 | 권장 1회 판매 가격 가설 | 핵심 유료 차별성 | 현재 |
 |---|---|---|---|---|
 | BID AX — 입찰 준비 자동화 | 고객 PC + SQLite + 본인 무료 공공데이터 API 키/한도 | Basic 39,000 / **Standard 99,000** / Premium 179,000원 | 기업별 공고 선별·자격/서류 체크·변경/마감·원문 근거 | 기획 후보 |
-| FlowPilot Universal — 파일·SMB 검수 | Windows 로컬 + 권한 있는 SMB 공유폴더, 별도 서버 없음 | Basic 39,000 / **Standard 79,000** / Premium 149,000원 | 승인형 납품 체크리스트 작성·누락/버전 충돌·SHA·한국어 PDF/JSON/HTML 검수 보고서 | P85 F02/F05/F08 Windows CI 94PASS/GUI5/EXE 재배치 성공 / 공식 UNASSESSED / `[작업중]` / 출시 HOLD |
+| FlowPilot Universal — 파일·SMB 검수 | Windows 로컬 + 권한 있는 SMB 공유폴더, 별도 서버 없음 | Basic 39,000 / **Standard 79,000** / Premium 149,000원 | 승인형 납품 체크리스트 작성·누락/버전 충돌·SHA·한국어 PDF/JSON/HTML 검수 보고서 | P85 F03/F05 최종변경 방어·Windows 102PASS/GUI5/EXE 재배치 검증 / 공식 UNASSESSED / `[작업중]` / 출시 HOLD |
 | WORKNOVA Desk — 계약·납품 관리 **[작업중]** | Windows 로컬 SQLite, PayPal/필수 유료 AI 제외 | Basic 49,000 / **Standard 119,000** / Premium 199,000원 (가격 가설) | KRW/VAT 견적·버전, 승인형 계약/마일스톤·납품/수금 수기 원장·오프라인 Tk GUI·백업복구 | **P70 한정 엔지니어링 기능 로컬 검증** (Python 37/37 PASS+Tk Xvfb 합성 E2E), **공식 최종설계률 UNASSESSED**·Windows 고객/법적 검증 대기, **RELEASE HOLD**; [근거](docs/audits/WORKNOVA_DESK_P70_EVIDENCE_20261113.md) |
 
 - **비용/판매 현실:** 월 서버 구독 0원은 설계 목표일 뿐, 구매 가격, 정부 API 한도·키, Windows/인터넷, 크몽 수수료·세금·지원·개발 노동까지 총비용 0원은 불가능. 판매 전 실고객/Windows/상업 라이선스/원본 권리·보안·회귀 검증 필수.
