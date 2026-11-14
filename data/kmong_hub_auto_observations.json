@@ -52,13 +52,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "a27cc31d0328b489904767f0d45062da289bed88",
+        "head_sha": "ff9274b2a8fda65f98c4ce4792631012bf1d5578",
         "matches_current_head": true,
-        "run_id": 43530596273,
+        "run_id": 43531409914,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "a27cc31d0328b489904767f0d45062da289bed88",
+      "head_sha": "ff9274b2a8fda65f98c4ce4792631012bf1d5578",
       "record_id": "ACTIVE-05",
       "repository": "hibi89/data2web_studio",
       "status": "PRESENT",
@@ -247,13 +247,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "380c8fc8696c817e728581b6ddbe77efac3c0199",
+        "head_sha": "c3397b6127d4925e80b18fb24ad00b5fce6b2fd9",
         "matches_current_head": true,
-        "run_id": 43531312362,
+        "run_id": 43531472364,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "380c8fc8696c817e728581b6ddbe77efac3c0199",
+      "head_sha": "c3397b6127d4925e80b18fb24ad00b5fce6b2fd9",
       "record_id": "CANDIDATE-06",
       "repository": "hibi89/Freelancer",
       "status": "PRESENT",
@@ -614,13 +614,13 @@
           "branch": "feature/final-blueprint-p85-evidence-20261113",
           "gate": {
             "conclusion": "success",
-            "head_sha": "a27cc31d0328b489904767f0d45062da289bed88",
+            "head_sha": "ff9274b2a8fda65f98c4ce4792631012bf1d5578",
             "matches_current_head": true,
-            "run_id": 43530596273,
+            "run_id": 43531409914,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "a27cc31d0328b489904767f0d45062da289bed88",
+          "head_sha": "ff9274b2a8fda65f98c4ce4792631012bf1d5578",
           "status": "PRESENT"
         },
         {
@@ -867,13 +867,13 @@
           "branch": "product/rag-enterprise-knowledge",
           "gate": {
             "conclusion": "success",
-            "head_sha": "380c8fc8696c817e728581b6ddbe77efac3c0199",
+            "head_sha": "c3397b6127d4925e80b18fb24ad00b5fce6b2fd9",
             "matches_current_head": true,
-            "run_id": 43531312362,
+            "run_id": 43531472364,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "380c8fc8696c817e728581b6ddbe77efac3c0199",
+          "head_sha": "c3397b6127d4925e80b18fb24ad00b5fce6b2fd9",
           "status": "PRESENT"
         },
         {
