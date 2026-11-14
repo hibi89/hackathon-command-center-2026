@@ -330,15 +330,15 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "7d9514894b353b652116c0ae9eca84f7559902ef",
+        "head_sha": "f873d8e716e7022e4acc3faa124b1ece2c9cdda6",
         "matches_current_head": true,
-        "run_id": 43546935488,
+        "run_id": 43547229205,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "7d9514894b353b652116c0ae9eca84f7559902ef",
+      "head_sha": "f873d8e716e7022e4acc3faa124b1ece2c9cdda6",
       "machine_evidence_score": {
-        "current_head_sha": "7d9514894b353b652116c0ae9eca84f7559902ef",
+        "current_head_sha": "f873d8e716e7022e4acc3faa124b1ece2c9cdda6",
         "denominator": 100,
         "limitations": "Historical approved item classifications; no fresh item-by-item CI, real-customer, rights or retail acceptance",
         "percent": 72,
@@ -373,7 +373,7 @@
           "blueprint": {
             "branch": "feature/final-blueprint-p85-evidence-20261113",
             "git_blob_sha": "c3b5a389fde981a70356f962724f1be6e26d6185",
-            "head_sha": "7d9514894b353b652116c0ae9eca84f7559902ef",
+            "head_sha": "f873d8e716e7022e4acc3faa124b1ece2c9cdda6",
             "path": "docs/FINAL_DESIGN.md",
             "repository": "hibi89/data2web_studio"
           },
@@ -388,7 +388,7 @@
           "implementation": {
             "branch": "feature/final-blueprint-p85-evidence-20261113",
             "git_blob_sha": "b6ec0e4e138cbb9c38b0971c9b3f1ea309b99e9b",
-            "head_sha": "7d9514894b353b652116c0ae9eca84f7559902ef",
+            "head_sha": "f873d8e716e7022e4acc3faa124b1ece2c9cdda6",
             "path": "blueprint_score.py",
             "repository": "hibi89/data2web_studio"
           }
@@ -2669,13 +2669,13 @@
           "branch": "feature/final-blueprint-p85-evidence-20261113",
           "gate": {
             "conclusion": "success",
-            "head_sha": "7d9514894b353b652116c0ae9eca84f7559902ef",
+            "head_sha": "f873d8e716e7022e4acc3faa124b1ece2c9cdda6",
             "matches_current_head": true,
-            "run_id": 43546935488,
+            "run_id": 43547229205,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "7d9514894b353b652116c0ae9eca84f7559902ef",
+          "head_sha": "f873d8e716e7022e4acc3faa124b1ece2c9cdda6",
           "status": "PRESENT"
         },
         {
@@ -3012,7 +3012,7 @@
     {
       "canonical": {
         "expected_git_blob_sha": "521ba0cb458bea384639a0ef897ce7500d33b8f1",
-        "head_sha": "d2c07d1c7b3b657c02ac9f80d5046334c570013f",
+        "head_sha": "67212b67d0662ab29f7f5a995386ceb65e049d4c",
         "mode": "observe",
         "observed_git_blob_sha": "521ba0cb458bea384639a0ef897ce7500d33b8f1",
         "owner_approval_verified": false,
@@ -3025,12 +3025,12 @@
         "gate": {
           "conclusion": "success",
           "head_sha": "d2c07d1c7b3b657c02ac9f80d5046334c570013f",
-          "matches_current_head": true,
+          "matches_current_head": false,
           "run_id": 43545642364,
           "status": "LATEST_RUN",
           "workflow_status": "completed"
         },
-        "head_sha": "d2c07d1c7b3b657c02ac9f80d5046334c570013f",
+        "head_sha": "67212b67d0662ab29f7f5a995386ceb65e049d4c",
         "status": "PRESENT"
       },
       "repository": "hibi89/hackathon-command-center-2026",
