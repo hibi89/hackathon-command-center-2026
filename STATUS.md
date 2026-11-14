@@ -1,3 +1,11 @@
+## [2026-11-14 KST] 크몽 19개 상품 등록 단위로 개발·검수·상품화 작업판 통일
+
+- **사용자 결정:** 별도 프로젝트별 상품화 목록을 중심으로 운영하는 대신 `service_id` 단위로 기본형 판매 준비→기존 게시글 선등록→연계 기능 완성 시 동일 상품의 고급 옵션/설명/이미지 수정 흐름으로 통합.
+- **선택한 설계:** 원천 29개 저장소/브랜치 물리 병합(A) 대신 기존 29→19 서비스 카탈로그 ID를 기준으로 가상 상품 작업판(B) 사용. 재사용/보안/회귀·기존 인수인계 보존.
+- **원격 작성:** [운영 정본](docs/commercial/KMONG_LISTING_UNIT_OPERATIONS_20261114.md), `data/kmong_service_catalog_20261113.json` 에 `operating_mode=LISTING_UNIT_BASE_FIRST_EXTEND_LATER` 및 연계 정책 메타데이터 추가. 19개 SKU·원천29·3 추가 소비자형 후보·AXNODE·AXMART³ CUBE 분류, 기존 순위/패키지/URL/등록상태/과거 이력 보존.
+- **검증 한계:** JSON 구조·19/29 개수 및 GitHub 저장/readback만 확인 대상. 실제 제품 테스트·코드·CI·크몽 등록/수정·상용권·실고객/Production **NOT_RUN**. 19개 실제 판매 등록 증거 0이며 기존 `RELEASE HOLD`·공식 최종완성률·[작업중]/[사용자 개입 필요]·기존 판매 상태 변경 없음.
+- **다음:** 각 SKU 별 BASE 출고 검증/확장 후보 제품 연계/수용·가격·이미지·지원/환불·최종 소유자 승인 패킷을 모아, 구매 가능 기본형만 먼저 등록하고 검증된 추가 기능은 기존 상품 편집으로 전환. 7영업일 이내 승인 보장 없음.
+
 ## [2026-11-14 KST] BID AX Windows frozen GUI 실제 시작·종료 CI PASS
 
 > **[2026-11-14 KST | BID AX Windows frozen GUI 실구동·266 테스트 5/5 SUCCESS]** 제품 [코드 SHA `1ec540634671`](https://github.com/hibi89/Freelancer/commit/1ec540634671ff85b080e034cd37564e54fc8e1e) / [문서 HEAD `cb0434ef6a61`](https://github.com/hibi89/Freelancer/commit/cb0434ef6a61af80e96b2f5c2d9a0aa512983280); 기존 사용자 동의형 온비드 로컬 JSON 여러페이지 GUI 등록에 이어 **임시 DB 기반 `--selftest-gui` 실제 frozen Windows GUI EXE 시작·정상 종료** 검증. [Actions #43538851029](https://github.com/hibi89/Freelancer/actions/runs/43538851029) **5/5 SUCCESS**: Ubuntu3.11/3.13 각 **266 PASS**, Windows3.11 **266 tests/0 FAIL/1 POSIX-only SKIP**, CLI EXE/Tk init/GUI onedir PE build/**frozen GUI 실행** PASS. 실 고객 Windows10·11 설치/SmartScreen/작업 결과·상업권/실 API·100실공고·독립검토10은 **미검증**. 실제 온비드 15157252 1페이지10건과 전체186 보고 중 후속18페이지 미수집. **R01–R29 최종완성률 UNASSESSED/목표85% 미인증, [작업중]/RELEASE HOLD/크몽 미등록**, `CANDIDATE-10/KMONG-SVC-18`, 기존 원천29/판매19·등록 이력/타제품/BID OWL 불변. [중앙 감사](docs/audits/BID_AX_FROZEN_GUI_266_CI_20261114.md).
