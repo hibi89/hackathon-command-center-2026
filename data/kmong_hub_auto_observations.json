@@ -1549,13 +1549,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "7f4827c773800c6998d4e312870eed7bfd5dc0e1",
+        "head_sha": "a4b1ce725696ab5e742636220bc8056335cde51d",
         "matches_current_head": true,
-        "run_id": 43542896973,
+        "run_id": 43543167165,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "7f4827c773800c6998d4e312870eed7bfd5dc0e1",
+      "head_sha": "a4b1ce725696ab5e742636220bc8056335cde51d",
       "machine_evidence_score": {
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
@@ -1583,14 +1583,14 @@
           "blueprint": {
             "branch": "feature/ffax-workbench-p85-20261112",
             "git_blob_sha": "a3ee7772c18d948aec1baf2c8fdc5a442c28e03c",
-            "head_sha": "7f4827c773800c6998d4e312870eed7bfd5dc0e1",
+            "head_sha": "a4b1ce725696ab5e742636220bc8056335cde51d",
             "path": "docs/ACCEPTANCE_MATRIX.md",
             "repository": "hibi89/frontend-foundry-ax"
           },
           "implementation": {
             "branch": "feature/ffax-workbench-p85-20261112",
             "git_blob_sha": "9a15cb846a430c296a23faf7ee5f751fc912b78d",
-            "head_sha": "7f4827c773800c6998d4e312870eed7bfd5dc0e1",
+            "head_sha": "a4b1ce725696ab5e742636220bc8056335cde51d",
             "path": "src/core.mjs",
             "repository": "hibi89/frontend-foundry-ax"
           }
@@ -2968,13 +2968,13 @@
           "branch": "feature/ffax-workbench-p85-20261112",
           "gate": {
             "conclusion": "success",
-            "head_sha": "7f4827c773800c6998d4e312870eed7bfd5dc0e1",
+            "head_sha": "a4b1ce725696ab5e742636220bc8056335cde51d",
             "matches_current_head": true,
-            "run_id": 43542896973,
+            "run_id": 43543167165,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "7f4827c773800c6998d4e312870eed7bfd5dc0e1",
+          "head_sha": "a4b1ce725696ab5e742636220bc8056335cde51d",
           "status": "PRESENT"
         }
       ]
@@ -3004,7 +3004,7 @@
     {
       "canonical": {
         "expected_git_blob_sha": "521ba0cb458bea384639a0ef897ce7500d33b8f1",
-        "head_sha": "776485a5f5e65e3974f489709c779d2d7ca0e930",
+        "head_sha": "9a2c927309e3fc0ef87e06fe184eaf17074a55f7",
         "mode": "observe",
         "observed_git_blob_sha": "521ba0cb458bea384639a0ef897ce7500d33b8f1",
         "owner_approval_verified": false,
@@ -3015,14 +3015,14 @@
       "main": {
         "branch": "main",
         "gate": {
-          "conclusion": "success",
-          "head_sha": "776485a5f5e65e3974f489709c779d2d7ca0e930",
+          "conclusion": null,
+          "head_sha": "9a2c927309e3fc0ef87e06fe184eaf17074a55f7",
           "matches_current_head": true,
-          "run_id": 43543021716,
+          "run_id": 43543295057,
           "status": "LATEST_RUN",
-          "workflow_status": "completed"
+          "workflow_status": "in_progress"
         },
-        "head_sha": "776485a5f5e65e3974f489709c779d2d7ca0e930",
+        "head_sha": "9a2c927309e3fc0ef87e06fe184eaf17074a55f7",
         "status": "PRESENT"
       },
       "repository": "hibi89/hackathon-command-center-2026",
