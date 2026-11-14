@@ -302,13 +302,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "5a7c9452cc47c6dbdcacdd0ace4c88e60224aeac",
+        "head_sha": "529cb051973f9fbf6acec5abbac768ee2a440206",
         "matches_current_head": true,
-        "run_id": 43536185630,
+        "run_id": 43536573723,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "5a7c9452cc47c6dbdcacdd0ace4c88e60224aeac",
+      "head_sha": "529cb051973f9fbf6acec5abbac768ee2a440206",
       "record_id": "CANDIDATE-10",
       "repository": "hibi89/Freelancer",
       "status": "PRESENT",
@@ -820,13 +820,13 @@
           "branch": "product/bid-ax-public-procurement",
           "gate": {
             "conclusion": "success",
-            "head_sha": "5a7c9452cc47c6dbdcacdd0ace4c88e60224aeac",
+            "head_sha": "529cb051973f9fbf6acec5abbac768ee2a440206",
             "matches_current_head": true,
-            "run_id": 43536185630,
+            "run_id": 43536573723,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "5a7c9452cc47c6dbdcacdd0ace4c88e60224aeac",
+          "head_sha": "529cb051973f9fbf6acec5abbac768ee2a440206",
           "status": "PRESENT"
         },
         {
