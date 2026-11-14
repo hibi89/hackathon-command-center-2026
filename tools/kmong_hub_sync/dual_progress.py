@@ -134,6 +134,14 @@ def attach_dual_progress(snapshot, observer, report=None):
                 card = json.loads(raw)
                 run = observer.api_get(f"/repos/{pin['repository']}/actions/runs/{pin['run_id']}", allow_404=True)
                 candidate = replay_pinned_scorecard(card, run, pin)
+                candidate["current_head_sha"] = row.get("head_sha")
+                candidate["source_is_current_head"] = row.get("head_sha") == pin["source_sha"]
+                if not candidate["source_is_current_head"]:
+                    candidate["status"] = "HISTORICAL_APPROVED_RUBRIC_REPLAY"
+                    candidate["reason"] = (
+                        "Approved fixed scorecard was verified at an earlier code SHA; "
+                        "current product HEAD requires fresh per-requirement regression."
+                    )
                 scored += 1
             except (ValueError, TypeError, KeyError, UnicodeError, OSError, RuntimeError) as exc:
                 candidate = {"status": "UNASSESSED", "percent": None,
@@ -142,6 +150,9 @@ def attach_dual_progress(snapshot, observer, report=None):
     snapshot["dual_progress_kind"] = "HISTORICAL_WORKER_VS_PINNED_CI_EVIDENCE"
     snapshot["summary"]["historical_worker_reports"] = sum(row["worker_report"]["percent"] is not None for row in rows)
     snapshot["summary"]["pinned_rubrics_replayed"] = scored
+    snapshot["summary"]["pinned_rubrics_current_head_verified"] = sum(
+        row["machine_evidence_score"].get("source_is_current_head") is True for row in rows
+    )
     snapshot["scope"] = "Read-only refs, workflow metadata, canonical digests and approved pinned-scorecard CI replay"
     return snapshot
 
@@ -155,6 +166,6 @@ def markdown_summary(snapshot):
         worker = str(a["percent"]) + "%" if a["percent"] is not None else "미기록"
         machine = str(b["percent"]) + "%" if b["percent"] is not None else "미산정"
         lines.append(f"| {row['record_id']} | {worker} | {machine} | {b['status']} |")
-    lines.extend(["", "작업자 수치는 과거 내부 기록이며 공식률이 아닙니다. 자동 점수는 승인된 불변 채점표와 동일 SHA Actions 성공을 확인한 경우에만 표시합니다.",
+    lines.extend(["", "작업자 수치는 과거 내부 기록이며 공식률이 아닙니다. 자동 재생성은 승인된 채점표가 증명된 과거 SHA에 대한 기록입니다. 현재 HEAD가 다르면 HISTORICAL 상태로 표시하며 최신 기능 검증률로 오인하지 않습니다.",
                   "이 표는 고객 수용/상업권/출시/공식률을 승인하거나 변경하지 않습니다."])
     return "\n".join(lines) + "\n"

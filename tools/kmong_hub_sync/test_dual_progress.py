@@ -92,5 +92,31 @@ class DualTests(unittest.TestCase):
         self.assertEqual(d["summary"]["pinned_rubrics_replayed"],0)
         self.assertIsNone(d["products"][4]["machine_evidence_score"]["percent"])
         self.assertEqual(d["products"][4]["machine_evidence_score"]["status"],"UNASSESSED")
+    def test_historical_score_is_not_current_head_certification(self):
+        s={"no_official_score_authorization":True,"summary":{},
+           "products":[{"record_id":f"ACTIVE-{i:02d}" if i<=17 else f"CANDIDATE-{i-17:02d}",
+                        "repository":P["repository"] if i==5 else "hibi89/else",
+                        "tracked_branch":P["branch"] if i==5 else "main",
+                        "head_sha":"e"*40,"status":"PRESENT"} for i in range(1,30)]}
+        d=attach_dual_progress(s,Fake())
+        candidate=d["products"][4]["machine_evidence_score"]
+        self.assertEqual(candidate["percent"],61)
+        self.assertEqual(candidate["status"],"HISTORICAL_APPROVED_RUBRIC_REPLAY")
+        self.assertFalse(candidate["source_is_current_head"])
+        self.assertEqual(d["summary"]["pinned_rubrics_replayed"],1)
+        self.assertEqual(d["summary"]["pinned_rubrics_current_head_verified"],0)
+
+    def test_same_head_is_exact_approved_baseline_only(self):
+        s={"no_official_score_authorization":True,"summary":{},
+           "products":[{"record_id":f"ACTIVE-{i:02d}" if i<=17 else f"CANDIDATE-{i-17:02d}",
+                        "repository":P["repository"] if i==5 else "hibi89/else",
+                        "tracked_branch":P["branch"] if i==5 else "main",
+                        "head_sha":P["source_sha"],"status":"PRESENT"} for i in range(1,30)]}
+        d=attach_dual_progress(s,Fake())
+        candidate=d["products"][4]["machine_evidence_score"]
+        self.assertEqual(candidate["status"],"PINNED_APPROVED_RUBRIC_REPLAY")
+        self.assertTrue(candidate["source_is_current_head"])
+        self.assertEqual(d["summary"]["pinned_rubrics_current_head_verified"],1)
+
 if __name__=="__main__":
     unittest.main()
