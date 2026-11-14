@@ -1,3 +1,13 @@
+## 2026-11-14 KST — FFAX React 로컬 폴더 읽기 전용·AI 동시실행 방지, 새 채팅 인수인계 정본
+
+- 검증된 실제 FFAX 기능 소스 `hibi89/frontend-foundry-ax@feature/ffax-workbench-p85-20261112:bdbbf0bbd2d8dcf1f53ac513e44522a47214a342`, 10항 `HANDOFF.md`/ `STATUS.md` 최신 문서 HEAD `4b20e535a33ef93b09f147a8f74a5702398f2cf6`.
+- [GitHub Actions 43556707423](https://github.com/hibi89/frontend-foundry-ax/actions/runs/43556707423) **4/4 SUCCESS**, Linux/Windows Node22 **138/138 PASS each**; 실제 Chromium synthetic React 폴더 선택/해시/JSON 다운로드·외부 업로드0/원본 수정0, preview↔React SSR computed CSS18/18, A/B 3폭6/6, axe serious/critical0, cleanroom PASS.
+- 새 `src/local-repo-intake.mjs`는 사용자가 직접 고른 **로컬 React TSX 폴더만** JS 브라우저 읽기전용 검사. 파일 크기/개수/경로 제한과 secret/build 경로 제외, SHA256/참조개수/JSON evidence 반환. **진짜 GitHub remote repo import·API/auth 기존 제품 변경/PR workflow 아님**; `src/inference-gate.mjs`는 로컬 AI 동시요청 차단. 소스 어댑터와 UI 이벤트 추가, old browser fixture top-level import FAIL을 클릭시 dynamic import로 복구.
+- 최신 unsigned source-only Windows ZIP artifact `14098043598` **25파일**, 내부 SHA256 `c10255a1ab81039f333826067c075643e6b1763ebdc668c0b6e5e5a7e83bd2e7`, SOURCE_SHA 정확 `bdbbf0bbd2d8dcf1f53ac513e44522a47214a342`, CRC PASS. EXE 아니고 고객 판매/실모델 증명 아님.
+- **사용자 우선순위 변경:** 2026-11-14 14:30 KST 이전 PC 사용 가능, 이후 5h+ 모바일만. **FFAX 프론트엔드·백엔드 100% 완성** 최우선; 크몽 상품 등록·가격·마케팅은 이번 작업의 사용자 요청 대상에서 제외. 13:00 통합 자동화는 실행 완료/disabled, 다시 예약/재통지 금지.
+- 내부 엔지니어링 12AC **80/100 잠정**; 중앙 사용자 전체 최종설계 공식 **UNASSESSED**; real Qwen0/14, 실제 사용자 Windows UI 승인0/6, real remote GitHub 통합·PR·라이선스/릴리스 미검증. `[작업중]`, RELEASE HOLD, 크몽 등록0, Production N/A; 타 상품/집계 불변.
+- [FFAX 최신 HANDOFF](https://github.com/hibi89/frontend-foundry-ax/blob/feature/ffax-workbench-p85-20261112/HANDOFF.md)에서 다음 채팅 즉시 재개. 지난 FFAX 로그는 아래 유지.
+
 ## 2026-11-14 KST — FFAX real-model AC04 10-of-12 scoring semantics corrected, CI 128 tests (latest)
 
 - FFAX private repo `hibi89/frontend-foundry-ax@feature/ffax-workbench-p85-20261112`: validated functionality SHA `abe82e806f30c7949684cc1f03ea0d497cd25561`, latest HANDOFF/STATUS document SHA `26dadf77c40e0a20c1bced469f8386f19d068876`; [GitHub Actions 43553254119](https://github.com/hibi89/frontend-foundry-ax/actions/runs/43553254119) **4/4 SUCCESS**, native Windows/Linux Node22 **128 PASS /0 FAIL /0 SKIP each**, real Chromium/axe/cleanroom PASS.
