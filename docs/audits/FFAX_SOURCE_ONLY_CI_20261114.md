@@ -1,3 +1,11 @@
+## 2026-11-14 KST — FFAX preview↔React grid real browser parity CI (latest)
+
+- Functionality SHA `hibi89/frontend-foundry-ax@feature/ffax-workbench-p85-20261112:69d26097d23a41a7fad49712c9e38589d3b7f9c8`, docs HEAD `366e12c819458cb5e76550a8913d3d2cf09dbce1`, [Actions 43549618123](https://github.com/hibi89/frontend-foundry-ax/actions/runs/43549618123) **4/4 SUCCESS**.
+- FFAX B dashboard preview formerly CSS fixed two-column even on 375px, while exported React TSX was column-stacked before prior fix. Both now share responsive `repeat(auto-fit,minmax(min(100%,300px),1fr))`; A stack and B grid tested at 375/768/1440 in actual hosted Chromium **6/6 PASS** (B 1/2/4 columns, 13 components/width, no overflow). Linux & Windows Node22 **119/119 PASS each**, React19 strict SSR/typechecked synthetic12/12, Chromium/axe 0 serious or critical, cleanroom/D1-D5 PASS.
+- Unreleased Windows review ZIP [artifact ID 14095494091](https://github.com/hibi89/frontend-foundry-ax/actions/runs/43549618123) **22 members**, embedded SOURCE_SHA exact, SHA256 `63632430069bf919523deeb529b982f039df68f52ac299011892afd3b91601a9`; locally downloaded/extracted and HTTP security smoke 6 public200, private404, hostile Host403. No model weights/keys.
+- Existing independent rubric **80/100 provisional**; central whole-final-blueprint official **UNASSESSED** (not 100%). **AC04 actual Qwen local model 0/14, AC09 owner Windows UX/approval 0/6, RG06 pending**; real customer GitHub integration, license/price/Kmong and buyer acceptance still not verified. `[작업중]`, RELEASE HOLD, not registered. Unified owner steps 13:00 KST preserved; no change to other product scores/rows or aggregate.
+- [Private FFAX evidence](https://github.com/hibi89/frontend-foundry-ax/blob/feature/ffax-workbench-p85-20261112/docs/REACT_GRID_EXPORT_PARITY_20261114.md). Older audit entries below retained.
+
 ## 2026-11-14 KST — FFAX A/B React TSX export fidelity fixed and Windows ZIP reissued
 
 - FFAX exact functionality `hibi89/frontend-foundry-ax@feature/ffax-workbench-p85-20261112` SHA `0acf96c95d133c02f3666238fd638a4f3468f854`, documentation `a32da662430ee3ee7f48045538ef7fb999d75231`; [GitHub Actions 43548778693](https://github.com/hibi89/frontend-foundry-ax/actions/runs/43548778693) **4/4 SUCCESS**.
