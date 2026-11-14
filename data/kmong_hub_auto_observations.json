@@ -52,9 +52,9 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "37a06cd77efcf71dd1576576157daef412adf70f",
-        "matches_current_head": false,
-        "run_id": 43535767926,
+        "head_sha": "2c77ce68bbe8735c0b98facbe4df19709802497a",
+        "matches_current_head": true,
+        "run_id": 43536152779,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
@@ -302,13 +302,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "8203cce5a478903a3133dcb8732c482e193cdfaa",
+        "head_sha": "5a7c9452cc47c6dbdcacdd0ace4c88e60224aeac",
         "matches_current_head": true,
-        "run_id": 43533764867,
+        "run_id": 43536185630,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "8203cce5a478903a3133dcb8732c482e193cdfaa",
+      "head_sha": "5a7c9452cc47c6dbdcacdd0ace4c88e60224aeac",
       "record_id": "CANDIDATE-10",
       "repository": "hibi89/Freelancer",
       "status": "PRESENT",
@@ -614,9 +614,9 @@
           "branch": "feature/final-blueprint-p85-evidence-20261113",
           "gate": {
             "conclusion": "success",
-            "head_sha": "37a06cd77efcf71dd1576576157daef412adf70f",
-            "matches_current_head": false,
-            "run_id": 43535767926,
+            "head_sha": "2c77ce68bbe8735c0b98facbe4df19709802497a",
+            "matches_current_head": true,
+            "run_id": 43536152779,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
@@ -820,13 +820,13 @@
           "branch": "product/bid-ax-public-procurement",
           "gate": {
             "conclusion": "success",
-            "head_sha": "8203cce5a478903a3133dcb8732c482e193cdfaa",
+            "head_sha": "5a7c9452cc47c6dbdcacdd0ace4c88e60224aeac",
             "matches_current_head": true,
-            "run_id": 43533764867,
+            "run_id": 43536185630,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "8203cce5a478903a3133dcb8732c482e193cdfaa",
+          "head_sha": "5a7c9452cc47c6dbdcacdd0ace4c88e60224aeac",
           "status": "PRESENT"
         },
         {
