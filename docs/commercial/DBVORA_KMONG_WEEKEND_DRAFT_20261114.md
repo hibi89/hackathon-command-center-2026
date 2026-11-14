@@ -1,5 +1,8 @@
 # DBVORA — 2026-11-14 주말 크몽 상품화 초안 (등록 금지·승인 대기)
 
+> **2026-11-14 최신 제품 실제 검증:** 코드 SHA [eab26716e25e8c55b120d295110be2f754b6aa5e](https://github.com/hibi89/DBVORA/commit/eab26716e25e8c55b120d295110be2f754b6aa5e)에서 [Windows/Linux full gate](https://github.com/hibi89/DBVORA/actions/runs/43543367368) **2/2 SUCCESS**, Windows Python 616 PASS+1 정당 SKIP·0 FAIL, Linux 617 PASS·0 FAIL, 각 10/10 단계 PASS. [실제 localhost Chromium](https://github.com/hibi89/DBVORA/actions/runs/43543367417) **8/8 PASS** 및 합성 데이터 desktop/mobile UI PNG 2장 다운로드 가능(해당 GitHub Actions 아티팩트, 임시 보관 7일). **이것은 합성 자동검증이지 실제 고객/판매 승인이 아님.** 실제 Win10/PG TLS/비용·권리/상품 구성·가격·환불 규정 미수용, 공식 전체 최종설계 UNASSESSED, 과거 내부95 별도. 판매·등록 HOLD. [사용자 실기기 QA](https://github.com/hibi89/DBVORA/blob/feature/p0-db-map/docs/OWNER_WINDOWS_QUICK_QA_20261114.md). 실제 GitHub 저장소 **Public**(사전 승인 없이 visibility 변경 없음). 
+
+
 > **상태:** 사용자 요청으로 준비 시작. 실제 크몽 등록 **0건**, 판매·라이선스·가격·지원/환불 조건 **확정 아님**. 정식 최종설계 완성률 **UNASSESSED**, 과거 내부 기술범위 95/100. Windows 실기기/고객/실 PostgreSQL/권리 미수용. [작업중]/RELEASE HOLD. 임의 100%나 출시 표기 금지.
 
 ## 상품 단위 기준 — 단일 DBVORA 상품 + 후속 옵션 확장
