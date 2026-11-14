@@ -329,6 +329,13 @@ test("single 8.5-second maximum dispatch budget fails closed on stalled GitHub c
     if (init.signal.aborted) return reject(init.signal.reason);
     init.signal.addEventListener("abort", () => reject(init.signal.reason), { once: true });
   });
-  await assert.rejects(dispatchCentral(env, stalled, 25), (error) => error.name === "TimeoutError");
+  // AbortSignal.timeout() uses unref'ed timers. Keep the synthetic stalled
+  // fetch test alive so the timeout can actually be observed in Node's test runner.
+  const keepAlive = setTimeout(() => {}, 250);
+  try {
+    await assert.rejects(dispatchCentral(env, stalled, 25), (error) => error.name === "TimeoutError");
+  } finally {
+    clearTimeout(keepAlive);
+  }
   await assert.rejects(dispatchCentral(env, stalled, 8501), TypeError);
 });
