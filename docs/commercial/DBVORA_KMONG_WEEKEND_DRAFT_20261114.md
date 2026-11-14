@@ -1,5 +1,8 @@
 # DBVORA — 2026-11-14 주말 크몽 상품화 초안 (등록 금지·승인 대기)
 
+> **추가 브라우저 근거(2026-11-14):** [Windows Server2025·Linux Ubuntu24.04 실제 Chromium HTTP E2E](https://github.com/hibi89/DBVORA/actions/runs/43544065399) **2/2 SUCCESS, 각 8/8**, 데스크톱/모바일 합성 PNG **총4장**(GitHub artifact 7일, 스크린샷에는 고객 데이터 없음). 기존 Unix 전용 증거 외 Windows 브라우저 실검증도 확보. [제품 인수인계 최신](https://github.com/hibi89/DBVORA/blob/feature/p0-db-map/HANDOFF.md). 고객·서명·법적 판매/등록 승인은 별개이며 NO-GO 유지.
+
+
 > **2026-11-14 최신 제품 실제 검증:** 코드 SHA [eab26716e25e8c55b120d295110be2f754b6aa5e](https://github.com/hibi89/DBVORA/commit/eab26716e25e8c55b120d295110be2f754b6aa5e)에서 [Windows/Linux full gate](https://github.com/hibi89/DBVORA/actions/runs/43543367368) **2/2 SUCCESS**, Windows Python 616 PASS+1 정당 SKIP·0 FAIL, Linux 617 PASS·0 FAIL, 각 10/10 단계 PASS. [실제 localhost Chromium](https://github.com/hibi89/DBVORA/actions/runs/43543367417) **8/8 PASS** 및 합성 데이터 desktop/mobile UI PNG 2장 다운로드 가능(해당 GitHub Actions 아티팩트, 임시 보관 7일). **이것은 합성 자동검증이지 실제 고객/판매 승인이 아님.** 실제 Win10/PG TLS/비용·권리/상품 구성·가격·환불 규정 미수용, 공식 전체 최종설계 UNASSESSED, 과거 내부95 별도. 판매·등록 HOLD. [사용자 실기기 QA](https://github.com/hibi89/DBVORA/blob/feature/p0-db-map/docs/OWNER_WINDOWS_QUICK_QA_20261114.md). 실제 GitHub 저장소 **Public**(사전 승인 없이 visibility 변경 없음). 
 
 
