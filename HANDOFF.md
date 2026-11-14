@@ -1,3 +1,5 @@
+> **[2026-11-14 22:54 KST — exact-test addendum]** GitHub feature candidate HEAD `a8077bd01cbdfd4be1da33640b67bdf0449896f0`; timeout test mock fixed using a referenced Node timer (no Production code change). `lib/body-reader.js` and `test/body-reader.test.js` locally have exact Git blobs `26c1975450b56af8c85100ecd38066af44f58897` and `d95cdf5092fb0b5269eddb6651dbff158ece0366`; local Node22 exact files **7 PASS/0 FAIL**, independent timeout runtime smoke PASS. Full GitHub receiver/collector CI pending, no draft PR/Production rollout due unresolved Preview deployment implications. Second native schedule absent (total_count=1 at 22:53 KST), signed E2E blocked by missing owned Vercel bridge project access; score 85/100 fixed. See audit for 2 design options and approval gates.
+
 ## [2026-11-14 KST] KMONG webhook safety branch candidate — 10-item handoff
 
 1. **Goal/technology:** central provisional technical 85→95→100; protect native schedule, webhook HMAC, central Actions dispatch, observer snapshot, original/official completion scores.

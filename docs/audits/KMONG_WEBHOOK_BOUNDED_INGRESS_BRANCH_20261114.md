@@ -43,3 +43,10 @@
 - Full GitHub test command after safe PR approval: `npm test --prefix services/kmong-event-bridge`; `python3 -B -m unittest discover -s tools/kmong_hub_sync -p 'test_*.py' -v`.
 - Production reference URL: `https://kmong-hub-event-bridge.vercel.app/api/webhook`; previous GET 200/ready/source parity evidence only, not a new run.
 - KST audit day: 2026-11-14. GitHub operations were read-only except for isolated feature-branch code commit and operation-branch documentation.
+
+## Exact Git-blob local verification and test-harness correction (2026-11-14 22:54 KST)
+
+- Recreated the **exact committed** `lib/body-reader.js` and `test/body-reader.test.js` files in an isolated Node 22.16.0 test directory. `git hash-object` matched GitHub blobs `26c1975450b56af8c85100ecd38066af44f58897` and `d95cdf5092fb0b5269eddb6651dbff158ece0366`, respectively. `node --test test/body-reader.test.js` **7 PASS / 0 FAIL**. This upgrades the earlier loose standalone equivalence to byte-identical Git source+test verification, but still **does not** validate the entire receiver or integrated GitHub CI.
+- Additional local timeout smoke caught a synthetic test-harness issue: `AbortSignal.timeout` uses an unref'ed timer, so a mocked stalled Promise alone may terminate Node test execution with an unsettled await. A referenced keepalive timer is now added **only to the new synthetic timeout test**, and cleared after the assertion. Runtime smoke with a referenced event-loop timer PASS.
+- Latest isolated feature branch commit: `a8077bd01cbdfd4be1da33640b67bdf0449896f0` (`test(kmong): keep synthetic deadline rejection alive`). Earlier implementation commit `74c715f39f0e2aa358b90e26c635b4c2acebfca0` remains its ancestor. This feature branch is unmerged and undeployed; whole receiver/collector regression CI pending.
+- GitHub `event=schedule` API at 2026-11-14T13:53:56Z / 22:53 KST: **total_count=1**; second independent schedule event still absent. Provisional central technical score **85/100 unchanged**. No claim that synthetic or isolated tests earned the E2E 10 points.
