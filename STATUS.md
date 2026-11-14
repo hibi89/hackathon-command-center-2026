@@ -1,3 +1,11 @@
+## [2026-11-14 KST] BID AX 276테스트·무료 온비드 증분 수집기 중앙 최신화
+
+> **[2026-11-14 KST | BID AX 무상 온비드 실후속 페이지 수집 준비·276 테스트 CI SUCCESS]** 사용자 무상 범위 개발/CI/GitHub 반영 전면 승인. 제품 [기능 SHA `3008bfd440aa`](https://github.com/hibi89/Freelancer/commit/3008bfd440aafe57e264ad4a0485d517f8819634) · [문서 HEAD `d07abddba54d`](https://github.com/hibi89/Freelancer/commit/d07abddba54d890daf6dfd430dc7d27dbc9e2a4b). 신규 `onbid-continue` CLI는 첫 사용자가 보유한 격리 JSON을 검증하여 **기본 dry-run/네트워크0**, 명시 `--consent --live` 및 매 실행 고객 PC 메모리 키 입력시에만 후속 페이지만 **기본4/최대25/회, 로컬 KST 일일서비스별 기본24 예산·자동재시도 없음**, create-only 로컬 JSON 격리/UUID·SHA/재시작·호출 중복 방지, 무자동 법률판정/원장 승격. [GitHub Actions #43540224552](https://github.com/hibi89/Freelancer/actions/runs/43540224552) **5/5 SUCCESS**, Ubuntu3.11/3.13 각276 PASS, Windows3.11 **276 tests/0 FAIL/1 POSIX-only SKIP**, Windows CLI/GUI 시험 EXE 스모크 PASS. **실 사용자 15157252 첫10/10·보고총186 이외 18페이지/타3 API는 수집 미검증**; 고객 실 API/실100공고·독립인간10/Windows 고객설치·상용권 미수용. 최종설계 **R01–R29 29개 고정, 공식 최종완성률 UNASSESSED/85% 미입증, [작업중]/RELEASE HOLD/크몽 미등록**. 기존 `CANDIDATE-10`/`KMONG-SVC-18`/원천29·판매19·등록이력 및 타상품·BID OWL/고객원본 불변. [중앙 감사](docs/audits/BID_AX_ONBID_FREE_CAPTURE_276_CI_20261114.md).
+
+- 제품 기능 SHA `3008bfd440aafe57e264ad4a0485d517f8819634`, 문서 HEAD `d07abddba54d890daf6dfd430dc7d27dbc9e2a4b`, 본 중앙 기준은 반영 후 remote 확인. 실사용 고객 장비/키 없는 상황에서는 live 호출 미실시.
+
+---
+
 ## [2026-11-14 KST] 크몽 19개 상품 등록 단위로 개발·검수·상품화 작업판 통일
 
 - **사용자 결정:** 별도 프로젝트별 상품화 목록을 중심으로 운영하는 대신 `service_id` 단위로 기본형 판매 준비→기존 게시글 선등록→연계 기능 완성 시 동일 상품의 고급 옵션/설명/이미지 수정 흐름으로 통합.

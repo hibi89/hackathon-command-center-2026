@@ -1,3 +1,18 @@
+## [2026-11-14 KST] BID AX 무료 증분 수집기/276 CI — 중앙 인수인계 10항
+1. 목표/기술: R01–R29 29개 최종설계, 목표85%; Python3.11/Tk/SQLite 고객 로컬 Windows.
+2. 완료/근거: 고위험 클라우드 무제한수집 대신 승인식 Onbid 첫 증빙에서 누락 페이지 제한 호출·SQLite SHA/쿼리/중단복구·로컬 메모리 키와 0회 기본 dry-run.
+3. 테스트: 제품 `3008bfd440aafe57e264ad4a0485d517f8819634` Actions #43540224552 5/5 SUCCESS, Linux3.11/3.13 각276 PASS, Win3.11 276 tests/0FAIL/1 POSIX SKIP, Windows CLI/GUI 시험 EXE 스모크 PASS. 신규 실 정부 API 호출 미실행.
+4. 상태: 실제 Onbid 15157252 page1 10/보고186 중 18페이지 미수집·다른3 API/실100공고·인간10/고객 설치/상용권 미검증. 최종 UNASSESSED/85% 미입증/[작업중]/RELEASE HOLD/크몽 미등록.
+5. 장애·피벗: 신규 테스트 첫 reference 21 vs 캐시 11 불일치 ERROR1 수정→전체 CI PASS, 실제 원문 구조를 추측해 자동정규화 금지.
+6. 저장소/브랜치/SHA: hibi89/Freelancer@product/bid-ax-public-procurement 기능 `3008bfd440aafe57e264ad4a0485d517f8819634`, 문서 `d07abddba54d890daf6dfd430dc7d27dbc9e2a4b`; bidax/onbid_capture.py, cli.py, tests/test_onbid_capture.py, docs/BID_AX_ONBID_FREE_CONTINUATION_20261114.md. 중앙 감사 `docs/audits/BID_AX_ONBID_FREE_CAPTURE_276_CI_20261114.md`.
+7. Production/환경: Vercel N/A, Windows Python3.11 소스 CLI 명시 --live만 실제 HTTP, GUI/CLI CI EXE 미출시.
+8. 원본/백업·권한: 고객 기존 JSON/DB/키·다른 상품/BID OWL 무변경. 원본 공개 업로드 금지; 일반 Git revert 가능.
+9. 다음/완료 기준: 사용자 PC에서 이미 승인된 API로 18 누락페이지/타3 API 실수집→원문 필드 계약/100실공고·독립검토10/실 Win10·11 고객 수용/상용·출시 권리 검증. 유료·외부키·권한/보안 변경은 별도 승인.
+10. 갱신시점/검증범위: 2026-11-14 KST, 실제 GitHub CI 276/5jobs, source SHA 확인. 중앙 최신 SHA push 후 확인. 실제 상업/고객 수용 미검증.
+
+
+---
+
 ## [2026-11-14 KST] 크몽 상품 단위 운영 전환 — 인수인계 10항
 
 1. **목표/용도/기술/요구:** 사용자 결정에 따라 프로젝트별 개별 상품화 대신 실제 크몽에 등록할 게시글 `service_id` 1개를 개발·검수·등록·향후 옵션 확장의 기본 관리 단위로 통일. 29개 원천→기존 19개 고객 서비스 원장 유지.
