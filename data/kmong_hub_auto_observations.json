@@ -1,5 +1,6 @@
 {
   "blocking_repositories": [],
+  "dual_progress_kind": "HISTORICAL_WORKER_VS_PINNED_CI_EVIDENCE",
   "generated_by": "kmong-hub-sync",
   "no_official_score_authorization": true,
   "policy": "OWNER-FINAL-BLUEPRINT-100",
@@ -9,10 +10,22 @@
         "status": "NO_RUN"
       },
       "head_sha": "1e4469d83ea6eecc8fff9be87d0cbe5666c81ff1",
+      "machine_evidence_score": {
+        "percent": null,
+        "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
+        "status": "UNASSESSED"
+      },
       "record_id": "ACTIVE-01",
       "repository": "hibi89/candle_scraper",
       "status": "PRESENT",
-      "tracked_branch": "feature/kmong-collector-p95-delivery-integrity-20261112"
+      "tracked_branch": "feature/kmong-collector-p95-delivery-integrity-20261112",
+      "worker_report": {
+        "as_of_kst": "2026-11-13",
+        "not_official_final_completion": true,
+        "percent": 95,
+        "source": "docs/audits/KMONG_ALL_REPO_BRANCH_COMPLETION_AUDIT_20261113.md (historical, NOT current individual worker scores)",
+        "status": "HISTORICAL_INTERNAL_MILESTONE"
+      }
     },
     {
       "gate": {
@@ -24,85 +37,181 @@
         "workflow_status": "completed"
       },
       "head_sha": "f659028351c480b35431f706e911ce5e0c036774",
+      "machine_evidence_score": {
+        "percent": null,
+        "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
+        "status": "UNASSESSED"
+      },
       "record_id": "ACTIVE-02",
       "repository": "hibi89/HAE",
       "status": "PRESENT",
-      "tracked_branch": "feature/axflow-mvp"
+      "tracked_branch": "feature/axflow-mvp",
+      "worker_report": {
+        "as_of_kst": "2026-11-13",
+        "not_official_final_completion": true,
+        "percent": 85,
+        "source": "docs/audits/KMONG_ALL_REPO_BRANCH_COMPLETION_AUDIT_20261113.md (historical, NOT current individual worker scores)",
+        "status": "HISTORICAL_INTERNAL_MILESTONE"
+      }
     },
     {
       "gate": {
         "status": "NO_RUN"
       },
       "head_sha": "e18fe74f1b1d1105d37017573e8c7ab6b5f85f11",
+      "machine_evidence_score": {
+        "percent": null,
+        "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
+        "status": "UNASSESSED"
+      },
       "record_id": "ACTIVE-03",
       "repository": "hibi89/ai-code-checker",
       "status": "PRESENT",
-      "tracked_branch": "feature/retail-private-candidate-20261112"
+      "tracked_branch": "feature/retail-private-candidate-20261112",
+      "worker_report": {
+        "as_of_kst": "2026-11-13",
+        "not_official_final_completion": true,
+        "percent": 95,
+        "source": "docs/audits/KMONG_ALL_REPO_BRANCH_COMPLETION_AUDIT_20261113.md (historical, NOT current individual worker scores)",
+        "status": "HISTORICAL_INTERNAL_MILESTONE"
+      }
     },
     {
       "gate": {
         "status": "NO_RUN"
       },
       "head_sha": "21a10dfdbca25166ad97c1ff65dc4e4e87664b6b",
+      "machine_evidence_score": {
+        "percent": null,
+        "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
+        "status": "UNASSESSED"
+      },
       "record_id": "ACTIVE-04",
       "repository": "hibi89/SMAX",
       "status": "PRESENT",
-      "tracked_branch": "feature/prep-self-owner-mapping-p8"
+      "tracked_branch": "feature/prep-self-owner-mapping-p8",
+      "worker_report": {
+        "as_of_kst": "2026-11-13",
+        "not_official_final_completion": true,
+        "percent": 85,
+        "source": "docs/audits/KMONG_ALL_REPO_BRANCH_COMPLETION_AUDIT_20261113.md (historical, NOT current individual worker scores)",
+        "status": "HISTORICAL_INTERNAL_MILESTONE"
+      }
     },
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "2516ff76e3bab6e431c2b423d3112579f908c027",
+        "head_sha": "7313b4420b1e82a8a76ad3dbc2728baff4a35b42",
         "matches_current_head": true,
-        "run_id": 43537183999,
+        "run_id": 43537507851,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "2516ff76e3bab6e431c2b423d3112579f908c027",
+      "head_sha": "7313b4420b1e82a8a76ad3dbc2728baff4a35b42",
+      "machine_evidence_score": {
+        "percent": null,
+        "reason": "Pinned rubric / CI verification failed: scorecard contract, scope or release invariant mismatch",
+        "status": "UNASSESSED"
+      },
       "record_id": "ACTIVE-05",
       "repository": "hibi89/data2web_studio",
       "status": "PRESENT",
-      "tracked_branch": "feature/final-blueprint-p85-evidence-20261113"
+      "tracked_branch": "feature/final-blueprint-p85-evidence-20261113",
+      "worker_report": {
+        "as_of_kst": "2026-11-13",
+        "not_official_final_completion": true,
+        "percent": null,
+        "source": "docs/audits/KMONG_ALL_REPO_BRANCH_COMPLETION_AUDIT_20261113.md (historical, NOT current individual worker scores)",
+        "status": "NOT_RECORDED_IN_BASELINE"
+      }
     },
     {
       "gate": {
         "status": "NO_RUN"
       },
       "head_sha": "82fb8da349de72f45eeaf15f7e997c2d449cf488",
+      "machine_evidence_score": {
+        "percent": null,
+        "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
+        "status": "UNASSESSED"
+      },
       "record_id": "ACTIVE-06",
       "repository": "hibi89/REA_Web",
       "status": "PRESENT",
-      "tracked_branch": "feature/website-analysis-rebuild"
+      "tracked_branch": "feature/website-analysis-rebuild",
+      "worker_report": {
+        "as_of_kst": "2026-11-13",
+        "not_official_final_completion": true,
+        "percent": 85,
+        "source": "docs/audits/KMONG_ALL_REPO_BRANCH_COMPLETION_AUDIT_20261113.md (historical, NOT current individual worker scores)",
+        "status": "HISTORICAL_INTERNAL_MILESTONE"
+      }
     },
     {
       "gate": {
         "status": "NO_RUN"
       },
       "head_sha": "b235b0222e44764d7593b647fee2e257e562764b",
+      "machine_evidence_score": {
+        "percent": null,
+        "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
+        "status": "UNASSESSED"
+      },
       "record_id": "ACTIVE-07",
       "repository": "hibi89/SOVIA_sovereign",
       "status": "PRESENT",
-      "tracked_branch": "feature/kmong-la-review-p2-20261112"
+      "tracked_branch": "feature/kmong-la-review-p2-20261112",
+      "worker_report": {
+        "as_of_kst": "2026-11-13",
+        "not_official_final_completion": true,
+        "percent": 95,
+        "source": "docs/audits/KMONG_ALL_REPO_BRANCH_COMPLETION_AUDIT_20261113.md (historical, NOT current individual worker scores)",
+        "status": "HISTORICAL_INTERNAL_MILESTONE"
+      }
     },
     {
       "gate": {
         "status": "NO_RUN"
       },
       "head_sha": "a3ddd8b9d20fee591ad246becab2b4adc89b56d8",
+      "machine_evidence_score": {
+        "percent": null,
+        "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
+        "status": "UNASSESSED"
+      },
       "record_id": "ACTIVE-08",
       "repository": "hibi89/AI_AutoML_Analyst",
       "status": "PRESENT",
-      "tracked_branch": "feature/kmong-p6e50-owner-delivery-20261112"
+      "tracked_branch": "feature/kmong-p6e50-owner-delivery-20261112",
+      "worker_report": {
+        "as_of_kst": "2026-11-13",
+        "not_official_final_completion": true,
+        "percent": 95,
+        "source": "docs/audits/KMONG_ALL_REPO_BRANCH_COMPLETION_AUDIT_20261113.md (historical, NOT current individual worker scores)",
+        "status": "HISTORICAL_INTERNAL_MILESTONE"
+      }
     },
     {
       "gate": {
         "status": "NO_RUN"
       },
       "head_sha": "fac8a9ccb67565ad56cf6d350ba82a9cfb80dc27",
+      "machine_evidence_score": {
+        "percent": null,
+        "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
+        "status": "UNASSESSED"
+      },
       "record_id": "ACTIVE-09",
       "repository": "hibi89/HAE",
       "status": "PRESENT",
-      "tracked_branch": "feature/rea-app-kmong-owner-delivery-20261112"
+      "tracked_branch": "feature/rea-app-kmong-owner-delivery-20261112",
+      "worker_report": {
+        "as_of_kst": "2026-11-13",
+        "not_official_final_completion": true,
+        "percent": 85,
+        "source": "docs/audits/KMONG_ALL_REPO_BRANCH_COMPLETION_AUDIT_20261113.md (historical, NOT current individual worker scores)",
+        "status": "HISTORICAL_INTERNAL_MILESTONE"
+      }
     },
     {
       "gate": {
@@ -114,120 +223,264 @@
         "workflow_status": "completed"
       },
       "head_sha": "fe0693eab0df738ee981f93169b60f95c7a63cea",
+      "machine_evidence_score": {
+        "percent": null,
+        "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
+        "status": "UNASSESSED"
+      },
       "record_id": "ACTIVE-10",
       "repository": "hibi89/HAE",
       "status": "PRESENT",
-      "tracked_branch": "feature/la-p17-audit-evidence-20261112"
+      "tracked_branch": "feature/la-p17-audit-evidence-20261112",
+      "worker_report": {
+        "as_of_kst": "2026-11-13",
+        "not_official_final_completion": true,
+        "percent": 85,
+        "source": "docs/audits/KMONG_ALL_REPO_BRANCH_COMPLETION_AUDIT_20261113.md (historical, NOT current individual worker scores)",
+        "status": "HISTORICAL_INTERNAL_MILESTONE"
+      }
     },
     {
       "gate": {
         "status": "NO_RUN"
       },
       "head_sha": "b69ee453f460cc4a97ccfea6b4ab5748a2420c2e",
+      "machine_evidence_score": {
+        "percent": null,
+        "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
+        "status": "UNASSESSED"
+      },
       "record_id": "ACTIVE-11",
       "repository": "hibi89/DBVORA",
       "status": "PRESENT",
-      "tracked_branch": "feature/p0-db-map"
+      "tracked_branch": "feature/p0-db-map",
+      "worker_report": {
+        "as_of_kst": "2026-11-13",
+        "not_official_final_completion": true,
+        "percent": 95,
+        "source": "docs/audits/KMONG_ALL_REPO_BRANCH_COMPLETION_AUDIT_20261113.md (historical, NOT current individual worker scores)",
+        "status": "HISTORICAL_INTERNAL_MILESTONE"
+      }
     },
     {
       "gate": {
         "status": "NO_RUN"
       },
       "head_sha": "4669957a0f5dd8e641903bef0c0ef21d43166dcc",
+      "machine_evidence_score": {
+        "percent": null,
+        "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
+        "status": "UNASSESSED"
+      },
       "record_id": "ACTIVE-12",
       "repository": "hibi89/RAG_STUDIO",
       "status": "PRESENT",
-      "tracked_branch": "feature/p546-rag-prep-mapping"
+      "tracked_branch": "feature/p546-rag-prep-mapping",
+      "worker_report": {
+        "as_of_kst": "2026-11-13",
+        "not_official_final_completion": true,
+        "percent": 95,
+        "source": "docs/audits/KMONG_ALL_REPO_BRANCH_COMPLETION_AUDIT_20261113.md (historical, NOT current individual worker scores)",
+        "status": "HISTORICAL_INTERNAL_MILESTONE"
+      }
     },
     {
       "gate": {
         "status": "NO_RUN"
       },
       "head_sha": "b80830ab3219dbcf88556d60ce2c47c2dcec7764",
+      "machine_evidence_score": {
+        "percent": null,
+        "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
+        "status": "UNASSESSED"
+      },
       "record_id": "ACTIVE-13",
       "repository": "hibi89/astra_pdf_redesigner",
       "status": "PRESENT",
-      "tracked_branch": "integration/astra-commercial-core"
+      "tracked_branch": "integration/astra-commercial-core",
+      "worker_report": {
+        "as_of_kst": "2026-11-13",
+        "not_official_final_completion": true,
+        "percent": 85,
+        "source": "docs/audits/KMONG_ALL_REPO_BRANCH_COMPLETION_AUDIT_20261113.md (historical, NOT current individual worker scores)",
+        "status": "HISTORICAL_INTERNAL_MILESTONE"
+      }
     },
     {
       "gate": {
         "status": "NO_RUN"
       },
       "head_sha": "a6f76576880e3dc242ea3730728e287c0914d5ee",
+      "machine_evidence_score": {
+        "percent": null,
+        "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
+        "status": "UNASSESSED"
+      },
       "record_id": "ACTIVE-14",
       "repository": "hibi89/candle_scraper",
       "status": "PRESENT",
-      "tracked_branch": "feature/coin-pattern-p85-forward-eval-20261112"
+      "tracked_branch": "feature/coin-pattern-p85-forward-eval-20261112",
+      "worker_report": {
+        "as_of_kst": "2026-11-13",
+        "not_official_final_completion": true,
+        "percent": 85,
+        "source": "docs/audits/KMONG_ALL_REPO_BRANCH_COMPLETION_AUDIT_20261113.md (historical, NOT current individual worker scores)",
+        "status": "HISTORICAL_INTERNAL_MILESTONE"
+      }
     },
     {
       "gate": {
         "status": "NO_RUN"
       },
       "head_sha": "57d5424f008b091b0f46066ef41e85f437b8dac8",
+      "machine_evidence_score": {
+        "percent": null,
+        "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
+        "status": "UNASSESSED"
+      },
       "record_id": "ACTIVE-15",
       "repository": "hibi89/EAI",
       "status": "PRESENT",
-      "tracked_branch": "feature/kmong-eai-85-p31-20261112"
+      "tracked_branch": "feature/kmong-eai-85-p31-20261112",
+      "worker_report": {
+        "as_of_kst": "2026-11-13",
+        "not_official_final_completion": true,
+        "percent": 85,
+        "source": "docs/audits/KMONG_ALL_REPO_BRANCH_COMPLETION_AUDIT_20261113.md (historical, NOT current individual worker scores)",
+        "status": "HISTORICAL_INTERNAL_MILESTONE"
+      }
     },
     {
       "gate": {
         "status": "NO_RUN"
       },
       "head_sha": "72da39fcebda1e23f540e5381be9abf6422d1934",
+      "machine_evidence_score": {
+        "percent": null,
+        "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
+        "status": "UNASSESSED"
+      },
       "record_id": "ACTIVE-16",
       "repository": "hibi89/AX_MART",
       "status": "PRESENT",
-      "tracked_branch": "feature/pc-care-p15-p18-85-20261112"
+      "tracked_branch": "feature/pc-care-p15-p18-85-20261112",
+      "worker_report": {
+        "as_of_kst": "2026-11-13",
+        "not_official_final_completion": true,
+        "percent": 85,
+        "source": "docs/audits/KMONG_ALL_REPO_BRANCH_COMPLETION_AUDIT_20261113.md (historical, NOT current individual worker scores)",
+        "status": "HISTORICAL_INTERNAL_MILESTONE"
+      }
     },
     {
       "gate": {
         "status": "NO_RUN"
       },
       "head_sha": "1f36b39e67914a4a24ce8d012ccdbf95e8dede4c",
+      "machine_evidence_score": {
+        "percent": null,
+        "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
+        "status": "UNASSESSED"
+      },
       "record_id": "ACTIVE-17",
       "repository": "hibi89/AX_MART",
       "status": "PRESENT",
-      "tracked_branch": "feature/cube-owner-preflight-p85-20261112"
+      "tracked_branch": "feature/cube-owner-preflight-p85-20261112",
+      "worker_report": {
+        "as_of_kst": "2026-11-13",
+        "not_official_final_completion": true,
+        "percent": 95,
+        "source": "docs/audits/KMONG_ALL_REPO_BRANCH_COMPLETION_AUDIT_20261113.md (historical, NOT current individual worker scores)",
+        "status": "HISTORICAL_INTERNAL_MILESTONE"
+      }
     },
     {
       "gate": {
         "status": "NO_RUN"
       },
       "head_sha": "53b2262d847b40b45f5138d5f6cb4c16a8249813",
+      "machine_evidence_score": {
+        "percent": null,
+        "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
+        "status": "UNASSESSED"
+      },
       "record_id": "CANDIDATE-01",
       "repository": "hibi89/KUODRA",
       "status": "PRESENT",
-      "tracked_branch": "develop"
+      "tracked_branch": "develop",
+      "worker_report": {
+        "as_of_kst": "2026-11-13",
+        "not_official_final_completion": true,
+        "percent": null,
+        "source": "docs/audits/KMONG_ALL_REPO_BRANCH_COMPLETION_AUDIT_20261113.md (historical, NOT current individual worker scores)",
+        "status": "NOT_RECORDED_IN_BASELINE"
+      }
     },
     {
       "gate": {
         "status": "NO_RUN"
       },
       "head_sha": "79f65ca284bc65c651054d281e0b9e95b04469cb",
+      "machine_evidence_score": {
+        "percent": null,
+        "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
+        "status": "UNASSESSED"
+      },
       "record_id": "CANDIDATE-02",
       "repository": "hibi89/prep",
       "status": "PRESENT",
-      "tracked_branch": "feature/core-extraction"
+      "tracked_branch": "feature/core-extraction",
+      "worker_report": {
+        "as_of_kst": "2026-11-13",
+        "not_official_final_completion": true,
+        "percent": null,
+        "source": "docs/audits/KMONG_ALL_REPO_BRANCH_COMPLETION_AUDIT_20261113.md (historical, NOT current individual worker scores)",
+        "status": "NOT_RECORDED_IN_BASELINE"
+      }
     },
     {
       "gate": {
         "status": "NO_RUN"
       },
       "head_sha": "db7e0204bc861a3a42efb11a412663caa2cbd795",
+      "machine_evidence_score": {
+        "percent": null,
+        "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
+        "status": "UNASSESSED"
+      },
       "record_id": "CANDIDATE-03",
       "repository": "hibi89/frontend-foundry-ax",
       "status": "PRESENT",
-      "tracked_branch": "feature/ffax-workbench-p85-20261112"
+      "tracked_branch": "feature/ffax-workbench-p85-20261112",
+      "worker_report": {
+        "as_of_kst": "2026-11-13",
+        "not_official_final_completion": true,
+        "percent": null,
+        "source": "docs/audits/KMONG_ALL_REPO_BRANCH_COMPLETION_AUDIT_20261113.md (historical, NOT current individual worker scores)",
+        "status": "NOT_RECORDED_IN_BASELINE"
+      }
     },
     {
       "gate": {
         "status": "NO_RUN"
       },
       "head_sha": "f9577bbc4c798534b36ed1243e122453b5e4a4a9",
+      "machine_evidence_score": {
+        "percent": null,
+        "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
+        "status": "UNASSESSED"
+      },
       "record_id": "CANDIDATE-04",
       "repository": "hibi89/factory-ax-ecosystem",
       "status": "PRESENT",
-      "tracked_branch": "feature/data-verify"
+      "tracked_branch": "feature/data-verify",
+      "worker_report": {
+        "as_of_kst": "2026-11-13",
+        "not_official_final_completion": true,
+        "percent": null,
+        "source": "docs/audits/KMONG_ALL_REPO_BRANCH_COMPLETION_AUDIT_20261113.md (historical, NOT current individual worker scores)",
+        "status": "NOT_RECORDED_IN_BASELINE"
+      }
     },
     {
       "gate": {
@@ -239,25 +492,49 @@
         "workflow_status": "completed"
       },
       "head_sha": "9160cf77cbb5c62e09e1f9451643b37b5ddeecbb",
+      "machine_evidence_score": {
+        "percent": null,
+        "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
+        "status": "UNASSESSED"
+      },
       "record_id": "CANDIDATE-05",
       "repository": "hibi89/Freelancer",
       "status": "PRESENT",
-      "tracked_branch": "product/hae-la-automation"
+      "tracked_branch": "product/hae-la-automation",
+      "worker_report": {
+        "as_of_kst": "2026-11-13",
+        "not_official_final_completion": true,
+        "percent": null,
+        "source": "docs/audits/KMONG_ALL_REPO_BRANCH_COMPLETION_AUDIT_20261113.md (historical, NOT current individual worker scores)",
+        "status": "NOT_RECORDED_IN_BASELINE"
+      }
     },
     {
       "gate": {
         "conclusion": "success",
         "head_sha": "7f3b791ce3d79ada0978caadfbcb6d4941f2f957",
-        "matches_current_head": true,
+        "matches_current_head": false,
         "run_id": 43537158186,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "7f3b791ce3d79ada0978caadfbcb6d4941f2f957",
+      "head_sha": "f4f5f088b9fb2d89937c825445c035d1a4da0ca2",
+      "machine_evidence_score": {
+        "percent": null,
+        "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
+        "status": "UNASSESSED"
+      },
       "record_id": "CANDIDATE-06",
       "repository": "hibi89/Freelancer",
       "status": "PRESENT",
-      "tracked_branch": "product/rag-enterprise-knowledge"
+      "tracked_branch": "product/rag-enterprise-knowledge",
+      "worker_report": {
+        "as_of_kst": "2026-11-13",
+        "not_official_final_completion": true,
+        "percent": null,
+        "source": "docs/audits/KMONG_ALL_REPO_BRANCH_COMPLETION_AUDIT_20261113.md (historical, NOT current individual worker scores)",
+        "status": "NOT_RECORDED_IN_BASELINE"
+      }
     },
     {
       "gate": {
@@ -269,10 +546,22 @@
         "workflow_status": "completed"
       },
       "head_sha": "6e94d0066cbc80e91fed28b3358b36fc76235515",
+      "machine_evidence_score": {
+        "percent": null,
+        "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
+        "status": "UNASSESSED"
+      },
       "record_id": "CANDIDATE-07",
       "repository": "hibi89/Freelancer",
       "status": "PRESENT",
-      "tracked_branch": "product/rea-website-rebuild"
+      "tracked_branch": "product/rea-website-rebuild",
+      "worker_report": {
+        "as_of_kst": "2026-11-13",
+        "not_official_final_completion": true,
+        "percent": null,
+        "source": "docs/audits/KMONG_ALL_REPO_BRANCH_COMPLETION_AUDIT_20261113.md (historical, NOT current individual worker scores)",
+        "status": "NOT_RECORDED_IN_BASELINE"
+      }
     },
     {
       "gate": {
@@ -284,20 +573,44 @@
         "workflow_status": "completed"
       },
       "head_sha": "2daf969d0d48afd66a35213e77e129b3ced8cdb2",
+      "machine_evidence_score": {
+        "percent": null,
+        "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
+        "status": "UNASSESSED"
+      },
       "record_id": "CANDIDATE-08",
       "repository": "hibi89/Freelancer",
       "status": "PRESENT",
-      "tracked_branch": "product/proofqa-ax-delivery-audit"
+      "tracked_branch": "product/proofqa-ax-delivery-audit",
+      "worker_report": {
+        "as_of_kst": "2026-11-13",
+        "not_official_final_completion": true,
+        "percent": null,
+        "source": "docs/audits/KMONG_ALL_REPO_BRANCH_COMPLETION_AUDIT_20261113.md (historical, NOT current individual worker scores)",
+        "status": "NOT_RECORDED_IN_BASELINE"
+      }
     },
     {
       "gate": {
         "status": "NO_RUN"
       },
       "head_sha": "740ca7c3c4d969b3c51d9be017d950fea50297a1",
+      "machine_evidence_score": {
+        "percent": null,
+        "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
+        "status": "UNASSESSED"
+      },
       "record_id": "CANDIDATE-09",
       "repository": "hibi89/Freelancer",
       "status": "PRESENT",
-      "tracked_branch": "product/ontoinsight-ax-data-analytics"
+      "tracked_branch": "product/ontoinsight-ax-data-analytics",
+      "worker_report": {
+        "as_of_kst": "2026-11-13",
+        "not_official_final_completion": true,
+        "percent": null,
+        "source": "docs/audits/KMONG_ALL_REPO_BRANCH_COMPLETION_AUDIT_20261113.md (historical, NOT current individual worker scores)",
+        "status": "NOT_RECORDED_IN_BASELINE"
+      }
     },
     {
       "gate": {
@@ -309,30 +622,66 @@
         "workflow_status": "completed"
       },
       "head_sha": "529cb051973f9fbf6acec5abbac768ee2a440206",
+      "machine_evidence_score": {
+        "percent": null,
+        "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
+        "status": "UNASSESSED"
+      },
       "record_id": "CANDIDATE-10",
       "repository": "hibi89/Freelancer",
       "status": "PRESENT",
-      "tracked_branch": "product/bid-ax-public-procurement"
+      "tracked_branch": "product/bid-ax-public-procurement",
+      "worker_report": {
+        "as_of_kst": "2026-11-13",
+        "not_official_final_completion": true,
+        "percent": null,
+        "source": "docs/audits/KMONG_ALL_REPO_BRANCH_COMPLETION_AUDIT_20261113.md (historical, NOT current individual worker scores)",
+        "status": "NOT_RECORDED_IN_BASELINE"
+      }
     },
     {
       "gate": {
         "status": "NO_RUN"
       },
       "head_sha": "d6b42798c633172d6d918d00316d5e3a973be426",
+      "machine_evidence_score": {
+        "percent": null,
+        "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
+        "status": "UNASSESSED"
+      },
       "record_id": "CANDIDATE-11",
       "repository": "hibi89/hibi89-ugreen-nas-hackathon",
       "status": "PRESENT",
-      "tracked_branch": "lead/ugreen"
+      "tracked_branch": "lead/ugreen",
+      "worker_report": {
+        "as_of_kst": "2026-11-13",
+        "not_official_final_completion": true,
+        "percent": null,
+        "source": "docs/audits/KMONG_ALL_REPO_BRANCH_COMPLETION_AUDIT_20261113.md (historical, NOT current individual worker scores)",
+        "status": "NOT_RECORDED_IN_BASELINE"
+      }
     },
     {
       "gate": {
         "status": "NO_RUN"
       },
       "head_sha": "c320382792024a30c5bc195a302a217b34f38b07",
+      "machine_evidence_score": {
+        "percent": null,
+        "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
+        "status": "UNASSESSED"
+      },
       "record_id": "CANDIDATE-12",
       "repository": "hibi89/hibi89-paypal-ai-hackathon",
       "status": "PRESENT",
-      "tracked_branch": "lead/paypal"
+      "tracked_branch": "lead/paypal",
+      "worker_report": {
+        "as_of_kst": "2026-11-13",
+        "not_official_final_completion": true,
+        "percent": null,
+        "source": "docs/audits/KMONG_ALL_REPO_BRANCH_COMPLETION_AUDIT_20261113.md (historical, NOT current individual worker scores)",
+        "status": "NOT_RECORDED_IN_BASELINE"
+      }
     }
   ],
   "repositories": [
@@ -614,13 +963,13 @@
           "branch": "feature/final-blueprint-p85-evidence-20261113",
           "gate": {
             "conclusion": "success",
-            "head_sha": "2516ff76e3bab6e431c2b423d3112579f908c027",
+            "head_sha": "7313b4420b1e82a8a76ad3dbc2728baff4a35b42",
             "matches_current_head": true,
-            "run_id": 43537183999,
+            "run_id": 43537507851,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "2516ff76e3bab6e431c2b423d3112579f908c027",
+          "head_sha": "7313b4420b1e82a8a76ad3dbc2728baff4a35b42",
           "status": "PRESENT"
         },
         {
@@ -868,12 +1217,12 @@
           "gate": {
             "conclusion": "success",
             "head_sha": "7f3b791ce3d79ada0978caadfbcb6d4941f2f957",
-            "matches_current_head": true,
+            "matches_current_head": false,
             "run_id": 43537158186,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "7f3b791ce3d79ada0978caadfbcb6d4941f2f957",
+          "head_sha": "f4f5f088b9fb2d89937c825445c035d1a4da0ca2",
           "status": "PRESENT"
         },
         {
@@ -947,7 +1296,7 @@
     {
       "canonical": {
         "expected_git_blob_sha": "521ba0cb458bea384639a0ef897ce7500d33b8f1",
-        "head_sha": "e21875a7a6edccf90dfa54d65a9f37910d9b759f",
+        "head_sha": "a8c488bd548e2c44bc3197f5d68e37ed84fdc021",
         "mode": "observe",
         "observed_git_blob_sha": "521ba0cb458bea384639a0ef897ce7500d33b8f1",
         "owner_approval_verified": false,
@@ -965,7 +1314,7 @@
           "status": "LATEST_RUN",
           "workflow_status": "completed"
         },
-        "head_sha": "e21875a7a6edccf90dfa54d65a9f37910d9b759f",
+        "head_sha": "a8c488bd548e2c44bc3197f5d68e37ed84fdc021",
         "status": "PRESENT"
       },
       "repository": "hibi89/hackathon-command-center-2026",
@@ -1527,11 +1876,13 @@
     }
   ],
   "schema_version": 1,
-  "scope": "GitHub ref, Actions and blueprint fingerprint observations only",
+  "scope": "Read-only refs, workflow metadata, canonical digests and approved pinned-scorecard CI replay",
   "summary": {
     "blocking_fingerprint_issues": 0,
     "canonical_matched": 31,
     "canonical_not_configured": 4,
+    "historical_worker_reports": 16,
+    "pinned_rubrics_replayed": 0,
     "product_links": 29,
     "product_refs_missing": 0,
     "product_refs_present": 29,
