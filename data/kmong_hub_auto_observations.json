@@ -329,16 +329,16 @@
     },
     {
       "gate": {
-        "conclusion": "success",
-        "head_sha": "42ea4e428eb03c7450aeafc0510ec2953809bd79",
+        "conclusion": null,
+        "head_sha": "43ce70592c8ec7d15e99a45a1a0460f172e762db",
         "matches_current_head": true,
-        "run_id": 43573689906,
+        "run_id": 43576161733,
         "status": "LATEST_RUN",
-        "workflow_status": "completed"
+        "workflow_status": "in_progress"
       },
-      "head_sha": "42ea4e428eb03c7450aeafc0510ec2953809bd79",
+      "head_sha": "43ce70592c8ec7d15e99a45a1a0460f172e762db",
       "machine_evidence_score": {
-        "current_head_sha": "42ea4e428eb03c7450aeafc0510ec2953809bd79",
+        "current_head_sha": "43ce70592c8ec7d15e99a45a1a0460f172e762db",
         "denominator": 100,
         "limitations": "Historical approved item classifications; no fresh item-by-item CI, real-customer, rights or retail acceptance",
         "percent": 72,
@@ -373,7 +373,7 @@
           "blueprint": {
             "branch": "feature/final-blueprint-p85-evidence-20261113",
             "git_blob_sha": "c3b5a389fde981a70356f962724f1be6e26d6185",
-            "head_sha": "42ea4e428eb03c7450aeafc0510ec2953809bd79",
+            "head_sha": "43ce70592c8ec7d15e99a45a1a0460f172e762db",
             "path": "docs/FINAL_DESIGN.md",
             "repository": "hibi89/data2web_studio"
           },
@@ -388,7 +388,7 @@
           "implementation": {
             "branch": "feature/final-blueprint-p85-evidence-20261113",
             "git_blob_sha": "b6ec0e4e138cbb9c38b0971c9b3f1ea309b99e9b",
-            "head_sha": "42ea4e428eb03c7450aeafc0510ec2953809bd79",
+            "head_sha": "43ce70592c8ec7d15e99a45a1a0460f172e762db",
             "path": "blueprint_score.py",
             "repository": "hibi89/data2web_studio"
           }
@@ -837,13 +837,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "400599e4097733699acc6b3f5e5fad9a3e89862d",
+        "head_sha": "d5780ceece92f28508712aa2cdd2a6228c7e137c",
         "matches_current_head": true,
-        "run_id": 43571980262,
+        "run_id": 43576064144,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "400599e4097733699acc6b3f5e5fad9a3e89862d",
+      "head_sha": "d5780ceece92f28508712aa2cdd2a6228c7e137c",
       "machine_evidence_score": {
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
@@ -871,14 +871,14 @@
           "blueprint": {
             "branch": "feature/p0-db-map",
             "git_blob_sha": "8e8e61f30c504fa5fe0acbaa6c85047801e921d6",
-            "head_sha": "400599e4097733699acc6b3f5e5fad9a3e89862d",
+            "head_sha": "d5780ceece92f28508712aa2cdd2a6228c7e137c",
             "path": "REQUIREMENTS.md",
             "repository": "hibi89/DBVORA"
           },
           "implementation": {
             "branch": "feature/p0-db-map",
             "git_blob_sha": "81338d4c4a64d2afa36e6619f39c469e0863289f",
-            "head_sha": "400599e4097733699acc6b3f5e5fad9a3e89862d",
+            "head_sha": "d5780ceece92f28508712aa2cdd2a6228c7e137c",
             "path": "dbvora/api.py",
             "repository": "hibi89/DBVORA"
           }
@@ -990,14 +990,14 @@
     },
     {
       "gate": {
-        "conclusion": null,
-        "head_sha": "de7d8868b94314993e852ed680e310f66bba4cdc",
+        "conclusion": "success",
+        "head_sha": "074b240244aad23631466894fd633efc86558f12",
         "matches_current_head": true,
-        "run_id": 43573703785,
+        "run_id": 43575027768,
         "status": "LATEST_RUN",
-        "workflow_status": "in_progress"
+        "workflow_status": "completed"
       },
-      "head_sha": "de7d8868b94314993e852ed680e310f66bba4cdc",
+      "head_sha": "074b240244aad23631466894fd633efc86558f12",
       "machine_evidence_score": {
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
@@ -1025,7 +1025,7 @@
           "blueprint": {
             "branch": "feature/astra-p71-pdf-source-parity-20261112",
             "git_blob_sha": "f2ce12696003fcff0ebddcd086cc2e5998a3135c",
-            "head_sha": "de7d8868b94314993e852ed680e310f66bba4cdc",
+            "head_sha": "074b240244aad23631466894fd633efc86558f12",
             "path": "REQUIREMENTS.md",
             "repository": "hibi89/astra_pdf_redesigner"
           },
@@ -1040,7 +1040,7 @@
           "implementation": {
             "branch": "feature/astra-p71-pdf-source-parity-20261112",
             "git_blob_sha": "56b1758b06785b7fc3b629cfa06d57573cf2ddfa",
-            "head_sha": "de7d8868b94314993e852ed680e310f66bba4cdc",
+            "head_sha": "074b240244aad23631466894fd633efc86558f12",
             "path": "src/App.tsx",
             "repository": "hibi89/astra_pdf_redesigner"
           }
@@ -1557,13 +1557,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "2e887a3c249f67cf0a27169aee83567068e445f3",
+        "head_sha": "929c0155297d2186df2d2eca03f7c32389a5cb57",
         "matches_current_head": true,
-        "run_id": 43573636650,
+        "run_id": 43575165278,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "2e887a3c249f67cf0a27169aee83567068e445f3",
+      "head_sha": "929c0155297d2186df2d2eca03f7c32389a5cb57",
       "machine_evidence_score": {
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
@@ -1591,14 +1591,14 @@
           "blueprint": {
             "branch": "feature/ffax-workbench-p85-20261112",
             "git_blob_sha": "aae8fd50cbc984dfad018d22ec7eaf3f305c80ae",
-            "head_sha": "2e887a3c249f67cf0a27169aee83567068e445f3",
+            "head_sha": "929c0155297d2186df2d2eca03f7c32389a5cb57",
             "path": "docs/ACCEPTANCE_MATRIX.md",
             "repository": "hibi89/frontend-foundry-ax"
           },
           "implementation": {
             "branch": "feature/ffax-workbench-p85-20261112",
-            "git_blob_sha": "08190d7e2e2e5bd2e6bc8863b72c261c1bae0f2d",
-            "head_sha": "2e887a3c249f67cf0a27169aee83567068e445f3",
+            "git_blob_sha": "cedad710a8fc70dad92aba8d3cdfda40e0a65837",
+            "head_sha": "929c0155297d2186df2d2eca03f7c32389a5cb57",
             "path": "src/core.mjs",
             "repository": "hibi89/frontend-foundry-ax"
           }
@@ -2472,14 +2472,14 @@
         {
           "branch": "feature/astra-p71-pdf-source-parity-20261112",
           "gate": {
-            "conclusion": null,
-            "head_sha": "de7d8868b94314993e852ed680e310f66bba4cdc",
+            "conclusion": "success",
+            "head_sha": "074b240244aad23631466894fd633efc86558f12",
             "matches_current_head": true,
-            "run_id": 43573703785,
+            "run_id": 43575027768,
             "status": "LATEST_RUN",
-            "workflow_status": "in_progress"
+            "workflow_status": "completed"
           },
-          "head_sha": "de7d8868b94314993e852ed680e310f66bba4cdc",
+          "head_sha": "074b240244aad23631466894fd633efc86558f12",
           "status": "PRESENT"
         },
         {
@@ -2668,14 +2668,14 @@
         {
           "branch": "feature/final-blueprint-p85-evidence-20261113",
           "gate": {
-            "conclusion": "success",
-            "head_sha": "42ea4e428eb03c7450aeafc0510ec2953809bd79",
+            "conclusion": null,
+            "head_sha": "43ce70592c8ec7d15e99a45a1a0460f172e762db",
             "matches_current_head": true,
-            "run_id": 43573689906,
+            "run_id": 43576161733,
             "status": "LATEST_RUN",
-            "workflow_status": "completed"
+            "workflow_status": "in_progress"
           },
-          "head_sha": "42ea4e428eb03c7450aeafc0510ec2953809bd79",
+          "head_sha": "43ce70592c8ec7d15e99a45a1a0460f172e762db",
           "status": "PRESENT"
         },
         {
@@ -2731,13 +2731,13 @@
           "branch": "feature/p0-db-map",
           "gate": {
             "conclusion": "success",
-            "head_sha": "400599e4097733699acc6b3f5e5fad9a3e89862d",
+            "head_sha": "d5780ceece92f28508712aa2cdd2a6228c7e137c",
             "matches_current_head": true,
-            "run_id": 43571980262,
+            "run_id": 43576064144,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "400599e4097733699acc6b3f5e5fad9a3e89862d",
+          "head_sha": "d5780ceece92f28508712aa2cdd2a6228c7e137c",
           "status": "PRESENT"
         }
       ]
@@ -2976,13 +2976,13 @@
           "branch": "feature/ffax-workbench-p85-20261112",
           "gate": {
             "conclusion": "success",
-            "head_sha": "2e887a3c249f67cf0a27169aee83567068e445f3",
+            "head_sha": "929c0155297d2186df2d2eca03f7c32389a5cb57",
             "matches_current_head": true,
-            "run_id": 43573636650,
+            "run_id": 43575165278,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "2e887a3c249f67cf0a27169aee83567068e445f3",
+          "head_sha": "929c0155297d2186df2d2eca03f7c32389a5cb57",
           "status": "PRESENT"
         }
       ]
