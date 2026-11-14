@@ -1,3 +1,19 @@
+## [2026-11-14 KST] BID AX GUI 263테스트·Windows 5/5 CI — 해총 인수인계 10항
+
+1. **목표/설계/기술:** R01–R29 29개 최종설계 고정, 고객 PC Python3.11+/SQLite/Tk. 목표 최종85%는 오프라인 테스트 점수가 아님.
+2. **완료 기능/선택:** 실제 필드 미확정 즉시 수집→영구 원장 정규화(A) 대신 기존 고객 격리 JSON 다중 GUI 선택·UUID 오프라인 증빙/재개(B), 툴바 5열 정렬, 무자동HTTP/무키저장.
+3. **검증:** 제품 기능 SHA `1ae85fcb4cc58d3bdd3f52d37c243b99f1f4e4f4` [GitHub Actions 43538216227](https://github.com/hibi89/Freelancer/actions/runs/43538216227) 5/5 SUCCESS, Ubuntu Python3.11/3.13 각각263 PASS, Windows3.11 263 tests/0 FAIL/1 POSIX skip, Win CLI EXE+Tk init+GUI unsigned PE 빌드 PASS; 고객 Windows GUI EXE 실행/설치·실 API·고객 수용 미검증.
+4. **상태:** 공식 UNASSESSED/85% 미입증, [작업중]/RELEASE HOLD/미등록. 온비드 15157252 첫 실제10건·보고186, 나머지18페이지 미수집/다른API·실100·인간10/권리 차단.
+5. **오류/피벗:** 최초 Windows 신규테스트 SQLite 연결 미종료 `WinError32`→`contextlib.closing` 후 CI 성공; 이는 고객 GUI 런타임 오류 아님. CLI와 GUI EXE 테스트를 혼동하지 않음.
+6. **저장소/브랜치/SHA:** `hibi89/Freelancer@product/bid-ax-public-procurement` 기능 `1ae85fcb4cc58d3bdd3f52d37c243b99f1f4e4f4`, 문서 `721f1ba1f464eec65e5cbf79f5127529e4819a4b`; `bidax/desktop.py`, `tests/test_onbid_desktop_checkpoint.py`, `.github/workflows/bid-ax-offline-regression.yml`, 제품 `docs/BID_AX_GUI_ONBID_CHECKPOINT_CI_20261114.md`. 중앙 감사 `docs/audits/BID_AX_GUI_263_WINDOWS_CI_20261114.md`; 현재 제품 repo visibility public.
+7. **배포/실행:** Vercel Production N/A. 로컬 GUI `py -3.11 run_bidax.py`; runner unsigned Windows GUI onedir PE **비출시/파일 배포 없음**, 현장 설치 불인증.
+8. **원본/백업/인증:** 기존 온비드 원본 JSON/고객 DB/고객 API key·타상품/제외 BID OWL 미전송·미수정. 로컬 증빙 경로도 민감할 수 있음. Git normal revert 가능, force push 금지.
+9. **다음 작업/완료/승인:** 고객이 이미 보유한 파일은 GUI에서 오프라인 다중 등록 가능. 신규 실 정부 API 호출·실계정 원문/필드·후속18페이지·실100/인간10·Windows GUI 실기기/설치·법률/상업 권리·고객 파일럿은 별도 근거/필요시 승인 전제. 최종85 수용 근거 없이 숫자 변경 금지.
+10. **일시/검증 범위/문서 SHA:** 2026-11-14 KST GitHub 제품 HEAD 및 5/5 CI 원격조회 완료. 이 중앙 문서 커밋 정확 SHA는 후속 원격 readback 기준.
+
+
+---
+
 ## [2026-11-14 KST] WORKNOVA Desk 무료 공개 CI·EXE GUI 자동 스모크 — 중앙 10항
 
 1. 목표/기술: 승인 WD01~14 총100점, 최종 구매자 인수 ≥85점 목표, Windows Tk/SQLite 로컬 오프라인 견적·계약·납품·수금.

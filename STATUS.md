@@ -1,3 +1,11 @@
+## [2026-11-14 KST] BID AX GUI 오프라인 증빙·Windows GUI 5/5 CI 후속
+
+> **[2026-11-14 KST | BID AX GUI 다중 온비드 오프라인 증빙·263테스트·Windows GUI EXE CI 5/5 성공]** 최종설계 **R01–R29 전체 29개** 고정. 제품 [기능 SHA `1ae85fcb4cc5`](https://github.com/hibi89/Freelancer/commit/1ae85fcb4cc58d3bdd3f52d37c243b99f1f4e4f4), [문서 HEAD `721f1ba1f464`](https://github.com/hibi89/Freelancer/commit/721f1ba1f464eec65e5cbf79f5127529e4819a4b). 기존 고객 동의 격리JSON을 GUI에서 다중선택·UUID 재시작·누락/원문 SHA 재검사, 버튼 5열 정렬; **실API 추가 호출·키 저장·정규화 자동승격 없음**. [Actions #43538216227](https://github.com/hibi89/Freelancer/actions/runs/43538216227) **5/5 SUCCESS**, Ubuntu3.11/3.13 각 263 PASS, Windows3.11 **263 tests/0FAIL/1 POSIX-only SKIP**, Windows CLI EXE·Tk 초기화·unsigned GUI onedir PE 빌드 PASS(**GUI EXE 실제 조작·고객 Windows 설치 미검증**). 초기 Windows 테스트 임시SQLite 미종료 WinError32 후 `closing` 수정하여 성공. 실제 온비드 첫10건/서버 보고186 중 **18페이지 미검증**, 다른API/실100·인간10/상업 권리·고객 인수 미완. **공식 최종완성률 UNASSESSED/85% 미입증, [작업중]/RELEASE HOLD/크몽 미등록**, 후보 CANDIDATE-10/KMONG-SVC-18·29/19/등록완료/타 제품·BID OWL 불변. [중앙 독립 감사](docs/audits/BID_AX_GUI_263_WINDOWS_CI_20261114.md).
+
+- 제품 기준 SHA: `1ae85fcb4cc58d3bdd3f52d37c243b99f1f4e4f4`, 제품 HANDOFF/STATUS 문서 HEAD `721f1ba1f464eec65e5cbf79f5127529e4819a4b`. 8개 신규 테스트, 총263. Windows GIU **PE 빌드만**, 실제 GUI EXE 실행/사용자 설치 미검증. 요구 R01–R29 공식85 미입증, 이전 비공개 표기와 달리 GitHub 메타데이터상 제품 저장소 visibility public.
+
+---
+
 ## [2026-11-14 KST] WORKNOVA Desk 공개 GitHub 무료 Linux/Windows/EXE 자동 QA 구성 — 실행 결과 검증대기
 
 - 현재 hibi89/Freelancer PUBLIC 확인. product/worknova-desk-local에 .github/workflows/worknova-desk-qa.yml 구현: 공개 저장소 standard ubuntu-latest·windows-latest 무료 러너, push 경로 제한·contents:read·중복 취소·12분 제한, Python3.11 업무 합성2종/전체 unittest, native Windows windows_acceptance.py 11항목, PyInstaller6.22.3 미서명 EXE 후보 빌드·해시, tools/windows_exe_smoke.py 임시 LOCALAPPDATA Tk 창 auto-close/SQLite 검증. 아티팩트·캐시 업로드/유료 러너 없음.
