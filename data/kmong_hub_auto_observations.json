@@ -247,9 +247,9 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "dbe759b1c31f77e9dd3219b905cd7544bbedc574",
-        "matches_current_head": false,
-        "run_id": 43535665161,
+        "head_sha": "0a9a7f3d6081d7336392984b1b4fc1c453220098",
+        "matches_current_head": true,
+        "run_id": 43535827643,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
@@ -867,9 +867,9 @@
           "branch": "product/rag-enterprise-knowledge",
           "gate": {
             "conclusion": "success",
-            "head_sha": "dbe759b1c31f77e9dd3219b905cd7544bbedc574",
-            "matches_current_head": false,
-            "run_id": 43535665161,
+            "head_sha": "0a9a7f3d6081d7336392984b1b4fc1c453220098",
+            "matches_current_head": true,
+            "run_id": 43535827643,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
