@@ -1,3 +1,16 @@
+## [2026-11-14 KST] WORKNOVA Desk Win EXE 거래처 생성·저장·종료 후 디스크 지속성 중앙 인수인계 10항
+
+1. **목표·용도·기술·확정 요구:** 승인 WD01~14 100점 전체 최종설계/고객 완전 인수85점 목표, 오프라인 Windows EXE(Tk·SQLite) 견적→계약→납품·수금.
+2. **완료 기능·변경·결정 근거:** 사용자 Win onedir EXE 빌드·SHA/MZ, GUI 최초 생성/종료·SQLite v2 integrity ok 이전 증거에 이어, 같은 TEMP 격리 프로필 EXE **2번째 기동 후 합성 거래처1건 GUI 입력·SQL 저장 확인**. 기존 업무 소스/고객 원본 무변경.
+3. **테스트 명령·PASS/FAIL·검증/미검증:** 화면 `WORKNOVA_QA_TEST_01` 새 거래처/ID와 상태 `완료(로컬 기록)` 확인. Windows GUI 닫고 `ExitCode:0`, `sqlite3 mode=ro` `SyntheticCustomerCount:1`, `integrity_check:ok`. 2차 EXE GUI 시작/저장·디스크 persist PASS. 3차 cold reopen에서 기존 고객이 GUI에 나타나는지, 실제 견적·계약·납품/수금·감사 기록/보안/타PC·실고객·법률·상용권 **NOT_RUN**. 원본 바이너리/DB 파일 미수신.
+4. **완료·진행·대기:** WD01/08/09/11/13 합성 거래처/DB 일부 수용, 엄격한 WD항목별 전체 수용까지 미완. **공식0/100(구현률0 뜻 아님), 목표85 미달, [작업중]/RELEASE HOLD/미등록**.
+5. **오류·원인·재시도 금지·대안:** 과거 ZIP 중첩 경로·PyInstaller 하위 `PYTHONNOUSERSITE=1` 수정을 거쳐 실 EXE 빌드/기동 확인. 재설치/같은 빌드 반복 금지. 이미 생성된 TEMP DB로 GUI 3차 재기동 시각 확인/다음 synthetic quote E2E.
+6. **저장소·브랜치·SHA·주요 경로:** `hibi89/Freelancer@product/worknova-desk-local 984835a6e387bd5338503a280a727d1b6befb549`; 증거 `docs/P85_WINDOWS_EXE_BUILD_RESULT_20261114.md`. 중앙 `docs/audits/KMONG_16_CURRENT_20261111.md` WORKNOVA 단일 행 최신화 커밋 `01d733c10f08b781ca908afe42470374d8478ed6`.
+7. **Production URL·프로젝트·실행 환경:** Vercel/웹 배포 미적용. 사용자 TEMP의 미서명 onedir EXE, 자식 환경 `LOCALAPPDATA=$qaRoot`, DB `$qaRoot/WORKNOVA Desk/Data/desk.sqlite`, 사용자의 Python3.11 PowerShell 읽기 전용 DB 조회.
+8. **원본 위치·백업·인증·수정금지:** 기존 실거래처 SQLite/백업·운영 LOCALAPPDATA·OS 보안 설정·PayPal 원본/Freelancer main·타크몽/등록완료 기록 무변경, 고객 데이터·스크린샷 GitHub 업로드 금지.
+9. **다음 작업 우선순위·절차·완료 기준·승인:** 같은 TEST 프로필로 EXE 3차 cold reopen/기존 합성 거래처 유지 화면 확인→테스트 견적/계약·납품/수금 핵심 업무 E2E→OS ACL·상시 DB 암호화/서명·Defender·상업 권리·실고객 승인. WD별 완전 수용 PASS 가중 합 ≥85일 때만 목표 달성, 유료·보안/실고객/판매 수정은 사전 승인.
+10. **갱신 일시 KST·확인 시점·검증 범위·문서 기준 커밋:** 2026-11-14 KST, 실제 Win EXE 2차 기동 GUI 신규 거래처→정상 종료/SQLite 저장까지 신규 근거. 3차 GUI 재열기/전체 기능·권리 미검증. 중앙 최종 HEAD 본 문서 반영 후 확인.
+
 ## [2026-11-14 KST] WORKNOVA Desk Windows SQLite v2 integrity 체크 PASS — 중앙 인수인계 10항
 
 1. **목표·용도·요구/기술:** 사용자 승인 WORKNOVA Desk WD01~14 전체100점·고객 수용85점 목표, 오프라인 Windows Tk/SQLite 견적·계약·납품/수금.
