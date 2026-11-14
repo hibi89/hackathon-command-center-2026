@@ -23,7 +23,7 @@ REGISTRY = ROOT / "tools/final_blueprint_gate/canonical_pins.json"
 ROSTER = ROOT / "tools/kmong_hub_sync/source_repositories.json"
 HUB_REPO = "hibi89/hackathon-command-center-2026"
 HUB_BRANCH = "kmong-productization"
-INDEX_PATH = "data/final_blueprint_product_index_20261113.json"
+INDEX_PATH = "data/final_blueprint_product_index_current.json"
 SNAPSHOT_PATH = "data/kmong_hub_auto_observations.json"
 SHA40 = re.compile(r"^[0-9a-f]{40}$")
 REPO_RE = re.compile(r"^hibi89/[A-Za-z0-9_.-]+$", re.I)
@@ -346,6 +346,35 @@ def determine_dry_run(event_name, manual_input):
     return True
 
 
+
+def validate_current_index(index):
+    """Refuse stale or internally contradictory central source-of-truth snapshots."""
+    if not isinstance(index, dict):
+        raise ValueError("current index must be a JSON object")
+    history = index.get("derived_from")
+    if not isinstance(history, dict) or history.get("preserved_original") is not True:
+        raise ValueError("current index must preserve the historical owner baseline")
+    if history.get("path") != "data/final_blueprint_product_index_20261113.json":
+        raise ValueError("unexpected source index lineage")
+    records, summary = index.get("records"), index.get("summary")
+    if not isinstance(records, list) or len(records) != 29 or not isinstance(summary, dict):
+        raise ValueError("29 product entries and summary required")
+    ids = {v.get("record_id") for v in records if isinstance(v, dict)}
+    if len(ids) != 29:
+        raise ValueError("duplicate or invalid source product ID")
+    worknova = next((v for v in records if v.get("record_id") == "CANDIDATE-12"), None)
+    if not worknova or worknova.get("repository") != "hibi89/Freelancer" or worknova.get("tracked_branch") != "product/worknova-desk-local":
+        raise ValueError("WORKNOVA Desk link no longer points to approved commercial source")
+    unassessed = sum(v.get("official_final_completion") == "UNASSESSED" for v in records)
+    certified = sum(v.get("official_final_completion") == "100%" for v in records)
+    partial = len(records) - unassessed - certified
+    if (summary.get("official_unassessed") != unassessed
+            or summary.get("official_certified") != certified
+            or summary.get("official_partial_scored") != partial):
+        raise ValueError("central official score summary does not match 29 product records")
+    return index
+
+
 def run():
     roster, pins = load_registry()
     source_token = os.getenv("KMONG_SOURCE_APP_TOKEN")
@@ -354,6 +383,7 @@ def run():
         raise RuntimeError("independent read-only GitHub App and central GITHUB_TOKEN required")
     api = GitHubAPI()
     index = decode_contents(api.get(hub_path(INDEX_PATH, HUB_BRANCH), hub_token))
+    index = validate_current_index(index)
     observer = Observer(api, source_token)
     snapshot = collect_snapshot(observer, roster, pins, index)
     snapshot = attach_dual_progress(snapshot, observer)
