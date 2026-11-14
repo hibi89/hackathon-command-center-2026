@@ -14,7 +14,7 @@
 | ACTIVE-02 | HAE | 85% (2026-11-13 내부) | 미산정 | 미산정 |
 | ACTIVE-03 | AI Code Checker | 95% (2026-11-13 내부) | 미산정 | 미산정 |
 | ACTIVE-04 | SMAX² | 85% (2026-11-13 내부) | 미산정 | 미산정 |
-| ACTIVE-05 | DATA2WEB Studio | 미기록 | 채점 재검증 중 | 72% |
+| ACTIVE-05 | DATA2WEB Studio | 미기록 | 72% (승인 고정 채점표·CI SHA 재계산) | 72% |
 | ACTIVE-06 | REA_Web | 85% (2026-11-13 내부) | 미산정 | 미산정 |
 | ACTIVE-07 | SOVIA | 95% (2026-11-13 내부) | 미산정 | 미산정 |
 | ACTIVE-08 | AI AutoML Analyst | 95% (2026-11-13 내부) | 미산정 | 미산정 |
@@ -43,7 +43,7 @@
 ## 실제 검증과 한계
 
 - [자동 이중 수치 코드](https://github.com/hibi89/hackathon-command-center-2026/blob/main/tools/kmong_hub_sync/dual_progress.py) 및 [구현 규칙](https://github.com/hibi89/hackathon-command-center-2026/blob/main/docs/strategy/KMONG_DUAL_PROGRESS_SCORING_20261114.md). 신규 GitHub Actions Job Summary에도 29개 이중 수치 표가 표시된다.
-- 신규 첫 실 App run #43537749724는 **37/37 유닛테스트 PASS** / 35 저장소 80 ref / 29 product link / 역사 보고16개 수집 PASS였으나, DATA2WEB `original_blueprint_scope` 문구 불일치로 **승인72 자동재계산은 FAIL-CLOSED / 미산정**. 검증기 문자열 수정 main SHA `32bb7d45aa3b2e0dc0a4941b409b3bc36bc8930a` 반영, 실제 후속 run과 score72 판정은 별도 확인 전까지 미검증.
+- 신규 첫 실 App run #43537749724는 **37/37 유닛테스트 PASS** / 35 저장소 80 ref / 29 product link / 역사 보고16개 수집 PASS였으나, DATA2WEB `original_blueprint_scope` 문구 불일치로 **승인72 자동재계산은 FAIL-CLOSED / 미산정**. 검증기 문자열 수정 main SHA `32bb7d45aa3b2e0dc0a4941b409b3bc36bc8930a` 반영, 후속 [실제 App #43538219185](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43538219185) SUCCESS 후 중앙 관찰 JSON에서 `pinned_rubrics_replayed: 1`, DATA2WEB **72/100** 원격 readback 완료. 이는 기존 승인 가중치의 **자동 재계산 검증**이며 독립 고객/상용 100점 인증이 아니다.
 - 현행 자동 점수는 제품별 승인 채점표·정확 실행 SHA가 마련된 경우에만; DATA2WEB의 72는 22개 VERIFIED/11개 PENDING의 **기존 사용자 승인 점수**다. **실고객 OS/저작권·라이선스/권리/판매 승인 모두 별도.**
 - 기존 29개 원천 제품/19개 서비스, `[작업중]`/`[사용자 개입 필요]`, `RELEASE HOLD`/등록 이력 전부 보존. 현행 16개 작업자 최신 보고 형식 자동입력은 후속 과제.
 
