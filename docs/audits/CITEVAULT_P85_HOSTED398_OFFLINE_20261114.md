@@ -1,5 +1,16 @@
 # CITEVAULT AX — 최종설계 P85 추가 실검증 (2026-11-14 KST)
 
+## [2026-11-14 KST] 최신: 사용자 Windows 부분 실증+질문 중심 UI · 455PASS
+
+- 기능 SHA [`62fe69bd9f78f5a9a2c49f53b5f227053503a4f1`](https://github.com/hibi89/Freelancer/commit/62fe69bd9f78f5a9a2c49f53b5f227053503a4f1), STATUS/HANDOFF/24항 수용표 SHA [`9a822c85923902bfce68b2c027cf5d85168816bd`](https://github.com/hibi89/Freelancer/commit/9a822c85923902bfce68b2c027cf5d85168816bd).
+- [정확 SHA Actions #43536006934](https://github.com/hibi89/Freelancer/actions/runs/43536006934) **8/8 SUCCESS, 455 executed PASS /0FAIL /0SKIP** (Ubuntu/Windows 중복 포함). P70 31, 원본 RAG upstream35+bridge36, OS별 vault/UI/ACL+대화 131·합성100 harness1·backup12, native31×2, real Chrome1, Windows portable ZIP2.
+- **REQ16 제품 기능:** 사용자 제시한 복잡 UX 단순화: 로그인→질문→출처 검색 중심, 문서 범위·SQL 검토·관리자 화면은 기본 접힘, 기존 API·접근권한·CSP 유지. Ubuntu 실제 Chrome과 양 OS 신규 UI 계약 검증.
+- **REQ19 부분 실기기 증거:** 사용자가 이번 채팅에 올린 Windows QA 콘솔 `PASS`, 기존 정본 SHA `62663721`의 synthetic operator 로그인, 문서/컬렉션 1개, `SEARCH_ONLY` 및 `policy line1` 근거 인용 스크린샷 확인. 실제 Win10/11 버전, 새 UI SHA 현장 실행, 상용 설치/고객자료/실백업·리커버리 및 종료 후 파일 제거는 미검증. 임시 비밀번호/로컬 사용자 경로가 화면에 있어 **공개 GitHub에 스크린샷 복사 금지**.
+- 회귀 장애: 초기 사용자 친화형 UI 문구가 이전 운영자 QA 기대 문자열과 달라 #43535664826 실패, Chrome 임시 프로필 ENOTEMPTY; #43535827150 Chrome 10초 startup timeout. 기존 문자열을 유지하고 cleanup/bounded 30초 시작 및 stderr 진단 수정, 최신 8/8 PASS. 정확 경계 외 타상품·고객 원본·배포 설정 변경 0.
+- [상세 기술·증거](https://github.com/hibi89/Freelancer/blob/product/rag-enterprise-knowledge/docs/P85_SIMPLE_UI_OWNER_WINDOWS_20261114.md). **공식 24항 전체 최종완성률 UNASSESSED; 목표85% 미인증; CITEVAULT AX [작업중] / RELEASE HOLD / SALE NO-GO**. 실제 기업 IdP·원본 사용권/승인된 PREP-SMAX signed AX producer·실 Korean model+license+Gold100·물리 Win10/11 운영 설치/고객·법무 인수 필요.
+- 중앙 원장 대형 `KMONG_16_CURRENT_20261111.md`의 CITEVAULT 표시는 현재도 `[작업중]`. 본 project audit와 제품 HANDOFF/STATUS가 최신 SHA 근거이며 다른 상품 이력/등록완료는 수정하지 않음. 공유 Freelancer PUBLIC의 여러 브랜치/Git 역사 공개 위험·secret 전수감사 미완.
+
+
 ## [2026-11-14 09:10 KST] 이번 최신 최종설계 REQ24+REQ19 — 8/8 CI · 447 PASS
 
 - 제품 기능 SHA [`f2979aa50156b4f5c3d80f4d23a1b2ec336f0040`](https://github.com/hibi89/Freelancer/commit/f2979aa50156b4f5c3d80f4d23a1b2ec336f0040), 제품 10항 HANDOFF/STATUS/24요건 수용표 문서 HEAD [`62663721a4576f597e1b7cde5025760271428cda`](https://github.com/hibi89/Freelancer/commit/62663721a4576f597e1b7cde5025760271428cda).
