@@ -1,6 +1,6 @@
 # BID AX 온비드 후속 페이지 로컬 수집기 — 무료/266→276 CI 감사
 
-**2026-11-14 KST** · hibi89/Freelancer @ product/bid-ax-public-procurement · 기능 [`3008bfd440aafe57e264ad4a0485d517f8819634`](https://github.com/hibi89/Freelancer/commit/3008bfd440aafe57e264ad4a0485d517f8819634) · 제품 문서 [`d07abddba54d890daf6dfd430dc7d27dbc9e2a4b`](https://github.com/hibi89/Freelancer/commit/d07abddba54d890daf6dfd430dc7d27dbc9e2a4b).
+**2026-11-14 KST** · hibi89/Freelancer @ product/bid-ax-public-procurement · 기능 [`3008bfd440aafe57e264ad4a0485d517f8819634`](https://github.com/hibi89/Freelancer/commit/3008bfd440aafe57e264ad4a0485d517f8819634) · 제품 문서 [`6e644ce44c3e026882f9daf2dae7fd245a768658`](https://github.com/hibi89/Freelancer/commit/6e644ce44c3e026882f9daf2dae7fd245a768658).
 
 1. 사용자 승인: **유료 비용 없는** 개발·검증·GitHub 반영은 진행 허용. 최종설계 R01–R29 29개 전체 불변, 별도 100점 가중치 재승인 요구 금지.
 2. 구현/선택: 고객 키/원문 클라우드 수집·자동 정규화(A)보다 **고객 PC의 검증된 첫 JSON을 근거로 하는 소량·중단복구·실키 메모리 보유(B)** 채택. `onbid-continue`는 오프라인 계획 후 명시적 동의/--live가 있을 때만 공식 15157252 요청, max25(기본4)/시도예산 24(사용자 조정)·재시도0, 신규 파일 create-only/SQLite SHA·UUID 조회조건 검증, 저장됐지만 중단된 격리 파일의 무재호출 재사용. 기존 원문·키/타상품/법원문건 불변.

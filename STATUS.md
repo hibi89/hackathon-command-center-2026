@@ -1,3 +1,9 @@
+## [2026-11-14 KST] BID AX 사용자 Windows 안내 경로 표기 정정
+
+- 기존 검증 기능 SHA `3008bfd440aafe57e264ad4a0485d517f8819634`, CI #43540224552 5/5 SUCCESS·276테스트 불변. 제품 최종 문서 HEAD `6e644ce44c3e026882f9daf2dae7fd245a768658` (Windows PowerShell 경로의 중복 역슬래시 표기만 정리). 공식 R01–R29/UNASSESSED/[작업중]/출시 HOLD 불변.
+
+---
+
 ## [2026-11-14 KST] WORKNOVA Desk frozen Windows EXE 전체 업무 자동QA·한국어 컬럼 PASS (최종85 별개)
 
 - 제품 `hibi89/Freelancer@product/worknova-desk-local` 검증 코드 SHA `50ecb87b13a343c4b8428ea6c204afec57f6cd1a`, 문서 HEAD `714071c98a0b7ec812d75d8ac3bfd814c112c788`. [GitHub Actions #43540390516](https://github.com/hibi89/Freelancer/actions/runs/43540390516) **3/3 SUCCESS**: Linux Python3.11 174(173 PASS/1 SKIP), Windows Python3.11 174(165 PASS/9 SKIP), native Windows 임시 포터블 설치/갱신·복구·삭제 11/11 PASS. 실제 Windows unsigned frozen EXE 기동/GUI 종료 및 **가상 견적 부가세→승인→계약→납품·검수→부분수금2건·중복/초과 거부→SHA 장부 백업/복원** PASS. Tk 업무표 고객/견적/계약/단계 영문 컬럼 제목 8개 한국어로 수정/회귀 PASS. EXE SHA `9bc55621d0c1f67cf363cc1e056412978cc79080d9e8770e268fe20bade69e6f`(2,300,758 bytes, 임시 러너 미배포). [검증기 #43540391034](https://github.com/hibi89/Freelancer/actions/runs/43540391034) SUCCESS.
