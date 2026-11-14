@@ -1,3 +1,11 @@
+## 2026-11-14 KST — FFAX A/B React TSX export fidelity fixed and Windows ZIP reissued
+
+- FFAX exact functionality `hibi89/frontend-foundry-ax@feature/ffax-workbench-p85-20261112` SHA `0acf96c95d133c02f3666238fd638a4f3468f854`, documentation `a32da662430ee3ee7f48045538ef7fb999d75231`; [GitHub Actions 43548778693](https://github.com/hibi89/frontend-foundry-ax/actions/runs/43548778693) **4/4 SUCCESS**.
+- **Bug fixed:** user preview B/Dashboard was CSS grid while exported React19 TSX always stacked. Now A remains stack, B is responsive grid with main sections spanning full width and `data-layout` for downstream inspection. A/B parity, component edits, three themes, mock-model grid accepted source 3 new tests PASS. Source and hosted Linux/Windows Node **118/118 PASS each**, 12 synthetic strict React19 SSR/typecheck, Chromium/axe/cleanroom/HTTP security PASS.
+- [Full FFAX proof](https://github.com/hibi89/frontend-foundry-ax/blob/feature/ffax-workbench-p85-20261112/docs/REACT_GRID_EXPORT_PARITY_20261114.md). Owner review ZIP artifact `14095432154` 22 entries and `SOURCE_SHA.txt=0acf96c95d133c02f3666238fd638a4f3468f854`, SHA256 `0305998d4b373bb46a8c239aed9d4bf7abb520c27d90a6d38deb497b0d892b8f`. Downloaded, inspected, not an EXE or a customer release.
+- Correct score remains **80/100 provisional engineering** (repair of existing functionality is not new credited AC), central whole-final-blueprint **UNASSESSED**; **AC04 real Qwen 0/14**, **AC09 physical owner UI acceptance 0/6**; release **HOLD**, `[작업중]` retained, not listed or registered on Kmong. Existing 1pm unified owner PC requirements remain; prior product rows and central denominator unchanged.
+- No paid API, force-push, main, customer data, permissions, Vercel or other product changes.
+
 ## 2026-11-14 KST — FFAX hardening CI 115/115 and verified owner-review ZIP
 
 - Feature branch `hibi89/frontend-foundry-ax@feature/ffax-workbench-p85-20261112`: validated functional SHA `e5982bf53ea9e65625051d2f3937abfc2ce979ba`, documentation HEAD `2773e90821554f2d9e7e4df91426b89126a0b5a9`; [GitHub Actions 43547649624](https://github.com/hibi89/frontend-foundry-ax/actions/runs/43547649624) **4/4 SUCCESS**.
