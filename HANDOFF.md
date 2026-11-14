@@ -1,3 +1,16 @@
+## [2026-11-14 KST] WORKNOVA Desk Windows EXE 세 번째 실행 거래처 GUI 재표시 — 중앙 인수인계 10항
+
+1. **목표·용도·기술·요구:** 로컬 오프라인 Windows EXE/Tk/SQLite 견적·계약·납품·수금, 사용자 승인 WD01~14 총100점 완전 고객수용85점 목표.
+2. **완료·변경·결정:** 실제 Windows onedir EXE 빌드/MZ/SHA, GUI 첫 빈 DB/종료/SQLite v2 integrity ok, 2차 GUI 가짜 거래처 신규 생성/종료 후 DB SQL 1건, **3차 GUI 재시작 기존 거래처 표시 유지** 확인. 고객 원본/설계/코드/OS 정책 변경 없음.
+3. **테스트/성공 실패·미검증:** 사용자 PowerShell `$p3=Process.Start($psi2)`, `WaitForExit()`, **ExitCode:0**. 사용자 “그대로있더라”로 `WORKNOVA_QA_TEST_01` GUI 유지 확인. 3차 별도 화면/DB SQL 없음; 2차 GUI screenshot/SQLite `SyntheticCustomerCount:1`·integrity ok 이전 근거. 견적→계약→납품·수금 GUI E2E·감사로그·Windows 보안/라이선스/타 PC·실고객 수용 NOT_RUN.
+4. **진행 상태:** WD01/08/09/11/13 부분 수용, 승인 WD01~14 전체100 완전 수용점수 **0/100, 85 미달, [작업중]/RELEASE HOLD/판매 미등록**.
+5. **오류·원인·대안·금지:** ZIP 폴더 두 겹/빌더 `PYTHONNOUSERSITE=1` 버그 과거 수정·우회, 3회 프로세스 GUI 정상. 불필요한 빌드/패키지 설치 반복하지 않음. 다음 테스트는 같은 격리 DB의 합성 견적·승인/계약 흐름.
+6. **저장소·브랜치·SHA·경로:** 제품 `hibi89/Freelancer@product/worknova-desk-local 0c817f35289b3c932778640cfc6b304159d97bfa`, 실행 증거 `docs/P85_WINDOWS_EXE_BUILD_RESULT_20261114.md`. 중앙 원장 `docs/audits/KMONG_16_CURRENT_20261111.md` 1행 업데이트 `88329fcea9d411754521041e5677e038a5d6949b`.
+7. **Production URL·Vercel·실행:** 웹/Vercel 미적용; 미서명 Windows onedir EXE 사용자 TEMP, 자식 전용 LOCALAPPDATA QA, Python3.11.9/PyInstaller6.22.3로 빌드.
+8. **원본·백업·보안·수정금지:** 실제 고객 SQLite/백업·OS ACL·운영 LOCALAPPDATA·PayPal 원본/Freelancer main·타 상품/등록완료 이력·개인정보 GitHub 업로드 모두 불변.
+9. **다음 우선·완료기준·승인:** 합성 고객을 선택해 견적 생성·승인→계약→납품/수금 실제 GUI/DB E2E 검증, 이후 보안/정품 권리/실고객 수용 게이트; 각 WD 완전 수용 PASS 가중치 합≥85에서만 최종 달성. 유료·실데이터·OS 보안 변경은 별도 승인.
+10. **갱신 일시·KST·근거·문서 기준:** 2026-11-14 KST, 사용자 전달 세 번째 실행 후 기존 거래처 유지 진술과 ExitCode0만 신규 증거. 별도 3차 이미지/DB SQL 미수신. 중앙 HEAD 마지막 문서 커밋 후 확인.
+
 ## [2026-11-14 KST] WORKNOVA Desk Win EXE 거래처 생성·저장·종료 후 디스크 지속성 중앙 인수인계 10항
 
 1. **목표·용도·기술·확정 요구:** 승인 WD01~14 100점 전체 최종설계/고객 완전 인수85점 목표, 오프라인 Windows EXE(Tk·SQLite) 견적→계약→납품·수금.
