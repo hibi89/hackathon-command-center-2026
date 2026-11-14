@@ -1,3 +1,16 @@
+## [2026-11-14 KST] KMONG 중앙 두 봇 실행 실제 중복 억제 — 10항
+
+1. **목표·확정 요구·기술:** 중앙 source App/GitHub Actions 예약·웹훅 검증, 중앙 잠정 기술 85/100→95→100. 기존 read-only source App, 운영 원장, 권한·점수 보호.
+2. **완료 기능·판단:** bot #43597859177 실제 RUN/UPDATED, bot #43597862952 실제 DEFERRED_BOT_BURST. 두 실행은 2초 간격에 생성; 검증된 것은 collector burst 억제이며 Vercel webhook atomic 중복 억제는 아님.
+3. **테스트·미검증:** first job Python 80 PASS/0 FAIL; second test/scan SKIPPED (deferred, 전체 job SUCCESS). 최신 원장 35 repos/80 branches/29 product links, unlinked0/fingerprint0/official certification0, blob b2ac54b5ed7dbd137263e3f306a48d01138d5d61. native schedule first 100 runs 중 1건, 전체 이력 전수 확인 및 두 번째 독립 schedule은 미검증.
+4. **상태·중단:** 잠정 중앙 완성률 **85/100 유지**; 예약 반복 +5, 실제 signed webhook E2E +10 미인정. Production GET runtime parity 과거 부분 검증만 유효.
+5. **문제·대안:** receiver arrayBuffer 전체 읽기 후 크기 제한의 스트림 입력 위험 및 연속 8s GitHub API 요청 vs Vercel 10s budget, 30m history non-atomic; A 바이트 제한 스트림+전체 deadline (무료/최소수정 추천), B KV/큐/원자 중복 방지 (복잡성·비용·승인 필요). 실패를 성공으로 표시 금지.
+6. **저장소·경로·SHA:** `hibi89/hackathon-command-center-2026`; main `69e584e57a3a37fa72b406d62ccddf9eef9dfcf2`; 운영 브랜치 `kmong-productization`, 본 기록 커밋 후 HEAD/author 확인. 감사 `docs/audits/KMONG_CENTRAL_BOT_BURST_LIVE_20261114.md`; runtime receiver blob `13d287c3d239532fadeccbca27d349cc3d36f0b9`.
+7. **Production·환경:** `https://kmong-hub-event-bridge.vercel.app/api/webhook` 과거 GET 200/ready source_sha `2863165b06d407ba632f18ad7a85a7c98f1989af` (22:07 감사 기준); 이번 회차 Production POST/브라우저/배포 프로젝트 확인 미실시.
+8. **원본·백업·보안:** 기존 `main` 및 운영 코드 변경 없음, git parent commit가 문서 변경 복구 기준. 원장, 고객 데이터, App 토큰·secret, 공식 점수·상품 등록 이력, cron 및 Vercel 설정 그대로 보존.
+9. **다음 작업·완료 기준·승인:** 두 번째 별도 native `schedule` run/Python80/원장 readback 실증; 실제 signed ping+tampered+push+dispatch+action+snapshot E2E는 승인된 경로만. 안전한 stream cap 수정은 설계·승인 후 격리 테스트·PR·배포 검증; 임의 배포/권한 조정 금지.
+10. **KST 기준·검증 한계:** 2026-11-14 KST, GitHub REST run/jobs/log/readback 및 소스 정적 확인. 새로운 테스트 실행, 코드 배포, 웹훅 실제 서명 전송은 하지 않음. 본 감사 커밋 SHA 원격 검증 필요.
+
 ## [2026-11-14 22:07+ KST] KMONG 중앙 잠정 85/100 실증 인수인계 — 10항
 
 1. **목표·요구·기술:** 중앙 자동 수집/증거 원장을 사용자 목표 85/100까지 실증. 기존 native GitHub schedule + bot dispatcher, read-only source App, central-only conditional snapshot write 유지. 본 점수는 중앙 **잠정 기술검증**이며 제품 공식 최종설계 점수와 구별.
