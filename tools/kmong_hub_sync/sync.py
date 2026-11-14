@@ -96,6 +96,37 @@ def decode_contents(obj):
     return json.loads(text)
 
 
+
+def describe_github_http_failure(exc, path):
+    """Sanitized API diagnostics: never output tokens, response bodies or query strings."""
+    headers = exc.headers or {}
+    remaining = str(headers.get("X-RateLimit-Remaining", "unknown"))
+    retry_after = str(headers.get("Retry-After", "none"))
+    try:
+        message = exc.read(2048).decode("utf-8", "replace").lower()
+    except (OSError, UnicodeError, AttributeError):
+        message = ""
+    if exc.code == 403 and (remaining == "0" or "api rate limit exceeded" in message):
+        kind = "PRIMARY_RATE_LIMIT"
+    elif exc.code in {403, 429} and (
+        "secondary rate limit" in message or "abuse detection" in message
+        or "too many requests" in message or retry_after != "none"
+    ):
+        kind = "SECONDARY_RATE_LIMIT"
+    elif exc.code == 403 and (
+        "resource not accessible by integration" in message
+        or "must have" in message and "permission" in message
+    ):
+        kind = "APP_ACCESS_DENIED"
+    elif exc.code == 403:
+        kind = "FORBIDDEN_UNCLASSIFIED"
+    else:
+        kind = "HTTP_FAILURE"
+    endpoint = path.split("?", 1)[0][:180]
+    return kind, (f"GitHub request {endpoint} HTTP {exc.code} [{kind}; "
+                  f"remaining={remaining}; retry_after={retry_after}]; no write accepted")
+
+
 class GitHubAPI:
     def get(self, path, token, allow_404=False):
         return self._request("GET", path, token, None, allow_404)
@@ -120,10 +151,14 @@ class GitHubAPI:
             except HTTPError as exc:
                 if allow_404 and exc.code == 404:
                     return None
-                if exc.code in {429, 502, 503, 504} and attempt == 0:
+                kind, detail = describe_github_http_failure(exc, path)
+                if attempt == 0 and (
+                    exc.code in {429, 502, 503, 504}
+                    or (exc.code == 403 and kind == "SECONDARY_RATE_LIMIT")
+                ):
                     time.sleep(1)
                     continue
-                raise RuntimeError(f"GitHub {method} returned HTTP {exc.code}; no source/hub write accepted") from None
+                raise RuntimeError(detail) from None
             except (URLError, TimeoutError) as exc:
                 if attempt == 0:
                     time.sleep(1)
