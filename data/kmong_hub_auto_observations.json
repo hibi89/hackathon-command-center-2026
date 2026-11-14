@@ -52,13 +52,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "5c3c59bb2532abf43a6b80bc64eab61e2fca9db0",
+        "head_sha": "37a06cd77efcf71dd1576576157daef412adf70f",
         "matches_current_head": true,
-        "run_id": 43534924363,
+        "run_id": 43535767926,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "5c3c59bb2532abf43a6b80bc64eab61e2fca9db0",
+      "head_sha": "37a06cd77efcf71dd1576576157daef412adf70f",
       "record_id": "ACTIVE-05",
       "repository": "hibi89/data2web_studio",
       "status": "PRESENT",
@@ -248,12 +248,12 @@
       "gate": {
         "conclusion": "success",
         "head_sha": "dbe759b1c31f77e9dd3219b905cd7544bbedc574",
-        "matches_current_head": true,
+        "matches_current_head": false,
         "run_id": 43535665161,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "dbe759b1c31f77e9dd3219b905cd7544bbedc574",
+      "head_sha": "0a9a7f3d6081d7336392984b1b4fc1c453220098",
       "record_id": "CANDIDATE-06",
       "repository": "hibi89/Freelancer",
       "status": "PRESENT",
@@ -614,13 +614,13 @@
           "branch": "feature/final-blueprint-p85-evidence-20261113",
           "gate": {
             "conclusion": "success",
-            "head_sha": "5c3c59bb2532abf43a6b80bc64eab61e2fca9db0",
+            "head_sha": "37a06cd77efcf71dd1576576157daef412adf70f",
             "matches_current_head": true,
-            "run_id": 43534924363,
+            "run_id": 43535767926,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "5c3c59bb2532abf43a6b80bc64eab61e2fca9db0",
+          "head_sha": "37a06cd77efcf71dd1576576157daef412adf70f",
           "status": "PRESENT"
         },
         {
@@ -868,12 +868,12 @@
           "gate": {
             "conclusion": "success",
             "head_sha": "dbe759b1c31f77e9dd3219b905cd7544bbedc574",
-            "matches_current_head": true,
+            "matches_current_head": false,
             "run_id": 43535665161,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "dbe759b1c31f77e9dd3219b905cd7544bbedc574",
+          "head_sha": "0a9a7f3d6081d7336392984b1b4fc1c453220098",
           "status": "PRESENT"
         },
         {
