@@ -85,6 +85,36 @@ async function githubRequest(fetchImpl, path, token, method = "GET", body = unde
   return response.json();
 }
 
+
+const DISPATCH_BUCKET_MS = 30 * 60 * 1000;
+const DISPATCH_BOT = "kmong-hub-dispatcher[bot]";
+
+// GitHub run history is a zero-infrastructure, best-effort burst gate.
+// It is not an atomic distributed lock: simultaneous webhook requests may race.
+export function shouldCoalesceDispatch(payload, nowMs = Date.now()) {
+  const runs = payload?.workflow_runs;
+  if (!Array.isArray(runs) || runs.length > 30 || !Number.isFinite(nowMs)) {
+    throw new Error("invalid central workflow dispatch history");
+  }
+  const bucket = Math.floor(nowMs / DISPATCH_BUCKET_MS);
+  for (const run of runs) {
+    const created = Date.parse(run?.created_at);
+    if (!Number.isFinite(created) || created > nowMs + 60000) {
+      throw new Error("invalid central workflow run timestamp");
+    }
+    if (run.event === "workflow_dispatch" && run.actor?.login === DISPATCH_BOT &&
+        run.conclusion !== "cancelled" && Math.floor(created / DISPATCH_BUCKET_MS) === bucket) {
+      return true;
+    }
+  }
+  // A full page whose oldest entry is within this bucket cannot prove no earlier bot run.
+  if (runs.length === 30 &&
+      Math.floor(Date.parse(runs[29].created_at) / DISPATCH_BUCKET_MS) >= bucket) {
+    return true;
+  }
+  return false;
+}
+
 export async function dispatchCentral(env, fetchImpl = fetch) {
   const jwt = signAppJwt(env.KMONG_DISPATCH_APP_ID, env.KMONG_DISPATCH_APP_PRIVATE_KEY);
   const installation = await githubRequest(
@@ -100,9 +130,14 @@ export async function dispatchCentral(env, fetchImpl = fetch) {
       token.permissions?.actions !== "write") {
     throw new Error("dispatch token must be limited to hub Actions:write");
   }
+  const recent = await githubRequest(fetchImpl,
+    "/repos/" + HUB_REPO + "/actions/workflows/" + HUB_WORKFLOW +
+    "/runs?event=workflow_dispatch&per_page=30", token.token);
+  if (shouldCoalesceDispatch(recent)) return "coalesced";
   await githubRequest(fetchImpl,
     "/repos/" + HUB_REPO + "/actions/workflows/" + HUB_WORKFLOW + "/dispatches",
     token.token, "POST", { ref: "main", inputs: { dry_run: "false" } });
+  return "queued";
 }
 
 function answer(status, obj) {
@@ -153,9 +188,9 @@ export async function receiveWebhook(request, env, fetchImpl = fetch) {
     return answer(503, { status: "dispatch_not_configured" });
   }
   try {
-    await dispatchCentral(env, fetchImpl);
-    // A 204 from GitHub means the workflow was queued, not that its job succeeded.
-    return answer(202, { status: "queued" });
+    const status = await dispatchCentral(env, fetchImpl);
+    // A 204 means queued; coalesced means NO dispatch, neither implies a completed sync.
+    return answer(202, { status });
   } catch (error) {
     console.error("kmong webhook dispatch failed:", error instanceof Error ? error.message : "unknown");
     return answer(502, { status: "dispatch_failed" });
