@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Read-only GitHub App evidence collection; sole write target is the central observation JSON.
 
-No official completion scoring, private file contents, code execution or source-repo writes.
+Pinned, approved scorecard replay is a separate, explicitly labeled observation;
+no OFFICIAL completion mutation, source repo writes, or commercial authorization.
 """
 import base64
 import hashlib
@@ -14,6 +15,7 @@ import time
 from urllib.error import HTTPError, URLError
 from urllib.parse import quote
 from urllib.request import Request, urlopen
+from dual_progress import attach_dual_progress, markdown_summary
 
 ROOT = Path(__file__).resolve().parents[2]
 REGISTRY = ROOT / "tools/final_blueprint_gate/canonical_pins.json"
@@ -318,6 +320,7 @@ def run():
     index = decode_contents(api.get(hub_path(INDEX_PATH, HUB_BRANCH), hub_token))
     observer = Observer(api, source_token)
     snapshot = collect_snapshot(observer, roster, pins, index)
+    snapshot = attach_dual_progress(snapshot, observer)
     dry_run = determine_dry_run(os.getenv("GITHUB_EVENT_NAME", ""),
                                 os.getenv("KMONG_SYNC_DRY_RUN", ""))
     result = reconcile_hub(api, hub_token, snapshot, dry_run,
@@ -329,7 +332,9 @@ def run():
           "linked refs:", summary["product_refs_present"],
           "unlinked refs:", summary["product_refs_unlinked"],
           "fingerprint alerts:", summary["blocking_fingerprint_issues"],
-          "official scores: UNMODIFIED")
+          "official scores: UNMODIFIED",
+          "historical worker reports:", summary["historical_worker_reports"],
+          "pinned rubric replay:", summary["pinned_rubrics_replayed"])
     if result["commit"]:
         print("Hub commit:", result["commit"])
     if os.getenv("GITHUB_STEP_SUMMARY"):
@@ -339,6 +344,7 @@ def run():
             f.write(f"- Repositories: {summary['repository_count']} / tracked refs: {summary['tracked_branch_count']}\n")
             f.write(f"- Product records: {summary['product_links']} / refs present: {summary['product_refs_present']} / missing: {summary['product_refs_missing']} / unlinked: {summary['product_refs_unlinked']} / fingerprint alerts: {summary['blocking_fingerprint_issues']}\n")
             f.write("- Official completion and registered-product history: **unchanged**\n")
+            f.write("\n" + markdown_summary(snapshot))
     if summary["blocking_fingerprint_issues"]:
         raise RuntimeError("enforced canonical fingerprint drift detected; official scores unchanged")
     return 0

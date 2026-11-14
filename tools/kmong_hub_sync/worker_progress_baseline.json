@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "kind": "HISTORICAL_INTERNAL_WORKER_REPORTS",
+  "as_of_kst": "2026-11-13",
+  "source": "docs/audits/KMONG_ALL_REPO_BRANCH_COMPLETION_AUDIT_20261113.md (historical, NOT current individual worker scores)",
+  "reported": {
+    "ACTIVE-01": 95,
+    "ACTIVE-02": 85,
+    "ACTIVE-03": 95,
+    "ACTIVE-04": 85,
+    "ACTIVE-06": 85,
+    "ACTIVE-07": 95,
+    "ACTIVE-08": 95,
+    "ACTIVE-09": 85,
+    "ACTIVE-10": 85,
+    "ACTIVE-11": 95,
+    "ACTIVE-12": 95,
+    "ACTIVE-13": 85,
+    "ACTIVE-14": 85,
+    "ACTIVE-15": 85,
+    "ACTIVE-16": 85,
+    "ACTIVE-17": 95
+  },
+  "notes": "ACTIVE-05 DATA2WEB is omitted intentionally: 72 is an approved score, not a separate worker self-report. Candidate products omit unsupported percentages. Historical milestones do not overwrite current official score."
+}

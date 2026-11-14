@@ -1,3 +1,15 @@
+## 2026-11-14 KST — 크몽 작업자 보고 vs GitHub 증거 채점 병기 초기 구현 (10항)
+1. **목표·확정 요구:** 사용자 승인 A(기존 작업자 보고율) + B(GitHub App 독립 증거 기반 채점) 병기. 보고율은 내부 기술 이력, Actions 합격률이 곧 최종 상품률은 아님. 공식 인정은 사용자 최종설계100 승인과 정확 SHA 근거 별개.
+2. **완료·설계 결정:** 기존 Source Auditor App의 Source repo 읽기/중앙 JSON 단일 쓰기 유지. `tools/kmong_hub_sync/dual_progress.py`에서 불변 pin된 DATA2WEB R01~R33 채점표+Actions 정확 실행 SHA로 기존 승인 배점만 재집계. `worker_progress_baseline.json` 16개 내부 보고(11/13), 다른 항목은 미산정. 원장 공식 점수 덮어쓰기 금지.
+3. **검증/미검증:** 신규 `test_dual_progress.py` 10건 안전성 테스트 작성 (정상·가중치 위조·중복·CI 실패/불일치·SALE GO 위조·pin 드리프트·이중 표기). **GitHub 커밋 시점 실제 신규 CI 실행은 아직 확인 전.** App 스케줄에서 새 점수/표시가 갱신되는지 E2E도 아직 NOT_RUN; 개발 완료로 주장 금지.
+4. **상태:** 초기 코드/정책 준비. LIVE 자동 채점·렌더링 검증 대기. 기존 중앙 `official_final_completion`, 상품등록·작업중·출시보류·승인/가중치 수정 없음; 기술/상용100 도달 아님.
+5. **실패·원인·대안:** 개발자의 95% 보고만으로 공식95 인정 금지, 일반 CI SUCCESS만으로 요구별 점수 지급 금지. 승인100점 고정·불변 blob·정확 성공 SHA 하나라도 없으면 AUTO `UNASSESSED`. 드리프트 시 보수적으로 재인증 대기, 기존 공식률 보존.
+6. **저장소·브랜치·SHA:** `hibi89/hackathon-command-center-2026@main` 이전 HEAD `e21875a7a6edccf90dfa54d65a9f37910d9b759f`. 신규 `dual_progress.py`/테스트/작업자 역사적 보고 baseline, 기존 `sync.py` 최소 연결, 새 전략 문서, STATUS/HANDOFF. 원본 제품 코드/브랜치 불변.
+7. **Production·환경:** GitHub Actions Python3 표준라이브러리, source GitHub App Contents+Actions READ, hub GITHUB_TOKEN은 중앙 snapshot JSON에만 write, 기존 workflow 유지. Vercel/고객 Production 미적용.
+8. **원본·비밀·백업:** Git 이전 SHA `e21875a7a6edccf90dfa54d65a9f37910d9b759f`로 복원 가능. 기존 35개 제품 저장소·비밀·사용자 DB/개인정보·등록완료 원장·고객 권리 자료에 쓰기·업로드 없음. 새 외부 AI/GitHub App 권한 요청 없음.
+9. **다음 작업:** 실제 테스트 PASS/FAIL 확인→main readback→hub 수동 dry-run에서 29개 이중 필드 및 DATA2WEB 72 재생성 확인→기존 idempotent NO_CHANGE 테스트→이후 승인 고정 100점 채점표가 추가된 제품만 pin 추가. 작업자 보고 현행 자동 신고 포맷은 별도 후속 단계, 지금은 과거 보고율임을 명시.
+10. **기준 시각/검증:** 2026-11-14 KST. 신규 모듈·핀/도메인 제한까지 개발 중, 실 Github Actions와 실제 App 재실행 검증은 후속. 중앙 인덱스 공식 29종/서비스19 불변.
+
 ## 2026-11-14 KST — 공개 후 Actions 및 보안 1·2차 감사 (10항 인수인계)
 1. **목표/기술:** 전체 PUBLIC 35에서 GitHub Actions 무료 표준 runner 실제 작동과 공개 파일 노출 위험·자동 수집을 추가 검증.
 2. **완료/결정:** GitHub 원격 PUBLIC35/PRIVATE0. `data2web_studio` Windows/Ubuntu 브라우저 포함 4 job SUCCESS, `Freelancer` evidence gate 1 job SUCCESS, hub sync 1 job SUCCESS. 35 main+45 tracked refs 이름 패턴 감사 80/80, 일치0; 콘텐츠/이력 안전판정 아님.
