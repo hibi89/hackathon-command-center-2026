@@ -52,13 +52,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "ff9274b2a8fda65f98c4ce4792631012bf1d5578",
+        "head_sha": "0995e5824dea0c667ab13bc5fea191eca3ce705c",
         "matches_current_head": true,
-        "run_id": 43531409914,
+        "run_id": 43531947120,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "ff9274b2a8fda65f98c4ce4792631012bf1d5578",
+      "head_sha": "0995e5824dea0c667ab13bc5fea191eca3ce705c",
       "record_id": "ACTIVE-05",
       "repository": "hibi89/data2web_studio",
       "status": "PRESENT",
@@ -247,13 +247,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "bfb4c40e56678b3224f1ef7a13c342edfd9f1ff3",
+        "head_sha": "f2979aa50156b4f5c3d80f4d23a1b2ec336f0040",
         "matches_current_head": true,
-        "run_id": 43531831858,
+        "run_id": 43531987256,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "bfb4c40e56678b3224f1ef7a13c342edfd9f1ff3",
+      "head_sha": "f2979aa50156b4f5c3d80f4d23a1b2ec336f0040",
       "record_id": "CANDIDATE-06",
       "repository": "hibi89/Freelancer",
       "status": "PRESENT",
@@ -302,13 +302,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "631beaf9bfc2f849c107fb94b4b495577e330b01",
+        "head_sha": "6442660636ee3a61b59b16c0afc22513024f29e5",
         "matches_current_head": true,
-        "run_id": 43531330994,
+        "run_id": 43531948864,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "631beaf9bfc2f849c107fb94b4b495577e330b01",
+      "head_sha": "6442660636ee3a61b59b16c0afc22513024f29e5",
       "record_id": "CANDIDATE-10",
       "repository": "hibi89/Freelancer",
       "status": "PRESENT",
@@ -614,13 +614,13 @@
           "branch": "feature/final-blueprint-p85-evidence-20261113",
           "gate": {
             "conclusion": "success",
-            "head_sha": "ff9274b2a8fda65f98c4ce4792631012bf1d5578",
+            "head_sha": "0995e5824dea0c667ab13bc5fea191eca3ce705c",
             "matches_current_head": true,
-            "run_id": 43531409914,
+            "run_id": 43531947120,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "ff9274b2a8fda65f98c4ce4792631012bf1d5578",
+          "head_sha": "0995e5824dea0c667ab13bc5fea191eca3ce705c",
           "status": "PRESENT"
         },
         {
@@ -820,13 +820,13 @@
           "branch": "product/bid-ax-public-procurement",
           "gate": {
             "conclusion": "success",
-            "head_sha": "631beaf9bfc2f849c107fb94b4b495577e330b01",
+            "head_sha": "6442660636ee3a61b59b16c0afc22513024f29e5",
             "matches_current_head": true,
-            "run_id": 43531330994,
+            "run_id": 43531948864,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "631beaf9bfc2f849c107fb94b4b495577e330b01",
+          "head_sha": "6442660636ee3a61b59b16c0afc22513024f29e5",
           "status": "PRESENT"
         },
         {
@@ -867,13 +867,13 @@
           "branch": "product/rag-enterprise-knowledge",
           "gate": {
             "conclusion": "success",
-            "head_sha": "bfb4c40e56678b3224f1ef7a13c342edfd9f1ff3",
+            "head_sha": "f2979aa50156b4f5c3d80f4d23a1b2ec336f0040",
             "matches_current_head": true,
-            "run_id": 43531831858,
+            "run_id": 43531987256,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "bfb4c40e56678b3224f1ef7a13c342edfd9f1ff3",
+          "head_sha": "f2979aa50156b4f5c3d80f4d23a1b2ec336f0040",
           "status": "PRESENT"
         },
         {
