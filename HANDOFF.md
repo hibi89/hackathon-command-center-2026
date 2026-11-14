@@ -1,3 +1,15 @@
+## [2026-11-14 14:17+ KST] FFAX 주말4SKU 최신 코드 CI 증거 갱신 (필수 10항)
+1. **목표·용도:** 주말4SKU `KMONG-SVC-10` FFAX의 실제 현행 기능/CI 신뢰성 확보, 상품 최종설계/판매와 별도.
+2. **완료·결정:** FFAX 브라우저 runner만 Ubuntu24.04 및 Playwright 공식 executable_path로 최소 호환 복구. 데이터/권한/상품 디자인·기능 소스 무변경.
+3. **테스트:** [정확 SHA `2c993faf31a2ecf22cfff81ab2d1ce0a63c31187` Actions #43560700771](https://github.com/hibi89/frontend-foundry-ax/actions/runs/43560700771) **4/4 SUCCESS**, Linux/Win143 PASS each, Chromium30 PASS, Owner ZIP SHA/압축해제/구문 성공, gate #43560701162 SUCCESS.
+4. **단계:** FFAX CI 운영 호환 복구 완료; 실제 사용자 Windows/Qwen/크몽 상용100은 미검증·출시보류.
+5. **오류·대안:** Ubuntu26 Playwright1.56 미지원(#43559707464) → Ubuntu24에서 기존 Chrome path 잘못 찾음(#43560573412) → 공식 Path API 수정으로 회복. 이전 실패를 현행 합격으로 합산 금지.
+6. **저장소·브랜치·SHA:** `hibi89/frontend-foundry-ax@feature/ffax-workbench-p85-20261112` 코드 `2c993faf31a2ecf22cfff81ab2d1ce0a63c31187`, 제품 doc HEAD `1dab8b7a3197d25ca717fd80cee60a40e841312c`; central `hibi89/hackathon-command-center-2026@kmong-productization`, 본 섹션 작성 전 HEAD `67554dae97df67125886215656c13120b73b3074`.
+7. **Production/환경:** FFAX Production 미적용, GitHub-hosted ubuntu24.04/Windows+Node22/Playwright1.56. Vercel 중앙 webhook 상태와는 별개.
+8. **원본·보안:** FFAX 원천/고객자료/비밀/최종완성률/크몽 등록이력 불변, REQ/승인된 고유 SKU 유지, Git 이전 SHA 복구 가능.
+9. **다음:** GitHub source App hourly/queued event 실증→snapshot FFAX 최신 source HEAD 반영 readback, 실제 Qwen12/owner UX7·권리GO는 별도. 자동원장 쓰기 수동 대체 금지.
+10. **2026-11-14 14:17+ KST 검증범위:** GitHub run/jobs/log/readback, 직접 모델/고객실물/새 중앙 snapshot/Vercel Production E2E **미검증**; 문서 commit SHA 원격 readback 기준.
+
 ## [2026-11-14 14:08+ KST] KMONG CENTRAL BOT FAILURE FOLLOW-UP — 10개 필수 인수인계
 
 1. **목표/범위:** 35원천/80refs/29제품 중앙 GitHub App 자동 수집의 운영 실패 수정 결과를 크몽 19SKU 정본과 연결. 비용0·소유자 PC 없이 점검.
