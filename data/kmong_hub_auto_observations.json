@@ -330,13 +330,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "e4fc8c4616248902cf26ee7e4fcb1ba7f4d8aeb3",
+        "head_sha": "02ef2b5d7cac5a09aec04bd479147ca0059a07fe",
         "matches_current_head": true,
-        "run_id": 43542743517,
+        "run_id": 43543005978,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "e4fc8c4616248902cf26ee7e4fcb1ba7f4d8aeb3",
+      "head_sha": "02ef2b5d7cac5a09aec04bd479147ca0059a07fe",
       "machine_evidence_score": {
         "denominator": 100,
         "limitations": "Historical approved item classifications; no fresh item-by-item CI, real-customer, rights or retail acceptance",
@@ -370,7 +370,7 @@
           "blueprint": {
             "branch": "feature/final-blueprint-p85-evidence-20261113",
             "git_blob_sha": "c3b5a389fde981a70356f962724f1be6e26d6185",
-            "head_sha": "e4fc8c4616248902cf26ee7e4fcb1ba7f4d8aeb3",
+            "head_sha": "02ef2b5d7cac5a09aec04bd479147ca0059a07fe",
             "path": "docs/FINAL_DESIGN.md",
             "repository": "hibi89/data2web_studio"
           },
@@ -385,7 +385,7 @@
           "implementation": {
             "branch": "feature/final-blueprint-p85-evidence-20261113",
             "git_blob_sha": "b6ec0e4e138cbb9c38b0971c9b3f1ea309b99e9b",
-            "head_sha": "e4fc8c4616248902cf26ee7e4fcb1ba7f4d8aeb3",
+            "head_sha": "02ef2b5d7cac5a09aec04bd479147ca0059a07fe",
             "path": "blueprint_score.py",
             "repository": "hibi89/data2web_studio"
           }
@@ -2289,9 +2289,14 @@
     },
     {
       "gate": {
-        "status": "NO_RUN"
+        "conclusion": "success",
+        "head_sha": "714071c98a0b7ec812d75d8ac3bfd814c112c788",
+        "matches_current_head": true,
+        "run_id": 43540653720,
+        "status": "LATEST_RUN",
+        "workflow_status": "completed"
       },
-      "head_sha": "c320382792024a30c5bc195a302a217b34f38b07",
+      "head_sha": "714071c98a0b7ec812d75d8ac3bfd814c112c788",
       "machine_evidence_score": {
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
@@ -2340,8 +2345,7 @@
           }
         },
         "risk": [
-          "CI source SHA differs from current documentation/source branch head",
-          "Central product link differs from actual implementation source"
+          "CI source SHA differs from current documentation/source branch head"
         ],
         "rubric": "GITHUB_EVIDENCE_READINESS_V1",
         "rubric_weights": {
@@ -2360,9 +2364,9 @@
         "status": "AUTOMATED_METADATA_PLUS_REVIEWED_EVIDENCE"
       },
       "record_id": "CANDIDATE-12",
-      "repository": "hibi89/hibi89-paypal-ai-hackathon",
+      "repository": "hibi89/Freelancer",
       "status": "PRESENT",
-      "tracked_branch": "lead/paypal",
+      "tracked_branch": "product/worknova-desk-local",
       "worker_report": {
         "as_of_kst": "2026-11-13",
         "not_official_final_completion": true,
@@ -2657,13 +2661,13 @@
           "branch": "feature/final-blueprint-p85-evidence-20261113",
           "gate": {
             "conclusion": "success",
-            "head_sha": "e4fc8c4616248902cf26ee7e4fcb1ba7f4d8aeb3",
+            "head_sha": "02ef2b5d7cac5a09aec04bd479147ca0059a07fe",
             "matches_current_head": true,
-            "run_id": 43542743517,
+            "run_id": 43543005978,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "e4fc8c4616248902cf26ee7e4fcb1ba7f4d8aeb3",
+          "head_sha": "02ef2b5d7cac5a09aec04bd479147ca0059a07fe",
           "status": "PRESENT"
         },
         {
@@ -3000,7 +3004,7 @@
     {
       "canonical": {
         "expected_git_blob_sha": "521ba0cb458bea384639a0ef897ce7500d33b8f1",
-        "head_sha": "abd64230d2768902bbbaf652e83d3e81d260a6ee",
+        "head_sha": "776485a5f5e65e3974f489709c779d2d7ca0e930",
         "mode": "observe",
         "observed_git_blob_sha": "521ba0cb458bea384639a0ef897ce7500d33b8f1",
         "owner_approval_verified": false,
@@ -3012,13 +3016,13 @@
         "branch": "main",
         "gate": {
           "conclusion": "success",
-          "head_sha": "abd64230d2768902bbbaf652e83d3e81d260a6ee",
+          "head_sha": "776485a5f5e65e3974f489709c779d2d7ca0e930",
           "matches_current_head": true,
-          "run_id": 43542595344,
+          "run_id": 43543021716,
           "status": "LATEST_RUN",
           "workflow_status": "completed"
         },
-        "head_sha": "abd64230d2768902bbbaf652e83d3e81d260a6ee",
+        "head_sha": "776485a5f5e65e3974f489709c779d2d7ca0e930",
         "status": "PRESENT"
       },
       "repository": "hibi89/hackathon-command-center-2026",
