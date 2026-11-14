@@ -1,3 +1,16 @@
+## 2026-11-14 KST — 29개 잠정 증거점수 전체 기록·CI 진단 인수인계 (10항)
+
+1. **목표·정본·규칙:** 사용자 지시 '전부 점수 매기기'에 따라 29개 원천 제품 모두 공통 100점 `GITHUB_EVIDENCE_READINESS_V1` 증거 확보점수화. 최종설계 공식률/상품 판매준비률이 아님. 기존 user-approved REQ/가중치/릴리스 HOLD 불변.
+2. **변경·선택 근거:** 기존 앱이 원본 증거만 모아 28종 미산정이던 공백 해소. GitHub 소스·설계·정확 CI·OS Job·패키지·부정테스트·구매자·권리 10항점수와 과거 작업자 보고율을 독립 기록. [29종 표](docs/audits/KMONG_29_PROVISIONAL_EVIDENCE_SCORES_20261114.md)·[원시 점수 JSON](data/kmong_29_provisional_evidence_scores_20261114.json). 단순 보고95를 공식률로 승격하는 방식 배제.
+3. **테스트:** main 기능 도입 `baf39e62581828e4bc3173bb9d64807b36b07db1`에서 49중 1개 합성 기대값(80 vs 정합90) 테스트 오류. 정정 SHA `7adc49ac00be13adc1580573166fe5a70e32f80e` 테스트 workflow [#43541034030](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43541034030) SUCCESS(49 원본+신규 테스트). 새 앱 동기화 run [#43541036953](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43541036953) 단계 `Scan sources` **HTTP GET403 FAILURE**. 이전 scoring 전 main SHA `32bb...` [#43540912891](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43540912891)에서도 403 동일 관찰. App 오류 원인 미확정.
+4. **완료/미검증:** 29종 점수 JSON·상세 표 및 통제 코드 GitHub에 저장; **자동 App 신규 29종 점수 live write는 미완료**. 손실/실서비스 장애로 단정 금지. 29종 공식 최종 완성률 중 기존 DATA2WEB72만 검증, 나머지28 미산정. 출시/크몽 모두 HOLD.
+5. **오류·재시도 금지·전환:** 두 개 이상의 새 GitHub Actions가 GET403; 변경 없는 무의미한 rerun 중단. 발생 API 경로와 GitHub 403 응답 종류/Retry-After를 토큰 비노출 diagnostics로 다음 확인(권한/secondary rate limit/설치 토큰 등). 현재는 인증된 사용자 GitHub 커넥터로 직접 메타데이터 검토 후 일회 공식 아닌 점수 JSON 작성. 작업 중 scorecard 공식 덮어쓰기 금지.
+6. **저장소/브랜치/SHA:** `hibi89/hackathon-command-center-2026@main` 기능 최종 `7adc49ac00be13adc1580573166fe5a70e32f80e`; `@kmong-productization` `data/kmong_29_provisional_evidence_scores_20261114.json` commit `ac461d9137cf9655dfd0b46a71b3e3cf7df9f26d`, `docs/audits/KMONG_29_PROVISIONAL_EVIDENCE_SCORES_20261114.md` commit `505c1e685f6328ccb0aa4c9e8f38b6a68a43e0e3`; hub HEAD 변경 가능하므로 원격 조회 후 최신 SHA 사용.
+7. **Production·환경:** 35 GitHub Source App Contents/Actions READ, hub 중앙 snapshot WRITE 분리 기존 정책. Hosted Python3 유닛49 성공; App runtime GET403. Vercel/크몽/Windows 구매자 Production 미적용, 원본 Repo·권한변경0.
+8. **원본·복구/권리:** 기존 worker_history16, official index29/서비스19, DATA2WEB 승인72·29종 RELEASE HOLD/등록완료·표식/원본 소스/고객 DB/비밀 모두 보존. 1회 점수는 별도 신규 파일이며 기존 공식 인덱스 덮어쓰기 안 함.
+9. **다음 우선순위·완료 기준:** (1) 안전한 GitHub 403 응답 분류로 App 실패 계층 확인 후 권한/한도 복구(유료/권한 변경 사전승인) (2) 새 code exact SHA 29 scores live snapshot·동일 NO_CHANGE 검증 (3) 중앙 제품 source branch 매핑 정리(특히 WORKNOVA Desk, FlowPilot Universal) (4) 29종 개별 REQ100 승인 가중치와 실제 검증 증거 확정하여 공식 최종률 산정 (5) 고객/법무/설치·판매 승인은 별도.
+10. **시점/확인 범위:** 2026-11-14 KST. 29종 GitHub source tree/CI 결과/hand-off 기록 표본, 코드 hosted unit49 PASS, 자동 metadata GET403. CI 성공은 고객 권리/실기기/상용100 보증 아님.
+
 ## [2026-11-14 KST] BID AX 문서 경로 정정 인계
 - 제품 코드 SHA `3008bfd440aafe57e264ad4a0485d517f8819634` 및 CI #43540224552 (276/5 jobs) 그대로 검증. 제품 새 문서 HEAD `6e644ce44c3e026882f9daf2dae7fd245a768658`, 수정 범위는 사용자 Windows 실행 안내의 경로 역슬래시 2개→1개 정규화뿐. 실 PC API 수행/85% 수용·릴리스 미인증 상태 불변.
 - 중앙 기준 코드/완성률/원천29·판매19/타 제품·등록완료 이력 변경 없음.
