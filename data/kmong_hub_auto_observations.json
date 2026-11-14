@@ -511,12 +511,12 @@
     },
     {
       "gate": {
-        "conclusion": "success",
-        "head_sha": "7f3b791ce3d79ada0978caadfbcb6d4941f2f957",
-        "matches_current_head": false,
-        "run_id": 43537158186,
+        "conclusion": null,
+        "head_sha": "f4f5f088b9fb2d89937c825445c035d1a4da0ca2",
+        "matches_current_head": true,
+        "run_id": 43537748124,
         "status": "LATEST_RUN",
-        "workflow_status": "completed"
+        "workflow_status": "in_progress"
       },
       "head_sha": "f4f5f088b9fb2d89937c825445c035d1a4da0ca2",
       "machine_evidence_score": {
@@ -1215,12 +1215,12 @@
         {
           "branch": "product/rag-enterprise-knowledge",
           "gate": {
-            "conclusion": "success",
-            "head_sha": "7f3b791ce3d79ada0978caadfbcb6d4941f2f957",
-            "matches_current_head": false,
-            "run_id": 43537158186,
+            "conclusion": null,
+            "head_sha": "f4f5f088b9fb2d89937c825445c035d1a4da0ca2",
+            "matches_current_head": true,
+            "run_id": 43537748124,
             "status": "LATEST_RUN",
-            "workflow_status": "completed"
+            "workflow_status": "in_progress"
           },
           "head_sha": "f4f5f088b9fb2d89937c825445c035d1a4da0ca2",
           "status": "PRESENT"
