@@ -1,3 +1,18 @@
+## [2026-11-14 KST] 해총 원천 웹훅 디스패치 30분 중복 차단 및 정상 스캔 실증 인수인계 10항
+
+1. **목표/확정 요구·기술:** GitHub App → Vercel webhook `services/kmong-event-bridge` → 중앙 `workflow_dispatch` → GitHub Actions 관찰 JSON 업데이트의 기존 무료 경로 유지. 35repo/80ref/29상품, 별도 유료 API/DB·권한확대 금지, 제품 데이터/공식점수 변경 금지.
+2. **완료/설계:** 서버리스 별도 DB/원자적 락 방식(A)은 신규 인프라/보안/비용 관리 필요. 기존 중앙 GitHub workflow 이력 조회로 UTC 30분 고정창에 이미 비취소 봇 실행이 있는지 확인(B)을 선택. 수신기 `lib/receiver.js`가 같은 버킷이면 `202 coalesced`(dispatch 없음), 이력 조회 실패면 `502 dispatch_failed`; 등록된 repo/branch 및 HMAC 보호 불변. 동시 웹훅 인스턴스 간 비원자 경쟁은 한계로 명시. `README.md` 최신화.
+3. **검증/실패 수:** GitHub 코드 `main@254c9e54551a58c6d97e46bb22272fcf9bab6154`; [bridge CI #43549954047](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43549954047) **Node22/22 PASS, Python75/75 PASS**, allowlist cmp PASS. [gate #43549954069](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43549954069) SUCCESS. 최신 README HEAD `2358898462741010237a3741552cc91d6a27f9aa`. 별도 신규 실제 웹훅 라이브 결과는 없음.
+4. **완료/대기:** 중앙 30분 budget/burst guard 실제 bot DEFERRED와 정상 RUN 전수 스캔 둘 다 검증. [정상 RUN #43549435131](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43549435131) 75tests, `UPDATED` 35repo/80refs/29 products·fingerprint0, remote hub commit `8b17f49ea176e0ae8663661ee3c95d9803c8fe86`. upstream 코드 CI 통과. Vercel Production SHA·실 `coalesced` webhook 호출·재배포는 미검증.
+5. **오류/Stop-Pivot:** 과거 bot 연속 dispatch 수십회 + source API 403 PRIMARY_RATE_LIMIT이 확인돼 그 재시도/공짜인 척 과다 스캔 금지. GitHub fetch로 자동 실행 소스 찾기 이전에는 Vercel 프로젝트 접근 불가라고만 판단했으나 중앙 `services/kmong-event-bridge/lib/receiver.js` 소스를 뒤늦게 발견해 수정. 현재 연결 Vercel 계정에 정확한 bridge 프로젝트가 안 보이며 공개 Production endpoint 웹 조회도 불가. 운영장애로 단정 금지, 별도 프로젝트 생성/계정/권한/시크릿 무단 변경 금지. 인증된 GitHub webhook 최근 delivery와 Production SHA가 확보되면 실제 중복 이벤트 도달률 재검증.
+6. **저장소/브랜치/SHA:** `hibi89/hackathon-command-center-2026@main:2358898462741010237a3741552cc91d6a27f9aa` 문서 포함, 기능 SHA `254c9e54551a58c6d97e46bb22272fcf9bab6154`; 제품 운영 `kmong-productization`은 본문 커밋 후 HEAD 재조회. 주요 `services/kmong-event-bridge/{lib/receiver.js,test/receiver.test.js,README.md}`, `.github/workflows/kmong-hub-sync.yml`, `tools/kmong_hub_sync/quota_guard.py`, `data/kmong_hub_auto_observations.json`.
+7. **Production URL/환경:** 기록상 `https://kmong-hub-event-bridge.vercel.app/api/webhook`; 현재 연결 Vercel 계정에서 프로젝트/배포 SHA 확인 불가. GitHub Actions Ubuntu+Node22/Python3, Vercel Node22. 공개 엔드포인트 접근 미확인(장애 증거 아님). `node --test services/kmong-event-bridge/test/receiver.test.js`, `python3 -B -m unittest discover -s tools/kmong_hub_sync -p 'test_*.py' -v`.
+8. **원본/보안/복구:** 원천 GitHub App contents/actions read-only, 중앙 dispatcher App hub-only actions:write, 중앙 Actions observation JSON write만 유지. 원본 승인72·28 UNASSESSED·29제품/19서비스/등록완료/작업중/상용 HOLD/고객 DB·비밀·가격 불변. revert `receiver.js`+test 파일 또는 `main` 이전 Git SHA 일반 복구만, force push 금지. CI 모의 토큰은 실제 시크릿 아님.
+9. **다음 순서/완료 기준:** (i) Vercel bridge Production 정확 Git SHA·HTTP 익명 응답/보호 정책 확인 (ii) 소유 GitHub App webhook delivery 한 건과 `202 coalesced` 또는 `202 queued` ↔ 실제 Actions run 매핑 검증 (iii) 30분 두 버킷에서 소스 재수집·NO_CHANGE 안전성 확인 (iv) GitHub schedule `event=schedule` 현재 **0건**이므로 fallback 가동 실증 필요. 사용자 승인·실고객·권리 검증 없이 공식 최종상품 100%/크몽 등록 GO 금지.
+10. **갱신/검증 범위:** 2026-11-14 KST. GitHub remote main source+readback, 실제 bridge CI Node22/Python75·gate PASS, 실제 central RUN/remote hub snapshot verified. 웹훅 Production·엔드투엔드 재배포/원자적 dedup·재수집 NO_CHANGE·cron은 **미검증**.
+
+---
+
 ## [2026-11-14 11:56 KST] 해총 중복봇 비용 낭비 최소화·스킵 경고 실증 인수인계 10항
 
 1. **목표/기술:** 35개 source repo·80ref·29제품 자동 GitHub 증거 스캔의 중복 bot dispatch마다 불필요하게 회귀테스트를 수행하던 상황을 무료·최소 변경으로 개선. 기존 App GET/허브 observation JSON 조건부 WRITE 아키텍처 유지.
