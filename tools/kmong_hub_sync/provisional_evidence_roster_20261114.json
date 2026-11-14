@@ -1,0 +1,687 @@
+{
+  "schema_version": 1,
+  "kind": "CURATED_PRELIMINARY_REPOSITORY_EVIDENCE",
+  "scoring_version": "GITHUB_EVIDENCE_READINESS_V1",
+  "owner_approval": "User 2026-11-14 KST approved scoring workflow, not per-product final-blueprint weights or commercial GO",
+  "scope": "29 product source/developer handoff snapshots; no official weighted product completion certification",
+  "records": [
+    {
+      "record_id": "ACTIVE-01",
+      "blueprint": {
+        "repo": "hibi89/candle_scraper",
+        "branch": "feature/kmong-collector-p95-delivery-integrity-20261112",
+        "path": "REQUIREMENTS.md"
+      },
+      "source": {
+        "repo": "hibi89/candle_scraper",
+        "branch": "feature/kmong-collector-p95-delivery-integrity-20261112",
+        "path": "audit_customer_packages.py"
+      },
+      "scoped_tests_documented": true,
+      "package_ci_evidence": true,
+      "negative_test_ci_evidence": true,
+      "ci": {
+        "repo": "hibi89/candle_scraper",
+        "run_id": 42038795999,
+        "head_sha": "9e0632890c5621f4756e9ca7328480d860b2b710",
+        "branch": "main"
+      },
+      "real_buyer_acceptance": false,
+      "rights_and_sale_approved": false,
+      "provenance": "GitHub HANDOFF/STATUS and exact run metadata reviewed 2026-11-14 KST"
+    },
+    {
+      "record_id": "ACTIVE-02",
+      "blueprint": {
+        "repo": "hibi89/HAE",
+        "branch": "feature/axflow-mvp",
+        "path": "REQUIREMENTS.md"
+      },
+      "source": {
+        "repo": "hibi89/HAE",
+        "branch": "feature/axflow-mvp",
+        "path": "apps/ax-flow/axflow/planner.py"
+      },
+      "scoped_tests_documented": true,
+      "package_ci_evidence": false,
+      "negative_test_ci_evidence": false,
+      "ci": {
+        "repo": "hibi89/HAE",
+        "run_id": 43382552489,
+        "head_sha": "a640666db7a1bf2011c5d2abc944f13199ce455f",
+        "branch": "feature/axflow-mvp"
+      },
+      "real_buyer_acceptance": false,
+      "rights_and_sale_approved": false,
+      "provenance": "GitHub HANDOFF/STATUS and exact run metadata reviewed 2026-11-14 KST"
+    },
+    {
+      "record_id": "ACTIVE-03",
+      "blueprint": {
+        "repo": "hibi89/ai-code-checker",
+        "branch": "feature/retail-private-candidate-20261112",
+        "path": "FINAL_PRODUCT_BLUEPRINT.md"
+      },
+      "source": {
+        "repo": "hibi89/ai-code-checker",
+        "branch": "feature/retail-private-candidate-20261112",
+        "path": "scripts/ci_real_frozen_notice_review.py"
+      },
+      "scoped_tests_documented": true,
+      "package_ci_evidence": true,
+      "negative_test_ci_evidence": true,
+      "ci": {
+        "repo": "hibi89/ai-code-checker",
+        "run_id": 43226330001,
+        "head_sha": "ec83e83e5a0becc6e9fde61b6e2970d773633e01",
+        "branch": "feature/retail-private-candidate-20261112"
+      },
+      "real_buyer_acceptance": false,
+      "rights_and_sale_approved": false,
+      "provenance": "GitHub HANDOFF/STATUS and exact run metadata reviewed 2026-11-14 KST"
+    },
+    {
+      "record_id": "ACTIVE-04",
+      "blueprint": {
+        "repo": "hibi89/SMAX",
+        "branch": "feature/prep-self-owner-mapping-p8",
+        "path": "REQUIREMENTS.md"
+      },
+      "source": {
+        "repo": "hibi89/SMAX",
+        "branch": "feature/prep-self-owner-mapping-p8",
+        "path": "preprocessing/self-column-suggest.mjs"
+      },
+      "scoped_tests_documented": true,
+      "package_ci_evidence": false,
+      "negative_test_ci_evidence": false,
+      "ci": null,
+      "real_buyer_acceptance": false,
+      "rights_and_sale_approved": false,
+      "provenance": "GitHub HANDOFF/STATUS and exact run metadata reviewed 2026-11-14 KST"
+    },
+    {
+      "record_id": "ACTIVE-05",
+      "blueprint": {
+        "repo": "hibi89/data2web_studio",
+        "branch": "feature/final-blueprint-p85-evidence-20261113",
+        "path": "docs/FINAL_DESIGN.md"
+      },
+      "source": {
+        "repo": "hibi89/data2web_studio",
+        "branch": "feature/final-blueprint-p85-evidence-20261113",
+        "path": "blueprint_score.py"
+      },
+      "scoped_tests_documented": true,
+      "package_ci_evidence": true,
+      "negative_test_ci_evidence": true,
+      "ci": {
+        "repo": "hibi89/data2web_studio",
+        "run_id": 43538001797,
+        "head_sha": "d7e029ae838a15f6f7a952cdf920341a6e3ad6b0",
+        "branch": "feature/final-blueprint-p85-evidence-20261113"
+      },
+      "real_buyer_acceptance": false,
+      "rights_and_sale_approved": false,
+      "provenance": "GitHub HANDOFF/STATUS and exact run metadata reviewed 2026-11-14 KST"
+    },
+    {
+      "record_id": "ACTIVE-06",
+      "blueprint": {
+        "repo": "hibi89/REA_Web",
+        "branch": "feature/website-analysis-rebuild",
+        "path": "REQUIREMENTS.md"
+      },
+      "source": {
+        "repo": "hibi89/REA_Web",
+        "branch": "feature/website-analysis-rebuild",
+        "path": "rea/website_component_builder.py"
+      },
+      "scoped_tests_documented": true,
+      "package_ci_evidence": false,
+      "negative_test_ci_evidence": true,
+      "ci": {
+        "repo": "hibi89/REA_Web",
+        "run_id": 43295475001,
+        "head_sha": "04541195da42b702925cc62e7a39e16962cbfa31",
+        "branch": "feature/website-analysis-rebuild"
+      },
+      "real_buyer_acceptance": false,
+      "rights_and_sale_approved": false,
+      "provenance": "GitHub HANDOFF/STATUS and exact run metadata reviewed 2026-11-14 KST"
+    },
+    {
+      "record_id": "ACTIVE-07",
+      "blueprint": {
+        "repo": "hibi89/SOVIA_sovereign",
+        "branch": "feature/kmong-la-review-p2-20261112",
+        "path": "REQUIREMENTS.md"
+      },
+      "source": {
+        "repo": "hibi89/SOVIA_sovereign",
+        "branch": "feature/kmong-la-review-p2-20261112",
+        "path": "sovia_la_minimal_projection.py"
+      },
+      "scoped_tests_documented": true,
+      "package_ci_evidence": true,
+      "negative_test_ci_evidence": true,
+      "ci": {
+        "repo": "hibi89/SOVIA_sovereign",
+        "run_id": 43214296725,
+        "head_sha": "a6991d062e657073fd5c5df077c87db9aa390515",
+        "branch": "feature/kmong-la-review-p2-20261112"
+      },
+      "real_buyer_acceptance": false,
+      "rights_and_sale_approved": false,
+      "provenance": "GitHub HANDOFF/STATUS and exact run metadata reviewed 2026-11-14 KST"
+    },
+    {
+      "record_id": "ACTIVE-08",
+      "blueprint": {
+        "repo": "hibi89/AI_AutoML_Analyst",
+        "branch": "feature/kmong-p6e50-owner-delivery-20261112",
+        "path": "REQUIREMENTS.md"
+      },
+      "source": {
+        "repo": "hibi89/AI_AutoML_Analyst",
+        "branch": "feature/kmong-p6e50-owner-delivery-20261112",
+        "path": "scripts/p6e50_owner_zip_review.py"
+      },
+      "scoped_tests_documented": true,
+      "package_ci_evidence": true,
+      "negative_test_ci_evidence": true,
+      "ci": {
+        "repo": "hibi89/AI_AutoML_Analyst",
+        "run_id": 43226903380,
+        "head_sha": "458cf43816d3fa581a7c9e5c53399936c1933ede",
+        "branch": "feature/kmong-p6e50-owner-delivery-20261112"
+      },
+      "real_buyer_acceptance": false,
+      "rights_and_sale_approved": false,
+      "provenance": "GitHub HANDOFF/STATUS and exact run metadata reviewed 2026-11-14 KST"
+    },
+    {
+      "record_id": "ACTIVE-09",
+      "blueprint": {
+        "repo": "hibi89/HAE",
+        "branch": "feature/rea-app-kmong-owner-delivery-20261112",
+        "path": "REQUIREMENTS.md"
+      },
+      "source": {
+        "repo": "hibi89/HAE",
+        "branch": "feature/rea-app-kmong-owner-delivery-20261112",
+        "path": "tools/rea-app/rea_app/cli.py"
+      },
+      "scoped_tests_documented": true,
+      "package_ci_evidence": false,
+      "negative_test_ci_evidence": false,
+      "ci": null,
+      "real_buyer_acceptance": false,
+      "rights_and_sale_approved": false,
+      "provenance": "GitHub HANDOFF/STATUS and exact run metadata reviewed 2026-11-14 KST"
+    },
+    {
+      "record_id": "ACTIVE-10",
+      "blueprint": {
+        "repo": "hibi89/HAE",
+        "branch": "feature/la-p17-audit-evidence-20261112",
+        "path": "REQUIREMENTS.md"
+      },
+      "source": {
+        "repo": "hibi89/HAE",
+        "branch": "feature/la-p17-audit-evidence-20261112",
+        "path": "packages/lightning-azent/lightning_azent/runtime.py"
+      },
+      "scoped_tests_documented": true,
+      "package_ci_evidence": false,
+      "negative_test_ci_evidence": true,
+      "ci": {
+        "repo": "hibi89/HAE",
+        "run_id": 43124013493,
+        "head_sha": "c32e27c8156a4ed27d6f2bca7752e7a4eccf6dc7",
+        "branch": "feature/la-p17-audit-evidence-20261112"
+      },
+      "real_buyer_acceptance": false,
+      "rights_and_sale_approved": false,
+      "provenance": "GitHub HANDOFF/STATUS and exact run metadata reviewed 2026-11-14 KST"
+    },
+    {
+      "record_id": "ACTIVE-11",
+      "blueprint": {
+        "repo": "hibi89/DBVORA",
+        "branch": "feature/p0-db-map",
+        "path": "REQUIREMENTS.md"
+      },
+      "source": {
+        "repo": "hibi89/DBVORA",
+        "branch": "feature/p0-db-map",
+        "path": "dbvora/api.py"
+      },
+      "scoped_tests_documented": true,
+      "package_ci_evidence": false,
+      "negative_test_ci_evidence": false,
+      "ci": null,
+      "real_buyer_acceptance": false,
+      "rights_and_sale_approved": false,
+      "provenance": "GitHub HANDOFF/STATUS and exact run metadata reviewed 2026-11-14 KST"
+    },
+    {
+      "record_id": "ACTIVE-12",
+      "blueprint": null,
+      "source": {
+        "repo": "hibi89/RAG_STUDIO",
+        "branch": "feature/p546-rag-prep-mapping",
+        "path": "src/review-zip-verify.mjs"
+      },
+      "scoped_tests_documented": true,
+      "package_ci_evidence": true,
+      "negative_test_ci_evidence": true,
+      "ci": {
+        "repo": "hibi89/RAG_STUDIO",
+        "run_id": 43231121679,
+        "head_sha": "0e88301059c9cb6b876dd0f9cd9181e6fb5c6dc2",
+        "branch": "feature/p546-rag-prep-mapping"
+      },
+      "real_buyer_acceptance": false,
+      "rights_and_sale_approved": false,
+      "provenance": "GitHub HANDOFF/STATUS and exact run metadata reviewed 2026-11-14 KST"
+    },
+    {
+      "record_id": "ACTIVE-13",
+      "blueprint": {
+        "repo": "hibi89/astra_pdf_redesigner",
+        "branch": "integration/astra-commercial-core",
+        "path": "REQUIREMENTS.md"
+      },
+      "source": {
+        "repo": "hibi89/astra_pdf_redesigner",
+        "branch": "integration/astra-commercial-core",
+        "path": "src/App.tsx"
+      },
+      "scoped_tests_documented": true,
+      "package_ci_evidence": true,
+      "negative_test_ci_evidence": false,
+      "ci": {
+        "repo": "hibi89/astra_pdf_redesigner",
+        "run_id": 40856599632,
+        "head_sha": "db461dc77dd721d1234d1506d6c62705486b9460",
+        "branch": "integration/astra-commercial-core"
+      },
+      "real_buyer_acceptance": false,
+      "rights_and_sale_approved": false,
+      "provenance": "GitHub HANDOFF/STATUS and exact run metadata reviewed 2026-11-14 KST"
+    },
+    {
+      "record_id": "ACTIVE-14",
+      "blueprint": {
+        "repo": "hibi89/candle_scraper",
+        "branch": "feature/coin-pattern-p85-forward-eval-20261112",
+        "path": "REQUIREMENTS.md"
+      },
+      "source": {
+        "repo": "hibi89/candle_scraper",
+        "branch": "feature/coin-pattern-p85-forward-eval-20261112",
+        "path": "coin_forward_eval.py"
+      },
+      "scoped_tests_documented": true,
+      "package_ci_evidence": false,
+      "negative_test_ci_evidence": false,
+      "ci": null,
+      "real_buyer_acceptance": false,
+      "rights_and_sale_approved": false,
+      "provenance": "GitHub HANDOFF/STATUS and exact run metadata reviewed 2026-11-14 KST"
+    },
+    {
+      "record_id": "ACTIVE-15",
+      "blueprint": {
+        "repo": "hibi89/EAI",
+        "branch": "feature/kmong-eai-85-p31-20261112",
+        "path": "REQUIREMENTS.md"
+      },
+      "source": {
+        "repo": "hibi89/EAI",
+        "branch": "feature/kmong-eai-85-p31-20261112",
+        "path": "scripts/accept_windows_candidate.py"
+      },
+      "scoped_tests_documented": true,
+      "package_ci_evidence": true,
+      "negative_test_ci_evidence": true,
+      "ci": {
+        "repo": "hibi89/EAI",
+        "run_id": 43202624144,
+        "head_sha": "f3a61e624e5d21a21700ec21930a9021b4acd9c2",
+        "branch": "feature/kmong-eai-85-p31-20261112"
+      },
+      "real_buyer_acceptance": false,
+      "rights_and_sale_approved": false,
+      "provenance": "GitHub HANDOFF/STATUS and exact run metadata reviewed 2026-11-14 KST"
+    },
+    {
+      "record_id": "ACTIVE-16",
+      "blueprint": {
+        "repo": "hibi89/AX_MART",
+        "branch": "feature/pc-care-p15-p18-85-20261112",
+        "path": "REQUIREMENTS.md"
+      },
+      "source": {
+        "repo": "hibi89/AX_MART",
+        "branch": "feature/pc-care-p15-p18-85-20261112",
+        "path": "products/pc-care/START_PC_CARE.cmd"
+      },
+      "scoped_tests_documented": true,
+      "package_ci_evidence": true,
+      "negative_test_ci_evidence": true,
+      "ci": {
+        "repo": "hibi89/AX_MART",
+        "run_id": 43131173581,
+        "head_sha": "0ba167682c848056c5717c717b3b0d1ca98a9f3c",
+        "branch": "feature/pc-care-p15-p18-85-20261112"
+      },
+      "real_buyer_acceptance": false,
+      "rights_and_sale_approved": false,
+      "provenance": "GitHub HANDOFF/STATUS and exact run metadata reviewed 2026-11-14 KST"
+    },
+    {
+      "record_id": "ACTIVE-17",
+      "blueprint": {
+        "repo": "hibi89/AX_MART",
+        "branch": "feature/cube-owner-preflight-p85-20261112",
+        "path": "REQUIREMENTS.md"
+      },
+      "source": {
+        "repo": "hibi89/AX_MART",
+        "branch": "feature/cube-owner-preflight-p85-20261112",
+        "path": "commerce/release-preflight.mjs"
+      },
+      "scoped_tests_documented": true,
+      "package_ci_evidence": true,
+      "negative_test_ci_evidence": true,
+      "ci": {
+        "repo": "hibi89/AX_MART",
+        "run_id": 43240934297,
+        "head_sha": "037aa8bf5e9b251d39fa909f4354d10901fa4ed6",
+        "branch": "feature/cube-owner-preflight-p85-20261112"
+      },
+      "real_buyer_acceptance": false,
+      "rights_and_sale_approved": false,
+      "provenance": "GitHub HANDOFF/STATUS and exact run metadata reviewed 2026-11-14 KST"
+    },
+    {
+      "record_id": "CANDIDATE-01",
+      "blueprint": {
+        "repo": "hibi89/KUODRA",
+        "branch": "develop",
+        "path": "REQUIREMENTS.md"
+      },
+      "source": {
+        "repo": "hibi89/KUODRA",
+        "branch": "develop",
+        "path": "kuodra/gui.py"
+      },
+      "scoped_tests_documented": true,
+      "package_ci_evidence": true,
+      "negative_test_ci_evidence": true,
+      "ci": {
+        "repo": "hibi89/KUODRA",
+        "run_id": 43302772793,
+        "head_sha": "49d78a013ad51495d8facc0d82e3c2103a2ae99d",
+        "branch": "feature/p95-dart-cis-accounting-20261113"
+      },
+      "real_buyer_acceptance": false,
+      "rights_and_sale_approved": false,
+      "provenance": "GitHub HANDOFF/STATUS and exact run metadata reviewed 2026-11-14 KST"
+    },
+    {
+      "record_id": "CANDIDATE-02",
+      "blueprint": {
+        "repo": "hibi89/prep",
+        "branch": "feature/core-extraction",
+        "path": "docs/ACCEPTANCE_MATRIX.md"
+      },
+      "source": {
+        "repo": "hibi89/prep",
+        "branch": "feature/core-extraction",
+        "path": "src/sdk.mjs"
+      },
+      "scoped_tests_documented": true,
+      "package_ci_evidence": false,
+      "negative_test_ci_evidence": false,
+      "ci": null,
+      "real_buyer_acceptance": false,
+      "rights_and_sale_approved": false,
+      "provenance": "GitHub HANDOFF/STATUS and exact run metadata reviewed 2026-11-14 KST"
+    },
+    {
+      "record_id": "CANDIDATE-03",
+      "blueprint": {
+        "repo": "hibi89/frontend-foundry-ax",
+        "branch": "feature/ffax-workbench-p85-20261112",
+        "path": "docs/ACCEPTANCE_MATRIX.md"
+      },
+      "source": {
+        "repo": "hibi89/frontend-foundry-ax",
+        "branch": "feature/ffax-workbench-p85-20261112",
+        "path": "src/core.mjs"
+      },
+      "scoped_tests_documented": true,
+      "package_ci_evidence": false,
+      "negative_test_ci_evidence": false,
+      "ci": null,
+      "real_buyer_acceptance": false,
+      "rights_and_sale_approved": false,
+      "provenance": "GitHub HANDOFF/STATUS and exact run metadata reviewed 2026-11-14 KST"
+    },
+    {
+      "record_id": "CANDIDATE-04",
+      "blueprint": {
+        "repo": "hibi89/factory-ax-ecosystem",
+        "branch": "feature/data-verify",
+        "path": "REQUIREMENTS.md"
+      },
+      "source": {
+        "repo": "hibi89/factory-ax-ecosystem",
+        "branch": "feature/data-verify",
+        "path": "factoryax/gui.py"
+      },
+      "scoped_tests_documented": true,
+      "package_ci_evidence": true,
+      "negative_test_ci_evidence": true,
+      "ci": {
+        "repo": "hibi89/factory-ax-ecosystem",
+        "run_id": 43178583600,
+        "head_sha": "b70a059175389bf53d87f8c90dc4f5bbe6a97986",
+        "branch": "feature/data-verify"
+      },
+      "real_buyer_acceptance": false,
+      "rights_and_sale_approved": false,
+      "provenance": "GitHub HANDOFF/STATUS and exact run metadata reviewed 2026-11-14 KST"
+    },
+    {
+      "record_id": "CANDIDATE-05",
+      "blueprint": {
+        "repo": "hibi89/Freelancer",
+        "branch": "product/hae-la-automation",
+        "path": "docs/FINAL_BLUEPRINT.md"
+      },
+      "source": {
+        "repo": "hibi89/HAE",
+        "branch": "feature/axflow-mvp",
+        "path": "apps/ax-flow/axflow/planner.py"
+      },
+      "scoped_tests_documented": true,
+      "package_ci_evidence": false,
+      "negative_test_ci_evidence": false,
+      "ci": {
+        "repo": "hibi89/HAE",
+        "run_id": 43382552489,
+        "head_sha": "a640666db7a1bf2011c5d2abc944f13199ce455f",
+        "branch": "feature/axflow-mvp"
+      },
+      "real_buyer_acceptance": false,
+      "rights_and_sale_approved": false,
+      "provenance": "GitHub HANDOFF/STATUS and exact run metadata reviewed 2026-11-14 KST"
+    },
+    {
+      "record_id": "CANDIDATE-06",
+      "blueprint": {
+        "repo": "hibi89/Freelancer",
+        "branch": "product/rag-enterprise-knowledge",
+        "path": "docs/FINAL_BLUEPRINT.md"
+      },
+      "source": {
+        "repo": "hibi89/Freelancer",
+        "branch": "product/rag-enterprise-knowledge",
+        "path": "enterprise/p85-korean-model-preflight.mjs"
+      },
+      "scoped_tests_documented": true,
+      "package_ci_evidence": true,
+      "negative_test_ci_evidence": true,
+      "ci": {
+        "repo": "hibi89/Freelancer",
+        "run_id": 43537747863,
+        "head_sha": "f4f5f088b9fb2d89937c825445c035d1a4da0ca2",
+        "branch": "product/rag-enterprise-knowledge"
+      },
+      "real_buyer_acceptance": false,
+      "rights_and_sale_approved": false,
+      "provenance": "GitHub HANDOFF/STATUS and exact run metadata reviewed 2026-11-14 KST"
+    },
+    {
+      "record_id": "CANDIDATE-07",
+      "blueprint": {
+        "repo": "hibi89/Freelancer",
+        "branch": "product/rea-website-rebuild",
+        "path": "docs/FINAL_BLUEPRINT.md"
+      },
+      "source": {
+        "repo": "hibi89/REA_Web",
+        "branch": "feature/sitecraft-ax-p85-20261113",
+        "path": "rea/sitecraft_p85.py"
+      },
+      "scoped_tests_documented": true,
+      "package_ci_evidence": false,
+      "negative_test_ci_evidence": true,
+      "ci": {
+        "repo": "hibi89/REA_Web",
+        "run_id": 43382914205,
+        "head_sha": "a3f31c4c676fb28c2ddded052f9cd0a0942370ad",
+        "branch": "feature/sitecraft-ax-p85-20261113"
+      },
+      "real_buyer_acceptance": false,
+      "rights_and_sale_approved": false,
+      "provenance": "GitHub HANDOFF/STATUS and exact run metadata reviewed 2026-11-14 KST"
+    },
+    {
+      "record_id": "CANDIDATE-08",
+      "blueprint": {
+        "repo": "hibi89/Freelancer",
+        "branch": "product/proofqa-ax-delivery-audit",
+        "path": "docs/FINAL_BLUEPRINT.md"
+      },
+      "source": {
+        "repo": "hibi89/ai-code-checker",
+        "branch": "feature/proofqa-ax-p85-independent-audit",
+        "path": "proofqa_p85.py"
+      },
+      "scoped_tests_documented": true,
+      "package_ci_evidence": true,
+      "negative_test_ci_evidence": true,
+      "ci": {
+        "repo": "hibi89/ai-code-checker",
+        "run_id": 43383627492,
+        "head_sha": "5bce80a870d46702eb1ef5a51faa7cae54755691",
+        "branch": "feature/proofqa-ax-p85-independent-audit"
+      },
+      "real_buyer_acceptance": false,
+      "rights_and_sale_approved": false,
+      "provenance": "GitHub HANDOFF/STATUS and exact run metadata reviewed 2026-11-14 KST"
+    },
+    {
+      "record_id": "CANDIDATE-09",
+      "blueprint": {
+        "repo": "hibi89/Freelancer",
+        "branch": "product/ontoinsight-ax-data-analytics",
+        "path": "docs/FINAL_BLUEPRINT.md"
+      },
+      "source": {
+        "repo": "hibi89/AI_AutoML_Analyst",
+        "branch": "feature/ontoinsight-ax-p85-20261113",
+        "path": "backend/app/services/ontoinsight_p85_ml.py"
+      },
+      "scoped_tests_documented": true,
+      "package_ci_evidence": true,
+      "negative_test_ci_evidence": true,
+      "ci": {
+        "repo": "hibi89/AI_AutoML_Analyst",
+        "run_id": 43383793303,
+        "head_sha": "8d1bdc80ed345485591f739aace632e91112a604",
+        "branch": "feature/ontoinsight-ax-p85-20261113"
+      },
+      "real_buyer_acceptance": false,
+      "rights_and_sale_approved": false,
+      "provenance": "GitHub HANDOFF/STATUS and exact run metadata reviewed 2026-11-14 KST"
+    },
+    {
+      "record_id": "CANDIDATE-10",
+      "blueprint": {
+        "repo": "hibi89/Freelancer",
+        "branch": "product/bid-ax-public-procurement",
+        "path": "docs/FINAL_BLUEPRINT.md"
+      },
+      "source": {
+        "repo": "hibi89/Freelancer",
+        "branch": "product/bid-ax-public-procurement",
+        "path": "bidax/entrypoint.py"
+      },
+      "scoped_tests_documented": true,
+      "package_ci_evidence": true,
+      "negative_test_ci_evidence": true,
+      "ci": {
+        "repo": "hibi89/Freelancer",
+        "run_id": 43538851029,
+        "head_sha": "1ec540634671ff85b080e034cd37564e54fc8e1e",
+        "branch": "product/bid-ax-public-procurement"
+      },
+      "real_buyer_acceptance": false,
+      "rights_and_sale_approved": false,
+      "provenance": "GitHub HANDOFF/STATUS and exact run metadata reviewed 2026-11-14 KST"
+    },
+    {
+      "record_id": "CANDIDATE-11",
+      "blueprint": null,
+      "source": null,
+      "scoped_tests_documented": false,
+      "package_ci_evidence": false,
+      "negative_test_ci_evidence": false,
+      "ci": null,
+      "real_buyer_acceptance": false,
+      "rights_and_sale_approved": false,
+      "provenance": "GitHub HANDOFF/STATUS and exact run metadata reviewed 2026-11-14 KST"
+    },
+    {
+      "record_id": "CANDIDATE-12",
+      "blueprint": {
+        "repo": "hibi89/Freelancer",
+        "branch": "product/worknova-desk-local",
+        "path": "docs/FINAL_BLUEPRINT.md"
+      },
+      "source": {
+        "repo": "hibi89/Freelancer",
+        "branch": "product/worknova-desk-local",
+        "path": "worknova_desk/gui.py"
+      },
+      "scoped_tests_documented": true,
+      "package_ci_evidence": true,
+      "negative_test_ci_evidence": true,
+      "ci": {
+        "repo": "hibi89/Freelancer",
+        "run_id": 43538360061,
+        "head_sha": "c8bb18ea3decaa6f3357d1849dd5272ca6721af8",
+        "branch": "product/worknova-desk-local"
+      },
+      "real_buyer_acceptance": false,
+      "rights_and_sale_approved": false,
+      "provenance": "GitHub HANDOFF/STATUS and exact run metadata reviewed 2026-11-14 KST"
+    }
+  ]
+}

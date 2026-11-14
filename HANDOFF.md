@@ -1,3 +1,16 @@
+## [2026-11-14 KST] 29종 GitHub 정량 증거 확보점수 전수 산정 신규 구현 — 필수 10항
+
+1. **목표·용도·확정 요구:** 해총 29종 전부 확인 가능한 숫자를 제시하라는 사용자 지시. 작업자 공시율과 별개로 GitHub 증거 확보율을 동일100점 잠정 지표로 자동 계산. 각 제품 최종설계 공식 채점은 기존 승인 가중치 없으면 `UNASSESSED` 유지.
+2. **구현/설계 근거:** [공통 배점](docs/strategy/KMONG_EVIDENCE_READINESS_RUBRIC_20261114.md) — 상품 링크10/설계10/실소스10/부분테스트 문서10/정확 CI 성공20/양OS Job10/패키징10/부정 회귀10/실구매자5/권리·소유자GO5. 29개 pinned source+CI roster, Source App의 read-only metadata 조회. 대안 개발자 보고율=공식률 오인·CI초록 자체=점수 오인 금지.
+3. **검증/미검증:** 실제 Github Actions run_ids·heads/Jobs 근거를 이번 시점 원격 API로 확인(제품별 차이 존재); 새 `test_provisional_score.py` 회귀 및 App readback은 **커밋 후 새 실제 실행 확인 전까지 NOT_RUN**. 유료 API, 사용자 고객 파일, 실기기 인수 수행0.
+4. **단계 상태:** 코딩·이론적 배점 준비; 신규 29종 점수 운영 검증대기. `official_final_completion`, 과거 worker 16건, DATA2WEB 공식72, 등록완료·[작업중]·상용 HOLD 변동 없음.
+5. **오류/차단/대안:** 원장 product_12 WORKNOVA PayPal branch 오연결과 candidate-11 FlowPilot UGREEN 해커톤 branch의 제품 불일치 발견. 자동 점수는 독립 실제 소스(ref) override로 평가하고 기존 승인 mapping 무단 변경 금지. HAE P85 합성7 PASS이나 full2 FAIL이므로 CI 20 가산 금지. 출고/권리 자동 인정 금지.
+6. **Repo/branch/경로/버전:** `hibi89/hackathon-command-center-2026@main`, `tools/kmong_hub_sync/{sync.py,provisional_score.py,provisional_evidence_roster_20261114.json,test_provisional_score.py}`, 전략/STATUS/HANDOFF. 새 SHA는 커밋 후 재조회.
+7. **Production 환경:** 중앙 GitHub App Actions `kmong-hub-sync.yml`의 새 summary+관찰 JSON, source 35 Contents/Actions READ, hub snapshot only WRITE. Vercel/크몽 프로덕션 N/A, 외부 요금·권한 확대 없음.
+8. **원본/백업/보안:** main/central snapshot 이전 SHA로 되돌릴 수 있음. 29 원천/19 서비스·제품 소스·비밀·고객 데이터·배포/계정 원본 수정0. 이 scoring 결과는 독립 GitHub 감사용이며 실제 고객 권리/최종설계 100의 대체증거 아님.
+9. **다음 작업/완료기준:** 새 main CI 49+ Python 테스트 PASS → 유효 Source App 자격으로 live 29개 모두 `provisional_evidence_readiness.score` 숫자 및 출처 확보 → summary 동일 no-change readback → central human-readable top29 보고서 최신화 → 담당자 현행 보고 동기화 및 각 제품 공식REQ100 승인 시 정식률 추후 보완.
+10. **2026-11-14 KST 범위/판정:** 29개 index/branch/CI 일부 원격 read 성공. 코딩과 실제 hosted 실행/자동 hub write는 구분. 검증 전 출시·완성률 변경 금지.
+
 ## 2026-11-14 KST — 이중 진척률 실제 App 첫 실행과 DATA2WEB 승인 스코프 문자열 수정 (10항)
 1. 목표: 작업자 과거 보고율 16종과 승인 GitHub 증거 기반 점수 29종 별도 표시, 공식률 불변.
 2. 변경: 첫 App live run에서 DATA2WEB `R01-R33_` 원문을 `R01_R33_`로 오기 비교해 신뢰도 검증이 fail-close됨을 확인; 승인 source scorecard/가중치 수정 없이 코드·테스트 기대값만 바로잡음.
