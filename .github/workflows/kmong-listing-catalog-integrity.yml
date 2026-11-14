@@ -1,0 +1,35 @@
+name: Kmong 29-to-19 listing integrity
+on:
+  push:
+    branches:
+      - kmong-productization
+    paths:
+      - 'data/kmong_service_catalog_20261113.json'
+      - 'data/final_blueprint_product_index_current.json'
+      - 'tools/kmong_listing_audit/**'
+      - '.github/workflows/kmong-listing-catalog-integrity.yml'
+  pull_request:
+    branches:
+      - kmong-productization
+    paths:
+      - 'data/kmong_service_catalog_20261113.json'
+      - 'data/final_blueprint_product_index_current.json'
+      - 'tools/kmong_listing_audit/**'
+      - '.github/workflows/kmong-listing-catalog-integrity.yml'
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify 29 sources, 19 SKUs, evidence states and source alias
+        run: python3 -B tools/kmong_listing_audit/validate.py
+      - name: Run adversarial mapping and state regression tests
+        run: python3 -B -m unittest discover -s tools/kmong_listing_audit -p 'test_*.py' -v
