@@ -1,3 +1,16 @@
+## [2026-11-14 KST] WORKNOVA Desk QA 실제 CI 후속 동기화 — 필수 인수인계 10항
+
+1. 목표·기술: 사용자 승인 WD01–14 100점, 목표 구매자 최종 수용85점; Windows Tk/SQLite 오프라인.
+2. 완료·선택: 공개 무료 GitHub Ubuntu/Windows standard CI 선택, 과거 의존성·PowerShell hash·Windows SQLite 핸들·UTF8 실패 증거에 최소 패치.
+3. 테스트·명령: 제품 `python -m unittest discover -s tests -v` 및 GitHub [#43538360061](https://github.com/hibi89/Freelancer/actions/runs/43538360061): Linux167 PASS/1 SKIP, Windows159 PASS/9 SKIP(양쪽168), 합성 Windows 설치11PASS, unsigned EXE Win GUI/DB smoke PASS; 전체 3/3 SUCCESS, [최종 설계 게이트](https://github.com/hibi89/Freelancer/actions/runs/43538360070) SUCCESS.
+4. 상태: CI 기술검증 완료, 전체 구매자 최종 인정 **0/100**(코드 완성률 아님), **85 미달**, [작업중]/RELEASE HOLD/크몽 미등록.
+5. 오류·근거·금지: 이전 Actions 실패로그에 cryptography/docx 누락, Win `Get-FileHash` 불가, Windows SQLite WinError32와 charmap 오류. 기존 실패 방식 반복, 테스트 skip로 숨기기, 무승인 OS 권한/서명/고객 데이터 조작 금지.
+6. 저장소·SHA·경로: `hibi89/Freelancer@product/worknova-desk-local` 코드 `c8bb18ea3decaa6f3357d1849dd5272ca6721af8`, 제품 인수인계 문서 HEAD `569daafd9a4e61394f3750f8876e6d3eba02a632`; 주요 파일 .github/workflows/worknova-desk-qa.yml / tools/windows_exe_smoke.py / scripts/install_local.ps1 / docs/P85_GITHUB_CI_RECTIFICATION_20261114.md. 중앙 `kmong-productization` 감사표 한 행 갱신.
+7. Production·환경: Vercel N/A, GitHub public hosted Windows/Linux Python3.11; 미서명 runner 임시 EXE 빌드 후 업로드 안 함.
+8. 원본·백업·인증: 실제 고객 DB·백업·운영 PC·OS ACL·PayPal 원본/다른 제품/등록완료 이력·토큰 불변. 제품 이전 `c8bb18ea` 코드 SHA로 되돌릴 수 있으며 force push 금지.
+9. 다음·승인: WD13 실제 설치/암호화/접근통제/서명과 WD14 실제 고객/법률/권리/지원 + 기타 WD 최종 구매자 수용 증거 확인 후 전체 가중치85점 이상만 달성 선언. 안전 승인 전 RELEASE HOLD.
+10. 갱신·범위: 2026-11-14 KST; 현재 제품 문서 SHA `569daafd9a4e61394f3750f8876e6d3eba02a632`, 제품 정확 CI 코드 SHA `c8bb18ea3decaa6f3357d1849dd5272ca6721af8`; CI 합성만 PASS, 고객/법무/유통 실증은 미검증, 중앙 문서 커밋 후 실제 SHA 재조회.
+
 ## [2026-11-14 KST] BID AX GUI 263테스트·Windows 5/5 CI — 해총 인수인계 10항
 
 1. **목표/설계/기술:** R01–R29 29개 최종설계 고정, 고객 PC Python3.11+/SQLite/Tk. 목표 최종85%는 오프라인 테스트 점수가 아님.
