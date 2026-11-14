@@ -1,5 +1,16 @@
 # CITEVAULT AX — 최종설계 P85 추가 실검증 (2026-11-14 KST)
 
+## [2026-11-14 KST] 최신: REQ17 오프라인 한국어 모델 SHA 사전검사 469PASS
+
+- 제품 검증 소스 `hibi89/Freelancer@product/rag-enterprise-knowledge` [`f4f5f088b9fb2d89937c825445c035d1a4da0ca2`](https://github.com/hibi89/Freelancer/commit/f4f5f088b9fb2d89937c825445c035d1a4da0ca2), 10항 HANDOFF/STATUS/24항 수용표 [문서 SHA `fe36801be4a44fbf56b47c78310bd9b4bf59f664`](https://github.com/hibi89/Freelancer/commit/fe36801be4a44fbf56b47c78310bd9b4bf59f664).
+- [exact source GitHub Actions #43537747863](https://github.com/hibi89/Freelancer/actions/runs/43537747863) **8/8 SUCCESS, 469 executed PASS /0 FAIL /0 SKIP** (Windows/Linux 중복 포함). 기존 actual Chromium 단순화 UI와 Windows portable ZIP 및 PDF/DOCX native 회귀 모두 유지.
+- 실기능: `enterprise/p85-korean-model-preflight.mjs` + CLI는 공개 MIT 기반 `multilingual-e5-small` 후보의 ONNX int8 약118MB 파일 SHA `4d24e2bc01a447951524466ef533e52944bf48509e6552810bcee1a2711cb02c`에만 고정. 사용자 지정 절대 로컬 경로·symlink/필수 메타데이터·SHA 검증, 네트워크 요청 없음, 사기 파일 fail-closed. Win/Linux 각 신규7PASS. 원본 및 변환 모델 license/runtime redistribution 별도 승인 필요.
+- **실제 모델은 다운로드·실행하지 않았고 한국어 dense 추론·정확도·Gold100 전혀 검증하지 않았다.** 기능은 무결성 **사전검사만**; 기존 `SEARCH_ONLY` fallback 유지.
+- 최초 Windows #43537157904에서 Windows 경로 realpath 8.3 문자 차이로 3 테스트 오류; 재분석 후 symlink 구성요소 검사 보존 및 잘못된 문자열 비교 제거. 정확 SHA 최신 CI 양 OS 전부 PASS. [근거 문서](https://github.com/hibi89/Freelancer/blob/product/rag-enterprise-knowledge/docs/P85_KOREAN_MODEL_PREFLIGHT_20261114.md).
+- **최종설계 전체24항 공식 완성률 UNASSESSED / 85% 미인증, CITEVAULT AX [작업중] / RELEASE HOLD/SALE NO-GO**. 기업 실제 IdP/원본 사용권/서명 승인 PREP-SMAX AX/실 Korean model weights+heldout·상용 라이선스/물리 Win10/11 고객 인수 대기. 공유 Freelancer PUBLIC 역사 전수 비밀 감사 미실시, 타상품/사용자 고객 문서·권한/Production/비용 불변.
+- 다른 상품 점수/등록 이력 및 중앙 대형 164KB 원장 행은 이번에 갱신하지 않았으며, 최신 개별 진행 증거는 본 감사 파일과 제품 STATUS/HANDOFF를 우선한다.
+
+
 ## [2026-11-14 KST] 최신: 사용자 Windows 부분 실증+질문 중심 UI · 455PASS
 
 - 기능 SHA [`62fe69bd9f78f5a9a2c49f53b5f227053503a4f1`](https://github.com/hibi89/Freelancer/commit/62fe69bd9f78f5a9a2c49f53b5f227053503a4f1), STATUS/HANDOFF/24항 수용표 SHA [`9a822c85923902bfce68b2c027cf5d85168816bd`](https://github.com/hibi89/Freelancer/commit/9a822c85923902bfce68b2c027cf5d85168816bd).
