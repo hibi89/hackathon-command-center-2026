@@ -57,3 +57,39 @@
 
 ### 실행 상태
 - GitHub 동기화: 아래 커밋 및 readback 기록 기준. 공식 페이지 직접 조회 실패로 **순위 완전 검증 대기**.
+
+
+## DAILY-2026-11-14 — 2026-11-14 KST (10시대 조회)
+
+### 사실 / 검증 수준
+- GitHub 공식 Trending 검색 색인(당일 크롤링)에서 **표시된 순서 12개** 확인. 직접 페이지 열기는 접근 제한. 검색 색인 순서를 공식 실시간 순위로 확정하지 않음. 13~20위 미확인. 표시 증가량은 색인 시점 스냅샷이며 변동 가능.
+- 출처: https://github.com/trending (검색 색인, 2026-11-14 조회). 대체 아카이브와 혼합하지 않음.
+- README / LICENSE / 최근 커밋·릴리스는 개별 미검증. 따라서 재배포·상용 사용 허가 미확정.
+
+| 색인 표시 순서(공식 순위 미확정) | 프로젝트 | 핵심 기능 | 실용 사례 | stars today(색인) | README | LICENSE | 최근 커밋/릴리스 |
+|---:|---|---|---|---:|---|---|---|
+| 1 | [alibaba/open-code-review](https://github.com/alibaba/open-code-review) | Go 코드 리뷰·정적 규칙과 LLM 보조 | 개발팀 코드 리뷰 | +206 | 미확인 | 미확인 | 미확인 |
+| 2 | [GoogleChrome/modern-web-guidance-src](https://github.com/GoogleChrome/modern-web-guidance-src) | 웹 개발 모범사례 가이드 | 웹 품질 점검 | +1875 | 미확인 | 미확인 | 미확인 |
+| 3 | [openai/codex-security](https://github.com/openai/codex-security) | 보안 취약점 탐지·검증 CLI/SDK | 코드 보안 감사 | +754 | 미확인 | 미확인 | 미확인 |
+| 4 | [ZhuLinsen/daily_stock_analysis](https://github.com/ZhuLinsen/daily_stock_analysis) | LLM 주식시장 분석·알림 | 시장 리서치 | +272 | 미확인 | 미확인 | 미확인 |
+| 5 | [we-promise/sure](https://github.com/we-promise/sure) | 개인 재무 관리 | 가계부 구축 | +944 | 미확인 | 미확인 | 미확인 |
+| 6 | [backnotprop/plannotator](https://github.com/backnotprop/plannotator) | 에이전트 계획·코드 리뷰 주석 | AI 개발 검수 | +100 | 미확인 | 미확인 | 미확인 |
+| 7 | [louislam/uptime-kuma](https://github.com/louislam/uptime-kuma) | 셀프호스팅 가동률 모니터링 | 서버 모니터링 구축 | +61 | 미확인 | 미확인 | 미확인 |
+| 8 | [block/buzz](https://github.com/block/buzz) | 분산 협업 커뮤니케이션 | 팀 커뮤니케이션 | +95 | 미확인 | 미확인 | 미확인 |
+| 9 | [tradermonty/claude-trading-skills](https://github.com/tradermonty/claude-trading-skills) | 주식 분석용 AI 스킬 | 투자 리서치 절차 | +60 | 미확인 | 미확인 | 미확인 |
+| 10 | [tailscale/tailcat](https://github.com/tailscale/tailcat) | Tailscale 데이터 경로 통신 도구 | 사설망 진단 | +324 | 미확인 | 미확인 | 미확인 |
+| 11 | [Likely7/Veyra-NRVideo](https://github.com/Likely7/Veyra-NRVideo) | Windows 비디오 향상·캡처 | 영상 워크플로 | +245 | 미확인 | 미확인 | 미확인 |
+| 12 | [ChromeDevTools/chrome-devtools-mcp](https://github.com/ChromeDevTools/chrome-devtools-mcp) | AI 에이전트용 Chrome 개발자도구 | 웹 자동 점검 | +145 | 미확인 | 미확인 | 미확인 |
+
+### 분석 (기존 기술 연계; 실제 호환성 미검증)
+- HAE: plannotator 승인·검수 워크플로; SOVIA: codex-security 보안 검토; DBVORA: open-code-review 정적 규칙 적용 연구; REA_WEB: modern-web-guidance-src + chrome-devtools-mcp 웹 품질 점검.
+- KIC: daily_stock_analysis 데이터·금융 해석 참고(투자 권유 금지); PayPal WORKNOVA: plannotator 인간 승인형 흐름; UGREEN: uptime-kuma NAS 서비스 가동률; candle_scraper: trading-skills 분석 절차. 모두 코드 통합 전 별도 검증 필요.
+
+### 제안 (기존 저장소 없이 독립 납품 가능; 가격·기간 추정)
+1. **웹 품질·브라우저 증거 감사**: 고객 쇼핑몰/소규모 웹 제작사; 납품 URL별 성능·접근성·오류 재현 PDF; 7만~20만원 / 1~2일 / 난이도 중. 차별화: 모바일 브라우저 증거와 수정 우선순위. 출처 modern-web-guidance-src, chrome-devtools-mcp. 라이선스 미확인 → 원본 코드 번들 금지. 필수: 고객 사이트 테스트 허가, 개인정보 비수집, 브라우저 재현, README/LICENSE 확인.
+2. **코드 리뷰·보안 근거 보고서**: 고객 소규모 SaaS/개발팀; 납품 규칙별 코드 위치·오탐 분류·수정 우선순위; 10만~35만원 / 2~4일 / 난이도 중상. 차별화: 정적 규칙과 AI 판정 구분. 출처 open-code-review, codex-security. 라이선스·서비스 약관 미확인 → 도구 재판매 금지. 필수: 고객 승인, 코드 외부 전송 통제, 보안 재현·오탐 검증.
+3. **서버·NAS 가동률 모니터링 설치**: 고객 1인 사업자/소규모 사무실; 납품 모니터링 대시보드·알림·운영 가이드; 12만~35만원 / 1~3일 / 난이도 중. 차별화: 로컬 설치·알림 복구 테스트. 출처 uptime-kuma. 라이선스·의존성 상업 이용 조건 미확인 → 배포 전 확인. 필수: 네트워크 권한, 보안 설정, 알림 테스트, 장애 복구.
+
+### 미확인·제약
+- 공식 TOP20 전체와 실제 당일 순위 미확인. 12개는 GitHub 공식 페이지 **검색 색인**에 노출된 순서이지 확정 순위가 아님.
+- 원본 LICENSE 및 최근 커밋/릴리스 개별 검증 미완료. 기존 30개 후보·69개 조사 이력 유지.
