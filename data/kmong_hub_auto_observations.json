@@ -513,12 +513,12 @@
       "gate": {
         "conclusion": "success",
         "head_sha": "f4f5f088b9fb2d89937c825445c035d1a4da0ca2",
-        "matches_current_head": true,
+        "matches_current_head": false,
         "run_id": 43537748124,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "f4f5f088b9fb2d89937c825445c035d1a4da0ca2",
+      "head_sha": "fe36801be4a44fbf56b47c78310bd9b4bf59f664",
       "machine_evidence_score": {
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
@@ -616,12 +616,12 @@
       "gate": {
         "conclusion": "success",
         "head_sha": "a2e93a2c89daecb1d003eb6a2e35109dc0e40c20",
-        "matches_current_head": true,
+        "matches_current_head": false,
         "run_id": 43537874768,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "a2e93a2c89daecb1d003eb6a2e35109dc0e40c20",
+      "head_sha": "5447f2e21a50e359e0c3f680d6238cd3c57b74c8",
       "machine_evidence_score": {
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
@@ -1170,12 +1170,12 @@
           "gate": {
             "conclusion": "success",
             "head_sha": "a2e93a2c89daecb1d003eb6a2e35109dc0e40c20",
-            "matches_current_head": true,
+            "matches_current_head": false,
             "run_id": 43537874768,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "a2e93a2c89daecb1d003eb6a2e35109dc0e40c20",
+          "head_sha": "5447f2e21a50e359e0c3f680d6238cd3c57b74c8",
           "status": "PRESENT"
         },
         {
@@ -1217,12 +1217,12 @@
           "gate": {
             "conclusion": "success",
             "head_sha": "f4f5f088b9fb2d89937c825445c035d1a4da0ca2",
-            "matches_current_head": true,
+            "matches_current_head": false,
             "run_id": 43537748124,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "f4f5f088b9fb2d89937c825445c035d1a4da0ca2",
+          "head_sha": "fe36801be4a44fbf56b47c78310bd9b4bf59f664",
           "status": "PRESENT"
         },
         {
@@ -1296,7 +1296,7 @@
     {
       "canonical": {
         "expected_git_blob_sha": "521ba0cb458bea384639a0ef897ce7500d33b8f1",
-        "head_sha": "a8c488bd548e2c44bc3197f5d68e37ed84fdc021",
+        "head_sha": "32bb7d45aa3b2e0dc0a4941b409b3bc36bc8930a",
         "mode": "observe",
         "observed_git_blob_sha": "521ba0cb458bea384639a0ef897ce7500d33b8f1",
         "owner_approval_verified": false,
@@ -1308,13 +1308,13 @@
         "branch": "main",
         "gate": {
           "conclusion": "success",
-          "head_sha": "a8c488bd548e2c44bc3197f5d68e37ed84fdc021",
+          "head_sha": "32bb7d45aa3b2e0dc0a4941b409b3bc36bc8930a",
           "matches_current_head": true,
-          "run_id": 43537930124,
+          "run_id": 43538126171,
           "status": "LATEST_RUN",
           "workflow_status": "completed"
         },
-        "head_sha": "a8c488bd548e2c44bc3197f5d68e37ed84fdc021",
+        "head_sha": "32bb7d45aa3b2e0dc0a4941b409b3bc36bc8930a",
         "status": "PRESENT"
       },
       "repository": "hibi89/hackathon-command-center-2026",
