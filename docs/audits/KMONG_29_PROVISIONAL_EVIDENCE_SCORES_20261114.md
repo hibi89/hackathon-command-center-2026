@@ -1,5 +1,8 @@
 # 크몽 전체 29종 — 작업자 보고 × GitHub 검증증거 점수 (2026-11-14 KST)
 
+> **최신 LIVE 검증 (2026-11-14 KST):** GitHub App [#43543046959](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43543046959) **SUCCESS**, 중앙 [자동 관찰 JSON](../../data/kmong_hub_auto_observations.json)에 29/29 증거점수 저장·readback. 35 repositories, 80 tracked refs, 16 historical worker reports, DATA2WEB 승인 채점표 과거72 replay. [현행 원장](../../data/final_blueprint_product_index_current.json)에서 WORKNOVA Desk의 `Freelancer@product/worknova-desk-local` 실제 상품 브랜치 수정, [원본 11/13 인덱스](../../data/final_blueprint_product_index_20261113.json) 보존. 403은 과거 실패였으며 이후 성공, 근본 원인은 미확정. 새 코드 [main `9a2c9273`](https://github.com/hibi89/hackathon-command-center-2026/commit/9a2c927309e3fc0ef87e06fe184eaf17074a55f7) **62/62 회귀 PASS**; 이 SHA의 최신 App snapshot readback은 후속 실행 확인 대상. DATA2WEB 72의 **과거 SHA 근거**와 현재 HEAD 인증은 별개다.
+
+
 > **실점수 전체 산출:** 29/29개. 기존 `미산정`만 나열하던 원장을 보완하기 위해 **별도 GitHub 근거 확보 점수**를 계산했다. **아래 새 증거점수는 제품 최종완성률이 아니다.** 100점 만점 고정 공통 체계는 [rubric v1](https://github.com/hibi89/hackathon-command-center-2026/blob/main/docs/strategy/KMONG_EVIDENCE_READINESS_RUBRIC_20261114.md), 제품별 상세 채점 근거는 [JSON](../../data/kmong_29_provisional_evidence_scores_20261114.json).
 
 ## 전체 29종 숫자 보고 (증거점수 내림차순, 동점은 공동순위)
@@ -39,7 +42,7 @@
 - *작업자 내부 수치는 2026-11-13 16개 활성제품의 **과거 엔지니어링 자가평가**, 공식 완성률이 아님. 12개 후보는 초기 원장에 최신 수치가 정형화되지 않아 미기록.
 - **증거 확보점수는 `해총 링크10 + 설계파일10 + 구현파일10 + 범위테스트 기록10 + 정확 CI 성공20 + Windows/Linux 성공10 + 패키징 검증 기록10 + 실패/악성거부10 + 고객 실OS 인수5 + 실제 권리/상용 GO5`** 기준. 각 행은 현재 발견된 **확인 가능한 증거가 얼마나 준비됐는지**를 점수화한다. 기존 작업자가 말한 95/85와 **평균하거나 대체하지 않는다.** 코드 전체/UX 전체 완성률을 뜻하지 않는다.
 - 실구매자 검증·권리/상업적 사용 허가 관련 마지막 10점은 29종 모두 아직 미확인. **증거점수90도 상품 90% 완성·출시 GO가 아님**. 제품별 승인 REQ 가중치, 고객/권리 검증, 실제 상용 QA가 완료되지 않은 공식 최종률 28종은 여전히 `UNASSESSED`; DATA2WEB 기존 고정 `72/100`.
-- 이 자료는 **ChatGPT 연결 GitHub 조회로 만든 1회 감사 스냅샷**이다. main 새 코드 `provisional_score.py`의 출처/세부 항목을 반영했으나, 실 GitHub App의 새 자동 기록은 **API 403 차단으로 미검증**. 따라서 자동매일갱신/프로덕션 성공이라 주장하지 않는다.
+- 최초 숫자 표는 **ChatGPT 연결 GitHub로 작성한 1회 감사 스냅샷**이다. 이후 실제 GitHub App [#43543046959](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43543046959)에서 29종 자동 점수·원격 JSON 쓰기 확인. 다만 이 Markdown 표 자체는 **자동 동기화 대상이 아닌 역사적 정렬표**이므로 새 점수의 정본은 [중앙 관찰 JSON](../../data/kmong_hub_auto_observations.json)과 Actions Job Summary다.
 
 ## 항목별 위험과 우선 복구
 
@@ -63,5 +66,5 @@
 
 ## 검증 상태
 
-- **실 GitHub 수집 코드:** main `7adc49ac00be13adc1580573166fe5a70e32f80e` (기능 및 테스트정정); 최초 48/49, 정정 후 Test Kmong hub source observer workflow **SUCCESS**. 실제 GitHub App 새 scoring sync는 **HTTP403 실패**. 이 HTTP403은 scoring code 추가 이전 main에서도 관찰됐으며 현재의 구체 근본 원인 **미확정**.
+- **실 GitHub 수집 코드:** main 최초 `7adc49ac` 49/49 PASS→403 보수적 분류/최대1회 재시도 및 11/14 원장 링크 교정·과거 SHA 경고를 추가한 `9a2c9273` **62/62 PASS**. scoring live success [#43541781597](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43541781597), 실 상품 브랜치 최신 index 사용 live success [#43543046959](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43543046959). 초기 403 실패는 역사 기록, 응답 원인 미확정. 고객/법적 승인·공식 최종100 인증과 구분.
 - **이번 중앙 데이터:** [스냅샷 JSON](../../data/kmong_29_provisional_evidence_scores_20261114.json) 29개 각 100점 breakdown·출처 run/SHA·경고 저장. **공식 점수·상용 승인 수정 0건**.
