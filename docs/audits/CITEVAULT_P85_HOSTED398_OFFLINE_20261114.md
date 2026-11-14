@@ -1,5 +1,17 @@
 # CITEVAULT AX — 최종설계 P85 추가 실검증 (2026-11-14 KST)
 
+## [2026-11-14 09:10 KST] 이번 최신 최종설계 REQ24+REQ19 — 8/8 CI · 447 PASS
+
+- 제품 기능 SHA [`f2979aa50156b4f5c3d80f4d23a1b2ec336f0040`](https://github.com/hibi89/Freelancer/commit/f2979aa50156b4f5c3d80f4d23a1b2ec336f0040), 제품 10항 HANDOFF/STATUS/24요건 수용표 문서 HEAD [`62663721a4576f597e1b7cde5025760271428cda`](https://github.com/hibi89/Freelancer/commit/62663721a4576f597e1b7cde5025760271428cda).
+- [정확 소스 GitHub Actions #43531986943](https://github.com/hibi89/Freelancer/actions/runs/43531986943) **Ubuntu+Windows+실 Chromium·portable QA 총 8/8 JOB SUCCESS, 447 test executions PASS /0 FAIL /0 SKIP** (Linux/Windows 중복 실행 포함), [정책 gate #43531987256](https://github.com/hibi89/Freelancer/actions/runs/43531987256) SUCCESS(최종 고객 85% 인증 아님).
+- **REQ24 실기능:** 서버 memory-only 5분 TTL/64 스레드, SHA256 bearer/문서 version/source SHA 결속, 후속질문 전 현재 tenant/group/project/clearance ACL+원문 재검증, 권한 철회/문서폐기/버전교체/위변조/만료/로그아웃 시 이전 맥락 무효화; API/UI 후속 질문·실 Chrome 클릭 테스트. 양 OS 신규12PASS, 생성형 한국어 모델 미설치로 answer=null·외부전송0.
+- **REQ19 내부 Windows portable QA:** GitHub Windows Server2022에서 Windows용 Node22+소스/NOTICE·manifest 12파일 합성 번들 작성, Python stdlib ZIP CRC+파일별 SHA roundtrip→압축 해제된 실제 Node 실행으로 운영자 셀프테스트 성공 **2PASS**, ZIP 33,208,926 bytes / sha256 `6dc2c15b1525780c2b1889635a9f94a18cfb987df10530ffe23f916392ea71a2`. CI 임시 데이터·임시 ZIP이며 고객에게 배포하지 않음. 실제 Win10/11 설치/Node 재배포 라이선스/상용 릴리스는 미검증.
+- **Stop & Pivot 증거:** 과거 ZIP PowerShell 방식 2회 #43531311927/#43531472046 FAIL(압축 풀어도 실행 파일 없는 layout) → 해당 방법 중단 후 Python zipfile 로컬+hosted PASS. #43531831668 Chrome 프로필 삭제 `ENOTEMPTY` teardown 충돌은 안전한 종료 대기·임시 파일 정리 재시도로 수정, 최신 정확 소스 8/8 CI PASS.
+- **최종24항 전체 공식 완성률 UNASSESSED / 사용자 목표85% 미달성·미검증, CITEVAULT AX [작업중] / RELEASE HOLD / SALE NO-GO**. 실제 기업 직원 IdP, 고객 소유권·정식 authoritative signed PREP/SMAX AX 발급, 라이선스 검증된 실 Korean model, 물리 Windows10/11·고객 Gold100·보안/법무/owner 인수 필요. 합성 447PASS를 최종 판매/85%로 환산 금지.
+- [제품 상세 인수인계/검증](https://github.com/hibi89/Freelancer/blob/product/rag-enterprise-knowledge/docs/P85_CONVERSATION_PORTABLE_20261114.md). 공유 `Freelancer` 전체 PUBLIC, 타상품 브랜치/과거 Git 이력 공개·민감정보 전수 감사 미실시. 다른 제품 및 고객 원본·계정/비용·Production 불변.
+- **중앙 집계 주의:** 큰 `KMONG_16_CURRENT_20261111.md` 본문(164KB)은 이번에 무단 대용량 재작성하지 않고, CITEVAULT 최신 증거는 이 단일 프로젝트 감사 파일과 제품 HEAD를 정본으로 한다. 중앙 표의 과거 421PASS 등은 과거 SHA에 대한 기록으로만 해석.
+
+
 ## [2026-11-14 KST] 최신: Chromium 실제 브라우저+권한대시보드 CI 421 PASS
 
 - 제품 정본 `hibi89/Freelancer@product/rag-enterprise-knowledge`, 기능 SHA [`49918ad4d0de23b8bc462830fa0789e93ebd7936`](https://github.com/hibi89/Freelancer/commit/49918ad4d0de23b8bc462830fa0789e93ebd7936), 제품 문서/수용표 HEAD [`119410fce937a8edfc073518f255a8e937a2db95`](https://github.com/hibi89/Freelancer/commit/119410fce937a8edfc073518f255a8e937a2db95).
