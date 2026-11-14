@@ -1,3 +1,19 @@
+## [2026-11-14 KST] BID AX Windows GUI 실기동·266 테스트 CI — 해총 인수인계 10항
+
+1. 목표·요구·기술: R01–R29 29개 최종설계 고정, 최종85% 목표, Python3.11+/SQLite/Tk 고객 소유 Windows 로컬 제품.
+2. 구현·설계 비교: 기존 PE 빌드만 검증(A)은 실제 실행 보증 부족. 고객 DB/키 없이 임시 Tk GUI 700ms 실행 후 정상종료를 EXE로 직접 검증(B) 채택. 기존 오프라인 온비드 다중 JSON/UUID 재개/원본 검역 유지.
+3. 테스트: 제품 `1ec540634671ff85b080e034cd37564e54fc8e1e` [CI #43538851029](https://github.com/hibi89/Freelancer/actions/runs/43538851029) 5/5 SUCCESS, Ubuntu3.11/3.13 각 266 PASS, Win3.11 266 tests/0 FAIL/1 POSIX SKIP, Win CLI EXE/Tk/GUI PE 및 frozen GUI `--selftest-gui` 실제 시작/ExitCode0 PASS. 고객 현장 Win10/11·실설치 미검증.
+4. 상태: R01–R29 공식률 UNASSESSED, 85% 미입증, [작업중]/RELEASE HOLD/미등록. 실제 온비드1페이지10건·보고186, 후속18페이지/타3 API·100실공고/인간10/상용권/고객인수 대기.
+5. 실패 근거/해결: 앞선 GUI 통합 테스트 Windows SQLite 연결 미종료 WinError32는 `closing` 적용 후 263/263, 이번 엔트리포인트 테스트 3종 추가한 266/266로 해결. GUI 빌드 성공과 실 고객 GUI 조작 혼동 금지.
+6. 저장소/브랜치/SHA/경로: hibi89/Freelancer@product/bid-ax-public-procurement 코드 `1ec540634671ff85b080e034cd37564e54fc8e1e`, 문서 `cb0434ef6a61af80e96b2f5c2d9a0aa512983280`, `bidax/entrypoint.py`, `bidax/desktop.py`, `tests/test_gui_entrypoint.py`, `.github/workflows/bid-ax-offline-regression.yml`, 제품 `docs/BID_AX_FROZEN_GUI_SMOKE_20261114.md`. 중앙 `docs/audits/BID_AX_FROZEN_GUI_266_CI_20261114.md`.
+7. Production/실행: Vercel N/A, `py -3.11 run_bidax.py` 일반 고객 GUI, `py -3.11 run_bidax.py --selftest-gui` 임시 GUI 자체시험; Windows GitHub hosted runner unsigned GUI onedir 미출시·산출물 배포 없음.
+8. 원본/백업/인증: 고객 `result_001.json`·DB·API키, 제외 BID OWL/다른 상품/크몽 등록 이력 변경/유출 없음, repo 현재 public, Git normal revert 가능, 강제 push 금지.
+9. 다음/완료기준/승인: 실 후속18페이지·공식 타 API/원문 ID, 실제 공고100/독립 전문가10, Win10/11 실제 GUI/설치·권리/고객 수용·계약/지원/출시. 실 API 외부 키/개인원본·유료·권한/보안 변경·출시는 별도 승인. 추가 가중치 요구나 최종설계 축소 금지.
+10. KST·근거·문서 기준: 2026-11-14 KST, GitHub 266 테스트 및 Windows frozen GUI run 직접 확인. 중앙 HEAD는 본 커밋 후 원격조회로 확정.
+
+
+---
+
 ## [2026-11-14 KST] WORKNOVA Desk QA 실제 CI 후속 동기화 — 필수 인수인계 10항
 
 1. 목표·기술: 사용자 승인 WD01–14 100점, 목표 구매자 최종 수용85점; Windows Tk/SQLite 오프라인.

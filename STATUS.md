@@ -1,3 +1,11 @@
+## [2026-11-14 KST] BID AX Windows frozen GUI 실제 시작·종료 CI PASS
+
+> **[2026-11-14 KST | BID AX Windows frozen GUI 실구동·266 테스트 5/5 SUCCESS]** 제품 [코드 SHA `1ec540634671`](https://github.com/hibi89/Freelancer/commit/1ec540634671ff85b080e034cd37564e54fc8e1e) / [문서 HEAD `cb0434ef6a61`](https://github.com/hibi89/Freelancer/commit/cb0434ef6a61af80e96b2f5c2d9a0aa512983280); 기존 사용자 동의형 온비드 로컬 JSON 여러페이지 GUI 등록에 이어 **임시 DB 기반 `--selftest-gui` 실제 frozen Windows GUI EXE 시작·정상 종료** 검증. [Actions #43538851029](https://github.com/hibi89/Freelancer/actions/runs/43538851029) **5/5 SUCCESS**: Ubuntu3.11/3.13 각 **266 PASS**, Windows3.11 **266 tests/0 FAIL/1 POSIX-only SKIP**, CLI EXE/Tk init/GUI onedir PE build/**frozen GUI 실행** PASS. 실 고객 Windows10·11 설치/SmartScreen/작업 결과·상업권/실 API·100실공고·독립검토10은 **미검증**. 실제 온비드 15157252 1페이지10건과 전체186 보고 중 후속18페이지 미수집. **R01–R29 최종완성률 UNASSESSED/목표85% 미인증, [작업중]/RELEASE HOLD/크몽 미등록**, `CANDIDATE-10/KMONG-SVC-18`, 기존 원천29/판매19·등록 이력/타제품/BID OWL 불변. [중앙 감사](docs/audits/BID_AX_FROZEN_GUI_266_CI_20261114.md).
+
+- 고객 원본/서비스 키/GitHub 권한·Vercel Production 무변경. repo 현재 public; 고객 키·원문 upload 금지. 제품 기능 SHA `1ec540634671ff85b080e034cd37564e54fc8e1e`, 문서 HEAD `cb0434ef6a61af80e96b2f5c2d9a0aa512983280`.
+
+---
+
 ## [2026-11-14 KST] WORKNOVA Desk 제품 GitHub 무인 QA 3/3 실제 PASS — 최종85점 별개
 
 - 제품 `hibi89/Freelancer@product/worknova-desk-local`: 검증된 코드 SHA `c8bb18ea3decaa6f3357d1849dd5272ca6721af8`, 최신 제품 문서 SHA `569daafd9a4e61394f3750f8876e6d3eba02a632`. [실제 Actions #43538360061](https://github.com/hibi89/Freelancer/actions/runs/43538360061) 3/3 SUCCESS: Linux 168(167 PASS,1 SKIP), Windows 168(159 PASS,9 SKIP); Windows 합성 설치·백업·복원 11/11 PASS, 새 Windows onedir 미서명 EXE GUI 열기/정상종료·임시 DB 무결성 PASS. [평가게이트 #43538360070](https://github.com/hibi89/Freelancer/actions/runs/43538360070) SUCCESS.
