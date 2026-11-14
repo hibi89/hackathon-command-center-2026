@@ -991,13 +991,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "8d604a0644cc74f9bf6ebc35dca7c64a17a3245b",
-        "matches_current_head": false,
-        "run_id": 43545039836,
+        "head_sha": "95a7f7be6cab5a98637fceac7f50196eb1bac219",
+        "matches_current_head": true,
+        "run_id": 43547118295,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "b9065bfb5e46271fe2a4fdddb0fdf4ccac919c75",
+      "head_sha": "95a7f7be6cab5a98637fceac7f50196eb1bac219",
       "machine_evidence_score": {
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
@@ -1025,7 +1025,7 @@
           "blueprint": {
             "branch": "feature/astra-p71-pdf-source-parity-20261112",
             "git_blob_sha": "f2ce12696003fcff0ebddcd086cc2e5998a3135c",
-            "head_sha": "b9065bfb5e46271fe2a4fdddb0fdf4ccac919c75",
+            "head_sha": "95a7f7be6cab5a98637fceac7f50196eb1bac219",
             "path": "REQUIREMENTS.md",
             "repository": "hibi89/astra_pdf_redesigner"
           },
@@ -1040,7 +1040,7 @@
           "implementation": {
             "branch": "feature/astra-p71-pdf-source-parity-20261112",
             "git_blob_sha": "56b1758b06785b7fc3b629cfa06d57573cf2ddfa",
-            "head_sha": "b9065bfb5e46271fe2a4fdddb0fdf4ccac919c75",
+            "head_sha": "95a7f7be6cab5a98637fceac7f50196eb1bac219",
             "path": "src/App.tsx",
             "repository": "hibi89/astra_pdf_redesigner"
           }
@@ -2473,13 +2473,13 @@
           "branch": "feature/astra-p71-pdf-source-parity-20261112",
           "gate": {
             "conclusion": "success",
-            "head_sha": "8d604a0644cc74f9bf6ebc35dca7c64a17a3245b",
-            "matches_current_head": false,
-            "run_id": 43545039836,
+            "head_sha": "95a7f7be6cab5a98637fceac7f50196eb1bac219",
+            "matches_current_head": true,
+            "run_id": 43547118295,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "b9065bfb5e46271fe2a4fdddb0fdf4ccac919c75",
+          "head_sha": "95a7f7be6cab5a98637fceac7f50196eb1bac219",
           "status": "PRESENT"
         },
         {
