@@ -1,3 +1,18 @@
+## [2026-11-14 KST] App 호출 폭주·무료 quota/burst guard 75테스트 및 실운영 스킵 인수인계 10항
+
+1. **목표/기술:** 해총 GitHub App 자동 증거 수집이 35repo/80ref/29상품을 과도하게 반복 스캔하지 않도록 비용0·기존 READ/Hub observation JSON WRITE 정책으로 수정.
+2. **설계·결정:** A 원인 webhook dispatcher 원천 제한이 이상적이나 현재 소유 앱/설정 직접 접근 미확인. B 중앙 기존 Actions에 GitHub App GET /rate_limit 선검사 및 30분 UTC 고정 버킷의 중복 bot dispatch defer를 구현(최소 변경). `main@67212b67d0662ab29f7f5a995386ceb65e049d4c`에 `quota_guard.py`, 12 테스트, 기존 workflow scan_gate 조건. 리셋 이후 첫 조건부 스캔만, 기존 공식 점수/게시 상태 수정 금지.
+3. **실행 테스트:** [Github Actions #43547282002](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43547282002) **75/75 PASS**, [#43547282039](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43547282039) 최종설계 gate SUCCESS. 실제 [bot #43547304082](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43547304082), [#43547364351](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43547364351) 각 App core remaining 5538, 판정 DEFERRED_BOT_BURST 및 **Scan sources step SKIPPED**. 이는 실자동 점수 재동기화 성공 아님. 앞선 구코드 LIVE [#43546942515](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43546942515) 및 [#43547119678](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43547119678) **UPDATED**.
+4. **완료/진행/대기:** 새로운 burst방어 실증 PASS, primary budget 경로는 합성 회귀 PASS/실 0잔여 preflight 미실증, 앱 전체 새코드 스캔은 다음 고정 버킷·예약 스케줄 후 검증. 29개 증거점수 원장은 과거 실제 성공 출처의 snapshot 유지. 최종설계 공식 DATA2WEB 과거 승인72/100(현HEAD 새 정밀 검증 필요), 다른28 미산정, 제품 상용100·크몽 등록 GO0.
+5. **장애·원인/Stop-Pivot:** 주요 근거 `/repos/hibi89/ai-code-checker/actions/workflows/final-blueprint-gate.yml/runs` HTTP403 `PRIMARY_RATE_LIMIT remaining=0`; 반복 사용자/봇 dispatch 짧은 구간에서 다수 실패 및 취소 발생. 재시도나 403 무시 금지. 스킵된 job은 workflow 자체가 SUCCESS로 보여도 **DEFERRED/NOT_SYNCED**임을 Job Summary에서 확인. source webhook 원천 간격은 직접 제어 아직 미검증, GitHub App 차단 방어와 구분.
+6. **저장소·브랜치/SHA:** `hibi89/hackathon-command-center-2026@main:67212b67d0662ab29f7f5a995386ceb65e049d4c`; `kmong-productization` 본 문서 커밋 후 remote HEAD 재조회. `.github/workflows/kmong-hub-sync.yml`, `tools/kmong_hub_sync/{quota_guard.py,test_quota_guard.py}`; 원장 `data/kmong_hub_auto_observations.json`. Astra link `feature/astra-p71-pdf-source-parity-20261112` 유지.
+7. **배포/환경:** GitHub public Actions Ubuntu/Python stdlib, 외부 유료 DB/서비스 없음, Vercel/제품 Production **미적용**, 웹훅 업스트림 배포 설정 변경0. source install App READ / 중앙 hub GITHUB_TOKEN snapshot conditional WRITE 기존 유지.
+8. **보안·원본·복구:** GitHub token/고객/개별제품 main·branch/상업권/가격·19개 게시목록·29개 공식점수 절대 미수정. source 코드 원본은 Git 이전 SHA로 일반 revert 가능, force push 금지. 스킵시 `GITHUB_OUTPUT run_sync=false`로만 연계, 관찰 JSON overwrite 없음.
+9. **다음 우선순위/완료조건:** (1) 기존 cron 또는 새로운 30분 버킷의 첫 실행에서 최신 main 스캔/원격 JSON readback 확인 (2) 봇 소유 Vercel/호출 원천 접근 가능해지면 한 번에 한 호출·중복 접수 방지 업스트림 수정 별도 승인·검수 (3) 데이터2웹·DBVORA·FFAX·Astra 실제 SKU 수용/권리 증빙 검증, 사용자 개입은 기존 13시 알림에 통합. API 한도 회복만으로 상용률 상향 금지.
+10. **갱신시점/검증범위:** 2026-11-14 KST. 75 테스트+gate·bot 2개 실제 skip·구 live 2회 UPDATED/현재 hub 29점 관측. 0잔여 real guard·새 main 29개 full live run·업스트림 dispatcher 자체 throttling은 **미검증**.
+
+---
+
 ## [2026-11-14 KST] Astra 최신 브랜치 추적 복구·API primary 403 사고 인수인계 10항
 
 1. **목표/요구·기술:** 29종 LIVE 자동 증거점수와 4개 주말상품 상태 유지, Astra 실제 상품 브랜치로 추적 정합. 기존 Python GitHub App READ/허브 관찰 JSON 조건부 WRITE만 허용.
