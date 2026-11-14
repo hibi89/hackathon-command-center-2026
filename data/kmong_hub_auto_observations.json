@@ -101,13 +101,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "ea29ecec1a1fc272ed968e4f703d64d341086944",
+        "head_sha": "f7fc5607404d7349b95a85a0ebdb30a76ccc58ca",
         "matches_current_head": true,
-        "run_id": 43538322497,
+        "run_id": 43540222285,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "ea29ecec1a1fc272ed968e4f703d64d341086944",
+      "head_sha": "f7fc5607404d7349b95a85a0ebdb30a76ccc58ca",
       "machine_evidence_score": {
         "denominator": 100,
         "limitations": "Historical approved item classifications; no fresh item-by-item CI, real-customer, rights or retail acceptance",
@@ -518,13 +518,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "fe36801be4a44fbf56b47c78310bd9b4bf59f664",
+        "head_sha": "44e3e8a0bf2f7b6d971962451a401ce8830c541e",
         "matches_current_head": true,
-        "run_id": 43538184380,
+        "run_id": 43540285395,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "fe36801be4a44fbf56b47c78310bd9b4bf59f664",
+      "head_sha": "44e3e8a0bf2f7b6d971962451a401ce8830c541e",
       "machine_evidence_score": {
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
@@ -621,13 +621,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "c7b16cc76791384453e3826f9c2faaf6b2043ecf",
+        "head_sha": "3008bfd440aafe57e264ad4a0485d517f8819634",
         "matches_current_head": true,
-        "run_id": 43540170828,
+        "run_id": 43540224615,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "c7b16cc76791384453e3826f9c2faaf6b2043ecf",
+      "head_sha": "3008bfd440aafe57e264ad4a0485d517f8819634",
       "machine_evidence_score": {
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
@@ -969,13 +969,13 @@
           "branch": "feature/final-blueprint-p85-evidence-20261113",
           "gate": {
             "conclusion": "success",
-            "head_sha": "ea29ecec1a1fc272ed968e4f703d64d341086944",
+            "head_sha": "f7fc5607404d7349b95a85a0ebdb30a76ccc58ca",
             "matches_current_head": true,
-            "run_id": 43538322497,
+            "run_id": 43540222285,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "ea29ecec1a1fc272ed968e4f703d64d341086944",
+          "head_sha": "f7fc5607404d7349b95a85a0ebdb30a76ccc58ca",
           "status": "PRESENT"
         },
         {
@@ -1175,13 +1175,13 @@
           "branch": "product/bid-ax-public-procurement",
           "gate": {
             "conclusion": "success",
-            "head_sha": "c7b16cc76791384453e3826f9c2faaf6b2043ecf",
+            "head_sha": "3008bfd440aafe57e264ad4a0485d517f8819634",
             "matches_current_head": true,
-            "run_id": 43540170828,
+            "run_id": 43540224615,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "c7b16cc76791384453e3826f9c2faaf6b2043ecf",
+          "head_sha": "3008bfd440aafe57e264ad4a0485d517f8819634",
           "status": "PRESENT"
         },
         {
@@ -1222,13 +1222,13 @@
           "branch": "product/rag-enterprise-knowledge",
           "gate": {
             "conclusion": "success",
-            "head_sha": "fe36801be4a44fbf56b47c78310bd9b4bf59f664",
+            "head_sha": "44e3e8a0bf2f7b6d971962451a401ce8830c541e",
             "matches_current_head": true,
-            "run_id": 43538184380,
+            "run_id": 43540285395,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "fe36801be4a44fbf56b47c78310bd9b4bf59f664",
+          "head_sha": "44e3e8a0bf2f7b6d971962451a401ce8830c541e",
           "status": "PRESENT"
         },
         {
