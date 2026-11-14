@@ -1,10 +1,13 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
-  "regions": ["icn1"],
+  "regions": [
+    "icn1"
+  ],
   "functions": {
     "api/*.js": {
       "maxDuration": 10
     }
-  }
+  },
+  "ignoreCommand": "node ignore-build.mjs"
 }
