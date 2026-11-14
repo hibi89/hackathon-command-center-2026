@@ -1,3 +1,18 @@
+## [2026-11-14 12:56 KST] 20261114_1256KST_29_REF_DRIFT_AUDIT — 실시간 제품 원장 29건 전수 대조·예약 검증 10항
+
+1. **목표/용도·기술:** 기존 해총 `hibi89/hackathon-command-center-2026` 중앙 read-only GitHub App + `kmong-productization/data/kmong_hub_auto_observations.json` 증거 원장 + Vercel webhook + main hourly cron의 실제 제품 최신성 점검. 35repo/80refs/29제품 / 19상품 SKU 관리 구조.
+2. **완료 작업/결정:** 29개 product branch 각각 최신 GitHub branches API 독립 조회; **25 SHA 일치, 4 SHA 변경**. 오래된 제품 HEAD는 원장과 동기화 필요로 기록만 하고 관리 원장 JSON을 직접 덮어쓰지 않음. 정본 [감사 파일](docs/audits/KMONG_PRODUCT_HEAD_DRIFT_20261114_1256KST.md)에는 4개 각각 observed/current full SHA, 비교 기준·재현 절차·미검증 및 25개 일치 ID를 기록.
+3. **테스트/수량/범위:** 2026-11-14 12:54~12:56 KST 기준 29 개별 GitHub branch 조회 **29/29 성공**, 일치 **25**, 불일치 **4**, API 에러 **0**. 주말 4상품 DATA2WEB `ACTIVE-05`, DBVORA `ACTIVE-11`, Astra PDF `ACTIVE-13`, FFAX `CANDIDATE-03`은 모두 snapshot `head_sha`와 최신 HEAD가 달랐음. 공식 전체제품 100점 실증/고객 QA 아님.
+4. **완료/대기:** 자동 원장 원본 blob `17a7d39920e6a44dc6d7c5c59caa8209e28c1e95`; 마지막 실전 수집 [#43551965261](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43551965261)은 과거 `UPDATED`, 35repo/80refs/29제품, fingerprint0 (오류 아님). 변경은 이후 소스 작업 때문에 발생 가능한 일시 drift. main hourly cron 실제 `event=schedule` **0 observed** as of 12:56, 첫 대상 슬롯 13:23 KST; GitHub scheduler 지연/누락 가능.
+5. **실패 근거/Stop&Pivot:** Vercel build-rate limit로 최신 `ignoreCommand` config 미배포, 유료 Pro/새 프로젝트 생성/권한 변경 금지. 운영 웹훅 마지막 성공 `595606aa` 핵심 3개 파일 Git SHA 동일 검증. Endpoint GET200/ready, 서명된 실 webhook POST 종단·cross-instance atomic dedup 미검증. cron 미시작을 장애로 단정하지 말 것. 크몽 최종률과 증거 readiness 분리.
+6. **GitHub/브랜치/SHA·경로:** `hibi89/hackathon-command-center-2026@main:80172145b6ba75fbed4244ffa672b57e6141bf8a`, 제품운영 `kmong-productization` 감사 기록 commit `481618c7f425153f76845bdc766e19d6cb2aab8c`; 문서 이후 hub HEAD는 마지막 업데이트 뒤 확인. 신규 `docs/audits/KMONG_PRODUCT_HEAD_DRIFT_20261114_1256KST.md`, 기존 `.github/workflows/kmong-hub-sync.yml` / `tools/kmong_hub_sync/quota_guard.py`.
+7. **Production/환경/명령:** Vercel `https://kmong-hub-event-bridge.vercel.app/api/webhook`, 실제 SHA `595606aa`. GitHub Actions `main@80172145` hourly `23 * * * *`, `KMONG_SYNC_ENABLED=true` 게이트 및 App API core reserve 450. 표준 `ubuntu-latest` hosted 환경. 예약 트리거 실증 전 최초 실행 불명.
+8. **원본/보안/백업:** source 상품 코드는 read-only 검사, 고객 개인자료/서명비밀/시크릿·Vercel 설정 무변경. 원장·정식 점수·상품 등록 이력·원본25+4 모두 보존; 최초 실전 증거 [#43551965261](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43551965261)와 감사 문서 Git commit으로 복구/추적 가능. DATA2WEB 과거 승인 72/100만 이력이고 28종 공식 `UNASSESSED`, 29종 증거점수는 최종기능 완성률 아님.
+9. **다음 작업·일정/승인:** 2026-11-14 **13:40 KST 1회 자동 검증 예약 성공**(Automation ID `6af7dc52947481919eee624385f3b46b`) — `event=schedule` run과 `RUN/DEFERRED/NOT_SYNCED`, hub JSON readback, 4상품 current HEAD 교차 대조; 실제 실행 결과는 도착 전 *대기*. 그 다음 무료 범위의 Vercel 프로젝트 접근 확보 시 Project Settings Skip Deployment 여부 확인(무단 변경 금지). 상용 GO/최종률 인증 별도.
+10. **갱신 일시/확정 범위:** 2026-11-14 12:56 이후 KST, GitHub 원격 29개 live HEADs와 snapshot blob + 운영 정책 검사. 자동화 생성 결과 `success=true` 확인, 자동화 *실행* 미확인; 배포·유료비용·Git main 코드·원본 변경 없음.
+
+---
+
 ## [2026-11-14 12:46+ KST] Vercel quota 오판 교정 및 실제 Git diff 6/6 PASS — 해총 인수인계 10항
 
 1. **목표/용도·확정 요구·기술:** 무료·기존 서비스 보존 조건으로 `hibi89/hackathon-command-center-2026` 중앙 35repo/80refs/29상품 자동증거, Vercel webhook, 마지막 성공 배포 기준 빌드 제어를 검증.
