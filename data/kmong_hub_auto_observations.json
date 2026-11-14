@@ -330,15 +330,15 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "a84f018ec2b4994390860b7f2f4488f88c84c1cf",
-        "matches_current_head": false,
-        "run_id": 43551045958,
+        "head_sha": "e38ed42bba39ec17ab030052fe06ee8f53570f16",
+        "matches_current_head": true,
+        "run_id": 43554674655,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "a3975984dcb7dc1c797e17f1a6de58532f723768",
+      "head_sha": "e38ed42bba39ec17ab030052fe06ee8f53570f16",
       "machine_evidence_score": {
-        "current_head_sha": "a3975984dcb7dc1c797e17f1a6de58532f723768",
+        "current_head_sha": "e38ed42bba39ec17ab030052fe06ee8f53570f16",
         "denominator": 100,
         "limitations": "Historical approved item classifications; no fresh item-by-item CI, real-customer, rights or retail acceptance",
         "percent": 72,
@@ -373,7 +373,7 @@
           "blueprint": {
             "branch": "feature/final-blueprint-p85-evidence-20261113",
             "git_blob_sha": "c3b5a389fde981a70356f962724f1be6e26d6185",
-            "head_sha": "a3975984dcb7dc1c797e17f1a6de58532f723768",
+            "head_sha": "e38ed42bba39ec17ab030052fe06ee8f53570f16",
             "path": "docs/FINAL_DESIGN.md",
             "repository": "hibi89/data2web_studio"
           },
@@ -388,7 +388,7 @@
           "implementation": {
             "branch": "feature/final-blueprint-p85-evidence-20261113",
             "git_blob_sha": "b6ec0e4e138cbb9c38b0971c9b3f1ea309b99e9b",
-            "head_sha": "a3975984dcb7dc1c797e17f1a6de58532f723768",
+            "head_sha": "e38ed42bba39ec17ab030052fe06ee8f53570f16",
             "path": "blueprint_score.py",
             "repository": "hibi89/data2web_studio"
           }
@@ -837,13 +837,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "c9823a3d48c4c8507c8c4c61ca3328d92674b3d4",
+        "head_sha": "4731046b4a16df50f4241d4ce9d925874ee25640",
         "matches_current_head": true,
-        "run_id": 43551764567,
+        "run_id": 43553780046,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "c9823a3d48c4c8507c8c4c61ca3328d92674b3d4",
+      "head_sha": "4731046b4a16df50f4241d4ce9d925874ee25640",
       "machine_evidence_score": {
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
@@ -871,14 +871,14 @@
           "blueprint": {
             "branch": "feature/p0-db-map",
             "git_blob_sha": "8e8e61f30c504fa5fe0acbaa6c85047801e921d6",
-            "head_sha": "c9823a3d48c4c8507c8c4c61ca3328d92674b3d4",
+            "head_sha": "4731046b4a16df50f4241d4ce9d925874ee25640",
             "path": "REQUIREMENTS.md",
             "repository": "hibi89/DBVORA"
           },
           "implementation": {
             "branch": "feature/p0-db-map",
             "git_blob_sha": "81338d4c4a64d2afa36e6619f39c469e0863289f",
-            "head_sha": "c9823a3d48c4c8507c8c4c61ca3328d92674b3d4",
+            "head_sha": "4731046b4a16df50f4241d4ce9d925874ee25640",
             "path": "dbvora/api.py",
             "repository": "hibi89/DBVORA"
           }
@@ -991,13 +991,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "ed363a4f8aa0294114a1ff0ef99c3daff2f846eb",
-        "matches_current_head": true,
-        "run_id": 43551963322,
+        "head_sha": "2213e8e50759836b8c24bfbe7b037536a8fd995a",
+        "matches_current_head": false,
+        "run_id": 43553462320,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "ed363a4f8aa0294114a1ff0ef99c3daff2f846eb",
+      "head_sha": "2c01f15b244d8159cf5ab119d19b82aae7cb2269",
       "machine_evidence_score": {
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
@@ -1025,7 +1025,7 @@
           "blueprint": {
             "branch": "feature/astra-p71-pdf-source-parity-20261112",
             "git_blob_sha": "f2ce12696003fcff0ebddcd086cc2e5998a3135c",
-            "head_sha": "ed363a4f8aa0294114a1ff0ef99c3daff2f846eb",
+            "head_sha": "2c01f15b244d8159cf5ab119d19b82aae7cb2269",
             "path": "REQUIREMENTS.md",
             "repository": "hibi89/astra_pdf_redesigner"
           },
@@ -1040,7 +1040,7 @@
           "implementation": {
             "branch": "feature/astra-p71-pdf-source-parity-20261112",
             "git_blob_sha": "56b1758b06785b7fc3b629cfa06d57573cf2ddfa",
-            "head_sha": "ed363a4f8aa0294114a1ff0ef99c3daff2f846eb",
+            "head_sha": "2c01f15b244d8159cf5ab119d19b82aae7cb2269",
             "path": "src/App.tsx",
             "repository": "hibi89/astra_pdf_redesigner"
           }
@@ -1557,13 +1557,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "d47b70eab287a972772ed7e807f94586a3eae9d7",
+        "head_sha": "26dadf77c40e0a20c1bced469f8386f19d068876",
         "matches_current_head": true,
-        "run_id": 43551975355,
+        "run_id": 43553767175,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "d47b70eab287a972772ed7e807f94586a3eae9d7",
+      "head_sha": "26dadf77c40e0a20c1bced469f8386f19d068876",
       "machine_evidence_score": {
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
@@ -1591,14 +1591,14 @@
           "blueprint": {
             "branch": "feature/ffax-workbench-p85-20261112",
             "git_blob_sha": "aae8fd50cbc984dfad018d22ec7eaf3f305c80ae",
-            "head_sha": "d47b70eab287a972772ed7e807f94586a3eae9d7",
+            "head_sha": "26dadf77c40e0a20c1bced469f8386f19d068876",
             "path": "docs/ACCEPTANCE_MATRIX.md",
             "repository": "hibi89/frontend-foundry-ax"
           },
           "implementation": {
             "branch": "feature/ffax-workbench-p85-20261112",
             "git_blob_sha": "91519fffbc457a8019a62c3bb3a971f51be81383",
-            "head_sha": "d47b70eab287a972772ed7e807f94586a3eae9d7",
+            "head_sha": "26dadf77c40e0a20c1bced469f8386f19d068876",
             "path": "src/core.mjs",
             "repository": "hibi89/frontend-foundry-ax"
           }
@@ -2473,13 +2473,13 @@
           "branch": "feature/astra-p71-pdf-source-parity-20261112",
           "gate": {
             "conclusion": "success",
-            "head_sha": "ed363a4f8aa0294114a1ff0ef99c3daff2f846eb",
-            "matches_current_head": true,
-            "run_id": 43551963322,
+            "head_sha": "2213e8e50759836b8c24bfbe7b037536a8fd995a",
+            "matches_current_head": false,
+            "run_id": 43553462320,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "ed363a4f8aa0294114a1ff0ef99c3daff2f846eb",
+          "head_sha": "2c01f15b244d8159cf5ab119d19b82aae7cb2269",
           "status": "PRESENT"
         },
         {
@@ -2669,13 +2669,13 @@
           "branch": "feature/final-blueprint-p85-evidence-20261113",
           "gate": {
             "conclusion": "success",
-            "head_sha": "a84f018ec2b4994390860b7f2f4488f88c84c1cf",
-            "matches_current_head": false,
-            "run_id": 43551045958,
+            "head_sha": "e38ed42bba39ec17ab030052fe06ee8f53570f16",
+            "matches_current_head": true,
+            "run_id": 43554674655,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "a3975984dcb7dc1c797e17f1a6de58532f723768",
+          "head_sha": "e38ed42bba39ec17ab030052fe06ee8f53570f16",
           "status": "PRESENT"
         },
         {
@@ -2731,13 +2731,13 @@
           "branch": "feature/p0-db-map",
           "gate": {
             "conclusion": "success",
-            "head_sha": "c9823a3d48c4c8507c8c4c61ca3328d92674b3d4",
+            "head_sha": "4731046b4a16df50f4241d4ce9d925874ee25640",
             "matches_current_head": true,
-            "run_id": 43551764567,
+            "run_id": 43553780046,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "c9823a3d48c4c8507c8c4c61ca3328d92674b3d4",
+          "head_sha": "4731046b4a16df50f4241d4ce9d925874ee25640",
           "status": "PRESENT"
         }
       ]
@@ -2976,13 +2976,13 @@
           "branch": "feature/ffax-workbench-p85-20261112",
           "gate": {
             "conclusion": "success",
-            "head_sha": "d47b70eab287a972772ed7e807f94586a3eae9d7",
+            "head_sha": "26dadf77c40e0a20c1bced469f8386f19d068876",
             "matches_current_head": true,
-            "run_id": 43551975355,
+            "run_id": 43553767175,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "d47b70eab287a972772ed7e807f94586a3eae9d7",
+          "head_sha": "26dadf77c40e0a20c1bced469f8386f19d068876",
           "status": "PRESENT"
         }
       ]
@@ -3012,7 +3012,7 @@
     {
       "canonical": {
         "expected_git_blob_sha": "521ba0cb458bea384639a0ef897ce7500d33b8f1",
-        "head_sha": "595606aa49603644666353281d6c67d1b3763ecc",
+        "head_sha": "80172145b6ba75fbed4244ffa672b57e6141bf8a",
         "mode": "observe",
         "observed_git_blob_sha": "521ba0cb458bea384639a0ef897ce7500d33b8f1",
         "owner_approval_verified": false,
@@ -3024,13 +3024,13 @@
         "branch": "main",
         "gate": {
           "conclusion": "success",
-          "head_sha": "595606aa49603644666353281d6c67d1b3763ecc",
+          "head_sha": "80172145b6ba75fbed4244ffa672b57e6141bf8a",
           "matches_current_head": true,
-          "run_id": 43551337278,
+          "run_id": 43552676806,
           "status": "LATEST_RUN",
           "workflow_status": "completed"
         },
-        "head_sha": "595606aa49603644666353281d6c67d1b3763ecc",
+        "head_sha": "80172145b6ba75fbed4244ffa672b57e6141bf8a",
         "status": "PRESENT"
       },
       "repository": "hibi89/hackathon-command-center-2026",
