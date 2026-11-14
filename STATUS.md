@@ -1,3 +1,5 @@
+> **[2026-11-14 KST · 29종 GitHub 증거 준비도 점수 전수 산정(일회 감사, 공식 최종률 아님)]** 사용자 요구에 따라 [숫자 점수표 29건](docs/audits/KMONG_29_PROVISIONAL_EVIDENCE_SCORES_20261114.md) + [per-item breakdown 원장](data/kmong_29_provisional_evidence_scores_20261114.json) 새로 저장. 100점 동일 메타데이터/CI/포장·부정테스트·실구매자·권리의 **증거 확보 지표**는 90점11/80점8/70점1/40점8/10점1. 기존 작업자 보고16종과 DATA2WEB 공식72는 다른 열로 유지, 28종 공식 최종설계률은 미산정 유지. 코드 `main@7adc49ac00be13adc1580573166fe5a70e32f80e`; GitHub-hosted 회귀 **49/49 PASS** (정정 전 48/49·합성 예상값 오기), 자동 CI `Kmong hub cross-repository evidence sync`는 **GET 403 BLOCKED**(기존 구 SHA에서도 같은 장애 관측), 따라서 이번 29개 스냅샷은 **ChatGPT GitHub 커넥터 직접 조회/1회 계산**이고 실 App의 새 live snapshot 성공이 아님. FlowPilot Universal↔해커톤, WORKNOVA Desk↔PayPal 등 옛 중앙 매핑 오류 별도 경고. 제품 소스·중앙 공식 점수/서비스19·등록완료/[작업중]·RELEASE HOLD·권한/키/프로덕션 수정0.
+
 ## [2026-11-14 KST] BID AX 사용자 Windows 안내 경로 표기 정정
 
 - 기존 검증 기능 SHA `3008bfd440aafe57e264ad4a0485d517f8819634`, CI #43540224552 5/5 SUCCESS·276테스트 불변. 제품 최종 문서 HEAD `6e644ce44c3e026882f9daf2dae7fd245a768658` (Windows PowerShell 경로의 중복 역슬래시 표기만 정리). 공식 R01–R29/UNASSESSED/[작업중]/출시 HOLD 불변.
