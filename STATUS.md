@@ -1,3 +1,9 @@
+## [2026-11-14 KST] GPT 계열만 활용하는 29→19 크몽 개발·검수·디자인·상품화·등록 표준 도입
+
+- 사용자 지시로 **비-GPT 모델(Fable 등)을 신규 실행 담당에서 제외**하고 7단계 분업 표준 확정: Sol High 웹 개발 및 요구 전범위 기술 검증 → Codex Sol Max 독립 감사 → Sol 감사 합의·수정 → Astra Max 시각 디자인 시안(미가용 시 Sol) → Codex Sol Max 최소변경 UI 실제 구현 → Sol 최종 상품 전체 인수/권리/고객·실서비스 점검·소유자 GO → Luna 허가된 크몽 게시 초안/자동 등록 보조.
+- 전략 정본 [`docs/strategy/KMONG_GPT_ONLY_P100_DESIGN_AUDIT_LISTING_PROTOCOL_20261114.md`](docs/strategy/KMONG_GPT_ONLY_P100_DESIGN_AUDIT_LISTING_PROTOCOL_20261114.md). **GPT 모델 사용 가능 여부·크몽 외부 연결/등록 도구는 미검증**, 실제 실행·제품 소스/테스트/CI·디자인·상품 게시·계정/가격·권한 변경 **0건**.
+- 제품별 승인 설계 요구 전부+디자인·법적 권리·납품/고객 수용을 충족해야 공식 최종완성률 100/100. 과거 내부 95/85(공식 수치 아님)·DATA2WEB 고정 72점·`UNASSESSED`·`RELEASE HOLD`·`[작업중]`/`[사용자 개입 필요]`·크몽 게시 이력·19개 서비스 카탈로그 기존 상태 전부 보존.
+
 ## [2026-11-14 KST] WORKNOVA Desk Windows EXE 3차 cold GUI reopen 기존 거래처 보존 PASS
 
 - 사용자 실제 Win10.0.26200에서 동일 합성 QA `$psi2` (자식 `LOCALAPPDATA=$qaRoot`)로 EXE **세 번째 프로세스 실행** 후 GUI 기존 테스트 거래처 `WORKNOVA_QA_TEST_01`이 “그대로있더라”는 현장 확인, X 종료 `ExitCode:0`. 이전 EXE 두 번째 기동의 GUI 신규 거래처 1건→SQLite `SyntheticCustomerCount:1` 및 `integrity_check:ok`와 연결, **GUI 실사용 저장→재시작 기존 행 복원 PASS**. 3차 GUI 스크린샷이나 별도 SQL 재검증은 받지 않아 사용자 직접 시각 증거로 한정. [제품 증거](https://github.com/hibi89/Freelancer/blob/product/worknova-desk-local/docs/P85_WINDOWS_EXE_BUILD_RESULT_20261114.md), 제품 HEAD `0c817f35289b3c932778640cfc6b304159d97bfa`.

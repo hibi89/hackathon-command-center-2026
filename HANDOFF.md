@@ -1,3 +1,16 @@
+## [2026-11-14 KST] GPT-only 크몽 최종 100/디자인/등록 운영 원칙 인수인계 (10항)
+
+1. **목표·기술·확정 요구:** 사용자 지시대로 GPT 계열만 사용한 최종설계 100점 개발/검수/디자인/상품화/크몽 자동 등록 보조. 신규 담당 작업에서 Fable 등 비-GPT 제외. 원천29와 크몽 서비스19, 내부 플랫폼은 기존 정본 보존.
+2. **변경/선택 근거:** Sol High 웹 코드·정본 검증 → Codex GPT-6.1 Sol Max 독립 감사 → Sol 수정·합의 → GPT-6 Astra Max UI 시안(미가용 시 Sol High) → Codex Sol Max UI 통합/회귀 → Sol 전체 상용 게이트/소유자 승인 → GPT-6 Luna 허가된 크몽 초안/게시 보조. 대안 단일 모델 자기 검수·즉시 게시와 비교해 독립 회귀/원본 보존 기본 선택.
+3. **테스트/검증:** 이번은 전략·운영 문서 GitHub 저장/readback만. 코드 기능/CI/디자인/브라우저/실기기/고객 수용/크몽 외부 자동등록 **NOT_RUN**. 각 모델 실제 접근/크몽 연결 여부 **UNVERIFIED**. 모델 이름은 사용자 계획 라벨로만 기록.
+4. **완료/진행/대기:** 운영 프로토콜 등록 완료, 29개 공식 최종100 미인증·출시/판매 `RELEASE HOLD`; 제품별 `UNASSESSED`, DATA2WEB 승인72점 등 이전 실제 점수·[작업중]/[사용자 개입 필요] 보존. `등록완료`는 게시 URL·일자 실증 후에만.
+5. **오류/대안/금지:** 기능 P100은 상품 전체 P100 아님. 화면만 구현·테스트 통과만으로 소유자 인수 불가. GPT 모델 미제공 시 실제 사용 가능한 Sol High로 제한/별도 사용자 결정. Fable 관련 과거 기존 제품 기능·브랜치 임의 삭제·재작성 금지. 게시 툴/권한 부족 시 DRAFT_READY로 중단하고 수동 입력 또는 승인된 도구 선택, 비인가 자동화/인증 우회 금지.
+6. **저장소·브랜치·SHA·경로:** `hibi89/hackathon-command-center-2026@kmong-productization`; [전략 정본](docs/strategy/KMONG_GPT_ONLY_P100_DESIGN_AUDIT_LISTING_PROTOCOL_20261114.md), AGENTS/STATUS/HANDOFF 및 기존 Sol Ultra 세부 감사 문서. 문서 이전 원격 HEAD `da43d04845eddc66b378edca9dcced1b8c6b725c`; 최종 작성 커밋 후 HEAD 재조회.
+7. **Production/환경:** GitHub 문서 변경만. Vercel Production·디자인 preview·제품 Windows EXE/웹 상품 Production 운영은 이번 작업 `미적용`/실행 없음. 외부 API·유료 호출/권한·가격·실게시 실행 없음.
+8. **원본/백업/인증:** 이전 브랜치 HEAD `da43d04845eddc66b378edca9dcced1b8c6b725c`로 문서 복구 가능. 29제품 원본/19서비스 매핑·상품 등록 이력·사용자 데이터·시크릿/라이선스/소스/보호 규칙 모두 불변.
+9. **다음 작업 우선순위:** 상품별 최신 GitHub HEAD/설계 기준 100점/REQ 추적표 → 실제 Sol 기능 구현/테스트 → Codex 독립 리뷰 → Sol 수정 → GPT 디자인 선택 → Codex 최소 diff UI → 고객·권리/지원/상업 수용 → 소유자 GO → Luna 등록 가능 도구 탐색 및 게시 확인. 완료 요건은 원본+CI/실서비스 SHA 일치, 실제 지원 OS/브라우저·고객 수용, 보안/법무/권리 통과, 게시 URL 실증.
+10. **갱신 일시·검증 범위:** 2026-11-14 KST, 사용자 모델만 GPT로 제한한 신규 운영 절차 문서 반영. 실 독립 모델 호출, 비용·고객 데이터 변경, Production·크몽 등록은 미실행. 문서 커밋/변경 파일 정확 SHA readback 확인 후 인수인계 유효.
+
 ## [2026-11-14 KST] WORKNOVA Desk Windows EXE 세 번째 실행 거래처 GUI 재표시 — 중앙 인수인계 10항
 
 1. **목표·용도·기술·요구:** 로컬 오프라인 Windows EXE/Tk/SQLite 견적·계약·납품·수금, 사용자 승인 WD01~14 총100점 완전 고객수용85점 목표.
