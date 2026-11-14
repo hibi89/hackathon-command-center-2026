@@ -1,3 +1,16 @@
+## [2026-11-14 KST] WORKNOVA Desk 무료 공개 CI·EXE GUI 자동 스모크 — 중앙 10항
+
+1. 목표/기술: 승인 WD01~14 총100점, 최종 구매자 인수 ≥85점 목표, Windows Tk/SQLite 로컬 오프라인 견적·계약·납품·수금.
+2. 완료/설계 선택: 사용자 Win EXE 반복 수동 검증 부담 해소. 공개 저장소 무료 standard Ubuntu/Windows runner+Python unittest·native Windows package/GUI 자동화 우선(A), 계속 수동(B)/유료 runner(C)보다 비용·유지보수 유리. Workflow .github/workflows/worknova-desk-qa.yml, 신규 tools/windows_exe_smoke.py, 기작성 tests/test_unattended_business_lifecycle.py 2종. OS·앱 코어/고객 DB 불변.
+3. 검증/미검증: GitHub Workflow/스크립트 readback PASS, Windows smoke Git blob SHA 84a2308b6551fd9373a974f94e7ed7323157f5e8 로컬 파일 동일·Python compile/AST PASS, Linux 플랫폼 가드 exit3 PASS. Workflow는 Ubuntu/Windows unittest+Windows 원본 합성11항/EXE build+SHA+임시 SQLite Tk GUI 자동 WM_CLOSE를 수행하도록 작성. GitHub Actions **실제 push runner 결과/성공, 신규 core unittest 2종 실제 실행 NOT_VERIFIED**(현재 커넥터 push run/Checks list 미지원).
+4. 상태: 이전 사용자 실 Win onedir EXE·GUI·합성 거래처 DB 저장/재실행 PASS 증거 유지, 공식 고정100점 전체 구매자 완전수용 인정0/100(구현률0 아님), 목표85 미달. [작업중]/RELEASE HOLD/크몽 미등록.
+5. 오류/원인/금지/대안: 과거 ZIP 중첩 폴더·PYTHONNOUSERSITE user 설치 가림 수정됨. 새 CI 실패 확인 근거 없음, legacy commit statuses0/PR-filtered workflow0은 성공/실패 판단 불가. 빈 커밋 재시도·유료러너·권한상향·체크 무시 금지. 필요한 경우 Work 브라우저/사용 가능한 read-only Actions Run 조회로 결과 확보.
+6. 저장소·브랜치·SHA: 제품 hibi89/Freelancer@product/worknova-desk-local c6f455b5e465b1db418411f539687bd82d123403; 신규 Workflow .github/workflows/worknova-desk-qa.yml, tools/windows_exe_smoke.py blob SHA 84a2308b6551fd9373a974f94e7ed7323157f5e8. 중앙 docs/audits/KMONG_16_CURRENT_20261111.md WORKNOVA 한 행 갱신 commit 627fa9890b6a26e55a18623687a00e3ea4f2e47b.
+7. 배포/URL·환경: Vercel Production N/A, 공개 저장소 GitHub hosted standard 무료(official 2026 docs), Windows unsigned candidate BUILD/HOLD, 임시 runner TEMP만, 아티팩트 업로드 없음. 사용자 실제 EXE는 소유자 PC TEMP.
+8. 원본·백업·인증: 실제 고객 DB/백업·운영 LOCALAPPDATA·PayPal 원본·Freelancer main·다른 상품·등록완료 기록/OS ACL/서명키 미변경. GITHUB_TOKEN contents:read, CI PyPI 공개 무료 빌드도구 다운로드 외 고객/민감 데이터 외부 전송 없음.
+9. 다음 우선/완료·승인: push Actions run과 job log 실제 확인→실 실패 시 최소 수정→WD13 설치/ACL·활성 DB 암호화·서명 및 WD14 실고객·법률/권리·지원 등 사용자 개입 필요 게이트 모아서 처리. WD13·WD14 모두 미완료면 최대84점; WD 전체 완전 PASS 배점합>=85 및 필수 보안 승인까지 완료 선언 금지.
+10. 갱신 KST·검증 범위: 2026-11-14 KST, GitHub 자동화 원본/로컬 smoke syntax만 검증, CI runner SUCCESS는 미확인. 중앙 최종 HEAD 본 갱신 후 조회.
+
 ## [2026-11-14 KST] WORKNOVA Desk 무인 자동 소스 QA 우선 전환 — 중앙 인수인계 10항
 
 1. **목표/용도/승인기술:** Windows 오프라인 견적→계약→납품/수금 Tk/SQLite EXE, 사용자 승인 WD01~14 총100점 중 완전 고객수용85점 목표.
