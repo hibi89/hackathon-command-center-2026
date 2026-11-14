@@ -330,15 +330,15 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "e38ed42bba39ec17ab030052fe06ee8f53570f16",
-        "matches_current_head": true,
-        "run_id": 43554674655,
+        "head_sha": "d5c09f07d6e0d7173c6e9babb8bb0765a019ab85",
+        "matches_current_head": false,
+        "run_id": 43556541144,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "e38ed42bba39ec17ab030052fe06ee8f53570f16",
+      "head_sha": "dc9648c4c3bbbc5f1be8d0241c94bec1b879b43b",
       "machine_evidence_score": {
-        "current_head_sha": "e38ed42bba39ec17ab030052fe06ee8f53570f16",
+        "current_head_sha": "dc9648c4c3bbbc5f1be8d0241c94bec1b879b43b",
         "denominator": 100,
         "limitations": "Historical approved item classifications; no fresh item-by-item CI, real-customer, rights or retail acceptance",
         "percent": 72,
@@ -373,7 +373,7 @@
           "blueprint": {
             "branch": "feature/final-blueprint-p85-evidence-20261113",
             "git_blob_sha": "c3b5a389fde981a70356f962724f1be6e26d6185",
-            "head_sha": "e38ed42bba39ec17ab030052fe06ee8f53570f16",
+            "head_sha": "dc9648c4c3bbbc5f1be8d0241c94bec1b879b43b",
             "path": "docs/FINAL_DESIGN.md",
             "repository": "hibi89/data2web_studio"
           },
@@ -388,7 +388,7 @@
           "implementation": {
             "branch": "feature/final-blueprint-p85-evidence-20261113",
             "git_blob_sha": "b6ec0e4e138cbb9c38b0971c9b3f1ea309b99e9b",
-            "head_sha": "e38ed42bba39ec17ab030052fe06ee8f53570f16",
+            "head_sha": "dc9648c4c3bbbc5f1be8d0241c94bec1b879b43b",
             "path": "blueprint_score.py",
             "repository": "hibi89/data2web_studio"
           }
@@ -837,13 +837,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "4731046b4a16df50f4241d4ce9d925874ee25640",
+        "head_sha": "13773f2086edb89f78bd247ac7b228cb045b78bb",
         "matches_current_head": true,
-        "run_id": 43553780046,
+        "run_id": 43555506564,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "4731046b4a16df50f4241d4ce9d925874ee25640",
+      "head_sha": "13773f2086edb89f78bd247ac7b228cb045b78bb",
       "machine_evidence_score": {
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
@@ -871,14 +871,14 @@
           "blueprint": {
             "branch": "feature/p0-db-map",
             "git_blob_sha": "8e8e61f30c504fa5fe0acbaa6c85047801e921d6",
-            "head_sha": "4731046b4a16df50f4241d4ce9d925874ee25640",
+            "head_sha": "13773f2086edb89f78bd247ac7b228cb045b78bb",
             "path": "REQUIREMENTS.md",
             "repository": "hibi89/DBVORA"
           },
           "implementation": {
             "branch": "feature/p0-db-map",
             "git_blob_sha": "81338d4c4a64d2afa36e6619f39c469e0863289f",
-            "head_sha": "4731046b4a16df50f4241d4ce9d925874ee25640",
+            "head_sha": "13773f2086edb89f78bd247ac7b228cb045b78bb",
             "path": "dbvora/api.py",
             "repository": "hibi89/DBVORA"
           }
@@ -1557,13 +1557,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "26dadf77c40e0a20c1bced469f8386f19d068876",
+        "head_sha": "bdbbf0bbd2d8dcf1f53ac513e44522a47214a342",
         "matches_current_head": true,
-        "run_id": 43553767175,
+        "run_id": 43556707861,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "26dadf77c40e0a20c1bced469f8386f19d068876",
+      "head_sha": "bdbbf0bbd2d8dcf1f53ac513e44522a47214a342",
       "machine_evidence_score": {
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
@@ -1591,14 +1591,14 @@
           "blueprint": {
             "branch": "feature/ffax-workbench-p85-20261112",
             "git_blob_sha": "aae8fd50cbc984dfad018d22ec7eaf3f305c80ae",
-            "head_sha": "26dadf77c40e0a20c1bced469f8386f19d068876",
+            "head_sha": "bdbbf0bbd2d8dcf1f53ac513e44522a47214a342",
             "path": "docs/ACCEPTANCE_MATRIX.md",
             "repository": "hibi89/frontend-foundry-ax"
           },
           "implementation": {
             "branch": "feature/ffax-workbench-p85-20261112",
-            "git_blob_sha": "91519fffbc457a8019a62c3bb3a971f51be81383",
-            "head_sha": "26dadf77c40e0a20c1bced469f8386f19d068876",
+            "git_blob_sha": "036d0726c18b5f1897b1523966a8b81eb34c97b8",
+            "head_sha": "bdbbf0bbd2d8dcf1f53ac513e44522a47214a342",
             "path": "src/core.mjs",
             "repository": "hibi89/frontend-foundry-ax"
           }
@@ -2669,13 +2669,13 @@
           "branch": "feature/final-blueprint-p85-evidence-20261113",
           "gate": {
             "conclusion": "success",
-            "head_sha": "e38ed42bba39ec17ab030052fe06ee8f53570f16",
-            "matches_current_head": true,
-            "run_id": 43554674655,
+            "head_sha": "d5c09f07d6e0d7173c6e9babb8bb0765a019ab85",
+            "matches_current_head": false,
+            "run_id": 43556541144,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "e38ed42bba39ec17ab030052fe06ee8f53570f16",
+          "head_sha": "dc9648c4c3bbbc5f1be8d0241c94bec1b879b43b",
           "status": "PRESENT"
         },
         {
@@ -2731,13 +2731,13 @@
           "branch": "feature/p0-db-map",
           "gate": {
             "conclusion": "success",
-            "head_sha": "4731046b4a16df50f4241d4ce9d925874ee25640",
+            "head_sha": "13773f2086edb89f78bd247ac7b228cb045b78bb",
             "matches_current_head": true,
-            "run_id": 43553780046,
+            "run_id": 43555506564,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "4731046b4a16df50f4241d4ce9d925874ee25640",
+          "head_sha": "13773f2086edb89f78bd247ac7b228cb045b78bb",
           "status": "PRESENT"
         }
       ]
@@ -2976,13 +2976,13 @@
           "branch": "feature/ffax-workbench-p85-20261112",
           "gate": {
             "conclusion": "success",
-            "head_sha": "26dadf77c40e0a20c1bced469f8386f19d068876",
+            "head_sha": "bdbbf0bbd2d8dcf1f53ac513e44522a47214a342",
             "matches_current_head": true,
-            "run_id": 43553767175,
+            "run_id": 43556707861,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "26dadf77c40e0a20c1bced469f8386f19d068876",
+          "head_sha": "bdbbf0bbd2d8dcf1f53ac513e44522a47214a342",
           "status": "PRESENT"
         }
       ]
