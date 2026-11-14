@@ -1,0 +1,1089 @@
+{
+  "schema_version": 1,
+  "kind": "ONE_TIME_GITHUB_CONNECTOR_EVIDENCE_AUDIT",
+  "as_of_kst": "2026-11-14",
+  "origin_main_scoring_commit": "7adc49ac00be13adc1580573166fe5a70e32f80e",
+  "source_snapshot_scope": "GitHub source HEAD trees, documented native test scopes, reviewed exact run IDs and job outcomes inspected in this conversation",
+  "rubric": "GITHUB_EVIDENCE_READINESS_V1",
+  "weights": {
+    "linked_product_ref": 10,
+    "product_blueprint_file": 10,
+    "implementation_file": 10,
+    "documented_scoped_tests": 10,
+    "successful_pinned_functional_ci": 20,
+    "linux_and_windows_jobs": 10,
+    "documented_ci_packaging": 10,
+    "documented_ci_negative_tests": 10,
+    "physical_buyer_os_acceptance": 5,
+    "rights_and_owner_sale_go": 5
+  },
+  "summary": {
+    "count": 29,
+    "worker_reported": 16,
+    "github_evidence_score_count": 29,
+    "official_numeric": 1,
+    "score_bands": {
+      "10": 1,
+      "40": 8,
+      "70": 1,
+      "80": 8,
+      "90": 11
+    }
+  },
+  "limitations": [
+    "NOT official final blueprint completion",
+    "NOT current worker auto report",
+    "NOT live GitHub App snapshot; actual live sync 403 blocked",
+    "Historical successful SHA can differ from current source HEAD",
+    "CI failure earns zero CI, package and negative points",
+    "Buyer and commercial rights unverified; no automatic release permission",
+    "Original 29/19 official product index and sale HOLD unchanged"
+  ],
+  "records": [
+    {
+      "record_id": "ACTIVE-03",
+      "product": "AI Code Checker",
+      "phase": "active",
+      "worker_historical_percent": 95,
+      "github_evidence_readiness_score": 90,
+      "official_final_completion": "UNASSESSED",
+      "breakdown": {
+        "linked_product_ref": 10,
+        "product_blueprint_file": 10,
+        "implementation_file": 10,
+        "documented_scoped_tests": 10,
+        "successful_pinned_functional_ci": 20,
+        "linux_and_windows_jobs": 10,
+        "documented_ci_packaging": 10,
+        "documented_ci_negative_tests": 10,
+        "physical_buyer_os_acceptance": 0,
+        "rights_and_owner_sale_go": 0
+      },
+      "primary_source": {
+        "repo": "hibi89/ai-code-checker",
+        "branch": "feature/retail-private-candidate-20261112",
+        "path": "scripts/ci_real_frozen_notice_review.py"
+      },
+      "blueprint": {
+        "repo": "hibi89/ai-code-checker",
+        "branch": "feature/retail-private-candidate-20261112",
+        "path": "FINAL_PRODUCT_BLUEPRINT.md"
+      },
+      "functional_ci": {
+        "repository": "hibi89/ai-code-checker",
+        "run_id": 43226330001,
+        "head_sha": "ec83e83e5a0becc6e9fde61b6e2970d773633e01",
+        "conclusion": "success"
+      },
+      "warnings": []
+    },
+    {
+      "record_id": "ACTIVE-05",
+      "product": "DATA2WEB Studio",
+      "phase": "active",
+      "worker_historical_percent": null,
+      "github_evidence_readiness_score": 90,
+      "official_final_completion": "72%",
+      "breakdown": {
+        "linked_product_ref": 10,
+        "product_blueprint_file": 10,
+        "implementation_file": 10,
+        "documented_scoped_tests": 10,
+        "successful_pinned_functional_ci": 20,
+        "linux_and_windows_jobs": 10,
+        "documented_ci_packaging": 10,
+        "documented_ci_negative_tests": 10,
+        "physical_buyer_os_acceptance": 0,
+        "rights_and_owner_sale_go": 0
+      },
+      "primary_source": {
+        "repo": "hibi89/data2web_studio",
+        "branch": "feature/final-blueprint-p85-evidence-20261113",
+        "path": "blueprint_score.py"
+      },
+      "blueprint": {
+        "repo": "hibi89/data2web_studio",
+        "branch": "feature/final-blueprint-p85-evidence-20261113",
+        "path": "docs/FINAL_DESIGN.md"
+      },
+      "functional_ci": {
+        "repository": "hibi89/data2web_studio",
+        "run_id": 43538001797,
+        "head_sha": "d7e029ae838a15f6f7a952cdf920341a6e3ad6b0",
+        "conclusion": "success"
+      },
+      "warnings": []
+    },
+    {
+      "record_id": "ACTIVE-07",
+      "product": "SOVIA",
+      "phase": "active",
+      "worker_historical_percent": 95,
+      "github_evidence_readiness_score": 90,
+      "official_final_completion": "UNASSESSED",
+      "breakdown": {
+        "linked_product_ref": 10,
+        "product_blueprint_file": 10,
+        "implementation_file": 10,
+        "documented_scoped_tests": 10,
+        "successful_pinned_functional_ci": 20,
+        "linux_and_windows_jobs": 10,
+        "documented_ci_packaging": 10,
+        "documented_ci_negative_tests": 10,
+        "physical_buyer_os_acceptance": 0,
+        "rights_and_owner_sale_go": 0
+      },
+      "primary_source": {
+        "repo": "hibi89/SOVIA_sovereign",
+        "branch": "feature/kmong-la-review-p2-20261112",
+        "path": "sovia_la_minimal_projection.py"
+      },
+      "blueprint": {
+        "repo": "hibi89/SOVIA_sovereign",
+        "branch": "feature/kmong-la-review-p2-20261112",
+        "path": "REQUIREMENTS.md"
+      },
+      "functional_ci": {
+        "repository": "hibi89/SOVIA_sovereign",
+        "run_id": 43214296725,
+        "head_sha": "a6991d062e657073fd5c5df077c87db9aa390515",
+        "conclusion": "success"
+      },
+      "warnings": []
+    },
+    {
+      "record_id": "ACTIVE-08",
+      "product": "AI AutoML Analyst",
+      "phase": "active",
+      "worker_historical_percent": 95,
+      "github_evidence_readiness_score": 90,
+      "official_final_completion": "UNASSESSED",
+      "breakdown": {
+        "linked_product_ref": 10,
+        "product_blueprint_file": 10,
+        "implementation_file": 10,
+        "documented_scoped_tests": 10,
+        "successful_pinned_functional_ci": 20,
+        "linux_and_windows_jobs": 10,
+        "documented_ci_packaging": 10,
+        "documented_ci_negative_tests": 10,
+        "physical_buyer_os_acceptance": 0,
+        "rights_and_owner_sale_go": 0
+      },
+      "primary_source": {
+        "repo": "hibi89/AI_AutoML_Analyst",
+        "branch": "feature/kmong-p6e50-owner-delivery-20261112",
+        "path": "scripts/p6e50_owner_zip_review.py"
+      },
+      "blueprint": {
+        "repo": "hibi89/AI_AutoML_Analyst",
+        "branch": "feature/kmong-p6e50-owner-delivery-20261112",
+        "path": "REQUIREMENTS.md"
+      },
+      "functional_ci": {
+        "repository": "hibi89/AI_AutoML_Analyst",
+        "run_id": 43226903380,
+        "head_sha": "458cf43816d3fa581a7c9e5c53399936c1933ede",
+        "conclusion": "success"
+      },
+      "warnings": []
+    },
+    {
+      "record_id": "CANDIDATE-01",
+      "product": "KUODRA",
+      "phase": "candidate",
+      "worker_historical_percent": null,
+      "github_evidence_readiness_score": 90,
+      "official_final_completion": "UNASSESSED",
+      "breakdown": {
+        "linked_product_ref": 10,
+        "product_blueprint_file": 10,
+        "implementation_file": 10,
+        "documented_scoped_tests": 10,
+        "successful_pinned_functional_ci": 20,
+        "linux_and_windows_jobs": 10,
+        "documented_ci_packaging": 10,
+        "documented_ci_negative_tests": 10,
+        "physical_buyer_os_acceptance": 0,
+        "rights_and_owner_sale_go": 0
+      },
+      "primary_source": {
+        "repo": "hibi89/KUODRA",
+        "branch": "develop",
+        "path": "kuodra/gui.py"
+      },
+      "blueprint": {
+        "repo": "hibi89/KUODRA",
+        "branch": "develop",
+        "path": "REQUIREMENTS.md"
+      },
+      "functional_ci": {
+        "repository": "hibi89/KUODRA",
+        "run_id": 43302772793,
+        "head_sha": "49d78a013ad51495d8facc0d82e3c2103a2ae99d",
+        "conclusion": "success"
+      },
+      "warnings": [
+        "CI_FROM_HISTORICAL_OTHER_BRANCH"
+      ]
+    },
+    {
+      "record_id": "CANDIDATE-04",
+      "product": "Factory AX 전체",
+      "phase": "candidate",
+      "worker_historical_percent": null,
+      "github_evidence_readiness_score": 90,
+      "official_final_completion": "UNASSESSED",
+      "breakdown": {
+        "linked_product_ref": 10,
+        "product_blueprint_file": 10,
+        "implementation_file": 10,
+        "documented_scoped_tests": 10,
+        "successful_pinned_functional_ci": 20,
+        "linux_and_windows_jobs": 10,
+        "documented_ci_packaging": 10,
+        "documented_ci_negative_tests": 10,
+        "physical_buyer_os_acceptance": 0,
+        "rights_and_owner_sale_go": 0
+      },
+      "primary_source": {
+        "repo": "hibi89/factory-ax-ecosystem",
+        "branch": "feature/data-verify",
+        "path": "factoryax/gui.py"
+      },
+      "blueprint": {
+        "repo": "hibi89/factory-ax-ecosystem",
+        "branch": "feature/data-verify",
+        "path": "REQUIREMENTS.md"
+      },
+      "functional_ci": {
+        "repository": "hibi89/factory-ax-ecosystem",
+        "run_id": 43178583600,
+        "head_sha": "b70a059175389bf53d87f8c90dc4f5bbe6a97986",
+        "conclusion": "success"
+      },
+      "warnings": []
+    },
+    {
+      "record_id": "CANDIDATE-06",
+      "product": "CITEVAULT AX",
+      "phase": "candidate",
+      "worker_historical_percent": null,
+      "github_evidence_readiness_score": 90,
+      "official_final_completion": "UNASSESSED",
+      "breakdown": {
+        "linked_product_ref": 10,
+        "product_blueprint_file": 10,
+        "implementation_file": 10,
+        "documented_scoped_tests": 10,
+        "successful_pinned_functional_ci": 20,
+        "linux_and_windows_jobs": 10,
+        "documented_ci_packaging": 10,
+        "documented_ci_negative_tests": 10,
+        "physical_buyer_os_acceptance": 0,
+        "rights_and_owner_sale_go": 0
+      },
+      "primary_source": {
+        "repo": "hibi89/Freelancer",
+        "branch": "product/rag-enterprise-knowledge",
+        "path": "enterprise/p85-korean-model-preflight.mjs"
+      },
+      "blueprint": {
+        "repo": "hibi89/Freelancer",
+        "branch": "product/rag-enterprise-knowledge",
+        "path": "docs/FINAL_BLUEPRINT.md"
+      },
+      "functional_ci": {
+        "repository": "hibi89/Freelancer",
+        "run_id": 43537747863,
+        "head_sha": "f4f5f088b9fb2d89937c825445c035d1a4da0ca2",
+        "conclusion": "success"
+      },
+      "warnings": []
+    },
+    {
+      "record_id": "CANDIDATE-08",
+      "product": "PROOFQA AX",
+      "phase": "candidate",
+      "worker_historical_percent": null,
+      "github_evidence_readiness_score": 90,
+      "official_final_completion": "UNASSESSED",
+      "breakdown": {
+        "linked_product_ref": 10,
+        "product_blueprint_file": 10,
+        "implementation_file": 10,
+        "documented_scoped_tests": 10,
+        "successful_pinned_functional_ci": 20,
+        "linux_and_windows_jobs": 10,
+        "documented_ci_packaging": 10,
+        "documented_ci_negative_tests": 10,
+        "physical_buyer_os_acceptance": 0,
+        "rights_and_owner_sale_go": 0
+      },
+      "primary_source": {
+        "repo": "hibi89/ai-code-checker",
+        "branch": "feature/proofqa-ax-p85-independent-audit",
+        "path": "proofqa_p85.py"
+      },
+      "blueprint": {
+        "repo": "hibi89/Freelancer",
+        "branch": "product/proofqa-ax-delivery-audit",
+        "path": "docs/FINAL_BLUEPRINT.md"
+      },
+      "functional_ci": {
+        "repository": "hibi89/ai-code-checker",
+        "run_id": 43383627492,
+        "head_sha": "5bce80a870d46702eb1ef5a51faa7cae54755691",
+        "conclusion": "success"
+      },
+      "warnings": [
+        "CENTRAL_LINK_DIFFERS_FROM_PRODUCT_SOURCE"
+      ]
+    },
+    {
+      "record_id": "CANDIDATE-09",
+      "product": "ONTOINSIGHT AX",
+      "phase": "candidate",
+      "worker_historical_percent": null,
+      "github_evidence_readiness_score": 90,
+      "official_final_completion": "UNASSESSED",
+      "breakdown": {
+        "linked_product_ref": 10,
+        "product_blueprint_file": 10,
+        "implementation_file": 10,
+        "documented_scoped_tests": 10,
+        "successful_pinned_functional_ci": 20,
+        "linux_and_windows_jobs": 10,
+        "documented_ci_packaging": 10,
+        "documented_ci_negative_tests": 10,
+        "physical_buyer_os_acceptance": 0,
+        "rights_and_owner_sale_go": 0
+      },
+      "primary_source": {
+        "repo": "hibi89/AI_AutoML_Analyst",
+        "branch": "feature/ontoinsight-ax-p85-20261113",
+        "path": "backend/app/services/ontoinsight_p85_ml.py"
+      },
+      "blueprint": {
+        "repo": "hibi89/Freelancer",
+        "branch": "product/ontoinsight-ax-data-analytics",
+        "path": "docs/FINAL_BLUEPRINT.md"
+      },
+      "functional_ci": {
+        "repository": "hibi89/AI_AutoML_Analyst",
+        "run_id": 43383793303,
+        "head_sha": "8d1bdc80ed345485591f739aace632e91112a604",
+        "conclusion": "success"
+      },
+      "warnings": [
+        "CENTRAL_LINK_DIFFERS_FROM_PRODUCT_SOURCE"
+      ]
+    },
+    {
+      "record_id": "CANDIDATE-10",
+      "product": "BID AX",
+      "phase": "candidate",
+      "worker_historical_percent": null,
+      "github_evidence_readiness_score": 90,
+      "official_final_completion": "UNASSESSED",
+      "breakdown": {
+        "linked_product_ref": 10,
+        "product_blueprint_file": 10,
+        "implementation_file": 10,
+        "documented_scoped_tests": 10,
+        "successful_pinned_functional_ci": 20,
+        "linux_and_windows_jobs": 10,
+        "documented_ci_packaging": 10,
+        "documented_ci_negative_tests": 10,
+        "physical_buyer_os_acceptance": 0,
+        "rights_and_owner_sale_go": 0
+      },
+      "primary_source": {
+        "repo": "hibi89/Freelancer",
+        "branch": "product/bid-ax-public-procurement",
+        "path": "bidax/entrypoint.py"
+      },
+      "blueprint": {
+        "repo": "hibi89/Freelancer",
+        "branch": "product/bid-ax-public-procurement",
+        "path": "docs/FINAL_BLUEPRINT.md"
+      },
+      "functional_ci": {
+        "repository": "hibi89/Freelancer",
+        "run_id": 43538851029,
+        "head_sha": "1ec540634671ff85b080e034cd37564e54fc8e1e",
+        "conclusion": "success"
+      },
+      "warnings": []
+    },
+    {
+      "record_id": "CANDIDATE-12",
+      "product": "WORKNOVA Desk",
+      "phase": "candidate",
+      "worker_historical_percent": null,
+      "github_evidence_readiness_score": 90,
+      "official_final_completion": "UNASSESSED",
+      "breakdown": {
+        "linked_product_ref": 10,
+        "product_blueprint_file": 10,
+        "implementation_file": 10,
+        "documented_scoped_tests": 10,
+        "successful_pinned_functional_ci": 20,
+        "linux_and_windows_jobs": 10,
+        "documented_ci_packaging": 10,
+        "documented_ci_negative_tests": 10,
+        "physical_buyer_os_acceptance": 0,
+        "rights_and_owner_sale_go": 0
+      },
+      "primary_source": {
+        "repo": "hibi89/Freelancer",
+        "branch": "product/worknova-desk-local",
+        "path": "worknova_desk/gui.py"
+      },
+      "blueprint": {
+        "repo": "hibi89/Freelancer",
+        "branch": "product/worknova-desk-local",
+        "path": "docs/FINAL_BLUEPRINT.md"
+      },
+      "functional_ci": {
+        "repository": "hibi89/Freelancer",
+        "run_id": 43538360061,
+        "head_sha": "c8bb18ea3decaa6f3357d1849dd5272ca6721af8",
+        "conclusion": "success"
+      },
+      "warnings": [
+        "CENTRAL_LINK_DIFFERS_FROM_PRODUCT_SOURCE"
+      ]
+    },
+    {
+      "record_id": "ACTIVE-01",
+      "product": "코인 캔들 수집기",
+      "phase": "active",
+      "worker_historical_percent": 95,
+      "github_evidence_readiness_score": 80,
+      "official_final_completion": "UNASSESSED",
+      "breakdown": {
+        "linked_product_ref": 10,
+        "product_blueprint_file": 10,
+        "implementation_file": 10,
+        "documented_scoped_tests": 10,
+        "successful_pinned_functional_ci": 20,
+        "linux_and_windows_jobs": 0,
+        "documented_ci_packaging": 10,
+        "documented_ci_negative_tests": 10,
+        "physical_buyer_os_acceptance": 0,
+        "rights_and_owner_sale_go": 0
+      },
+      "primary_source": {
+        "repo": "hibi89/candle_scraper",
+        "branch": "feature/kmong-collector-p95-delivery-integrity-20261112",
+        "path": "audit_customer_packages.py"
+      },
+      "blueprint": {
+        "repo": "hibi89/candle_scraper",
+        "branch": "feature/kmong-collector-p95-delivery-integrity-20261112",
+        "path": "REQUIREMENTS.md"
+      },
+      "functional_ci": {
+        "repository": "hibi89/candle_scraper",
+        "run_id": 42038795999,
+        "head_sha": "9e0632890c5621f4756e9ca7328480d860b2b710",
+        "conclusion": "success"
+      },
+      "warnings": [
+        "CI_FROM_HISTORICAL_OTHER_BRANCH"
+      ]
+    },
+    {
+      "record_id": "ACTIVE-06",
+      "product": "REA_Web",
+      "phase": "active",
+      "worker_historical_percent": 85,
+      "github_evidence_readiness_score": 80,
+      "official_final_completion": "UNASSESSED",
+      "breakdown": {
+        "linked_product_ref": 10,
+        "product_blueprint_file": 10,
+        "implementation_file": 10,
+        "documented_scoped_tests": 10,
+        "successful_pinned_functional_ci": 20,
+        "linux_and_windows_jobs": 10,
+        "documented_ci_packaging": 0,
+        "documented_ci_negative_tests": 10,
+        "physical_buyer_os_acceptance": 0,
+        "rights_and_owner_sale_go": 0
+      },
+      "primary_source": {
+        "repo": "hibi89/REA_Web",
+        "branch": "feature/website-analysis-rebuild",
+        "path": "rea/website_component_builder.py"
+      },
+      "blueprint": {
+        "repo": "hibi89/REA_Web",
+        "branch": "feature/website-analysis-rebuild",
+        "path": "REQUIREMENTS.md"
+      },
+      "functional_ci": {
+        "repository": "hibi89/REA_Web",
+        "run_id": 43295475001,
+        "head_sha": "04541195da42b702925cc62e7a39e16962cbfa31",
+        "conclusion": "success"
+      },
+      "warnings": []
+    },
+    {
+      "record_id": "ACTIVE-10",
+      "product": "Lightning Azent",
+      "phase": "active",
+      "worker_historical_percent": 85,
+      "github_evidence_readiness_score": 80,
+      "official_final_completion": "UNASSESSED",
+      "breakdown": {
+        "linked_product_ref": 10,
+        "product_blueprint_file": 10,
+        "implementation_file": 10,
+        "documented_scoped_tests": 10,
+        "successful_pinned_functional_ci": 20,
+        "linux_and_windows_jobs": 10,
+        "documented_ci_packaging": 0,
+        "documented_ci_negative_tests": 10,
+        "physical_buyer_os_acceptance": 0,
+        "rights_and_owner_sale_go": 0
+      },
+      "primary_source": {
+        "repo": "hibi89/HAE",
+        "branch": "feature/la-p17-audit-evidence-20261112",
+        "path": "packages/lightning-azent/lightning_azent/runtime.py"
+      },
+      "blueprint": {
+        "repo": "hibi89/HAE",
+        "branch": "feature/la-p17-audit-evidence-20261112",
+        "path": "REQUIREMENTS.md"
+      },
+      "functional_ci": {
+        "repository": "hibi89/HAE",
+        "run_id": 43124013493,
+        "head_sha": "c32e27c8156a4ed27d6f2bca7752e7a4eccf6dc7",
+        "conclusion": "success"
+      },
+      "warnings": []
+    },
+    {
+      "record_id": "ACTIVE-12",
+      "product": "RAG Studio AX Edition",
+      "phase": "active",
+      "worker_historical_percent": 95,
+      "github_evidence_readiness_score": 80,
+      "official_final_completion": "UNASSESSED",
+      "breakdown": {
+        "linked_product_ref": 10,
+        "product_blueprint_file": 0,
+        "implementation_file": 10,
+        "documented_scoped_tests": 10,
+        "successful_pinned_functional_ci": 20,
+        "linux_and_windows_jobs": 10,
+        "documented_ci_packaging": 10,
+        "documented_ci_negative_tests": 10,
+        "physical_buyer_os_acceptance": 0,
+        "rights_and_owner_sale_go": 0
+      },
+      "primary_source": {
+        "repo": "hibi89/RAG_STUDIO",
+        "branch": "feature/p546-rag-prep-mapping",
+        "path": "src/review-zip-verify.mjs"
+      },
+      "blueprint": null,
+      "functional_ci": {
+        "repository": "hibi89/RAG_STUDIO",
+        "run_id": 43231121679,
+        "head_sha": "0e88301059c9cb6b876dd0f9cd9181e6fb5c6dc2",
+        "conclusion": "success"
+      },
+      "warnings": []
+    },
+    {
+      "record_id": "ACTIVE-15",
+      "product": "EAI",
+      "phase": "active",
+      "worker_historical_percent": 85,
+      "github_evidence_readiness_score": 80,
+      "official_final_completion": "UNASSESSED",
+      "breakdown": {
+        "linked_product_ref": 10,
+        "product_blueprint_file": 10,
+        "implementation_file": 10,
+        "documented_scoped_tests": 10,
+        "successful_pinned_functional_ci": 20,
+        "linux_and_windows_jobs": 0,
+        "documented_ci_packaging": 10,
+        "documented_ci_negative_tests": 10,
+        "physical_buyer_os_acceptance": 0,
+        "rights_and_owner_sale_go": 0
+      },
+      "primary_source": {
+        "repo": "hibi89/EAI",
+        "branch": "feature/kmong-eai-85-p31-20261112",
+        "path": "scripts/accept_windows_candidate.py"
+      },
+      "blueprint": {
+        "repo": "hibi89/EAI",
+        "branch": "feature/kmong-eai-85-p31-20261112",
+        "path": "REQUIREMENTS.md"
+      },
+      "functional_ci": {
+        "repository": "hibi89/EAI",
+        "run_id": 43202624144,
+        "head_sha": "f3a61e624e5d21a21700ec21930a9021b4acd9c2",
+        "conclusion": "success"
+      },
+      "warnings": []
+    },
+    {
+      "record_id": "ACTIVE-16",
+      "product": "AXMART PC CARE",
+      "phase": "active",
+      "worker_historical_percent": 85,
+      "github_evidence_readiness_score": 80,
+      "official_final_completion": "UNASSESSED",
+      "breakdown": {
+        "linked_product_ref": 10,
+        "product_blueprint_file": 10,
+        "implementation_file": 10,
+        "documented_scoped_tests": 10,
+        "successful_pinned_functional_ci": 20,
+        "linux_and_windows_jobs": 0,
+        "documented_ci_packaging": 10,
+        "documented_ci_negative_tests": 10,
+        "physical_buyer_os_acceptance": 0,
+        "rights_and_owner_sale_go": 0
+      },
+      "primary_source": {
+        "repo": "hibi89/AX_MART",
+        "branch": "feature/pc-care-p15-p18-85-20261112",
+        "path": "products/pc-care/START_PC_CARE.cmd"
+      },
+      "blueprint": {
+        "repo": "hibi89/AX_MART",
+        "branch": "feature/pc-care-p15-p18-85-20261112",
+        "path": "REQUIREMENTS.md"
+      },
+      "functional_ci": {
+        "repository": "hibi89/AX_MART",
+        "run_id": 43131173581,
+        "head_sha": "0ba167682c848056c5717c717b3b0d1ca98a9f3c",
+        "conclusion": "success"
+      },
+      "warnings": []
+    },
+    {
+      "record_id": "ACTIVE-17",
+      "product": "AXMART³ CUBE",
+      "phase": "active",
+      "worker_historical_percent": 95,
+      "github_evidence_readiness_score": 80,
+      "official_final_completion": "UNASSESSED",
+      "breakdown": {
+        "linked_product_ref": 10,
+        "product_blueprint_file": 10,
+        "implementation_file": 10,
+        "documented_scoped_tests": 10,
+        "successful_pinned_functional_ci": 20,
+        "linux_and_windows_jobs": 0,
+        "documented_ci_packaging": 10,
+        "documented_ci_negative_tests": 10,
+        "physical_buyer_os_acceptance": 0,
+        "rights_and_owner_sale_go": 0
+      },
+      "primary_source": {
+        "repo": "hibi89/AX_MART",
+        "branch": "feature/cube-owner-preflight-p85-20261112",
+        "path": "commerce/release-preflight.mjs"
+      },
+      "blueprint": {
+        "repo": "hibi89/AX_MART",
+        "branch": "feature/cube-owner-preflight-p85-20261112",
+        "path": "REQUIREMENTS.md"
+      },
+      "functional_ci": {
+        "repository": "hibi89/AX_MART",
+        "run_id": 43240934297,
+        "head_sha": "037aa8bf5e9b251d39fa909f4354d10901fa4ed6",
+        "conclusion": "success"
+      },
+      "warnings": []
+    },
+    {
+      "record_id": "CANDIDATE-07",
+      "product": "SITECRAFT AX",
+      "phase": "candidate",
+      "worker_historical_percent": null,
+      "github_evidence_readiness_score": 80,
+      "official_final_completion": "UNASSESSED",
+      "breakdown": {
+        "linked_product_ref": 10,
+        "product_blueprint_file": 10,
+        "implementation_file": 10,
+        "documented_scoped_tests": 10,
+        "successful_pinned_functional_ci": 20,
+        "linux_and_windows_jobs": 10,
+        "documented_ci_packaging": 0,
+        "documented_ci_negative_tests": 10,
+        "physical_buyer_os_acceptance": 0,
+        "rights_and_owner_sale_go": 0
+      },
+      "primary_source": {
+        "repo": "hibi89/REA_Web",
+        "branch": "feature/sitecraft-ax-p85-20261113",
+        "path": "rea/sitecraft_p85.py"
+      },
+      "blueprint": {
+        "repo": "hibi89/Freelancer",
+        "branch": "product/rea-website-rebuild",
+        "path": "docs/FINAL_BLUEPRINT.md"
+      },
+      "functional_ci": {
+        "repository": "hibi89/REA_Web",
+        "run_id": 43382914205,
+        "head_sha": "a3f31c4c676fb28c2ddded052f9cd0a0942370ad",
+        "conclusion": "success"
+      },
+      "warnings": [
+        "CENTRAL_LINK_DIFFERS_FROM_PRODUCT_SOURCE"
+      ]
+    },
+    {
+      "record_id": "ACTIVE-13",
+      "product": "Astra PDF Redesigner",
+      "phase": "active",
+      "worker_historical_percent": 85,
+      "github_evidence_readiness_score": 70,
+      "official_final_completion": "UNASSESSED",
+      "breakdown": {
+        "linked_product_ref": 10,
+        "product_blueprint_file": 10,
+        "implementation_file": 10,
+        "documented_scoped_tests": 10,
+        "successful_pinned_functional_ci": 20,
+        "linux_and_windows_jobs": 0,
+        "documented_ci_packaging": 10,
+        "documented_ci_negative_tests": 0,
+        "physical_buyer_os_acceptance": 0,
+        "rights_and_owner_sale_go": 0
+      },
+      "primary_source": {
+        "repo": "hibi89/astra_pdf_redesigner",
+        "branch": "integration/astra-commercial-core",
+        "path": "src/App.tsx"
+      },
+      "blueprint": {
+        "repo": "hibi89/astra_pdf_redesigner",
+        "branch": "integration/astra-commercial-core",
+        "path": "REQUIREMENTS.md"
+      },
+      "functional_ci": {
+        "repository": "hibi89/astra_pdf_redesigner",
+        "run_id": 40856599632,
+        "head_sha": "db461dc77dd721d1234d1506d6c62705486b9460",
+        "conclusion": "success"
+      },
+      "warnings": []
+    },
+    {
+      "record_id": "ACTIVE-02",
+      "product": "HAE",
+      "phase": "active",
+      "worker_historical_percent": 85,
+      "github_evidence_readiness_score": 40,
+      "official_final_completion": "UNASSESSED",
+      "breakdown": {
+        "linked_product_ref": 10,
+        "product_blueprint_file": 10,
+        "implementation_file": 10,
+        "documented_scoped_tests": 10,
+        "successful_pinned_functional_ci": 0,
+        "linux_and_windows_jobs": 0,
+        "documented_ci_packaging": 0,
+        "documented_ci_negative_tests": 0,
+        "physical_buyer_os_acceptance": 0,
+        "rights_and_owner_sale_go": 0
+      },
+      "primary_source": {
+        "repo": "hibi89/HAE",
+        "branch": "feature/axflow-mvp",
+        "path": "apps/ax-flow/axflow/planner.py"
+      },
+      "blueprint": {
+        "repo": "hibi89/HAE",
+        "branch": "feature/axflow-mvp",
+        "path": "REQUIREMENTS.md"
+      },
+      "functional_ci": {
+        "repository": "hibi89/HAE",
+        "run_id": 43382552489,
+        "head_sha": "a640666db7a1bf2011c5d2abc944f13199ce455f",
+        "conclusion": "failure"
+      },
+      "warnings": [
+        "CI_RUN_FAILED"
+      ]
+    },
+    {
+      "record_id": "ACTIVE-04",
+      "product": "SMAX²",
+      "phase": "active",
+      "worker_historical_percent": 85,
+      "github_evidence_readiness_score": 40,
+      "official_final_completion": "UNASSESSED",
+      "breakdown": {
+        "linked_product_ref": 10,
+        "product_blueprint_file": 10,
+        "implementation_file": 10,
+        "documented_scoped_tests": 10,
+        "successful_pinned_functional_ci": 0,
+        "linux_and_windows_jobs": 0,
+        "documented_ci_packaging": 0,
+        "documented_ci_negative_tests": 0,
+        "physical_buyer_os_acceptance": 0,
+        "rights_and_owner_sale_go": 0
+      },
+      "primary_source": {
+        "repo": "hibi89/SMAX",
+        "branch": "feature/prep-self-owner-mapping-p8",
+        "path": "preprocessing/self-column-suggest.mjs"
+      },
+      "blueprint": {
+        "repo": "hibi89/SMAX",
+        "branch": "feature/prep-self-owner-mapping-p8",
+        "path": "REQUIREMENTS.md"
+      },
+      "functional_ci": null,
+      "warnings": []
+    },
+    {
+      "record_id": "ACTIVE-09",
+      "product": "REA_APP",
+      "phase": "active",
+      "worker_historical_percent": 85,
+      "github_evidence_readiness_score": 40,
+      "official_final_completion": "UNASSESSED",
+      "breakdown": {
+        "linked_product_ref": 10,
+        "product_blueprint_file": 10,
+        "implementation_file": 10,
+        "documented_scoped_tests": 10,
+        "successful_pinned_functional_ci": 0,
+        "linux_and_windows_jobs": 0,
+        "documented_ci_packaging": 0,
+        "documented_ci_negative_tests": 0,
+        "physical_buyer_os_acceptance": 0,
+        "rights_and_owner_sale_go": 0
+      },
+      "primary_source": {
+        "repo": "hibi89/HAE",
+        "branch": "feature/rea-app-kmong-owner-delivery-20261112",
+        "path": "tools/rea-app/rea_app/cli.py"
+      },
+      "blueprint": {
+        "repo": "hibi89/HAE",
+        "branch": "feature/rea-app-kmong-owner-delivery-20261112",
+        "path": "REQUIREMENTS.md"
+      },
+      "functional_ci": null,
+      "warnings": []
+    },
+    {
+      "record_id": "ACTIVE-11",
+      "product": "DBVORA",
+      "phase": "active",
+      "worker_historical_percent": 95,
+      "github_evidence_readiness_score": 40,
+      "official_final_completion": "UNASSESSED",
+      "breakdown": {
+        "linked_product_ref": 10,
+        "product_blueprint_file": 10,
+        "implementation_file": 10,
+        "documented_scoped_tests": 10,
+        "successful_pinned_functional_ci": 0,
+        "linux_and_windows_jobs": 0,
+        "documented_ci_packaging": 0,
+        "documented_ci_negative_tests": 0,
+        "physical_buyer_os_acceptance": 0,
+        "rights_and_owner_sale_go": 0
+      },
+      "primary_source": {
+        "repo": "hibi89/DBVORA",
+        "branch": "feature/p0-db-map",
+        "path": "dbvora/api.py"
+      },
+      "blueprint": {
+        "repo": "hibi89/DBVORA",
+        "branch": "feature/p0-db-map",
+        "path": "REQUIREMENTS.md"
+      },
+      "functional_ci": null,
+      "warnings": []
+    },
+    {
+      "record_id": "ACTIVE-14",
+      "product": "코인 패턴 분석기",
+      "phase": "active",
+      "worker_historical_percent": 85,
+      "github_evidence_readiness_score": 40,
+      "official_final_completion": "UNASSESSED",
+      "breakdown": {
+        "linked_product_ref": 10,
+        "product_blueprint_file": 10,
+        "implementation_file": 10,
+        "documented_scoped_tests": 10,
+        "successful_pinned_functional_ci": 0,
+        "linux_and_windows_jobs": 0,
+        "documented_ci_packaging": 0,
+        "documented_ci_negative_tests": 0,
+        "physical_buyer_os_acceptance": 0,
+        "rights_and_owner_sale_go": 0
+      },
+      "primary_source": {
+        "repo": "hibi89/candle_scraper",
+        "branch": "feature/coin-pattern-p85-forward-eval-20261112",
+        "path": "coin_forward_eval.py"
+      },
+      "blueprint": {
+        "repo": "hibi89/candle_scraper",
+        "branch": "feature/coin-pattern-p85-forward-eval-20261112",
+        "path": "REQUIREMENTS.md"
+      },
+      "functional_ci": null,
+      "warnings": []
+    },
+    {
+      "record_id": "CANDIDATE-02",
+      "product": "PREP",
+      "phase": "candidate",
+      "worker_historical_percent": null,
+      "github_evidence_readiness_score": 40,
+      "official_final_completion": "UNASSESSED",
+      "breakdown": {
+        "linked_product_ref": 10,
+        "product_blueprint_file": 10,
+        "implementation_file": 10,
+        "documented_scoped_tests": 10,
+        "successful_pinned_functional_ci": 0,
+        "linux_and_windows_jobs": 0,
+        "documented_ci_packaging": 0,
+        "documented_ci_negative_tests": 0,
+        "physical_buyer_os_acceptance": 0,
+        "rights_and_owner_sale_go": 0
+      },
+      "primary_source": {
+        "repo": "hibi89/prep",
+        "branch": "feature/core-extraction",
+        "path": "src/sdk.mjs"
+      },
+      "blueprint": {
+        "repo": "hibi89/prep",
+        "branch": "feature/core-extraction",
+        "path": "docs/ACCEPTANCE_MATRIX.md"
+      },
+      "functional_ci": null,
+      "warnings": []
+    },
+    {
+      "record_id": "CANDIDATE-03",
+      "product": "FFAX",
+      "phase": "candidate",
+      "worker_historical_percent": null,
+      "github_evidence_readiness_score": 40,
+      "official_final_completion": "UNASSESSED",
+      "breakdown": {
+        "linked_product_ref": 10,
+        "product_blueprint_file": 10,
+        "implementation_file": 10,
+        "documented_scoped_tests": 10,
+        "successful_pinned_functional_ci": 0,
+        "linux_and_windows_jobs": 0,
+        "documented_ci_packaging": 0,
+        "documented_ci_negative_tests": 0,
+        "physical_buyer_os_acceptance": 0,
+        "rights_and_owner_sale_go": 0
+      },
+      "primary_source": {
+        "repo": "hibi89/frontend-foundry-ax",
+        "branch": "feature/ffax-workbench-p85-20261112",
+        "path": "src/core.mjs"
+      },
+      "blueprint": {
+        "repo": "hibi89/frontend-foundry-ax",
+        "branch": "feature/ffax-workbench-p85-20261112",
+        "path": "docs/ACCEPTANCE_MATRIX.md"
+      },
+      "functional_ci": null,
+      "warnings": []
+    },
+    {
+      "record_id": "CANDIDATE-05",
+      "product": "AZENTFLOW AX",
+      "phase": "candidate",
+      "worker_historical_percent": null,
+      "github_evidence_readiness_score": 40,
+      "official_final_completion": "UNASSESSED",
+      "breakdown": {
+        "linked_product_ref": 10,
+        "product_blueprint_file": 10,
+        "implementation_file": 10,
+        "documented_scoped_tests": 10,
+        "successful_pinned_functional_ci": 0,
+        "linux_and_windows_jobs": 0,
+        "documented_ci_packaging": 0,
+        "documented_ci_negative_tests": 0,
+        "physical_buyer_os_acceptance": 0,
+        "rights_and_owner_sale_go": 0
+      },
+      "primary_source": {
+        "repo": "hibi89/HAE",
+        "branch": "feature/axflow-mvp",
+        "path": "apps/ax-flow/axflow/planner.py"
+      },
+      "blueprint": {
+        "repo": "hibi89/Freelancer",
+        "branch": "product/hae-la-automation",
+        "path": "docs/FINAL_BLUEPRINT.md"
+      },
+      "functional_ci": {
+        "repository": "hibi89/HAE",
+        "run_id": 43382552489,
+        "head_sha": "a640666db7a1bf2011c5d2abc944f13199ce455f",
+        "conclusion": "failure"
+      },
+      "warnings": [
+        "CENTRAL_LINK_DIFFERS_FROM_PRODUCT_SOURCE",
+        "CI_RUN_FAILED"
+      ]
+    },
+    {
+      "record_id": "CANDIDATE-11",
+      "product": "FlowPilot Universal",
+      "phase": "candidate",
+      "worker_historical_percent": null,
+      "github_evidence_readiness_score": 10,
+      "official_final_completion": "UNASSESSED",
+      "breakdown": {
+        "linked_product_ref": 10,
+        "product_blueprint_file": 0,
+        "implementation_file": 0,
+        "documented_scoped_tests": 0,
+        "successful_pinned_functional_ci": 0,
+        "linux_and_windows_jobs": 0,
+        "documented_ci_packaging": 0,
+        "documented_ci_negative_tests": 0,
+        "physical_buyer_os_acceptance": 0,
+        "rights_and_owner_sale_go": 0
+      },
+      "primary_source": null,
+      "blueprint": null,
+      "functional_ci": null,
+      "warnings": [
+        "CENTRAL_LINK_DIFFERS_FROM_PRODUCT_SOURCE"
+      ]
+    }
+  ]
+}
