@@ -615,13 +615,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "529cb051973f9fbf6acec5abbac768ee2a440206",
+        "head_sha": "a2e93a2c89daecb1d003eb6a2e35109dc0e40c20",
         "matches_current_head": true,
-        "run_id": 43536573723,
+        "run_id": 43537874768,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "529cb051973f9fbf6acec5abbac768ee2a440206",
+      "head_sha": "a2e93a2c89daecb1d003eb6a2e35109dc0e40c20",
       "machine_evidence_score": {
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
@@ -1169,13 +1169,13 @@
           "branch": "product/bid-ax-public-procurement",
           "gate": {
             "conclusion": "success",
-            "head_sha": "529cb051973f9fbf6acec5abbac768ee2a440206",
+            "head_sha": "a2e93a2c89daecb1d003eb6a2e35109dc0e40c20",
             "matches_current_head": true,
-            "run_id": 43536573723,
+            "run_id": 43537874768,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "529cb051973f9fbf6acec5abbac768ee2a440206",
+          "head_sha": "a2e93a2c89daecb1d003eb6a2e35109dc0e40c20",
           "status": "PRESENT"
         },
         {
@@ -1307,12 +1307,12 @@
       "main": {
         "branch": "main",
         "gate": {
-          "conclusion": "success",
-          "head_sha": "9400e1a6383a9a6bd85091ffb31165a0bc3160f9",
-          "matches_current_head": false,
-          "run_id": 43394173506,
+          "conclusion": null,
+          "head_sha": "a8c488bd548e2c44bc3197f5d68e37ed84fdc021",
+          "matches_current_head": true,
+          "run_id": 43537930124,
           "status": "LATEST_RUN",
-          "workflow_status": "completed"
+          "workflow_status": "in_progress"
         },
         "head_sha": "a8c488bd548e2c44bc3197f5d68e37ed84fdc021",
         "status": "PRESENT"
