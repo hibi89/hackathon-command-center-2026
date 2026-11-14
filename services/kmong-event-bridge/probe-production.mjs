@@ -4,6 +4,8 @@ const expected = process.env.GITHUB_SHA || "";
 const sha40 = /^[0-9a-f]{40}$/i;
 export function classify(status, body, expectedSha) {
   if (status === 200 && body?.status === "ready") {
+    if (body.bridge_feature !== "coalesce-v1")
+      return { verdict: "READY_FEATURE_UNVERIFIED", source_sha: null };
     const sourceSha = sha40.test(body.source_sha || "") ? body.source_sha : null;
     if (!sourceSha) return { verdict: "READY_VERSION_UNVERIFIED", source_sha: null };
     return { verdict: sha40.test(expectedSha) && sourceSha === expectedSha ?

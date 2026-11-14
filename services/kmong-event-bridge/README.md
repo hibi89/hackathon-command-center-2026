@@ -76,3 +76,7 @@ The branch-only CI verifies the exact 35-repo allowlist matches the collector ro
 - **Not yet confirmed:** whether `https://kmong-hub-event-bridge.vercel.app/api/webhook` is serving this GitHub SHA, Vercel Production deployment state or source webhooks after deploy. The connected Vercel account does not list that project; published URL is not accessible through available page-inspection tools. This is not evidence of an outage. There are still zero observed `event=schedule` runs after the designated slot; cron cannot be advertised as a proven fallback. Source fixes in GitHub cannot be presented as a Production rollout without SHA and live trigger checks.
 - Rollback: normal Git revert of `lib/receiver.js` and tests if regressions appear. On an already connected Production project, verify its exact deployed Git SHA before deciding whether a redeploy is needed; never silently create a new Vercel project, change env/secrets, or broaden permissions.
 
+
+### 2026-11-14: no-secret Production feature probe
+
+The anonymous `GET /api/webhook` response includes `bridge_feature: "coalesce-v1"` in this revision, plus a public `source_sha` only when Vercel provides a valid 40-character `VERCEL_GIT_COMMIT_SHA`. The non-blocking GitHub Actions `probe-production.mjs` distinguishes an older/unknown feature from a proven `READY_SHA_MATCHED` deployment without making webhook POST requests. HTTP 200 `ready` alone never proves source parity or exact running SHA. A missing feature field indicates an older/unknown deployed build, not automatically a service outage.

@@ -154,7 +154,7 @@ export function health(env) {
   const sourceSha = typeof env.VERCEL_GIT_COMMIT_SHA === "string" &&
     /^[a-f0-9]{40}$/i.test(env.VERCEL_GIT_COMMIT_SHA) ? env.VERCEL_GIT_COMMIT_SHA : null;
   return answer(configured ? 200 : 503,
-    { status: configured ? "ready" : "not_configured", source_sha: sourceSha });
+    { status: configured ? "ready" : "not_configured", source_sha: sourceSha, bridge_feature: "coalesce-v1" });
 }
 
 export async function receiveWebhook(request, env, fetchImpl = fetch) {
