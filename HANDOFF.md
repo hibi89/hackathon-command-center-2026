@@ -1,3 +1,16 @@
+## [2026-11-14 KST] Astra P91/P92 상용 최종설계 100% 재개 (인수요약)
+
+1. **목표/확정사항/기술:** `KMONG-SVC-09` Astra 7단계+SKU 8/20/30, 최종 100% 기준, 0원 로컬 PDF 제품. `hibi89/astra_pdf_redesigner` React/Electron/PDF.js.
+2. **반영 기능/결정:** P91 수동 키워드 Google/Bing 동의형 링크·STEP5 수동 가져오기, 외부 고객 PDF 전송0. P92 22개 고급 임시 시안 ID-only JSON 왕복(기존 V2 불변), 직접 DB migration보다 데이터 위험 낮은 수동 파일을 선택.
+3. **테스트/성공실패:** P91 소스 `be243985ff5c` Linux Chrome/Edge #43547363002 2/2 SUCCESS, Node161/161 PASS, Windows #43547362316 SUCCESS. P92 `b8b29bc13fe0` 격리 Node2/2 PASS, Linux #43547702092/Windows #43547702089 **진행중**; 완료 전 최종 verdict 미검증.
+4. **완료/진행/대기:** STEP6 동의형 탐색, P92 시안 파일 기능은 구현. 실제 OCR, 모델, 3 SKU 정식 entitlement·브랜드/배치, 물리Win, 고객PDF5~10, 권리, 출시 인수 대기. 공식 `UNASSESSED`/100 미달·[작업중]/RELEASE HOLD.
+5. **실패·원인·대안:** P92 신규 CI 실패 관측 전임. 과거 GitHub rate-limit 재시도 폭주 금지. 유료/외부 PDF 송신/모델 무단 다운로드 대신 0원 단계적 구현.
+6. **저장소/브랜치/SHA:** Astra `feature/astra-p71-pdf-source-parity-20261112` 코드 `b8b29bc13fe0`, 인수 docs `cfb5bcdcf7f3`; 중앙 `kmong-productization` 새 HEAD는 반영 후 확인.
+7. **배포/환경:** GitHub Actions Node22 Chrome/Edge Windows NSIS, Vercel·Production 미적용, 크몽 미등록.
+8. **원본/백업/권한:** Astra main·PR10·STEP1 v1/STEP2 IndexedDB V2·고객PDF/폰트/토큰 그대로, 부모 SHA revert로 복구. 중앙 29/19 이력·타제품 점수 불변.
+9. **다음/사용자 승인:** P92 exact SHA CI 확인→실고객·Win10/11·5~10 PDF·권리 및 무료 GGUF/OCR 설치 동의를 기존 13시 통합 요청에 모음→정식 SKU/모델/완전수용 후 GO. 무단 판매·다운로드 금지.
+10. **확인/문서 기준:** 2026-11-14 KST, 원격 GitHub 기능 SHA·P91 CI 및 P92 in-progress 상태 조회. 최신 source docs `HANDOFF.md`, `STATUS.md`와 중앙 원장 업데이트; 이번 기록 자체는 제품100 완료가 아님.
+
 ## [2026-11-14 KST] App 호출 폭주·무료 quota/burst guard 75테스트 및 실운영 스킵 인수인계 10항
 
 1. **목표/기술:** 해총 GitHub App 자동 증거 수집이 35repo/80ref/29상품을 과도하게 반복 스캔하지 않도록 비용0·기존 READ/Hub observation JSON WRITE 정책으로 수정.
