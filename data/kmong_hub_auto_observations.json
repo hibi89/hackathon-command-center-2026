@@ -329,12 +329,12 @@
     },
     {
       "gate": {
-        "conclusion": null,
+        "conclusion": "success",
         "head_sha": "e4fc8c4616248902cf26ee7e4fcb1ba7f4d8aeb3",
         "matches_current_head": true,
         "run_id": 43542743517,
         "status": "LATEST_RUN",
-        "workflow_status": "in_progress"
+        "workflow_status": "completed"
       },
       "head_sha": "e4fc8c4616248902cf26ee7e4fcb1ba7f4d8aeb3",
       "machine_evidence_score": {
@@ -833,14 +833,14 @@
     },
     {
       "gate": {
-        "conclusion": "success",
-        "head_sha": "8b277e7ce88b8f22472c461b5262aa9096b8d982",
+        "conclusion": null,
+        "head_sha": "0af15a92a853c5c9038d8c6bfb9498a2a543fee6",
         "matches_current_head": true,
-        "run_id": 43542611621,
+        "run_id": 43542849921,
         "status": "LATEST_RUN",
-        "workflow_status": "completed"
+        "workflow_status": "in_progress"
       },
-      "head_sha": "8b277e7ce88b8f22472c461b5262aa9096b8d982",
+      "head_sha": "0af15a92a853c5c9038d8c6bfb9498a2a543fee6",
       "machine_evidence_score": {
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
@@ -868,14 +868,14 @@
           "blueprint": {
             "branch": "feature/p0-db-map",
             "git_blob_sha": "8e8e61f30c504fa5fe0acbaa6c85047801e921d6",
-            "head_sha": "8b277e7ce88b8f22472c461b5262aa9096b8d982",
+            "head_sha": "0af15a92a853c5c9038d8c6bfb9498a2a543fee6",
             "path": "REQUIREMENTS.md",
             "repository": "hibi89/DBVORA"
           },
           "implementation": {
             "branch": "feature/p0-db-map",
             "git_blob_sha": "81338d4c4a64d2afa36e6619f39c469e0863289f",
-            "head_sha": "8b277e7ce88b8f22472c461b5262aa9096b8d982",
+            "head_sha": "0af15a92a853c5c9038d8c6bfb9498a2a543fee6",
             "path": "dbvora/api.py",
             "repository": "hibi89/DBVORA"
           }
@@ -2656,12 +2656,12 @@
         {
           "branch": "feature/final-blueprint-p85-evidence-20261113",
           "gate": {
-            "conclusion": null,
+            "conclusion": "success",
             "head_sha": "e4fc8c4616248902cf26ee7e4fcb1ba7f4d8aeb3",
             "matches_current_head": true,
             "run_id": 43542743517,
             "status": "LATEST_RUN",
-            "workflow_status": "in_progress"
+            "workflow_status": "completed"
           },
           "head_sha": "e4fc8c4616248902cf26ee7e4fcb1ba7f4d8aeb3",
           "status": "PRESENT"
@@ -2718,14 +2718,14 @@
         {
           "branch": "feature/p0-db-map",
           "gate": {
-            "conclusion": "success",
-            "head_sha": "8b277e7ce88b8f22472c461b5262aa9096b8d982",
+            "conclusion": null,
+            "head_sha": "0af15a92a853c5c9038d8c6bfb9498a2a543fee6",
             "matches_current_head": true,
-            "run_id": 43542611621,
+            "run_id": 43542849921,
             "status": "LATEST_RUN",
-            "workflow_status": "completed"
+            "workflow_status": "in_progress"
           },
-          "head_sha": "8b277e7ce88b8f22472c461b5262aa9096b8d982",
+          "head_sha": "0af15a92a853c5c9038d8c6bfb9498a2a543fee6",
           "status": "PRESENT"
         }
       ]
