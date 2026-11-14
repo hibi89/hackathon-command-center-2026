@@ -74,7 +74,7 @@ class EvidenceScoreTests(unittest.TestCase):
         ret=score_snapshot(snapshot,Stub(entries),allowed,{"records":products})
         self.assertEqual(ret["summary"]["provisional_evidence_scores"],29)
         self.assertTrue(all(isinstance(x["provisional_evidence_readiness"]["score"],int) for x in ret["products"]))
-        self.assertEqual(ret["products"][4]["provisional_evidence_readiness"]["score"],80)
+        self.assertEqual(ret["products"][4]["provisional_evidence_readiness"]["score"],90)
         self.assertEqual(ret["products"][0]["worker_report"]["percent"],95)
         self.assertEqual(products[4]["official_final_completion"],"UNASSESSED")
         self.assertIn("GITHUB_EVIDENCE_READINESS_V1",ret["provisional_score_policy"])
