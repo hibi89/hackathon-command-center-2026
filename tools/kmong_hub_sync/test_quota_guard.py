@@ -58,9 +58,39 @@ class QuotaGuardTests(unittest.TestCase):
                                      run(101, "2026-11-14T02:05:10Z", actor="someone-else")]}
         self.assertTrue(bot_is_first_eligible_run(payload, 102))
 
-    def test_missing_current_run_fails_closed(self):
+    def test_missing_current_run_deferred_without_false_success(self):
+        payload = {"workflow_runs": [run(101, "2026-11-14T02:05:10Z")]}
+        self.assertIsNone(bot_is_first_eligible_run(payload, 102))
+        self.assertEqual(
+            decide(800, "workflow_dispatch", BOT_ACTOR, 102, payload),
+            "DEFERRED_BOT_HISTORY_UNVERIFIED",
+        )
+
+    def test_capped_history_missing_current_run_deferred(self):
+        # Simulate the exact live failure: first 100 are newer than this run.
+        payload = {"workflow_runs": [
+            run(500 - i, "2026-11-14T05:03:40Z") for i in range(100)
+        ]}
+        self.assertIsNone(bot_is_first_eligible_run(payload, 399))
+        self.assertEqual(
+            decide(800, "workflow_dispatch", BOT_ACTOR, 399, payload),
+            "DEFERRED_BOT_HISTORY_UNVERIFIED",
+        )
+
+    def test_missing_history_also_defers(self):
+        self.assertEqual(
+            decide(800, "workflow_dispatch", BOT_ACTOR, 399, None),
+            "DEFERRED_BOT_HISTORY_UNVERIFIED",
+        )
+
+    def test_present_run_wrong_actor_or_event_still_rejected(self):
+        bad_actor = {"workflow_runs": [run(102, "2026-11-14T02:05:10Z", actor="other")]}
         with self.assertRaises(GuardError):
-            bot_is_first_eligible_run({"workflow_runs": [run(101, "2026-11-14T02:05:10Z")]}, 102)
+            bot_is_first_eligible_run(bad_actor, 102)
+        wrong_event = run(102, "2026-11-14T02:05:10Z")
+        wrong_event["event"] = "schedule"
+        with self.assertRaises(GuardError):
+            bot_is_first_eligible_run({"workflow_runs": [wrong_event]}, 102)
 
     def test_invalid_timestamps_fail_closed(self):
         for x in ("2026-11-14T02:05:10", "not-time", None):

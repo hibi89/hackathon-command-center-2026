@@ -55,8 +55,12 @@ def bot_is_first_eligible_run(payload, current_run_id):
         raise GuardError("invalid current workflow run id")
     runs = payload["workflow_runs"]
     own = next((r for r in runs if isinstance(r, dict) and r.get("id") == int(current_run_id)), None)
-    if own is None or own.get("event") != "workflow_dispatch":
-        raise GuardError("bot dispatch was not found among the latest 100 runs")
+    if own is None:
+        # A busy/lagged GitHub first page cannot prove this run is first.
+        # Unknown history must defer safely, not fail or authorize a scan.
+        return None
+    if own.get("event") != "workflow_dispatch":
+        raise GuardError("unexpected current workflow event")
     if own.get("actor", {}).get("login") != BOT_ACTOR:
         raise GuardError("unexpected bot dispatch actor")
     own_bucket = utc_epoch(own.get("created_at")) // BURST_WINDOW_SECONDS
@@ -81,7 +85,12 @@ def decide(remaining, event, actor, run_id=None, runs=None):
     if remaining < CORE_RESERVE:
         return "DEFERRED_PRIMARY_BUDGET"
     if event == "workflow_dispatch" and actor == BOT_ACTOR:
-        if runs is None or not bot_is_first_eligible_run(runs, run_id):
+        if runs is None:
+            return "DEFERRED_BOT_HISTORY_UNVERIFIED"
+        first = bot_is_first_eligible_run(runs, run_id)
+        if first is None:
+            return "DEFERRED_BOT_HISTORY_UNVERIFIED"
+        if not first:
             return "DEFERRED_BOT_BURST"
     return "RUN"
 
