@@ -1,3 +1,8 @@
+## [2026-11-14 KST] WORKNOVA Desk Windows EXE 3차 cold GUI reopen 기존 거래처 보존 PASS
+
+- 사용자 실제 Win10.0.26200에서 동일 합성 QA `$psi2` (자식 `LOCALAPPDATA=$qaRoot`)로 EXE **세 번째 프로세스 실행** 후 GUI 기존 테스트 거래처 `WORKNOVA_QA_TEST_01`이 “그대로있더라”는 현장 확인, X 종료 `ExitCode:0`. 이전 EXE 두 번째 기동의 GUI 신규 거래처 1건→SQLite `SyntheticCustomerCount:1` 및 `integrity_check:ok`와 연결, **GUI 실사용 저장→재시작 기존 행 복원 PASS**. 3차 GUI 스크린샷이나 별도 SQL 재검증은 받지 않아 사용자 직접 시각 증거로 한정. [제품 증거](https://github.com/hibi89/Freelancer/blob/product/worknova-desk-local/docs/P85_WINDOWS_EXE_BUILD_RESULT_20261114.md), 제품 HEAD `0c817f35289b3c932778640cfc6b304159d97bfa`.
+- 견적/계약/납품/수금 종단 기능·Windows OS ACL/상시 DB 암호화·서명/Defender·Python 없는 타PC·Word/PDF 권리/고객 수용은 미검증. 승인 WD01~14 전체100점 각 항목 완전 수용 합 **0/100(구현률0 아님)**, 목표85 미달, **[작업중]/RELEASE HOLD/미등록** 불변. 고객 실데이터·OS 설정·타상품·등록완료 이력 수정 없음.
+
 ## [2026-11-14 KST] WORKNOVA Desk 실제 Windows EXE 2차 GUI 거래처 저장/종료 후 SQLite 영속화 PASS
 
 - 사용자 실제 Windows10.0.26200 PowerShell 및 GUI 스크린샷: 앞선 빈 DB 생성과 종료 후 동일 `TEMP/worknova-gui-qa-<GUID>` 환경에서 **EXE 2차 실행**. GUI '새 거래처'에서 `WORKNOVA_QA_TEST_01` 입력, 목록에 거래처/ID 및 `완료(로컬 기록)` 표시. 종료 대기 이후 **ExitCode0**, 동일 `desk.sqlite`에 대한 `mode=ro` SQL **SyntheticCustomerCount:1**, **integrity_check:ok**. 현장 독립 EXE GUI→SQLite 실제 저장·종료 후 보존 부분 PASS. [제품 원장](https://github.com/hibi89/Freelancer/blob/product/worknova-desk-local/docs/P85_WINDOWS_EXE_BUILD_RESULT_20261114.md), 제품 HEAD `984835a6e387bd5338503a280a727d1b6befb549`.
