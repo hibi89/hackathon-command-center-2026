@@ -97,3 +97,14 @@
 | CopilotKit/OpenBot | 2026-11-13 | https://github.com/CopilotKit/OpenBot | GitHub Trending 검색 색인 확인; README/LICENSE/최근 커밋 미확인 |
 | Alishahryar1/free-claude-code | 2026-11-13 | https://github.com/Alishahryar1/free-claude-code | GitHub Trending 검색 색인 확인; README/LICENSE/최근 커밋 미확인 |
 | ggml-org/llama.cpp | 2026-11-13 | https://github.com/ggml-org/llama.cpp | GitHub Trending 검색 색인 확인; README/LICENSE/최근 커밋 미확인 |
+
+
+## 2026-11-14 신규 관찰 (기존 이력 보존)
+| alibaba/open-code-review | 2026-11-14 | https://github.com/alibaba/open-code-review | GitHub 공식 Trending 검색 색인 표시; README/LICENSE/최근 커밋 미검증 |
+| backnotprop/plannotator | 2026-11-14 | https://github.com/backnotprop/plannotator | GitHub 공식 Trending 검색 색인 표시; README/LICENSE/최근 커밋 미검증 |
+| louislam/uptime-kuma | 2026-11-14 | https://github.com/louislam/uptime-kuma | GitHub 공식 Trending 검색 색인 표시; README/LICENSE/최근 커밋 미검증 |
+| block/buzz | 2026-11-14 | https://github.com/block/buzz | GitHub 공식 Trending 검색 색인 표시; README/LICENSE/최근 커밋 미검증 |
+| tradermonty/claude-trading-skills | 2026-11-14 | https://github.com/tradermonty/claude-trading-skills | GitHub 공식 Trending 검색 색인 표시; README/LICENSE/최근 커밋 미검증 |
+| tailscale/tailcat | 2026-11-14 | https://github.com/tailscale/tailcat | GitHub 공식 Trending 검색 색인 표시; README/LICENSE/최근 커밋 미검증 |
+| Likely7/Veyra-NRVideo | 2026-11-14 | https://github.com/Likely7/Veyra-NRVideo | GitHub 공식 Trending 검색 색인 표시; README/LICENSE/최근 커밋 미검증 |
+| ChromeDevTools/chrome-devtools-mcp | 2026-11-14 | https://github.com/ChromeDevTools/chrome-devtools-mcp | GitHub 공식 Trending 검색 색인 표시; README/LICENSE/최근 커밋 미검증 |
