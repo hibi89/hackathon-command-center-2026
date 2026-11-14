@@ -1552,13 +1552,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "a4b1ce725696ab5e742636220bc8056335cde51d",
+        "head_sha": "f1ddc796044a5dc75da357f21648b3b584031812",
         "matches_current_head": true,
-        "run_id": 43543167165,
+        "run_id": 43543533813,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "a4b1ce725696ab5e742636220bc8056335cde51d",
+      "head_sha": "f1ddc796044a5dc75da357f21648b3b584031812",
       "machine_evidence_score": {
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
@@ -1586,14 +1586,14 @@
           "blueprint": {
             "branch": "feature/ffax-workbench-p85-20261112",
             "git_blob_sha": "a3ee7772c18d948aec1baf2c8fdc5a442c28e03c",
-            "head_sha": "a4b1ce725696ab5e742636220bc8056335cde51d",
+            "head_sha": "f1ddc796044a5dc75da357f21648b3b584031812",
             "path": "docs/ACCEPTANCE_MATRIX.md",
             "repository": "hibi89/frontend-foundry-ax"
           },
           "implementation": {
             "branch": "feature/ffax-workbench-p85-20261112",
             "git_blob_sha": "9a15cb846a430c296a23faf7ee5f751fc912b78d",
-            "head_sha": "a4b1ce725696ab5e742636220bc8056335cde51d",
+            "head_sha": "f1ddc796044a5dc75da357f21648b3b584031812",
             "path": "src/core.mjs",
             "repository": "hibi89/frontend-foundry-ax"
           }
@@ -2971,13 +2971,13 @@
           "branch": "feature/ffax-workbench-p85-20261112",
           "gate": {
             "conclusion": "success",
-            "head_sha": "a4b1ce725696ab5e742636220bc8056335cde51d",
+            "head_sha": "f1ddc796044a5dc75da357f21648b3b584031812",
             "matches_current_head": true,
-            "run_id": 43543167165,
+            "run_id": 43543533813,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "a4b1ce725696ab5e742636220bc8056335cde51d",
+          "head_sha": "f1ddc796044a5dc75da357f21648b3b584031812",
           "status": "PRESENT"
         }
       ]
