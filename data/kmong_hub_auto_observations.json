@@ -52,9 +52,9 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "2c77ce68bbe8735c0b98facbe4df19709802497a",
-        "matches_current_head": false,
-        "run_id": 43536152779,
+        "head_sha": "2516ff76e3bab6e431c2b423d3112579f908c027",
+        "matches_current_head": true,
+        "run_id": 43537183999,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
@@ -614,9 +614,9 @@
           "branch": "feature/final-blueprint-p85-evidence-20261113",
           "gate": {
             "conclusion": "success",
-            "head_sha": "2c77ce68bbe8735c0b98facbe4df19709802497a",
-            "matches_current_head": false,
-            "run_id": 43536152779,
+            "head_sha": "2516ff76e3bab6e431c2b423d3112579f908c027",
+            "matches_current_head": true,
+            "run_id": 43537183999,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
