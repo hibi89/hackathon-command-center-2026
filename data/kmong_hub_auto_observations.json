@@ -102,12 +102,12 @@
       "gate": {
         "conclusion": "success",
         "head_sha": "7313b4420b1e82a8a76ad3dbc2728baff4a35b42",
-        "matches_current_head": true,
+        "matches_current_head": false,
         "run_id": 43537507851,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "7313b4420b1e82a8a76ad3dbc2728baff4a35b42",
+      "head_sha": "7b00aba8dcb674f138493a4b3e04a29e12b801fa",
       "machine_evidence_score": {
         "percent": null,
         "reason": "Pinned rubric / CI verification failed: scorecard contract, scope or release invariant mismatch",
@@ -964,12 +964,12 @@
           "gate": {
             "conclusion": "success",
             "head_sha": "7313b4420b1e82a8a76ad3dbc2728baff4a35b42",
-            "matches_current_head": true,
+            "matches_current_head": false,
             "run_id": 43537507851,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "7313b4420b1e82a8a76ad3dbc2728baff4a35b42",
+          "head_sha": "7b00aba8dcb674f138493a4b3e04a29e12b801fa",
           "status": "PRESENT"
         },
         {
