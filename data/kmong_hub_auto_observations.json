@@ -101,17 +101,23 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "d7e029ae838a15f6f7a952cdf920341a6e3ad6b0",
-        "matches_current_head": true,
-        "run_id": 43538002050,
+        "head_sha": "7b00aba8dcb674f138493a4b3e04a29e12b801fa",
+        "matches_current_head": false,
+        "run_id": 43538150362,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
       "head_sha": "d7e029ae838a15f6f7a952cdf920341a6e3ad6b0",
       "machine_evidence_score": {
-        "percent": null,
-        "reason": "Pinned rubric / CI verification failed: scorecard contract, scope or release invariant mismatch",
-        "status": "UNASSESSED"
+        "denominator": 100,
+        "limitations": "Historical approved item classifications; no fresh item-by-item CI, real-customer, rights or retail acceptance",
+        "percent": 72,
+        "provenance": "approved fixed scorecard blob + completed successful exact-SHA baseline Actions run",
+        "release_authorized": false,
+        "scorecard_blob_sha": "79c08ce8fe9b9c9b34a82373e5e04d1785e409a2",
+        "source_run_id": 43509224663,
+        "source_sha": "23a2d1293755294a58a20b98dc34e229a1e54f82",
+        "status": "PINNED_APPROVED_RUBRIC_REPLAY"
       },
       "record_id": "ACTIVE-05",
       "repository": "hibi89/data2web_studio",
@@ -512,9 +518,9 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "f4f5f088b9fb2d89937c825445c035d1a4da0ca2",
-        "matches_current_head": false,
-        "run_id": 43537748124,
+        "head_sha": "fe36801be4a44fbf56b47c78310bd9b4bf59f664",
+        "matches_current_head": true,
+        "run_id": 43538184380,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
@@ -615,13 +621,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "a2e93a2c89daecb1d003eb6a2e35109dc0e40c20",
-        "matches_current_head": false,
-        "run_id": 43537874768,
+        "head_sha": "1ae85fcb4cc58d3bdd3f52d37c243b99f1f4e4f4",
+        "matches_current_head": true,
+        "run_id": 43538216524,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "5447f2e21a50e359e0c3f680d6238cd3c57b74c8",
+      "head_sha": "1ae85fcb4cc58d3bdd3f52d37c243b99f1f4e4f4",
       "machine_evidence_score": {
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
@@ -963,9 +969,9 @@
           "branch": "feature/final-blueprint-p85-evidence-20261113",
           "gate": {
             "conclusion": "success",
-            "head_sha": "d7e029ae838a15f6f7a952cdf920341a6e3ad6b0",
-            "matches_current_head": true,
-            "run_id": 43538002050,
+            "head_sha": "7b00aba8dcb674f138493a4b3e04a29e12b801fa",
+            "matches_current_head": false,
+            "run_id": 43538150362,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
@@ -1169,13 +1175,13 @@
           "branch": "product/bid-ax-public-procurement",
           "gate": {
             "conclusion": "success",
-            "head_sha": "a2e93a2c89daecb1d003eb6a2e35109dc0e40c20",
-            "matches_current_head": false,
-            "run_id": 43537874768,
+            "head_sha": "1ae85fcb4cc58d3bdd3f52d37c243b99f1f4e4f4",
+            "matches_current_head": true,
+            "run_id": 43538216524,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "5447f2e21a50e359e0c3f680d6238cd3c57b74c8",
+          "head_sha": "1ae85fcb4cc58d3bdd3f52d37c243b99f1f4e4f4",
           "status": "PRESENT"
         },
         {
@@ -1216,9 +1222,9 @@
           "branch": "product/rag-enterprise-knowledge",
           "gate": {
             "conclusion": "success",
-            "head_sha": "f4f5f088b9fb2d89937c825445c035d1a4da0ca2",
-            "matches_current_head": false,
-            "run_id": 43537748124,
+            "head_sha": "fe36801be4a44fbf56b47c78310bd9b4bf59f664",
+            "matches_current_head": true,
+            "run_id": 43538184380,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
@@ -1882,7 +1888,7 @@
     "canonical_matched": 31,
     "canonical_not_configured": 4,
     "historical_worker_reports": 16,
-    "pinned_rubrics_replayed": 0,
+    "pinned_rubrics_replayed": 1,
     "product_links": 29,
     "product_refs_missing": 0,
     "product_refs_present": 29,
