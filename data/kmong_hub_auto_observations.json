@@ -329,16 +329,16 @@
     },
     {
       "gate": {
-        "conclusion": "success",
-        "head_sha": "2e8801545521cef21bfab85c82cdd34576096eb5",
-        "matches_current_head": false,
-        "run_id": 43586524838,
+        "conclusion": null,
+        "head_sha": "86ba51bce6c9e1588d07e905cd4c84cac06af851",
+        "matches_current_head": true,
+        "run_id": 43590973304,
         "status": "LATEST_RUN",
-        "workflow_status": "completed"
+        "workflow_status": "queued"
       },
-      "head_sha": "7d63f01914637e01f784d00736b999635086b65c",
+      "head_sha": "86ba51bce6c9e1588d07e905cd4c84cac06af851",
       "machine_evidence_score": {
-        "current_head_sha": "7d63f01914637e01f784d00736b999635086b65c",
+        "current_head_sha": "86ba51bce6c9e1588d07e905cd4c84cac06af851",
         "denominator": 100,
         "limitations": "Historical approved item classifications; no fresh item-by-item CI, real-customer, rights or retail acceptance",
         "percent": 72,
@@ -373,7 +373,7 @@
           "blueprint": {
             "branch": "feature/final-blueprint-p85-evidence-20261113",
             "git_blob_sha": "c3b5a389fde981a70356f962724f1be6e26d6185",
-            "head_sha": "7d63f01914637e01f784d00736b999635086b65c",
+            "head_sha": "86ba51bce6c9e1588d07e905cd4c84cac06af851",
             "path": "docs/FINAL_DESIGN.md",
             "repository": "hibi89/data2web_studio"
           },
@@ -388,7 +388,7 @@
           "implementation": {
             "branch": "feature/final-blueprint-p85-evidence-20261113",
             "git_blob_sha": "b6ec0e4e138cbb9c38b0971c9b3f1ea309b99e9b",
-            "head_sha": "7d63f01914637e01f784d00736b999635086b65c",
+            "head_sha": "86ba51bce6c9e1588d07e905cd4c84cac06af851",
             "path": "blueprint_score.py",
             "repository": "hibi89/data2web_studio"
           }
@@ -2668,14 +2668,14 @@
         {
           "branch": "feature/final-blueprint-p85-evidence-20261113",
           "gate": {
-            "conclusion": "success",
-            "head_sha": "2e8801545521cef21bfab85c82cdd34576096eb5",
-            "matches_current_head": false,
-            "run_id": 43586524838,
+            "conclusion": null,
+            "head_sha": "86ba51bce6c9e1588d07e905cd4c84cac06af851",
+            "matches_current_head": true,
+            "run_id": 43590973304,
             "status": "LATEST_RUN",
-            "workflow_status": "completed"
+            "workflow_status": "queued"
           },
-          "head_sha": "7d63f01914637e01f784d00736b999635086b65c",
+          "head_sha": "86ba51bce6c9e1588d07e905cd4c84cac06af851",
           "status": "PRESENT"
         },
         {
