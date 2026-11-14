@@ -49,7 +49,7 @@ def replay_pinned_scorecard(card, run, pin):
     if (card.get("contract") != pin["contract"] or card.get("denominator") != 100
             or card.get("weights_status") != "OWNER_DELEGATED_APPROVED"
             or card.get("owner_approval_scope") != "SCORING_SCALE_AND_FIXED_R01_R33_WEIGHTS_ONLY_NOT_RELEASE"
-            or card.get("original_blueprint_scope") != "R01_R33_ALL_INCLUDED_NO_OMISSIONS"
+            or card.get("original_blueprint_scope") != "R01-R33_ALL_INCLUDED_NO_OMISSIONS"
             or card.get("final_completion_method") != "SUM_ONLY_VERIFIED_FULL_REQUIREMENT_WEIGHTS_NO_PARTIAL_WITHOUT_PREAPPROVED_RULE"
             or card.get("release_status") != "RELEASE_HOLD_SALE_NO_GO"):
         raise ValueError("scorecard contract, scope or release invariant mismatch")

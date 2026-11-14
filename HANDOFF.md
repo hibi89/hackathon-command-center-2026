@@ -1,3 +1,15 @@
+## 2026-11-14 KST — 이중 진척률 실제 App 첫 실행과 DATA2WEB 승인 스코프 문자열 수정 (10항)
+1. 목표: 작업자 과거 보고율 16종과 승인 GitHub 증거 기반 점수 29종 별도 표시, 공식률 불변.
+2. 변경: 첫 App live run에서 DATA2WEB `R01-R33_` 원문을 `R01_R33_`로 오기 비교해 신뢰도 검증이 fail-close됨을 확인; 승인 source scorecard/가중치 수정 없이 코드·테스트 기대값만 바로잡음.
+3. 테스트: [App run #43537749724](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43537749724) 기존+신규 37/37 PASS, 35repos/80refs/29links, UPDATE 성공, historical_worker_reports16, pinned_rubrics_replayed0. **실제 신규 자동72 PASS는 정정 뒤 정확 SHA Actions 재확인 전까지 미검증**.
+4. 상태: 두 보고 필드 실 App 관찰 JSON write/readback 완료, DATA2WEB 승인 72 자동재생성에는 오류→정확 문자열 수정 대기/재검증. `UNASSESSED` 공식0 의미 아님.
+5. 원인/전환: 승인 채점표 `original_blueprint_scope` 문자열 오탈자 1개. 차단 실패는 안전하게 UNASSESSED, 공식 점수 변동 없음. 테스트 fixture도 원문과 동일하게 맞춰 회귀 강화.
+6. Repo/Branch: `hibi89/hackathon-command-center-2026@main`, 수정 전 SHA `a8c488bd548e2c44bc3197f5d68e37ed84fdc021`; `tools/kmong_hub_sync/dual_progress.py`, `test_dual_progress.py`, STATUS/HANDOFF, 사용자 제품 코드 불변.
+7. 환경: GitHub App Contents/Actions READ, 중앙 kmong snapshot WRITE; Vercel/Production 미적용. 일반 GitHub CI `SUCCESS`와 가중점수 PASS 구별.
+8. 원본/보안: DATA2WEB 승인원본 scorecard blob `79c08ce8...`, 공식 72/100, 29제품/19서비스/등록완료, 35저장소 원본·비밀·OS 설정 불변. 이전 main SHA로 롤백 가능.
+9. 다음: 동일 코드 고정 SHA 신규 hosted test 확인, 정확 App 실행 결과 `pinned_rubrics_replayed:1` 및 ACTIVE-05 score72 원격 readback; 나머지28 `UNASSESSED`, AUTO 공식 덮어쓰기 금지. 실 작업자 현재 보고 인입은 후속.
+10. 검증 시각/범위: 2026-11-14 KST, 첫 App 37테스트 성공·score0 실패 원인 remote JSON 검증, 코드 오탈자 수정 staged. 새 정정 SHA의 CI/App 재생성은 검증 후만 완료 주장.
+
 ## 2026-11-14 KST — 크몽 작업자 보고 vs GitHub 증거 채점 병기 초기 구현 (10항)
 1. **목표·확정 요구:** 사용자 승인 A(기존 작업자 보고율) + B(GitHub App 독립 증거 기반 채점) 병기. 보고율은 내부 기술 이력, Actions 합격률이 곧 최종 상품률은 아님. 공식 인정은 사용자 최종설계100 승인과 정확 SHA 근거 별개.
 2. **완료·설계 결정:** 기존 Source Auditor App의 Source repo 읽기/중앙 JSON 단일 쓰기 유지. `tools/kmong_hub_sync/dual_progress.py`에서 불변 pin된 DATA2WEB R01~R33 채점표+Actions 정확 실행 SHA로 기존 승인 배점만 재집계. `worker_progress_baseline.json` 16개 내부 보고(11/13), 다른 항목은 미산정. 원장 공식 점수 덮어쓰기 금지.

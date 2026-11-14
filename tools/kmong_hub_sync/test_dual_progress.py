@@ -11,7 +11,7 @@ def good_card():
         "contract": P["contract"], "denominator": 100,
         "weights_status": "OWNER_DELEGATED_APPROVED",
         "owner_approval_scope": "SCORING_SCALE_AND_FIXED_R01_R33_WEIGHTS_ONLY_NOT_RELEASE",
-        "original_blueprint_scope": "R01_R33_ALL_INCLUDED_NO_OMISSIONS",
+        "original_blueprint_scope": "R01-R33_ALL_INCLUDED_NO_OMISSIONS",
         "final_completion_method": "SUM_ONLY_VERIFIED_FULL_REQUIREMENT_WEIGHTS_NO_PARTIAL_WITHOUT_PREAPPROVED_RULE",
         "release_status": "RELEASE_HOLD_SALE_NO_GO",
         "evidence_baseline": {"code_sha": P["source_sha"], "github_actions_run": P["run_id"]},
