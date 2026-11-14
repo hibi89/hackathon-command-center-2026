@@ -45,7 +45,7 @@ def valid_kmong_url(value):
 
 def valid_publication_date(value):
     """KST calendar date in a canonical YYYY-MM-DD representation."""
-    if not isinstance(value, str) or not re.fullmatch(r"\\d{4}-\\d{2}-\\d{2}", value):
+    if not isinstance(value, str) or not re.fullmatch(r"\d{4}-\d{2}-\d{2}", value):
         return False
     try:
         return date.fromisoformat(value).isoformat() == value
