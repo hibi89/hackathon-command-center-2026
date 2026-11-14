@@ -30,3 +30,8 @@ jobs:
         run: npm test --prefix services/kmong-event-bridge
       - name: Existing collector regression suite
         run: python3 -B -m unittest discover -s tools/kmong_hub_sync -p 'test_*.py' -v
+      - name: Observe public Production health over GET (read-only, non-blocking)
+        if: github.event_name == 'push'
+        env:
+          KMONG_PROBE_URL: https://kmong-hub-event-bridge.vercel.app/api/webhook
+        run: node services/kmong-event-bridge/probe-production.mjs

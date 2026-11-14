@@ -150,7 +150,11 @@ function answer(status, obj) {
 export function health(env) {
   const configured = Boolean(env.KMONG_WEBHOOK_SECRET && env.KMONG_DISPATCH_APP_ID &&
     env.KMONG_DISPATCH_APP_PRIVATE_KEY && env.KMONG_DISPATCH_ENABLED === "true");
-  return answer(configured ? 200 : 503, { status: configured ? "ready" : "not_configured" });
+  // A public Git SHA enables anonymous read-only deployment parity checks without leaking secrets.
+  const sourceSha = typeof env.VERCEL_GIT_COMMIT_SHA === "string" &&
+    /^[a-f0-9]{40}$/i.test(env.VERCEL_GIT_COMMIT_SHA) ? env.VERCEL_GIT_COMMIT_SHA : null;
+  return answer(configured ? 200 : 503,
+    { status: configured ? "ready" : "not_configured", source_sha: sourceSha });
 }
 
 export async function receiveWebhook(request, env, fetchImpl = fetch) {

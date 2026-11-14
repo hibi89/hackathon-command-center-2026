@@ -275,3 +275,24 @@ test("GitHub history GET failure stops dispatch fail-closed", async () => {
   assert.equal(requests.length, 3);
   assert.equal(requests.some((r) => r.url.endsWith("/dispatches")), false);
 });
+
+test("public health response exposes only a validated deployment commit, not credentials", async () => {
+  const valid = "a".repeat(40);
+  const good = await health({ ...env, VERCEL_GIT_COMMIT_SHA: valid }).json();
+  assert.deepEqual(good, { status: "ready", source_sha: valid });
+  const bad = await health({ ...env, VERCEL_GIT_COMMIT_SHA: "untrusted_value" }).json();
+  assert.deepEqual(bad, { status: "ready", source_sha: null });
+  const disabled = await health({ ...env, KMONG_DISPATCH_ENABLED: "false", VERCEL_GIT_COMMIT_SHA: valid }).json();
+  assert.deepEqual(disabled, { status: "not_configured", source_sha: valid });
+});
+test("read-only deployment probe distinguishes SHA match from unknown and disabled", async () => {
+  const { classify } = await import("../probe-production.mjs");
+  const sha = "a".repeat(40);
+  assert.deepEqual(classify(200, { status: "ready", source_sha: sha }, sha),
+    { verdict: "READY_SHA_MATCHED", source_sha: sha });
+  assert.equal(classify(200, { status: "ready" }, sha).verdict, "READY_VERSION_UNVERIFIED");
+  assert.equal(classify(200, { status: "ready", source_sha: sha }, "b".repeat(40)).verdict, "READY_SHA_NOT_MATCHED");
+  assert.equal(classify(503, { status: "not_configured" }, sha).verdict, "NOT_CONFIGURED");
+  assert.equal(classify(403, {}, sha).verdict, "PROTECTED_OR_UNAUTHORIZED");
+  assert.equal(classify(404, {}, sha).verdict, "NOT_FOUND");
+});
