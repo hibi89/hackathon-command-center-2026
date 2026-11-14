@@ -434,5 +434,19 @@
     "evidence_required_for_registered": true,
     "future_duplicate_check": "원천29종, 19개 서비스, 옵션/모듈, 과거 등록완료 및 중단 이력을 함께 검사",
     "verified_registered_count": 0
-  }
+  },
+  "operating_mode": "LISTING_UNIT_BASE_FIRST_EXTEND_LATER",
+  "operating_unit_key": "service_id",
+  "operating_plan_doc": "docs/commercial/KMONG_LISTING_UNIT_OPERATIONS_20261114.md",
+  "release_workflow": "Independent BASE customer acceptance and OWNER GO -> existing listing draft/verified posting -> EXTENSION feature integration acceptance -> edit same customer-purpose listing after OWNER GO",
+  "management_note": "19 listing work units; retain 29 independent source repositories/branches; initial base must be commercial-ready, extension is only future plan until verified; no automatic score transfer; maintain existing listing_history",
+  "extra_candidate_sku_watchlist": [
+    "ECHOHOME",
+    "PAWTALK",
+    "MYRADIO AI"
+  ],
+  "internal_shared_tool_watchlist": [
+    "AXNODE",
+    "AXMART³ CUBE"
+  ]
 }
