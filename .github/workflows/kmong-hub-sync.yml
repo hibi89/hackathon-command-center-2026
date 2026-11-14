@@ -72,7 +72,13 @@ jobs:
             SOVIA_sovereign
             web-rea-studio
             work-hell-dungeon
+      - name: Check App budget and block burst duplicate dispatches
+        id: scan_gate
+        env:
+          KMONG_SOURCE_APP_TOKEN: ${{ steps.source-token.outputs.token }}
+        run: python3 -B tools/kmong_hub_sync/quota_guard.py
       - name: Scan sources, report evidence and conditionally update hub observation
+        if: steps.scan_gate.outputs.run_sync == 'true'
         env:
           KMONG_SOURCE_APP_TOKEN: ${{ steps.source-token.outputs.token }}
           KMONG_HUB_TOKEN: ${{ github.token }}
