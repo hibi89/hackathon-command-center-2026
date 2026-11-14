@@ -1,3 +1,5 @@
+> **[2026-11-14 KST — owner preview ZIP 56파일 생성·검증 완료]** GitHub [미서명 owner-only preview](https://github.com/hibi89/DBVORA/actions/runs/43544666021): 56파일 SHA manifest+offline selftest PASS, inner ZIP SHA `e7a6d46099c170cc8e0f70b098dd6a86d47c5678b0ff51bc3cfa7225fa0426f1`. [Windows10 실기기 최소 합성 QA](https://github.com/hibi89/DBVORA/blob/feature/p0-db-map/docs/OWNER_WINDOWS_QUICK_QA_20261114.md). preview는 **판매 배포본 아님**; 실제 소비자 사용권·라이선스/조건/정산/상품 제출 미승인, 등록0·RELEASE HOLD. 공식 완성률 UNASSESSED, 과거 내부95 별도 기록.
+
 # DBVORA — 2026-11-14 주말 크몽 상품화 초안 (등록 금지·승인 대기)
 
 > **추가 브라우저 근거(2026-11-14):** [Windows Server2025·Linux Ubuntu24.04 실제 Chromium HTTP E2E](https://github.com/hibi89/DBVORA/actions/runs/43544065399) **2/2 SUCCESS, 각 8/8**, 데스크톱/모바일 합성 PNG **총4장**(GitHub artifact 7일, 스크린샷에는 고객 데이터 없음). 기존 Unix 전용 증거 외 Windows 브라우저 실검증도 확보. [제품 인수인계 최신](https://github.com/hibi89/DBVORA/blob/feature/p0-db-map/HANDOFF.md). 고객·서명·법적 판매/등록 승인은 별개이며 NO-GO 유지.
