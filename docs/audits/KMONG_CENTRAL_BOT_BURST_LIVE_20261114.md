@@ -34,3 +34,10 @@ No source code, cron, GitHub App privileges, deployment, secrets, official score
 - Native schedule repeat: **0/5 additional** until a second distinct `event=schedule` run is verified with PASS and snapshot readback.
 - Signed webhook E2E: **0/10 additional** until actual signed deliveries and central evidence are confirmed.
 - Production: retains previous partial GET/runtime-parity evidence only; no new browser, signed POST, or full-service certification in this run.
+
+## Follow-up: second independent 30-minute collection bucket (2026-11-14 22:30–22:32 KST)
+
+- [#43600052895](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43600052895), bot workflow_dispatch at 2026-11-14T13:30:02Z, job `132462692827` SUCCESS: `PREFLIGHT RUN`, **80 tests PASS**, `SYNC UPDATED` (35/80/29; unlinked 0, fingerprint 0, official scores UNMODIFIED).
+- [#43600053198](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43600053198), same bot event timestamp, job `132463053679` SUCCESS but `PREFLIGHT DEFERRED_BOT_BURST`, test/scan steps SKIPPED and no second sync. This is a *deferred job*, not an additional completed observation.
+- Independent central JSON readback after this pair: blob `eae16be34269042ad038c66c975caefbeca8b85f`, 35 repositories/80 tracked branches/29 linked products, zero missing/unlinked refs, zero fingerprint alerts, zero official certification.
+- Interpretation: burst deferral **observed in two separate half-hour buckets** (22:03 and 22:30 KST). The second `schedule` run and signed webhook live E2E gates remain unverified; **score stays 85/100**. No authorization to infer atomic webhook deduplication or Production signed-delivery success.
