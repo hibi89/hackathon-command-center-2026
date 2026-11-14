@@ -2460,9 +2460,14 @@
         {
           "branch": "feature/astra-p71-pdf-source-parity-20261112",
           "gate": {
-            "status": "NO_RUN"
+            "conclusion": "success",
+            "head_sha": "fb3b02217c6c4223df49c2141e9373f08317a66c",
+            "matches_current_head": true,
+            "run_id": 43541356536,
+            "status": "LATEST_RUN",
+            "workflow_status": "completed"
           },
-          "head_sha": "2c2bef5288257d9405bb912aa838ca071703e0ed",
+          "head_sha": "fb3b02217c6c4223df49c2141e9373f08317a66c",
           "status": "PRESENT"
         },
         {
