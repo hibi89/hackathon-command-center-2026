@@ -8,7 +8,7 @@ on:
         required: true
         default: true
   schedule:
-    - cron: '10 2 * * *'  # 11:10 KST daily, only after explicit enable
+    - cron: '23 * * * *'  # Hourly at :23 UTC/KST, gated by KMONG_SYNC_ENABLED and App API budget
 permissions:
   contents: write  # THIS repository only; App token is source-repo read-only
 concurrency:

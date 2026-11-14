@@ -1,5 +1,6 @@
 """Offline tests for the App primary budget and burst dispatch guard."""
 import unittest
+from pathlib import Path
 from quota_guard import (
     BOT_ACTOR, CORE_RESERVE, GuardError, bot_is_first_eligible_run,
     core_budget, decide, utc_epoch,
@@ -69,6 +70,25 @@ class QuotaGuardTests(unittest.TestCase):
     def test_malformed_rate_limit_does_not_claim_run(self):
         with self.assertRaises(GuardError):
             decide("800", "schedule", "")
+
+
+
+class ScheduledRecoveryPolicyTests(unittest.TestCase):
+    def test_hourly_default_branch_schedule_and_source_budget_gate(self):
+        path = Path(__file__).resolve().parents[2] / ".github/workflows/kmong-hub-sync.yml"
+        body = path.read_text(encoding="utf-8")
+        self.assertIn("cron: '23 * * * *'", body)
+        self.assertIn("vars.KMONG_SYNC_ENABLED == 'true'", body)
+        self.assertIn("scan_gate.outputs.run_sync == 'true'", body)
+        self.assertIn("KMONG_SYNC_DRY_RUN: ${{ inputs.dry_run }}", body)
+
+    def test_source_read_app_and_hub_scopes_unchanged(self):
+        path = Path(__file__).resolve().parents[2] / ".github/workflows/kmong-hub-sync.yml"
+        body = path.read_text(encoding="utf-8")
+        self.assertIn("permission-contents: read", body)
+        self.assertIn("permission-actions: read", body)
+        self.assertIn("KMONG_HUB_TOKEN: ${{ github.token }}", body)
+        self.assertNotIn("pull_request_target:", body)
 
 
 if __name__ == "__main__":

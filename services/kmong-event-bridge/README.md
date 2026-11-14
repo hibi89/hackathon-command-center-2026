@@ -80,3 +80,10 @@ The branch-only CI verifies the exact 35-repo allowlist matches the collector ro
 ### 2026-11-14: no-secret Production feature probe
 
 The anonymous `GET /api/webhook` response includes `bridge_feature: "coalesce-v1"` in this revision, plus a public `source_sha` only when Vercel provides a valid 40-character `VERCEL_GIT_COMMIT_SHA`. The non-blocking GitHub Actions `probe-production.mjs` distinguishes an older/unknown feature from a proven `READY_SHA_MATCHED` deployment without making webhook POST requests. HTTP 200 `ready` alone never proves source parity or exact running SHA. A missing feature field indicates an older/unknown deployed build, not automatically a service outage.
+
+### 2026-11-14: hourly budget-gated GitHub recovery schedule
+
+- `main` collector's existing `schedule` is changed from one 11:10 KST daily scan to `23 * * * *`: one best-effort **hourly** reconciliation, to reduce potential stale snapshots while the Vercel webhook deployment is unverified. GitHub can delay or drop scheduled jobs; this is not an SLA or proof that cron actually fired.
+- The existing `KMONG_SYNC_ENABLED=true` flag, 450-call App core reserve, read-only source token, central-only conditional snapshot WRITE, idempotent `NO_CHANGE`, and `DEFERRED` semantics are unchanged. If the budget guard blocks a scheduled run, no source scan or hub update occurs. No new services or credentials; the central repo is public and uses a standard `ubuntu-latest` runner.
+- Expected reservation: up to 24 scheduled attempts/day **if GitHub delivers them and the existing enable flag is true**, versus one/day previously. Actual App usage, completion and absence of paid charges must be verified from run logs/billing; GitHub documentation currently lists standard hosted Actions in public repos as free.
+- Confirm an actual `event=schedule` run, its `RUN/DEFERRED` status, and central observation JSON readback before stating that the recovery fallback works. Revert the cron-only change through a normal commit if API pressure or unwanted jobs are observed.
