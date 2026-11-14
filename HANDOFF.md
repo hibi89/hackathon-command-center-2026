@@ -1,3 +1,18 @@
+## [2026-11-14 11:56 KST] 해총 중복봇 비용 낭비 최소화·스킵 경고 실증 인수인계 10항
+
+1. **목표/기술:** 35개 source repo·80ref·29제품 자동 GitHub 증거 스캔의 중복 bot dispatch마다 불필요하게 회귀테스트를 수행하던 상황을 무료·최소 변경으로 개선. 기존 App GET/허브 observation JSON 조건부 WRITE 아키텍처 유지.
+2. **결정:** A 업스트림 bot 자체 debounce는 근본 해법이나 호스트/소스 접근 미확인. B 중앙 workflow `scan_gate` 앞에서 모든 테스트를 수행하는 낭비를 줄이고, RUN에만 75테스트 실행·DEFERRED에는 명시적 경고/요약을 남기는 방법 채택. 기능 스캔·권한·비밀·사용자 데이터 범위 불변.
+3. **실행/테스트:** `main@92b2b332f03920027b5b3b8236a7e07bddef2ebd` 워크플로 원격 readback 검증. [#43548904826](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43548904826), [#43548918936](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43548918936): 두 건 모두 `Run unit` SKIPPED, `Annotate deferred` SUCCESS, `Scan sources` SKIPPED. 첫 job 로그 `DEFERRED_BOT_BURST`·remaining5750·reserve450. [정본 gate #43548903090](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43548903090) SUCCESS. 변경 직전 75/75 테스트 PASS 근거 #43547282002.
+4. **완료/진행/차단:** 중복 실행의 불필요한 회귀테스트 생략과 경고 실증 완료. upstream dispatch 빈도 제어, 수정 후 RUN=true 풀 스캔 및 JSON readback은 미검증. 29 GitHub 증거점수는 기존 성공 snapshot, 제품 공식 최종완성률 증명 아님.
+5. **오류/재시도 금지·대안:** 봇이 14분 동안 25건 이상 실행됐고 대부분 green success로 보이나 스캔은 SKIPPED; 해당 상태를 UPDATED로 계산 금지. 근본 원천 소스 접근 없이 권한 변경·임의 Vercel 프로젝트 수정 금지, 중복 workflow rerun 금지. source dispatcher 접근 확보 후 webhook enqueue/debounce + 30분 cap 재설계.
+6. **저장소·브랜치·SHA:** `hibi89/hackathon-command-center-2026@main:92b2b332f03920027b5b3b8236a7e07bddef2ebd`, 문서는 `kmong-productization` 이 경로와 `STATUS.md` 최신화; 이 문서 갱신 후 허브 HEAD 별도 검증.
+7. **Production/환경:** GitHub public Actions Ubuntu·Python stdlib·소스 읽기 App 토큰. Vercel 제품 Production 및 크몽 실제 등록 미적용. GitHub App 상위 호출 호스팅의 변경은 미적용.
+8. **원본/보안/복구:** 원천29/서비스19·승인72/UNASSESSED28·등록완료 이력·[작업중]·원시 JSON·고객/비밀·App permissions 불변. 기존 `main@67212b67`의 workflow 파일을 일반 revert로 복구 가능(force push 금지).
+9. **다음 절차/완료 기준:** (1) 다음 정상 버킷 RUN=true 테스트/전체 스캔/29점 JSON remote readback (2) `NO_CHANGE` 실증 (3) 소유 bot 웹훅 원천의 호출 폭주 정지 가능성 조사, 무단 서비스/권한 변경 금지 (4) 4개 주말 상품의 최종 설계 수용 검증/사용자 개입은 기존 13시 통합.
+10. **갱신·확인 시점:** 2026-11-14 11:56 KST, 범위 GitHub remote main SHA/readback, 실제 두 봇 runs/step와 첫 로그, gate SUCCESS. 새로운 전체 source sync·Vercel upstream 자체 throttling **미검증**.
+
+---
+
 ## 2026-11-14 KST Astra P92 실CI 종료 최종 동기화 (10항)
 
 1. 목표: Astra 원본 STEP1~7·BASIC8/PRO20/BUSINESS30 전체 최종설계 100%, 0원 오프라인 우선.
