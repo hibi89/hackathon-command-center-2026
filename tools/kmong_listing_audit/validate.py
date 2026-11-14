@@ -129,12 +129,15 @@ def validate(catalog, index):
             "registered listing evidence requirement disabled")
     require(set(lifecycle.get("status_values", [])) == LISTING_STATES,
             "listing state schema changed")
+    # Registration is a durable historical fact even if a listing is later hidden,
+    # suspended, or removed. Never reduce the tally to currently active listings.
+    has_registration_proof = lambda s: (s["listing_status"] == "등록완료" or any(
+        isinstance(event, dict) and
+        (event.get("event") == "등록완료" or event.get("status") == "등록완료")
+        for event in s["listing_history"]))
     require(lifecycle.get("verified_registered_count") ==
-            sum(s["listing_status"] == "등록완료" for s in services),
-            "verified registered count inconsistent with current listing status")
-    require(catalog.get("listing_lifecycle", {}).get("verified_registered_count") == 0 or
-            all(s["listing_status"] != "등록완료" or bool(s["listing_history"]) for s in services),
-            "registered history cannot be erased")
+            sum(has_registration_proof(s) for s in services),
+            "verified registration count must preserve historical completions")
 
     # Cross-validate official score *summary*, without authorizing a score change.
     summary = index.get("summary", {})

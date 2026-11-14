@@ -67,6 +67,27 @@ class ListingGateTests(unittest.TestCase):
     def test_source_summary_mismatch_rejected(self):
         self.check_reject(lambda c, i: i["summary"].update(official_unassessed=27))
 
+    def test_past_registration_remains_counted_when_listing_is_stopped(self):
+        c = copy.deepcopy(self.catalog)
+        c["ranked_services"][0].update(
+            listing_status="판매중지",
+            kmong_listing_url=None,
+            published_at_kst=None,
+            listing_history=[{"status": "등록완료", "evidence": "verified archive"},
+                             {"status": "판매중지", "evidence": "owner decision"}],
+        )
+        c["listing_lifecycle"]["verified_registered_count"] = 1
+        self.assertEqual(len(validate(c, self.index)), 29)
+
+    def test_past_registration_cannot_disappear_from_registered_count(self):
+        def change(c, i):
+            c["ranked_services"][0].update(
+                listing_status="판매중지",
+                listing_history=[{"event": "등록완료", "evidence": "archive"}],
+            )
+            # Illegal: old count remains zero after an actual previous registration.
+        self.check_reject(change)
+
     def test_future_real_listing_with_evidence_is_accepted(self):
         c = copy.deepcopy(self.catalog)
         c["ranked_services"][0].update(
