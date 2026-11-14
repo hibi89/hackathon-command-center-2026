@@ -1,3 +1,11 @@
+## 2026-11-14 KST — FFAX hardening CI 115/115 and verified owner-review ZIP
+
+- Feature branch `hibi89/frontend-foundry-ax@feature/ffax-workbench-p85-20261112`: validated functional SHA `e5982bf53ea9e65625051d2f3937abfc2ce979ba`, documentation HEAD `2773e90821554f2d9e7e4df91426b89126a0b5a9`; [GitHub Actions 43547649624](https://github.com/hibi89/frontend-foundry-ax/actions/runs/43547649624) **4/4 SUCCESS**.
+- Linux & native Windows Node22 **115/115 PASS each**, added actual localhost HTTP security allowlist, Host/DNS rebinding defense + 10 blocked internal paths, malformed model policy error receipts `HALTED` not false PASS, formal Chromium/axe/contrast/cleanroom and Windows preview ZIP SHA/syntax post-extraction checks.
+- New unsigned source-only 22-file `ffax-owner-review-unreleased` GitHub artifact ID `14094548197`, SHA256 `6dbb1f2ffa5198b50b37e9b2e213f53bd16240a6a1cea8d83dfef534f190d087`, `SOURCE_SHA.txt` equals code SHA. `RUN-LIVE-MODEL-CHECK.cmd` preflights Node/Ollama/approved local Qwen before public npm install; real model CLI checkpoints atomic JSON/12-brief digest, per prompt ≤120s, failfast. No model shipped, no paid/cloud API.
+- **Real Qwen model on owner PC, user's Windows visuals/keyboard, buyer app, actual distribution npm installation and Kmong sale NOT VERIFIED.** Two skipped acceptance items AC04 real model (14 points), AC09 owner signoff (6 points). Fixed internal engineering rubric **80/100 provisional unchanged**, central official complete-final-design **UNASSESSED**, release **HOLD** and `[작업중]` unchanged. No user data, main branch, permissions, Vercel/Production or other product metrics modified.
+- [Private FFAX full final blueprint REQ01–12/WF01–07 trace](https://github.com/hibi89/frontend-foundry-ax/blob/feature/ffax-workbench-p85-20261112/docs/FINAL_BLUEPRINT_TRACE_20261114.md). Owner-only steps remain bundled in **one 13:00 KST** FFAX/ASTRA/DBVORA/DATA2WEB automation; user not asked earlier. Prior audit entries preserved below.
+
 ## 2026-11-14 KST — FFAX Windows owner-check ZIP now includes live 12-brief test runner (new verified code)
 
 - FFAX feature SHA `36d2b7ea7ad7a79988c632a18a9dd809c6f1390b`, docs-only HEAD `87cc381724789d47cd4b7a71f0438c549bf029f4`; [GitHub Actions run 43545601889](https://github.com/hibi89/frontend-foundry-ax/actions/runs/43545601889) **4 jobs SUCCESS**.
