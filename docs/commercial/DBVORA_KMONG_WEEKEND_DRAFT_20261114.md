@@ -61,3 +61,12 @@ DBVORA는 사용자가 승인한 데이터베이스의 테이블·컬럼·기본
 - P100 출시 검증 요건: https://github.com/hibi89/DBVORA/blob/feature/p0-db-map/docs/DBVORA_P100_ACCEPTANCE_20261114.md
 - 전체 자동 검증: https://github.com/hibi89/DBVORA/actions/workflows/dbvora-release-gate.yml
 - 현재 Repo는 **Public**으로 확인됨: 상품/개별 프로그램 소스 노출과 판매권리 정책 재검토 필요. 사용자 사전 승인 없이 Private 변경 금지(작업 Runner 비용/권한 영향 가능).
+
+
+## 2026-11-14 공식 크몽 정책 확인 및 1차 등록 권고
+- 공식 크몽 공지(2026-01-19): 등록 화면은 **기본 정보/상세 정보 2단계**, 제목 기반 AI 카테고리 추천·금지어 안내 및 임시저장 기능으로 개편됨. 실제 작성 화면과 최종 심사 정책을 우선 확인해야 하며, 여기서는 임의 계정 로그인/등록/결제를 수행하지 않음. [공식 안내](https://kmong.com/support/expert-center/posts/580).
+- 크몽은 서비스 등록 시 **사전 검토**를 수행하고, 게시 이후에도 검증되지 않은 광고 문구를 점검함. 'Windows 사용 보장', '전원 장애 복구 보증', '무조건 ZIP보다 절감', '실제 PostgreSQL 지원 확정', '설치 EXE 제공' 등의 **미검증 광고는 배제**. [공식 안내](https://kmong.com/support/customer-center/posts/114).
+- **주말 1차 등록 시 권고 상품 범위(출시 전 계획, 실제 등록0):** 검증된 SQLite 구조맵+오프라인 HTML 리포트만 **초기 STANDARD 후보**로 명확하게 설명. PostgreSQL 실 TLS, ZSTD/ZIP 고객 NTFS 복원, 다중 DB/설치형 등은 **실고객 사용 준비가 검증될 때까지 유료 옵션·제공 확약에 포함하지 않는 보수적 설계**를 권고. 이는 자동 확정/기존 전체 설계 축소가 아니라 광고·고객 인수 위험을 낮추는 단계별 판매 제안이다.
+- 실제 검증 완료 근거: 기능 SHA `eab26716e25e8c55b120d295110be2f754b6aa5e`, [전체 GitHub Actions 양OS 10/10](https://github.com/hibi89/DBVORA/actions/runs/43543367368), [실 Chromium localhost 화면 8/8 및 합성 desktop/mobile PNG](https://github.com/hibi89/DBVORA/actions/runs/43543367417). **PNG는 합성 데모이고 실제 고객 사례 아님**. 다운로드 가능한 증빙은 Actions에서 7일 뒤 만료되므로 상품 등록 전에 실제 배포용 권리가 있는 별도 안전한 그림 보존 필요; 사용자 별도 저장 승인 없이는 외부 클라우드/Library 무단 업로드 금지.
+- **상품 라이선스 결정 전 검토**: 현재 `hibi89/DBVORA`는 실제 GitHub Public이고 리포지토리에 확정 LICENSE/NOTICE가 없다. 공개 소스이므로 '비공개 독점 기술 전체 소스 제공'·저작권 양도·재배포 권한을 암묵적으로 보장할 수 없다. 타사 종속성의 라이선스 및 프로그램 자체 판매 사용권/지원·환불 조건 검증 후 사용자 최종 승인. 공개 repo를 Private으로 바꾸거나 고객에게 영구 사용권을 부여하는 문서는 별도 승인 없이 적용하지 않는다.
+- 1차 등록 승인 시 사용자는 실제 크몽 계정의 **기본 정보/상세 정보** 화면에서 카테고리/전문가 정보/가격/라이선스/지원/반품·환불·납품 범위를 직접 최종 확인한다. 실제 심사 제출 증빙(서비스 ID·페이지 URL 등)이 확인될 때만 중앙 등록이력 '등록완료' 표기. 
