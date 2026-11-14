@@ -1,3 +1,16 @@
+## [2026-11-14 14:40+ KST] KMONG_HUB_SCHEDULE_ZERO_AFTER_1430_BOT — 실측 인수인계 (10항)
+
+1. **목표·요구·기술:** 3대회/크몽 35 repo·80 tracked ref·29 source 제품 GitHub App 자동수집의 시간당 schedule 첫 실증, 14:30 봇 후 원장 최신성, 서명 webhook 2건·Vercel 배포 감사. 비용0·사용자 모바일·PC 요구 금지.
+2. **완료 기능·결정:** GitHub Connector REST 직접 재조회로 main `69e584e57a3a37fa72b406d62ccddf9eef9dfcf2`, kmong 이전 HEAD `fd9851a58b7f6c8c2812e6442b175dc381dd0746` 확인. 현재 `cron='23 * * * *'`; 봇 #43561849137 실제 `workflow_dispatch` SUCCESS/UPDATED 35/80/29/0 unlinked·fingerprint0/official UNMODIFIED 확인. schedule 0건에는 안전한 관망·재검증 채택; 강제 Actions 호출·cron 무단 수정 불채택.
+3. **테스트·증거:** run #43561849137 1 job SUCCESS, 로그 `PREFLIGHT RUN remaining5750 reserve450`, Python unit pass, `UPDATED`, 원장 blob `4d7a12cdbc8ae6fb1096d898fe8af72124c7b5c2`; `GET /actions/runs?event=schedule` total_count 0. Source GitHub branch API 네 곳 4/4 조회; DATA2WEB/Astra/FFAX 3 match, DBVORA 1 mismatch, 신규 DBVORA `d52b75d90f1674e2357458c7bfbc22c4f2edb569` 정확 SHA Actions 5/5 SUCCESS. 생산 webhook 2 signed event·Vercel Production SHA 미검증.
+4. **상태:** 증거 확인 완료, 예약 실증 **PENDING**, DBVORA 14:36:45 KST 후발 변경 원장 **STALE_ONE_REF**, 웹훅 `queued/coalesced` E2E **PENDING**, Vercel 연결 **ACCESS_BLOCKED**. 공식 DATA2WEB 72/100, DBVORA/Astra/FFAX UNASSESSED, 상용 RELEASE HOLD/미등록 유지.
+5. **오류·원인·재시도:** 첫 14:23 schedule 이후 14:40+ 관찰 0건; GitHub 지연·누락 원인 미확정. Vercel 이름/과거 project ID 및 team-scoped API 404, deploy list 403, team project 검색 0개. 운영 서비스 장애 단정 불가. 토큰·도메인·설정·연결/배포 변경 없이 read-only로만 시도; 같은 인자로 재시도 금지.
+6. **저장소·브랜치·SHA:** `hibi89/hackathon-command-center-2026@main` `69e584e57a3a37fa72b406d62ccddf9eef9dfcf2`; `kmong-productization` 시작 HEAD `fd9851a58b7f6c8c2812e6442b175dc381dd0746`, 자동 observation JSON blob `4d7a12cdbc8ae6fb1096d898fe8af72124c7b5c2`. 본 문서 결과 커밋 SHA는 반드시 원격 readback으로 확정. `.github/workflows/kmong-hub-sync.yml`, `services/kmong-event-bridge/lib/receiver.js`, `data/kmong_hub_auto_observations.json`.
+7. **Production/실행·환경:** 기존 URL `https://kmong-hub-event-bridge.vercel.app/api/webhook`. 신규 GET/POST Production 현재 검증 불가(연결 계정 API 404/403); 과거 GET200은 과거 증거이지 현재 운영 SHA가 아님. Vercel Hobby / GitHub App source READ / hub-only conditional WRITE, 신규 배포0.
+8. **원본·백업·보안:** 위 원격 이전 SHA로 문서 이력 복원 가능. 제품 소스·고객자료·GitHub/Vercel 비밀값·환경변수·권한·등록 이력·공식율·판매GO 변경0. Source Auditor 읽기 전용 유지, 원장 수동 덮어쓰기 금지.
+9. **다음 우선순위·완료:** 15:23 예약 슬롯 이후 15:45 KST 예약 검증 자동화 ID `6af7f4913e0c819194cfb57f8cccb46a`에서 schedule run event+RUN/DEFERRED 확인→새 bot/schedule 원장 readback→DBVORA HEAD 신선도 확인. 이후 실제 서명된 webhook 두 건의 `queued/coalesced` + Actions 중복억제 대응과 올바른 Vercel 프로젝트 접근이 확보되면 배포 설정 검증. 예약 성공과 단순 bot 성공을 절대 혼동하지 말 것.
+10. **갱신 KST·검증 범위:** 2026-11-14 14:40+ KST, GitHub branch/runs/jobs/log/readback 및 Vercel read-only API. schedule 실실행, 실제 webhook 2회, Vercel deployed SHA, 구매자 PC/상품 판매 검증 **NOT_VERIFIED**. 동시 개발중인 원천 브랜치 수정0.
+
 ## [2026-11-14 14:17+ KST] FFAX 주말4SKU 최신 코드 CI 증거 갱신 (필수 10항)
 1. **목표·용도:** 주말4SKU `KMONG-SVC-10` FFAX의 실제 현행 기능/CI 신뢰성 확보, 상품 최종설계/판매와 별도.
 2. **완료·결정:** FFAX 브라우저 runner만 Ubuntu24.04 및 Playwright 공식 executable_path로 최소 호환 복구. 데이터/권한/상품 디자인·기능 소스 무변경.
