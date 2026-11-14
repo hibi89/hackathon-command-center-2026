@@ -837,13 +837,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "648d338364ae10765f93337e373c235b7c16060e",
+        "head_sha": "10b4c46769199a1153088b138dd404f307b0b651",
         "matches_current_head": true,
-        "run_id": 43580909828,
+        "run_id": 43586399936,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "648d338364ae10765f93337e373c235b7c16060e",
+      "head_sha": "10b4c46769199a1153088b138dd404f307b0b651",
       "machine_evidence_score": {
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
@@ -871,14 +871,14 @@
           "blueprint": {
             "branch": "feature/p0-db-map",
             "git_blob_sha": "8e8e61f30c504fa5fe0acbaa6c85047801e921d6",
-            "head_sha": "648d338364ae10765f93337e373c235b7c16060e",
+            "head_sha": "10b4c46769199a1153088b138dd404f307b0b651",
             "path": "REQUIREMENTS.md",
             "repository": "hibi89/DBVORA"
           },
           "implementation": {
             "branch": "feature/p0-db-map",
             "git_blob_sha": "81338d4c4a64d2afa36e6619f39c469e0863289f",
-            "head_sha": "648d338364ae10765f93337e373c235b7c16060e",
+            "head_sha": "10b4c46769199a1153088b138dd404f307b0b651",
             "path": "dbvora/api.py",
             "repository": "hibi89/DBVORA"
           }
@@ -991,13 +991,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "0d3501d0cf51f3b5e87370f6a973fbb01d72e697",
+        "head_sha": "fbff14090caf5cead6973e6a47d503e76248696b",
         "matches_current_head": true,
-        "run_id": 43583817679,
+        "run_id": 43584374105,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "0d3501d0cf51f3b5e87370f6a973fbb01d72e697",
+      "head_sha": "fbff14090caf5cead6973e6a47d503e76248696b",
       "machine_evidence_score": {
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
@@ -1025,7 +1025,7 @@
           "blueprint": {
             "branch": "feature/astra-p71-pdf-source-parity-20261112",
             "git_blob_sha": "f2ce12696003fcff0ebddcd086cc2e5998a3135c",
-            "head_sha": "0d3501d0cf51f3b5e87370f6a973fbb01d72e697",
+            "head_sha": "fbff14090caf5cead6973e6a47d503e76248696b",
             "path": "REQUIREMENTS.md",
             "repository": "hibi89/astra_pdf_redesigner"
           },
@@ -1040,7 +1040,7 @@
           "implementation": {
             "branch": "feature/astra-p71-pdf-source-parity-20261112",
             "git_blob_sha": "56b1758b06785b7fc3b629cfa06d57573cf2ddfa",
-            "head_sha": "0d3501d0cf51f3b5e87370f6a973fbb01d72e697",
+            "head_sha": "fbff14090caf5cead6973e6a47d503e76248696b",
             "path": "src/App.tsx",
             "repository": "hibi89/astra_pdf_redesigner"
           }
@@ -2473,13 +2473,13 @@
           "branch": "feature/astra-p71-pdf-source-parity-20261112",
           "gate": {
             "conclusion": "success",
-            "head_sha": "0d3501d0cf51f3b5e87370f6a973fbb01d72e697",
+            "head_sha": "fbff14090caf5cead6973e6a47d503e76248696b",
             "matches_current_head": true,
-            "run_id": 43583817679,
+            "run_id": 43584374105,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "0d3501d0cf51f3b5e87370f6a973fbb01d72e697",
+          "head_sha": "fbff14090caf5cead6973e6a47d503e76248696b",
           "status": "PRESENT"
         },
         {
@@ -2731,13 +2731,13 @@
           "branch": "feature/p0-db-map",
           "gate": {
             "conclusion": "success",
-            "head_sha": "648d338364ae10765f93337e373c235b7c16060e",
+            "head_sha": "10b4c46769199a1153088b138dd404f307b0b651",
             "matches_current_head": true,
-            "run_id": 43580909828,
+            "run_id": 43586399936,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "648d338364ae10765f93337e373c235b7c16060e",
+          "head_sha": "10b4c46769199a1153088b138dd404f307b0b651",
           "status": "PRESENT"
         }
       ]
