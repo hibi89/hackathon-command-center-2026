@@ -1,3 +1,18 @@
+## [2026-11-14 12:46+ KST] Vercel quota 오판 교정 및 실제 Git diff 6/6 PASS — 해총 인수인계 10항
+
+1. **목표/용도·확정 요구·기술:** 무료·기존 서비스 보존 조건으로 `hibi89/hackathon-command-center-2026` 중앙 35repo/80refs/29상품 자동증거, Vercel webhook, 마지막 성공 배포 기준 빌드 제어를 검증.
+2. **완료·변경·선택:** Vercel `ignoreCommand`는 문서/테스트만 변경한 배포의 실제 빌드 작업은 생략하지만, 취소된 빌드도 *배포 할당량 계산 대상*임을 공식문서로 정정. A: 기존 ignored build는 설정비용0·이미 코딩했지만 Hobby build-rate 근본해결 아님. B: 기존 프로젝트 Root Directory의 `Skip deployment`(Vercel 공식 모노레포 권장)는 불필요한 배포 생성 자체를 줄이는 우선 검토안, 실제 Vercel 프로젝트 접근/설정 확인 필요. 무단 변경/새 프로젝트 없음.
+3. **테스트/결과:** GitHub `main@80172145b6ba75fbed4244ffa672b57e6141bf8a`의 `services/kmong-event-bridge/ignore-build.mjs` Git blob `472b6b1d55cd046039fc98344327d71711db8324`와 로컬 임시 파일 해시 일치 후 Node22+Git2.47 임시 repo를 만들고 baseline→docs skip, 누적 runtime build, runtime 이후 docs도 build, 새 성공 baseline 이후 docs skip, 이전 Git객체 없음 build, 환경 SHA 없음 build **6/6 PASS**. 기존 GitHub Actions [#43552676737](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43552676737) Node28/28 Python77/77, blueprint gate [#43552676806](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43552676806) SUCCESS.
+4. **완료/대기:** 실제 Production `GET /api/webhook` HTTP200/ready·SHA `595606aa`; 최신 main과 `lib/receiver.js`, `api/webhook.js`, `source_repositories.json` 3개 blob 동일. Vercel ignored build 신규 설정 최신 Production 반영, 전구간 중복 webhook 자연유입 1+1 검증, GitHub 시간당 예약 실 실행 **미검증**. 100% 완료 단정 금지.
+5. **오류·Stop/Pivot:** GitHub `Vercel` status에서 `f4d8cbe4`, `80172145` `upgradeToPro=build-rate-limit` 확인. 할당량이 `ignoreCommand`로 해결된다는 기존 보고는 부정확했음(취소도 quota 포함). 본 턴 신규 강제 빌드/결제/비밀/권한변경 없이 정정·로컬 독립 검증으로 전환.
+6. **repo/branch/SHA·경로:** `hibi89/hackathon-command-center-2026@main:80172145b6ba75fbed4244ffa672b57e6141bf8a`, 운영 `kmong-productization` 문서 새 커밋 후 원격 확인. 주요 `services/kmong-event-bridge/{ignore-build.mjs,vercel.json,lib/receiver.js}`, `.github/workflows/kmong-hub-sync.yml`, `data/kmong_hub_auto_observations.json`.
+7. **Production URL/환경:** `https://kmong-hub-event-bridge.vercel.app/api/webhook` (공개 GET200 확인), 마지막 성공 배포 SHA `595606aa49603644666353281d6c67d1b3763ecc`, [Deployment Inspector](https://vercel.com/hibi89/kmong-hub-event-bridge/37wMQ2JCFp97eXKScbnE5utoQWHH), 커넥터 `kmong-hub-event-bridge` 프로젝트 직접 조회는 404. Hourly cron `23 * * * *`: 2026-11-14 13:23 KST 이후 GitHub 지연 가능성.
+8. **원본·백업/보안:** 원천29/서비스19, 공식 DATA2WEB 과거72/100 기타28 UNASSESSED, 고객 데이터·등록완료/RELEASE HOLD, Source App read-only, dispatcher hub-only Actions write, Vercel secrets/프로젝트 설정 모두 불변. Git SHA로 일반 revert 가능, 강제 이력변경 금지.
+9. **다음 작업/완료기준·승인:** 첫 예약 `event=schedule` LIVE run 후 `RUN/DEFERRED`+snapshot readback; 원본 Vercel Project Settings→Build and Deployment→Root Directory 'Skip deployment' 활성화 가능성 확인/승인 후 불필요 배포 생성 감소 여부 검증; 정확 Vercel Production SHA와 배포 설정·로그 접근 가능한 계정 연결; 자연 서명 webhook 202 queued/coalesced↔Actions 매핑 실증. 새 결제 불가, 기존 project 설정 변경은 승인 필요.
+10. **갱신 일시/범위:** 2026-11-14 12:46+ KST. GitHub remote source·기존 Actions CI·Vercel 공식 문서·동일 blob을 사용한 로컬 합성 Git 6시나리오 PASS, 실 Production 배포 설정은 미검증. 신규 main 커밋0, 사용자 원본수정0.
+
+---
+
 ## 2026-11-14 KST — Astra P95–P99 전체 100% 기준 중앙 인수인계 (10항)
 
 1. **목표·기술·확정:** `hibi89/astra_pdf_redesigner` 원본 STEP1~7+3SKU BASIC8/PRO20/BUSINESS30, 0원 로컬 React/TypeScript/Electron/PDF.js, 사용자 전체설계 100% 기준. 공식 최종률 **UNASSESSED (숫자 미확정, 0% 아님)**. 기존 85%는 내부 기술 잠정 이력.
