@@ -1,3 +1,7 @@
+## Addendum — 2026-11-14 19:43+ KST
+
+The `19:23 KST` native schedule slot also has **no recorded** `event=schedule` run (REST `total_count=0` at 19:40+ and 19:43 KST). Seven :23 slots from 13:23 to 19:23 have elapsed. The last opportunity is only ~20 minutes old at verification, so GitHub delay remains possible. Existing bot `workflow_dispatch` #43586402982 ran 19:40:38–19:42:01 KST **SUCCESS**, preflight RUN 5750/450, Python **80/80 PASS**, observer UPDATED 35/80/29, 0 unlinked/fingerprint, official score unchanged. Bot snapshot commit `bccd49801e99b495dccedfc7104385526c29917b`, observation blob `738ce09c2ea905930b2311d45c905c19b25df69f`. GitHub native scheduler workflow state and actor still unverified. Do not classify manual bot runs as schedule recovery; do not change cron without root cause/approval.
+
 # GitHub Actions native schedule missing — read-only escalation evidence
 
 **Verified:** 2026-11-14 19:10 KST. **Scope:** `hibi89/hackathon-command-center-2026`; workflow ID **416801860**; `.github/workflows/kmong-hub-sync.yml`. This is a diagnostic record, **not** a claim that GitHub has accepted a support ticket.
