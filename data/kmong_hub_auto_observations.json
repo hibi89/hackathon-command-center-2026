@@ -330,26 +330,17 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "320aebc23163019f85e1c345857ff4ed3da8147a",
+        "head_sha": "9c8cfdcb1c10482ad6184a581991626b7e42138c",
         "matches_current_head": false,
-        "run_id": 43644268362,
+        "run_id": 43647752518,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "308d54bca9061ce02655a842b97bbb08bab418f7",
+      "head_sha": "cfc56fe4492f445d7f6a1fd12bb8d45c422de46e",
       "machine_evidence_score": {
-        "current_head_sha": "308d54bca9061ce02655a842b97bbb08bab418f7",
-        "denominator": 100,
-        "limitations": "Historical approved item classifications; no fresh item-by-item CI, real-customer, rights or retail acceptance",
-        "percent": 72,
-        "provenance": "approved fixed scorecard blob + completed successful exact-SHA baseline Actions run",
-        "reason": "Approved fixed scorecard was verified at an earlier code SHA; current product HEAD requires fresh per-requirement regression.",
-        "release_authorized": false,
-        "scorecard_blob_sha": "79c08ce8fe9b9c9b34a82373e5e04d1785e409a2",
-        "source_is_current_head": false,
-        "source_run_id": 43509224663,
-        "source_sha": "23a2d1293755294a58a20b98dc34e229a1e54f82",
-        "status": "HISTORICAL_APPROVED_RUBRIC_REPLAY"
+        "percent": null,
+        "reason": "Pinned rubric / CI verification failed: approved scorecard blob unavailable or changed",
+        "status": "UNASSESSED"
       },
       "provisional_evidence_readiness": {
         "commercial_release_authorized": false,
@@ -373,7 +364,7 @@
           "blueprint": {
             "branch": "feature/final-blueprint-p85-evidence-20261113",
             "git_blob_sha": "c3b5a389fde981a70356f962724f1be6e26d6185",
-            "head_sha": "308d54bca9061ce02655a842b97bbb08bab418f7",
+            "head_sha": "cfc56fe4492f445d7f6a1fd12bb8d45c422de46e",
             "path": "docs/FINAL_DESIGN.md",
             "repository": "hibi89/data2web_studio"
           },
@@ -388,7 +379,7 @@
           "implementation": {
             "branch": "feature/final-blueprint-p85-evidence-20261113",
             "git_blob_sha": "b6ec0e4e138cbb9c38b0971c9b3f1ea309b99e9b",
-            "head_sha": "308d54bca9061ce02655a842b97bbb08bab418f7",
+            "head_sha": "cfc56fe4492f445d7f6a1fd12bb8d45c422de46e",
             "path": "blueprint_score.py",
             "repository": "hibi89/data2web_studio"
           }
@@ -837,13 +828,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "a4e7bfcc7a339121ff19b877c438d84d72761ccf",
+        "head_sha": "f75ab4e7779ccaff5a38c280e37ae98fb574ff3e",
         "matches_current_head": true,
-        "run_id": 43645765193,
+        "run_id": 43648266542,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "a4e7bfcc7a339121ff19b877c438d84d72761ccf",
+      "head_sha": "f75ab4e7779ccaff5a38c280e37ae98fb574ff3e",
       "machine_evidence_score": {
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
@@ -871,14 +862,14 @@
           "blueprint": {
             "branch": "feature/p0-db-map",
             "git_blob_sha": "8e8e61f30c504fa5fe0acbaa6c85047801e921d6",
-            "head_sha": "a4e7bfcc7a339121ff19b877c438d84d72761ccf",
+            "head_sha": "f75ab4e7779ccaff5a38c280e37ae98fb574ff3e",
             "path": "REQUIREMENTS.md",
             "repository": "hibi89/DBVORA"
           },
           "implementation": {
             "branch": "feature/p0-db-map",
             "git_blob_sha": "6f078180df8e0f57a3a46b9ad3274cf8f0ca718f",
-            "head_sha": "a4e7bfcc7a339121ff19b877c438d84d72761ccf",
+            "head_sha": "f75ab4e7779ccaff5a38c280e37ae98fb574ff3e",
             "path": "dbvora/api.py",
             "repository": "hibi89/DBVORA"
           }
@@ -991,13 +982,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "9777909eff7b104c8622ee2bea623f73babf2be0",
+        "head_sha": "89e6b5d95a4df62bec51eb66a5f03044350fe5bf",
         "matches_current_head": true,
-        "run_id": 43645648468,
+        "run_id": 43648395703,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "9777909eff7b104c8622ee2bea623f73babf2be0",
+      "head_sha": "89e6b5d95a4df62bec51eb66a5f03044350fe5bf",
       "machine_evidence_score": {
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
@@ -1025,7 +1016,7 @@
           "blueprint": {
             "branch": "feature/astra-p71-pdf-source-parity-20261112",
             "git_blob_sha": "f2ce12696003fcff0ebddcd086cc2e5998a3135c",
-            "head_sha": "9777909eff7b104c8622ee2bea623f73babf2be0",
+            "head_sha": "89e6b5d95a4df62bec51eb66a5f03044350fe5bf",
             "path": "REQUIREMENTS.md",
             "repository": "hibi89/astra_pdf_redesigner"
           },
@@ -1040,7 +1031,7 @@
           "implementation": {
             "branch": "feature/astra-p71-pdf-source-parity-20261112",
             "git_blob_sha": "56b1758b06785b7fc3b629cfa06d57573cf2ddfa",
-            "head_sha": "9777909eff7b104c8622ee2bea623f73babf2be0",
+            "head_sha": "89e6b5d95a4df62bec51eb66a5f03044350fe5bf",
             "path": "src/App.tsx",
             "repository": "hibi89/astra_pdf_redesigner"
           }
@@ -2473,13 +2464,13 @@
           "branch": "feature/astra-p71-pdf-source-parity-20261112",
           "gate": {
             "conclusion": "success",
-            "head_sha": "9777909eff7b104c8622ee2bea623f73babf2be0",
+            "head_sha": "89e6b5d95a4df62bec51eb66a5f03044350fe5bf",
             "matches_current_head": true,
-            "run_id": 43645648468,
+            "run_id": 43648395703,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "9777909eff7b104c8622ee2bea623f73babf2be0",
+          "head_sha": "89e6b5d95a4df62bec51eb66a5f03044350fe5bf",
           "status": "PRESENT"
         },
         {
@@ -2669,13 +2660,13 @@
           "branch": "feature/final-blueprint-p85-evidence-20261113",
           "gate": {
             "conclusion": "success",
-            "head_sha": "320aebc23163019f85e1c345857ff4ed3da8147a",
+            "head_sha": "9c8cfdcb1c10482ad6184a581991626b7e42138c",
             "matches_current_head": false,
-            "run_id": 43644268362,
+            "run_id": 43647752518,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "308d54bca9061ce02655a842b97bbb08bab418f7",
+          "head_sha": "cfc56fe4492f445d7f6a1fd12bb8d45c422de46e",
           "status": "PRESENT"
         },
         {
@@ -2731,13 +2722,13 @@
           "branch": "feature/p0-db-map",
           "gate": {
             "conclusion": "success",
-            "head_sha": "a4e7bfcc7a339121ff19b877c438d84d72761ccf",
+            "head_sha": "f75ab4e7779ccaff5a38c280e37ae98fb574ff3e",
             "matches_current_head": true,
-            "run_id": 43645765193,
+            "run_id": 43648266542,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "a4e7bfcc7a339121ff19b877c438d84d72761ccf",
+          "head_sha": "f75ab4e7779ccaff5a38c280e37ae98fb574ff3e",
           "status": "PRESENT"
         }
       ]
@@ -3599,7 +3590,7 @@
     "canonical_not_configured": 4,
     "historical_worker_reports": 16,
     "pinned_rubrics_current_head_verified": 0,
-    "pinned_rubrics_replayed": 1,
+    "pinned_rubrics_replayed": 0,
     "product_links": 29,
     "product_refs_missing": 0,
     "product_refs_present": 29,
