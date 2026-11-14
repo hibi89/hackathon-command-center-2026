@@ -101,13 +101,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "7313b4420b1e82a8a76ad3dbc2728baff4a35b42",
-        "matches_current_head": false,
-        "run_id": 43537507851,
+        "head_sha": "d7e029ae838a15f6f7a952cdf920341a6e3ad6b0",
+        "matches_current_head": true,
+        "run_id": 43538002050,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "7b00aba8dcb674f138493a4b3e04a29e12b801fa",
+      "head_sha": "d7e029ae838a15f6f7a952cdf920341a6e3ad6b0",
       "machine_evidence_score": {
         "percent": null,
         "reason": "Pinned rubric / CI verification failed: scorecard contract, scope or release invariant mismatch",
@@ -511,12 +511,12 @@
     },
     {
       "gate": {
-        "conclusion": null,
+        "conclusion": "success",
         "head_sha": "f4f5f088b9fb2d89937c825445c035d1a4da0ca2",
         "matches_current_head": true,
         "run_id": 43537748124,
         "status": "LATEST_RUN",
-        "workflow_status": "in_progress"
+        "workflow_status": "completed"
       },
       "head_sha": "f4f5f088b9fb2d89937c825445c035d1a4da0ca2",
       "machine_evidence_score": {
@@ -963,13 +963,13 @@
           "branch": "feature/final-blueprint-p85-evidence-20261113",
           "gate": {
             "conclusion": "success",
-            "head_sha": "7313b4420b1e82a8a76ad3dbc2728baff4a35b42",
-            "matches_current_head": false,
-            "run_id": 43537507851,
+            "head_sha": "d7e029ae838a15f6f7a952cdf920341a6e3ad6b0",
+            "matches_current_head": true,
+            "run_id": 43538002050,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "7b00aba8dcb674f138493a4b3e04a29e12b801fa",
+          "head_sha": "d7e029ae838a15f6f7a952cdf920341a6e3ad6b0",
           "status": "PRESENT"
         },
         {
@@ -1215,12 +1215,12 @@
         {
           "branch": "product/rag-enterprise-knowledge",
           "gate": {
-            "conclusion": null,
+            "conclusion": "success",
             "head_sha": "f4f5f088b9fb2d89937c825445c035d1a4da0ca2",
             "matches_current_head": true,
             "run_id": 43537748124,
             "status": "LATEST_RUN",
-            "workflow_status": "in_progress"
+            "workflow_status": "completed"
           },
           "head_sha": "f4f5f088b9fb2d89937c825445c035d1a4da0ca2",
           "status": "PRESENT"
@@ -1307,12 +1307,12 @@
       "main": {
         "branch": "main",
         "gate": {
-          "conclusion": null,
+          "conclusion": "success",
           "head_sha": "a8c488bd548e2c44bc3197f5d68e37ed84fdc021",
           "matches_current_head": true,
           "run_id": 43537930124,
           "status": "LATEST_RUN",
-          "workflow_status": "in_progress"
+          "workflow_status": "completed"
         },
         "head_sha": "a8c488bd548e2c44bc3197f5d68e37ed84fdc021",
         "status": "PRESENT"
