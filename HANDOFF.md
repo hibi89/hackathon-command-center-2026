@@ -1,3 +1,16 @@
+## 2026-11-14 KST Astra P92 실CI 종료 최종 동기화 (10항)
+
+1. 목표: Astra 원본 STEP1~7·BASIC8/PRO20/BUSINESS30 전체 최종설계 100%, 0원 오프라인 우선.
+2. 변경: STEP6 Google/Bing 동의형 검색 링크·STEP5 파일 로컬 분석, STEP4 고급 임시 시안 22종 JSON 수동 저장/복원. V2 schema 변경 없이 진행.
+3. 테스트: 소스 `b8b29bc13fe09a7220ed47b5139e5f41c3e5140f` Chrome·Edge #43547702092 2/2 SUCCESS + Node163/163 + build/A4, Windows #43547702089 SUCCESS Node162/0FAIL(1OS SKIP), desktop16, NSIS 설치·제거·업그레이드 성공, policy #43547702386 SUCCESS. 모두 GitHub 실제 로그/상태 검증, 물리PC·고객 문서는 미검증.
+4. 상태: CI 검증 완료, 상용 PRO20/BUSINESS30 영구 라이브러리/entitlement·브랜드·배치, STEP6 앱 안의 검색결과, STEP7 실제 OCR, 한국어 로컬 LLM, 고객·상용권·판매 GO 미완. 공식 UNASSESSED/100 미달/출시 HOLD.
+5. 문제/대안: 비용·고객PDF 외부 전송·무단 DB 마이그레이션 회피하고 옵트인 링크 및 ID-only JSON 방식. 후속 실증 없으면 출시 금지.
+6. 경로: 제품 `hibi89/astra_pdf_redesigner@feature/astra-p71-pdf-source-parity-20261112`, 기능 `b8b29bc1`, 제품 문서 `3d37753bf89c`, 중앙 `kmong-productization` 새 HEAD는 쓰기 후 확인. `src/step4/advancedLayoutPreset.ts` `src/step6/*`.
+7. Production/Vercel: 미적용. 크몽 미등록. Linux/Windows hosted Actions만 사용.
+8. 원본·보안: Astra main·Draft PR10·기존 v1/V2·원본PDF·토큰·모델/폰트 변경0; 고객 자료 업로드 안 함. Git SHA로 revert 가능.
+9. 사용자: 13:00 통합 작업에 Win10/11, 실제 5~10 허가PDF 원본↔결과 육안, 무료 모델/OCR 다운로드 및 재배포권, 폰트/지원/실판매 승인 묶음. 예약 중복 생성 금지.
+10. 갱신 2026-11-14 KST, 정확 SHA CI·원격 제품 문서 확인. 원장 상품 Astra만 수정, 나머지 29원천/19서비스·점수·등록이력 불변.
+
 ## [2026-11-14 KST] Astra P91/P92 상용 최종설계 100% 재개 (인수요약)
 
 1. **목표/확정사항/기술:** `KMONG-SVC-09` Astra 7단계+SKU 8/20/30, 최종 100% 기준, 0원 로컬 PDF 제품. `hibi89/astra_pdf_redesigner` React/Electron/PDF.js.
