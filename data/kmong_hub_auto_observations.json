@@ -15,6 +15,67 @@
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
         "status": "UNASSESSED"
       },
+      "provisional_evidence_readiness": {
+        "commercial_release_authorized": false,
+        "denominator": 100,
+        "limitations": "Fixed evidence-readiness metric; not product functional coverage, owner-approved per-REQ weights, independent buyer QA or commercial clearance.",
+        "official_final_completion": "NOT_DERIVED",
+        "points": {
+          "documented_ci_negative_tests": 10,
+          "documented_ci_packaging": 10,
+          "documented_scoped_tests": 10,
+          "implementation_file": 10,
+          "linked_product_ref": 10,
+          "linux_and_windows_jobs": 0,
+          "physical_buyer_os_acceptance": 0,
+          "product_blueprint_file": 10,
+          "rights_and_owner_sale_go": 0,
+          "successful_pinned_functional_ci": 20
+        },
+        "product_100_percent_certified": false,
+        "proof": {
+          "blueprint": {
+            "branch": "feature/kmong-collector-p95-delivery-integrity-20261112",
+            "git_blob_sha": "dc683d57812919bb8096ba01e73158c903632086",
+            "head_sha": "1e4469d83ea6eecc8fff9be87d0cbe5666c81ff1",
+            "path": "REQUIREMENTS.md",
+            "repository": "hibi89/candle_scraper"
+          },
+          "functional_ci": {
+            "branch": "main",
+            "cross_os_jobs_validated": false,
+            "run_id": 42038795999,
+            "source_sha": "9e0632890c5621f4756e9ca7328480d860b2b710",
+            "status": "EXACT_SHA_SUCCESS",
+            "url": "https://github.com/hibi89/candle_scraper/actions/runs/42038795999"
+          },
+          "implementation": {
+            "branch": "feature/kmong-collector-p95-delivery-integrity-20261112",
+            "git_blob_sha": "36959c113e4e3043ca8a6d68673165c26d16a85e",
+            "head_sha": "1e4469d83ea6eecc8fff9be87d0cbe5666c81ff1",
+            "path": "audit_customer_packages.py",
+            "repository": "hibi89/candle_scraper"
+          }
+        },
+        "risk": [
+          "CI validates a different historical branch, not the current source head"
+        ],
+        "rubric": "GITHUB_EVIDENCE_READINESS_V1",
+        "rubric_weights": {
+          "documented_ci_negative_tests": 10,
+          "documented_ci_packaging": 10,
+          "documented_scoped_tests": 10,
+          "implementation_file": 10,
+          "linked_product_ref": 10,
+          "linux_and_windows_jobs": 10,
+          "physical_buyer_os_acceptance": 5,
+          "product_blueprint_file": 10,
+          "rights_and_owner_sale_go": 5,
+          "successful_pinned_functional_ci": 20
+        },
+        "score": 80,
+        "status": "AUTOMATED_METADATA_PLUS_REVIEWED_EVIDENCE"
+      },
       "record_id": "ACTIVE-01",
       "repository": "hibi89/candle_scraper",
       "status": "PRESENT",
@@ -42,6 +103,62 @@
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
         "status": "UNASSESSED"
       },
+      "provisional_evidence_readiness": {
+        "commercial_release_authorized": false,
+        "denominator": 100,
+        "limitations": "Fixed evidence-readiness metric; not product functional coverage, owner-approved per-REQ weights, independent buyer QA or commercial clearance.",
+        "official_final_completion": "NOT_DERIVED",
+        "points": {
+          "documented_ci_negative_tests": 0,
+          "documented_ci_packaging": 0,
+          "documented_scoped_tests": 10,
+          "implementation_file": 10,
+          "linked_product_ref": 10,
+          "linux_and_windows_jobs": 0,
+          "physical_buyer_os_acceptance": 0,
+          "product_blueprint_file": 10,
+          "rights_and_owner_sale_go": 0,
+          "successful_pinned_functional_ci": 0
+        },
+        "product_100_percent_certified": false,
+        "proof": {
+          "blueprint": {
+            "branch": "feature/axflow-mvp",
+            "git_blob_sha": "a86e57c46c64a89fa7fa386549262a5298d3e169",
+            "head_sha": "f659028351c480b35431f706e911ce5e0c036774",
+            "path": "REQUIREMENTS.md",
+            "repository": "hibi89/HAE"
+          },
+          "functional_ci": {
+            "reason": "missing/failed/stale SHA or branch GitHub run",
+            "run_id": 43382552489,
+            "status": "NOT_ACCEPTED"
+          },
+          "implementation": {
+            "branch": "feature/axflow-mvp",
+            "git_blob_sha": "4697817ad2f2fbdf174d335a3f1fcde154480668",
+            "head_sha": "f659028351c480b35431f706e911ce5e0c036774",
+            "path": "apps/ax-flow/axflow/planner.py",
+            "repository": "hibi89/HAE"
+          }
+        },
+        "risk": [],
+        "rubric": "GITHUB_EVIDENCE_READINESS_V1",
+        "rubric_weights": {
+          "documented_ci_negative_tests": 10,
+          "documented_ci_packaging": 10,
+          "documented_scoped_tests": 10,
+          "implementation_file": 10,
+          "linked_product_ref": 10,
+          "linux_and_windows_jobs": 10,
+          "physical_buyer_os_acceptance": 5,
+          "product_blueprint_file": 10,
+          "rights_and_owner_sale_go": 5,
+          "successful_pinned_functional_ci": 20
+        },
+        "score": 40,
+        "status": "AUTOMATED_METADATA_PLUS_REVIEWED_EVIDENCE"
+      },
       "record_id": "ACTIVE-02",
       "repository": "hibi89/HAE",
       "status": "PRESENT",
@@ -63,6 +180,67 @@
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
         "status": "UNASSESSED"
+      },
+      "provisional_evidence_readiness": {
+        "commercial_release_authorized": false,
+        "denominator": 100,
+        "limitations": "Fixed evidence-readiness metric; not product functional coverage, owner-approved per-REQ weights, independent buyer QA or commercial clearance.",
+        "official_final_completion": "NOT_DERIVED",
+        "points": {
+          "documented_ci_negative_tests": 10,
+          "documented_ci_packaging": 10,
+          "documented_scoped_tests": 10,
+          "implementation_file": 10,
+          "linked_product_ref": 10,
+          "linux_and_windows_jobs": 10,
+          "physical_buyer_os_acceptance": 0,
+          "product_blueprint_file": 10,
+          "rights_and_owner_sale_go": 0,
+          "successful_pinned_functional_ci": 20
+        },
+        "product_100_percent_certified": false,
+        "proof": {
+          "blueprint": {
+            "branch": "feature/retail-private-candidate-20261112",
+            "git_blob_sha": "dc2820f0b353a3c76429f68e84032a46998c323e",
+            "head_sha": "e18fe74f1b1d1105d37017573e8c7ab6b5f85f11",
+            "path": "FINAL_PRODUCT_BLUEPRINT.md",
+            "repository": "hibi89/ai-code-checker"
+          },
+          "functional_ci": {
+            "branch": "feature/retail-private-candidate-20261112",
+            "cross_os_jobs_validated": true,
+            "run_id": 43226330001,
+            "source_sha": "ec83e83e5a0becc6e9fde61b6e2970d773633e01",
+            "status": "EXACT_SHA_SUCCESS",
+            "url": "https://github.com/hibi89/ai-code-checker/actions/runs/43226330001"
+          },
+          "implementation": {
+            "branch": "feature/retail-private-candidate-20261112",
+            "git_blob_sha": "0216fd676c1f8a63b199b004a81f4e6e52a664ee",
+            "head_sha": "e18fe74f1b1d1105d37017573e8c7ab6b5f85f11",
+            "path": "scripts/ci_real_frozen_notice_review.py",
+            "repository": "hibi89/ai-code-checker"
+          }
+        },
+        "risk": [
+          "CI source SHA differs from current documentation/source branch head"
+        ],
+        "rubric": "GITHUB_EVIDENCE_READINESS_V1",
+        "rubric_weights": {
+          "documented_ci_negative_tests": 10,
+          "documented_ci_packaging": 10,
+          "documented_scoped_tests": 10,
+          "implementation_file": 10,
+          "linked_product_ref": 10,
+          "linux_and_windows_jobs": 10,
+          "physical_buyer_os_acceptance": 5,
+          "product_blueprint_file": 10,
+          "rights_and_owner_sale_go": 5,
+          "successful_pinned_functional_ci": 20
+        },
+        "score": 90,
+        "status": "AUTOMATED_METADATA_PLUS_REVIEWED_EVIDENCE"
       },
       "record_id": "ACTIVE-03",
       "repository": "hibi89/ai-code-checker",
@@ -86,6 +264,57 @@
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
         "status": "UNASSESSED"
       },
+      "provisional_evidence_readiness": {
+        "commercial_release_authorized": false,
+        "denominator": 100,
+        "limitations": "Fixed evidence-readiness metric; not product functional coverage, owner-approved per-REQ weights, independent buyer QA or commercial clearance.",
+        "official_final_completion": "NOT_DERIVED",
+        "points": {
+          "documented_ci_negative_tests": 0,
+          "documented_ci_packaging": 0,
+          "documented_scoped_tests": 10,
+          "implementation_file": 10,
+          "linked_product_ref": 10,
+          "linux_and_windows_jobs": 0,
+          "physical_buyer_os_acceptance": 0,
+          "product_blueprint_file": 10,
+          "rights_and_owner_sale_go": 0,
+          "successful_pinned_functional_ci": 0
+        },
+        "product_100_percent_certified": false,
+        "proof": {
+          "blueprint": {
+            "branch": "feature/prep-self-owner-mapping-p8",
+            "git_blob_sha": "2f16ea3b112394bb0164c6d61d5c7a6e16e6dc62",
+            "head_sha": "21a10dfdbca25166ad97c1ff65dc4e4e87664b6b",
+            "path": "REQUIREMENTS.md",
+            "repository": "hibi89/SMAX"
+          },
+          "implementation": {
+            "branch": "feature/prep-self-owner-mapping-p8",
+            "git_blob_sha": "842264614544a0651edc9abc82a8201e229e591c",
+            "head_sha": "21a10dfdbca25166ad97c1ff65dc4e4e87664b6b",
+            "path": "preprocessing/self-column-suggest.mjs",
+            "repository": "hibi89/SMAX"
+          }
+        },
+        "risk": [],
+        "rubric": "GITHUB_EVIDENCE_READINESS_V1",
+        "rubric_weights": {
+          "documented_ci_negative_tests": 10,
+          "documented_ci_packaging": 10,
+          "documented_scoped_tests": 10,
+          "implementation_file": 10,
+          "linked_product_ref": 10,
+          "linux_and_windows_jobs": 10,
+          "physical_buyer_os_acceptance": 5,
+          "product_blueprint_file": 10,
+          "rights_and_owner_sale_go": 5,
+          "successful_pinned_functional_ci": 20
+        },
+        "score": 40,
+        "status": "AUTOMATED_METADATA_PLUS_REVIEWED_EVIDENCE"
+      },
       "record_id": "ACTIVE-04",
       "repository": "hibi89/SMAX",
       "status": "PRESENT",
@@ -101,13 +330,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "f7fc5607404d7349b95a85a0ebdb30a76ccc58ca",
+        "head_sha": "8d781329c82a357fbcfa1bf019acd55e50eb2908",
         "matches_current_head": true,
-        "run_id": 43540222285,
+        "run_id": 43541175712,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "f7fc5607404d7349b95a85a0ebdb30a76ccc58ca",
+      "head_sha": "8d781329c82a357fbcfa1bf019acd55e50eb2908",
       "machine_evidence_score": {
         "denominator": 100,
         "limitations": "Historical approved item classifications; no fresh item-by-item CI, real-customer, rights or retail acceptance",
@@ -118,6 +347,67 @@
         "source_run_id": 43509224663,
         "source_sha": "23a2d1293755294a58a20b98dc34e229a1e54f82",
         "status": "PINNED_APPROVED_RUBRIC_REPLAY"
+      },
+      "provisional_evidence_readiness": {
+        "commercial_release_authorized": false,
+        "denominator": 100,
+        "limitations": "Fixed evidence-readiness metric; not product functional coverage, owner-approved per-REQ weights, independent buyer QA or commercial clearance.",
+        "official_final_completion": "NOT_DERIVED",
+        "points": {
+          "documented_ci_negative_tests": 10,
+          "documented_ci_packaging": 10,
+          "documented_scoped_tests": 10,
+          "implementation_file": 10,
+          "linked_product_ref": 10,
+          "linux_and_windows_jobs": 10,
+          "physical_buyer_os_acceptance": 0,
+          "product_blueprint_file": 10,
+          "rights_and_owner_sale_go": 0,
+          "successful_pinned_functional_ci": 20
+        },
+        "product_100_percent_certified": false,
+        "proof": {
+          "blueprint": {
+            "branch": "feature/final-blueprint-p85-evidence-20261113",
+            "git_blob_sha": "c3b5a389fde981a70356f962724f1be6e26d6185",
+            "head_sha": "8d781329c82a357fbcfa1bf019acd55e50eb2908",
+            "path": "docs/FINAL_DESIGN.md",
+            "repository": "hibi89/data2web_studio"
+          },
+          "functional_ci": {
+            "branch": "feature/final-blueprint-p85-evidence-20261113",
+            "cross_os_jobs_validated": true,
+            "run_id": 43538001797,
+            "source_sha": "d7e029ae838a15f6f7a952cdf920341a6e3ad6b0",
+            "status": "EXACT_SHA_SUCCESS",
+            "url": "https://github.com/hibi89/data2web_studio/actions/runs/43538001797"
+          },
+          "implementation": {
+            "branch": "feature/final-blueprint-p85-evidence-20261113",
+            "git_blob_sha": "b6ec0e4e138cbb9c38b0971c9b3f1ea309b99e9b",
+            "head_sha": "8d781329c82a357fbcfa1bf019acd55e50eb2908",
+            "path": "blueprint_score.py",
+            "repository": "hibi89/data2web_studio"
+          }
+        },
+        "risk": [
+          "CI source SHA differs from current documentation/source branch head"
+        ],
+        "rubric": "GITHUB_EVIDENCE_READINESS_V1",
+        "rubric_weights": {
+          "documented_ci_negative_tests": 10,
+          "documented_ci_packaging": 10,
+          "documented_scoped_tests": 10,
+          "implementation_file": 10,
+          "linked_product_ref": 10,
+          "linux_and_windows_jobs": 10,
+          "physical_buyer_os_acceptance": 5,
+          "product_blueprint_file": 10,
+          "rights_and_owner_sale_go": 5,
+          "successful_pinned_functional_ci": 20
+        },
+        "score": 90,
+        "status": "AUTOMATED_METADATA_PLUS_REVIEWED_EVIDENCE"
       },
       "record_id": "ACTIVE-05",
       "repository": "hibi89/data2web_studio",
@@ -141,6 +431,67 @@
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
         "status": "UNASSESSED"
       },
+      "provisional_evidence_readiness": {
+        "commercial_release_authorized": false,
+        "denominator": 100,
+        "limitations": "Fixed evidence-readiness metric; not product functional coverage, owner-approved per-REQ weights, independent buyer QA or commercial clearance.",
+        "official_final_completion": "NOT_DERIVED",
+        "points": {
+          "documented_ci_negative_tests": 10,
+          "documented_ci_packaging": 0,
+          "documented_scoped_tests": 10,
+          "implementation_file": 10,
+          "linked_product_ref": 10,
+          "linux_and_windows_jobs": 10,
+          "physical_buyer_os_acceptance": 0,
+          "product_blueprint_file": 10,
+          "rights_and_owner_sale_go": 0,
+          "successful_pinned_functional_ci": 20
+        },
+        "product_100_percent_certified": false,
+        "proof": {
+          "blueprint": {
+            "branch": "feature/website-analysis-rebuild",
+            "git_blob_sha": "68e71765f91cdacc29b09ae134b524a4ca518eed",
+            "head_sha": "82fb8da349de72f45eeaf15f7e997c2d449cf488",
+            "path": "REQUIREMENTS.md",
+            "repository": "hibi89/REA_Web"
+          },
+          "functional_ci": {
+            "branch": "feature/website-analysis-rebuild",
+            "cross_os_jobs_validated": true,
+            "run_id": 43295475001,
+            "source_sha": "04541195da42b702925cc62e7a39e16962cbfa31",
+            "status": "EXACT_SHA_SUCCESS",
+            "url": "https://github.com/hibi89/REA_Web/actions/runs/43295475001"
+          },
+          "implementation": {
+            "branch": "feature/website-analysis-rebuild",
+            "git_blob_sha": "32c24149967d8ff11a7fd2a79e8e46090e785d48",
+            "head_sha": "82fb8da349de72f45eeaf15f7e997c2d449cf488",
+            "path": "rea/website_component_builder.py",
+            "repository": "hibi89/REA_Web"
+          }
+        },
+        "risk": [
+          "CI source SHA differs from current documentation/source branch head"
+        ],
+        "rubric": "GITHUB_EVIDENCE_READINESS_V1",
+        "rubric_weights": {
+          "documented_ci_negative_tests": 10,
+          "documented_ci_packaging": 10,
+          "documented_scoped_tests": 10,
+          "implementation_file": 10,
+          "linked_product_ref": 10,
+          "linux_and_windows_jobs": 10,
+          "physical_buyer_os_acceptance": 5,
+          "product_blueprint_file": 10,
+          "rights_and_owner_sale_go": 5,
+          "successful_pinned_functional_ci": 20
+        },
+        "score": 80,
+        "status": "AUTOMATED_METADATA_PLUS_REVIEWED_EVIDENCE"
+      },
       "record_id": "ACTIVE-06",
       "repository": "hibi89/REA_Web",
       "status": "PRESENT",
@@ -162,6 +513,67 @@
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
         "status": "UNASSESSED"
+      },
+      "provisional_evidence_readiness": {
+        "commercial_release_authorized": false,
+        "denominator": 100,
+        "limitations": "Fixed evidence-readiness metric; not product functional coverage, owner-approved per-REQ weights, independent buyer QA or commercial clearance.",
+        "official_final_completion": "NOT_DERIVED",
+        "points": {
+          "documented_ci_negative_tests": 10,
+          "documented_ci_packaging": 10,
+          "documented_scoped_tests": 10,
+          "implementation_file": 10,
+          "linked_product_ref": 10,
+          "linux_and_windows_jobs": 10,
+          "physical_buyer_os_acceptance": 0,
+          "product_blueprint_file": 10,
+          "rights_and_owner_sale_go": 0,
+          "successful_pinned_functional_ci": 20
+        },
+        "product_100_percent_certified": false,
+        "proof": {
+          "blueprint": {
+            "branch": "feature/kmong-la-review-p2-20261112",
+            "git_blob_sha": "ed670d6cfb924e6b5861410f742aea5b59ce3104",
+            "head_sha": "b235b0222e44764d7593b647fee2e257e562764b",
+            "path": "REQUIREMENTS.md",
+            "repository": "hibi89/SOVIA_sovereign"
+          },
+          "functional_ci": {
+            "branch": "feature/kmong-la-review-p2-20261112",
+            "cross_os_jobs_validated": true,
+            "run_id": 43214296725,
+            "source_sha": "a6991d062e657073fd5c5df077c87db9aa390515",
+            "status": "EXACT_SHA_SUCCESS",
+            "url": "https://github.com/hibi89/SOVIA_sovereign/actions/runs/43214296725"
+          },
+          "implementation": {
+            "branch": "feature/kmong-la-review-p2-20261112",
+            "git_blob_sha": "3561066de3ec7e1b78572835120dbc52466ca132",
+            "head_sha": "b235b0222e44764d7593b647fee2e257e562764b",
+            "path": "sovia_la_minimal_projection.py",
+            "repository": "hibi89/SOVIA_sovereign"
+          }
+        },
+        "risk": [
+          "CI source SHA differs from current documentation/source branch head"
+        ],
+        "rubric": "GITHUB_EVIDENCE_READINESS_V1",
+        "rubric_weights": {
+          "documented_ci_negative_tests": 10,
+          "documented_ci_packaging": 10,
+          "documented_scoped_tests": 10,
+          "implementation_file": 10,
+          "linked_product_ref": 10,
+          "linux_and_windows_jobs": 10,
+          "physical_buyer_os_acceptance": 5,
+          "product_blueprint_file": 10,
+          "rights_and_owner_sale_go": 5,
+          "successful_pinned_functional_ci": 20
+        },
+        "score": 90,
+        "status": "AUTOMATED_METADATA_PLUS_REVIEWED_EVIDENCE"
       },
       "record_id": "ACTIVE-07",
       "repository": "hibi89/SOVIA_sovereign",
@@ -185,6 +597,67 @@
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
         "status": "UNASSESSED"
       },
+      "provisional_evidence_readiness": {
+        "commercial_release_authorized": false,
+        "denominator": 100,
+        "limitations": "Fixed evidence-readiness metric; not product functional coverage, owner-approved per-REQ weights, independent buyer QA or commercial clearance.",
+        "official_final_completion": "NOT_DERIVED",
+        "points": {
+          "documented_ci_negative_tests": 10,
+          "documented_ci_packaging": 10,
+          "documented_scoped_tests": 10,
+          "implementation_file": 10,
+          "linked_product_ref": 10,
+          "linux_and_windows_jobs": 10,
+          "physical_buyer_os_acceptance": 0,
+          "product_blueprint_file": 10,
+          "rights_and_owner_sale_go": 0,
+          "successful_pinned_functional_ci": 20
+        },
+        "product_100_percent_certified": false,
+        "proof": {
+          "blueprint": {
+            "branch": "feature/kmong-p6e50-owner-delivery-20261112",
+            "git_blob_sha": "cb61342f9cf3c71278be61a21397068ec9de752c",
+            "head_sha": "a3ddd8b9d20fee591ad246becab2b4adc89b56d8",
+            "path": "REQUIREMENTS.md",
+            "repository": "hibi89/AI_AutoML_Analyst"
+          },
+          "functional_ci": {
+            "branch": "feature/kmong-p6e50-owner-delivery-20261112",
+            "cross_os_jobs_validated": true,
+            "run_id": 43226903380,
+            "source_sha": "458cf43816d3fa581a7c9e5c53399936c1933ede",
+            "status": "EXACT_SHA_SUCCESS",
+            "url": "https://github.com/hibi89/AI_AutoML_Analyst/actions/runs/43226903380"
+          },
+          "implementation": {
+            "branch": "feature/kmong-p6e50-owner-delivery-20261112",
+            "git_blob_sha": "3d0eeef5efeacc62e26ddef9a150ea31203b3a06",
+            "head_sha": "a3ddd8b9d20fee591ad246becab2b4adc89b56d8",
+            "path": "scripts/p6e50_owner_zip_review.py",
+            "repository": "hibi89/AI_AutoML_Analyst"
+          }
+        },
+        "risk": [
+          "CI source SHA differs from current documentation/source branch head"
+        ],
+        "rubric": "GITHUB_EVIDENCE_READINESS_V1",
+        "rubric_weights": {
+          "documented_ci_negative_tests": 10,
+          "documented_ci_packaging": 10,
+          "documented_scoped_tests": 10,
+          "implementation_file": 10,
+          "linked_product_ref": 10,
+          "linux_and_windows_jobs": 10,
+          "physical_buyer_os_acceptance": 5,
+          "product_blueprint_file": 10,
+          "rights_and_owner_sale_go": 5,
+          "successful_pinned_functional_ci": 20
+        },
+        "score": 90,
+        "status": "AUTOMATED_METADATA_PLUS_REVIEWED_EVIDENCE"
+      },
       "record_id": "ACTIVE-08",
       "repository": "hibi89/AI_AutoML_Analyst",
       "status": "PRESENT",
@@ -206,6 +679,57 @@
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
         "status": "UNASSESSED"
+      },
+      "provisional_evidence_readiness": {
+        "commercial_release_authorized": false,
+        "denominator": 100,
+        "limitations": "Fixed evidence-readiness metric; not product functional coverage, owner-approved per-REQ weights, independent buyer QA or commercial clearance.",
+        "official_final_completion": "NOT_DERIVED",
+        "points": {
+          "documented_ci_negative_tests": 0,
+          "documented_ci_packaging": 0,
+          "documented_scoped_tests": 10,
+          "implementation_file": 10,
+          "linked_product_ref": 10,
+          "linux_and_windows_jobs": 0,
+          "physical_buyer_os_acceptance": 0,
+          "product_blueprint_file": 10,
+          "rights_and_owner_sale_go": 0,
+          "successful_pinned_functional_ci": 0
+        },
+        "product_100_percent_certified": false,
+        "proof": {
+          "blueprint": {
+            "branch": "feature/rea-app-kmong-owner-delivery-20261112",
+            "git_blob_sha": "2926bda6f4bdfaddb1a604a0d5b5a72885275f77",
+            "head_sha": "fac8a9ccb67565ad56cf6d350ba82a9cfb80dc27",
+            "path": "REQUIREMENTS.md",
+            "repository": "hibi89/HAE"
+          },
+          "implementation": {
+            "branch": "feature/rea-app-kmong-owner-delivery-20261112",
+            "git_blob_sha": "47530124e451925e6019f876b5138bbc4731a05f",
+            "head_sha": "fac8a9ccb67565ad56cf6d350ba82a9cfb80dc27",
+            "path": "tools/rea-app/rea_app/cli.py",
+            "repository": "hibi89/HAE"
+          }
+        },
+        "risk": [],
+        "rubric": "GITHUB_EVIDENCE_READINESS_V1",
+        "rubric_weights": {
+          "documented_ci_negative_tests": 10,
+          "documented_ci_packaging": 10,
+          "documented_scoped_tests": 10,
+          "implementation_file": 10,
+          "linked_product_ref": 10,
+          "linux_and_windows_jobs": 10,
+          "physical_buyer_os_acceptance": 5,
+          "product_blueprint_file": 10,
+          "rights_and_owner_sale_go": 5,
+          "successful_pinned_functional_ci": 20
+        },
+        "score": 40,
+        "status": "AUTOMATED_METADATA_PLUS_REVIEWED_EVIDENCE"
       },
       "record_id": "ACTIVE-09",
       "repository": "hibi89/HAE",
@@ -234,6 +758,67 @@
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
         "status": "UNASSESSED"
       },
+      "provisional_evidence_readiness": {
+        "commercial_release_authorized": false,
+        "denominator": 100,
+        "limitations": "Fixed evidence-readiness metric; not product functional coverage, owner-approved per-REQ weights, independent buyer QA or commercial clearance.",
+        "official_final_completion": "NOT_DERIVED",
+        "points": {
+          "documented_ci_negative_tests": 10,
+          "documented_ci_packaging": 0,
+          "documented_scoped_tests": 10,
+          "implementation_file": 10,
+          "linked_product_ref": 10,
+          "linux_and_windows_jobs": 10,
+          "physical_buyer_os_acceptance": 0,
+          "product_blueprint_file": 10,
+          "rights_and_owner_sale_go": 0,
+          "successful_pinned_functional_ci": 20
+        },
+        "product_100_percent_certified": false,
+        "proof": {
+          "blueprint": {
+            "branch": "feature/la-p17-audit-evidence-20261112",
+            "git_blob_sha": "a86e57c46c64a89fa7fa386549262a5298d3e169",
+            "head_sha": "fe0693eab0df738ee981f93169b60f95c7a63cea",
+            "path": "REQUIREMENTS.md",
+            "repository": "hibi89/HAE"
+          },
+          "functional_ci": {
+            "branch": "feature/la-p17-audit-evidence-20261112",
+            "cross_os_jobs_validated": true,
+            "run_id": 43124013493,
+            "source_sha": "c32e27c8156a4ed27d6f2bca7752e7a4eccf6dc7",
+            "status": "EXACT_SHA_SUCCESS",
+            "url": "https://github.com/hibi89/HAE/actions/runs/43124013493"
+          },
+          "implementation": {
+            "branch": "feature/la-p17-audit-evidence-20261112",
+            "git_blob_sha": "0205b91f7575cfbf4ff01518e407c9e372b11e38",
+            "head_sha": "fe0693eab0df738ee981f93169b60f95c7a63cea",
+            "path": "packages/lightning-azent/lightning_azent/runtime.py",
+            "repository": "hibi89/HAE"
+          }
+        },
+        "risk": [
+          "CI source SHA differs from current documentation/source branch head"
+        ],
+        "rubric": "GITHUB_EVIDENCE_READINESS_V1",
+        "rubric_weights": {
+          "documented_ci_negative_tests": 10,
+          "documented_ci_packaging": 10,
+          "documented_scoped_tests": 10,
+          "implementation_file": 10,
+          "linked_product_ref": 10,
+          "linux_and_windows_jobs": 10,
+          "physical_buyer_os_acceptance": 5,
+          "product_blueprint_file": 10,
+          "rights_and_owner_sale_go": 5,
+          "successful_pinned_functional_ci": 20
+        },
+        "score": 80,
+        "status": "AUTOMATED_METADATA_PLUS_REVIEWED_EVIDENCE"
+      },
       "record_id": "ACTIVE-10",
       "repository": "hibi89/HAE",
       "status": "PRESENT",
@@ -248,13 +833,69 @@
     },
     {
       "gate": {
-        "status": "NO_RUN"
+        "conclusion": "success",
+        "head_sha": "a7d764a65c0dde3426171c093d6ee7b44968a888",
+        "matches_current_head": true,
+        "run_id": 43541050629,
+        "status": "LATEST_RUN",
+        "workflow_status": "completed"
       },
-      "head_sha": "b69ee453f460cc4a97ccfea6b4ab5748a2420c2e",
+      "head_sha": "a7d764a65c0dde3426171c093d6ee7b44968a888",
       "machine_evidence_score": {
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
         "status": "UNASSESSED"
+      },
+      "provisional_evidence_readiness": {
+        "commercial_release_authorized": false,
+        "denominator": 100,
+        "limitations": "Fixed evidence-readiness metric; not product functional coverage, owner-approved per-REQ weights, independent buyer QA or commercial clearance.",
+        "official_final_completion": "NOT_DERIVED",
+        "points": {
+          "documented_ci_negative_tests": 0,
+          "documented_ci_packaging": 0,
+          "documented_scoped_tests": 10,
+          "implementation_file": 10,
+          "linked_product_ref": 10,
+          "linux_and_windows_jobs": 0,
+          "physical_buyer_os_acceptance": 0,
+          "product_blueprint_file": 10,
+          "rights_and_owner_sale_go": 0,
+          "successful_pinned_functional_ci": 0
+        },
+        "product_100_percent_certified": false,
+        "proof": {
+          "blueprint": {
+            "branch": "feature/p0-db-map",
+            "git_blob_sha": "8e8e61f30c504fa5fe0acbaa6c85047801e921d6",
+            "head_sha": "a7d764a65c0dde3426171c093d6ee7b44968a888",
+            "path": "REQUIREMENTS.md",
+            "repository": "hibi89/DBVORA"
+          },
+          "implementation": {
+            "branch": "feature/p0-db-map",
+            "git_blob_sha": "81338d4c4a64d2afa36e6619f39c469e0863289f",
+            "head_sha": "a7d764a65c0dde3426171c093d6ee7b44968a888",
+            "path": "dbvora/api.py",
+            "repository": "hibi89/DBVORA"
+          }
+        },
+        "risk": [],
+        "rubric": "GITHUB_EVIDENCE_READINESS_V1",
+        "rubric_weights": {
+          "documented_ci_negative_tests": 10,
+          "documented_ci_packaging": 10,
+          "documented_scoped_tests": 10,
+          "implementation_file": 10,
+          "linked_product_ref": 10,
+          "linux_and_windows_jobs": 10,
+          "physical_buyer_os_acceptance": 5,
+          "product_blueprint_file": 10,
+          "rights_and_owner_sale_go": 5,
+          "successful_pinned_functional_ci": 20
+        },
+        "score": 40,
+        "status": "AUTOMATED_METADATA_PLUS_REVIEWED_EVIDENCE"
       },
       "record_id": "ACTIVE-11",
       "repository": "hibi89/DBVORA",
@@ -278,6 +919,60 @@
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
         "status": "UNASSESSED"
       },
+      "provisional_evidence_readiness": {
+        "commercial_release_authorized": false,
+        "denominator": 100,
+        "limitations": "Fixed evidence-readiness metric; not product functional coverage, owner-approved per-REQ weights, independent buyer QA or commercial clearance.",
+        "official_final_completion": "NOT_DERIVED",
+        "points": {
+          "documented_ci_negative_tests": 10,
+          "documented_ci_packaging": 10,
+          "documented_scoped_tests": 10,
+          "implementation_file": 10,
+          "linked_product_ref": 10,
+          "linux_and_windows_jobs": 10,
+          "physical_buyer_os_acceptance": 0,
+          "product_blueprint_file": 0,
+          "rights_and_owner_sale_go": 0,
+          "successful_pinned_functional_ci": 20
+        },
+        "product_100_percent_certified": false,
+        "proof": {
+          "functional_ci": {
+            "branch": "feature/p546-rag-prep-mapping",
+            "cross_os_jobs_validated": true,
+            "run_id": 43231121679,
+            "source_sha": "0e88301059c9cb6b876dd0f9cd9181e6fb5c6dc2",
+            "status": "EXACT_SHA_SUCCESS",
+            "url": "https://github.com/hibi89/RAG_STUDIO/actions/runs/43231121679"
+          },
+          "implementation": {
+            "branch": "feature/p546-rag-prep-mapping",
+            "git_blob_sha": "6b600fc2c9b4b3861e543d61db02d795abfb587b",
+            "head_sha": "4669957a0f5dd8e641903bef0c0ef21d43166dcc",
+            "path": "src/review-zip-verify.mjs",
+            "repository": "hibi89/RAG_STUDIO"
+          }
+        },
+        "risk": [
+          "CI source SHA differs from current documentation/source branch head"
+        ],
+        "rubric": "GITHUB_EVIDENCE_READINESS_V1",
+        "rubric_weights": {
+          "documented_ci_negative_tests": 10,
+          "documented_ci_packaging": 10,
+          "documented_scoped_tests": 10,
+          "implementation_file": 10,
+          "linked_product_ref": 10,
+          "linux_and_windows_jobs": 10,
+          "physical_buyer_os_acceptance": 5,
+          "product_blueprint_file": 10,
+          "rights_and_owner_sale_go": 5,
+          "successful_pinned_functional_ci": 20
+        },
+        "score": 80,
+        "status": "AUTOMATED_METADATA_PLUS_REVIEWED_EVIDENCE"
+      },
       "record_id": "ACTIVE-12",
       "repository": "hibi89/RAG_STUDIO",
       "status": "PRESENT",
@@ -299,6 +994,67 @@
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
         "status": "UNASSESSED"
+      },
+      "provisional_evidence_readiness": {
+        "commercial_release_authorized": false,
+        "denominator": 100,
+        "limitations": "Fixed evidence-readiness metric; not product functional coverage, owner-approved per-REQ weights, independent buyer QA or commercial clearance.",
+        "official_final_completion": "NOT_DERIVED",
+        "points": {
+          "documented_ci_negative_tests": 0,
+          "documented_ci_packaging": 10,
+          "documented_scoped_tests": 10,
+          "implementation_file": 10,
+          "linked_product_ref": 10,
+          "linux_and_windows_jobs": 0,
+          "physical_buyer_os_acceptance": 0,
+          "product_blueprint_file": 10,
+          "rights_and_owner_sale_go": 0,
+          "successful_pinned_functional_ci": 20
+        },
+        "product_100_percent_certified": false,
+        "proof": {
+          "blueprint": {
+            "branch": "integration/astra-commercial-core",
+            "git_blob_sha": "f2ce12696003fcff0ebddcd086cc2e5998a3135c",
+            "head_sha": "b80830ab3219dbcf88556d60ce2c47c2dcec7764",
+            "path": "REQUIREMENTS.md",
+            "repository": "hibi89/astra_pdf_redesigner"
+          },
+          "functional_ci": {
+            "branch": "integration/astra-commercial-core",
+            "cross_os_jobs_validated": false,
+            "run_id": 40856599632,
+            "source_sha": "db461dc77dd721d1234d1506d6c62705486b9460",
+            "status": "EXACT_SHA_SUCCESS",
+            "url": "https://github.com/hibi89/astra_pdf_redesigner/actions/runs/40856599632"
+          },
+          "implementation": {
+            "branch": "integration/astra-commercial-core",
+            "git_blob_sha": "56b1758b06785b7fc3b629cfa06d57573cf2ddfa",
+            "head_sha": "b80830ab3219dbcf88556d60ce2c47c2dcec7764",
+            "path": "src/App.tsx",
+            "repository": "hibi89/astra_pdf_redesigner"
+          }
+        },
+        "risk": [
+          "CI source SHA differs from current documentation/source branch head"
+        ],
+        "rubric": "GITHUB_EVIDENCE_READINESS_V1",
+        "rubric_weights": {
+          "documented_ci_negative_tests": 10,
+          "documented_ci_packaging": 10,
+          "documented_scoped_tests": 10,
+          "implementation_file": 10,
+          "linked_product_ref": 10,
+          "linux_and_windows_jobs": 10,
+          "physical_buyer_os_acceptance": 5,
+          "product_blueprint_file": 10,
+          "rights_and_owner_sale_go": 5,
+          "successful_pinned_functional_ci": 20
+        },
+        "score": 70,
+        "status": "AUTOMATED_METADATA_PLUS_REVIEWED_EVIDENCE"
       },
       "record_id": "ACTIVE-13",
       "repository": "hibi89/astra_pdf_redesigner",
@@ -322,6 +1078,57 @@
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
         "status": "UNASSESSED"
       },
+      "provisional_evidence_readiness": {
+        "commercial_release_authorized": false,
+        "denominator": 100,
+        "limitations": "Fixed evidence-readiness metric; not product functional coverage, owner-approved per-REQ weights, independent buyer QA or commercial clearance.",
+        "official_final_completion": "NOT_DERIVED",
+        "points": {
+          "documented_ci_negative_tests": 0,
+          "documented_ci_packaging": 0,
+          "documented_scoped_tests": 10,
+          "implementation_file": 10,
+          "linked_product_ref": 10,
+          "linux_and_windows_jobs": 0,
+          "physical_buyer_os_acceptance": 0,
+          "product_blueprint_file": 10,
+          "rights_and_owner_sale_go": 0,
+          "successful_pinned_functional_ci": 0
+        },
+        "product_100_percent_certified": false,
+        "proof": {
+          "blueprint": {
+            "branch": "feature/coin-pattern-p85-forward-eval-20261112",
+            "git_blob_sha": "dc683d57812919bb8096ba01e73158c903632086",
+            "head_sha": "a6f76576880e3dc242ea3730728e287c0914d5ee",
+            "path": "REQUIREMENTS.md",
+            "repository": "hibi89/candle_scraper"
+          },
+          "implementation": {
+            "branch": "feature/coin-pattern-p85-forward-eval-20261112",
+            "git_blob_sha": "6d92c1c832a5899c6493229cb494f0ef9eca6f38",
+            "head_sha": "a6f76576880e3dc242ea3730728e287c0914d5ee",
+            "path": "coin_forward_eval.py",
+            "repository": "hibi89/candle_scraper"
+          }
+        },
+        "risk": [],
+        "rubric": "GITHUB_EVIDENCE_READINESS_V1",
+        "rubric_weights": {
+          "documented_ci_negative_tests": 10,
+          "documented_ci_packaging": 10,
+          "documented_scoped_tests": 10,
+          "implementation_file": 10,
+          "linked_product_ref": 10,
+          "linux_and_windows_jobs": 10,
+          "physical_buyer_os_acceptance": 5,
+          "product_blueprint_file": 10,
+          "rights_and_owner_sale_go": 5,
+          "successful_pinned_functional_ci": 20
+        },
+        "score": 40,
+        "status": "AUTOMATED_METADATA_PLUS_REVIEWED_EVIDENCE"
+      },
       "record_id": "ACTIVE-14",
       "repository": "hibi89/candle_scraper",
       "status": "PRESENT",
@@ -343,6 +1150,67 @@
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
         "status": "UNASSESSED"
+      },
+      "provisional_evidence_readiness": {
+        "commercial_release_authorized": false,
+        "denominator": 100,
+        "limitations": "Fixed evidence-readiness metric; not product functional coverage, owner-approved per-REQ weights, independent buyer QA or commercial clearance.",
+        "official_final_completion": "NOT_DERIVED",
+        "points": {
+          "documented_ci_negative_tests": 10,
+          "documented_ci_packaging": 10,
+          "documented_scoped_tests": 10,
+          "implementation_file": 10,
+          "linked_product_ref": 10,
+          "linux_and_windows_jobs": 0,
+          "physical_buyer_os_acceptance": 0,
+          "product_blueprint_file": 10,
+          "rights_and_owner_sale_go": 0,
+          "successful_pinned_functional_ci": 20
+        },
+        "product_100_percent_certified": false,
+        "proof": {
+          "blueprint": {
+            "branch": "feature/kmong-eai-85-p31-20261112",
+            "git_blob_sha": "20b6fbdb690f6a3d032a374f773bf3f6586af2bf",
+            "head_sha": "57d5424f008b091b0f46066ef41e85f437b8dac8",
+            "path": "REQUIREMENTS.md",
+            "repository": "hibi89/EAI"
+          },
+          "functional_ci": {
+            "branch": "feature/kmong-eai-85-p31-20261112",
+            "cross_os_jobs_validated": false,
+            "run_id": 43202624144,
+            "source_sha": "f3a61e624e5d21a21700ec21930a9021b4acd9c2",
+            "status": "EXACT_SHA_SUCCESS",
+            "url": "https://github.com/hibi89/EAI/actions/runs/43202624144"
+          },
+          "implementation": {
+            "branch": "feature/kmong-eai-85-p31-20261112",
+            "git_blob_sha": "44b77d0e66c56a56f174bc91c6c667c64fe60781",
+            "head_sha": "57d5424f008b091b0f46066ef41e85f437b8dac8",
+            "path": "scripts/accept_windows_candidate.py",
+            "repository": "hibi89/EAI"
+          }
+        },
+        "risk": [
+          "CI source SHA differs from current documentation/source branch head"
+        ],
+        "rubric": "GITHUB_EVIDENCE_READINESS_V1",
+        "rubric_weights": {
+          "documented_ci_negative_tests": 10,
+          "documented_ci_packaging": 10,
+          "documented_scoped_tests": 10,
+          "implementation_file": 10,
+          "linked_product_ref": 10,
+          "linux_and_windows_jobs": 10,
+          "physical_buyer_os_acceptance": 5,
+          "product_blueprint_file": 10,
+          "rights_and_owner_sale_go": 5,
+          "successful_pinned_functional_ci": 20
+        },
+        "score": 80,
+        "status": "AUTOMATED_METADATA_PLUS_REVIEWED_EVIDENCE"
       },
       "record_id": "ACTIVE-15",
       "repository": "hibi89/EAI",
@@ -366,6 +1234,67 @@
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
         "status": "UNASSESSED"
       },
+      "provisional_evidence_readiness": {
+        "commercial_release_authorized": false,
+        "denominator": 100,
+        "limitations": "Fixed evidence-readiness metric; not product functional coverage, owner-approved per-REQ weights, independent buyer QA or commercial clearance.",
+        "official_final_completion": "NOT_DERIVED",
+        "points": {
+          "documented_ci_negative_tests": 10,
+          "documented_ci_packaging": 10,
+          "documented_scoped_tests": 10,
+          "implementation_file": 10,
+          "linked_product_ref": 10,
+          "linux_and_windows_jobs": 0,
+          "physical_buyer_os_acceptance": 0,
+          "product_blueprint_file": 10,
+          "rights_and_owner_sale_go": 0,
+          "successful_pinned_functional_ci": 20
+        },
+        "product_100_percent_certified": false,
+        "proof": {
+          "blueprint": {
+            "branch": "feature/pc-care-p15-p18-85-20261112",
+            "git_blob_sha": "c241352279f7880a97b703f4489247698443c5cb",
+            "head_sha": "72da39fcebda1e23f540e5381be9abf6422d1934",
+            "path": "REQUIREMENTS.md",
+            "repository": "hibi89/AX_MART"
+          },
+          "functional_ci": {
+            "branch": "feature/pc-care-p15-p18-85-20261112",
+            "cross_os_jobs_validated": false,
+            "run_id": 43131173581,
+            "source_sha": "0ba167682c848056c5717c717b3b0d1ca98a9f3c",
+            "status": "EXACT_SHA_SUCCESS",
+            "url": "https://github.com/hibi89/AX_MART/actions/runs/43131173581"
+          },
+          "implementation": {
+            "branch": "feature/pc-care-p15-p18-85-20261112",
+            "git_blob_sha": "4a9c4153e5124f93820043ee2b8929a97a3df539",
+            "head_sha": "72da39fcebda1e23f540e5381be9abf6422d1934",
+            "path": "products/pc-care/START_PC_CARE.cmd",
+            "repository": "hibi89/AX_MART"
+          }
+        },
+        "risk": [
+          "CI source SHA differs from current documentation/source branch head"
+        ],
+        "rubric": "GITHUB_EVIDENCE_READINESS_V1",
+        "rubric_weights": {
+          "documented_ci_negative_tests": 10,
+          "documented_ci_packaging": 10,
+          "documented_scoped_tests": 10,
+          "implementation_file": 10,
+          "linked_product_ref": 10,
+          "linux_and_windows_jobs": 10,
+          "physical_buyer_os_acceptance": 5,
+          "product_blueprint_file": 10,
+          "rights_and_owner_sale_go": 5,
+          "successful_pinned_functional_ci": 20
+        },
+        "score": 80,
+        "status": "AUTOMATED_METADATA_PLUS_REVIEWED_EVIDENCE"
+      },
       "record_id": "ACTIVE-16",
       "repository": "hibi89/AX_MART",
       "status": "PRESENT",
@@ -387,6 +1316,67 @@
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
         "status": "UNASSESSED"
+      },
+      "provisional_evidence_readiness": {
+        "commercial_release_authorized": false,
+        "denominator": 100,
+        "limitations": "Fixed evidence-readiness metric; not product functional coverage, owner-approved per-REQ weights, independent buyer QA or commercial clearance.",
+        "official_final_completion": "NOT_DERIVED",
+        "points": {
+          "documented_ci_negative_tests": 10,
+          "documented_ci_packaging": 10,
+          "documented_scoped_tests": 10,
+          "implementation_file": 10,
+          "linked_product_ref": 10,
+          "linux_and_windows_jobs": 0,
+          "physical_buyer_os_acceptance": 0,
+          "product_blueprint_file": 10,
+          "rights_and_owner_sale_go": 0,
+          "successful_pinned_functional_ci": 20
+        },
+        "product_100_percent_certified": false,
+        "proof": {
+          "blueprint": {
+            "branch": "feature/cube-owner-preflight-p85-20261112",
+            "git_blob_sha": "e04932d898f26de94f26a5057ba6cb2a6c422964",
+            "head_sha": "1f36b39e67914a4a24ce8d012ccdbf95e8dede4c",
+            "path": "REQUIREMENTS.md",
+            "repository": "hibi89/AX_MART"
+          },
+          "functional_ci": {
+            "branch": "feature/cube-owner-preflight-p85-20261112",
+            "cross_os_jobs_validated": false,
+            "run_id": 43240934297,
+            "source_sha": "037aa8bf5e9b251d39fa909f4354d10901fa4ed6",
+            "status": "EXACT_SHA_SUCCESS",
+            "url": "https://github.com/hibi89/AX_MART/actions/runs/43240934297"
+          },
+          "implementation": {
+            "branch": "feature/cube-owner-preflight-p85-20261112",
+            "git_blob_sha": "c30585a3978c221099ee3ea8cfacc062467a4eba",
+            "head_sha": "1f36b39e67914a4a24ce8d012ccdbf95e8dede4c",
+            "path": "commerce/release-preflight.mjs",
+            "repository": "hibi89/AX_MART"
+          }
+        },
+        "risk": [
+          "CI source SHA differs from current documentation/source branch head"
+        ],
+        "rubric": "GITHUB_EVIDENCE_READINESS_V1",
+        "rubric_weights": {
+          "documented_ci_negative_tests": 10,
+          "documented_ci_packaging": 10,
+          "documented_scoped_tests": 10,
+          "implementation_file": 10,
+          "linked_product_ref": 10,
+          "linux_and_windows_jobs": 10,
+          "physical_buyer_os_acceptance": 5,
+          "product_blueprint_file": 10,
+          "rights_and_owner_sale_go": 5,
+          "successful_pinned_functional_ci": 20
+        },
+        "score": 80,
+        "status": "AUTOMATED_METADATA_PLUS_REVIEWED_EVIDENCE"
       },
       "record_id": "ACTIVE-17",
       "repository": "hibi89/AX_MART",
@@ -410,6 +1400,67 @@
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
         "status": "UNASSESSED"
       },
+      "provisional_evidence_readiness": {
+        "commercial_release_authorized": false,
+        "denominator": 100,
+        "limitations": "Fixed evidence-readiness metric; not product functional coverage, owner-approved per-REQ weights, independent buyer QA or commercial clearance.",
+        "official_final_completion": "NOT_DERIVED",
+        "points": {
+          "documented_ci_negative_tests": 10,
+          "documented_ci_packaging": 10,
+          "documented_scoped_tests": 10,
+          "implementation_file": 10,
+          "linked_product_ref": 10,
+          "linux_and_windows_jobs": 10,
+          "physical_buyer_os_acceptance": 0,
+          "product_blueprint_file": 10,
+          "rights_and_owner_sale_go": 0,
+          "successful_pinned_functional_ci": 20
+        },
+        "product_100_percent_certified": false,
+        "proof": {
+          "blueprint": {
+            "branch": "develop",
+            "git_blob_sha": "e2e9cdec47e343950e79e2dbd2a927c417c1b8cf",
+            "head_sha": "53b2262d847b40b45f5138d5f6cb4c16a8249813",
+            "path": "REQUIREMENTS.md",
+            "repository": "hibi89/KUODRA"
+          },
+          "functional_ci": {
+            "branch": "feature/p95-dart-cis-accounting-20261113",
+            "cross_os_jobs_validated": true,
+            "run_id": 43302772793,
+            "source_sha": "49d78a013ad51495d8facc0d82e3c2103a2ae99d",
+            "status": "EXACT_SHA_SUCCESS",
+            "url": "https://github.com/hibi89/KUODRA/actions/runs/43302772793"
+          },
+          "implementation": {
+            "branch": "develop",
+            "git_blob_sha": "d8478015d452490bd3e1b07b5fbe7a1d8c5d0460",
+            "head_sha": "53b2262d847b40b45f5138d5f6cb4c16a8249813",
+            "path": "kuodra/gui.py",
+            "repository": "hibi89/KUODRA"
+          }
+        },
+        "risk": [
+          "CI validates a different historical branch, not the current source head"
+        ],
+        "rubric": "GITHUB_EVIDENCE_READINESS_V1",
+        "rubric_weights": {
+          "documented_ci_negative_tests": 10,
+          "documented_ci_packaging": 10,
+          "documented_scoped_tests": 10,
+          "implementation_file": 10,
+          "linked_product_ref": 10,
+          "linux_and_windows_jobs": 10,
+          "physical_buyer_os_acceptance": 5,
+          "product_blueprint_file": 10,
+          "rights_and_owner_sale_go": 5,
+          "successful_pinned_functional_ci": 20
+        },
+        "score": 90,
+        "status": "AUTOMATED_METADATA_PLUS_REVIEWED_EVIDENCE"
+      },
       "record_id": "CANDIDATE-01",
       "repository": "hibi89/KUODRA",
       "status": "PRESENT",
@@ -432,6 +1483,57 @@
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
         "status": "UNASSESSED"
       },
+      "provisional_evidence_readiness": {
+        "commercial_release_authorized": false,
+        "denominator": 100,
+        "limitations": "Fixed evidence-readiness metric; not product functional coverage, owner-approved per-REQ weights, independent buyer QA or commercial clearance.",
+        "official_final_completion": "NOT_DERIVED",
+        "points": {
+          "documented_ci_negative_tests": 0,
+          "documented_ci_packaging": 0,
+          "documented_scoped_tests": 10,
+          "implementation_file": 10,
+          "linked_product_ref": 10,
+          "linux_and_windows_jobs": 0,
+          "physical_buyer_os_acceptance": 0,
+          "product_blueprint_file": 10,
+          "rights_and_owner_sale_go": 0,
+          "successful_pinned_functional_ci": 0
+        },
+        "product_100_percent_certified": false,
+        "proof": {
+          "blueprint": {
+            "branch": "feature/core-extraction",
+            "git_blob_sha": "373e525d95de7ca27fd008018fe4da44df775ae0",
+            "head_sha": "79f65ca284bc65c651054d281e0b9e95b04469cb",
+            "path": "docs/ACCEPTANCE_MATRIX.md",
+            "repository": "hibi89/prep"
+          },
+          "implementation": {
+            "branch": "feature/core-extraction",
+            "git_blob_sha": "81c66ca000036cb4daca7a221535190d2276418e",
+            "head_sha": "79f65ca284bc65c651054d281e0b9e95b04469cb",
+            "path": "src/sdk.mjs",
+            "repository": "hibi89/prep"
+          }
+        },
+        "risk": [],
+        "rubric": "GITHUB_EVIDENCE_READINESS_V1",
+        "rubric_weights": {
+          "documented_ci_negative_tests": 10,
+          "documented_ci_packaging": 10,
+          "documented_scoped_tests": 10,
+          "implementation_file": 10,
+          "linked_product_ref": 10,
+          "linux_and_windows_jobs": 10,
+          "physical_buyer_os_acceptance": 5,
+          "product_blueprint_file": 10,
+          "rights_and_owner_sale_go": 5,
+          "successful_pinned_functional_ci": 20
+        },
+        "score": 40,
+        "status": "AUTOMATED_METADATA_PLUS_REVIEWED_EVIDENCE"
+      },
       "record_id": "CANDIDATE-02",
       "repository": "hibi89/prep",
       "status": "PRESENT",
@@ -446,13 +1548,69 @@
     },
     {
       "gate": {
-        "status": "NO_RUN"
+        "conclusion": "success",
+        "head_sha": "b4d029867d352b43b2354f4c124095e6d0f6e292",
+        "matches_current_head": true,
+        "run_id": 43541271060,
+        "status": "LATEST_RUN",
+        "workflow_status": "completed"
       },
-      "head_sha": "db7e0204bc861a3a42efb11a412663caa2cbd795",
+      "head_sha": "b4d029867d352b43b2354f4c124095e6d0f6e292",
       "machine_evidence_score": {
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
         "status": "UNASSESSED"
+      },
+      "provisional_evidence_readiness": {
+        "commercial_release_authorized": false,
+        "denominator": 100,
+        "limitations": "Fixed evidence-readiness metric; not product functional coverage, owner-approved per-REQ weights, independent buyer QA or commercial clearance.",
+        "official_final_completion": "NOT_DERIVED",
+        "points": {
+          "documented_ci_negative_tests": 0,
+          "documented_ci_packaging": 0,
+          "documented_scoped_tests": 10,
+          "implementation_file": 10,
+          "linked_product_ref": 10,
+          "linux_and_windows_jobs": 0,
+          "physical_buyer_os_acceptance": 0,
+          "product_blueprint_file": 10,
+          "rights_and_owner_sale_go": 0,
+          "successful_pinned_functional_ci": 0
+        },
+        "product_100_percent_certified": false,
+        "proof": {
+          "blueprint": {
+            "branch": "feature/ffax-workbench-p85-20261112",
+            "git_blob_sha": "a3ee7772c18d948aec1baf2c8fdc5a442c28e03c",
+            "head_sha": "b4d029867d352b43b2354f4c124095e6d0f6e292",
+            "path": "docs/ACCEPTANCE_MATRIX.md",
+            "repository": "hibi89/frontend-foundry-ax"
+          },
+          "implementation": {
+            "branch": "feature/ffax-workbench-p85-20261112",
+            "git_blob_sha": "9a15cb846a430c296a23faf7ee5f751fc912b78d",
+            "head_sha": "b4d029867d352b43b2354f4c124095e6d0f6e292",
+            "path": "src/core.mjs",
+            "repository": "hibi89/frontend-foundry-ax"
+          }
+        },
+        "risk": [],
+        "rubric": "GITHUB_EVIDENCE_READINESS_V1",
+        "rubric_weights": {
+          "documented_ci_negative_tests": 10,
+          "documented_ci_packaging": 10,
+          "documented_scoped_tests": 10,
+          "implementation_file": 10,
+          "linked_product_ref": 10,
+          "linux_and_windows_jobs": 10,
+          "physical_buyer_os_acceptance": 5,
+          "product_blueprint_file": 10,
+          "rights_and_owner_sale_go": 5,
+          "successful_pinned_functional_ci": 20
+        },
+        "score": 40,
+        "status": "AUTOMATED_METADATA_PLUS_REVIEWED_EVIDENCE"
       },
       "record_id": "CANDIDATE-03",
       "repository": "hibi89/frontend-foundry-ax",
@@ -475,6 +1633,67 @@
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
         "status": "UNASSESSED"
+      },
+      "provisional_evidence_readiness": {
+        "commercial_release_authorized": false,
+        "denominator": 100,
+        "limitations": "Fixed evidence-readiness metric; not product functional coverage, owner-approved per-REQ weights, independent buyer QA or commercial clearance.",
+        "official_final_completion": "NOT_DERIVED",
+        "points": {
+          "documented_ci_negative_tests": 10,
+          "documented_ci_packaging": 10,
+          "documented_scoped_tests": 10,
+          "implementation_file": 10,
+          "linked_product_ref": 10,
+          "linux_and_windows_jobs": 10,
+          "physical_buyer_os_acceptance": 0,
+          "product_blueprint_file": 10,
+          "rights_and_owner_sale_go": 0,
+          "successful_pinned_functional_ci": 20
+        },
+        "product_100_percent_certified": false,
+        "proof": {
+          "blueprint": {
+            "branch": "feature/data-verify",
+            "git_blob_sha": "9f67cf7c1f694426fe8a3acea857fd31f096a601",
+            "head_sha": "f9577bbc4c798534b36ed1243e122453b5e4a4a9",
+            "path": "REQUIREMENTS.md",
+            "repository": "hibi89/factory-ax-ecosystem"
+          },
+          "functional_ci": {
+            "branch": "feature/data-verify",
+            "cross_os_jobs_validated": true,
+            "run_id": 43178583600,
+            "source_sha": "b70a059175389bf53d87f8c90dc4f5bbe6a97986",
+            "status": "EXACT_SHA_SUCCESS",
+            "url": "https://github.com/hibi89/factory-ax-ecosystem/actions/runs/43178583600"
+          },
+          "implementation": {
+            "branch": "feature/data-verify",
+            "git_blob_sha": "d5115cd9a3ce5289b044c92b08be9eadb00a4c19",
+            "head_sha": "f9577bbc4c798534b36ed1243e122453b5e4a4a9",
+            "path": "factoryax/gui.py",
+            "repository": "hibi89/factory-ax-ecosystem"
+          }
+        },
+        "risk": [
+          "CI source SHA differs from current documentation/source branch head"
+        ],
+        "rubric": "GITHUB_EVIDENCE_READINESS_V1",
+        "rubric_weights": {
+          "documented_ci_negative_tests": 10,
+          "documented_ci_packaging": 10,
+          "documented_scoped_tests": 10,
+          "implementation_file": 10,
+          "linked_product_ref": 10,
+          "linux_and_windows_jobs": 10,
+          "physical_buyer_os_acceptance": 5,
+          "product_blueprint_file": 10,
+          "rights_and_owner_sale_go": 5,
+          "successful_pinned_functional_ci": 20
+        },
+        "score": 90,
+        "status": "AUTOMATED_METADATA_PLUS_REVIEWED_EVIDENCE"
       },
       "record_id": "CANDIDATE-04",
       "repository": "hibi89/factory-ax-ecosystem",
@@ -503,6 +1722,64 @@
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
         "status": "UNASSESSED"
       },
+      "provisional_evidence_readiness": {
+        "commercial_release_authorized": false,
+        "denominator": 100,
+        "limitations": "Fixed evidence-readiness metric; not product functional coverage, owner-approved per-REQ weights, independent buyer QA or commercial clearance.",
+        "official_final_completion": "NOT_DERIVED",
+        "points": {
+          "documented_ci_negative_tests": 0,
+          "documented_ci_packaging": 0,
+          "documented_scoped_tests": 10,
+          "implementation_file": 10,
+          "linked_product_ref": 10,
+          "linux_and_windows_jobs": 0,
+          "physical_buyer_os_acceptance": 0,
+          "product_blueprint_file": 10,
+          "rights_and_owner_sale_go": 0,
+          "successful_pinned_functional_ci": 0
+        },
+        "product_100_percent_certified": false,
+        "proof": {
+          "blueprint": {
+            "branch": "product/hae-la-automation",
+            "git_blob_sha": "be06fbb282f3b9be6231cc802628471dfa30406b",
+            "head_sha": "9160cf77cbb5c62e09e1f9451643b37b5ddeecbb",
+            "path": "docs/FINAL_BLUEPRINT.md",
+            "repository": "hibi89/Freelancer"
+          },
+          "functional_ci": {
+            "reason": "missing/failed/stale SHA or branch GitHub run",
+            "run_id": 43382552489,
+            "status": "NOT_ACCEPTED"
+          },
+          "implementation": {
+            "branch": "feature/axflow-mvp",
+            "git_blob_sha": "4697817ad2f2fbdf174d335a3f1fcde154480668",
+            "head_sha": "f659028351c480b35431f706e911ce5e0c036774",
+            "path": "apps/ax-flow/axflow/planner.py",
+            "repository": "hibi89/HAE"
+          }
+        },
+        "risk": [
+          "Central product link differs from actual implementation source"
+        ],
+        "rubric": "GITHUB_EVIDENCE_READINESS_V1",
+        "rubric_weights": {
+          "documented_ci_negative_tests": 10,
+          "documented_ci_packaging": 10,
+          "documented_scoped_tests": 10,
+          "implementation_file": 10,
+          "linked_product_ref": 10,
+          "linux_and_windows_jobs": 10,
+          "physical_buyer_os_acceptance": 5,
+          "product_blueprint_file": 10,
+          "rights_and_owner_sale_go": 5,
+          "successful_pinned_functional_ci": 20
+        },
+        "score": 40,
+        "status": "AUTOMATED_METADATA_PLUS_REVIEWED_EVIDENCE"
+      },
       "record_id": "CANDIDATE-05",
       "repository": "hibi89/Freelancer",
       "status": "PRESENT",
@@ -518,17 +1795,78 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "44e3e8a0bf2f7b6d971962451a401ce8830c541e",
+        "head_sha": "8a84c9d373d97f46080927594c3a6ca0cb188dc5",
         "matches_current_head": true,
-        "run_id": 43540285395,
+        "run_id": 43541069753,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "44e3e8a0bf2f7b6d971962451a401ce8830c541e",
+      "head_sha": "8a84c9d373d97f46080927594c3a6ca0cb188dc5",
       "machine_evidence_score": {
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
         "status": "UNASSESSED"
+      },
+      "provisional_evidence_readiness": {
+        "commercial_release_authorized": false,
+        "denominator": 100,
+        "limitations": "Fixed evidence-readiness metric; not product functional coverage, owner-approved per-REQ weights, independent buyer QA or commercial clearance.",
+        "official_final_completion": "NOT_DERIVED",
+        "points": {
+          "documented_ci_negative_tests": 10,
+          "documented_ci_packaging": 10,
+          "documented_scoped_tests": 10,
+          "implementation_file": 10,
+          "linked_product_ref": 10,
+          "linux_and_windows_jobs": 10,
+          "physical_buyer_os_acceptance": 0,
+          "product_blueprint_file": 10,
+          "rights_and_owner_sale_go": 0,
+          "successful_pinned_functional_ci": 20
+        },
+        "product_100_percent_certified": false,
+        "proof": {
+          "blueprint": {
+            "branch": "product/rag-enterprise-knowledge",
+            "git_blob_sha": "889648dea0a44b929d33b9b8bea0084ca240ba06",
+            "head_sha": "8a84c9d373d97f46080927594c3a6ca0cb188dc5",
+            "path": "docs/FINAL_BLUEPRINT.md",
+            "repository": "hibi89/Freelancer"
+          },
+          "functional_ci": {
+            "branch": "product/rag-enterprise-knowledge",
+            "cross_os_jobs_validated": true,
+            "run_id": 43537747863,
+            "source_sha": "f4f5f088b9fb2d89937c825445c035d1a4da0ca2",
+            "status": "EXACT_SHA_SUCCESS",
+            "url": "https://github.com/hibi89/Freelancer/actions/runs/43537747863"
+          },
+          "implementation": {
+            "branch": "product/rag-enterprise-knowledge",
+            "git_blob_sha": "2346ad76c942200d603750a2373495b1cb2e3f19",
+            "head_sha": "8a84c9d373d97f46080927594c3a6ca0cb188dc5",
+            "path": "enterprise/p85-korean-model-preflight.mjs",
+            "repository": "hibi89/Freelancer"
+          }
+        },
+        "risk": [
+          "CI source SHA differs from current documentation/source branch head"
+        ],
+        "rubric": "GITHUB_EVIDENCE_READINESS_V1",
+        "rubric_weights": {
+          "documented_ci_negative_tests": 10,
+          "documented_ci_packaging": 10,
+          "documented_scoped_tests": 10,
+          "implementation_file": 10,
+          "linked_product_ref": 10,
+          "linux_and_windows_jobs": 10,
+          "physical_buyer_os_acceptance": 5,
+          "product_blueprint_file": 10,
+          "rights_and_owner_sale_go": 5,
+          "successful_pinned_functional_ci": 20
+        },
+        "score": 90,
+        "status": "AUTOMATED_METADATA_PLUS_REVIEWED_EVIDENCE"
       },
       "record_id": "CANDIDATE-06",
       "repository": "hibi89/Freelancer",
@@ -557,6 +1895,68 @@
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
         "status": "UNASSESSED"
       },
+      "provisional_evidence_readiness": {
+        "commercial_release_authorized": false,
+        "denominator": 100,
+        "limitations": "Fixed evidence-readiness metric; not product functional coverage, owner-approved per-REQ weights, independent buyer QA or commercial clearance.",
+        "official_final_completion": "NOT_DERIVED",
+        "points": {
+          "documented_ci_negative_tests": 10,
+          "documented_ci_packaging": 0,
+          "documented_scoped_tests": 10,
+          "implementation_file": 10,
+          "linked_product_ref": 10,
+          "linux_and_windows_jobs": 10,
+          "physical_buyer_os_acceptance": 0,
+          "product_blueprint_file": 10,
+          "rights_and_owner_sale_go": 0,
+          "successful_pinned_functional_ci": 20
+        },
+        "product_100_percent_certified": false,
+        "proof": {
+          "blueprint": {
+            "branch": "product/rea-website-rebuild",
+            "git_blob_sha": "38748a5f08e2a2cc6cb24b1ec397c9e5d1dadec4",
+            "head_sha": "6e94d0066cbc80e91fed28b3358b36fc76235515",
+            "path": "docs/FINAL_BLUEPRINT.md",
+            "repository": "hibi89/Freelancer"
+          },
+          "functional_ci": {
+            "branch": "feature/sitecraft-ax-p85-20261113",
+            "cross_os_jobs_validated": true,
+            "run_id": 43382914205,
+            "source_sha": "a3f31c4c676fb28c2ddded052f9cd0a0942370ad",
+            "status": "EXACT_SHA_SUCCESS",
+            "url": "https://github.com/hibi89/REA_Web/actions/runs/43382914205"
+          },
+          "implementation": {
+            "branch": "feature/sitecraft-ax-p85-20261113",
+            "git_blob_sha": "c70dae5575cb4c10b0edb80532ac1bf4f03e8109",
+            "head_sha": "a59d5279325e35c0fc65e81c36c7f74e21cbb0b9",
+            "path": "rea/sitecraft_p85.py",
+            "repository": "hibi89/REA_Web"
+          }
+        },
+        "risk": [
+          "CI source SHA differs from current documentation/source branch head",
+          "Central product link differs from actual implementation source"
+        ],
+        "rubric": "GITHUB_EVIDENCE_READINESS_V1",
+        "rubric_weights": {
+          "documented_ci_negative_tests": 10,
+          "documented_ci_packaging": 10,
+          "documented_scoped_tests": 10,
+          "implementation_file": 10,
+          "linked_product_ref": 10,
+          "linux_and_windows_jobs": 10,
+          "physical_buyer_os_acceptance": 5,
+          "product_blueprint_file": 10,
+          "rights_and_owner_sale_go": 5,
+          "successful_pinned_functional_ci": 20
+        },
+        "score": 80,
+        "status": "AUTOMATED_METADATA_PLUS_REVIEWED_EVIDENCE"
+      },
       "record_id": "CANDIDATE-07",
       "repository": "hibi89/Freelancer",
       "status": "PRESENT",
@@ -584,6 +1984,67 @@
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
         "status": "UNASSESSED"
       },
+      "provisional_evidence_readiness": {
+        "commercial_release_authorized": false,
+        "denominator": 100,
+        "limitations": "Fixed evidence-readiness metric; not product functional coverage, owner-approved per-REQ weights, independent buyer QA or commercial clearance.",
+        "official_final_completion": "NOT_DERIVED",
+        "points": {
+          "documented_ci_negative_tests": 10,
+          "documented_ci_packaging": 10,
+          "documented_scoped_tests": 10,
+          "implementation_file": 10,
+          "linked_product_ref": 10,
+          "linux_and_windows_jobs": 10,
+          "physical_buyer_os_acceptance": 0,
+          "product_blueprint_file": 10,
+          "rights_and_owner_sale_go": 0,
+          "successful_pinned_functional_ci": 20
+        },
+        "product_100_percent_certified": false,
+        "proof": {
+          "blueprint": {
+            "branch": "product/proofqa-ax-delivery-audit",
+            "git_blob_sha": "59a9269e0aa3285568b678cdcc6a57a80688aef7",
+            "head_sha": "2daf969d0d48afd66a35213e77e129b3ced8cdb2",
+            "path": "docs/FINAL_BLUEPRINT.md",
+            "repository": "hibi89/Freelancer"
+          },
+          "functional_ci": {
+            "branch": "feature/proofqa-ax-p85-independent-audit",
+            "cross_os_jobs_validated": true,
+            "run_id": 43383627492,
+            "source_sha": "5bce80a870d46702eb1ef5a51faa7cae54755691",
+            "status": "EXACT_SHA_SUCCESS",
+            "url": "https://github.com/hibi89/ai-code-checker/actions/runs/43383627492"
+          },
+          "implementation": {
+            "branch": "feature/proofqa-ax-p85-independent-audit",
+            "git_blob_sha": "225097a20021494880cdccaa84d0eb413d581973",
+            "head_sha": "5bce80a870d46702eb1ef5a51faa7cae54755691",
+            "path": "proofqa_p85.py",
+            "repository": "hibi89/ai-code-checker"
+          }
+        },
+        "risk": [
+          "Central product link differs from actual implementation source"
+        ],
+        "rubric": "GITHUB_EVIDENCE_READINESS_V1",
+        "rubric_weights": {
+          "documented_ci_negative_tests": 10,
+          "documented_ci_packaging": 10,
+          "documented_scoped_tests": 10,
+          "implementation_file": 10,
+          "linked_product_ref": 10,
+          "linux_and_windows_jobs": 10,
+          "physical_buyer_os_acceptance": 5,
+          "product_blueprint_file": 10,
+          "rights_and_owner_sale_go": 5,
+          "successful_pinned_functional_ci": 20
+        },
+        "score": 90,
+        "status": "AUTOMATED_METADATA_PLUS_REVIEWED_EVIDENCE"
+      },
       "record_id": "CANDIDATE-08",
       "repository": "hibi89/Freelancer",
       "status": "PRESENT",
@@ -606,6 +2067,68 @@
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
         "status": "UNASSESSED"
       },
+      "provisional_evidence_readiness": {
+        "commercial_release_authorized": false,
+        "denominator": 100,
+        "limitations": "Fixed evidence-readiness metric; not product functional coverage, owner-approved per-REQ weights, independent buyer QA or commercial clearance.",
+        "official_final_completion": "NOT_DERIVED",
+        "points": {
+          "documented_ci_negative_tests": 10,
+          "documented_ci_packaging": 10,
+          "documented_scoped_tests": 10,
+          "implementation_file": 10,
+          "linked_product_ref": 10,
+          "linux_and_windows_jobs": 10,
+          "physical_buyer_os_acceptance": 0,
+          "product_blueprint_file": 10,
+          "rights_and_owner_sale_go": 0,
+          "successful_pinned_functional_ci": 20
+        },
+        "product_100_percent_certified": false,
+        "proof": {
+          "blueprint": {
+            "branch": "product/ontoinsight-ax-data-analytics",
+            "git_blob_sha": "d1415e8015a43801cc1fbbf1ff66075ea2b3258e",
+            "head_sha": "740ca7c3c4d969b3c51d9be017d950fea50297a1",
+            "path": "docs/FINAL_BLUEPRINT.md",
+            "repository": "hibi89/Freelancer"
+          },
+          "functional_ci": {
+            "branch": "feature/ontoinsight-ax-p85-20261113",
+            "cross_os_jobs_validated": true,
+            "run_id": 43383793303,
+            "source_sha": "8d1bdc80ed345485591f739aace632e91112a604",
+            "status": "EXACT_SHA_SUCCESS",
+            "url": "https://github.com/hibi89/AI_AutoML_Analyst/actions/runs/43383793303"
+          },
+          "implementation": {
+            "branch": "feature/ontoinsight-ax-p85-20261113",
+            "git_blob_sha": "4bc71dcd89d5aa7088eeb62c22a617ca659f20f1",
+            "head_sha": "d027481b886bd86b75f5e44b73250e4e3c0948b3",
+            "path": "backend/app/services/ontoinsight_p85_ml.py",
+            "repository": "hibi89/AI_AutoML_Analyst"
+          }
+        },
+        "risk": [
+          "CI source SHA differs from current documentation/source branch head",
+          "Central product link differs from actual implementation source"
+        ],
+        "rubric": "GITHUB_EVIDENCE_READINESS_V1",
+        "rubric_weights": {
+          "documented_ci_negative_tests": 10,
+          "documented_ci_packaging": 10,
+          "documented_scoped_tests": 10,
+          "implementation_file": 10,
+          "linked_product_ref": 10,
+          "linux_and_windows_jobs": 10,
+          "physical_buyer_os_acceptance": 5,
+          "product_blueprint_file": 10,
+          "rights_and_owner_sale_go": 5,
+          "successful_pinned_functional_ci": 20
+        },
+        "score": 90,
+        "status": "AUTOMATED_METADATA_PLUS_REVIEWED_EVIDENCE"
+      },
       "record_id": "CANDIDATE-09",
       "repository": "hibi89/Freelancer",
       "status": "PRESENT",
@@ -621,17 +2144,78 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "3008bfd440aafe57e264ad4a0485d517f8819634",
+        "head_sha": "6e644ce44c3e026882f9daf2dae7fd245a768658",
         "matches_current_head": true,
-        "run_id": 43540224615,
+        "run_id": 43540765785,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "3008bfd440aafe57e264ad4a0485d517f8819634",
+      "head_sha": "6e644ce44c3e026882f9daf2dae7fd245a768658",
       "machine_evidence_score": {
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
         "status": "UNASSESSED"
+      },
+      "provisional_evidence_readiness": {
+        "commercial_release_authorized": false,
+        "denominator": 100,
+        "limitations": "Fixed evidence-readiness metric; not product functional coverage, owner-approved per-REQ weights, independent buyer QA or commercial clearance.",
+        "official_final_completion": "NOT_DERIVED",
+        "points": {
+          "documented_ci_negative_tests": 10,
+          "documented_ci_packaging": 10,
+          "documented_scoped_tests": 10,
+          "implementation_file": 10,
+          "linked_product_ref": 10,
+          "linux_and_windows_jobs": 10,
+          "physical_buyer_os_acceptance": 0,
+          "product_blueprint_file": 10,
+          "rights_and_owner_sale_go": 0,
+          "successful_pinned_functional_ci": 20
+        },
+        "product_100_percent_certified": false,
+        "proof": {
+          "blueprint": {
+            "branch": "product/bid-ax-public-procurement",
+            "git_blob_sha": "8ece17209a92bf08d9104a34ab5b0fa6f40a9608",
+            "head_sha": "6e644ce44c3e026882f9daf2dae7fd245a768658",
+            "path": "docs/FINAL_BLUEPRINT.md",
+            "repository": "hibi89/Freelancer"
+          },
+          "functional_ci": {
+            "branch": "product/bid-ax-public-procurement",
+            "cross_os_jobs_validated": true,
+            "run_id": 43538851029,
+            "source_sha": "1ec540634671ff85b080e034cd37564e54fc8e1e",
+            "status": "EXACT_SHA_SUCCESS",
+            "url": "https://github.com/hibi89/Freelancer/actions/runs/43538851029"
+          },
+          "implementation": {
+            "branch": "product/bid-ax-public-procurement",
+            "git_blob_sha": "a53255034ad1ddcaa3a5eccf26bc5e22aa3015b1",
+            "head_sha": "6e644ce44c3e026882f9daf2dae7fd245a768658",
+            "path": "bidax/entrypoint.py",
+            "repository": "hibi89/Freelancer"
+          }
+        },
+        "risk": [
+          "CI source SHA differs from current documentation/source branch head"
+        ],
+        "rubric": "GITHUB_EVIDENCE_READINESS_V1",
+        "rubric_weights": {
+          "documented_ci_negative_tests": 10,
+          "documented_ci_packaging": 10,
+          "documented_scoped_tests": 10,
+          "implementation_file": 10,
+          "linked_product_ref": 10,
+          "linux_and_windows_jobs": 10,
+          "physical_buyer_os_acceptance": 5,
+          "product_blueprint_file": 10,
+          "rights_and_owner_sale_go": 5,
+          "successful_pinned_functional_ci": 20
+        },
+        "score": 90,
+        "status": "AUTOMATED_METADATA_PLUS_REVIEWED_EVIDENCE"
       },
       "record_id": "CANDIDATE-10",
       "repository": "hibi89/Freelancer",
@@ -655,6 +2239,42 @@
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
         "status": "UNASSESSED"
       },
+      "provisional_evidence_readiness": {
+        "commercial_release_authorized": false,
+        "denominator": 100,
+        "limitations": "Fixed evidence-readiness metric; not product functional coverage, owner-approved per-REQ weights, independent buyer QA or commercial clearance.",
+        "official_final_completion": "NOT_DERIVED",
+        "points": {
+          "documented_ci_negative_tests": 0,
+          "documented_ci_packaging": 0,
+          "documented_scoped_tests": 0,
+          "implementation_file": 0,
+          "linked_product_ref": 10,
+          "linux_and_windows_jobs": 0,
+          "physical_buyer_os_acceptance": 0,
+          "product_blueprint_file": 0,
+          "rights_and_owner_sale_go": 0,
+          "successful_pinned_functional_ci": 0
+        },
+        "product_100_percent_certified": false,
+        "proof": {},
+        "risk": [],
+        "rubric": "GITHUB_EVIDENCE_READINESS_V1",
+        "rubric_weights": {
+          "documented_ci_negative_tests": 10,
+          "documented_ci_packaging": 10,
+          "documented_scoped_tests": 10,
+          "implementation_file": 10,
+          "linked_product_ref": 10,
+          "linux_and_windows_jobs": 10,
+          "physical_buyer_os_acceptance": 5,
+          "product_blueprint_file": 10,
+          "rights_and_owner_sale_go": 5,
+          "successful_pinned_functional_ci": 20
+        },
+        "score": 10,
+        "status": "AUTOMATED_METADATA_PLUS_REVIEWED_EVIDENCE"
+      },
       "record_id": "CANDIDATE-11",
       "repository": "hibi89/hibi89-ugreen-nas-hackathon",
       "status": "PRESENT",
@@ -677,6 +2297,68 @@
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
         "status": "UNASSESSED"
       },
+      "provisional_evidence_readiness": {
+        "commercial_release_authorized": false,
+        "denominator": 100,
+        "limitations": "Fixed evidence-readiness metric; not product functional coverage, owner-approved per-REQ weights, independent buyer QA or commercial clearance.",
+        "official_final_completion": "NOT_DERIVED",
+        "points": {
+          "documented_ci_negative_tests": 10,
+          "documented_ci_packaging": 10,
+          "documented_scoped_tests": 10,
+          "implementation_file": 10,
+          "linked_product_ref": 10,
+          "linux_and_windows_jobs": 10,
+          "physical_buyer_os_acceptance": 0,
+          "product_blueprint_file": 10,
+          "rights_and_owner_sale_go": 0,
+          "successful_pinned_functional_ci": 20
+        },
+        "product_100_percent_certified": false,
+        "proof": {
+          "blueprint": {
+            "branch": "product/worknova-desk-local",
+            "git_blob_sha": "da429ec478fd079236b1bcde63cd3c889d0745cd",
+            "head_sha": "714071c98a0b7ec812d75d8ac3bfd814c112c788",
+            "path": "docs/FINAL_BLUEPRINT.md",
+            "repository": "hibi89/Freelancer"
+          },
+          "functional_ci": {
+            "branch": "product/worknova-desk-local",
+            "cross_os_jobs_validated": true,
+            "run_id": 43538360061,
+            "source_sha": "c8bb18ea3decaa6f3357d1849dd5272ca6721af8",
+            "status": "EXACT_SHA_SUCCESS",
+            "url": "https://github.com/hibi89/Freelancer/actions/runs/43538360061"
+          },
+          "implementation": {
+            "branch": "product/worknova-desk-local",
+            "git_blob_sha": "3165dbc534fea58c5cadcf658292d441575883ac",
+            "head_sha": "714071c98a0b7ec812d75d8ac3bfd814c112c788",
+            "path": "worknova_desk/gui.py",
+            "repository": "hibi89/Freelancer"
+          }
+        },
+        "risk": [
+          "CI source SHA differs from current documentation/source branch head",
+          "Central product link differs from actual implementation source"
+        ],
+        "rubric": "GITHUB_EVIDENCE_READINESS_V1",
+        "rubric_weights": {
+          "documented_ci_negative_tests": 10,
+          "documented_ci_packaging": 10,
+          "documented_scoped_tests": 10,
+          "implementation_file": 10,
+          "linked_product_ref": 10,
+          "linux_and_windows_jobs": 10,
+          "physical_buyer_os_acceptance": 5,
+          "product_blueprint_file": 10,
+          "rights_and_owner_sale_go": 5,
+          "successful_pinned_functional_ci": 20
+        },
+        "score": 90,
+        "status": "AUTOMATED_METADATA_PLUS_REVIEWED_EVIDENCE"
+      },
       "record_id": "CANDIDATE-12",
       "repository": "hibi89/hibi89-paypal-ai-hackathon",
       "status": "PRESENT",
@@ -690,6 +2372,7 @@
       }
     }
   ],
+  "provisional_score_policy": "GITHUB_EVIDENCE_READINESS_V1_NOT_OFFICIAL_COMPLETION",
   "repositories": [
     {
       "canonical": {
@@ -969,13 +2652,13 @@
           "branch": "feature/final-blueprint-p85-evidence-20261113",
           "gate": {
             "conclusion": "success",
-            "head_sha": "f7fc5607404d7349b95a85a0ebdb30a76ccc58ca",
+            "head_sha": "8d781329c82a357fbcfa1bf019acd55e50eb2908",
             "matches_current_head": true,
-            "run_id": 43540222285,
+            "run_id": 43541175712,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "f7fc5607404d7349b95a85a0ebdb30a76ccc58ca",
+          "head_sha": "8d781329c82a357fbcfa1bf019acd55e50eb2908",
           "status": "PRESENT"
         },
         {
@@ -1030,9 +2713,14 @@
         {
           "branch": "feature/p0-db-map",
           "gate": {
-            "status": "NO_RUN"
+            "conclusion": "success",
+            "head_sha": "a7d764a65c0dde3426171c093d6ee7b44968a888",
+            "matches_current_head": true,
+            "run_id": 43541050629,
+            "status": "LATEST_RUN",
+            "workflow_status": "completed"
           },
-          "head_sha": "b69ee453f460cc4a97ccfea6b4ab5748a2420c2e",
+          "head_sha": "a7d764a65c0dde3426171c093d6ee7b44968a888",
           "status": "PRESENT"
         }
       ]
@@ -1175,13 +2863,13 @@
           "branch": "product/bid-ax-public-procurement",
           "gate": {
             "conclusion": "success",
-            "head_sha": "3008bfd440aafe57e264ad4a0485d517f8819634",
+            "head_sha": "6e644ce44c3e026882f9daf2dae7fd245a768658",
             "matches_current_head": true,
-            "run_id": 43540224615,
+            "run_id": 43540765785,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "3008bfd440aafe57e264ad4a0485d517f8819634",
+          "head_sha": "6e644ce44c3e026882f9daf2dae7fd245a768658",
           "status": "PRESENT"
         },
         {
@@ -1222,13 +2910,13 @@
           "branch": "product/rag-enterprise-knowledge",
           "gate": {
             "conclusion": "success",
-            "head_sha": "44e3e8a0bf2f7b6d971962451a401ce8830c541e",
+            "head_sha": "8a84c9d373d97f46080927594c3a6ca0cb188dc5",
             "matches_current_head": true,
-            "run_id": 43540285395,
+            "run_id": 43541069753,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "44e3e8a0bf2f7b6d971962451a401ce8830c541e",
+          "head_sha": "8a84c9d373d97f46080927594c3a6ca0cb188dc5",
           "status": "PRESENT"
         },
         {
@@ -1270,9 +2958,14 @@
         {
           "branch": "feature/ffax-workbench-p85-20261112",
           "gate": {
-            "status": "NO_RUN"
+            "conclusion": "success",
+            "head_sha": "b4d029867d352b43b2354f4c124095e6d0f6e292",
+            "matches_current_head": true,
+            "run_id": 43541271060,
+            "status": "LATEST_RUN",
+            "workflow_status": "completed"
           },
-          "head_sha": "db7e0204bc861a3a42efb11a412663caa2cbd795",
+          "head_sha": "b4d029867d352b43b2354f4c124095e6d0f6e292",
           "status": "PRESENT"
         }
       ]
@@ -1302,7 +2995,7 @@
     {
       "canonical": {
         "expected_git_blob_sha": "521ba0cb458bea384639a0ef897ce7500d33b8f1",
-        "head_sha": "32bb7d45aa3b2e0dc0a4941b409b3bc36bc8930a",
+        "head_sha": "7adc49ac00be13adc1580573166fe5a70e32f80e",
         "mode": "observe",
         "observed_git_blob_sha": "521ba0cb458bea384639a0ef897ce7500d33b8f1",
         "owner_approval_verified": false,
@@ -1314,13 +3007,13 @@
         "branch": "main",
         "gate": {
           "conclusion": "success",
-          "head_sha": "32bb7d45aa3b2e0dc0a4941b409b3bc36bc8930a",
+          "head_sha": "7adc49ac00be13adc1580573166fe5a70e32f80e",
           "matches_current_head": true,
-          "run_id": 43538126171,
+          "run_id": 43541034013,
           "status": "LATEST_RUN",
           "workflow_status": "completed"
         },
-        "head_sha": "32bb7d45aa3b2e0dc0a4941b409b3bc36bc8930a",
+        "head_sha": "7adc49ac00be13adc1580573166fe5a70e32f80e",
         "status": "PRESENT"
       },
       "repository": "hibi89/hackathon-command-center-2026",
@@ -1893,6 +3586,8 @@
     "product_refs_missing": 0,
     "product_refs_present": 29,
     "product_refs_unlinked": 0,
+    "provisional_evidence_scores": 29,
+    "provisional_official_certifications": 0,
     "repository_count": 35,
     "tracked_branch_count": 80
   }
