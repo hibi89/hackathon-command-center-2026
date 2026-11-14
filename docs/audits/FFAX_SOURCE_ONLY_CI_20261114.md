@@ -1,3 +1,10 @@
+## 2026-11-14 KST — FFAX Windows owner-check ZIP now includes live 12-brief test runner (new verified code)
+
+- FFAX feature SHA `36d2b7ea7ad7a79988c632a18a9dd809c6f1390b`, docs-only HEAD `87cc381724789d47cd4b7a71f0438c549bf029f4`; [GitHub Actions run 43545601889](https://github.com/hibi89/frontend-foundry-ax/actions/runs/43545601889) **4 jobs SUCCESS**.
+- `ffax-owner-review-unreleased` artifact ID `14093858020` contains tested 22-file unsigned ZIP with `RUN-LIVE-MODEL-CHECK.cmd`, `package.json`, `scripts/react_real_probe.mjs`, model installation/owner instructions. Inner ZIP SHA256 `ab3970c18be393d00f02352e0ca5f4936f107079cb6183c39b248fab8b67958f`, embedded `SOURCE_SHA.txt` exact feature SHA. Linux unpacked server HTTP200 six routes and cross-origin POST403.
+- GitHub CI Linux/Windows 113/113 unit tests each, browser/axe/cleanroom and Windows ZIP packaging PASS. **Actual local Ollama 12 prompts, physical Windows owner UX, packaged npm install/TSX test from detached QA container are NOT VERIFIED**. Detached container npm DNS `EAI_AGAIN` after 2 attempts; bounded stop, no scoring from this failure. Package on customer PC needs npm internet.
+- The fixed FFAX technical rubric stays **80/100 provisional**, central final blueprint **UNASSESSED**, AC04 genuine model 0/14, AC09 owner signoff 0/6, RG06 pending, RELEASE HOLD; no sale/registration/deploy, `[작업중]` retained. 13:00 KST consolidated PC and mobile owner tasks already scheduled. Prior entries retained below.
+
 # FFAX 검증/크몽 원장 동기화 — 2026-11-14 KST
 
 ## 진척 증거와 범위
