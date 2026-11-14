@@ -1,4 +1,5 @@
 import { createHmac, createSign, timingSafeEqual } from "node:crypto";
+import { BodyReadError, readLimitedBody } from "./body-reader.js";
 import roster from "../source_repositories.json" with { type: "json" };
 
 export const HUB_REPO = "hibi89/hackathon-command-center-2026";
@@ -65,7 +66,7 @@ export function signAppJwt(appId, privateKey, nowSeconds = Math.floor(Date.now()
   return unsigned + "." + signer.sign(privateKey.replace(/\\n/g, "\n"), "base64url");
 }
 
-async function githubRequest(fetchImpl, path, token, method = "GET", body = undefined) {
+async function githubRequest(fetchImpl, path, token, method = "GET", body = undefined, deadline = undefined) {
   const response = await fetchImpl(API_ROOT + path, {
     method,
     headers: {
@@ -76,7 +77,7 @@ async function githubRequest(fetchImpl, path, token, method = "GET", body = unde
       "User-Agent": "kmong-event-bridge",
     },
     body: body === undefined ? undefined : JSON.stringify(body),
-    signal: AbortSignal.timeout(8000),
+    signal: deadline ? AbortSignal.any([deadline, AbortSignal.timeout(8000)]) : AbortSignal.timeout(8000),
   });
   if (!response.ok) {
     throw new Error("GitHub API returned HTTP " + response.status);
@@ -115,16 +116,21 @@ export function shouldCoalesceDispatch(payload, nowMs = Date.now()) {
   return false;
 }
 
-export async function dispatchCentral(env, fetchImpl = fetch) {
+export async function dispatchCentral(env, fetchImpl = fetch, maxDurationMs = 8500) {
+  if (!Number.isSafeInteger(maxDurationMs) || maxDurationMs < 1 || maxDurationMs > 8500) {
+    throw new TypeError("invalid dispatch time budget");
+  }
+  // Four sequential GitHub calls share a single deadline below the 10 s serverless budget.
+  const deadline = AbortSignal.timeout(maxDurationMs);
   const jwt = signAppJwt(env.KMONG_DISPATCH_APP_ID, env.KMONG_DISPATCH_APP_PRIVATE_KEY);
   const installation = await githubRequest(
-    fetchImpl, "/repos/" + HUB_REPO + "/installation", jwt);
+    fetchImpl, "/repos/" + HUB_REPO + "/installation", jwt, "GET", undefined, deadline);
   if (!Number.isInteger(installation.id) || installation.id < 1) {
     throw new Error("dispatch installation not found");
   }
   const token = await githubRequest(
     fetchImpl, "/app/installations/" + installation.id + "/access_tokens", jwt, "POST",
-    { repositories: [HUB_REPO.split("/")[1]], permissions: { actions: "write" } });
+    { repositories: [HUB_REPO.split("/")[1]], permissions: { actions: "write" } }, deadline);
   if (!token.token || !Array.isArray(token.repositories) || token.repositories.length !== 1 ||
       token.repositories[0].full_name?.toLowerCase() !== HUB_REPO.toLowerCase() ||
       token.permissions?.actions !== "write") {
@@ -132,11 +138,11 @@ export async function dispatchCentral(env, fetchImpl = fetch) {
   }
   const recent = await githubRequest(fetchImpl,
     "/repos/" + HUB_REPO + "/actions/workflows/" + HUB_WORKFLOW +
-    "/runs?event=workflow_dispatch&per_page=30", token.token);
+    "/runs?event=workflow_dispatch&per_page=30", token.token, "GET", undefined, deadline);
   if (shouldCoalesceDispatch(recent)) return "coalesced";
   await githubRequest(fetchImpl,
     "/repos/" + HUB_REPO + "/actions/workflows/" + HUB_WORKFLOW + "/dispatches",
-    token.token, "POST", { ref: "main", inputs: { dry_run: "false" } });
+    token.token, "POST", { ref: "main", inputs: { dry_run: "false" } }, deadline);
   return "queued";
 }
 
@@ -159,10 +165,13 @@ export function health(env) {
 
 export async function receiveWebhook(request, env, fetchImpl = fetch) {
   if (!env.KMONG_WEBHOOK_SECRET) return answer(503, { status: "not_configured" });
-  const providedLength = Number(request.headers.get("content-length") || 0);
-  if (providedLength > MAX_BODY) return answer(413, { status: "too_large" });
-  const raw = Buffer.from(await request.arrayBuffer());
-  if (raw.length > MAX_BODY) return answer(413, { status: "too_large" });
+  let raw;
+  try {
+    raw = await readLimitedBody(request, MAX_BODY);
+  } catch (error) {
+    if (error instanceof BodyReadError) return answer(error.status, { status: error.code });
+    throw error;
+  }
   if (!verifySignature(raw, request.headers.get("x-hub-signature-256"),
                        env.KMONG_WEBHOOK_SECRET)) {
     return answer(401, { status: "invalid_signature" });

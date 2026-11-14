@@ -297,3 +297,38 @@ test("read-only deployment probe distinguishes SHA match from unknown and disabl
   assert.equal(classify(403, {}, sha).verdict, "PROTECTED_OR_UNAUTHORIZED");
   assert.equal(classify(404, {}, sha).verdict, "NOT_FOUND");
 });
+
+test("forged small Content-Length on streamed oversized webhook fails before dispatch", async () => {
+  const { result, requests } = mockGitHub();
+  const raw = Buffer.from(JSON.stringify({ ...payload(), junk: "X".repeat(1048576) }));
+  const sig = "sha256=" + createHmac("sha256", env.KMONG_WEBHOOK_SECRET).update(raw).digest("hex");
+  const stream = new ReadableStream({
+    start(controller) {
+      controller.enqueue(raw.subarray(0, 524288));
+      controller.enqueue(raw.subarray(524288));
+      controller.close();
+    },
+  });
+  const req = new Request("https://bridge.invalid/api/webhook", {
+    method: "POST", duplex: "half", body: stream,
+    headers: {
+      "content-length": "1",
+      "x-hub-signature-256": sig,
+      "x-github-event": "push",
+      "x-github-delivery": DELIVERY,
+    },
+  });
+  const response = await receiveWebhook(req, env, result);
+  assert.equal(response.status, 413);
+  assert.equal((await response.json()).status, "too_large");
+  assert.equal(requests.length, 0);
+});
+
+test("single 8.5-second maximum dispatch budget fails closed on stalled GitHub call", async () => {
+  const stalled = (_, init) => new Promise((resolve, reject) => {
+    if (init.signal.aborted) return reject(init.signal.reason);
+    init.signal.addEventListener("abort", () => reject(init.signal.reason), { once: true });
+  });
+  await assert.rejects(dispatchCentral(env, stalled, 25), (error) => error.name === "TimeoutError");
+  await assert.rejects(dispatchCentral(env, stalled, 8501), TypeError);
+});
