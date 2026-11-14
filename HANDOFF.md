@@ -1,3 +1,18 @@
+## [2026-11-14 KST] main 9a2c9273 최종 LIVE 채점 검증 완료 — 추가 인수인계 10항
+
+1. **목표/확정:** 사용자 지시대로 29개 전수 GitHub 자동 증거점수와 작업자 보고율 동시표기. 각 제품 공식 최종설계 승인률/실사용 판매출시 지표와 분리.
+2. **수행/결정:** `main@9a2c927309e3fc0ef87e06fe184eaf17074a55f7`에서 승인 R01–R33 DATA2WEB 72점 재생성이 과거 code SHA 기준임을 명시(`HISTORICAL_APPROVED_RUBRIC_REPLAY`). 11/14 새 index에서 WORKNOVA 실제 Freelancer 상품 소스를 사용; 11/13 원본 불변. 403 허용된 진단·secondary일 때1회 재시도.
+3. **실제 테스트:** [Python test #43543295053](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43543295053) **62/62 PASS**, [정본 gate #43543295057](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43543295057) SUCCESS, [GitHub App LIVE #43543390987](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43543390987) **SUCCESS**·Hub snapshot UPDATED·readback 29 숫자/35 repo/80 refs/29 linked/16 worker/1 historical scorecard/pinned_current_head_verified0 확인.
+4. **완료/미완료:** 29종 GitHub 잠정 증거점수 자동동기화+Hub 상태 검증 **완료**, 공식 전체 요구사항 증빙은 DATA2WEB 과거 승인72·현재 코드 최신 검증 미완료, 기타28 `UNASSESSED`. 고객형 소유자 승인·법적/상용100·실제 크몽 게시 완료0; RELEASE HOLD 그대로. LIVE 동일 입력 NO_CHANGE는 독립 제품 HEAD 갱신 중 실증 미검증(단위테스트는 PASS).
+5. **원인/복구/한계:** 초기 일부 GitHub GET403이 있었지만 이후 같은 App 권한에서 SUCCESS; 근본 원인을 권한/일시 제한으로 단정 금지. 새 diagnostic은 비밀 없이 endpoint category만 남기고 secondary 1회만 재시도. 여러 동시 workflow_dispatch는 concurrency CANCELLED를 만들 수 있으므로 무의미 재시도/빈커밋 금지.
+6. **저장소/브랜치/SHA:** `hibi89/hackathon-command-center-2026@main@9a2c9273` 코드, `@kmong-productization` 새 현재 index `data/final_blueprint_product_index_current.json`·auto 관찰 `data/kmong_hub_auto_observations.json`·29 audit table. 최신 hub SHA는 doc 커밋 후 조회.
+7. **환경:** GitHub-hosted Python(정확 Actions run), Source App read-only+Hub GITHUB_TOKEN snapshot-only conditional write. Vercel/크몽 Production 미적용, 실기기·고객 데이터 전송·요금/권한 변화0.
+8. **원본/백업/보안:** 11/13 원본 index `data/final_blueprint_product_index_20261113.json` 유지, 기존 상품 기록/19서비스/작업중/등록완료/지원/가격/고객 SQLite·비밀 불변. 일반 Git revert 가능, force push 금지.
+9. **다음 절차/완료기준:** 장기간 안정성은 정상 다음 예약 sync와 동일 입력 no-change 확인; 추가 28상품의 진짜 최종완성률은 사용자 승인된 제품별 고정100점 REQ·구현/실제 테스트/권리·고객 acceptance 근거를 갖춘 뒤 독립 가중치 승인. FlowPilot Universal 별도 상품 소스 확인 대기; 무단 범위축소/0점 인증 금지.
+10. **시점/검증 범위:** 2026-11-14 KST. main 62 tests/정본 gate/9a2 LIVE App/hub 29 score exact readback까지 확인. 현재 DATA2WEB72는 **과거 승인 채점표 검증**, 현재 소스 HEAD 신규 전체검증이 아님.
+
+---
+
 ## [2026-11-14 KST] 해총 29종 자동 채점 LIVE 확인·WORKNOVA 정본 매핑·403 진단 개선 인수인계 (10항)
 
 1. **목표·사용자 승인·기술:** 사용자 `ㄱ` 지시로 해총 29 제품 GitHub 기반 수치 산정·반복 자동 갱신(기능 대체 성공 증거), 역사적 작업자 보고율+approved REQ 점수+공통 GitHub 근거점수 분리. Source Github App 35 repo Contents/Actions READ, 허브 JSON 한 경로만 WRITE.
