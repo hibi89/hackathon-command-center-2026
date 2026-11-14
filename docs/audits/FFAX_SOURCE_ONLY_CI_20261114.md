@@ -1,0 +1,18 @@
+# FFAX 검증/크몽 원장 동기화 — 2026-11-14 KST
+
+## 진척 증거와 범위
+- 제품: FFAX(React UI 제작), 후보 상품 단위 그대로 유지, 크몽 실제 등록 없음.
+- 소스: `hibi89/frontend-foundry-ax@feature/ffax-workbench-p85-20261112` 검증 기능 SHA `85e0980caf29ab72da17c50cf9351f4cd048ea06` / 상태·인수인계 문서 HEAD `e4693e444c8417bb3a67ddd51465319b21c8e2e5`.
+- [Actions 4/4 SUCCESS](https://github.com/hibi89/frontend-foundry-ax/actions/runs/43543877740), Linux Node113 PASS, Windows Node113 PASS, React 19 strict 12 synthetic fixtures PASS, localhost Chromium 3 widths with HTTP200/console/network clean, baseline Chromium30 PASS, axe-core 3 widths 0 serious/critical, contrast900 checks 0 failures, D1-D5 offline5 PASS, cleanroom7 PASS.
+- `ffax-owner-review-unreleased` 7-day GitHub CI artifact is **unsigned source-only preview**, not portable EXE, not commercial release, no client/AI weights. Downloaded artifact content and SHA file inspected and Linux localhost smoke verified; actual owner Windows GUI and model inference unverified.
+- `qwen3:4b-instruct` chosen as license-cleared Apache-2.0 local model, not distributed. `qwen2.5-coder:3b` commercially restricted tag blocked. No paid model API use and no permission/production changes.
+
+## Completion and hold
+- **기존 FFAX 독립 rubric**: AC01/02/03/05/06/07/08/10/11 = 78, AC12 2 (full clean CI, D1–D5/guide/log), AC04 0 (real model), AC09 0 (user final signoff) = **80/100 기술 잠정**.
+- **중앙 공식 최종설계 완성률** = **UNASSESSED**; GitHub evidence automation score is a separate objective metric, never reinterpret 80 as officially accepted percent. The official central 29 products and existing 16 active aggregates remain unchanged.
+- **판매/릴리스 조건:** AC04 actual Qwen local model test 12 scenarios, ≥10 real React19 type/build/render; AC09 owner 7-flow screen acceptance; RG06 user signoff; all original sources/rights/release gates verified. All must pass for 100/100.
+- 사용자 PC 설치/실기기/최종 화면 승인 사항은 **2026-11-14 13:00 KST FFAX 자동화 1회 안내**로 모음. 폰에서는 승인/검토만 가능.
+- No commits to FFAX main, no Vercel deployment, no secrets/client files, no paid platform setup. Do not mark as `등록완료` without actual Kmong proof.
+
+## Recovery/source of truth
+FFAX `HANDOFF.md` then `STATUS.md` then `AGENTS.md`/`REQUIREMENTS.md` and exact linked source. Original `main` and branch history protected, non-force ordinary revert per change. Central row above is a summary, not an alternative FFAX spec.
