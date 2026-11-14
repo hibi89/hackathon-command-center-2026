@@ -53,12 +53,12 @@
       "gate": {
         "conclusion": "success",
         "head_sha": "2c77ce68bbe8735c0b98facbe4df19709802497a",
-        "matches_current_head": true,
+        "matches_current_head": false,
         "run_id": 43536152779,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "2c77ce68bbe8735c0b98facbe4df19709802497a",
+      "head_sha": "2516ff76e3bab6e431c2b423d3112579f908c027",
       "record_id": "ACTIVE-05",
       "repository": "hibi89/data2web_studio",
       "status": "PRESENT",
@@ -247,13 +247,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "9a822c85923902bfce68b2c027cf5d85168816bd",
+        "head_sha": "7f3b791ce3d79ada0978caadfbcb6d4941f2f957",
         "matches_current_head": true,
-        "run_id": 43536504943,
+        "run_id": 43537158186,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "9a822c85923902bfce68b2c027cf5d85168816bd",
+      "head_sha": "7f3b791ce3d79ada0978caadfbcb6d4941f2f957",
       "record_id": "CANDIDATE-06",
       "repository": "hibi89/Freelancer",
       "status": "PRESENT",
@@ -615,12 +615,12 @@
           "gate": {
             "conclusion": "success",
             "head_sha": "2c77ce68bbe8735c0b98facbe4df19709802497a",
-            "matches_current_head": true,
+            "matches_current_head": false,
             "run_id": 43536152779,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "2c77ce68bbe8735c0b98facbe4df19709802497a",
+          "head_sha": "2516ff76e3bab6e431c2b423d3112579f908c027",
           "status": "PRESENT"
         },
         {
@@ -867,13 +867,13 @@
           "branch": "product/rag-enterprise-knowledge",
           "gate": {
             "conclusion": "success",
-            "head_sha": "9a822c85923902bfce68b2c027cf5d85168816bd",
+            "head_sha": "7f3b791ce3d79ada0978caadfbcb6d4941f2f957",
             "matches_current_head": true,
-            "run_id": 43536504943,
+            "run_id": 43537158186,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "9a822c85923902bfce68b2c027cf5d85168816bd",
+          "head_sha": "7f3b791ce3d79ada0978caadfbcb6d4941f2f957",
           "status": "PRESENT"
         },
         {
