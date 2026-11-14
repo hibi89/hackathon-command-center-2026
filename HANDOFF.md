@@ -1,3 +1,17 @@
+## [2026-11-15 KST] KMONG_SCHEDULE_90_VERCEL_BRIDGE_ACCESS_20261115 — 10-point handoff
+
+1. **Goal/tech:** fixed central 85 -> 90 -> 95 -> 100 evidence score; GitHub App source observer, native Action schedule, Vercel HMAC event bridge, hub collector, conditional JSON ledger.
+2. **Implementation/evidence:** no source/config change; second real native schedule discovered and log verified, score +5; Vercel event history located existing bridge project ID but active manager read inaccessible. No Production rollout.
+3. **Actual tests/runs:** native [#43590721340](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43590721340) and [#43625442971](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43625442971), same workflow 416801860, main `69e584e5`, job SUCCESS, Python 80/80 PASS each, collector UPDATED 35/80/29, 0 missing/fingerprint, official scores UNMODIFIED. Existing feature GitHub CI 121 PASS (not repeated).
+4. **Progress/blockers:** central provisional **90/100**; schedule 25/25, signed real HMAC webhook E2E 0/10; Production project metadata/logs and source App recent signed deliveries NOT_VERIFIED. Hourly scheduler timing not guaranteed.
+5. **Failure evidence/options:** team activity events identify bridge `prj_veZOkRkhMEMEA6h7PiEIl3IKcthn` but Vercel list/detail/alias/deployment APIs 404 or empty; no more identical retries. Recommend existing team owner reauthorization (consent needed) or owner dashboard verification; no new project/queue. Preview branch lacks runtime root, notices and recent ignored-build cancellations are not Production.
+6. **Repo/branch/SHA:** `hibi89/hackathon-command-center-2026`; runtime main `69e584e57a3a37fa72b406d62ccddf9eef9dfcf2`; isolated webhook candidate `9e7e756bd9f4f8dabd517bf327c1488961f3d7a9` (not merged); operating `kmong-productization` HEAD verify after audit commit. Ledger blob at inspection `910252a355b13352076e2c73fe8c2d4ed5e6f829`.
+7. **Production:** `https://kmong-hub-event-bridge.vercel.app/api/webhook` historical GET 200; this session could not re-read endpoint, production deployment SHA/protection/logs not freshly verified. Vercel team `hibi89`, project ID above; isolated branch undeployed.
+8. **Protection/backups:** no original snapshot, secrets, GitHub App privileges, cron, official product scores, registration, Production, Vercel configuration or main modified. Save operating parent SHA from new commit metadata; revert normally if needed. Never disclose PEM/secret.
+9. **Next gate/approvals:** obtain owner-authorized existing Vercel project visibility and GitHub App Recent Deliveries, then controlled real signed Ping/401/ignored/eligible push/central action and ledger E2E. Reauthorization, merge, Production deploy, secret/permission changes require explicit approval; do not count synthetic tests as signed live delivery.
+10. **Verification scope/time:** 2026-11-15 KST, GitHub REST, exact run/jobs/logs, ledger blob and Vercel account/team/activity and read failures; no live signed POST, no Production/browser console/API test this turn. Full audit [docs/audits/KMONG_NATIVE_SCHEDULE_90_AND_BRIDGE_ACCESS_20261115.md](docs/audits/KMONG_NATIVE_SCHEDULE_90_AND_BRIDGE_ACCESS_20261115.md). Recheck docs and committed SHA after writing.
+
+
 ## [2026-11-14 23:09 KST] KMONG central actual CI shared-deadline hardening — 10-point handoff
 
 1. **Goal/tech:** fixed central technical 85→95→100, webhook source GitHub HMAC→Vercel→central GitHub dispatch→collector→snapshot; protect original data and official scores.
