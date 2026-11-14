@@ -1,3 +1,16 @@
+## [2026-11-14 14:08+ KST] KMONG_BOT_HISTORY_FAIL_CLOSED_FIX — 운영 장애 정정 및 실 CI (필수 10항)
+
+1. **목표·확정 요구·기술:** 해총 35 repo/80 tracked ref/29 product 무료 GitHub App 읽기전용 수집기 유지하면서 신규 14:03 KST bot 실패 원인 교정. 보존 우선, API core reserve 450회, 모르는 실행이력은 scan 금지.
+2. **완료·결정 근거:** [main `2863165b06d407ba632f18ad7a85a7c98f1989af`](https://github.com/hibi89/hackathon-command-center-2026/commit/2863165b06d407ba632f18ad7a85a7c98f1989af)에서 `tools/kmong_hub_sync/quota_guard.py`가 현재 실행 ID 미발견(100건 제한 또는 eventual consistency)을 `None`→`DEFERRED_BOT_HISTORY_UNVERIFIED`로 안전 보류. 실제 직전 bot 있으면 `DEFERRED_BOT_BURST` 유지. A안: 페이지를 더 요청해 예산/시간 증가 vs B안: 무증명 상태 수집 보류(0원, 안전, 최소 변경) 중 B 채택. `test_quota_guard.py`에 미발견·가득 찬 100건·history 없음·위조 actor/event 4회귀 추가.
+3. **테스트·수/미검증:** GitHub 실제 [#43560075305](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43560075305) Python **80 PASS/0 FAIL**, [#43560075228](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43560075228) gate SUCCESS; 정확 코드 SHA `2863165b06d4`. 오류 재현 [#43559627772](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43559627772): preflight failure, scan skipped. 새 수정 코드 실제 webhook-triggered bot 재실행 **NOT_RUN**; scheduler `event=schedule` 총 0(14:08 이후 조회), 14:23 슬롯 미경과.
+4. **완료/진행/대기/차단:** missing-history 안전보류 코드·테스트 완료. 시간당 cron 실증 미완료; Vercel 서명된 웹훅 `queued/coalesced` E2E 미검증; Vercel 배포 건수 제한 해결 차단. 29제품/19 SKU·공식률·등록 이력·RELEASE HOLD 변동 없음.
+5. **오류 근거·원인·시도·대안:** 새 봇 #43559627772에서 정확 로그 `bot dispatch was not found among the latest 100 runs`; GitHub API 첫 페이지 누락/일관성 지연 두 설명 가능, 단일 원인 단정 금지. fail-open, 임의 API 연속 조회, 반복 워크플로 강제 호출 금지. 기존 11:55 UTC 전 bot 2건 `DEFERRED_BOT_BURST`와 13:30 KST `RUN UPDATED` 운영 증거 존재.
+6. **저장소·브랜치·SHA·경로:** `hibi89/hackathon-command-center-2026@main` 코드 `2863165b06d4`(부모 `80172145b6ba`), `kmong-productization` 점검 시 `9680eb7c5e82`; `tools/kmong_hub_sync/{quota_guard.py,test_quota_guard.py}`, `.github/workflows/kmong-hub-sync.yml`, `data/kmong_hub_auto_observations.json`. 문서 commit 이후 main HEAD 별도 readback 필요.
+7. **Production·환경:** GitHub hosted Ubuntu Python3·Source GitHub App 35 repo Contents/Actions READ/중앙 원장 WRITE만. Vercel `https://kmong-hub-event-bridge.vercel.app/api/webhook` 기존 URL, 연결 프로젝트 조회 404 / 배포 목록 403. Production SHA·이 신규 main 커밋 실제 배포 미확인. 무료 Hobby, 새 deploy/project/upgrade 없음.
+8. **원본·백업·비밀:** 복원 기준 main 부모 `80172145b6ba75fbed4244ffa672b57e6141bf8a`, 변경 파일 2개만, 원천 35 저장소·토큰·환경변수·권한·가중치·개별 완성률·판매 인수·고객 데이터 보존. commit Author/Committer `hibi89 <godls5898@gmail.com>` GitHub 계정 일치 확인.
+9. **다음 절차/완료 조건:** ①14:23 이후 GitHub `event=schedule` 첫 운영 실행 확인 및 실패/지연/누락 구별 ②새 bot `DEFERRED_BOT_HISTORY_UNVERIFIED` 또는 `RUN` 실제 확인, snapshot 최신 HEAD 검증(13:30 snapshot 이후 DATA2WEB·DBVORA·FFAX 변경) ③ signed webhook 2건 실제 서비스 응답/Actions 억제 종단 ④Vercel 연결된 올바른 프로젝트 접근 확인 시 quota skip 정책만 검토. 사용자 PC/유료/보안 설정은 승인 전 변경 금지.
+10. **갱신 시각·범위·문서 기준:** 2026-11-14 14:08+ KST. 원격 GitHub code commit·2개 실제 CI·로그·원장 readback·Vercel connector 오류까지 확인, 예약 live/웹훅 수신/Vercel 실제 새 Production 브라우저는 **미검증**. 본 문서 커밋 SHA는 GitHub 원격 readback을 기준으로 후속 확정.
+
 ## [2026-11-14 KST] 29종 GitHub 정량 증거 확보점수 전수 산정 신규 구현 — 필수 10항
 
 1. **목표·용도·확정 요구:** 해총 29종 전부 확인 가능한 숫자를 제시하라는 사용자 지시. 작업자 공시율과 별개로 GitHub 증거 확보율을 동일100점 잠정 지표로 자동 계산. 각 제품 최종설계 공식 채점은 기존 승인 가중치 없으면 `UNASSESSED` 유지.
