@@ -58,6 +58,18 @@ class EvidenceScoreTests(unittest.TestCase):
         self.assertEqual(len(entries),29)
         self.assertIn("ACTIVE-05",entries)
         self.assertIn("CANDIDATE-12",entries)
+    def test_astra_tracks_active_commercial_branch(self):
+        entries, _, _ = fixture()
+        astra = entries["ACTIVE-13"]
+        source_ref = "feature/astra-p71-pdf-source-parity-20261112"
+        self.assertEqual(astra["blueprint"]["branch"], source_ref)
+        self.assertEqual(astra["source"]["branch"], source_ref)
+        self.assertEqual(astra["ci"]["branch"], source_ref)
+        self.assertEqual(astra["ci"]["run_id"], 43544304096)
+        self.assertEqual(astra["ci"]["head_sha"], "cabe0adf79a3724066c367ac7cbdb3955bbc113a")
+        self.assertFalse(astra["real_buyer_acceptance"])
+        self.assertFalse(astra["rights_and_sale_approved"])
+
     def test_reject_unapproved_repo(self):
         with self.assertRaises(ValueError):
             _safe_artifact({"repo":"outsider/source","branch":"main","path":"x.py"},{"hibi89/hae"})

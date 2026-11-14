@@ -290,12 +290,12 @@
       "record_id": "ACTIVE-13",
       "blueprint": {
         "repo": "hibi89/astra_pdf_redesigner",
-        "branch": "integration/astra-commercial-core",
+        "branch": "feature/astra-p71-pdf-source-parity-20261112",
         "path": "REQUIREMENTS.md"
       },
       "source": {
         "repo": "hibi89/astra_pdf_redesigner",
-        "branch": "integration/astra-commercial-core",
+        "branch": "feature/astra-p71-pdf-source-parity-20261112",
         "path": "src/App.tsx"
       },
       "scoped_tests_documented": true,
@@ -303,13 +303,13 @@
       "negative_test_ci_evidence": false,
       "ci": {
         "repo": "hibi89/astra_pdf_redesigner",
-        "run_id": 40856599632,
-        "head_sha": "db461dc77dd721d1234d1506d6c62705486b9460",
-        "branch": "integration/astra-commercial-core"
+        "run_id": 43544304096,
+        "head_sha": "cabe0adf79a3724066c367ac7cbdb3955bbc113a",
+        "branch": "feature/astra-p71-pdf-source-parity-20261112"
       },
       "real_buyer_acceptance": false,
       "rights_and_sale_approved": false,
-      "provenance": "GitHub HANDOFF/STATUS and exact run metadata reviewed 2026-11-14 KST"
+      "provenance": "2026-11-14 KST: commercial P90 development branch is 66 commits ahead of integration, no behind commits. P89 exact-SHA Windows NSIS/upgrade Actions #43544304096 completed success; P89 Chrome/Edge #43544304090 completed success independently. No inference of full P90/current HEAD validation, customer PC acceptance, 30 permanent templates, OCR, model rights or sales GO."
     },
     {
       "record_id": "ACTIVE-14",
