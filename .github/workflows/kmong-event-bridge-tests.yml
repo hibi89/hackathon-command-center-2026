@@ -4,6 +4,7 @@ on:
     branches:
       - main
       - feature/kmong-realtime-webhook-20261113
+      - feature/kmong-webhook-bounded-ingress-20261114
     paths:
       - 'services/kmong-event-bridge/**'
       - 'tools/kmong_hub_sync/source_repositories.json'
