@@ -1,3 +1,15 @@
+## [2026-11-14 22:07+ KST] KMONG 중앙 잠정 85/100 실증 인수인계 — 10항
+
+1. **목표·요구·기술:** 중앙 자동 수집/증거 원장을 사용자 목표 85/100까지 실증. 기존 native GitHub schedule + bot dispatcher, read-only source App, central-only conditional snapshot write 유지. 본 점수는 중앙 **잠정 기술검증**이며 제품 공식 최종설계 점수와 구별.
+2. **완료·근거:** Production 공개 GET + 배포 런타임 parity 5점 신규 인정. 배포 Git source SHA `2863165b06d407ba632f18ad7a85a7c98f1989af`; 현행 main `69e584e57a3a37fa72b406d62ccddf9eef9dfcf2`와 비교하면 1커밋, 변경 HANDOFF.md/STATUS.md 문서 2건만. **문자 SHA 동일은 아니나 실행 코드 동일**. 80→**85/100**(중앙 잠정; 제품 공식 점수 변경 없음).
+3. **테스트 수·성공/실패·미검증:** 실제 Runner 재실행 [#43552676737 attempt2](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43552676737) job `132456875221` completed SUCCESS, GET HTTP200 ready coalesce-v1 source_sha=2863165b, Node28/28 PASS, Python77/77 PASS. 중앙 native schedule #43590721340 Python80/80 PASS; 최근 bot #43595179136 Python80/80 PASS. 서명된 webhook 종단 E2E/브라우저/실배포 상세 미검증.
+4. **완료·진행·대기·중단:** 중앙 기술 85점 목표 도달(잠정). 대기 15점: native schedule 반복 독립 성공 5점, 실제 서명 webhook push→dispatch→hub→원장 10점. GitHub event=schedule total_count=1, 두 번째 미검증. Production GET이 성공해도 기능 전체 성공은 아님.
+5. **오류·원인·시도·대안:** 기존 Production probe READY_SHA_NOT_MATCHED는 과거 CI SHA `80172145` 대비 차이. 원격 compare로 runtime parity 확인. 두 번째 GitHub scheduler 이벤트 미생성 원인 미확정; A 기존 bot/cron 유지 후 반복 실증(추천), B 근거·승인 후 cron 재등록, C 영속 큐(비용/복잡성 증가, 별도 승인). 무의미한 cron 수정·강제 rerun 반복 금지.
+6. **저장소·브랜치·SHA·경로:** `hibi89/hackathon-command-center-2026`, default `main@69e584e57a3a37fa72b406d62ccddf9eef9dfcf2`, 운영 `kmong-productization` 진행 중 문서 커밋. 핵심 `services/kmong-event-bridge`, `tools/kmong_hub_sync`, `data/kmong_hub_auto_observations.json`. [증거 문서](docs/audits/KMONG_CENTRAL_85_RUNTIME_PARITY_20261114.md).
+7. **Production·Vercel·실행 환경:** URL `https://kmong-hub-event-bridge.vercel.app/api/webhook`; GitHub Actions ubuntu runner GET 검증. 연결된 Vercel 개인/hibi89 team에 bridge 프로젝트가 표시되지 않아 대시보드 Ready·alias 소유권·서명된 POST는 미검증. 문서-only main 1커밋은 런타임 delta 없음.
+8. **원본·백업·비밀:** 원래 운영 HEAD `a6adb0cfd6e6dd021f3a362ed390f0af9f062d13`(감사 문서 작성 직전). 이후 감사 파일+STATUS만 문서 변경. 원장 blob `42ae62ff42b865e5ad544c3ad400c1dde6679059`, source repos, GitHub secrets, 토큰/PEM, 원본 데이터, 제품 공식 점수/등록완료, Vercel, GitHub cron과 보안 권한 모두 변경하지 않음. 복구 시 정상 revert 사용.
+9. **다음 작업 우선순위·완료 기준·승인:** 다음 독립 `event=schedule` 성공과 원장 UPDATED/NO_CHANGE·80 테스트 확인 → 잔여5점. 2개의 실제 signed GitHub delivery + bot coalescing + 신규 Actions run SUCCESS와 원장 readback → E2E10점. 권한/비밀·Vercel 프로젝트 조작·유료 서비스는 명시 승인 필요.
+10. **갱신 시점·검증 범위:** 2026-11-14 22:07 KST 이후 GitHub 원격 REST run/jobs/log/commit compare, Vercel Public GET via GitHub Actions; Vercel 대시보드/실서명 webhook/브라우저는 미검증. 문서 SHA 및 최종 운영 HEAD는 원격 재확인 후 확정.
 ## [2026-11-14 19:43+ KST] KMONG_1940_NATIVE_CRON_ZERO_BOT_UPDATED — 10항 인수인계
 
 1. **목표·확정 요구·기술:** 3 해커톤/크몽 중앙 GitHub App source observer 35/80/29 유지, 19:23 GitHub native cron 실증, 4 core product exact HEAD/CI 확인, 모바일 독립 검증.
