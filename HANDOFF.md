@@ -1,3 +1,16 @@
+## [2026-11-14 KST] WORKNOVA Desk 무인 자동 소스 QA 우선 전환 — 중앙 인수인계 10항
+
+1. **목표/용도/승인기술:** Windows 오프라인 견적→계약→납품/수금 Tk/SQLite EXE, 사용자 승인 WD01~14 총100점 중 완전 고객수용85점 목표.
+2. **완료·변경·선택:** 사용자 수차례 PC 실 Windows 수동 검증으로 EXE 빌드·MZ/SHA/GUI·가짜 거래처 DB 영속/재기동 확인. 4차 EXE `ExitCode:0` 추가, 견적 결과 DB 근거는 없음. 사용자 반복 수동 테스트 부담 지적을 받아 **Python 소스 코어 자동 unittest 2종** 추가. A: 격리 Python unittest(무료·고객자료0) 우선, B: Windows Actions(private 사용량·요금·dispatch 미확인) 보류, C: User PC 수동 UI는 최종 필요한 최소 단계.
+3. **테스트/검증/미검증:** `tests/test_unattended_business_lifecycle.py`: 합성 quote→approve→contract→deliver→accept→collect, duplicate/overpay reject, audit, sqlite reopen. Git blob `4df97d19a5bcacc203babff5136dc2fc48b40fac` 본 런타임 임시 파일과 일치 및 `ast.parse PASS`. **제품 원본 전체 비공개 repo 실행 런타임 미제공으로 실제 unittest 2종/전체 CI NOT_RUN**. 기존 사용자 4차 EXE exit0, GUI 견적 신규 행 미확인.
+4. **완료·진행·대기:** 소스 테스트코드 생성과 정적문법 검증 완료; 실제 소스 전체/Win 자동 실행/OS ACL·DB 암호화·서명/Defender·법무/실고객/라이선스 미검증. 전체100점 공식 완전 수용 **0/100(구현률0 아님), 85 미달, [작업중]/RELEASE HOLD/판매 미등록**.
+5. **오류근거·재시도 금지·대안:** 이전 ZIP 중첩 경로·PyInstaller user-site 차단 해결. 무인 unittest 실행 인프라 부족을 기능 실패로 단정하지 않음. 형에게 일일이 버튼 클릭 요청하지 말 것. 유료 Windows Actions/기존 프로덕션/OS정책 변경 사전 승인.
+6. **저장소·브랜치·SHA·경로:** 제품 `hibi89/Freelancer@product/worknova-desk-local e85af93674321ec50f300805e170657261c07f4b`, 신규 `tests/test_unattended_business_lifecycle.py`, `docs/P85_UNATTENDED_QA_STRATEGY_20261114.md`. 중앙 감사표 `docs/audits/KMONG_16_CURRENT_20261111.md` 1행 갱신 commit `23304f906b647d6baf4c814eec3a2d857550aa74`.
+7. **Production URL/실행 환경:** Vercel/웹 Prod N/A, 사용자 PC TEMP의 onedir unsigned EXE 실검증. 현 개발 호스트 Python3.13.5·Xvfb 있으나 비공개 repo 전체 체크아웃 없음; 테스트 실행 가능 시 `PYTHONPATH=. python -m unittest discover -s tests -v`.
+8. **원본·백업·인증/금지:** 기존 고객 SQLite/백업, 기본 OS LOCALAPPDATA/Windows 보안 정책, 원본 PayPal·Freelancer main/타 크몽 상품·등록완료 이력 불변. 테스트는 새 TEMP 합성 DB만, 유료 API·개인정보 GitHub 업로드 없음.
+9. **다음 우선순위·완료 기준/승인:** 개발자 원본 소스가 있는 격리 환경에서 신규 무인 unittest 실행/로그·실패 원인 확인→필요한 최소 수정. 저비용 Windows 자동 runner는 사용한도/권한 확인 후에만. 고객 실제 자료·서명/OS 보안 정책/판매는 별도 승인. 사용자 승인 WD항목 완전 PASS 합 >=85일 때만 달성.
+10. **갱신 일시 KST/확인시점/검증 범위:** 2026-11-14 KST, 신규 테스트 SHA 소스 동일+Python 문법만 정적 PASS, 사용자 4차 EXE ExitCode0/견적 증빙 불충분. 중앙 최종 HEAD 문서 commit 후 재확인.
+
 ## [2026-11-14 KST] GPT-only 크몽 최종 100/디자인/등록 운영 원칙 인수인계 (10항)
 
 1. **목표·기술·확정 요구:** 사용자 지시대로 GPT 계열만 사용한 최종설계 100점 개발/검수/디자인/상품화/크몽 자동 등록 보조. 신규 담당 작업에서 Fable 등 비-GPT 제외. 원천29와 크몽 서비스19, 내부 플랫폼은 기존 정본 보존.
