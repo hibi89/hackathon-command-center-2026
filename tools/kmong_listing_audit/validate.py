@@ -5,10 +5,12 @@ Keep product repository branches and official completion separate from listing s
 The lone confirmed naming alias is intentional, not a fuzzy string match.
 """
 from collections import Counter
+from datetime import date
 from pathlib import Path
 import json
 import re
 import sys
+from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parents[2]
 CATALOG = ROOT / "data/kmong_service_catalog_20261113.json"
@@ -29,6 +31,43 @@ def require(ok, message):
 def canonical_source(name):
     require(isinstance(name, str) and bool(name.strip()), "missing source product")
     return ALIASES.get(name, name)
+
+
+def valid_kmong_url(value):
+    """Accept explicit official Kmong HTTPS URLs, never external redirects/hosts."""
+    if not isinstance(value, str) or value != value.strip():
+        return False
+    parts = urlsplit(value)
+    return (parts.scheme == "https" and
+            parts.netloc.lower() in {"kmong.com", "www.kmong.com"} and
+            parts.path not in {"", "/"})
+
+
+def valid_publication_date(value):
+    """KST calendar date in a canonical YYYY-MM-DD representation."""
+    if not isinstance(value, str) or not re.fullmatch(r"\\d{4}-\\d{2}-\\d{2}", value):
+        return False
+    try:
+        return date.fromisoformat(value).isoformat() == value
+    except ValueError:
+        return False
+
+
+def registration_events(history):
+    """Validate history shape; proof fields are necessary, not independent authenticity."""
+    events = []
+    for event in history:
+        require(isinstance(event, dict), "listing history must contain event objects")
+        name = event.get("event", event.get("status"))
+        if name != "등록완료":
+            continue
+        require(valid_kmong_url(event.get("kmong_listing_url")) and
+                valid_publication_date(event.get("published_at_kst")) and
+                isinstance(event.get("evidence"), str) and
+                bool(event["evidence"].strip()),
+                "registered history needs official URL, KST date and evidence reference")
+        events.append(event)
+    return events
 
 
 def validate(catalog, index):
@@ -76,15 +115,26 @@ def validate(catalog, index):
         history = service.get("listing_history")
         require(isinstance(history, list), "listing history must be retained as list")
         url, published = service.get("kmong_listing_url"), service.get("published_at_kst")
-        if status == "미등록" and not history:
-            require(url is None and published is None,
-                    "unregistered listing has unproven URL or publication date")
-        if status != "미등록":
+        registered_events = registration_events(history)
+        if status == "미등록":
+            require(not registered_events, "previously published listing cannot be reset to unregistered")
+            if not history:
+                require(url is None and published is None,
+                        "unregistered listing has unproven URL or publication date")
+        else:
             require(bool(history), "non-unregistered listing lacks lifecycle evidence")
         if status == "등록완료":
-            require(isinstance(url, str) and url.startswith("https://") and
-                    isinstance(published, str) and bool(published),
-                    "registered listing requires URL, date and history")
+            require(bool(registered_events), "registered listing needs a verified-history reference")
+            last = registered_events[-1]
+            require(valid_kmong_url(url) and valid_publication_date(published) and
+                    url == last["kmong_listing_url"] and
+                    published == last["published_at_kst"],
+                    "registered listing URL/date must match last historical registration")
+        elif url is not None or published is not None:
+            require(bool(registered_events) and
+                    url == registered_events[-1]["kmong_listing_url"] and
+                    published == registered_events[-1]["published_at_kst"],
+                    "inactive listing URL/date must match last registered event")
 
         for name in sources:
             name = canonical_source(name)
@@ -131,12 +181,8 @@ def validate(catalog, index):
             "listing state schema changed")
     # Registration is a durable historical fact even if a listing is later hidden,
     # suspended, or removed. Never reduce the tally to currently active listings.
-    has_registration_proof = lambda s: (s["listing_status"] == "등록완료" or any(
-        isinstance(event, dict) and
-        (event.get("event") == "등록완료" or event.get("status") == "등록완료")
-        for event in s["listing_history"]))
     require(lifecycle.get("verified_registered_count") ==
-            sum(has_registration_proof(s) for s in services),
+            sum(bool(registration_events(s["listing_history"])) for s in services),
             "verified registration count must preserve historical completions")
 
     # Cross-validate official score *summary*, without authorizing a score change.

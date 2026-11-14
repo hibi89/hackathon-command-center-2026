@@ -73,7 +73,9 @@ class ListingGateTests(unittest.TestCase):
             listing_status="판매중지",
             kmong_listing_url=None,
             published_at_kst=None,
-            listing_history=[{"status": "등록완료", "evidence": "verified archive"},
+            listing_history=[{"status": "등록완료", "evidence": "verified archive",
+                              "kmong_listing_url": "https://kmong.com/gig/archive",
+                              "published_at_kst": "2026-11-12"},
                              {"status": "판매중지", "evidence": "owner decision"}],
         )
         c["listing_lifecycle"]["verified_registered_count"] = 1
@@ -83,10 +85,72 @@ class ListingGateTests(unittest.TestCase):
         def change(c, i):
             c["ranked_services"][0].update(
                 listing_status="판매중지",
-                listing_history=[{"event": "등록완료", "evidence": "archive"}],
+                listing_history=[{"event": "등록완료", "evidence": "archive",
+                                  "kmong_listing_url": "https://kmong.com/gig/archive",
+                                  "published_at_kst": "2026-11-12"}],
             )
             # Illegal: old count remains zero after an actual previous registration.
         self.check_reject(change)
+
+    def test_fake_registered_event_without_url_and_date_rejected(self):
+        def change(c, i):
+            c["ranked_services"][0].update(
+                listing_status="판매중지",
+                listing_history=[{"event": "등록완료", "evidence": "unchecked"}],
+            )
+            c["listing_lifecycle"]["verified_registered_count"] = 1
+        self.check_reject(change)
+
+    def test_wrong_host_in_registration_history_rejected(self):
+        def change(c, i):
+            c["ranked_services"][0].update(
+                listing_status="판매중지",
+                listing_history=[{"event": "등록완료", "evidence": "owner record",
+                                  "kmong_listing_url": "https://kmong.com.evil.test/gig/123",
+                                  "published_at_kst": "2026-11-12"}],
+            )
+            c["listing_lifecycle"]["verified_registered_count"] = 1
+        self.check_reject(change)
+
+    def test_invalid_registration_calendar_date_rejected(self):
+        def change(c, i):
+            c["ranked_services"][0].update(
+                listing_status="판매중지",
+                listing_history=[{"event": "등록완료", "evidence": "owner record",
+                                  "kmong_listing_url": "https://kmong.com/gig/123",
+                                  "published_at_kst": "2026-02-30"}],
+            )
+            c["listing_lifecycle"]["verified_registered_count"] = 1
+        self.check_reject(change)
+
+    def test_registered_listing_mismatched_history_url_rejected(self):
+        def change(c, i):
+            c["ranked_services"][0].update(
+                listing_status="등록완료",
+                kmong_listing_url="https://kmong.com/gig/123",
+                published_at_kst="2026-11-14",
+                listing_history=[{"event": "등록완료", "evidence": "owner record",
+                                  "kmong_listing_url": "https://kmong.com/gig/456",
+                                  "published_at_kst": "2026-11-14"}],
+            )
+            c["listing_lifecycle"]["verified_registered_count"] = 1
+        self.check_reject(change)
+
+    def test_old_registration_cannot_be_reset_to_unregistered(self):
+        def change(c, i):
+            c["ranked_services"][0].update(
+                listing_status="미등록",
+                listing_history=[{"event": "등록완료", "evidence": "owner record",
+                                  "kmong_listing_url": "https://kmong.com/gig/123",
+                                  "published_at_kst": "2026-11-14"}],
+            )
+            c["listing_lifecycle"]["verified_registered_count"] = 1
+        self.check_reject(change)
+
+    def test_non_dict_registration_event_rejected(self):
+        self.check_reject(lambda c, i: c["ranked_services"][0].update(
+            listing_history=["등록완료"],
+            listing_status="판매중지"))
 
     def test_future_real_listing_with_evidence_is_accepted(self):
         c = copy.deepcopy(self.catalog)
@@ -94,7 +158,9 @@ class ListingGateTests(unittest.TestCase):
             listing_status="등록완료",
             kmong_listing_url="https://kmong.com/gig/evidence",
             published_at_kst="2026-11-14",
-            listing_history=[{"event": "등록완료", "evidence": "owner-verified"}],
+            listing_history=[{"event": "등록완료", "evidence": "owner-verified",
+                              "kmong_listing_url": "https://kmong.com/gig/evidence",
+                              "published_at_kst": "2026-11-14"}],
         )
         c["listing_lifecycle"]["verified_registered_count"] = 1
         self.assertEqual(len(validate(c, self.index)), 29)
