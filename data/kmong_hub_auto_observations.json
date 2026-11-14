@@ -338,15 +338,18 @@
       },
       "head_sha": "02ef2b5d7cac5a09aec04bd479147ca0059a07fe",
       "machine_evidence_score": {
+        "current_head_sha": "02ef2b5d7cac5a09aec04bd479147ca0059a07fe",
         "denominator": 100,
         "limitations": "Historical approved item classifications; no fresh item-by-item CI, real-customer, rights or retail acceptance",
         "percent": 72,
         "provenance": "approved fixed scorecard blob + completed successful exact-SHA baseline Actions run",
+        "reason": "Approved fixed scorecard was verified at an earlier code SHA; current product HEAD requires fresh per-requirement regression.",
         "release_authorized": false,
         "scorecard_blob_sha": "79c08ce8fe9b9c9b34a82373e5e04d1785e409a2",
+        "source_is_current_head": false,
         "source_run_id": 43509224663,
         "source_sha": "23a2d1293755294a58a20b98dc34e229a1e54f82",
-        "status": "PINNED_APPROVED_RUBRIC_REPLAY"
+        "status": "HISTORICAL_APPROVED_RUBRIC_REPLAY"
       },
       "provisional_evidence_readiness": {
         "commercial_release_authorized": false,
@@ -834,13 +837,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "0af15a92a853c5c9038d8c6bfb9498a2a543fee6",
+        "head_sha": "eab26716e25e8c55b120d295110be2f754b6aa5e",
         "matches_current_head": true,
-        "run_id": 43542849921,
+        "run_id": 43543367692,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "0af15a92a853c5c9038d8c6bfb9498a2a543fee6",
+      "head_sha": "eab26716e25e8c55b120d295110be2f754b6aa5e",
       "machine_evidence_score": {
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
@@ -868,14 +871,14 @@
           "blueprint": {
             "branch": "feature/p0-db-map",
             "git_blob_sha": "8e8e61f30c504fa5fe0acbaa6c85047801e921d6",
-            "head_sha": "0af15a92a853c5c9038d8c6bfb9498a2a543fee6",
+            "head_sha": "eab26716e25e8c55b120d295110be2f754b6aa5e",
             "path": "REQUIREMENTS.md",
             "repository": "hibi89/DBVORA"
           },
           "implementation": {
             "branch": "feature/p0-db-map",
             "git_blob_sha": "81338d4c4a64d2afa36e6619f39c469e0863289f",
-            "head_sha": "0af15a92a853c5c9038d8c6bfb9498a2a543fee6",
+            "head_sha": "eab26716e25e8c55b120d295110be2f754b6aa5e",
             "path": "dbvora/api.py",
             "repository": "hibi89/DBVORA"
           }
@@ -2723,13 +2726,13 @@
           "branch": "feature/p0-db-map",
           "gate": {
             "conclusion": "success",
-            "head_sha": "0af15a92a853c5c9038d8c6bfb9498a2a543fee6",
+            "head_sha": "eab26716e25e8c55b120d295110be2f754b6aa5e",
             "matches_current_head": true,
-            "run_id": 43542849921,
+            "run_id": 43543367692,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "0af15a92a853c5c9038d8c6bfb9498a2a543fee6",
+          "head_sha": "eab26716e25e8c55b120d295110be2f754b6aa5e",
           "status": "PRESENT"
         }
       ]
@@ -3015,12 +3018,12 @@
       "main": {
         "branch": "main",
         "gate": {
-          "conclusion": null,
+          "conclusion": "success",
           "head_sha": "9a2c927309e3fc0ef87e06fe184eaf17074a55f7",
           "matches_current_head": true,
           "run_id": 43543295057,
           "status": "LATEST_RUN",
-          "workflow_status": "in_progress"
+          "workflow_status": "completed"
         },
         "head_sha": "9a2c927309e3fc0ef87e06fe184eaf17074a55f7",
         "status": "PRESENT"
@@ -3590,6 +3593,7 @@
     "canonical_matched": 31,
     "canonical_not_configured": 4,
     "historical_worker_reports": 16,
+    "pinned_rubrics_current_head_verified": 0,
     "pinned_rubrics_replayed": 1,
     "product_links": 29,
     "product_refs_missing": 0,
