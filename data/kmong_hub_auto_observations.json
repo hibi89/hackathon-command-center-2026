@@ -1548,14 +1548,14 @@
     },
     {
       "gate": {
-        "conclusion": "success",
-        "head_sha": "f6958662cf64bb4e6d958edce3553ed28aaee56b",
+        "conclusion": null,
+        "head_sha": "3d1b1378f4cd5c25bc51d54d117030a4aa76099f",
         "matches_current_head": true,
-        "run_id": 43541929028,
+        "run_id": 43542107653,
         "status": "LATEST_RUN",
-        "workflow_status": "completed"
+        "workflow_status": "in_progress"
       },
-      "head_sha": "f6958662cf64bb4e6d958edce3553ed28aaee56b",
+      "head_sha": "3d1b1378f4cd5c25bc51d54d117030a4aa76099f",
       "machine_evidence_score": {
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
@@ -1583,14 +1583,14 @@
           "blueprint": {
             "branch": "feature/ffax-workbench-p85-20261112",
             "git_blob_sha": "a3ee7772c18d948aec1baf2c8fdc5a442c28e03c",
-            "head_sha": "f6958662cf64bb4e6d958edce3553ed28aaee56b",
+            "head_sha": "3d1b1378f4cd5c25bc51d54d117030a4aa76099f",
             "path": "docs/ACCEPTANCE_MATRIX.md",
             "repository": "hibi89/frontend-foundry-ax"
           },
           "implementation": {
             "branch": "feature/ffax-workbench-p85-20261112",
             "git_blob_sha": "9a15cb846a430c296a23faf7ee5f751fc912b78d",
-            "head_sha": "f6958662cf64bb4e6d958edce3553ed28aaee56b",
+            "head_sha": "3d1b1378f4cd5c25bc51d54d117030a4aa76099f",
             "path": "src/core.mjs",
             "repository": "hibi89/frontend-foundry-ax"
           }
@@ -2467,7 +2467,7 @@
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "2e065db757dc0c4a60e281d12dcb844a08b45012",
+          "head_sha": "50f9a05745cad303219cd3e55e088d856ccea157",
           "status": "PRESENT"
         },
         {
@@ -2963,14 +2963,14 @@
         {
           "branch": "feature/ffax-workbench-p85-20261112",
           "gate": {
-            "conclusion": "success",
-            "head_sha": "f6958662cf64bb4e6d958edce3553ed28aaee56b",
+            "conclusion": null,
+            "head_sha": "3d1b1378f4cd5c25bc51d54d117030a4aa76099f",
             "matches_current_head": true,
-            "run_id": 43541929028,
+            "run_id": 43542107653,
             "status": "LATEST_RUN",
-            "workflow_status": "completed"
+            "workflow_status": "in_progress"
           },
-          "head_sha": "f6958662cf64bb4e6d958edce3553ed28aaee56b",
+          "head_sha": "3d1b1378f4cd5c25bc51d54d117030a4aa76099f",
           "status": "PRESENT"
         }
       ]
