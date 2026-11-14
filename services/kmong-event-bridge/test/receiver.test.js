@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { createHmac, createPrivateKey, createPublicKey, createVerify, generateKeyPairSync } from "node:crypto";
 import { readFileSync } from "node:fs";
 import roster from "../source_repositories.json" with { type: "json" };
-import { HUB_REPO, verifySignature, eligibleEvent, signAppJwt, health, receiveWebhook, dispatchCentral } from "../lib/receiver.js";
+import { HUB_REPO, verifySignature, eligibleEvent, signAppJwt, health, receiveWebhook, dispatchCentral, shouldCoalesceDispatch } from "../lib/receiver.js";
 
 const SOURCE = roster.repositories.find((r) => r.repository.toLowerCase() !== HUB_REPO.toLowerCase() && r.branches.length > 0);
 const HUB = roster.repositories.find((r) => r.repository.toLowerCase() === HUB_REPO.toLowerCase());
@@ -46,13 +46,13 @@ function mockGitHub(overrides = {}) {
   const result = async (url, init) => {
     requests.push({ url, init, body: init?.body && JSON.parse(init.body) });
     counter += 1;
-    const code = overrides.errorAt === counter ? 403 : counter === 3 ? 204 : counter === 2 ? 201 : 200;
+    const code = overrides.errorAt === counter ? 403 : counter === 4 ? 204 : counter === 2 ? 201 : 200;
     const body = counter === 1 ? { id: 222222 } :
       counter === 2 ? {
         token: "fake-one-hour-token",
         repositories: [{ full_name: HUB_REPO }],
         permissions: { actions: overrides.actions || "write" },
-      } : null;
+      } : counter === 3 ? { workflow_runs: overrides.workflowRuns ?? [] } : null;
     return new Response(body === null ? null : JSON.stringify(body), {
       status: code, headers: body ? { "content-type": "application/json" } : {},
     });
@@ -194,12 +194,13 @@ test("signed tracked push queues one hub-only Actions dispatch", async () => {
   const response = await receiveWebhook(incoming("push", payload()), env, result);
   assert.equal(response.status, 202);
   assert.equal((await response.json()).status, "queued");
-  assert.equal(requests.length, 3);
+  assert.equal(requests.length, 4);
   assert.equal(requests[0].url, "https://api.github.com/repos/" + HUB_REPO + "/installation");
   assert.equal(requests[1].body.repositories.length, 1);
   assert.deepEqual(requests[1].body.permissions, { actions: "write" });
-  assert.equal(requests[2].url, "https://api.github.com/repos/" + HUB_REPO + "/actions/workflows/kmong-hub-sync.yml/dispatches");
-  assert.deepEqual(requests[2].body, { ref: "main", inputs: { dry_run: "false" } });
+  assert.equal(requests[2].url, "https://api.github.com/repos/" + HUB_REPO + "/actions/workflows/kmong-hub-sync.yml/runs?event=workflow_dispatch&per_page=30");
+  assert.equal(requests[3].url, "https://api.github.com/repos/" + HUB_REPO + "/actions/workflows/kmong-hub-sync.yml/dispatches");
+  assert.deepEqual(requests[3].body, { ref: "main", inputs: { dry_run: "false" } });
 });
 test("API failure is surfaced and does not claim queue success", async () => {
   const { result, requests } = mockGitHub({ errorAt: 3 });
@@ -219,4 +220,58 @@ test("serverless body cap rejects payload before GitHub API calls", async () => 
   const response = await receiveWebhook(request, env, result);
   assert.equal(response.status, 413);
   assert.equal(requests.length, 0);
+});
+
+test("recent bot workflow dispatch coalesces before POST without storing private data", async () => {
+  const recent = [{ event: "workflow_dispatch", actor: { login: "kmong-hub-dispatcher[bot]" },
+    conclusion: "success", created_at: new Date().toISOString() }];
+  const { result, requests } = mockGitHub({ workflowRuns: recent });
+  const response = await receiveWebhook(incoming("push", payload()), env, result);
+  assert.equal(response.status, 202);
+  assert.equal((await response.json()).status, "coalesced");
+  assert.equal(requests.length, 3);
+  assert.equal(requests.some((r) => r.url.endsWith("/dispatches")), false);
+});
+
+test("other actor and cancelled bot runs cannot suppress an eligible event", async () => {
+  for (const run of [
+    { event: "workflow_dispatch", actor: { login: "hibi89" }, created_at: new Date().toISOString() },
+    { event: "workflow_dispatch", actor: { login: "kmong-hub-dispatcher[bot]" },
+      conclusion: "cancelled", created_at: new Date().toISOString() },
+  ]) {
+    const { result, requests } = mockGitHub({ workflowRuns: [run] });
+    const response = await receiveWebhook(incoming("push", payload()), env, result);
+    assert.equal((await response.json()).status, "queued");
+    assert.equal(requests.length, 4);
+  }
+});
+
+test("fixed 30-minute UTC buckets match the existing collector burst guard", () => {
+  const nowMs = Date.parse("2026-11-14T03:01:00Z");
+  const bot = (date) => ({ event: "workflow_dispatch", actor: { login: "kmong-hub-dispatcher[bot]" },
+    created_at: date });
+  assert.equal(shouldCoalesceDispatch({ workflow_runs: [bot("2026-11-14T03:00:00Z")] }, nowMs), true);
+  assert.equal(shouldCoalesceDispatch({ workflow_runs: [bot("2026-11-14T02:59:59Z")] }, nowMs), false);
+  assert.equal(shouldCoalesceDispatch({ workflow_runs: [] }, nowMs), false);
+  assert.throws(() => shouldCoalesceDispatch({ workflow_runs: "unexpected" }, nowMs));
+  assert.throws(() => shouldCoalesceDispatch({ workflow_runs: [bot("not-a-date")] }, nowMs));
+  assert.throws(() => shouldCoalesceDispatch({ workflow_runs: [bot("2026-11-14T03:10:00Z")] }, nowMs));
+});
+
+test("ambiguous full GitHub history page fails closed to prevent bot burst", () => {
+  const nowMs = Date.parse("2026-11-14T03:01:00Z");
+  const page = Array.from({ length: 30 }, (_, n) => ({
+    event: "workflow_dispatch", actor: { login: "hibi89" },
+    created_at: "2026-11-14T03:00:30Z", id: n + 1,
+  }));
+  assert.equal(shouldCoalesceDispatch({ workflow_runs: page }, nowMs), true);
+});
+
+test("GitHub history GET failure stops dispatch fail-closed", async () => {
+  const { result, requests } = mockGitHub({ errorAt: 3 });
+  const response = await receiveWebhook(incoming("push", payload()), env, result);
+  assert.equal(response.status, 502);
+  assert.equal((await response.json()).status, "dispatch_failed");
+  assert.equal(requests.length, 3);
+  assert.equal(requests.some((r) => r.url.endsWith("/dispatches")), false);
 });
