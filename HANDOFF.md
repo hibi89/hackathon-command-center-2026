@@ -1,3 +1,16 @@
+## [2026-11-14 14:08+ KST] KMONG CENTRAL BOT FAILURE FOLLOW-UP — 10개 필수 인수인계
+
+1. **목표/범위:** 35원천/80refs/29제품 중앙 GitHub App 자동 수집의 운영 실패 수정 결과를 크몽 19SKU 정본과 연결. 비용0·소유자 PC 없이 점검.
+2. **수정·선택:** 중앙 `main` 코드 `2863165b06d407ba632f18ad7a85a7c98f1989af`에서 불완전 100건 실행이력을 증거 없는 `DEFERRED_BOT_HISTORY_UNVERIFIED`로 안전 보류. 더 많은 GitHub API 페이지 조회(비용/한도↑) 대신 원장 불변/버스트 방지 유지. 크몽 product 원장 자체는 미수정.
+3. **테스트/검증:** 새 `main` 정확 SHA [#43560075305](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43560075305) Python **80 PASS/0 FAIL**, [#43560075228](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43560075228) gate SUCCESS. 오류 [#43559627772](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43559627772) preflight FAIL/scanner SKIPPED. 실제 post-fix bot `RUN`/새 `DEFERRED` 실 실행 및 `event=schedule`은 미검증/0건.
+4. **단계:** 코드 검증 완료, 시간당 cron 14:23 이후 실증 대기, Vercel 서명된 webhook 2건 queued/coalesced E2E 미완료, Vercel 프로젝트 설정 접근 차단. 주말 4SKU 고객·권리·OWNER GO 0/4 및 RELEASE HOLD 유지.
+5. **오류/원인/재시도 금지:** 실패 메시지 `bot dispatch was not found among the latest 100 runs`; API 페이지 제한 또는 반영 지연을 구분할 증거 없음. 무근거 scan 허용, 강제 workflow 반복, Vercel Pro/새 프로젝트/수동 redeploy 금지.
+6. **저장소/브랜치/SHA/경로:** `hibi89/hackathon-command-center-2026@main` code `2863165b06d4`, 후속 문서 커밋 `69e584e57a3a37fa72b406d62ccddf9eef9dfcf2`; 현재 `kmong-productization` 작성 전 HEAD `75c7c86d8f103ed250687f9a78d3c9b81efa4f93`. 파일 `tools/kmong_hub_sync/quota_guard.py`, `test_quota_guard.py`, `data/kmong_hub_auto_observations.json`.
+7. **Production/명령/환경:** GitHub Actions stdlib Python3, source App READ only / hub branch snapshot conditional WRITE. Vercel 기존 `https://kmong-hub-event-bridge.vercel.app/api/webhook` 팀 프로젝트 GET 404/배포 목록 403; Production 재검증·최신 SHA 미확인, 무단 설정 변경0.
+8. **원본/백업/인증:** main 원본 부모 `80172145b6ba75fbed4244ffa672b57e6141bf8a`, 크몽 본 커밋 전 SHA 위 명시. 19SKU·29제품 스코어·등록완료 역사·[작업중]·판매 HOLD/고객파일/Secrets 보존. 코드 Author/Committer `hibi89` 일치.
+9. **다음 작업/완료 조건:** ①새 GitHub `schedule` 존재와 RUN/DEFERRED, exact SHA CI 검증 ②repo 35/branch80/product29 snapshot 최신화(조회 시 DATA2WEB·DBVORA·FFAX 원장 stale, Astra 일치) ③실 GitHub 서명 웹훅 중복 2건 Vercel 응답/Actions 종단 ④프로젝트 접근 후 불필요한 deployment quota skip 검증. 예약 13:40 기존 자동화 완료로 중복 생성 금지. 사용자 PC 이미 13:00 통합 요청, 반복 금지.
+10. **갱신 시점/확인 범위:** 2026-11-14 14:08+ KST, GitHub 원격 SHA·Actions Job 로그·Source App 스냅샷 blob 및 Vercel 읽기 오류. 실 고객/서명 webhook/Vercel Production 최신 빌드/시간당 예약은 검증 대기. 본 브랜치 docs 커밋 SHA는 원격 readback 후 확정.
+
 ## [2026-11-14 13:33 KST] FFAX_POST_RUN_43556707423 — 주말4상품 기능 CI 확인 종결(상용 보류 유지), 필수 인수인계 10항
 
 1. **목표·용도/확정 요구/기술:** `hibi89/hackathon-command-center-2026` 29원천→19 크몽 SKU 중 주말 `KMONG-SVC-01/08/09/10`을 정확 기능 소스 Git SHA+GitHub Actions로 검증, 별도 고객·권리·상용판매 100% 수용과 구별. 0원/읽기전용 소스·GitHub hub 문서 버전관리.
