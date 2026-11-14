@@ -1,3 +1,9 @@
+## [2026-11-14 KST] WORKNOVA Desk 공개 GitHub 무료 Linux/Windows/EXE 자동 QA 구성 — 실행 결과 검증대기
+
+- 현재 hibi89/Freelancer PUBLIC 확인. product/worknova-desk-local에 .github/workflows/worknova-desk-qa.yml 구현: 공개 저장소 standard ubuntu-latest·windows-latest 무료 러너, push 경로 제한·contents:read·중복 취소·12분 제한, Python3.11 업무 합성2종/전체 unittest, native Windows windows_acceptance.py 11항목, PyInstaller6.22.3 미서명 EXE 후보 빌드·해시, tools/windows_exe_smoke.py 임시 LOCALAPPDATA Tk 창 auto-close/SQLite 검증. 아티팩트·캐시 업로드/유료 러너 없음.
+- 신규 Windows GUI 스모크 원본 Git blob 84a2308b6551fd9373a974f94e7ed7323157f5e8 동일 로컬 파일 py_compile/ast.parse PASS, Linux 명시적 비지원 exit3 PASS, GitHub 파일 readback PASS. **실제 GitHub Actions push run/Checks 상태 및 unittest2종 결과 NOT_VERIFIED**(커넥터 해당 조회 기능 없음). 기존 사용자 실 Windows EXE GUI·거래처 생성/SQLite 디스크 저장/3차 재표시·ExitCode0/무결성 PASS는 유지. [제품 워크플로](https://github.com/hibi89/Freelancer/blob/product/worknova-desk-local/.github/workflows/worknova-desk-qa.yml), 제품 HEAD c6f455b5e465b1db418411f539687bd82d123403.
+- 승인 WD01~14 100점 전체항목 완전 수용 정식0/100(구현률0 아님), 목표85 미달·[작업중]/RELEASE HOLD/미등록. WD13 10점+WD14 6점 둘 다 미검증이면 이론상 최대84점. OS ACL·활성DB 암호화/신뢰서명·실고객/권리/법무 사전승인 전 무단조치 안함. 중앙 감사표 WORKNOVA 단일 행 갱신, 다른 상품·등록완료 이력 불변.
+
 ## [2026-11-14 KST] WORKNOVA Desk 사용자의 반복 Windows UI 테스트 중단·오프라인 자동 QA 우선
 
 - 사용자가 native Win EXE를 4차 기동해 `ExitCode:0` 제공. 사용자는 합성 견적 GUI 작업을 수행했다고 했으나 **견적 GUI 행/DB 신규 견적 수 확인 없음**, 해당 기능 PASS 보류. 전회차 실제 Windows EXE GUI·가짜 고객 생성→DB 보존→재실행 GUI 재표시 PASS 이력은 유지.
