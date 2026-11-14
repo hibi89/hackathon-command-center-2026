@@ -1,3 +1,9 @@
+## [2026-11-14 KST] WORKNOVA Desk 사용자의 반복 Windows UI 테스트 중단·오프라인 자동 QA 우선
+
+- 사용자가 native Win EXE를 4차 기동해 `ExitCode:0` 제공. 사용자는 합성 견적 GUI 작업을 수행했다고 했으나 **견적 GUI 행/DB 신규 견적 수 확인 없음**, 해당 기능 PASS 보류. 전회차 실제 Windows EXE GUI·가짜 고객 생성→DB 보존→재실행 GUI 재표시 PASS 이력은 유지.
+- 반복 사용자 수동 조작 대신 개발자가 `hibi89/Freelancer@product/worknova-desk-local`에 신규 `tests/test_unattended_business_lifecycle.py` **2종** 추가(임시 SQLite 견적→승인→계약→납품/검수→수금/거부/DB 재열기·감사체인). Git blob SHA `4df97d19a5bcacc203babff5136dc2fc48b40fac` 동일 소스 로컬 Python `ast.parse PASS`; **실 unittest 2종/전체 제품 CI NOT_RUN**, private 원본 실행 코드 미마운트/Actions 실행 권한·비용 미확인. 새 CI 유료 잡 무단 실행 없음. [자동화 경계·대안](https://github.com/hibi89/Freelancer/blob/product/worknova-desk-local/docs/P85_UNATTENDED_QA_STRATEGY_20261114.md), 제품 HEAD `e85af93674321ec50f300805e170657261c07f4b`.
+- **운영:** 형 PC 수동 반복 금지, 사용자 실제 OS/실고객 등 필수 현장 게이트만 추후 진행. 사용자 승인 WD01~14 100점 엄격 전체 수용 **0/100(구현률0 아님), 목표85 미달, [작업중]/RELEASE HOLD/크몽 미등록**. 중앙 감사표 WORKNOVA 단일 행 갱신, 타상품·등록완료 이력 보존.
+
 ## [2026-11-14 KST] GPT 계열만 활용하는 29→19 크몽 개발·검수·디자인·상품화·등록 표준 도입
 
 - 사용자 지시로 **비-GPT 모델(Fable 등)을 신규 실행 담당에서 제외**하고 7단계 분업 표준 확정: Sol High 웹 개발 및 요구 전범위 기술 검증 → Codex Sol Max 독립 감사 → Sol 감사 합의·수정 → Astra Max 시각 디자인 시안(미가용 시 Sol) → Codex Sol Max 최소변경 UI 실제 구현 → Sol 최종 상품 전체 인수/권리/고객·실서비스 점검·소유자 GO → Luna 허가된 크몽 게시 초안/자동 등록 보조.
