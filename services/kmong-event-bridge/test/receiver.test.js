@@ -339,3 +339,36 @@ test("single 8.5-second maximum dispatch budget fails closed on stalled GitHub c
   }
   await assert.rejects(dispatchCentral(env, stalled, 8501), TypeError);
 });
+
+test("aborted slow upload fails closed without reaching GitHub dispatch", async () => {
+  let cancelled = false;
+  const stream = new ReadableStream({
+    pull() { return new Promise(() => {}); },
+    cancel() { cancelled = true; },
+  });
+  const controller = new AbortController();
+  const request = new Request("https://bridge.invalid/api/webhook", {
+    method: "POST", body: stream, duplex: "half", signal: controller.signal,
+    headers: { "x-github-signature-256": "sha256=" + "0".repeat(64),
+      "x-github-event": "push", "x-github-delivery": DELIVERY },
+  });
+  const { result, requests } = mockGitHub();
+  const timer = setTimeout(() => controller.abort(), 20);
+  try {
+    const response = await receiveWebhook(request, env, result);
+    assert.equal(response.status, 503);
+    assert.equal((await response.json()).status, "request_timeout");
+    assert.equal(requests.length, 0);
+    assert.equal(cancelled, true);
+  } finally {
+    clearTimeout(timer);
+  }
+});
+
+test("an already expired shared deadline prevents every API request", async () => {
+  const controller = new AbortController();
+  controller.abort();
+  const { result, requests } = mockGitHub();
+  await assert.rejects(dispatchCentral(env, result, 8500, controller.signal), /deadline exceeded/);
+  assert.equal(requests.length, 0);
+});

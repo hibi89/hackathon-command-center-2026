@@ -67,6 +67,7 @@ export function signAppJwt(appId, privateKey, nowSeconds = Math.floor(Date.now()
 }
 
 async function githubRequest(fetchImpl, path, token, method = "GET", body = undefined, deadline = undefined) {
+  if (deadline?.aborted) throw new Error("GitHub dispatch deadline exceeded");
   const response = await fetchImpl(API_ROOT + path, {
     method,
     headers: {
@@ -79,6 +80,7 @@ async function githubRequest(fetchImpl, path, token, method = "GET", body = unde
     body: body === undefined ? undefined : JSON.stringify(body),
     signal: deadline ? AbortSignal.any([deadline, AbortSignal.timeout(8000)]) : AbortSignal.timeout(8000),
   });
+  if (deadline?.aborted) throw new Error("GitHub dispatch deadline exceeded");
   if (!response.ok) {
     throw new Error("GitHub API returned HTTP " + response.status);
   }
@@ -116,12 +118,13 @@ export function shouldCoalesceDispatch(payload, nowMs = Date.now()) {
   return false;
 }
 
-export async function dispatchCentral(env, fetchImpl = fetch, maxDurationMs = 8500) {
+export async function dispatchCentral(env, fetchImpl = fetch, maxDurationMs = 8500, sharedSignal = undefined) {
   if (!Number.isSafeInteger(maxDurationMs) || maxDurationMs < 1 || maxDurationMs > 8500) {
     throw new TypeError("invalid dispatch time budget");
   }
   // Four sequential GitHub calls share a single deadline below the 10 s serverless budget.
-  const deadline = AbortSignal.timeout(maxDurationMs);
+  const localDeadline = AbortSignal.timeout(maxDurationMs);
+  const deadline = sharedSignal ? AbortSignal.any([sharedSignal, localDeadline]) : localDeadline;
   const jwt = signAppJwt(env.KMONG_DISPATCH_APP_ID, env.KMONG_DISPATCH_APP_PRIVATE_KEY);
   const installation = await githubRequest(
     fetchImpl, "/repos/" + HUB_REPO + "/installation", jwt, "GET", undefined, deadline);
@@ -165,9 +168,11 @@ export function health(env) {
 
 export async function receiveWebhook(request, env, fetchImpl = fetch) {
   if (!env.KMONG_WEBHOOK_SECRET) return answer(503, { status: "not_configured" });
+  // One end-to-end deadline includes slow/chunked body upload and all GitHub calls.
+  const deadline = AbortSignal.any([AbortSignal.timeout(8500), request.signal]);
   let raw;
   try {
-    raw = await readLimitedBody(request, MAX_BODY);
+    raw = await readLimitedBody(request, MAX_BODY, deadline);
   } catch (error) {
     if (error instanceof BodyReadError) return answer(error.status, { status: error.code });
     throw error;
@@ -201,7 +206,7 @@ export async function receiveWebhook(request, env, fetchImpl = fetch) {
     return answer(503, { status: "dispatch_not_configured" });
   }
   try {
-    const status = await dispatchCentral(env, fetchImpl);
+    const status = await dispatchCentral(env, fetchImpl, 8500, deadline);
     // A 204 means queued; coalesced means NO dispatch, neither implies a completed sync.
     return answer(202, { status });
   } catch (error) {

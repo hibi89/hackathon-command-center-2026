@@ -58,3 +58,30 @@ test("empty body allowed and invalid cap rejected", async () => {
   assert.equal((await readLimitedBody(r)).length, 0);
   await assert.rejects(readLimitedBody(r, 0), TypeError);
 });
+
+test("stalled input stream times out and cancels its reader", async () => {
+  let cancelled = false;
+  const body = new ReadableStream({
+    pull() { return new Promise(() => {}); },
+    cancel() { cancelled = true; },
+  });
+  const request = new Request("https://webhook.invalid/", { method: "POST", body, duplex: "half" });
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), 20);
+  try {
+    await assert.rejects(readLimitedBody(request, 1024, controller.signal),
+      (err) => err instanceof BodyReadError && err.status === 503 && err.code === "request_timeout");
+    assert.equal(cancelled, true);
+  } finally {
+    clearTimeout(timer);
+  }
+});
+
+test("expired deadline cannot proceed to body read", async () => {
+  const controller = new AbortController();
+  controller.abort();
+  await assert.rejects(
+    readLimitedBody(streamRequest([Buffer.from("data")]), 100, controller.signal),
+    (err) => err.status === 503 && err.code === "request_timeout",
+  );
+});

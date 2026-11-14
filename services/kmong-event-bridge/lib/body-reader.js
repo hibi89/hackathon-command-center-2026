@@ -17,7 +17,30 @@ function cancelQuietly(streamOrReader) {
   }
 }
 
-export async function readLimitedBody(request, maxBytes = 1024 * 1024) {
+async function readWithAbort(reader, signal) {
+  if (!signal) return reader.read();
+  if (signal.aborted) throw new BodyReadError(503, "request_timeout");
+  return new Promise((resolve, reject) => {
+    const onAbort = () => {
+      signal.removeEventListener("abort", onAbort);
+      cancelQuietly(reader);
+      reject(new BodyReadError(503, "request_timeout"));
+    };
+    signal.addEventListener("abort", onAbort, { once: true });
+    reader.read().then(
+      (value) => {
+        signal.removeEventListener("abort", onAbort);
+        resolve(value);
+      },
+      (error) => {
+        signal.removeEventListener("abort", onAbort);
+        reject(error);
+      },
+    );
+  });
+}
+
+export async function readLimitedBody(request, maxBytes = 1024 * 1024, deadline = undefined) {
   if (!Number.isSafeInteger(maxBytes) || maxBytes < 1) {
     throw new TypeError("invalid max body limit");
   }
@@ -39,7 +62,7 @@ export async function readLimitedBody(request, maxBytes = 1024 * 1024) {
   let size = 0;
   try {
     while (true) {
-      const { done, value } = await reader.read();
+      const { done, value } = await readWithAbort(reader, deadline);
       if (done) return Buffer.concat(chunks, size);
       if (!(value instanceof Uint8Array)) {
         throw new BodyReadError(400, "invalid_body");
