@@ -37,3 +37,22 @@
 3. Use a fresh source snapshot after the next full GitHub Actions RUN and repeat; preserve the old snapshot Git blob and this audit as the point-in-time trail.
 
 **As-of / scope:** 2026-11-14 12:54–12:56 KST. GitHub API connector evidence. 29 successful branch HEAD lookups. No Production POST, no Vercel deployment, no change to original data or rights/policy.
+
+## Post-sync verification 13:03–13:05 KST
+
+**Verified full observer execution:** [GitHub Actions #43554677541](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43554677541), `event=workflow_dispatch`, actor `kmong-hub-dispatcher[bot]`, created **2026-11-14 04:03:00 UTC / 13:03:00 KST**, conclusion **SUCCESS**. Actual log: `KMONG PREFLIGHT: RUN remaining: 5750 reserve: 450`, **Python 77 tests PASS**, `KMONG HUB SYNC: UPDATED repositories: 35 tracked branches: 80 product records: 29 linked refs: 29 unlinked refs: 0 fingerprint alerts: 0 official scores: UNMODIFIED`.
+
+**Hub write proof:** readback Git commit `24b9929216a373ad79c866d1a5bbdb406f28785e`; managed observation JSON blob SHA `8880bdc36270c9f97cc065011ec54c559c1afbf7`. In that snapshot 29/29 product refs are present, 0 unlinked, 0 blocking fingerprint issues, and official final completion is unchanged.
+
+The four previously drifted product refs were rechecked against the newly written snapshot:
+
+| Product | Snapshot HEAD after sync | Independently observed branch HEAD | Result |
+|---|---|---|---|
+| DATA2WEB / ACTIVE-05 | `e38ed42bba39ec17ab030052fe06ee8f53570f16` | `e38ed42bba39ec17ab030052fe06ee8f53570f16` | **MATCH** |
+| DBVORA / ACTIVE-11 | `4731046b4a16df50f4241d4ce9d925874ee25640` | `4731046b4a16df50f4241d4ce9d925874ee25640` | **MATCH** |
+| Astra PDF / ACTIVE-13 | `2c01f15b244d8159cf5ab119d19b82aae7cb2269` | `2c01f15b244d8159cf5ab119d19b82aae7cb2269` | **MATCH** |
+| FFAX / CANDIDATE-03 | `26dadf77c40e0a20c1bced469f8386f19d068876` | `f0fe97f83949604fd5e8c4f115d0f4e41b97a4a8` | **POST-SYNC DRIFT** |
+
+FFAX's independent branch HEAD has commit timestamp **2026-11-14 04:04:29 UTC**, four seconds **after** the observer log reported `UPDATED` at **04:04:25 UTC**. Thus FFAX's post-run difference cannot be classified as a missed change by that run. The snapshot correctly reflects a point-in-time collection, not a permanently fresh feed. Do not force an extra full scan solely to chase concurrent branches.
+
+**Boundaries:** This confirms a real GitHub bot dispatch and full read-only-source / hub-write execution; the GitHub run does not include the signed incoming Vercel webhook delivery ID. Therefore exact originating source push→Vercel received→queued mapping and duplicate suppression for a second signed delivery remain **UNVERIFIED**, as does the separate hourly `event=schedule` path. The scheduled first opportunity is **13:23 KST**, with an already confirmed one-time read-only follow-up at **13:40 KST**. No further build, workflow dispatch, permissions, source branch edit, official scoring, or publication authorized by this audit.
