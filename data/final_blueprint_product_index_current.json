@@ -35,7 +35,8 @@
     "2026-11-13: HAE and LA representative case outcomes were checked against exact historical Actions runs and private trace docs, not newly executed feature acceptance. Existing official UNASSESSED unchanged.",
     "2026-11-13 canonical source integrity pilot only: HAE same-repository main read-only checkout verified at LA feature SHA 6508b27..., artifact MATCHED, official UNASSESSED. Other 34 repos have no central canonical pins yet.",
     "2026-11-13 main-tree inventory: 35 inspected; 31 documentation fingerprints (28 main, 3 feature), only 9 enforced and 22 monitored. This is not a signed owner-approved whole-scope proof. 4 repos have no defensible anchor in scanned scope.",
-    "2026-11-13: GitHub App hub sync code and 22 regression tests passed on central main e28781d0...; app key/install/variables NOT yet configured or verified. No automatic source traversal or central hub snapshot write claimed."
+    "2026-11-13: GitHub App hub sync code and 22 regression tests passed on central main e28781d0...; app key/install/variables NOT yet configured or verified. No automatic source traversal or central hub snapshot write claimed.",
+    "2026-11-14 KST: ACTIVE-13 Astra development-source branch corrected from older integration to 66-commit-ahead feature; main roster+test d2c07d1c. Existing observed JSON remains historical until App primary API limit recovers; do not publish a fresh score or official final completion."
   ],
   "records": [
     {
@@ -388,12 +389,19 @@
       "phase": "active",
       "product": "Astra PDF Redesigner",
       "repository": "hibi89/astra_pdf_redesigner",
-      "tracked_branch": "integration/astra-commercial-core",
-      "blueprint_reference": "main/docs/BLUEPRINT.md + docs/ASTRA_ORIGINAL_ROADMAP.txt",
+      "tracked_branch": "feature/astra-p71-pdf-source-parity-20261112",
+      "blueprint_reference": "hibi89/astra_pdf_redesigner@feature/astra-p71-pdf-source-parity-20261112/REQUIREMENTS.md; original final design docs/BLUEPRINT.md and docs/ASTRA_ORIGINAL_ROADMAP.txt",
       "historical_seen_head_prefix": "b80830ab3219",
       "official_final_completion": "UNASSESSED",
       "owner_requirement_weights": "NOT_INDEPENDENTLY_APPROVED",
-      "detail_trace": "SUMMARY_ONLY"
+      "detail_trace": "SUMMARY_ONLY",
+      "historical_product_link": {
+        "repository": "hibi89/astra_pdf_redesigner",
+        "tracked_branch": "integration/astra-commercial-core",
+        "blueprint_reference": "main/docs/BLUEPRINT.md + docs/ASTRA_ORIGINAL_ROADMAP.txt"
+      },
+      "link_reconciled_at_kst": "2026-11-14",
+      "verified_product_branch_head": "025fb271610e870b8f292a9000538a7bec7ebe8a"
     },
     {
       "record_id": "ACTIVE-14",
@@ -703,6 +711,29 @@
         "tracked_branch": "product/worknova-desk-local"
       },
       "verified_product_branch_head": "714071c98a0b7ec812d75d8ac3bfd814c112c788",
+      "verified_at_kst": "2026-11-14"
+    },
+    {
+      "record_id": "ACTIVE-13",
+      "old": {
+        "repository": "hibi89/astra_pdf_redesigner",
+        "tracked_branch": "integration/astra-commercial-core",
+        "blueprint_reference": "main/docs/BLUEPRINT.md + docs/ASTRA_ORIGINAL_ROADMAP.txt"
+      },
+      "new": {
+        "repository": "hibi89/astra_pdf_redesigner",
+        "tracked_branch": "feature/astra-p71-pdf-source-parity-20261112"
+      },
+      "verified_product_branch_head": "025fb271610e870b8f292a9000538a7bec7ebe8a",
+      "verified_against": "integration/astra-commercial-core@b80830ab3219dbcf88556d60ce2c47c2dcec7764; compare ahead_by=66 behind_by=0",
+      "pinned_verified_ci": {
+        "branch": "feature/astra-p71-pdf-source-parity-20261112",
+        "head_sha": "cabe0adf79a3724066c367ac7cbdb3955bbc113a",
+        "windows_run_id": 43544304096,
+        "chrome_edge_run_id": 43544304090
+      },
+      "scoring_code_commit": "d2c07d1c7b3b657c02ac9f80d5046334c570013f",
+      "official_score_changed": false,
       "verified_at_kst": "2026-11-14"
     }
   ],

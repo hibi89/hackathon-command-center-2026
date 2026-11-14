@@ -1,3 +1,18 @@
+## [2026-11-14 KST] Astra 최신 브랜치 추적 복구·API primary 403 사고 인수인계 10항
+
+1. **목표/요구·기술:** 29종 LIVE 자동 증거점수와 4개 주말상품 상태 유지, Astra 실제 상품 브랜치로 추적 정합. 기존 Python GitHub App READ/허브 관찰 JSON 조건부 WRITE만 허용.
+2. **수행/비교:** (A) 구 integration 추적 유지 시 66커밋 누락, (B) 상용개발 p71 최신 브랜치 연결+과거 source provenance 보존. B 적용. `main@d2c07d1c` roster·회귀테스트, hub current index ACTIVE-13만 갱신, 이전 11/13 원본 유지.
+3. **테스트:** main observer [#43545642300](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43545642300) SUCCESS, final blueprint [#43545642364](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43545642364) SUCCESS. Astra P89 Chrome/Edge #43544304090 SUCCESS, Windows installer #43544304096 SUCCESS. Main App [#43545668765](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43545668765) FAILURE 403, 최신 동기화 미완료.
+4. **완료/대기:** 원천 링크 교정·원격 기록 완료. 실제 자동 29종 최신 재점수는 rate limit 해소 후 대기, 고객 PC/법무·상용100 제외. 공식 과거 DATA2WEB72/100(현HEAD 재검증 대기), 기타28 미산정; 출시 HOLD.
+5. **장애/근거·Stop/Pivot:** workflow_dispatch 403 `PRIMARY_RATE_LIMIT remaining=0` (ai-code-checker workflow runs endpoint), write0. 이전 main SHA에서도 동일. 반복 실행 중단, rate reset 후 기존 예약 1회·readback; 불필요한 빈 커밋/추가 권한·과금 금지.
+6. **저장소·브랜치/SHA:** `hibi89/hackathon-command-center-2026@main:d2c07d1c7b3b657c02ac9f80d5046334c570013f`, `@kmong-productization` 현재 HEAD는 본 갱신 후 재조회. Astra `hibi89/astra_pdf_redesigner@feature/astra-p71-pdf-source-parity-20261112:025fb271610e870b8f292a9000538a7bec7ebe8a`.
+7. **Prod/환경:** GitHub-hosted Python3 unittest/Actions, source App README+hub snapshot; Vercel·제품 실제 Production 미적용, 크몽 미등록.
+8. **보안/원본:** 구 인덱스, 고객 파일·개별 제품 코드·토큰/권한·가격·등록완료 이력·[작업중] 불변. 원본 historical branch reference를 index에 영구 보존. Git normal revert, force push 없음.
+9. **다음 순서/승인:** 정상 App rate limit 복구 후 한 번 예약 sync/live readback; 최신 4개 소스 SHA별 승인REQ100 증거 및 Windows·권리/모델/PG/고객 PDF 필요성만 13:00 기존 일괄 알림에서 수용. 제품 본체·상용 승인 무단 실행 금지.
+10. **확인 일시/범위:** 2026-11-14 KST; central exact main tests PASS, hub Astra 추적 변경은 GitHub readback 후 확인, LIVE 29종 재채점 **미검증**. [상세 감사](docs/audits/KMONG_WEEKEND_FOUR_SOURCE_FRESHNESS_20261114.md).
+
+---
+
 ## [2026-11-14 KST] main 9a2c9273 최종 LIVE 채점 검증 완료 — 추가 인수인계 10항
 
 1. **목표/확정:** 사용자 지시대로 29개 전수 GitHub 자동 증거점수와 작업자 보고율 동시표기. 각 제품 공식 최종설계 승인률/실사용 판매출시 지표와 분리.
