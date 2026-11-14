@@ -1,3 +1,8 @@
+## [2026-11-14 KST] WORKNOVA Desk 실제 Windows EXE 2차 GUI 거래처 저장/종료 후 SQLite 영속화 PASS
+
+- 사용자 실제 Windows10.0.26200 PowerShell 및 GUI 스크린샷: 앞선 빈 DB 생성과 종료 후 동일 `TEMP/worknova-gui-qa-<GUID>` 환경에서 **EXE 2차 실행**. GUI '새 거래처'에서 `WORKNOVA_QA_TEST_01` 입력, 목록에 거래처/ID 및 `완료(로컬 기록)` 표시. 종료 대기 이후 **ExitCode0**, 동일 `desk.sqlite`에 대한 `mode=ro` SQL **SyntheticCustomerCount:1**, **integrity_check:ok**. 현장 독립 EXE GUI→SQLite 실제 저장·종료 후 보존 부분 PASS. [제품 원장](https://github.com/hibi89/Freelancer/blob/product/worknova-desk-local/docs/P85_WINDOWS_EXE_BUILD_RESULT_20261114.md), 제품 HEAD `984835a6e387bd5338503a280a727d1b6befb549`.
+- 테스트는 고객 실데이터 없이 별도 TEMP 폴더에서만, 실제 GitHub 원본 DB·OS ACL/설정·타상품·등록완료 이력 변경 없음. **3차 GUI cold reopen 목록 재표시·견적/계약/납품/수금 전체 기능·감사기록/보안/타 PC/실고객 법무·상용권 미검증**, 사용자 승인 WD01~14/100 완전 구매자 수용 점수 **0/100(구현률 0 아님), 85점 미달, [작업중]/RELEASE HOLD/크몽 미등록**. 중앙 원장 WORKNOVA 단일 행만 변경.
+
 ## [2026-11-14 KST] WORKNOVA Desk 실제 Windows SQLite integrity_check ok / schema version 2
 
 - 사용자가 네이티브 WORKNOVA Desk EXE의 격리 TEMP 환경에서 생성된 `desk.sqlite`를 Windows Python3.11 `sqlite3 mode=ro`로 열고 **`PRAGMA integrity_check: ok`**, **`PRAGMA user_version: 2`** 실제 출력 전달. EXE 빌드/해시/MZ, 첫 장부 확인창/실 Tk GUI/ExitCode0/새 격리 DB 존재까지 이전 증거에 덧붙여 무결성·제품 스키마 버전 확인. [제품 증거](https://github.com/hibi89/Freelancer/blob/product/worknova-desk-local/docs/P85_WINDOWS_EXE_BUILD_RESULT_20261114.md), 제품 HEAD `16a51cf8d9921f85ce91c0d58c47d84949e7b403`.
