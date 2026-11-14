@@ -1,3 +1,18 @@
+## 2026-11-14 KST — 해총 공개 Vercel 헬스 GET 실증·배포 SHA 미확인 인수인계 10항
+
+1. **목표/용도·기술:** 기존 무료 GitHub App webhook → Vercel `services/kmong-event-bridge` → hub Actions → 35repo/80refs/29상품 증거 관찰. 제품 공식점수·고객 DB·비밀/권한 불변.
+2. **변경/판단:** GitHub `main@1ab99dae7ebd31878e757a2094f732e7ccc5964a`에 공개 GET 진단, 최신 `main@595606aa49603644666353281d6c67d1b3763ecc`에 `bridge_feature=coalesce-v1` 마커 및 Vercel Git 40자리 SHA만 반환하도록 버전 확인 경로 구축. 별도 유료·DB/토큰/프로젝트/권한 없음.
+3. **실행 테스트:** [Bridge CI #43551337202](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43551337202): Node24/24 PASS, Python75/75 PASS, roster cmp PASS, 공개 Production GET 단계 SUCCESS. [Final blueprint gate #43551337278](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43551337278) SUCCESS. GET 로그 `http_status=200`, `verdict=READY_FEATURE_UNVERIFIED`, `source_sha=null`.
+4. **완료/진행/대기:** 원격 웹훅 주소 HTTP200/ready(읽기전용)와 GitHub 코드는 검증. **Production 코드 parity·실 webhook coalescing은 미검증**: 응답에 신규 feature marker 미노출. 중앙 기존 정상 전수 RUN[#43549435131](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43549435131) 75PASS/UPDATED, 35repo/80refs/29제품/0 blocking, hub `8b17f49e`는 유지. `event=schedule` 실행0건.
+5. **실패 근거·Stop-Pivot:** 연결된 Vercel 팀 `hibi89`에서 `project08-executive`만 보임. bridge 프로젝트를 직접 조회/배포할 권한·매핑 없음. 브라우저 web open은 접근 불가, 대신 GitHub runner GET200 확보. '사이트 장애'로 단정하지 말 것. 새 Vercel 프로젝트 생성, secrets/permissions 변경, 강제 재배포 불가.
+6. **GitHub:** `hibi89/hackathon-command-center-2026`, main `595606aa49603644666353281d6c67d1b3763ecc`, 운영 `kmong-productization` 본 변경 후 SHA 조회. `services/kmong-event-bridge/{lib/receiver.js,probe-production.mjs,test/receiver.test.js,README.md}`, `.github/workflows/kmong-event-bridge-tests.yml`.
+7. **Production/URL·명령:** 문서상 `https://kmong-hub-event-bridge.vercel.app/api/webhook`; HTTP GET200/ready (GitHub-hosted 환경). Vercel 배포 SHA·프로젝트 ID 미검증. Node22 `npm test --prefix services/kmong-event-bridge`, Python3 `python3 -B -m unittest discover -s tools/kmong_hub_sync -p 'test_*.py' -v`.
+8. **원본/백업·보안:** 원본 Git 이전 SHA로 일반 revert; 앱 소스 READ·중앙 WRITE 분리. 신규 GET은 public-safe feature/version만 반환. 29개 상품 공식 DATA2WEB 과거72/100 외28 UNASSESSED, 크몽 등록0/RELEASE HOLD, 기존 19 SKU/등록이력/고객데이터/권한 불변.
+9. **다음 작업/완료 기준:** (1) 사용자 기존 Vercel bridge 프로젝트가 연결된 정확한 팀 접근 또는 Project/Deployment Inspector URL 확인(신규 생성 금지) (2) 기존 repo 자동배포 설정 확인 (3) GET feature marker/source_sha 정확 대조 (4) 허가된 실서명 webhook `queued/coalesced`와 중앙 run/JSON readback (5) cron 및 기간 안정성 확인. 현 단계 100% 발표 금지.
+10. **갱신/범위:** 2026-11-14 KST, GitHub 원격/CI/실제 GET 확인. Production 정확 Git SHA와 실제 서명 POST, cross-instance atomic dedup은 **미검증**.
+
+---
+
 ## [2026-11-14 KST] 해총 원천 웹훅 디스패치 30분 중복 차단 및 정상 스캔 실증 인수인계 10항
 
 1. **목표/확정 요구·기술:** GitHub App → Vercel webhook `services/kmong-event-bridge` → 중앙 `workflow_dispatch` → GitHub Actions 관찰 JSON 업데이트의 기존 무료 경로 유지. 35repo/80ref/29상품, 별도 유료 API/DB·권한확대 금지, 제품 데이터/공식점수 변경 금지.
