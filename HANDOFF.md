@@ -1,3 +1,16 @@
+## [2026-11-14 KST] WORKNOVA Desk frozen EXE 전체 가상 수금·복원 3/3 성공 — 중앙 인수인계 10항
+
+1. **목표/기술:** WORKNOVA Desk Windows 오프라인 Tk/SQLite 견적→수금, 사용자 승인 WD01–14 총100 중 구매자 최종 완전수용85 이상 목표.
+2. **완료/변경:** 기존 실 Windows 창·합성 고객만 검증하던 테스트를 frozen PyInstaller EXE 내부 합성견적/VAT→승인→계약→납품/검수→부분수금·중복/초과 거부→백업/복원까지 확대. CI 전용 명시적 환경변수에서만 QA, 원래 운영 장부 접근 없음. UI 표 제목 8개 한국어 변경, 내부 데이터 키 불변.
+3. **테스트:** 코드 SHA `50ecb87b13a343c4b8428ea6c204afec57f6cd1a`; [CI #43540390516](https://github.com/hibi89/Freelancer/actions/runs/43540390516) **3/3 SUCCESS**: Linux174(173PASS/1SKIP), Windows174(165PASS/9SKIP), Windows installer synthetic 11/11, frozen EXE Tk GUI/거래처/기능·수금2건/복원 PASS. [증거게이트 #43540391034](https://github.com/hibi89/Freelancer/actions/runs/43540391034) SUCCESS.
+4. **완료/대기:** CI·가상 전체 업무 및 한국어 UI 개선 완료; 구매자 최종 전 항목 PASS **0/100**(구현률 아님), 85 미달. [작업중]/RELEASE HOLD/미등록 유지.
+5. **실패·원인·대안:** 이번 CI 실패 0, 이전 결함은 선행 코드에서 해결. synthetic PASS로 실제 보안/법무·신뢰서명/구매자 검수 PASS 주장 금지; 유료 서명·OS 변경·실고객 데이터는 사전승인 필요.
+6. **저장소/브랜치/SHA:** `hibi89/Freelancer@product/worknova-desk-local`, 코드 `50ecb87b13a343c4b8428ea6c204afec57f6cd1a`, 문서 HEAD `714071c98a0b7ec812d75d8ac3bfd814c112c788`; `worknova_desk/synthetic_acceptance.py`, `tools/windows_exe_smoke.py`, `worknova_desk/gui.py`, `tests/test_frozen_synthetic_acceptance.py`, `tests/test_gui_korean_headers.py`.
+7. **배포/환경:** Vercel N/A, Windows GitHub-hosted PyInstaller unsigned onedir 2,300,758 bytes SHA `9bc55621d0c1f67cf363cc1e056412978cc79080d9e8770e268fe20bade69e6f`, runner 임시에서만 생성, 미게시.
+8. **원본·백업·인증/수정금지:** 실제 고객·로컬 SQLite/백업, Windows ACL/키/OS, PayPal, 타 제품·크몽 등록완료 이력 변경 없음, 합성 파일 runner 삭제, Git 정상 parent revert 가능.
+9. **다음/완료기준:** WD13 외부 실제 OS 접근통제·상시 DB 보호·인증 코드서명, WD14 실 구매자/법무·권리·고객 지원, WD12 폰트/Word 인쇄 수용 등 검증 후 WD 단위 완전 PASS 배점 ≥85에만 달성 선언. 사용자 개입 필요 항목은 마지막 일괄 요청.
+10. **시각/검증범위:** 2026-11-14 KST, GitHub 원격 run/job/EXE 로그 직접 확인. 제품 문서 SHA `714071c98a0b7ec812d75d8ac3bfd814c112c788`; 중앙 최종 HEAD는 커밋 후 재조회. 현재 QA는 실제 구매·법률·권한 수용이 아님.
+
 ## [2026-11-14 KST] BID AX 무료 증분 수집기/276 CI — 중앙 인수인계 10항
 1. 목표/기술: R01–R29 29개 최종설계, 목표85%; Python3.11/Tk/SQLite 고객 로컬 Windows.
 2. 완료/근거: 고위험 클라우드 무제한수집 대신 승인식 Onbid 첫 증빙에서 누락 페이지 제한 호출·SQLite SHA/쿼리/중단복구·로컬 메모리 키와 0회 기본 dry-run.
