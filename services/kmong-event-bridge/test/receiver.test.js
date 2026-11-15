@@ -136,6 +136,44 @@ test("only final blueprint completed runs are relevant", () => {
     ...r, workflow_run: { ...r.workflow_run, path: ".github/workflows/other.yml" },
   }), false);
 });
+
+test("explicit unrelated workflow path cannot bypass event allowlist via display name", () => {
+  const tracked = {
+    repository: { full_name: SOURCE.repository },
+    action: "completed",
+    workflow_run: {
+      head_branch: SOURCE.branches[0],
+      path: SOURCE.repository + "/.github/workflows/unrelated.yml@main",
+      name: "Final blueprint completion evidence gate",
+    },
+  };
+  assert.equal(eligibleEvent("workflow_run", tracked), false);
+  assert.equal(eligibleEvent("workflow_run", {
+    ...tracked, workflow_run: { ...tracked.workflow_run,
+      path: SOURCE.repository + "/.github/workflows/final-blueprint-gate.yml@main" },
+  }), true);
+  assert.equal(eligibleEvent("workflow_run", {
+    ...tracked, workflow_run: { ...tracked.workflow_run, path: "" },
+  }), true); // backwards-compatible fallback only with no concrete path
+});
+
+test("HMAC-signed unrelated workflow with matching display name is ignored without dispatch", async () => {
+  const { result, requests } = mockGitHub();
+  const p = {
+    repository: { full_name: SOURCE.repository },
+    action: "completed",
+    workflow_run: {
+      head_branch: SOURCE.branches[0],
+      path: SOURCE.repository + "/.github/workflows/other.yml@main",
+      name: "Final blueprint completion evidence gate",
+    },
+  };
+  const response = await receiveWebhook(incoming("workflow_run", p), env, result);
+  assert.equal(response.status, 202);
+  assert.equal((await response.json()).status, "ignored");
+  assert.equal(requests.length, 0);
+});
+
 test("JWT is signed RS256 and has constrained lifetime", () => {
   const jwt = signAppJwt("12345", privateKey, 2000000000);
   const [head, body, sig] = jwt.split(".");

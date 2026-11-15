@@ -46,8 +46,11 @@ export function eligibleEvent(kind, data) {
     const run = data.workflow_run;
     if (typeof run.head_branch !== "string" || !branches.has(run.head_branch)) return false;
     const path = String(run.path || data.workflow?.path || "");
-    return /(^|\/)final-blueprint-gate\.ya?ml(?:@[^ ]*)?$/i.test(path) ||
-      run.name === "Final blueprint completion evidence gate";
+    // Explicit workflow paths outrank display names: a different workflow may
+    // reuse the same name, but must never dispatch the central collector.
+    // Fall back to the legacy name only when GitHub sends no path at all.
+    if (path) return /(^|\\/)final-blueprint-gate\\.ya?ml(?:@[^ ]*)?$/i.test(path);
+    return run.name === "Final blueprint completion evidence gate";
   }
   return false;
 }
