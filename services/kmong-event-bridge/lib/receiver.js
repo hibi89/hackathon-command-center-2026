@@ -140,7 +140,13 @@ export function shouldCoalesceDispatch(payload, nowMs = Date.now()) {
   return false;
 }
 
-export async function dispatchCentral(env, fetchImpl = fetch, maxDurationMs = 8500, sharedSignal = undefined) {
+export async function dispatchCentral(env, fetchImpl = fetch, maxDurationMs = 8500,
+                                      sharedSignal = undefined, deliveryId = undefined) {
+  if (env.KMONG_TRACE_DELIVERY_ID_ENABLED === "true" &&
+      (typeof deliveryId !== "string" || !DELIVERY_RE.test(deliveryId))) {
+    // No API call when the opt-in correlation input is invalid.
+    throw new TypeError("invalid source delivery id for correlation");
+  }
   if (!Number.isSafeInteger(maxDurationMs) || maxDurationMs < 1 || maxDurationMs > 8500) {
     throw new TypeError("invalid dispatch time budget");
   }
@@ -165,9 +171,15 @@ export async function dispatchCentral(env, fetchImpl = fetch, maxDurationMs = 85
     "/repos/" + HUB_REPO + "/actions/workflows/" + HUB_WORKFLOW +
     "/runs?event=workflow_dispatch&per_page=30", token.token, "GET", undefined, deadline);
   if (shouldCoalesceDispatch(recent)) return "coalesced";
+  const inputs = { dry_run: "false" };
+  // Off by default: only enable after the existing main workflow explicitly
+  // declares source_delivery_id. The UUID is a trace hint, not HMAC proof.
+  if (env.KMONG_TRACE_DELIVERY_ID_ENABLED === "true") {
+    inputs.source_delivery_id = deliveryId.toLowerCase();
+  }
   await githubRequest(fetchImpl,
     "/repos/" + HUB_REPO + "/actions/workflows/" + HUB_WORKFLOW + "/dispatches",
-    token.token, "POST", { ref: "main", inputs: { dry_run: "false" } }, deadline);
+    token.token, "POST", { ref: "main", inputs }, deadline);
   return "queued";
 }
 
@@ -228,7 +240,7 @@ export async function receiveWebhook(request, env, fetchImpl = fetch) {
     return answer(503, { status: "dispatch_not_configured" });
   }
   try {
-    const status = await dispatchCentral(env, fetchImpl, 8500, deadline);
+    const status = await dispatchCentral(env, fetchImpl, 8500, deadline, delivery);
     // A 204 means queued; coalesced means NO dispatch, neither implies a completed sync.
     return answer(202, { status });
   } catch {

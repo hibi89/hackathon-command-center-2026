@@ -1,4 +1,6 @@
 name: Kmong hub cross-repository evidence sync
+# An opaque run-name trace hint is not evidence of a verified webhook by itself.
+run-name: ${{ inputs.source_delivery_id && format('Kmong hub sync | delivery:{0}', inputs.source_delivery_id) || 'Kmong hub cross-repository evidence sync' }}
 on:
   workflow_dispatch:
     inputs:
@@ -7,6 +9,11 @@ on:
         type: boolean
         required: true
         default: true
+      source_delivery_id:
+        description: "Optional GitHub webhook delivery UUID for audit correlation only"
+        type: string
+        required: false
+        default: ''
   schedule:
     - cron: '23 * * * *'  # Hourly at :23 UTC/KST, gated by KMONG_SYNC_ENABLED and App API budget
 permissions:

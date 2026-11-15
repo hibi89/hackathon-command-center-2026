@@ -355,6 +355,47 @@ test("signed tracked push queues one hub-only Actions dispatch", async () => {
   assert.equal(requests[3].url, "https://api.github.com/repos/" + HUB_REPO + "/actions/workflows/kmong-hub-sync.yml/dispatches");
   assert.deepEqual(requests[3].body, { ref: "main", inputs: { dry_run: "false" } });
 });
+test("opt-in delivery trace sends validated signed-event UUID as a workflow input", async () => {
+  const { result, requests } = mockGitHub();
+  const response = await receiveWebhook(incoming("push", payload()),
+    { ...env, KMONG_TRACE_DELIVERY_ID_ENABLED: "true" }, result);
+  assert.equal(response.status, 202);
+  assert.equal((await response.json()).status, "queued");
+  assert.equal(requests.length, 4);
+  assert.deepEqual(requests[3].body, {
+    ref: "main", inputs: { dry_run: "false", source_delivery_id: DELIVERY },
+  });
+});
+
+test("opt-in correlation rejects direct invalid IDs before API access", async () => {
+  const { result, requests } = mockGitHub();
+  await assert.rejects(
+    dispatchCentral({ ...env, KMONG_TRACE_DELIVERY_ID_ENABLED: "true" },
+      result, 8500, undefined, "untrusted-not-a-uuid"),
+    /invalid source delivery id/,
+  );
+  assert.equal(requests.length, 0);
+});
+
+test("trace input remains absent unless explicitly enabled", async () => {
+  for (const value of [undefined, "false", "TRUE"]) {
+    const { result, requests } = mockGitHub();
+    const response = await receiveWebhook(incoming("push", payload()),
+      { ...env, KMONG_TRACE_DELIVERY_ID_ENABLED: value }, result);
+    assert.equal(response.status, 202);
+    assert.deepEqual(requests[3].body.inputs, { dry_run: "false" });
+  }
+});
+
+test("main-workflow trace contract is optional and labeled as non-proof", () => {
+  const workflow = readFileSync(
+    new URL("../../../.github/workflows/kmong-hub-sync.yml", import.meta.url), "utf8");
+  assert.match(workflow, /source_delivery_id:/);
+  assert.match(workflow, /required: false\s+default: ''/);
+  assert.match(workflow, /run-name:.*source_delivery_id/);
+  assert.match(workflow, /not evidence of a verified webhook/);
+});
+
 test("dispatch failure never writes token or untrusted exception text to logs", async () => {
   const marker = "SENSITIVE_SIGNING_TOKEN_" + env.KMONG_WEBHOOK_SECRET;
   const request = incoming("push", payload());
