@@ -1,6 +1,19 @@
 > **[HAECHONG_PRIMARY_MISSION_LOCK_V1]** PRIMARY_MISSION=GITHUB_APP_CENTRAL_AUTOMATION_90_TO_100; `ㄱ`/`ㄱㄱ` resumes GitHub App → signed HMAC webhook → Vercel bridge → central Actions → ledger; side-product development requires an explicit NEW owner instruction. `HANDOFF` recency cannot override this lock.
 > **[HAECHONG_NEXT_GATE]** Real signed delivery/E2E and deployed Production SHA remain NOT_VERIFIED; provisional central score=90/100. When Vercel/App access is blocked, only adjacent GitHub App central verification, security, or recovery work may proceed. No automatic pivot to UPTIME OPS or other product.
 
+## [2026-11-15 16:02 KST] HAECHONG_BOT_DISPATCH_LOG_REDACTION_20261115 — central GitHub App handoff
+
+1. Mission and confirmed requirements: Continue GitHub App → signed HMAC Vercel ingress → central Actions → 35/80/29 ledger. Mobile ㄱ resumes this task only. Score provisional 90/100.
+2. Implemented/decision: feature branch receiver error logging replaced untrusted exception text with fixed upstream_unavailable while retaining 502. Rejected old raw-message option because logs may disclose credentials. Added synthetic leak-prevention test.
+3. Actual tests: feature cf2d90ae5f709ca2e824a1b26a163437d9ed75f3, CI #43688060055 Node 44/44 + Python 80/80 = 124 PASS, zero FAIL; blueprint #43688060049 SUCCESS. Real bot runs #43658496602 UPDATED, #43658499842 DEFERRED_BOT_BURST; signed webhook POST NOT_RUN.
+4. Status: Security hardening verified in isolated branch; no merge/Production deploy. Real signed event and delivery-to-action causal correlation BLOCKED by existing Vercel project and GitHub App Recent Deliveries visibility.
+5. Failures/retries/alternatives: no failure in final feature CI. Duplicate bot workflow_dispatch within 3s demonstrates non-atomic upstream de-dup, while downstream correctly skipped scan. Do not retry known Vercel 404 with same credentials. Owner-approved read access to original Vercel project + App delivery history is preferred.
+6. Repo/branch/SHA/paths: hibi89/hackathon-command-center-2026; feature/kmong-webhook-bounded-ingress-20261114@cf2d90ae5f709ca2e824a1b26a163437d9ed75f3; main@69e584e57a3a37fa72b406d62ccddf9eef9dfcf2; operating kmong-productization docs commit confirmed by separate readback. Paths services/kmong-event-bridge/lib/receiver.js and test/receiver.test.js; audit docs/audits/HAECHONG_BOT_DISPATCH_LOG_REDACTION_20261115.md.
+7. Production/runtime: https://kmong-hub-event-bridge.vercel.app/api/webhook, GitHub CI Node22/Python3.11; public GET 200 old SHA 2863165b06d407ba632f18ad7a85a7c98f1989af, new feature READY_SHA_NOT_MATCHED. Real POST/Production rollout unverified.
+8. Original/backups/security: code parent 5553b9d1bb86839a570226978e8191d86fab32b2 retained in Git. No customer secret, token, source data, registration history, main/Production permission or env changes. Operating parent 4ed5dcbf386e73ff071eca6e53bf0a7cd7ba339c.
+9. Next priority/approvals: owner-authorized inspection of existing Vercel team and GitHub App Recent Deliveries. Verify signed delivery UUID and HTTP response, Production SHA, central workflow_dispatch, actual collector UPDATED/NO_CHANGE and ledger readback. Approval required for deploy, merge or access/security changes. No pivot to other products.
+10. Time/source: 2026-11-15 16:02 KST; GitHub REST bot runs and logs, exact feature 124-pass CI and public GET. Real signed HMAC E2E NOT_VERIFIED, official scores unchanged. Final doc SHA by remote readback.
+
 ## [2026-11-15 KST] HAECHONG_APP_WORKFLOW_PATH_HARDENING_20261115 — GitHub App / 10항
 
 1. **목표·확정 요구·기술:** 해총 기본 임무는 GitHub App → 실제 HMAC 웹훅 → Vercel ingress → 중앙 Actions → 원장 실증. `ㄱ`은 GitHub App 전용, 신규 크몽 제품 개발 아님.
