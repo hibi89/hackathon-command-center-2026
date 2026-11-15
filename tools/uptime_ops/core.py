@@ -40,10 +40,17 @@ def checked_address(text, allow_private):
             address.is_unspecified or address.is_reserved or
             (address.version == 6 and address.ipv4_mapped is not None)):
         raise GuardError("loopback, link-local, reserved, mapped or multicast IP denied")
-    if not address.is_global and not (address.is_private and allow_private):
-        raise GuardError("nonpublic IP requires explicit private-target consent")
-    if address.is_private and not allow_private:
-        raise GuardError("private-target consent missing")
+    # is_private also includes several non-RFC1918 special-use ranges; do
+    # not make those reachable merely by enabling private LAN monitoring.
+    approved_lan = (
+        address.version == 4 and any(
+            address in ipaddress.ip_network(cidr) for cidr in
+            ("10.0.0.0/8", "172.16.0.0/12", "192.168.0.0/16"))
+        or address.version == 6 and
+        address in ipaddress.ip_network("fc00::/7")
+    )
+    if not address.is_global and not (allow_private and approved_lan):
+        raise GuardError("nonpublic IP denied unless explicitly pinned RFC1918/ULA")
     return str(address)
 
 

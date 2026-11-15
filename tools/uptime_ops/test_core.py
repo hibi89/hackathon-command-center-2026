@@ -107,6 +107,15 @@ class TargetGuardTests(unittest.TestCase):
             with self.assertRaises(GuardError):
                 load_targets(conf)
 
+    def test_special_use_non_rfc1918_disallowed_even_with_private_consent(self):
+        self.fail(allowed_ips=["192.0.0.1"], allow_private=True)
+        self.fail(allowed_ips=["100.64.0.1"], allow_private=True)
+
+    def test_ipv6_ula_requires_consent_and_pin(self):
+        self.fail(allowed_ips=["fd00::42"])
+        self.assertEqual(build(allowed_ips=["fd00::42"],
+                               allow_private=True).allowed_ips, ("fd00::42",))
+
     def test_no_period_under_30_seconds(self):
         self.fail(interval_seconds=1)
 
