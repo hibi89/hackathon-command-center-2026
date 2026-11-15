@@ -828,13 +828,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "ac087f39ed33cd990b0c8f6c042b005bdc6d6819",
-        "matches_current_head": false,
-        "run_id": 43657990886,
+        "head_sha": "d8a61d583e930755513c05d40b82f21da9270240",
+        "matches_current_head": true,
+        "run_id": 43658719927,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "66c399e429f8700e66626df35535bf217c841d62",
+      "head_sha": "d8a61d583e930755513c05d40b82f21da9270240",
       "machine_evidence_score": {
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
@@ -862,14 +862,14 @@
           "blueprint": {
             "branch": "feature/p0-db-map",
             "git_blob_sha": "8e8e61f30c504fa5fe0acbaa6c85047801e921d6",
-            "head_sha": "66c399e429f8700e66626df35535bf217c841d62",
+            "head_sha": "d8a61d583e930755513c05d40b82f21da9270240",
             "path": "REQUIREMENTS.md",
             "repository": "hibi89/DBVORA"
           },
           "implementation": {
             "branch": "feature/p0-db-map",
             "git_blob_sha": "23312c73af7923ef19a73798d86541176178724d",
-            "head_sha": "66c399e429f8700e66626df35535bf217c841d62",
+            "head_sha": "d8a61d583e930755513c05d40b82f21da9270240",
             "path": "dbvora/api.py",
             "repository": "hibi89/DBVORA"
           }
@@ -2722,13 +2722,13 @@
           "branch": "feature/p0-db-map",
           "gate": {
             "conclusion": "success",
-            "head_sha": "ac087f39ed33cd990b0c8f6c042b005bdc6d6819",
-            "matches_current_head": false,
-            "run_id": 43657990886,
+            "head_sha": "d8a61d583e930755513c05d40b82f21da9270240",
+            "matches_current_head": true,
+            "run_id": 43658719927,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "66c399e429f8700e66626df35535bf217c841d62",
+          "head_sha": "d8a61d583e930755513c05d40b82f21da9270240",
           "status": "PRESENT"
         }
       ]
