@@ -1,6 +1,19 @@
 > **[HAECHONG_PRIMARY_MISSION_LOCK_V1]** PRIMARY_MISSION=GITHUB_APP_CENTRAL_AUTOMATION_90_TO_100; `ㄱ`/`ㄱㄱ` resumes GitHub App → signed HMAC webhook → Vercel bridge → central Actions → ledger; side-product development requires an explicit NEW owner instruction. `HANDOFF` recency cannot override this lock.
 > **[HAECHONG_NEXT_GATE]** Real signed delivery/E2E and deployed Production SHA remain NOT_VERIFIED; provisional central score=90/100. When Vercel/App access is blocked, only adjacent GitHub App central verification, security, or recovery work may proceed. No automatic pivot to UPTIME OPS or other product.
 
+## [2026-11-15 KST] HAECHONG_PRIMARY_MISSION_LOCK_V1 — GitHub App 중심 작업 복귀/10항
+
+1. **목표·확정요구·기술:** 사용자 최우선 임무는 GitHub App source push/workflow_run → 기존 Vercel 서명 HMAC bridge → 중앙 GitHub Actions → read-only collector/원장 동기화, 잠정 90→100. 단문 `ㄱ`/`ㄱㄱ`은 이 임무를 재개하며 최신 보조 상품 HANDOFF를 따르지 않는다.
+2. **완료/변경/선택 근거:** 1) 단순 문서 주의사항만으로는 최신 HANDOFF가 다시 우선순위 이탈 가능(기각), 2) `data/haechong_active_mission_20261115.json` + AGENTS/STATUS/HANDOFF 최상단 2행 잠금 + `tools/haechong_mission_guard/` + 좁은 CI 구현(채택). UPTIME OPS 코드는 보존하되 개발 자동 재개 보류. 핵심 GitHub App/Vercel/권한/cron/Prod 원본 무변경.
+3. **실제 검증:** 코드 SHA `64b00146a91f870d6a5df2c554ead7d6f0331c20`, GitHub Actions [#43685833807](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43685833807) SUCCESS, guard PASS 및 14/14 회귀 PASS/0FAIL. 중앙 실제 schedule 추가 [#43648564945](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43648564945) `NO_CHANGE` 및 [#43669315504](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43669315504) `UPDATED`, 양쪽 모두 80/80 PASS; 최신 원장 blob `89c56b014d43a02b1cf37f08afd9f4a39b3f46ba`, 35/80/29 정상. Live signed HMAC/현재 Production SHA NOT_VERIFIED.
+4. **완료·진행·대기/차단:** 임무 잠금 CI/실제 반복 예약 증거 DONE. 중앙 잠정 기술점수 **90/100 유지**, 보존된 feature webhook 검증 CI 121 PASS. 잔여 10점 live signed E2E는 기존 Vercel 프로젝트 조회권한/Recent Deliveries 접근 미확보로 BLOCKED.
+5. **오류·근거·시도·금지·대안:** HANDOFF 최신 보조작업을 owner primary mission보다 우선시한 작업자 해석 오류. 새 mission guard는 문서 표식 drift를 검사하나 모델 행동 전부/강제 branch protection 보장 아님. 이전 Vercel 목록/개별 ID 요청 404 동일 재시도 금지. 대안은 기존 계정 UI로 확인 또는 사용자 승인된 기존 팀 접근 복구; 신규 프로젝트 생성/비밀 변경 금지.
+6. **저장소·브랜치·SHA·경로:** `hibi89/hackathon-command-center-2026@kmong-productization` mission code SHA `64b00146a91f870d6a5df2c554ead7d6f0331c20`, 현재 docs HEAD 최종 원격 확인 필요. Runtime `main@69e584e57a3a37fa72b406d62ccddf9eef9dfcf2`, isolated webhook `feature/kmong-webhook-bounded-ingress-20261114@9e7e756bd9f4f8dabd517bf327c1488961f3d7a9`; 감사 `docs/audits/HAECHONG_MISSION_LOCK_AND_GITHUB_APP_RESUME_20261115.md`.
+7. **Production·실행 환경:** 기존 `https://kmong-hub-event-bridge.vercel.app/api/webhook`, 실제 새 live GET은 런타임 DNS 불가, 현행 Production 배포 SHA/서명 POST 불확인. GitHub Ubuntu/Python3.11 offline guard CI만 신설. 배포·프리뷰 제어·설정 변경 실행 안 함.
+8. **원본·백업·비밀 보호:** 운영 브랜치 이전 부모 `cf59035fc582d02a60a06bb4a6f06014e6f72b33`와 코드 commit `64b00146...` Git 이력, 원장 관찰 blob, 기존 19SKU/29원천/고객·비밀/권한/점수/등록 모두 보존. 새 public 파일에 토큰·비공개 자료 없음. 되돌림 시 검토된 일반 revert만.
+9. **다음 우선순위·완료 기준·승인:** 가장 먼저 GitHub App 정본/서명 웹훅 E2E; 권한 없으면 해당 프로젝트에 한정된 보안·회복·실증 분석. owner 승인된 Vercel 프로젝트/Recent Deliveries 접근 후 signed Ping→401→ignored→push→Actions→ledger, SHA 검수. 유료/권한 변경/머지/Production 배포/다른 상품 전환은 별도 승인.
+10. **일시·범위·문서기준 커밋:** 2026-11-15 KST, GitHub 원격 HEAD·Actions/jobs/log/원장 비교, 로컬 네트워크 DNS 불가 확인. 14 PASS 및 schedule 2×80 PASS는 해당 검증범위 한정, 실제 signed E2E NOT_RUN; docs readback SHA는 별도 확정.
+
 ## [2026-11-15 15:18 KST] KMONG_UPTIME_OPS_P0_P2_SYNTHETIC_CI_20261115 — 10-item handoff
 
 1. **Goal/final design:** progress the single new UPTIME OPS candidate after preserving existing 29 sources→19 permanent Kmong SKU identities, WebOps SVC-14/07 extensions, sale/approval history, central automation provisional score 90/100.
