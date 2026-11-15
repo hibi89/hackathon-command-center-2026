@@ -42,3 +42,9 @@
 - **웹사이트 품질 점검** (기존 후보 보강): 원본 https://github.com/GoogleChrome/modern-web-guidance-src 및 https://github.com/ChromeDevTools/chrome-devtools-mcp ; 발견일 2026-11-14 재확인; 타깃 웹 제작사/쇼핑몰; 납품 브라우저 증거·품질 보고서; 70,000~200,000원 / 1~2일 추정; 라이선스 미확인·코드 재배포 금지; 차별화 모바일/접근성·재현 절차; 검증 README/LICENSE, 고객 허가, 회귀 테스트.
 - **코드 품질·보안 점검** (기존 후보 보강): 원본 https://github.com/alibaba/open-code-review 및 https://github.com/openai/codex-security ; 발견일 2026-11-14 재확인; 타깃 소형 SaaS; 납품 정적 규칙·오탐 구분 감사; 100,000~350,000원 / 2~4일 추정; 라이선스·API 비용 미확인, 번들 보류; 차별화 증거 기반 위험도; 검증 고객 코드 처리 승인, README/LICENSE, 최근 릴리스, 외부 전송.
 - **서버·NAS 가동률 모니터링 설치** (신규 여부는 기존 원장 확인 필요): 원본 https://github.com/louislam/uptime-kuma ; 발견일 2026-11-14; 타깃 소형 사업장/NAS 사용자; 납품 로컬 모니터링·알림 설정·운영서; 120,000~350,000원 / 1~3일 추정; 라이선스·의존성 상용 조건 미확인, 재배포 보류; 차별화 장애 복구 테스트; 검증 보안 설정, 알림 실동작, Windows/NAS 설치.
+
+
+## 2026-11-15 검증 보강 (기존 후보 갱신 기록; 신규 후보 중복 생성 없음)
+- **웹사이트 품질 점검** — 원본 https://github.com/GoogleChrome/modern-web-guidance-src (2026-11-13 최초 관찰, 2026-11-15 검증), https://github.com/ChromeDevTools/chrome-devtools-mcp (2026-11-14 관찰). 타깃 웹 제작사/쇼핑몰; 납품 브라우저 증거·품질 보고서; 가격 70,000~200,000원/기간 1~2일 추정. 차별화 모바일/접근성 재현. 전자 README 확인, API 라이선스 메타데이터 Apache-2.0, 최근 커밋 2026-11-14 확인, latest release 미확인; 후자 라이선스 미확인. 상업 이용 전 LICENSE 원문·의존성·고객 허가 검증.
+- **코드 품질·보안 점검** — 원본 https://github.com/alibaba/open-code-review (2026-11-14 관찰, 2026-11-15 검증), https://github.com/openai/codex-security (2026-11-13 관찰). 타깃 소형 SaaS; 납품 코드 위치·오탐 구분 감사; 가격 100,000~350,000원/기간 2~4일 추정. 차별화 재현 증거. 전자 README 확인, API 라이선스 메타데이터 Apache-2.0, 릴리스 v1.13.9 확인; 후자 미검증. 모델 약관·고객 코드 외부 전송·LICENSE 원문 필수 검증.
+- **서버·NAS 가동률 모니터링 설치** — 원본 https://github.com/louislam/uptime-kuma (2026-11-14 관찰, 2026-11-15 검증). 타깃 NAS 사용자/소형 사업장; 납품 대시보드·알림·운영서; 가격 120,000~350,000원/기간 1~3일 추정. 차별화 장애 복구 테스트. README 확인, API 라이선스 메타데이터 MIT, 릴리스 2.5.11 확인. LICENSE 원문·의존성·설치 보안·실제 알림 검증 필요.
