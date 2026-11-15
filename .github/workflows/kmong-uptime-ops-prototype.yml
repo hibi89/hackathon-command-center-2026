@@ -1,0 +1,29 @@
+name: Kmong UPTIME OPS isolated prototype safety
+on:
+  push:
+    branches:
+      - kmong-productization
+    paths:
+      - 'tools/uptime_ops/**'
+      - '.github/workflows/kmong-uptime-ops-prototype.yml'
+  pull_request:
+    branches:
+      - kmong-productization
+    paths:
+      - 'tools/uptime_ops/**'
+      - '.github/workflows/kmong-uptime-ops-prototype.yml'
+permissions:
+  contents: read
+jobs:
+  synthetic:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Offline synthetic SSRF, HEAD and SQLite regression
+        run: python3 -B -m unittest discover -s tools/uptime_ops -p 'test_*.py' -v
