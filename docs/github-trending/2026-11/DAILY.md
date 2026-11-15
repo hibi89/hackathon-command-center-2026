@@ -93,3 +93,32 @@
 ### 미확인·제약
 - 공식 TOP20 전체와 실제 당일 순위 미확인. 12개는 GitHub 공식 페이지 **검색 색인**에 노출된 순서이지 확정 순위가 아님.
 - 원본 LICENSE 및 최근 커밋/릴리스 개별 검증 미완료. 기존 30개 후보·69개 조사 이력 유지.
+
+
+## DAILY-2026-11-15
+
+### 사실 — 2026-11-15 10:00 KST 조사
+- 공식 GitHub Trending Today 직접 접근은 제한됨. 검색 색인 결과는 수집일이 명확하지 않거나 2026-11-14 스냅샷과 일치하여 **2026-11-15 공식 TOP20 순위·스타 증가량 1~20위 전부 미확인**. 전날 색인 순위를 오늘 순위로 전용하지 않음.
+- 공식 페이지 검색 색인(날짜 확정 불가)에서 관찰한 12개 저장소: alibaba/open-code-review, GoogleChrome/modern-web-guidance-src, openai/codex-security, ZhuLinsen/daily_stock_analysis, we-promise/sure, backnotprop/plannotator, louislam/uptime-kuma, block/buzz, tradermonty/claude-trading-skills, tailscale/tailcat, Likely7/Veyra-NRVideo, ChromeDevTools/chrome-devtools-mcp. 이들은 **오늘 공식 순위에 포함시키지 않음**. 전날 2026-11-14 섹션과 대조, 신규 관찰 repo 없음.
+- 대체 출처 https://githubtrending.today/ 는 마지막 확인 스냅샷 2026-11-14 06:58 UTC로 **오늘 자료 아님**. 공식 순위와 별도 취급.
+
+### GitHub 저장소 개별 확인 (Trending 순위 확인과 별개)
+| 원본 프로젝트 | 핵심 기능 / 실용 사례 | README | LICENSE / 상업적 조건 | 최근 커밋 | 최근 릴리스 |
+|---|---|---|---|---|---|
+| [GoogleChrome/modern-web-guidance-src](https://github.com/GoogleChrome/modern-web-guidance-src) | 웹 개발 에이전트 모범 사례 / 웹 품질 감사 | 확인 (README.md) | GitHub API 메타데이터 Apache-2.0; 라이선스 본문·의존성 별도 확인 필요 | 5e5cd33a, 2026-11-14 01:16 UTC 확인 | latest API 404, 최신 릴리스 미확인 |
+| [alibaba/open-code-review](https://github.com/alibaba/open-code-review) | 정적 규칙+LLM 코드 리뷰 / 소규모 개발팀 품질 감사 | 확인 (README.md) | GitHub API 메타데이터 Apache-2.0; 라이선스 본문·모델 약관 별도 확인 필요 | d77d70b3, 2026-11-14 12:41 UTC 확인 | v1.13.9, 2026-11-13 09:47 UTC 확인 |
+| [louislam/uptime-kuma](https://github.com/louislam/uptime-kuma) | 셀프호스팅 가동률 모니터링 / NAS·서버 운영 | 확인 (README.md) | GitHub API 메타데이터 MIT; 라이선스 본문·의존성 별도 확인 필요 | 7e5075d1, 2026-11-14 11:48 UTC 확인 | 2.5.11, 2026-11-12 09:20 UTC 확인 |
+
+나머지 9개 저장소는 README/LICENSE/최근 커밋/릴리스 **이번 실행 개별 미확인**. 스타 증가량은 **2026-11-15 기준 전부 미확인**.
+
+### 분석 — 기존 제품 연계 (구현·호환성 미검증)
+- HAE/PayPal WORKNOVA: plannotator 승인·검수 흐름; SOVIA/DBVORA: open-code-review, codex-security 정적·보안 감사; REA_WEB: modern-web-guidance-src, chrome-devtools-mcp 브라우저 품질.
+- KIC/candle_scraper: daily_stock_analysis, claude-trading-skills 리서치 절차 참고(투자 조언과 분리); UGREEN: uptime-kuma 로컬 NAS 감시. 기존 저장소 의존 없는 독립 상품은 아래 3개로 분리.
+
+### 제안 — 독립 판매 TOP3 (추정)
+1. **웹 품질·브라우저 감사**: 고객 쇼핑몰/웹 제작사; 납품 재현 스크린샷·오류/접근성·수정 우선순위 보고서; 7만~20만원, 1~2일, 난이도 중. 출처 modern-web-guidance-src, chrome-devtools-mcp. 차별화 실브라우저 재현. Apache-2.0 메타데이터 확인(전자는), 후자는 미확인. 검증: 고객 URL 테스트 허가, 개인정보 비수집, 라이선스 원문/의존성, 모바일 재현.
+2. **코드 품질·보안 감사**: 고객 소규모 SaaS/개발팀; 납품 정적 규칙·재현 근거·오탐 분류 보고서; 10만~35만원, 2~4일, 난이도 중상. 출처 open-code-review, codex-security. 차별화 자동 판정과 전문가 검증 분리. 전자는 Apache-2.0 메타데이터 확인, 후자는 미확인; 외부 LLM 호출·고객 소스 전송 금지. 검증: 고객 명시 동의, 코드 로컬 처리, LICENSE/모델 약관, 취약점 재현.
+3. **NAS·서버 모니터링 설치**: 고객 NAS·소규모 사업장; 납품 가동률 화면·알림·복구 매뉴얼; 12만~35만원, 1~3일, 난이도 중. 출처 uptime-kuma. 차별화 장애 복구 시연. MIT 메타데이터 확인, 라이선스 본문·의존성·배포 조건 추가 검증. 검증: 고객 접근 권한, 알림 전달, 백업/복구, 네트워크 노출 점검.
+
+### 제한
+공식 2026-11-15 TOP20은 확인되지 않아 순위·스타 증가는 생성하지 않음. 코드/배포/CI/권한 변경 및 유료 API 호출 없음.
