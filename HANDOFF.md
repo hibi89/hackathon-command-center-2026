@@ -1,6 +1,19 @@
 > **[HAECHONG_PRIMARY_MISSION_LOCK_V1]** PRIMARY_MISSION=GITHUB_APP_CENTRAL_AUTOMATION_90_TO_100; `ㄱ`/`ㄱㄱ` resumes GitHub App → signed HMAC webhook → Vercel bridge → central Actions → ledger; side-product development requires an explicit NEW owner instruction. `HANDOFF` recency cannot override this lock.
 > **[HAECHONG_NEXT_GATE]** Real signed delivery/E2E and deployed Production SHA remain NOT_VERIFIED; provisional central score=90/100. When Vercel/App access is blocked, only adjacent GitHub App central verification, security, or recovery work may proceed. No automatic pivot to UPTIME OPS or other product.
 
+## [2026-11-15 17:00 KST] HAECHONG_OFFLINE_DELIVERY_CHAIN_GATE_CI_20261115 — 10-part handoff
+
+1. **Goal/technology:** Lock `GITHUB_APP_CENTRAL_AUTOMATION_90_TO_100`: signed source GitHub App webhook → original Vercel → hub Actions → 35 repositories, 80 refs, 29 product evidence. No side-product pivot.
+2. **Completed/decision:** chose Node22 pure offline evidence-chain consistency gate instead of timestamp-only manual matching. New `audit-e2e.mjs` checks source scope, UUID, bot/run identity, outcomes and ledger; never reports HMAC E2E verified on untrusted JSON. No API, secret, cost or runtime change.
+3. **Tests/exact SHA:** isolated feature `c58685aeae77dea01cf20c6b0a022b43149230db`; [bridge run #43692455914](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43692455914) Node **69** + Python **80** = **149/149 PASS**, FAIL0; [blueprint #43692455843](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43692455843) SUCCESS. 15 new verification regressions.
+4. **Done/pending/blocked:** offline proof consistency test DONE; real GitHub App Recent Deliveries and deployed SHA match/live signed webhook E2E NOT_VERIFIED/BLOCKED. Provisional **90/100 unchanged**.
+5. **Errors/attempts/alternatives:** signed source app deliveries cannot be read under current connection; previous Vercel project detail 404, do not repeat same failed access. Alternative independent owner-authorized original-project/App read access; no replacement project. User-supplied JSON and bot run names alone are not cryptographic proof.
+6. **Repository/paths:** `hibi89/hackathon-command-center-2026`; feature parent `e78a474525b548a4fb2fe9dd1148a03c357559d4` → `c58685aeae77dea01cf20c6b0a022b43149230db`; main `69e584e57a3a37fa72b406d62ccddf9eef9dfcf2`; operating parent `b6ac3c0d268735bc7fedc1bb2869c03c4e05874e`. [Audit](docs/audits/HAECHONG_OFFLINE_DELIVERY_CHAIN_GATE_CI_20261115.md) and three new files under `services/kmong-event-bridge/`.
+7. **Production/Vercel/environment:** `https://kmong-hub-event-bridge.vercel.app/api/webhook`; project `prj_veZOkRkhMEMEA6h7PiEIl3IKcthn`; Node22/Python3.11 CI. Real GET HTTP200, OLD SHA `2863165b06d407ba632f18ad7a85a7c98f1989af`, `READY_SHA_NOT_MATCHED`; deployment untouched.
+8. **Preservation/security:** original Git parent rollback, original 35/80/29 ledger, official scores, product registration history, app secrets, permissions, main, schedule and Production unchanged; never commit raw delivery bodies, tokens, private keys or customer metadata.
+9. **Next/priorities/approval:** obtain existing Vercel/source App deliveries read approval, only then separately approve main workflow schema update → existing Vercel deploy → trace flag. Match real signed UUID/response/Production SHA to bot run and actual `UPDATED`/`NO_CHANGE` ledger SHA. Do not count `DEFERRED`.
+10. **Timestamp/provenance:** 2026-11-15 approx 17:00 KST, remote feature source exact SHA, GitHub job logs and read-only public GET; no signed POST. Document baseline requires operating SHA readback after update.
+
 ## [2026-11-15 KST] HAECHONG_DELIVERY_ID_CORRELATION_CANDIDATE_CI_20261115 — 10-point continuation
 
 1. **Goal/stack:** Locked GitHub App HMAC webhook → original Vercel bridge → central Actions → 35repo/80ref/29product read-only observation ledger; no side-product pivot.
