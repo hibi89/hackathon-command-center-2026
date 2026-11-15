@@ -1,6 +1,19 @@
 > **[HAECHONG_PRIMARY_MISSION_LOCK_V1]** PRIMARY_MISSION=GITHUB_APP_CENTRAL_AUTOMATION_90_TO_100; `ㄱ`/`ㄱㄱ` resumes GitHub App → signed HMAC webhook → Vercel bridge → central Actions → ledger; side-product development requires an explicit NEW owner instruction. `HANDOFF` recency cannot override this lock.
 > **[HAECHONG_NEXT_GATE]** Real signed delivery/E2E and deployed Production SHA remain NOT_VERIFIED; provisional central score=90/100. When Vercel/App access is blocked, only adjacent GitHub App central verification, security, or recovery work may proceed. No automatic pivot to UPTIME OPS or other product.
 
+## [2026-11-15 KST] HAECHONG_APP_WORKFLOW_PATH_HARDENING_20261115 — GitHub App / 10항
+
+1. **목표·확정 요구·기술:** 해총 기본 임무는 GitHub App → 실제 HMAC 웹훅 → Vercel ingress → 중앙 Actions → 원장 실증. `ㄱ`은 GitHub App 전용, 신규 크몽 제품 개발 아님.
+2. **완료·변경·선택 근거:** 격리 브랜치 `eligibleEvent("workflow_run")`에서 다른 파일 경로인데 동일한 display name만으로 허용하는 결함 발견. A 이름 OR 경로 유지(오인 실행 위험) 대 B 제공된 경로 엄격 검사·경로 없을 때만 이름 fallback(선택). `services/kmong-event-bridge/lib/receiver.js` + `test/receiver.test.js` 두 회귀 추가. 실서명 검증과 권한 경계 유지.
+3. **테스트·성공/실패:** 첫 SHA `983450bf7e95432ebcca95762fc28ce2fc2f236d` CI [#43686890654](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43686890654) Regex SyntaxError/FAIL. 수정 후 **최종 기능 SHA `5553b9d1bb86839a570226978e8191d86fab32b2`** [#43686959469](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43686959469) Node **43/43 PASS** + Python **80/80 PASS** = **123/123, FAIL0**, [Gate #43686959426](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43686959426) SUCCESS. 실제 서명 GitHub App 전송·Vercel POST **NOT_RUN**.
+4. **완료·진행·대기·차단:** 경로 허용 결함/회귀 DONE. 격리 후보 코드는 미병합·Production 미배포. 기존 프로젝트 조회 404/실제 Delivery 증거 부재로 signed E2E 차단, 중앙 잠정 **90/100** 고정.
+5. **오류 근거·원인·재시도 금지·대안:** 코드 생성 시 regex 이중 escape → 최초 CI FAIL; 정확 원격 로그 확인 후 1회 수정/재검증 성공. 기존 Vercel 팀 프로젝트 목록 및 ID 경로 404 재시도 금지; owner가 기존 Vercel 팀/Recent Deliveries 접근을 승인·확인하도록 대기. 새 프로젝트·비밀·권한 변경 금지.
+6. **저장소·브랜치·SHA·경로:** `hibi89/hackathon-command-center-2026`, feature `feature/kmong-webhook-bounded-ingress-20261114@5553b9d1bb86839a570226978e8191d86fab32b2`, main `69e584e57a3a37fa72b406d62ccddf9eef9dfcf2`, operations `kmong-productization` 최종 docs SHA는 readback 확인. 감사 `docs/audits/HAECHONG_APP_WORKFLOW_PATH_HARDENING_20261115.md`, 수신부 `services/kmong-event-bridge/lib/receiver.js`.
+7. **Production URL·실행·환경:** `https://kmong-hub-event-bridge.vercel.app/api/webhook`, GitHub Actions Node22·Python3.11. 새 CI Runner의 실제 GET 200, `READY_SHA_NOT_MATCHED`, deployed `2863165b06d407ba632f18ad7a85a7c98f1989af`; 서명 POST/로그/현재 Vercel 프로젝트 관리 미검증.
+8. **원본·백업·인증 관리:** 격리 브랜치 시작 `9e7e756bd9f4f8dabd517bf327c1488961f3d7a9` 및 실패 중간 `983450bf...`를 부모 이력으로 보존. 중앙 원장 JSON/29원천→19SKU/판매이력·고객정보·비밀·원본과 권한·cron·본선·Prod 변경0. 토큰/PEM 저장 없음.
+9. **다음 우선순위·완료 기준·승인:** 실서명 GitHub App Recent Deliveries + 기존 Vercel Production 정확 SHA 및 signed ping401/ignore/push/Action SUCCESS/ledger readback. 보안 feature merge·배포·계정 재인가·시크릿·권한은 별도 사용자 승인. 차단 시 앱 한정 코드 보안/재현 검증만, 타상품 개발 전환 안 함.
+10. **갱신·확인 범위:** 2026-11-15 KST; GitHub 소스/실행 이력/Node43·Python80·GET probe/블롭 readback. CI PASS는 코드 단계, Production mismatch는 GET 관측만, full HMAC E2E NOT_VERIFIED. 기준 코드 SHA `5553b9d1bb86839a570226978e8191d86fab32b2`, 최종 문서 커밋은 별도 확인.
+
 ## [2026-11-15 KST] HAECHONG_PRIMARY_MISSION_LOCK_V1 — GitHub App 중심 작업 복귀/10항
 
 1. **목표·확정요구·기술:** 사용자 최우선 임무는 GitHub App source push/workflow_run → 기존 Vercel 서명 HMAC bridge → 중앙 GitHub Actions → read-only collector/원장 동기화, 잠정 90→100. 단문 `ㄱ`/`ㄱㄱ`은 이 임무를 재개하며 최신 보조 상품 HANDOFF를 따르지 않는다.
