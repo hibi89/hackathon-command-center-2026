@@ -108,3 +108,9 @@
 | tailscale/tailcat | 2026-11-14 | https://github.com/tailscale/tailcat | GitHub 공식 Trending 검색 색인 표시; README/LICENSE/최근 커밋 미검증 |
 | Likely7/Veyra-NRVideo | 2026-11-14 | https://github.com/Likely7/Veyra-NRVideo | GitHub 공식 Trending 검색 색인 표시; README/LICENSE/최근 커밋 미검증 |
 | ChromeDevTools/chrome-devtools-mcp | 2026-11-14 | https://github.com/ChromeDevTools/chrome-devtools-mcp | GitHub 공식 Trending 검색 색인 표시; README/LICENSE/최근 커밋 미검증 |
+
+
+## 2026-11-15 검증 갱신 (신규 저장소 0개; 과거 기록 보존)
+| GoogleChrome/modern-web-guidance-src | 2026-11-15 | https://github.com/GoogleChrome/modern-web-guidance-src | 기존 관찰 저장소 재검증: README 확인; API LICENSE Apache-2.0; 최근 커밋 확인; 최신 릴리스 미확인; 당일 Trending 순위 미확인 |
+| alibaba/open-code-review | 2026-11-15 | https://github.com/alibaba/open-code-review | 기존 관찰 저장소 재검증: README 확인; API LICENSE Apache-2.0; 최근 커밋 및 v1.13.9 릴리스 확인; 당일 Trending 순위 미확인 |
+| louislam/uptime-kuma | 2026-11-15 | https://github.com/louislam/uptime-kuma | 기존 관찰 저장소 재검증: README 확인; API LICENSE MIT; 최근 커밋 및 2.5.11 릴리스 확인; 당일 Trending 순위 미확인 |
