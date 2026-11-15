@@ -21,6 +21,17 @@ export function verifySignature(raw, provided, secret) {
   return received.length === expected.length && timingSafeEqual(received, expected);
 }
 
+
+// A workflow_run path is either root-relative or prefixed with its exact repo.
+// A trailing @ref is common in GitHub delivery data, but arbitrary prefixes,
+// nested .github directories and case-changed filenames are not allowed.
+export function approvedBlueprintWorkflowPath(path, fullName) {
+  if (typeof path !== "string" || typeof fullName !== "string") return false;
+  const match = /^(?:([^/\s@]+\/[^/\s@]+)\/)?\.github\/workflows\/final-blueprint-gate\.ya?ml(?:@[A-Za-z0-9._/-]+)?$/.exec(path);
+  if (!match) return false;
+  return !match[1] || match[1].toLowerCase() === fullName.toLowerCase();
+}
+
 export function eligibleEvent(kind, data) {
   if (!data || typeof data !== "object" || !data.repository ||
       typeof data.repository.full_name !== "string") {
@@ -57,7 +68,7 @@ export function eligibleEvent(kind, data) {
     // Explicit workflow paths outrank display names: a different workflow may
     // reuse the same name, but must never dispatch the central collector.
     // Fall back to the legacy name only when GitHub sends no path at all.
-    if (path) return /(^|\/)\.github\/workflows\/final-blueprint-gate\.ya?ml(?:@[^ ]*)?$/i.test(path);
+    if (path) return approvedBlueprintWorkflowPath(path, fullName);
     return run.name === "Final blueprint completion evidence gate";
   }
   return false;

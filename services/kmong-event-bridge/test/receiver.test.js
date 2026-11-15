@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { createHmac, createPrivateKey, createPublicKey, createVerify, generateKeyPairSync } from "node:crypto";
 import { readFileSync } from "node:fs";
 import roster from "../source_repositories.json" with { type: "json" };
-import { HUB_REPO, verifySignature, eligibleEvent, signAppJwt, health, receiveWebhook, dispatchCentral, shouldCoalesceDispatch } from "../lib/receiver.js";
+import { HUB_REPO, verifySignature, eligibleEvent, signAppJwt, health, receiveWebhook, dispatchCentral, shouldCoalesceDispatch, approvedBlueprintWorkflowPath } from "../lib/receiver.js";
 
 const SOURCE = roster.repositories.find((r) => r.repository.toLowerCase() !== HUB_REPO.toLowerCase() && r.branches.length > 0);
 const HUB = roster.repositories.find((r) => r.repository.toLowerCase() === HUB_REPO.toLowerCase());
@@ -228,6 +228,64 @@ test("matching source head and base repositories remain eligible", () => {
     ...event, workflow_run: { ...event.workflow_run,
       repository: { full_name: "untrusted/base" } },
   }), false);
+});
+
+test("workflow path is anchored to GitHub root and the exact event repository", () => {
+  const fullName = SOURCE.repository;
+  for (const valid of [
+    ".github/workflows/final-blueprint-gate.yml",
+    ".github/workflows/final-blueprint-gate.yaml@refs/heads/main",
+    fullName + "/.github/workflows/final-blueprint-gate.yml@main",
+    fullName.toUpperCase() + "/.github/workflows/final-blueprint-gate.yml",
+  ]) assert.equal(approvedBlueprintWorkflowPath(valid, fullName), true, valid);
+  for (const invalid of [
+    "other/repository/.github/workflows/final-blueprint-gate.yml@main",
+    "nested/.github/workflows/final-blueprint-gate.yml",
+    fullName + "/nested/.github/workflows/final-blueprint-gate.yml",
+    fullName + "/.github/workflows/FINAL-BLUEPRINT-GATE.yml",
+    fullName + "/.github/workflows/final-blueprint-gate.yml@refs/heads/main@extra",
+    fullName + "/.github/workflows/final-blueprint-gate.yml\nignored",
+    ".github/workflows/final-blueprint-gate.yml.bak",
+    ".github/workflows/../workflows/final-blueprint-gate.yml",
+    "",
+  ]) assert.equal(approvedBlueprintWorkflowPath(invalid, fullName), false, invalid);
+});
+
+test("signed workflow_run whose path claims another repository cannot dispatch", async () => {
+  const { result, requests } = mockGitHub();
+  const p = {
+    repository: { full_name: SOURCE.repository },
+    action: "completed",
+    workflow_run: {
+      head_branch: SOURCE.branches[0],
+      head_repository: { full_name: SOURCE.repository },
+      repository: { full_name: SOURCE.repository },
+      path: "other/repository/.github/workflows/final-blueprint-gate.yml@main",
+      name: "Final blueprint completion evidence gate",
+    },
+  };
+  const response = await receiveWebhook(incoming("workflow_run", p), env, result);
+  assert.equal(response.status, 202);
+  assert.equal((await response.json()).status, "ignored");
+  assert.equal(requests.length, 0);
+});
+
+test("signed canonical prefixed workflow_run still dispatches through GitHub App", async () => {
+  const { result, requests } = mockGitHub();
+  const p = {
+    repository: { full_name: SOURCE.repository },
+    action: "completed",
+    workflow_run: {
+      head_branch: SOURCE.branches[0],
+      head_repository: { full_name: SOURCE.repository },
+      repository: { full_name: SOURCE.repository },
+      path: SOURCE.repository + "/.github/workflows/final-blueprint-gate.yml@refs/heads/main",
+    },
+  };
+  const response = await receiveWebhook(incoming("workflow_run", p), env, result);
+  assert.equal(response.status, 202);
+  assert.equal((await response.json()).status, "queued");
+  assert.equal(requests.length, 4);
 });
 
 test("JWT is signed RS256 and has constrained lifetime", () => {
