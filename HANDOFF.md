@@ -1,6 +1,19 @@
 > **[HAECHONG_PRIMARY_MISSION_LOCK_V1]** PRIMARY_MISSION=GITHUB_APP_CENTRAL_AUTOMATION_90_TO_100; `ㄱ`/`ㄱㄱ` resumes GitHub App → signed HMAC webhook → Vercel bridge → central Actions → ledger; side-product development requires an explicit NEW owner instruction. `HANDOFF` recency cannot override this lock.
 > **[HAECHONG_NEXT_GATE]** Real signed delivery/E2E and deployed Production SHA remain NOT_VERIFIED; provisional central score=90/100. When Vercel/App access is blocked, only adjacent GitHub App central verification, security, or recovery work may proceed. No automatic pivot to UPTIME OPS or other product.
 
+## [2026-11-15 KST] HAECHONG_DELIVERY_ID_CORRELATION_CANDIDATE_CI_20261115 — 10-point continuation
+
+1. **Goal/stack:** Locked GitHub App HMAC webhook → original Vercel bridge → central Actions → 35repo/80ref/29product read-only observation ledger; no side-product pivot.
+2. **Delivered and decision:** selected optional delivery-ID trace over timestamp-only matching because timestamp/actor cannot unambiguously associate bot bursts; new UUID field to workflow inputs/run-name, opt-in default OFF, zero additional API calls or permissions. Only isolated feature source changed, no Production.
+3. **Tests:** `e78a474525b548a4fb2fe9dd1148a03c357559d4`; [bridge CI #43691572769](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43691572769) Node54/54 + Python80/80 = **134 PASS**, FAIL0; [blueprint gate #43691572807](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43691572807) SUCCESS. New 4 cases cover enabled, disabled, invalid UUID before API, optional workflow schema.
+4. **Done/pending/blocked:** isolated trace candidate PASS; main workflow declaration and Production deployment NOT_APPLIED; live signed delivery causal E2E BLOCKED/NOT_VERIFIED, central 90/100 unchanged.
+5. **Errors and alternatives:** missing causal ID prevents exact trace; timestamp-only approach insufficient; existing Vercel project read 404 under current connection, same-credential 404 must not be repeated. Toggle before main workflow schema merge can cause dispatch 422. Use owner-approved existing-project access and ordered rollout.
+6. **Repo/branches/SHA/paths:** `hibi89/hackathon-command-center-2026`; feature `e78a474525b548a4fb2fe9dd1148a03c357559d4`; main `69e584e57a3a37fa72b406d62ccddf9eef9dfcf2`; op parent `f0ab2771bb61c936e7c0077eddf408bf44ab0491`. Four files listed in [audit](docs/audits/HAECHONG_DELIVERY_ID_CORRELATION_CANDIDATE_CI_20261115.md).
+7. **Production URL/environment:** `https://kmong-hub-event-bridge.vercel.app/api/webhook`, existing project `prj_veZOkRkhMEMEA6h7PiEIl3IKcthn`, Node22/Python3.11; actual CI public GET 200/READY_SHA_NOT_MATCHED/deployed `2863165b06d407ba632f18ad7a85a7c98f1989af`.
+8. **Preservation/security:** existing ledger, product registrations, official percentages, main, secrets, GitHub App/permissions, Vercel env and deploy unchanged; Git parent `00d77962` is rollback baseline. Delivery UUID alone is not verified webhook proof.
+9. **Next/acceptance/owner approval:** owner-approved access to existing Vercel+App deliveries; approve main schema first, then Vercel deployment, then trace flag. Match real UUID→signed delivery→Production SHA/log→bot Actions run→collector UPDATED/NO_CHANGE→ledger SHA. Never count DEFERRED as synced.
+10. **KST/source:** 2026-11-15 KST; exact GitHub CI job logs and source SHA, authored commit readback, Production GET inside CI. Audit document [here](docs/audits/HAECHONG_DELIVERY_ID_CORRELATION_CANDIDATE_CI_20261115.md); operating document commit SHA to be verified after write.
+
 ## [2026-11-15 16:28 KST] HAECHONG_WORKFLOW_PATH_EXACT_ROOT_CI_20261115 — GitHub App 10-item handoff
 
 1. **Goal/final design:** Owner-assigned central task: GitHub App events → Vercel signed HMAC receiver → central workflow_dispatch → 35 repos, 80 refs, 29 product observation ledger. `ㄱ`/`ㄱㄱ` always resumes this work; not side-product development.
