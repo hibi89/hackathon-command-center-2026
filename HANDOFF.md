@@ -1,3 +1,16 @@
+## [2026-11-15 KST] EFFORT_IDEA_PARKED_20261115 — 외출·모바일 재개 인수인계 (10항)
+
+1. **목표·확정요청:** 중앙 총괄의 기존 GitHub 자동화 실증/크몽 상품화 개발·검증은 유지. 완성률 표시가 70→85→95→100 구간마다 실제 잔여 시간과 어긋나므로 예상 공수 기반 보조 척도를 **아이디어로만 저장**, 지금 적용·수치 변경 금지.
+2. **완료·결정:** [공수 진척률 아이디어](docs/strategy/ESTIMATED_EFFORT_BASED_COMPLETION_IDEA_20261115.md) 신규 기록. 실제 소모시간÷총예상시간이 아니라 **검증 완료 항목의 기준 계획 공수÷최종설계 전체 계획 공수** 시험용 지표 + 남은 공수/대기/임계경로를 공식 승인 가중치와 별도 표기 제안. 공식 원칙 [OWNER-FINAL-BLUEPRINT-100](docs/strategy/FINAL_BLUEPRINT_COMPLETION_STANDARD_20261113.md) 변경 금지.
+3. **검증:** 신규 문서 GitHub commit `cdf587f0ef61fb98fc54d906d09283f80680f085` 후 원격 blob 내용 동일 확인. 공식 점수 재계산, 실제 공수 추정, 코드·CI·상용·브라우저 테스트 **NOT_RUN**.
+4. **현재 상태:** 공수 기준 도입 **IDEA ONLY / DEFERRED**. 기존 중앙 자동화 잠정 **90/100**(서로 다른 2회 예약 실행 검증), 실 서명 HMAC webhook E2E 미검증; 기존 19 SKU 등록 0, WebOps QA 360 기획/UPTIME OPS 후보 등록만 완료, 새 앱 미개발·RELEASE HOLD.
+5. **차단·대안:** Vercel 기존 webhook 프로젝트 `prj_veZOkRkhMEMEA6h7PiEIl3IKcthn` 조회 접근 부족; 반복 404 시도 금지. 기존 권한으로 read-only 증거/기존 GitHub 액션 검증을 먼저 하고, Vercel 연결 복구/권한 변경·실 Production 웹훅·배포는 별도 승인.
+6. **원격 기준:** `hibi89/hackathon-command-center-2026@kmong-productization`, 공수 문서 커밋 `cdf587f0ef61fb98fc54d906d09283f80680f085`; 기존 해총 본체 `main@69e584e57a3a37fa72b406d62ccddf9eef9dfcf2` (2026-11-15 검증 이력, 최신여부 다음 채팅에서 확인), 코드개선 격리 `feature/kmong-webhook-bounded-ingress-20261114@9e7e756bd9f4f8dabd517bf327c1488961f3d7a9`. 이번 문서 인수인계 최종 SHA는 마지막 원격 HEAD 확인 필요.
+7. **운영 환경:** 기존 webhook `https://kmong-hub-event-bridge.vercel.app/api/webhook` (과거 GET200, 이번에는 Production 최신 배포 SHA/인증·서명 POST 재검증 안 함). GitHub 원장 `data/kmong_hub_auto_observations.json`; 35 repo/80 ref/29 제품 기록은 마지막 완료된 수집 기준이며 재확인 전 최신을 단정하지 않는다.
+8. **원본·비밀/백업:** `main`, 원천 저장소, 공식 요구·가중치, 29 원천→19 SKU, 고객 원본·비공개 코드, 토큰, Vercel/앱 권한, 유료 API, 크몽 등록/GO 이력 모두 보존. 이력 취소 필요 시 해당 docs 커밋 기준 일반 revert만 검토(무단 force push 없음).
+9. **다음 `ㄱ` 즉시 작업:** `HANDOFF.md`→`STATUS.md`→`AGENTS.md`→`REQUIREMENTS.md` 및 현재 원격 SHA 확인 → 중앙 90/100 이후 실제 서명 E2E 차단 요인과 연결 가능 범위 읽기전용 점검, 미검증 Production을 PASS로 간주하지 않기 → 독립적으로 진척 가능한 기존 크몽 19 SKU/UPTIME OPS 후보 P0~P4 중 안전한 검증·기획·문서/코드 최소수정 업무를 수행. 실행 결과에 따라 검증 범위/명령·SHA·PASS/FAIL과 남은 문제를 즉시 보고. 사용자가 **공수 도입을 별도 지시하지 않으면** 아이디어 문서만 두고 기존 작업 우선. 외출 중 사용자 PC 조작 금지; 필요한 승인/로컬 테스트는 모아서 나중에.
+10. **기준 일시·검증 범위:** 2026-11-15 KST, `kmong-productization` 원격 문서 조회/신규 아이디어 blob readback만. 신규 브랜치/배포·원본 코드·CI/테스트·외부 API/권한/고객 자료 처리 없음. 마지막 인수인계 커밋과 브랜치 HEAD는 후속 GitHub 원격 조회로 최종 판정.
+
 ## [2026-11-15 KST] KMONG-TREND-3IN1-20261115 — 10-point product-intake handoff
 
 1. **목표·기술·확정요청:** 사용자 제공 웹 품질 감사/코드 보안 감사/서버·NAS 가동률 감시 3기술을 중복 없이 해총 크몽 개발 상품 후보로 편입. 현행 29 원천→19 SKU 정본 보존.
