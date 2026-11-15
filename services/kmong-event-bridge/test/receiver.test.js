@@ -240,6 +240,27 @@ test("signed tracked push queues one hub-only Actions dispatch", async () => {
   assert.equal(requests[3].url, "https://api.github.com/repos/" + HUB_REPO + "/actions/workflows/kmong-hub-sync.yml/dispatches");
   assert.deepEqual(requests[3].body, { ref: "main", inputs: { dry_run: "false" } });
 });
+test("dispatch failure never writes token or untrusted exception text to logs", async () => {
+  const marker = "SENSITIVE_SIGNING_TOKEN_" + env.KMONG_WEBHOOK_SECRET;
+  const request = incoming("push", payload());
+  const log = [];
+  const original = console.error;
+  console.error = (...parts) => { log.push(parts.map(String).join(" ")); };
+  try {
+    const response = await receiveWebhook(request, env, async () => {
+      throw new Error("upstream failed: Authorization: Bearer " + marker);
+    });
+    assert.equal(response.status, 502);
+    assert.equal((await response.json()).status, "dispatch_failed");
+  } finally {
+    console.error = original;
+  }
+  assert.equal(log.length, 1);
+  assert.equal(log[0], "kmong webhook dispatch failed: upstream_unavailable");
+  assert.equal(log.join(" ").includes(marker), false);
+  assert.equal(log.join(" ").includes(env.KMONG_WEBHOOK_SECRET), false);
+});
+
 test("API failure is surfaced and does not claim queue success", async () => {
   const { result, requests } = mockGitHub({ errorAt: 3 });
   const response = await receiveWebhook(incoming("push", payload()), env, result);

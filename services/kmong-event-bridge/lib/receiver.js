@@ -212,8 +212,10 @@ export async function receiveWebhook(request, env, fetchImpl = fetch) {
     const status = await dispatchCentral(env, fetchImpl, 8500, deadline);
     // A 204 means queued; coalesced means NO dispatch, neither implies a completed sync.
     return answer(202, { status });
-  } catch (error) {
-    console.error("kmong webhook dispatch failed:", error instanceof Error ? error.message : "unknown");
+  } catch {
+    // Never log thrown error messages: fetch/response exceptions may contain
+    // Authorization headers, App tokens, or user-supplied webhook data.
+    console.error("kmong webhook dispatch failed: upstream_unavailable");
     return answer(502, { status: "dispatch_failed" });
   }
 }
