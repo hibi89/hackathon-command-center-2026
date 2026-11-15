@@ -45,11 +45,19 @@ export function eligibleEvent(kind, data) {
     if (data.action !== "completed" || !data.workflow_run) return false;
     const run = data.workflow_run;
     if (typeof run.head_branch !== "string" || !branches.has(run.head_branch)) return false;
+    // GitHub signs the envelope, but a workflow_run may represent a fork or
+    // different head repository whose branch name happens to match our roster.
+    // Compare both repository identities when GitHub supplies the metadata.
+    for (const origin of [run.head_repository, run.repository]) {
+      if (origin !== undefined &&
+          (typeof origin?.full_name !== "string" ||
+           origin.full_name.toLowerCase() !== fullName)) return false;
+    }
     const path = String(run.path || data.workflow?.path || "");
     // Explicit workflow paths outrank display names: a different workflow may
     // reuse the same name, but must never dispatch the central collector.
     // Fall back to the legacy name only when GitHub sends no path at all.
-    if (path) return /(^|\/)final-blueprint-gate\.ya?ml(?:@[^ ]*)?$/i.test(path);
+    if (path) return /(^|\/)\.github\/workflows\/final-blueprint-gate\.ya?ml(?:@[^ ]*)?$/i.test(path);
     return run.name === "Final blueprint completion evidence gate";
   }
   return false;

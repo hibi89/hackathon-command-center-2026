@@ -174,6 +174,62 @@ test("HMAC-signed unrelated workflow with matching display name is ignored witho
   assert.equal(requests.length, 0);
 });
 
+test("workflow_run full path must resolve to configured GitHub workflow directory", () => {
+  const make = (path) => ({
+    repository: { full_name: SOURCE.repository },
+    action: "completed",
+    workflow_run: { head_branch: SOURCE.branches[0],
+      path, name: "Final blueprint completion evidence gate" },
+  });
+  for (const path of [
+    SOURCE.repository + "/docs/final-blueprint-gate.yml@main",
+    SOURCE.repository + "/arbitrary/final-blueprint-gate.yml@main",
+    ".github/workflows/final-blueprint-gate.yml.backup",
+    SOURCE.repository + "/.github/workflows-other/final-blueprint-gate.yml@main",
+  ]) assert.equal(eligibleEvent("workflow_run", make(path)), false, path);
+  for (const path of [
+    ".github/workflows/final-blueprint-gate.yml",
+    SOURCE.repository + "/.github/workflows/final-blueprint-gate.yaml@main",
+  ]) assert.equal(eligibleEvent("workflow_run", make(path)), true, path);
+});
+
+test("signed workflow_run from different head repository is ignored", async () => {
+  const { result, requests } = mockGitHub();
+  const event = {
+    repository: { full_name: SOURCE.repository },
+    action: "completed",
+    workflow_run: {
+      head_branch: SOURCE.branches[0],
+      path: SOURCE.repository + "/.github/workflows/final-blueprint-gate.yml@main",
+      head_repository: { full_name: "untrusted/fork" },
+      repository: { full_name: SOURCE.repository },
+    },
+  };
+  assert.equal(eligibleEvent("workflow_run", event), false);
+  const response = await receiveWebhook(incoming("workflow_run", event), env, result);
+  assert.equal(response.status, 202);
+  assert.equal((await response.json()).status, "ignored");
+  assert.equal(requests.length, 0);
+});
+
+test("matching source head and base repositories remain eligible", () => {
+  const event = {
+    repository: { full_name: SOURCE.repository },
+    action: "completed",
+    workflow_run: {
+      head_branch: SOURCE.branches[0],
+      path: SOURCE.repository + "/.github/workflows/final-blueprint-gate.yml@main",
+      head_repository: { full_name: SOURCE.repository },
+      repository: { full_name: SOURCE.repository },
+    },
+  };
+  assert.equal(eligibleEvent("workflow_run", event), true);
+  assert.equal(eligibleEvent("workflow_run", {
+    ...event, workflow_run: { ...event.workflow_run,
+      repository: { full_name: "untrusted/base" } },
+  }), false);
+});
+
 test("JWT is signed RS256 and has constrained lifetime", () => {
   const jwt = signAppJwt("12345", privateKey, 2000000000);
   const [head, body, sig] = jwt.split(".");
