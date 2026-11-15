@@ -33,9 +33,9 @@ def validate_webops(catalog, intake):
     require(type(catalog.get("recommended_listing_count")) is int and
             catalog["recommended_listing_count"] == 19,
             "original 19-listing count must remain")
-    require(isinstance(catalog.get("listing_lifecycle"), dict) and
-            catalog["listing_lifecycle"].get("verified_registered_count") == 0,
-            "this unregistered intake cannot silently certify a listing")
+    # The existing 19 BASE listings may be legitimately published later.
+    # Their registration history is validated by validate.py; this gate only
+    # forbids promoting the independent UPTIME OPS incubation record.
 
     ref = catalog.get("trending_product_intake_20261115")
     require(isinstance(ref, dict) and

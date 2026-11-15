@@ -74,6 +74,23 @@ class WebOpsIntakeTests(unittest.TestCase):
         self.reject(lambda c, i: c["ranked_services"].append(
             {"service_id": "KMONG-SVC-20"}))
 
+    def test_future_existing_base_listing_does_not_release_candidate(self):
+        catalog = copy.deepcopy(self.catalog)
+        catalog["ranked_services"][0].update(
+            listing_status="등록완료",
+            kmong_listing_url="https://kmong.com/gig/synthetic-existing-base",
+            published_at_kst="2026-11-15",
+            listing_history=[{
+                "event": "등록완료", "evidence": "test fixture only",
+                "kmong_listing_url": "https://kmong.com/gig/synthetic-existing-base",
+                "published_at_kst": "2026-11-15",
+            }],
+        )
+        catalog["listing_lifecycle"]["verified_registered_count"] = 1
+        result = validate_webops(catalog, self.intake)
+        self.assertEqual(result["candidates"], 1)
+        self.assertEqual(self.intake["new_candidates"][0]["release_hold"], True)
+
     def test_development_status_cannot_be_auto_approved(self):
         self.reject(lambda c, i: i["new_candidates"][0].update(
             development_status="PRODUCTION_READY"))
