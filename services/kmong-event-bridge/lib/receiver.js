@@ -64,12 +64,12 @@ export function eligibleEvent(kind, data) {
           (typeof origin?.full_name !== "string" ||
            origin.full_name.toLowerCase() !== fullName)) return false;
     }
-    const path = String(run.path || data.workflow?.path || "");
-    // Explicit workflow paths outrank display names: a different workflow may
-    // reuse the same name, but must never dispatch the central collector.
-    // Fall back to the legacy name only when GitHub sends no path at all.
-    if (path) return approvedBlueprintWorkflowPath(path, fullName);
-    return run.name === "Final blueprint completion evidence gate";
+    // Display names are not unique workflow identifiers. When the run path is
+    // missing, only an explicit canonical path in the workflow metadata is
+    // sufficient. Missing both paths must fail closed, not trust run.name.
+    // The run's own path takes precedence over the top-level metadata.
+    const path = run.path || data.workflow?.path;
+    return approvedBlueprintWorkflowPath(path, fullName);
   }
   return false;
 }

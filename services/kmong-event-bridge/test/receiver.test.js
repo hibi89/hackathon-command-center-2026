@@ -154,7 +154,78 @@ test("explicit unrelated workflow path cannot bypass event allowlist via display
   }), true);
   assert.equal(eligibleEvent("workflow_run", {
     ...tracked, workflow_run: { ...tracked.workflow_run, path: "" },
-  }), true); // backwards-compatible fallback only with no concrete path
+  }), false); // no display-name fallback: must have a canonical path
+  assert.equal(eligibleEvent("workflow_run", {
+    ...tracked,
+    workflow: { path: SOURCE.repository + "/.github/workflows/final-blueprint-gate.yml@main" },
+    workflow_run: { ...tracked.workflow_run, path: "" },
+  }), true); // top-level GitHub workflow.path is an acceptable path source
+});
+
+test("workflow_run with only a matching display name fails closed", () => {
+  const signedPayload = {
+    repository: { full_name: SOURCE.repository },
+    action: "completed",
+    workflow_run: {
+      head_branch: SOURCE.branches[0],
+      name: "Final blueprint completion evidence gate",
+    },
+  };
+  assert.equal(eligibleEvent("workflow_run", signedPayload), false);
+  assert.equal(eligibleEvent("workflow_run", {
+    ...signedPayload, workflow_run: { ...signedPayload.workflow_run, path: "" },
+  }), false);
+  assert.equal(eligibleEvent("workflow_run", {
+    ...signedPayload, workflow_run: { ...signedPayload.workflow_run, path: null },
+  }), false);
+});
+
+test("signed name-only workflow_run never calls the GitHub API", async () => {
+  const { result, requests } = mockGitHub();
+  const p = {
+    installation: { id: 181468120 },
+    repository: { full_name: SOURCE.repository },
+    action: "completed",
+    workflow_run: {
+      head_branch: SOURCE.branches[0],
+      name: "Final blueprint completion evidence gate",
+    },
+  };
+  const response = await receiveWebhook(incoming("workflow_run", p), env, result);
+  assert.equal(response.status, 202);
+  assert.equal((await response.json()).status, "ignored");
+  assert.equal(requests.length, 0);
+});
+
+test("explicit run workflow path overrides conflicting top-level path", () => {
+  const base = {
+    repository: { full_name: SOURCE.repository },
+    action: "completed",
+    workflow: { path: SOURCE.repository + "/.github/workflows/final-blueprint-gate.yml@main" },
+    workflow_run: {
+      head_branch: SOURCE.branches[0],
+      name: "Final blueprint completion evidence gate",
+      path: ".github/workflows/unrelated.yml",
+    },
+  };
+  assert.equal(eligibleEvent("workflow_run", base), false);
+  assert.equal(eligibleEvent("workflow_run", {
+    ...base, workflow_run: { ...base.workflow_run, path: "" },
+  }), true);
+});
+
+test("invalid top-level workflow path cannot rescue name-only event", () => {
+  const p = {
+    repository: { full_name: SOURCE.repository },
+    action: "completed",
+    workflow: { path: "foreign/repo/.github/workflows/final-blueprint-gate.yml@main" },
+    workflow_run: { head_branch: SOURCE.branches[0],
+      name: "Final blueprint completion evidence gate" },
+  };
+  assert.equal(eligibleEvent("workflow_run", p), false);
+  assert.equal(eligibleEvent("workflow_run", {
+    ...p, workflow: { path: { malicious: true } },
+  }), false);
 });
 
 test("HMAC-signed unrelated workflow with matching display name is ignored without dispatch", async () => {
