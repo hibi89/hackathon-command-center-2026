@@ -443,10 +443,28 @@
   "extra_candidate_sku_watchlist": [
     "ECHOHOME",
     "PAWTALK",
-    "MYRADIO AI"
+    "MYRADIO AI",
+    "UPTIME OPS"
   ],
   "internal_shared_tool_watchlist": [
     "AXNODE",
     "AXMART³ CUBE"
-  ]
+  ],
+  "trending_product_intake_20261115": {
+    "decision_id": "KMONG-TREND-3IN1-20261115",
+    "record_type": "PENDING_PRODUCT_BUILD_ONLY",
+    "existing_extensions": [
+      "KMONG-SVC-14: browser/performance/accessibility evidence option (unverified)",
+      "KMONG-SVC-07: code quality/security evidence option (unverified)"
+    ],
+    "new_candidate_id": "KMONG-CAND-UPTIME-01",
+    "new_candidate_name": "UPTIME OPS",
+    "bundle": "WebOps QA 360 (draft composition, no new listing ID)",
+    "intake_registry": "data/kmong_webops_product_intake_20261115.json",
+    "decision_doc": "docs/commercial/KMONG_WEBOPS_QA360_PRODUCT_INTAKE_20261115.md",
+    "candidate_status": "NOT_BUILT_NOT_REGISTERED_RELEASE_HOLD",
+    "commercial_ready": false,
+    "publish_authorized": false,
+    "official_product_completion_changed": false
+  }
 }
