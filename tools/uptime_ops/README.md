@@ -25,3 +25,7 @@ python3 -B -m unittest discover -s tools/uptime_ops -p 'test_*.py' -v
 \`\`\`
 
 GitHub workflow \`.github/workflows/kmong-uptime-ops-prototype.yml\` runs only isolated Python 3.11 synthetic CI with read-only permissions. Tests inject DNS and socket responses (no real HTTP). Results do **not** establish customer approval, real network behavior, Windows/NAS acceptance, proprietary asset rights, OSS redistributability, official completion percentages, or marketplace readiness. Future P2: supervised real-network tests with owned target, retry/backoff policy, state history retention and Windows/NAS packaging; P3/P4: UI, integrations, compliance, licensing, customer sign-off and owner GO. The original hub 90/100 webhook E2E gate is unrelated and still blocked.
+
+### Additional defensive constraints
+
+The monitor rejects URL control characters, non-string approval IDs, spreadsheet-formula-like target IDs and SQLite symlink destinations. The SQLite file and CSV export use owner-only POSIX file permissions (Windows ACLs need independent OS verification). An SSL handshake failure closes the raw socket. None of these checks establishes operational uptime of a real customer service.

@@ -23,7 +23,7 @@ class GuardError(ValueError):
     """Unsafe or unapproved monitoring input; no network operation permitted."""
 
 
-TARGET_ID = re.compile(r"[A-Za-z0-9_-]{1,64}\Z")
+TARGET_ID = re.compile(r"[A-Za-z0-9_][A-Za-z0-9_-]{0,63}\Z")
 APPROVAL = re.compile(r"[A-Za-z0-9_:/.-]{3,80}\Z")
 HOSTNAME = re.compile(r"[A-Za-z0-9.-]{1,253}\Z")
 PATH = re.compile(r"/[A-Za-z0-9/_~.%-]*\Z")
@@ -34,7 +34,7 @@ STATES = {"UP", "DOWN", "UNKNOWN"}
 def checked_address(text, allow_private):
     try:
         address = ipaddress.ip_address(text)
-    except ValueError as exc:
+    except (ValueError, TypeError) as exc:
         raise GuardError("invalid pinned IP address") from exc
     if (address.is_loopback or address.is_link_local or address.is_multicast or
             address.is_unspecified or address.is_reserved or
@@ -66,8 +66,10 @@ class Target:
                 "allow_private", "interval_seconds", "timeout_seconds"}
         if set(data) - keys:
             raise GuardError("unknown target configuration fields")
-        if (not TARGET_ID.fullmatch(str(data.get("target_id", ""))) or
-                not APPROVAL.fullmatch(str(data.get("approval_ref", ""))) or
+        if (not isinstance(data.get("target_id"), str) or
+                not TARGET_ID.fullmatch(data["target_id"]) or
+                not isinstance(data.get("approval_ref"), str) or
+                not APPROVAL.fullmatch(data["approval_ref"]) or
                 data.get("consent") is not True):
             raise GuardError("explicit target identity and scope consent required")
         private = data.get("allow_private", False)
@@ -93,8 +95,9 @@ class Target:
         return obj
 
     def parsed(self):
-        if not isinstance(self.url, str) or self.url != self.url.strip():
-            raise GuardError("invalid URL")
+        if (not isinstance(self.url, str) or self.url != self.url.strip() or
+                any(ord(ch) < 33 or ord(ch) == 127 for ch in self.url)):
+            raise GuardError("invalid URL or raw control characters")
         try:
             parts = urlsplit(self.url)
             port = parts.port
@@ -190,7 +193,11 @@ def head_probe(target, *, resolver=socket.getaddrinfo,
     try:
         raw = connect((chosen_ip, port), timeout=target.timeout_seconds)
         if parts.scheme == "https":
-            conn.sock = tls_factory().wrap_socket(raw, server_hostname=host)
+            try:
+                conn.sock = tls_factory().wrap_socket(raw, server_hostname=host)
+            except BaseException:
+                raw.close()  # TLS handshake failure must not leak a raw socket.
+                raise
         else:
             conn.sock = raw
         # HTTPConnection uses the original host in Host header and never resolves
@@ -223,6 +230,8 @@ class History:
 
     def __init__(self, path):
         self.path = Path(path)
+        if self.path.is_symlink():
+            raise GuardError("refusing SQLite symlink destination")
         self.conn = sqlite3.connect(str(self.path), timeout=5)
         self.conn.execute("PRAGMA busy_timeout=5000")
         self.conn.executescript("""
@@ -304,7 +313,8 @@ class History:
 
     def export_csv(self, output_path):
         # x mode prevents accidental overwrites of user originals.
-        with Path(output_path).open("x", encoding="utf-8", newline="") as out:
+        fd = os.open(output_path, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o600)
+        with os.fdopen(fd, "w", encoding="utf-8", newline="") as out:
             writer = csv.writer(out)
             writer.writerow(["target_id", "checked_at", "state", "detail",
                              "status_code", "elapsed_ms"])

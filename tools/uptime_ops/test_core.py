@@ -61,12 +61,21 @@ class TargetGuardTests(unittest.TestCase):
     def test_approved_exact_https_config(self):
         self.assertEqual(build().resource(), "/health")
 
+    def test_strict_identity_types_and_csv_safe_ids(self):
+        self.fail(target_id=123)
+        self.fail(target_id="-12")
+        self.fail(approval_ref=123)
+
     def test_explicit_scope_consent_required(self):
         self.fail(consent=False)
         self.fail(approval_ref="")
 
     def test_never_embed_credentials(self):
         self.fail(url="https://user:pass@example.test/health")
+
+    def test_raw_control_characters_denied(self):
+        self.fail(url="https://exa\\nmple.test/health".replace("\\n", "\n"))
+        self.fail(url="https://example.test/health\\r".replace("\\r", "\r"))
 
     def test_no_query_tokens_or_fragments(self):
         self.fail(url="https://example.test/health?secret=xyz")
@@ -75,6 +84,9 @@ class TargetGuardTests(unittest.TestCase):
     def test_reject_unsupported_url_and_port(self):
         self.fail(url="file:///etc/passwd")
         self.fail(url="https://example.test:99999/health")
+
+    def test_invalid_ip_pin_type_fails_closed(self):
+        self.fail(allowed_ips=[None])
 
     def test_no_loopback_or_metadata(self):
         self.fail(allowed_ips=["127.0.0.1"], allow_private=True)
@@ -142,6 +154,18 @@ class ProbeTests(unittest.TestCase):
         result, _, chosen = self.run_fake(302)
         self.assertEqual(result.detail, "REDIRECT_DENIED")
         self.assertEqual(len(chosen), 1)
+
+    def test_tls_handshake_error_closes_raw_socket(self):
+        import ssl
+        sock = FakeSocket(200)
+        class BadTLS:
+            def wrap_socket(self, raw, server_hostname):
+                raise ssl.SSLError("certificate verify failed")
+        result = head_probe(build(), resolver=dns("93.184.215.14"),
+                            connect=lambda address, timeout: sock,
+                            tls_factory=BadTLS, clock=lambda: 100.0)
+        self.assertEqual(result.detail, "TLS_VERIFY_ERROR")
+        self.assertTrue(sock.closed)
 
     def test_authentication_required_not_marked_outage(self):
         self.assertEqual(self.run_fake(401)[0].state, "UNKNOWN")
@@ -219,6 +243,26 @@ class PersistenceTests(unittest.TestCase):
         self.assertNotIn("owner:sample", output.read_text())
         with self.assertRaises(FileExistsError):
             self.db.export_csv(output)
+
+    def test_sqlite_symlink_destination_rejected(self):
+        db_file = Path(self.temp.name) / "events.sqlite"
+        link = Path(self.temp.name) / "alias.sqlite"
+        try:
+            link.symlink_to(db_file)
+        except (OSError, NotImplementedError):
+            self.skipTest("symlink not available")
+        with self.assertRaises(GuardError):
+            History(link)
+
+    def test_csv_private_permissions_on_unix(self):
+        import os
+        import stat
+        if os.name == "nt":
+            self.skipTest("POSIX permission semantics not available")
+        path = Path(self.temp.name) / "private.csv"
+        self.step(0, "UP")
+        self.db.export_csv(path)
+        self.assertEqual(stat.S_IMODE(path.stat().st_mode), 0o600)
 
     def test_naive_datetime_rejected(self):
         with self.assertRaises(GuardError):
