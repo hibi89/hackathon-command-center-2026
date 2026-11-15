@@ -1,3 +1,6 @@
+> **[HAECHONG_PRIMARY_MISSION_LOCK_V1]** PRIMARY_MISSION=GITHUB_APP_CENTRAL_AUTOMATION_90_TO_100; `ㄱ`/`ㄱㄱ` resumes GitHub App → signed HMAC webhook → Vercel bridge → central Actions → ledger; side-product development requires an explicit NEW owner instruction. `HANDOFF` recency cannot override this lock.
+> **[HAECHONG_NEXT_GATE]** Real signed delivery/E2E and deployed Production SHA remain NOT_VERIFIED; provisional central score=90/100. When Vercel/App access is blocked, only adjacent GitHub App central verification, security, or recovery work may proceed. No automatic pivot to UPTIME OPS or other product.
+
 ## [2026-11-15 15:18 KST] KMONG_UPTIME_OPS_P0_P2_SYNTHETIC_CI_20261115 — 10-item handoff
 
 1. **Goal/final design:** progress the single new UPTIME OPS candidate after preserving existing 29 sources→19 permanent Kmong SKU identities, WebOps SVC-14/07 extensions, sale/approval history, central automation provisional score 90/100.

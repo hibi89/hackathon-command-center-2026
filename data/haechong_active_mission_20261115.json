@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "policy_id": "HAECHONG_PRIMARY_MISSION_LOCK_V1",
+  "owner_instruction_date_kst": "2026-11-15",
+  "role": "HAECHONG_CENTRAL",
+  "primary_mission": "GITHUB_APP_CENTRAL_AUTOMATION_90_TO_100",
+  "resume_commands": [
+    "ㄱ",
+    "ㄱㄱ"
+  ],
+  "resume_scope": "GITHUB_APP_ONLY",
+  "main_goal": "LIVE_SIGNED_HMAC_DELIVERY_AND_DEPLOYED_SHA_EVIDENCE",
+  "current_provisional_score": 90,
+  "signed_live_hmac_e2e_verified": false,
+  "work_status": "BLOCKED_ON_EXISTING_VERCEL_PROJECT_ACCESS",
+  "fallback_scope": "CENTRAL_APP_ONLY",
+  "side_product_development_allowed": false,
+  "project_switch_requires_explicit_owner_approval": true,
+  "project_switch_owner_approval_recorded": false,
+  "source_webhook_branch": "feature/kmong-webhook-bounded-ingress-20261114",
+  "runtime_branch": "main",
+  "operating_branch": "kmong-productization",
+  "protected_customer_status": "NO_COMMERCIAL_POSTING_OR_RELEASE",
+  "notes": "The latest HANDOFF note is evidence history, not authority to change the role/mission. If live E2E access is blocked, continue scoped verification/security/recovery, or report blocker. Do not substitute product work for scored central progress."
+}
