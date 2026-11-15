@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "date_kst": "2026-11-15",
+  "decision_id": "KMONG-TREND-3IN1-20261115",
+  "record_type": "INCUBATION_ONLY_NOT_REGISTERED",
+  "canonical_source_catalog": "data/kmong_service_catalog_20261113.json",
+  "canonical_existing_service_count": 19,
+  "canonical_existing_source_count": 29,
+  "extensions": [
+    {
+      "service_id": "KMONG-SVC-14",
+      "customer_problem": "허가받은 사이트 기능·품질 관찰",
+      "decision": "FOLD_AS_UNVERIFIED_EXTENSION",
+      "feature": "실 브라우저 오류·성능·접근성 증거 감사",
+      "source_tech": [
+        "REA_Web",
+        "SITECRAFT AX"
+      ],
+      "customer": "쇼핑몰·웹 제작사",
+      "deliverable": "재현 증거·오류 목록·개선 우선순위",
+      "estimated_price_krw": [
+        70000,
+        200000
+      ],
+      "estimated_days": [
+        1,
+        2
+      ],
+      "difficulty": "중",
+      "rights_license": "외부 기술 라이선스/고객 URL 테스트 권리 미검증",
+      "listing_status": "미등록",
+      "commercial_ready": false
+    },
+    {
+      "service_id": "KMONG-SVC-07",
+      "customer_problem": "허가 코드/프로그램 품질 점검",
+      "decision": "FOLD_AS_UNVERIFIED_EXTENSION",
+      "feature": "정적 코드·보안 점검, 재현/오탐 검수",
+      "source_tech": [
+        "AI Code Checker",
+        "REA_APP",
+        "PROOFQA AX"
+      ],
+      "customer": "소형 SaaS·개발팀",
+      "deliverable": "취약점 근거·오탐 분류·수정 권고",
+      "estimated_price_krw": [
+        100000,
+        350000
+      ],
+      "estimated_days": [
+        2,
+        4
+      ],
+      "difficulty": "중상",
+      "rights_license": "고객 코드 분석 권리 및 외부 도구 라이선스 미검증",
+      "listing_status": "미등록",
+      "commercial_ready": false
+    }
+  ],
+  "new_candidates": [
+    {
+      "candidate_id": "KMONG-CAND-UPTIME-01",
+      "product_name": "UPTIME OPS",
+      "listing_name_draft": "서버·NAS 가동률 모니터링 설정 및 장애 알림",
+      "decision": "NEW_CANDIDATE_NOT_EXISTING_SERVICE",
+      "customer": "NAS·자체 서버 운영자/소규모 사업장",
+      "deliverable": "허용 대상 로컬 모니터링·알림 확인·장애 이력·운영/복구 문서",
+      "estimated_price_krw": [
+        120000,
+        350000
+      ],
+      "estimated_days": [
+        1,
+        3
+      ],
+      "difficulty": "중",
+      "source_reference_urls": [
+        "https://github.com/louislam/uptime-kuma"
+      ],
+      "independent_implementation_default": true,
+      "license_and_risks": "외부 저장소 라이선스 원문/종속성/재배포 미검증; 서버 접근 승인, SSRF/리다이렉트/사설망, 다운타임 누락, 개인정보/알림 전송",
+      "validation": "P0 허가·상업권; P2 타임아웃/중복/복구/절전·실장비; P4 실제 고객과 라이선스/설치/지원/Owner GO",
+      "development_status": "NOT_BUILT",
+      "listing_status": "미등록",
+      "kmong_listing_url": null,
+      "published_at_kst": null,
+      "listing_history": [],
+      "commercial_ready": false,
+      "release_hold": true
+    }
+  ],
+  "bundle": {
+    "name": "WebOps QA 360",
+    "status": "DRAFT_ONLY_NOT_NEW_SKU",
+    "components": [
+      "KMONG-SVC-14",
+      "KMONG-SVC-07",
+      "KMONG-CAND-UPTIME-01"
+    ],
+    "customer": "코드·웹사이트·인프라 권한을 보유한 소규모 웹서비스 운영팀",
+    "deliverable": "브라우저/코드/가동률 독립 근거를 종합한 개선 우선순위 및 재검증 보고서",
+    "estimated_price_krw": [
+      250000,
+      650000
+    ],
+    "estimated_days": [
+      3,
+      7
+    ],
+    "difficulty": "상",
+    "required_checks": "모듈별 독립 인수·권리·통합 회귀·중복 청구 방지·허가 대상 확인",
+    "not_for_sale_until_all_components_ready": true
+  },
+  "original_urls": [
+    "https://github.com/GoogleChrome/modern-web-guidance-src",
+    "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+    "https://github.com/alibaba/open-code-review",
+    "https://github.com/openai/codex-security",
+    "https://github.com/louislam/uptime-kuma"
+  ],
+  "third_party_license_text_verified_in_this_run": false,
+  "third_party_code_copied": false,
+  "source_repo_mutations": false,
+  "kmong_registered_count_change": 0,
+  "verified_sale_approval": false,
+  "guide": "docs/commercial/KMONG_WEBOPS_QA360_PRODUCT_INTAKE_20261115.md"
+}
