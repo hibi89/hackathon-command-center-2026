@@ -49,7 +49,7 @@ export function eligibleEvent(kind, data) {
     // Explicit workflow paths outrank display names: a different workflow may
     // reuse the same name, but must never dispatch the central collector.
     // Fall back to the legacy name only when GitHub sends no path at all.
-    if (path) return /(^|\\/)final-blueprint-gate\\.ya?ml(?:@[^ ]*)?$/i.test(path);
+    if (path) return /(^|\/)final-blueprint-gate\.ya?ml(?:@[^ ]*)?$/i.test(path);
     return run.name === "Final blueprint completion evidence gate";
   }
   return false;
