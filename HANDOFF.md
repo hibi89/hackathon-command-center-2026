@@ -1,3 +1,16 @@
+## [2026-11-15 KST] KMONG-TREND-3IN1-20261115 — 10-point product-intake handoff
+
+1. **목표·기술·확정요청:** 사용자 제공 웹 품질 감사/코드 보안 감사/서버·NAS 가동률 감시 3기술을 중복 없이 해총 크몽 개발 상품 후보로 편입. 현행 29 원천→19 SKU 정본 보존.
+2. **완료·결정:** 웹/브라우저 감사는 `SVC-14` REA_Web/SITECRAFT 고급 옵션(검증대기), 코드 보안은 `SVC-07` AI Code Checker/REA_APP/PROOFQA 고급 옵션(검증대기), 가동률/장애 알림은 **신규후보 `KMONG-CAND-UPTIME-01` UPTIME OPS**. `WebOps QA 360`은 3서비스 묶음 제안, 새 게시글 아님. 새 원장 JSON·상품 기획서·기존 카탈로그 후보 인덱스·운영 정책 갱신.
+3. **테스트 범위:** 원격 GitHub `fetch_file`로 변경 파일 SHA 확인 및 내용 readback 대조, JSON 파싱, 기존 `ranked_services` 19개 객체 JSON 동등성·등록완료 0 불변 확인. 실제 개발/기능 테스트/CI/구매자 Windows·NAS/상업 라이선스·브라우저 실증 NOT_RUN.
+4. **완료·진행·보류:** 중복 판정·후보 등록 DONE. P0 고객 범위/권리, P1 두 SKU 옵션 검증, P2 새 모니터링 개발, P3 통합, P4 상업 수용 전부 PENDING. **NOT_BUILT/NOT_REGISTERED/RELEASE HOLD**.
+5. **오류·대안:** 도구 장애 없음. A 세 독립 신규 앱+SKU는 기존 상품과 겹쳐 기각; B 두 고급 옵션+한 신규 후보/묶음 제안 채택. UPTIME OPS는 로컬우선, 호스팅 상시관제/24x7 보장 미허가. 외부 OSS LICENSE/NOTICE/종속 권리는 검증 안 해 원본 코드 복사 금지.
+6. **저장소·브랜치·SHA·주요 파일:** `hibi89/hackathon-command-center-2026@kmong-productization`. 이번 회차 사전 문서 커밋 `ee36ad8e`, `18aa2bbe`, `22d4e43f`, `0dee4ffc`; 최종 상태/인수인계 커밋은 완료 후 원격 HEAD 확인. `docs/commercial/KMONG_WEBOPS_QA360_PRODUCT_INTAKE_20261115.md`, `data/kmong_webops_product_intake_20261115.json`, `data/kmong_service_catalog_20261113.json`.
+7. **Production/실행환경:** 실제 새 앱/크몽 판매 URL/Production 없음, 배포·Vercel·CI 미적용, 검증 환경 GitHub 문서/JSON만.
+8. **원본·백업·기밀:** 기존 19 `ranked_services`·원천29·등록 이력·가격/점수·소스/브랜치 수정 금지. GitHub 부모 커밋 및 blob SHA로 복구 가능. 고객 코드/비밀/로컬 데이터 복사·외부 전송 안 함.
+9. **다음 작업·승인:** 고객 권리와 요구 확정→합성 로컬 UPTIME OPS MVP(allowlist/SSRF·복구·알림)→원천 2개 기능 회귀→통합 증거→상업 라이선스/실기기/지원/PRICE/OWNER GO. 출시·유료 API/호스팅·권한은 별도 승인.
+10. **갱신 일시·기준·검증:** 2026-11-15 KST, GitHub 원격 `kmong-productization` 최신 파일 조회. 기획 문서 기준 커밋 `0dee4ffc81b3189f4c7e3d6705c1c926e4b09bcf`; STATUS/HANDOFF 자체의 최종 commit 및 readback은 별도 검증해 보고. 공식 GitHub Trending 당일 순위·외부 코드 라이선스 검증은 이번 범위 아님.
+
 ## [2026-11-15 KST] KMONG_SCHEDULE_90_VERCEL_BRIDGE_ACCESS_20261115 — 10-point handoff
 
 1. **Goal/tech:** fixed central 85 -> 90 -> 95 -> 100 evidence score; GitHub App source observer, native Action schedule, Vercel HMAC event bridge, hub collector, conditional JSON ledger.
