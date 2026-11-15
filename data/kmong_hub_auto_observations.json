@@ -336,7 +336,7 @@
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "cfc56fe4492f445d7f6a1fd12bb8d45c422de46e",
+      "head_sha": "e03681b433b921bfe1eb0a0ada50145b7de3c078",
       "machine_evidence_score": {
         "percent": null,
         "reason": "Pinned rubric / CI verification failed: approved scorecard blob unavailable or changed",
@@ -364,7 +364,7 @@
           "blueprint": {
             "branch": "feature/final-blueprint-p85-evidence-20261113",
             "git_blob_sha": "c3b5a389fde981a70356f962724f1be6e26d6185",
-            "head_sha": "cfc56fe4492f445d7f6a1fd12bb8d45c422de46e",
+            "head_sha": "e03681b433b921bfe1eb0a0ada50145b7de3c078",
             "path": "docs/FINAL_DESIGN.md",
             "repository": "hibi89/data2web_studio"
           },
@@ -379,7 +379,7 @@
           "implementation": {
             "branch": "feature/final-blueprint-p85-evidence-20261113",
             "git_blob_sha": "b6ec0e4e138cbb9c38b0971c9b3f1ea309b99e9b",
-            "head_sha": "cfc56fe4492f445d7f6a1fd12bb8d45c422de46e",
+            "head_sha": "e03681b433b921bfe1eb0a0ada50145b7de3c078",
             "path": "blueprint_score.py",
             "repository": "hibi89/data2web_studio"
           }
@@ -829,12 +829,12 @@
       "gate": {
         "conclusion": "success",
         "head_sha": "49ab1080dc8a7a28f0e1435233f51d1caff0f87a",
-        "matches_current_head": true,
+        "matches_current_head": false,
         "run_id": 43679171766,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "49ab1080dc8a7a28f0e1435233f51d1caff0f87a",
+      "head_sha": "6132d0002e28cbad814f9eee7e477223fe280c2f",
       "machine_evidence_score": {
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
@@ -862,14 +862,14 @@
           "blueprint": {
             "branch": "feature/p0-db-map",
             "git_blob_sha": "8e8e61f30c504fa5fe0acbaa6c85047801e921d6",
-            "head_sha": "49ab1080dc8a7a28f0e1435233f51d1caff0f87a",
+            "head_sha": "6132d0002e28cbad814f9eee7e477223fe280c2f",
             "path": "REQUIREMENTS.md",
             "repository": "hibi89/DBVORA"
           },
           "implementation": {
             "branch": "feature/p0-db-map",
             "git_blob_sha": "23312c73af7923ef19a73798d86541176178724d",
-            "head_sha": "49ab1080dc8a7a28f0e1435233f51d1caff0f87a",
+            "head_sha": "6132d0002e28cbad814f9eee7e477223fe280c2f",
             "path": "dbvora/api.py",
             "repository": "hibi89/DBVORA"
           }
@@ -982,13 +982,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "f5751bbb559f268706f2e7bc15438d0a8f590ed9",
+        "head_sha": "2503ede2659a01eba52827a920c01c4ec8b1d5e7",
         "matches_current_head": true,
-        "run_id": 43678898126,
+        "run_id": 43680155935,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "f5751bbb559f268706f2e7bc15438d0a8f590ed9",
+      "head_sha": "2503ede2659a01eba52827a920c01c4ec8b1d5e7",
       "machine_evidence_score": {
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
@@ -1016,7 +1016,7 @@
           "blueprint": {
             "branch": "feature/astra-p71-pdf-source-parity-20261112",
             "git_blob_sha": "f2ce12696003fcff0ebddcd086cc2e5998a3135c",
-            "head_sha": "f5751bbb559f268706f2e7bc15438d0a8f590ed9",
+            "head_sha": "2503ede2659a01eba52827a920c01c4ec8b1d5e7",
             "path": "REQUIREMENTS.md",
             "repository": "hibi89/astra_pdf_redesigner"
           },
@@ -1031,7 +1031,7 @@
           "implementation": {
             "branch": "feature/astra-p71-pdf-source-parity-20261112",
             "git_blob_sha": "56b1758b06785b7fc3b629cfa06d57573cf2ddfa",
-            "head_sha": "f5751bbb559f268706f2e7bc15438d0a8f590ed9",
+            "head_sha": "2503ede2659a01eba52827a920c01c4ec8b1d5e7",
             "path": "src/App.tsx",
             "repository": "hibi89/astra_pdf_redesigner"
           }
@@ -2442,7 +2442,7 @@
     {
       "canonical": {
         "expected_git_blob_sha": "b2d6bd5de2d5b74a8004d0fe5ca5643d0a94ea02",
-        "head_sha": "b07b43e22ec1b23c7069f14093c6cd384897e294",
+        "head_sha": "afe122cf7d343b01877366034981f6aecafdb8a6",
         "mode": "enforce",
         "observed_git_blob_sha": "b2d6bd5de2d5b74a8004d0fe5ca5643d0a94ea02",
         "owner_approval_verified": false,
@@ -2455,7 +2455,7 @@
         "gate": {
           "status": "NO_RUN"
         },
-        "head_sha": "b07b43e22ec1b23c7069f14093c6cd384897e294",
+        "head_sha": "afe122cf7d343b01877366034981f6aecafdb8a6",
         "status": "PRESENT"
       },
       "repository": "hibi89/astra_pdf_redesigner",
@@ -2464,13 +2464,13 @@
           "branch": "feature/astra-p71-pdf-source-parity-20261112",
           "gate": {
             "conclusion": "success",
-            "head_sha": "f5751bbb559f268706f2e7bc15438d0a8f590ed9",
+            "head_sha": "2503ede2659a01eba52827a920c01c4ec8b1d5e7",
             "matches_current_head": true,
-            "run_id": 43678898126,
+            "run_id": 43680155935,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "f5751bbb559f268706f2e7bc15438d0a8f590ed9",
+          "head_sha": "2503ede2659a01eba52827a920c01c4ec8b1d5e7",
           "status": "PRESENT"
         },
         {
@@ -2666,7 +2666,7 @@
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "cfc56fe4492f445d7f6a1fd12bb8d45c422de46e",
+          "head_sha": "e03681b433b921bfe1eb0a0ada50145b7de3c078",
           "status": "PRESENT"
         },
         {
@@ -2723,12 +2723,12 @@
           "gate": {
             "conclusion": "success",
             "head_sha": "49ab1080dc8a7a28f0e1435233f51d1caff0f87a",
-            "matches_current_head": true,
+            "matches_current_head": false,
             "run_id": 43679171766,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "49ab1080dc8a7a28f0e1435233f51d1caff0f87a",
+          "head_sha": "6132d0002e28cbad814f9eee7e477223fe280c2f",
           "status": "PRESENT"
         }
       ]
