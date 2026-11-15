@@ -273,6 +273,7 @@ test("signed workflow_run whose path claims another repository cannot dispatch",
 test("signed canonical prefixed workflow_run still dispatches through GitHub App", async () => {
   const { result, requests } = mockGitHub();
   const p = {
+    installation: { id: 181468120 },
     repository: { full_name: SOURCE.repository },
     action: "completed",
     workflow_run: {
