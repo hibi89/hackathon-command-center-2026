@@ -1,6 +1,19 @@
 > **[HAECHONG_PRIMARY_MISSION_LOCK_V1]** PRIMARY_MISSION=GITHUB_APP_CENTRAL_AUTOMATION_90_TO_100; `ㄱ`/`ㄱㄱ` resumes GitHub App → signed HMAC webhook → Vercel bridge → central Actions → ledger; side-product development requires an explicit NEW owner instruction. `HANDOFF` recency cannot override this lock.
 > **[HAECHONG_NEXT_GATE]** Real signed delivery/E2E and deployed Production SHA remain NOT_VERIFIED; provisional central score=90/100. When Vercel/App access is blocked, only adjacent GitHub App central verification, security, or recovery work may proceed. No automatic pivot to UPTIME OPS or other product.
 
+## [2026-11-15 17:19 KST] HAECHONG_WORKFLOW_RUN_PATH_REQUIRED_CI_20261115 — 10-part continuation
+
+1. **Mission/tech:** GitHub App source event → raw HMAC webhooks → existing Vercel → central workflow_dispatch → 35repo/80ref/29product ledger; `ㄱ` resumes only this mission.
+2. **Done/design:** name-only `workflow_run` fallback removed. Chosen strict canonical `.github/workflows/final-blueprint-gate.yml/.yaml` path from `workflow_run.path` or top-level `workflow.path` versus ambiguous display-name matching. Missing both paths `202 ignored`, zero GitHub calls. Trade-off: missing real path delivery may be ignored; hourly reconciliation remains.
+3. **Tests:** isolated source `c663bc3814cff896d8efd5014117348dfd23c377`; [bridge CI #43693953755](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43693953755) Node77 + Python80 = **157/157 PASS**, FAIL0, allowlist parity PASS; [Final Blueprint #43693953780](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43693953780) SUCCESS.
+4. **States:** feature code DONE/CI VERIFIED; feature main merge and Production NOT_APPLIED; live signed webhook/E2E BLOCKED; provisional **90/100** unchanged.
+5. **Cause/attempt/avoid:** display name not unique; previous fallback could allow unrelated named workflow. One targeted hardening + four tests, successful remote CI. Prior Vercel management 404 unchanged; do not repeat same credential or infer deletion. No UPTIME OPS pivot.
+6. **Repo/branch/SHA/paths:** `hibi89/hackathon-command-center-2026`, feature `feature/kmong-webhook-bounded-ingress-20261114@c663bc3814cff896d8efd5014117348dfd23c377` parent `a676985554708e681340f7b6e62bbdbd720e9683`, main `69e584e57a3a37fa72b406d62ccddf9eef9dfcf2`, operating docs parent `e2a1779b4757421777b01f717ce1a67f4491bc3f`. Source `services/kmong-event-bridge/lib/receiver.js`, `test/receiver.test.js`, README, [audit](docs/audits/HAECHONG_WORKFLOW_RUN_PATH_REQUIRED_CI_20261115.md).
+7. **Production:** `https://kmong-hub-event-bridge.vercel.app/api/webhook`; existing Vercel project `prj_veZOkRkhMEMEA6h7PiEIl3IKcthn`; Node22/Python3.11 CI, GET HTTP200/READY_SHA_NOT_MATCHED with old `2863165b06d407ba632f18ad7a85a7c98f1989af`.
+8. **Backup/secrets/data:** original commit ancestry intact. Existing 35/80/29 ledger, official scores, 29→19 catalog, registration history, tokens/PEM, GitHub App permissions, main, scheduler and Production unchanged.
+9. **Next/approval/acceptance:** owner-authorized read access to original Vercel project and GitHub App Recent Deliveries; staged separate approval for main optional workflow input → existing Vercel deploy → trace flag. Independently verify signed Delivery/HTTP response/source SHA/bot workflow run/collector UPDATED or NO_CHANGE/ledger blob; don't equate DEFERRED with sync.
+10. **Time/verification baseline:** 2026-11-15 17:19 KST; exact remote CI/logs, public GET; signed webhook POST not executed. Operating docs commit SHA to confirm after writeback.
+
 ## [2026-11-15 17:11 KST] HAECHONG_REAL_ACTIONS_METADATA_RECEIPT_GATE_20261115 — 10-part handoff
 
 1. **Goal/stack:** GitHub App source → SHA256 HMAC webhook → original Vercel → central Actions → 35repo/80refs/29products; primary mission lock unchanged. No UPTIME OPS.
