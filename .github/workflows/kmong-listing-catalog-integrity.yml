@@ -5,6 +5,7 @@ on:
       - kmong-productization
     paths:
       - 'data/kmong_service_catalog_20261113.json'
+      - 'data/kmong_webops_product_intake_20261115.json'
       - 'data/final_blueprint_product_index_current.json'
       - 'tools/kmong_listing_audit/**'
       - '.github/workflows/kmong-listing-catalog-integrity.yml'
@@ -13,6 +14,7 @@ on:
       - kmong-productization
     paths:
       - 'data/kmong_service_catalog_20261113.json'
+      - 'data/kmong_webops_product_intake_20261115.json'
       - 'data/final_blueprint_product_index_current.json'
       - 'tools/kmong_listing_audit/**'
       - '.github/workflows/kmong-listing-catalog-integrity.yml'
@@ -31,5 +33,7 @@ jobs:
           python-version: '3.11'
       - name: Verify 29 sources, 19 SKUs, evidence states and source alias
         run: python3 -B tools/kmong_listing_audit/validate.py
+      - name: Guard WebOps extension/candidate/bundle launch states
+        run: python3 -B tools/kmong_listing_audit/webops.py
       - name: Run adversarial mapping and state regression tests
         run: python3 -B -m unittest discover -s tools/kmong_listing_audit -p 'test_*.py' -v
