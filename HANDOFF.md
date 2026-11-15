@@ -1,6 +1,19 @@
 > **[HAECHONG_PRIMARY_MISSION_LOCK_V1]** PRIMARY_MISSION=GITHUB_APP_CENTRAL_AUTOMATION_90_TO_100; `ㄱ`/`ㄱㄱ` resumes GitHub App → signed HMAC webhook → Vercel bridge → central Actions → ledger; side-product development requires an explicit NEW owner instruction. `HANDOFF` recency cannot override this lock.
 > **[HAECHONG_NEXT_GATE]** Real signed delivery/E2E and deployed Production SHA remain NOT_VERIFIED; provisional central score=90/100. When Vercel/App access is blocked, only adjacent GitHub App central verification, security, or recovery work may proceed. No automatic pivot to UPTIME OPS or other product.
 
+## [2026-11-15 16:16 KST] HAECHONG_WORKFLOW_ORIGIN_PATH_GUARD_20261115 — 10항 GitHub App 인수인계
+
+1. **목표·용도·확정 요구·기술:** 사용자 해총 주 임무 GitHub App source event → signed HMAC Vercel bridge → 중앙 workflow_dispatch → 35개 저장소·80개 참조·29개 상품 원장. `ㄱ` = 이 임무만, 타 상품 전환 불허. 잠정 90/100 유지.
+2. **완료 기능·결정 근거:** `eligibleEvent("workflow_run")`의 filename suffix-only/포크 head_repository 불일치 허용 경계를 보강. A 기존 느슨한 허용(불필요한 수집 위험) vs B 명시적 `.github/workflows/` 경로 및 원본/헤드 저장소 비교(채택). 정상 경로/빈 경로 legacy name fallback 유지; 인증·호출 흐름·비밀 수정 없음.
+3. **실제 테스트:** 코드 SHA `fe4749d763f794f2aa77bd1ece90c1d26b31817a`, [bridge #43689210139](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43689210139) Node **47 PASS** + Python **80 PASS** = **127/127 PASS, 0 FAIL**. [Final blueprint #43689210136](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43689210136) SUCCESS. 실 GitHub run GET metadata `path=.github/workflows/final-blueprint-gate.yml`, head/base original repo 일치 확인; 실제 signed HMAC webhook 전송은 미실행.
+4. **완료/진행/대기/차단:** 필터 보안·회귀 DONE(격리 브랜치). signed E2E 10점/Production 최신 SHA·GitHub App Recent Deliveries 확인 BLOCKED. 공식 해총 기술점수 **잠정 90/100**, 제품 공식 점수·출시 상태 변경 없음.
+5. **오류 근거·시도·재시도 금지·대안:** suffix-only matching과 head_repository 미비 검사 확인, 엄격 경로/원본 검증 및 3개 회귀로 수정, CI FAIL0. 기존 Vercel 프로젝트 API 404 접근 불일치, 같은 credential 호출 반복 금지. owner 승인된 기존 Vercel team/project 접근 복구 또는 대시보드 읽기 확인 권장, 신규 프로젝트·권한 확장 금지.
+6. **저장소·브랜치·SHA·경로:** `hibi89/hackathon-command-center-2026`; feature `feature/kmong-webhook-bounded-ingress-20261114@fe4749d763f794f2aa77bd1ece90c1d26b31817a`; 이전 feature `cf2d90ae5f709ca2e824a1b26a163437d9ed75f3`; main `69e584e57a3a37fa72b406d62ccddf9eef9dfcf2`; op `kmong-productization` 문서 커밋은 최신 readback 확인. 감사 `docs/audits/HAECHONG_WORKFLOW_ORIGIN_PATH_GUARD_20261115.md`; 코드 `services/kmong-event-bridge/lib/receiver.js`, `test/receiver.test.js`.
+7. **Production URL·프로젝트·실행 환경:** `https://kmong-hub-event-bridge.vercel.app/api/webhook`, 기존 Vercel project ID `prj_veZOkRkhMEMEA6h7PiEIl3IKcthn`, CI Node22/Python3.11. Public GET 200 old SHA `2863165b06d407ba632f18ad7a85a7c98f1989af`, `READY_SHA_NOT_MATCHED`; 새 기능 미배포, signed POST 실기능 미검증.
+8. **원본·백업·인증 보호:** 기존 source, allowance/원장 JSON, 29원천→19SKU, 이력, main/Production, 사용자 비밀/환경변수·GitHub App 권한 일절 무변경. Git parent SHA `cf2d90ae...` 및 commit chain 보존, 권한/보안 변경 사전 승인.
+9. **다음 우선순위·완료 기준·승인:** 기존 Vercel 프로젝트와 GitHub App delivery receipt에 owner-authorized 접근 시 signed event UUID→서명 응답→Vercel log/Production SHA→Actions workflow_dispatch→collector UPDATED/NO_CHANGE→원장 SHA 인과 검증. merge/Production deploy/권한/secret/App settings 변경은 별도 승인. 차단 시 이 GitHub App 관련 독립 보안·검증만 진행.
+10. **갱신 KST·검증 범위·문서 SHA:** 2026-11-15 16:16 KST (실 CI 07:16 UTC), GitHub 원격 feature source/CI Node47+Python80/실 GitHub run metadata/Production 공개 GET. HMAC live E2E NOT_VERIFIED. 문서 commit SHA 별도 remote readback.
+
 ## [2026-11-15 16:02 KST] HAECHONG_BOT_DISPATCH_LOG_REDACTION_20261115 — central GitHub App handoff
 
 1. Mission and confirmed requirements: Continue GitHub App → signed HMAC Vercel ingress → central Actions → 35/80/29 ledger. Mobile ㄱ resumes this task only. Score provisional 90/100.
