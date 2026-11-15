@@ -7,10 +7,11 @@ Run with Node 22+ on the isolated source:
 ```bash
 node services/kmong-event-bridge/audit-e2e.mjs \
   "<trusted-expected-deployed-commit-SHA>" \
+  "<trusted-central-main-commit-SHA>" \
   /path/to/sanitized-evidence.json
 ```
 
-Do not commit the JSON or secrets, raw webhook bodies, private keys, App tokens, request headers, customer data or full GitHub delivery logs. The tool prints only a fixed enum-like verdict/code and never echoes evidence. The expected SHA comes from **independent trusted deployment/source verification**, not the evidence file.
+Do not commit the JSON or secrets, raw webhook bodies, private keys, App tokens, request headers, customer data or full GitHub delivery logs. The tool prints only a fixed enum-like verdict/code and never echoes evidence. Both trusted SHAs (deployed Vercel bridge commit and central `main` commit) come from **independent read-only verification**, not the evidence file. The hub workflow ID `416801860` and exact path `.github/workflows/kmong-hub-sync.yml` are pinned to the verified existing GitHub Actions workflow; if GitHub legitimately recreates it, first reverify the ID and update the checker with a reviewed commit.
 
 ## Sanitized schema
 
@@ -26,8 +27,11 @@ Do not commit the JSON or secrets, raw webhook bodies, private keys, App tokens,
   "run": {
     "id": 1, "name": "Kmong hub sync | delivery:<github-delivery-uuid>",
     "actor": "kmong-hub-dispatcher[bot]", "event": "workflow_dispatch",
-    "head_branch": "main", "conclusion": "success",
-    "created_at": "<timestamp-with-timezone>", "completed_at": "<timestamp-with-timezone>"
+    "repository": "hibi89/hackathon-command-center-2026",
+    "workflow_id": 416801860, "path": ".github/workflows/kmong-hub-sync.yml",
+    "head_sha": "<trusted-central-main-commit-SHA>",
+    "head_branch": "main", "status": "completed", "conclusion": "success",
+    "created_at": "<timestamp-with-timezone>", "updated_at": "<timestamp-with-timezone>"
   },
   "collector": {
     "run_id": 1, "outcome": "UPDATED", "scanned": true, "tests_passed": true,
@@ -40,6 +44,8 @@ Do not commit the JSON or secrets, raw webhook bodies, private keys, App tokens,
   }
 }
 ```
+
+GitHub's actual run REST object uses `created_at`, `updated_at`, `status`, `path`, `workflow_id`, and `head_sha`; it does not supply the former mock-only `completed_at`. The final `updated_at` is only an observation time upper bound, not cryptographic completion proof. A manually assembled run/ledger correlation may still be fabricated; do not grant E2E credit without source attestations.
 
 All values must be copied from independently checked, real sources. `NO_CHANGE` requires identical before and after SHA; `UPDATED` requires different SHA. `DEFERRED_BOT_BURST` and `coalesced` are **not synced**. Any mismatch yields `EVIDENCE_REJECTED` or `EVIDENCE_INCOMPLETE`.
 

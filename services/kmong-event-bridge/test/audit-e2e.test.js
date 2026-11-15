@@ -4,6 +4,7 @@ import { assessDeliveryChain } from "../audit-e2e.mjs";
 
 const SHA = "a".repeat(40);
 const PREVIOUS = "b".repeat(40);
+const MAIN_SHA = "69e584e57a3a37fa72b406d62ccddf9eef9dfcf2";
 const UUID = "123e4567-e89b-12d3-a456-426614174000";
 function fixture() {
   return {
@@ -13,15 +14,19 @@ function fixture() {
       delivered_at: "2026-11-15T08:00:00Z" },
     run: { id: 43691572769, name: "Kmong hub sync | delivery:" + UUID,
       actor: "kmong-hub-dispatcher[bot]", event: "workflow_dispatch", head_branch: "main",
-      conclusion: "success", created_at: "2026-11-15T08:00:10Z",
-      completed_at: "2026-11-15T08:02:00Z" },
+      repository: "hibi89/hackathon-command-center-2026",
+      workflow_id: 416801860, path: ".github/workflows/kmong-hub-sync.yml",
+      head_sha: MAIN_SHA, status: "completed", conclusion: "success",
+      created_at: "2026-11-15T08:00:10Z",
+      updated_at: "2026-11-15T08:02:00Z" },
     collector: { run_id: 43691572769, outcome: "UPDATED", scanned: true, tests_passed: true,
       repositories: 35, references: 80, products: 29, missing_references: 0, fingerprint_errors: 0 },
     ledger: { run_id: 43691572769, before_sha: PREVIOUS, after_sha: SHA,
       observed_at: "2026-11-15T08:03:00Z" },
   };
 }
-const assess = (data, expected = SHA) => assessDeliveryChain(data, expected);
+const assess = (data, expected = SHA, expectedMain = MAIN_SHA) =>
+  assessDeliveryChain(data, expected, expectedMain);
 const assertRejected = (data, code, expected = SHA) => {
   const result = assess(data, expected);
   assert.equal(result.code, code);
@@ -71,6 +76,39 @@ test("manual or wrong bot run cannot stand in for webhook-triggered run", () => 
     assertRejected(evidence, "ACTIONS_RUN_NOT_CORRELATED");
   }
 });
+test("GitHub Actions real REST updated_at must exist; absent completed_at is normal", () => {
+  const evidence = fixture();
+  assert.equal("completed_at" in evidence.run, false);
+  assert.equal(assess(evidence).verdict, "CORRELATED_NOT_VERIFIED");
+  delete evidence.run.updated_at;
+  assertRejected(evidence, "CAUSAL_TIMESTAMPS_INVALID");
+});
+
+test("unrelated workflow ID or path cannot impersonate central collector", () => {
+  for (const [field, value] of [
+    ["workflow_id", 416801861], ["path", ".github/workflows/unrelated.yml"],
+    ["repository", "another-owner/hackathon-command-center-2026"],
+  ]) {
+    const evidence = fixture();
+    evidence.run[field] = value;
+    assertRejected(evidence, "ACTIONS_RUN_NOT_CORRELATED");
+  }
+});
+
+test("old main SHA or untrusted independent main SHA cannot match the run", () => {
+  const evidence = fixture();
+  evidence.run.head_sha = PREVIOUS;
+  assertRejected(evidence, "ACTIONS_RUN_NOT_CORRELATED");
+  assert.equal(assess(fixture(), SHA, "not-a-sha").code, "INVALID_INPUT");
+});
+
+test("queued or in-progress Actions cannot be counted despite synthetic success", () => {
+  for (const status of ["queued", "in_progress", undefined]) {
+    const evidence = fixture(); evidence.run.status = status;
+    assertRejected(evidence, "ACTIONS_RUN_NOT_CORRELATED");
+  }
+});
+
 test("DEFERRED_BOT_BURST is never a successful scan even with green Actions", () => {
   const evidence = fixture(); evidence.collector.outcome = "DEFERRED_BOT_BURST";
   assertRejected(evidence, "COLLECTOR_NOT_SYNCED");

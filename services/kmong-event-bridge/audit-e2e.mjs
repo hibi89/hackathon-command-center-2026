@@ -6,6 +6,9 @@ import roster from "./source_repositories.json" with { type: "json" };
 const SHA = /^[0-9a-f]{40}$/i;
 const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 const BOT = "kmong-hub-dispatcher[bot]";
+const HUB_REPO = "hibi89/hackathon-command-center-2026";
+const HUB_WORKFLOW_ID = 416801860;  // Read-only GitHub API, existing main workflow.
+const HUB_WORKFLOW_PATH = ".github/workflows/kmong-hub-sync.yml";
 const EXPECTED_REPOS = 35;
 const EXPECTED_REFS = 80;
 const EXPECTED_PRODUCTS = 29;
@@ -30,9 +33,11 @@ function failed(code, verdict = "EVIDENCE_REJECTED") {
 
 // Evidence MUST come from independent, read-only inspection of actual sources.
 // A crafted fixture may be internally consistent: never interpret it as proof.
-export function assessDeliveryChain(evidence, expectedProductionSha) {
+export function assessDeliveryChain(evidence, expectedProductionSha, expectedMainSha) {
   if (!evidence || typeof evidence !== "object" || Array.isArray(evidence) ||
-      !isSha(expectedProductionSha)) return failed("INVALID_INPUT");
+      !isSha(expectedProductionSha) || !isSha(expectedMainSha)) {
+    return failed("INVALID_INPUT");
+  }
   const { production: p, delivery: d, run: r, collector: c, ledger: l } = evidence;
   if (![p, d, r, c, l].every(x => x && typeof x === "object" && !Array.isArray(x))) {
     return failed("REQUIRED_SOURCE_MISSING", "EVIDENCE_INCOMPLETE");
@@ -55,6 +60,10 @@ export function assessDeliveryChain(evidence, expectedProductionSha) {
   const expectedRunName = "Kmong hub sync | delivery:" + d.id.toLowerCase();
   if (!Number.isSafeInteger(r.id) || r.id <= 0 || r.event !== "workflow_dispatch" ||
       r.actor !== BOT || r.head_branch !== "main" ||
+      r.workflow_id !== HUB_WORKFLOW_ID || r.path !== HUB_WORKFLOW_PATH ||
+      r.repository !== HUB_REPO || r.status !== "completed" ||
+      typeof r.head_sha !== "string" ||
+      r.head_sha.toLowerCase() !== expectedMainSha.toLowerCase() ||
       typeof r.name !== "string" || r.name.toLowerCase() !== expectedRunName.toLowerCase() ||
       r.conclusion !== "success") {
     return failed("ACTIONS_RUN_NOT_CORRELATED");
@@ -73,10 +82,13 @@ export function assessDeliveryChain(evidence, expectedProductionSha) {
   }
   const delivered = validTime(d.delivered_at);
   const created = validTime(r.created_at);
-  const finished = validTime(r.completed_at);
+  // Actual GitHub Actions GET /actions/runs/{id} exposes updated_at,
+  // NOT completed_at. Its final updated timestamp is a conservative
+  // observable bound, not a claimed cryptographic event completion time.
+  const updated = validTime(r.updated_at);
   const observed = validTime(l.observed_at);
-  if ([delivered, created, finished, observed].some(t => t === null) ||
-      !(delivered <= created && created <= finished && finished <= observed)) {
+  if ([delivered, created, updated, observed].some(t => t === null) ||
+      !(delivered <= created && created <= updated && updated <= observed)) {
     return failed("CAUSAL_TIMESTAMPS_INVALID");
   }
 
@@ -86,20 +98,20 @@ export function assessDeliveryChain(evidence, expectedProductionSha) {
 }
 
 async function main(argv) {
-  if (argv.length !== 2 || !isSha(argv[0])) {
-    console.error("Usage: node audit-e2e.mjs <trusted-expected-production-sha> <sanitized-evidence.json>");
+  if (argv.length !== 3 || !isSha(argv[0]) || !isSha(argv[1])) {
+    console.error("Usage: node audit-e2e.mjs <trusted-production-sha> <trusted-main-sha> <sanitized-evidence.json>");
     process.exitCode = 2;
     return;
   }
   let evidence;
   try {
-    evidence = JSON.parse(readFileSync(argv[1], "utf8"));
+    evidence = JSON.parse(readFileSync(argv[2], "utf8"));
   } catch {
     console.error("Evidence could not be read or parsed (details suppressed).");
     process.exitCode = 2;
     return;
   }
-  const assessment = assessDeliveryChain(evidence, argv[0]);
+  const assessment = assessDeliveryChain(evidence, argv[0], argv[1]);
   // No payloads, headers, tokens, or untrusted strings are printed.
   console.log(JSON.stringify(assessment));
   if (assessment.verdict !== "CORRELATED_NOT_VERIFIED") process.exitCode = 1;

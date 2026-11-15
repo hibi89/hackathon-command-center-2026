@@ -1,12 +1,12 @@
 # Kmong event-driven GitHub observer bridge
 
-**Status:** source code and isolated CI are implemented; **live webhook/dispatch is NOT enabled or verified** until GitHub App webhook configuration, a central-only dispatch App, and Vercel production environment are configured and tested.
+**Status (2026-11-15):** isolated webhook code passes CI and existing central Actions has real dispatcher-bot runs; their origin as **live signed webhook deliveries is NOT VERIFIED**. The connected Vercel account cannot currently read the **existing** bridge project (prior 404), and Production GET serves an older SHA. No replacement project, secret, permission or Production change is authorized.
 
 ## Decision / alternatives
 
 | Approach | Freshness | Ongoing infrastructure | Security / operational cost |
 |---|---|---|---|
-| GitHub-only daily cron (current fallback) | ~daily, GitHub schedule may delay/drop | no extra external service | Tested collector, but live `schedule` still unverified |
+| GitHub-only hourly cron (current fallback) | best effort; GitHub schedule may delay/drop | no extra external service | Real native schedule `UPDATED` confirmed; does not prove live webhook |
 | Poll all 35 repos every 5 minutes | periodic, still not immediate | repeated GitHub Actions and API calls; GitHub cron unreliable | low complexity, higher waste; **rejected** |
 | **GitHub App push + workflow_run webhooks → Vercel function → central workflow_dispatch** | starts upon event delivery; no continuously running PC/server | one short serverless request per relevant event + one normal collector workflow run | additional hosting and hub-only Action write credential; **selected** |
 
@@ -17,13 +17,13 @@
 3. Function only dispatches if `KMONG_DISPATCH_ENABLED=true`. It signs a short-lived JWT for a **SECOND, distinct** `kmong-hub-dispatcher` GitHub App, installed **only** on `hibi89/hackathon-command-center-2026` with **Actions: Read & write** (Metadata read automatic). Existing source App remains **read-only**: **do not** grant it Actions write across all installed repositories.
 4. Receiver obtains second App's 1-hour installation token scoped to exactly the central repo and only `Actions: write`. It reads the hub workflow's recent dispatch runs, then only if no non-cancelled bot run exists in the current UTC 30-minute bucket invokes GitHub `POST /actions/workflows/kmong-hub-sync.yml/dispatches` on `main`, input `dry_run=false`. Duplicate events return HTTP 202 `coalesced` without a dispatch; GET failure fails closed with 502. No extra database, token scope expansion, or paid service. This is **best-effort**, not atomic: concurrent Vercel instances can race. API 204 means *queued* only, **not** completed.
 5. The **existing, already live-tested collector** `tools/kmong_hub_sync/sync.py` runs as a standard GitHub Actions job. It mints a separate read-only 35-repository source App token, reads branch HEAD/Actions/pin metadata, and uses its repository-local GITHUB_TOKEN to conditionally update **only** `kmong-productization/data/kmong_hub_auto_observations.json`. Repeated identical observations produce `NO_CHANGE`, no commit.
-6. Keep the original UTC `10 2 * * *` daily schedule as best-effort missed-event reconciliation. The current workflow's `concurrency` serializes dispatcher/batch activity with `cancel-in-progress: false`, and GitHub pending runs coalesce under load. Independently, central Actions `quota_guard.py` gates the expensive source scan at the same UTC 30-minute window and skips repeated tests. Neither layer stops simultaneous webhook races or guarantees event history; the daily schedule remains a best-effort reconciliation. **No claim of exactly-once deliveries, guaranteed 5-minute SLA, or guaranteed scheduled runs.**
+6. The existing `main` workflow currently specifies UTC `23 * * * *` **hourly** (best-effort missed-event reconciliation; verified native schedule runs exist). The `concurrency` group serializes dispatcher/batch activity with `cancel-in-progress: false`; the `quota_guard.py` defers duplicate bot scans per UTC 30-minute bucket. Neither layer stops simultaneous webhook races or guarantees event history; the hourly schedule remains best effort. **No claim of exactly-once deliveries, guaranteed 5-minute SLA, or guaranteed scheduled runs.**
 
 **Never** automatically raise official completion percentages, alter product registration/history, source code, pinned schema, branch protections, secrets, or runtime permissions to overcome failed events. Default fail-closed. All webhook deliveries contain GitHub push/CI metadata and are processed by the user's Vercel account; incoming full bodies are not persisted by this code. Do not log payloads, tokens or private keys.
 
 ## Vercel project and env (requires deployment/account authorization)
 
-New dedicated Vercel project (do **not** attach to unrelated `project08-executive`), linked to existing GitHub `hibi89/hackathon-command-center-2026`, production `main`, root directory `services/kmong-event-bridge`, Node >=22, no install dependencies.
+**Existing project only:** `prj_veZOkRkhMEMEA6h7PiEIl3IKcthn`, host `https://kmong-hub-event-bridge.vercel.app`. Preserve its original GitHub integration and settings. Current Vercel connector received 404 for its details under this connection, so account/project ownership must be verified through existing authorized access; **do not create a replacement or attach to unrelated `project08-executive`**. The source project root is `services/kmong-event-bridge`, Node >=22, no install dependencies; deployment and secret changes require separate owner approval.
 
 | Environment variable | Scope | Value/control |
 |---|---|---|
@@ -45,13 +45,13 @@ npm test --prefix services/kmong-event-bridge
 python3 -B -m unittest discover -s tools/kmong_hub_sync -p 'test_*.py' -v
 ```
 
-The branch-only CI verifies the exact 35-repo allowlist matches the collector roster; 16 Node security/dispatch regressions plus existing 26 Python collector tests. **Mock GitHub responses cannot count as live webhook or Vercel verification.**
+The isolated branch CI verifies the exact 35-repo allowlist against the collector roster; GitHub Actions #43692455914 previously passed Node69 + Python80 tests. Always recheck the exact candidate SHA; case counts are historical evidence, not a live acceptance claim. **Mock GitHub responses cannot count as live webhook or Vercel verification.**
 
 ### Live acceptance procedure (after account setup)
 
 1. Confirm Vercel deployment **Ready** and anonymous HTTPS response from `GET /api/webhook`; 503 before enable must not be declared healthy. Confirm no unexpected auth/protection page. Inspect logs without secrets.
 2. GitHub App Webhook **Ping** must show delivery `200 pong`. A tampered signature must be HTTP 401. Ignore a non-allowlisted repository and an untracked branch (`202 ignored`).
-3. With second App installed on the hub only, set `KMONG_DISPATCH_ENABLED=true` and redeploy if necessary. Trigger a **non-destructive push** to a tracked branch; GitHub delivery should report `202 queued`. Verify a **new** central Actions run is `event=workflow_dispatch` and its execution is `SUCCESS`, 35/70/29 evidence matches expected; verify `UPDATED` or `NO_CHANGE` and the observer snapshot readback. A webhook 202 is **not** success of the collector.
+3. With second App installed on the hub only, set `KMONG_DISPATCH_ENABLED=true` and redeploy if necessary. Trigger a **non-destructive push** to a tracked branch; GitHub delivery should report `202 queued`. Verify a **new** central Actions run is `event=workflow_dispatch` and its execution is `SUCCESS`, 35/80/29 evidence matches expected; verify `UPDATED` or `NO_CHANGE` and the observer snapshot readback. A webhook 202 is **not** success of the collector.
 4. Confirm legitimate `workflow_run:completed` from `final-blueprint-gate.yml` also queues sync. Confirm observer's own hub snapshot commit does **not** create an infinite event loop. Confirm burst handling and API failure returns 502, do not lose data or change official scores.
 5. Inspect actual daily `schedule` event separately; GitHub may delay/drop scheduled events. Since no durable event delivery queue/replay store is implemented in the bridge, GitHub retry/redelivery and daily reconciliation are operational safeguards, **not** guaranteed recovery. Operational sign-off requires incident/error handling and sustained live evidence.
 
