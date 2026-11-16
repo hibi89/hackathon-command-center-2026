@@ -1,6 +1,18 @@
 > **[HAECHONG_PRIMARY_MISSION_LOCK_V1]** PRIMARY_MISSION=GITHUB_APP_CENTRAL_AUTOMATION_90_TO_100; `ㄱ`/`ㄱㄱ` resumes GitHub App → signed HMAC webhook → Vercel bridge → central Actions → ledger; side-product development requires an explicit NEW owner instruction. `HANDOFF` recency cannot override this lock.
 > **[HAECHONG_NEXT_GATE]** Real signed delivery/E2E and deployed Production SHA remain NOT_VERIFIED; provisional central score=90/100. When Vercel/App access is blocked, only adjacent GitHub App central verification, security, or recovery work may proceed. No automatic pivot to UPTIME OPS or other product.
 
+## [2026-11-16 16:36 KST] HAECHONG_PR2_MAIN_PRODUCTION_PARITY_AND_LEDGER_UPDATED — 10항 인수인계
+1. **목표·기술·확정 범위:** 해총 GitHub App→HMAC webhook→기존 Vercel→Actions→중앙 원장만 담당, `ㄱ` 임무 잠금. 사용자 명시 PR #2 `main` 병합 및 그에 따른 기존 Production 자동 배포 GO 수령.
+2. **완료:** [PR #2](https://github.com/hibi89/hackathon-command-center-2026/pull/2) 16커밋 11파일, source SHA `76fd8add309ba377d30188dca7cefa1ef73e04f9` → `main` merge SHA `5542fb5bf13cba5f30a374afc423b875790ff58c`. 기존 Vercel Production GET HTTP200 exact `source_sha=5542fb5...` parity 실제 확인. 별도 사용자 확인 없는 추가 플래그/권한 변경 없음.
+3. **테스트·증거:** [#43824727247](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43824727247) rerun job `133156480237` Node78+Python80=158/158 PASS, `READY_SHA_MATCHED`; [#43824732787](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43824732787) bot workflow_dispatch SUCCESS, preflight RUN, Python80 PASS, collector UPDATED 35/80/29, linked29/unlinked0/fingerprint0, official scores unchanged.
+4. **진행·차단:** [원장 commit 9044413d](https://github.com/hibi89/hackathon-command-center-2026/commit/9044413d8a1a7337c28c7266dc7ad25ef67090e7) 원격 readback 완료. Signed live Delivery UUID/HMAC/receiver HTTP202를 해당 run으로 독립 귀속하는 증거 없음: full E2E NOT_VERIFIED. 잠정 90/100점 보존, 새로운 공식 검증 배점 가산 금지.
+5. **오류·대안:** Vercel MCP 프로젝트 GET404/배포 목록403 지속, 사용자 로그인 브라우저의 Vercel Overview 정상 접근 및 2일 전 배포 화면 확인. GitHub Actions 실 Production GET으로 Vercel API 접근 없이 SHA 실증 해결. GitHub App Recent Deliveries와 Vercel 실서명 로그는 연결 도구에 비노출. Flag 기본 OFF 유지.
+6. **repo/branch/SHA:** `hibi89/hackathon-command-center-2026`; runtime `main@5542fb5bf13cba5f30a374afc423b875790ff58c`; 운영 원장 `kmong-productization@9044413d8a1a7337c28c7266dc7ad25ef67090e7`을 기준으로 이 인수인계 작성, 이후 운영 HEAD는 본 문서 커밋 SHA로 확인.
+7. **Production URL/환경:** `https://kmong-hub-event-bridge.vercel.app/api/webhook` HTTP200, `READY_SHA_MATCHED` with main; 기존 프로젝트 `prj_veZOkRkhMEMEA6h7PiEIl3IKcthn`, `hibi89` team. Browser real deployment details beyond SHA/logs NOT_VERIFIED; screenshot/console NOT_RUN.
+8. **원본·보안:** 프로젝트/앱 계정·PEM·Webhook secret·플래그·권한·고객정보·원천 35/80/29·SKU19·등록이력·공식 점수 불변. Git 병합 이력과 Production 원래 `2863165b06d407ba632f18ad7a85a7c98f1989af` 롤백 기준 보존. 운영 위험 변경은 별도 GO.
+9. **다음 READY/OWNER:** Read-only GitHub App Recent Deliveries 및 Vercel Logs에서 실제 HMAC verified delivery UUID/timestamp/response 수집(비밀 내용 저장 금지); trace flag `KMONG_TRACE_DELIVERY_ID_ENABLED` 활성은 사용자 별도 승인 및 실제 main 입력 schema 검증 후만. 그 뒤 동일 UUID의 Actions run/collector UPDATED|NO_CHANGE/ledger readback 수용 테스트. 점수 100·E2E 완료는 아직 금지.
+10. **KST·증거:** 2026-11-16 16:36 KST GitHub exact main/PR/Actions/API/ledger SHA 및 Production network probe. E2E 서명 증명과 독립 승인 미완료.
+
 ## [2026-11-16 16:05 KST] HAECHONG_PREVIEW_PROBE_ADVISORY_FAILURE — 10항
 1. **목표:** GitHub App 서명 Webhook → 기존 Vercel → Actions → 원장 E2E; 해총 `ㄱ` 미션 잠금 유지.
 2. **구현:** Preview GET가 401/불일치인데도 성공 표시되던 관찰 스텝 경고화. `probeRequiresAttention` 검사 및 회귀 추가; 브랜치 커밋 `76fd8add309ba377d30188dca7cefa1ef73e04f9`, 변경 2파일 `probe-production.mjs`, `test/receiver.test.js`.
