@@ -1,6 +1,18 @@
 > **[HAECHONG_PRIMARY_MISSION_LOCK_V1]** PRIMARY_MISSION=GITHUB_APP_CENTRAL_AUTOMATION_90_TO_100; `ㄱ`/`ㄱㄱ` resumes GitHub App → signed HMAC webhook → Vercel bridge → central Actions → ledger; side-product development requires an explicit NEW owner instruction. `HANDOFF` recency cannot override this lock.
 > **[HAECHONG_NEXT_GATE]** Real signed delivery/E2E and deployed Production SHA remain NOT_VERIFIED; provisional central score=90/100. When Vercel/App access is blocked, only adjacent GitHub App central verification, security, or recovery work may proceed. No automatic pivot to UPTIME OPS or other product.
 
+## [2026-11-16 KST] KMONG-HIGH-TO-INSTANT-V1 — 10-item handoff (policy only)
+1. **목표/기술/범위:** 사용자 확정 웹 Sol High 최초 전체 최종설계 → 웹 Sol Instant 주력 BE/FE 구현 → High 고난도/최종 인수. 기존 CI 후행·Codex Sol Max+Astra Max 독립 검수·Luna Extra High 승인 후 등록 절차 유지.
+2. **완료/판단 근거:** [공식 실행 규칙](docs/strategy/HIGH_BLUEPRINT_INSTANT_EXECUTION_V1_20261116.md) 신규; High 설계 산출물(REQ/경로/의존성/수용조건/큐/런북), Instant 묶음 작업·부분 스모크·재시도 제한·결함 High 이관·상태/공식률 이중 추적·외부 차단 격리 문서화. AGENTS 최상위 반영.
+3. **테스트/검증:** GitHub 정책 문서 create/update 및 readback만 예정. 실제 제품 코드·전체 CI·브라우저·사용자 PC·외부 모델 호출 테스트 **NOT_RUN**. 수치 성과 추정 금지.
+4. **완료/진행/대기:** 중앙 정책 작성 DONE. 개별 19 SKU 적용·Instant 개발/고속 처리량 측정 NOT_APPLIED/NOT_RUN. 첫 시범은 최신 코드·충돌 없는 작업 선별 후만 수행.
+5. **원인/대안:** High+Codex 반복 사용량과 매 회차 전체 CI 대기로 개발 처리량 저하. A 전 회차 High 대화형 구현 vs B High 최초 설계/Instant 배치 구현(채택). 12월 세부 사용량·접근은 실제 적용 시 검증.
+6. **저장소/브랜치/SHA:** `hibi89/hackathon-command-center-2026@kmong-productization`. 새 규칙 `11b6777b5f77453371b4c4d202438014f38a65ad`, AGENTS `644438923729cf3703133631b520d703aede35f3`, STATUS `4a891d3fc08bf3bb2f5eb87fc57bda26a9269f53`, HANDOFF는 이 문서 원격 커밋으로 추가 확정. `main` 불변.
+7. **Production/환경:** 정책 문서만 수정, Production/Vercel/CI 미적용. 기존 중앙 GitHub App Production `https://kmong-hub-event-bridge.vercel.app/api/webhook` 접근/배포 미수정, 실서명 E2E 미검증과 잠정 90/100 유지.
+8. **원본/백업/인증:** 이전 GitHub 커밋으로 되돌릴 수 있으며 고객 원본/토큰·기존 SKU/점수·보안/필수 CI·대회 브랜치·Vercel 계정 및 상품 등록 이력 보존. Public 중앙 파일에 비밀 자료 기록 금지.
+9. **다음 작업/승인:** High가 첫 시범 제품 정확 원본/담당 브랜치와 요구 정본 확인→첫 3~10개 실행 가능한 Instant 묶음 준비→Instant 주력 코드 구현 및 SHA/증거 측정. 시범 선정 전 병렬 코덱스 파일 충돌·외부 블로커 판별. 상용 GO·유료 비용·원본/보안 권한 변경은 별도 승인.
+10. **KST/검증 범위:** 2026-11-16 KST; GitHub 문서 반영만 증명. 새 코드 기능, 실서비스 품질, 모델 사용량 혜택을 검증했다고 주장하지 않음. 해총 `ㄱ` 기본 임무는 기존 GitHub App 중앙 자동화 90→100 그대로.
+
 ## [2026-11-16 KST] OWNER-KMONG-IMPLEMENT-FIRST-QA-LAST-V1 — 10-item handoff (policy only)
 
 1. **목표·기술·범위:** 사용자 명시 지시로 크몽 29원천→19SKU 개발 역할/실행 순서를 교체. Sol High 웹 구현 집중 → 전체 CI/수정 → Codex Sol Max + Astra Max 독립 감사 → Sol High 최종 검토 → Codex Luna Extra High 크몽 등록. 세부 [최신 정본](docs/strategy/KMONG_SOL_HIGH_IMPLEMENT_FIRST_QA_LAST_PROTOCOL_20261116.md).
