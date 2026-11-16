@@ -173,12 +173,12 @@
     },
     {
       "gate": {
-        "conclusion": null,
+        "conclusion": "success",
         "head_sha": "1842e18cd191f0304a59cc23b66bb58d7481fbe3",
         "matches_current_head": true,
         "run_id": 43809503223,
         "status": "LATEST_RUN",
-        "workflow_status": "in_progress"
+        "workflow_status": "completed"
       },
       "head_sha": "1842e18cd191f0304a59cc23b66bb58d7481fbe3",
       "machine_evidence_score": {
@@ -340,13 +340,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "9c8cfdcb1c10482ad6184a581991626b7e42138c",
-        "matches_current_head": false,
-        "run_id": 43647752518,
+        "head_sha": "24b7e26f82ced41209b7519b6d6bc299bd6eacdc",
+        "matches_current_head": true,
+        "run_id": 43810405921,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "1566544333472c9e1e321aabae9ba93772883a31",
+      "head_sha": "24b7e26f82ced41209b7519b6d6bc299bd6eacdc",
       "machine_evidence_score": {
         "percent": null,
         "reason": "Pinned rubric / CI verification failed: approved scorecard blob unavailable or changed",
@@ -374,7 +374,7 @@
           "blueprint": {
             "branch": "feature/final-blueprint-p85-evidence-20261113",
             "git_blob_sha": "c3b5a389fde981a70356f962724f1be6e26d6185",
-            "head_sha": "1566544333472c9e1e321aabae9ba93772883a31",
+            "head_sha": "24b7e26f82ced41209b7519b6d6bc299bd6eacdc",
             "path": "docs/FINAL_DESIGN.md",
             "repository": "hibi89/data2web_studio"
           },
@@ -389,7 +389,7 @@
           "implementation": {
             "branch": "feature/final-blueprint-p85-evidence-20261113",
             "git_blob_sha": "b6ec0e4e138cbb9c38b0971c9b3f1ea309b99e9b",
-            "head_sha": "1566544333472c9e1e321aabae9ba93772883a31",
+            "head_sha": "24b7e26f82ced41209b7519b6d6bc299bd6eacdc",
             "path": "blueprint_score.py",
             "repository": "hibi89/data2web_studio"
           }
@@ -598,9 +598,14 @@
     },
     {
       "gate": {
-        "status": "NO_RUN"
+        "conclusion": "success",
+        "head_sha": "3d6fb5f5c83adbedfd62c0a1e61377e32030b421",
+        "matches_current_head": true,
+        "run_id": 43809558179,
+        "status": "LATEST_RUN",
+        "workflow_status": "completed"
       },
-      "head_sha": "a3ddd8b9d20fee591ad246becab2b4adc89b56d8",
+      "head_sha": "3d6fb5f5c83adbedfd62c0a1e61377e32030b421",
       "machine_evidence_score": {
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
@@ -628,7 +633,7 @@
           "blueprint": {
             "branch": "feature/kmong-p6e50-owner-delivery-20261112",
             "git_blob_sha": "cb61342f9cf3c71278be61a21397068ec9de752c",
-            "head_sha": "a3ddd8b9d20fee591ad246becab2b4adc89b56d8",
+            "head_sha": "3d6fb5f5c83adbedfd62c0a1e61377e32030b421",
             "path": "REQUIREMENTS.md",
             "repository": "hibi89/AI_AutoML_Analyst"
           },
@@ -643,7 +648,7 @@
           "implementation": {
             "branch": "feature/kmong-p6e50-owner-delivery-20261112",
             "git_blob_sha": "3d0eeef5efeacc62e26ddef9a150ea31203b3a06",
-            "head_sha": "a3ddd8b9d20fee591ad246becab2b4adc89b56d8",
+            "head_sha": "3d6fb5f5c83adbedfd62c0a1e61377e32030b421",
             "path": "scripts/p6e50_owner_zip_review.py",
             "repository": "hibi89/AI_AutoML_Analyst"
           }
@@ -681,9 +686,14 @@
     },
     {
       "gate": {
-        "status": "NO_RUN"
+        "conclusion": "success",
+        "head_sha": "b6b766001983e94567dc7c3fda551228f68999fe",
+        "matches_current_head": true,
+        "run_id": 43809594534,
+        "status": "LATEST_RUN",
+        "workflow_status": "completed"
       },
-      "head_sha": "fac8a9ccb67565ad56cf6d350ba82a9cfb80dc27",
+      "head_sha": "b6b766001983e94567dc7c3fda551228f68999fe",
       "machine_evidence_score": {
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
@@ -711,14 +721,14 @@
           "blueprint": {
             "branch": "feature/rea-app-kmong-owner-delivery-20261112",
             "git_blob_sha": "2926bda6f4bdfaddb1a604a0d5b5a72885275f77",
-            "head_sha": "fac8a9ccb67565ad56cf6d350ba82a9cfb80dc27",
+            "head_sha": "b6b766001983e94567dc7c3fda551228f68999fe",
             "path": "REQUIREMENTS.md",
             "repository": "hibi89/HAE"
           },
           "implementation": {
             "branch": "feature/rea-app-kmong-owner-delivery-20261112",
             "git_blob_sha": "47530124e451925e6019f876b5138bbc4731a05f",
-            "head_sha": "fac8a9ccb67565ad56cf6d350ba82a9cfb80dc27",
+            "head_sha": "b6b766001983e94567dc7c3fda551228f68999fe",
             "path": "tools/rea-app/rea_app/cli.py",
             "repository": "hibi89/HAE"
           }
@@ -755,13 +765,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "6508b27b9a36567f57e926eb3613b10f3b265689",
-        "matches_current_head": false,
-        "run_id": 43346193465,
+        "head_sha": "8b8757f1b4a53a9e3e57ae0e2a250a4d89d09af2",
+        "matches_current_head": true,
+        "run_id": 43809601743,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "fe0693eab0df738ee981f93169b60f95c7a63cea",
+      "head_sha": "8b8757f1b4a53a9e3e57ae0e2a250a4d89d09af2",
       "machine_evidence_score": {
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
@@ -789,7 +799,7 @@
           "blueprint": {
             "branch": "feature/la-p17-audit-evidence-20261112",
             "git_blob_sha": "a86e57c46c64a89fa7fa386549262a5298d3e169",
-            "head_sha": "fe0693eab0df738ee981f93169b60f95c7a63cea",
+            "head_sha": "8b8757f1b4a53a9e3e57ae0e2a250a4d89d09af2",
             "path": "REQUIREMENTS.md",
             "repository": "hibi89/HAE"
           },
@@ -804,7 +814,7 @@
           "implementation": {
             "branch": "feature/la-p17-audit-evidence-20261112",
             "git_blob_sha": "0205b91f7575cfbf4ff01518e407c9e372b11e38",
-            "head_sha": "fe0693eab0df738ee981f93169b60f95c7a63cea",
+            "head_sha": "8b8757f1b4a53a9e3e57ae0e2a250a4d89d09af2",
             "path": "packages/lightning-azent/lightning_azent/runtime.py",
             "repository": "hibi89/HAE"
           }
@@ -843,13 +853,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "49ab1080dc8a7a28f0e1435233f51d1caff0f87a",
-        "matches_current_head": false,
-        "run_id": 43679171766,
+        "head_sha": "5d70c46cb48794b6e3e6ef232d7ce8b9c2d4ffe0",
+        "matches_current_head": true,
+        "run_id": 43810457258,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "6132d0002e28cbad814f9eee7e477223fe280c2f",
+      "head_sha": "5d70c46cb48794b6e3e6ef232d7ce8b9c2d4ffe0",
       "machine_evidence_score": {
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
@@ -877,14 +887,14 @@
           "blueprint": {
             "branch": "feature/p0-db-map",
             "git_blob_sha": "8e8e61f30c504fa5fe0acbaa6c85047801e921d6",
-            "head_sha": "6132d0002e28cbad814f9eee7e477223fe280c2f",
+            "head_sha": "5d70c46cb48794b6e3e6ef232d7ce8b9c2d4ffe0",
             "path": "REQUIREMENTS.md",
             "repository": "hibi89/DBVORA"
           },
           "implementation": {
             "branch": "feature/p0-db-map",
             "git_blob_sha": "23312c73af7923ef19a73798d86541176178724d",
-            "head_sha": "6132d0002e28cbad814f9eee7e477223fe280c2f",
+            "head_sha": "5d70c46cb48794b6e3e6ef232d7ce8b9c2d4ffe0",
             "path": "dbvora/api.py",
             "repository": "hibi89/DBVORA"
           }
@@ -922,7 +932,7 @@
       "gate": {
         "status": "NO_RUN"
       },
-      "head_sha": "4669957a0f5dd8e641903bef0c0ef21d43166dcc",
+      "head_sha": "24de007fb9ab1a6a8d958586ed4bd1b9a8d87c2f",
       "machine_evidence_score": {
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
@@ -958,7 +968,7 @@
           "implementation": {
             "branch": "feature/p546-rag-prep-mapping",
             "git_blob_sha": "6b600fc2c9b4b3861e543d61db02d795abfb587b",
-            "head_sha": "4669957a0f5dd8e641903bef0c0ef21d43166dcc",
+            "head_sha": "24de007fb9ab1a6a8d958586ed4bd1b9a8d87c2f",
             "path": "src/review-zip-verify.mjs",
             "repository": "hibi89/RAG_STUDIO"
           }
@@ -997,13 +1007,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "2503ede2659a01eba52827a920c01c4ec8b1d5e7",
+        "head_sha": "f0a7321aff1f36ecf01274e0b42b57078ceeb207",
         "matches_current_head": true,
-        "run_id": 43680155935,
+        "run_id": 43810482003,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "2503ede2659a01eba52827a920c01c4ec8b1d5e7",
+      "head_sha": "f0a7321aff1f36ecf01274e0b42b57078ceeb207",
       "machine_evidence_score": {
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
@@ -1031,7 +1041,7 @@
           "blueprint": {
             "branch": "feature/astra-p71-pdf-source-parity-20261112",
             "git_blob_sha": "f2ce12696003fcff0ebddcd086cc2e5998a3135c",
-            "head_sha": "2503ede2659a01eba52827a920c01c4ec8b1d5e7",
+            "head_sha": "f0a7321aff1f36ecf01274e0b42b57078ceeb207",
             "path": "REQUIREMENTS.md",
             "repository": "hibi89/astra_pdf_redesigner"
           },
@@ -1046,7 +1056,7 @@
           "implementation": {
             "branch": "feature/astra-p71-pdf-source-parity-20261112",
             "git_blob_sha": "56b1758b06785b7fc3b629cfa06d57573cf2ddfa",
-            "head_sha": "2503ede2659a01eba52827a920c01c4ec8b1d5e7",
+            "head_sha": "f0a7321aff1f36ecf01274e0b42b57078ceeb207",
             "path": "src/App.tsx",
             "repository": "hibi89/astra_pdf_redesigner"
           }
@@ -1086,7 +1096,7 @@
       "gate": {
         "status": "NO_RUN"
       },
-      "head_sha": "a6f76576880e3dc242ea3730728e287c0914d5ee",
+      "head_sha": "de99104d5917c10209f3ce18d54d3f38ac9e4b97",
       "machine_evidence_score": {
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
@@ -1114,14 +1124,14 @@
           "blueprint": {
             "branch": "feature/coin-pattern-p85-forward-eval-20261112",
             "git_blob_sha": "dc683d57812919bb8096ba01e73158c903632086",
-            "head_sha": "a6f76576880e3dc242ea3730728e287c0914d5ee",
+            "head_sha": "de99104d5917c10209f3ce18d54d3f38ac9e4b97",
             "path": "REQUIREMENTS.md",
             "repository": "hibi89/candle_scraper"
           },
           "implementation": {
             "branch": "feature/coin-pattern-p85-forward-eval-20261112",
             "git_blob_sha": "6d92c1c832a5899c6493229cb494f0ef9eca6f38",
-            "head_sha": "a6f76576880e3dc242ea3730728e287c0914d5ee",
+            "head_sha": "de99104d5917c10209f3ce18d54d3f38ac9e4b97",
             "path": "coin_forward_eval.py",
             "repository": "hibi89/candle_scraper"
           }
@@ -1159,7 +1169,7 @@
       "gate": {
         "status": "NO_RUN"
       },
-      "head_sha": "57d5424f008b091b0f46066ef41e85f437b8dac8",
+      "head_sha": "bf1ef6ebbf2b260f6328fb02dc21233ed9ec509e",
       "machine_evidence_score": {
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
@@ -1187,7 +1197,7 @@
           "blueprint": {
             "branch": "feature/kmong-eai-85-p31-20261112",
             "git_blob_sha": "20b6fbdb690f6a3d032a374f773bf3f6586af2bf",
-            "head_sha": "57d5424f008b091b0f46066ef41e85f437b8dac8",
+            "head_sha": "bf1ef6ebbf2b260f6328fb02dc21233ed9ec509e",
             "path": "REQUIREMENTS.md",
             "repository": "hibi89/EAI"
           },
@@ -1202,7 +1212,7 @@
           "implementation": {
             "branch": "feature/kmong-eai-85-p31-20261112",
             "git_blob_sha": "44b77d0e66c56a56f174bc91c6c667c64fe60781",
-            "head_sha": "57d5424f008b091b0f46066ef41e85f437b8dac8",
+            "head_sha": "bf1ef6ebbf2b260f6328fb02dc21233ed9ec509e",
             "path": "scripts/accept_windows_candidate.py",
             "repository": "hibi89/EAI"
           }
@@ -1242,7 +1252,7 @@
       "gate": {
         "status": "NO_RUN"
       },
-      "head_sha": "72da39fcebda1e23f540e5381be9abf6422d1934",
+      "head_sha": "a0ad622edf4fdb5e76cf17774b191687c55fa1e5",
       "machine_evidence_score": {
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
@@ -1270,7 +1280,7 @@
           "blueprint": {
             "branch": "feature/pc-care-p15-p18-85-20261112",
             "git_blob_sha": "c241352279f7880a97b703f4489247698443c5cb",
-            "head_sha": "72da39fcebda1e23f540e5381be9abf6422d1934",
+            "head_sha": "a0ad622edf4fdb5e76cf17774b191687c55fa1e5",
             "path": "REQUIREMENTS.md",
             "repository": "hibi89/AX_MART"
           },
@@ -1285,7 +1295,7 @@
           "implementation": {
             "branch": "feature/pc-care-p15-p18-85-20261112",
             "git_blob_sha": "4a9c4153e5124f93820043ee2b8929a97a3df539",
-            "head_sha": "72da39fcebda1e23f540e5381be9abf6422d1934",
+            "head_sha": "a0ad622edf4fdb5e76cf17774b191687c55fa1e5",
             "path": "products/pc-care/START_PC_CARE.cmd",
             "repository": "hibi89/AX_MART"
           }
@@ -1323,9 +1333,14 @@
     },
     {
       "gate": {
-        "status": "NO_RUN"
+        "conclusion": "success",
+        "head_sha": "4031a9fae210f2394266e03bfca304e29eca3448",
+        "matches_current_head": true,
+        "run_id": 43809709662,
+        "status": "LATEST_RUN",
+        "workflow_status": "completed"
       },
-      "head_sha": "1f36b39e67914a4a24ce8d012ccdbf95e8dede4c",
+      "head_sha": "4031a9fae210f2394266e03bfca304e29eca3448",
       "machine_evidence_score": {
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
@@ -1353,7 +1368,7 @@
           "blueprint": {
             "branch": "feature/cube-owner-preflight-p85-20261112",
             "git_blob_sha": "e04932d898f26de94f26a5057ba6cb2a6c422964",
-            "head_sha": "1f36b39e67914a4a24ce8d012ccdbf95e8dede4c",
+            "head_sha": "4031a9fae210f2394266e03bfca304e29eca3448",
             "path": "REQUIREMENTS.md",
             "repository": "hibi89/AX_MART"
           },
@@ -1368,7 +1383,7 @@
           "implementation": {
             "branch": "feature/cube-owner-preflight-p85-20261112",
             "git_blob_sha": "c30585a3978c221099ee3ea8cfacc062467a4eba",
-            "head_sha": "1f36b39e67914a4a24ce8d012ccdbf95e8dede4c",
+            "head_sha": "4031a9fae210f2394266e03bfca304e29eca3448",
             "path": "commerce/release-preflight.mjs",
             "repository": "hibi89/AX_MART"
           }
@@ -1406,9 +1421,14 @@
     },
     {
       "gate": {
-        "status": "NO_RUN"
+        "conclusion": "success",
+        "head_sha": "3bc418c5d43f002b3c90aef0ef2f9b40b93c302d",
+        "matches_current_head": true,
+        "run_id": 43809714823,
+        "status": "LATEST_RUN",
+        "workflow_status": "completed"
       },
-      "head_sha": "53b2262d847b40b45f5138d5f6cb4c16a8249813",
+      "head_sha": "3bc418c5d43f002b3c90aef0ef2f9b40b93c302d",
       "machine_evidence_score": {
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
@@ -1436,7 +1456,7 @@
           "blueprint": {
             "branch": "develop",
             "git_blob_sha": "e2e9cdec47e343950e79e2dbd2a927c417c1b8cf",
-            "head_sha": "53b2262d847b40b45f5138d5f6cb4c16a8249813",
+            "head_sha": "3bc418c5d43f002b3c90aef0ef2f9b40b93c302d",
             "path": "REQUIREMENTS.md",
             "repository": "hibi89/KUODRA"
           },
@@ -1451,7 +1471,7 @@
           "implementation": {
             "branch": "develop",
             "git_blob_sha": "d8478015d452490bd3e1b07b5fbe7a1d8c5d0460",
-            "head_sha": "53b2262d847b40b45f5138d5f6cb4c16a8249813",
+            "head_sha": "3bc418c5d43f002b3c90aef0ef2f9b40b93c302d",
             "path": "kuodra/gui.py",
             "repository": "hibi89/KUODRA"
           }
@@ -1489,9 +1509,14 @@
     },
     {
       "gate": {
-        "status": "NO_RUN"
+        "conclusion": "success",
+        "head_sha": "c2e2bdd0a6ff5fc53b4f5e2e40b4d249b50445c5",
+        "matches_current_head": true,
+        "run_id": 43809725071,
+        "status": "LATEST_RUN",
+        "workflow_status": "completed"
       },
-      "head_sha": "79f65ca284bc65c651054d281e0b9e95b04469cb",
+      "head_sha": "c2e2bdd0a6ff5fc53b4f5e2e40b4d249b50445c5",
       "machine_evidence_score": {
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
@@ -1519,14 +1544,14 @@
           "blueprint": {
             "branch": "feature/core-extraction",
             "git_blob_sha": "373e525d95de7ca27fd008018fe4da44df775ae0",
-            "head_sha": "79f65ca284bc65c651054d281e0b9e95b04469cb",
+            "head_sha": "c2e2bdd0a6ff5fc53b4f5e2e40b4d249b50445c5",
             "path": "docs/ACCEPTANCE_MATRIX.md",
             "repository": "hibi89/prep"
           },
           "implementation": {
             "branch": "feature/core-extraction",
             "git_blob_sha": "81c66ca000036cb4daca7a221535190d2276418e",
-            "head_sha": "79f65ca284bc65c651054d281e0b9e95b04469cb",
+            "head_sha": "c2e2bdd0a6ff5fc53b4f5e2e40b4d249b50445c5",
             "path": "src/sdk.mjs",
             "repository": "hibi89/prep"
           }
@@ -1563,13 +1588,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "929c0155297d2186df2d2eca03f7c32389a5cb57",
+        "head_sha": "6273704267c71fe3fe6a050ebaf2deb76e5bcc3c",
         "matches_current_head": true,
-        "run_id": 43575165278,
+        "run_id": 43810464117,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "929c0155297d2186df2d2eca03f7c32389a5cb57",
+      "head_sha": "6273704267c71fe3fe6a050ebaf2deb76e5bcc3c",
       "machine_evidence_score": {
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
@@ -1597,14 +1622,14 @@
           "blueprint": {
             "branch": "feature/ffax-workbench-p85-20261112",
             "git_blob_sha": "aae8fd50cbc984dfad018d22ec7eaf3f305c80ae",
-            "head_sha": "929c0155297d2186df2d2eca03f7c32389a5cb57",
+            "head_sha": "6273704267c71fe3fe6a050ebaf2deb76e5bcc3c",
             "path": "docs/ACCEPTANCE_MATRIX.md",
             "repository": "hibi89/frontend-foundry-ax"
           },
           "implementation": {
             "branch": "feature/ffax-workbench-p85-20261112",
             "git_blob_sha": "cedad710a8fc70dad92aba8d3cdfda40e0a65837",
-            "head_sha": "929c0155297d2186df2d2eca03f7c32389a5cb57",
+            "head_sha": "6273704267c71fe3fe6a050ebaf2deb76e5bcc3c",
             "path": "src/core.mjs",
             "repository": "hibi89/frontend-foundry-ax"
           }
@@ -1642,7 +1667,7 @@
       "gate": {
         "status": "NO_RUN"
       },
-      "head_sha": "f9577bbc4c798534b36ed1243e122453b5e4a4a9",
+      "head_sha": "0355c70067f61db8332c8a8b0c8482e0d216f514",
       "machine_evidence_score": {
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
@@ -1670,7 +1695,7 @@
           "blueprint": {
             "branch": "feature/data-verify",
             "git_blob_sha": "9f67cf7c1f694426fe8a3acea857fd31f096a601",
-            "head_sha": "f9577bbc4c798534b36ed1243e122453b5e4a4a9",
+            "head_sha": "0355c70067f61db8332c8a8b0c8482e0d216f514",
             "path": "REQUIREMENTS.md",
             "repository": "hibi89/factory-ax-ecosystem"
           },
@@ -1685,7 +1710,7 @@
           "implementation": {
             "branch": "feature/data-verify",
             "git_blob_sha": "d5115cd9a3ce5289b044c92b08be9eadb00a4c19",
-            "head_sha": "f9577bbc4c798534b36ed1243e122453b5e4a4a9",
+            "head_sha": "0355c70067f61db8332c8a8b0c8482e0d216f514",
             "path": "factoryax/gui.py",
             "repository": "hibi89/factory-ax-ecosystem"
           }
@@ -1724,13 +1749,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "9160cf77cbb5c62e09e1f9451643b37b5ddeecbb",
+        "head_sha": "04b994c75b02306a82518cbc0ce89cceb93c0ef8",
         "matches_current_head": true,
-        "run_id": 43383446098,
+        "run_id": 43809766731,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "9160cf77cbb5c62e09e1f9451643b37b5ddeecbb",
+      "head_sha": "04b994c75b02306a82518cbc0ce89cceb93c0ef8",
       "machine_evidence_score": {
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
@@ -1758,7 +1783,7 @@
           "blueprint": {
             "branch": "product/hae-la-automation",
             "git_blob_sha": "be06fbb282f3b9be6231cc802628471dfa30406b",
-            "head_sha": "9160cf77cbb5c62e09e1f9451643b37b5ddeecbb",
+            "head_sha": "04b994c75b02306a82518cbc0ce89cceb93c0ef8",
             "path": "docs/FINAL_BLUEPRINT.md",
             "repository": "hibi89/Freelancer"
           },
@@ -1809,13 +1834,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "8a84c9d373d97f46080927594c3a6ca0cb188dc5",
+        "head_sha": "2f3bcd1b1be484ad98c7b2be8254cb092c179dcc",
         "matches_current_head": true,
-        "run_id": 43541069753,
+        "run_id": 43809772913,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "8a84c9d373d97f46080927594c3a6ca0cb188dc5",
+      "head_sha": "2f3bcd1b1be484ad98c7b2be8254cb092c179dcc",
       "machine_evidence_score": {
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
@@ -1843,7 +1868,7 @@
           "blueprint": {
             "branch": "product/rag-enterprise-knowledge",
             "git_blob_sha": "889648dea0a44b929d33b9b8bea0084ca240ba06",
-            "head_sha": "8a84c9d373d97f46080927594c3a6ca0cb188dc5",
+            "head_sha": "2f3bcd1b1be484ad98c7b2be8254cb092c179dcc",
             "path": "docs/FINAL_BLUEPRINT.md",
             "repository": "hibi89/Freelancer"
           },
@@ -1858,7 +1883,7 @@
           "implementation": {
             "branch": "product/rag-enterprise-knowledge",
             "git_blob_sha": "2346ad76c942200d603750a2373495b1cb2e3f19",
-            "head_sha": "8a84c9d373d97f46080927594c3a6ca0cb188dc5",
+            "head_sha": "2f3bcd1b1be484ad98c7b2be8254cb092c179dcc",
             "path": "enterprise/p85-korean-model-preflight.mjs",
             "repository": "hibi89/Freelancer"
           }
@@ -1897,13 +1922,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "6e94d0066cbc80e91fed28b3358b36fc76235515",
+        "head_sha": "463afe1a85262c3973e9db2434ebaaff9f12a61d",
         "matches_current_head": true,
-        "run_id": 43383645708,
+        "run_id": 43809778192,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "6e94d0066cbc80e91fed28b3358b36fc76235515",
+      "head_sha": "463afe1a85262c3973e9db2434ebaaff9f12a61d",
       "machine_evidence_score": {
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
@@ -1931,7 +1956,7 @@
           "blueprint": {
             "branch": "product/rea-website-rebuild",
             "git_blob_sha": "38748a5f08e2a2cc6cb24b1ec397c9e5d1dadec4",
-            "head_sha": "6e94d0066cbc80e91fed28b3358b36fc76235515",
+            "head_sha": "463afe1a85262c3973e9db2434ebaaff9f12a61d",
             "path": "docs/FINAL_BLUEPRINT.md",
             "repository": "hibi89/Freelancer"
           },
@@ -1986,13 +2011,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "2daf969d0d48afd66a35213e77e129b3ced8cdb2",
+        "head_sha": "5fdb576b205e0ee42cb39bb6bb4ba4aff299410f",
         "matches_current_head": true,
-        "run_id": 43384291708,
+        "run_id": 43809810713,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "2daf969d0d48afd66a35213e77e129b3ced8cdb2",
+      "head_sha": "5fdb576b205e0ee42cb39bb6bb4ba4aff299410f",
       "machine_evidence_score": {
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
@@ -2020,7 +2045,7 @@
           "blueprint": {
             "branch": "product/proofqa-ax-delivery-audit",
             "git_blob_sha": "59a9269e0aa3285568b678cdcc6a57a80688aef7",
-            "head_sha": "2daf969d0d48afd66a35213e77e129b3ced8cdb2",
+            "head_sha": "5fdb576b205e0ee42cb39bb6bb4ba4aff299410f",
             "path": "docs/FINAL_BLUEPRINT.md",
             "repository": "hibi89/Freelancer"
           },
@@ -2073,9 +2098,14 @@
     },
     {
       "gate": {
-        "status": "NO_RUN"
+        "conclusion": "success",
+        "head_sha": "acc216a57d90b9ab85009fb702e83f64e2d9c988",
+        "matches_current_head": true,
+        "run_id": 43809817028,
+        "status": "LATEST_RUN",
+        "workflow_status": "completed"
       },
-      "head_sha": "740ca7c3c4d969b3c51d9be017d950fea50297a1",
+      "head_sha": "acc216a57d90b9ab85009fb702e83f64e2d9c988",
       "machine_evidence_score": {
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
@@ -2103,7 +2133,7 @@
           "blueprint": {
             "branch": "product/ontoinsight-ax-data-analytics",
             "git_blob_sha": "d1415e8015a43801cc1fbbf1ff66075ea2b3258e",
-            "head_sha": "740ca7c3c4d969b3c51d9be017d950fea50297a1",
+            "head_sha": "acc216a57d90b9ab85009fb702e83f64e2d9c988",
             "path": "docs/FINAL_BLUEPRINT.md",
             "repository": "hibi89/Freelancer"
           },
@@ -2158,13 +2188,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "6e644ce44c3e026882f9daf2dae7fd245a768658",
+        "head_sha": "9987bb37ed64a570d27d2b4c6e91cdcc8a005a5a",
         "matches_current_head": true,
-        "run_id": 43540765785,
+        "run_id": 43809821876,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "6e644ce44c3e026882f9daf2dae7fd245a768658",
+      "head_sha": "9987bb37ed64a570d27d2b4c6e91cdcc8a005a5a",
       "machine_evidence_score": {
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
@@ -2192,7 +2222,7 @@
           "blueprint": {
             "branch": "product/bid-ax-public-procurement",
             "git_blob_sha": "8ece17209a92bf08d9104a34ab5b0fa6f40a9608",
-            "head_sha": "6e644ce44c3e026882f9daf2dae7fd245a768658",
+            "head_sha": "9987bb37ed64a570d27d2b4c6e91cdcc8a005a5a",
             "path": "docs/FINAL_BLUEPRINT.md",
             "repository": "hibi89/Freelancer"
           },
@@ -2207,7 +2237,7 @@
           "implementation": {
             "branch": "product/bid-ax-public-procurement",
             "git_blob_sha": "a53255034ad1ddcaa3a5eccf26bc5e22aa3015b1",
-            "head_sha": "6e644ce44c3e026882f9daf2dae7fd245a768658",
+            "head_sha": "9987bb37ed64a570d27d2b4c6e91cdcc8a005a5a",
             "path": "bidax/entrypoint.py",
             "repository": "hibi89/Freelancer"
           }
@@ -2245,9 +2275,14 @@
     },
     {
       "gate": {
-        "status": "NO_RUN"
+        "conclusion": "success",
+        "head_sha": "bb2bb13f729dd8969e98838e50646d4e06be139c",
+        "matches_current_head": true,
+        "run_id": 43810235441,
+        "status": "LATEST_RUN",
+        "workflow_status": "completed"
       },
-      "head_sha": "d6b42798c633172d6d918d00316d5e3a973be426",
+      "head_sha": "bb2bb13f729dd8969e98838e50646d4e06be139c",
       "machine_evidence_score": {
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
@@ -2304,13 +2339,13 @@
     {
       "gate": {
         "conclusion": "success",
-        "head_sha": "714071c98a0b7ec812d75d8ac3bfd814c112c788",
+        "head_sha": "af07f3d6b410d4d162006a95687e6f9c0e80a588",
         "matches_current_head": true,
-        "run_id": 43540653720,
+        "run_id": 43809826572,
         "status": "LATEST_RUN",
         "workflow_status": "completed"
       },
-      "head_sha": "714071c98a0b7ec812d75d8ac3bfd814c112c788",
+      "head_sha": "af07f3d6b410d4d162006a95687e6f9c0e80a588",
       "machine_evidence_score": {
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
@@ -2338,7 +2373,7 @@
           "blueprint": {
             "branch": "product/worknova-desk-local",
             "git_blob_sha": "da429ec478fd079236b1bcde63cd3c889d0745cd",
-            "head_sha": "714071c98a0b7ec812d75d8ac3bfd814c112c788",
+            "head_sha": "af07f3d6b410d4d162006a95687e6f9c0e80a588",
             "path": "docs/FINAL_BLUEPRINT.md",
             "repository": "hibi89/Freelancer"
           },
@@ -2353,7 +2388,7 @@
           "implementation": {
             "branch": "product/worknova-desk-local",
             "git_blob_sha": "3165dbc534fea58c5cadcf658292d441575883ac",
-            "head_sha": "714071c98a0b7ec812d75d8ac3bfd814c112c788",
+            "head_sha": "af07f3d6b410d4d162006a95687e6f9c0e80a588",
             "path": "worknova_desk/gui.py",
             "repository": "hibi89/Freelancer"
           }
@@ -2395,7 +2430,7 @@
     {
       "canonical": {
         "expected_git_blob_sha": "dc2820f0b353a3c76429f68e84032a46998c323e",
-        "head_sha": "37a360da884d1c372a3df76e71d180d57ffcf9c5",
+        "head_sha": "45e763204146ddb26aa697a70d3c4bd97f52bb0c",
         "mode": "enforce",
         "observed_git_blob_sha": "dc2820f0b353a3c76429f68e84032a46998c323e",
         "owner_approval_verified": false,
@@ -2406,9 +2441,14 @@
       "main": {
         "branch": "main",
         "gate": {
-          "status": "NO_RUN"
+          "conclusion": "success",
+          "head_sha": "45e763204146ddb26aa697a70d3c4bd97f52bb0c",
+          "matches_current_head": true,
+          "run_id": 43809887164,
+          "status": "LATEST_RUN",
+          "workflow_status": "completed"
         },
-        "head_sha": "37a360da884d1c372a3df76e71d180d57ffcf9c5",
+        "head_sha": "45e763204146ddb26aa697a70d3c4bd97f52bb0c",
         "status": "PRESENT"
       },
       "repository": "hibi89/ai-code-checker",
@@ -2416,12 +2456,12 @@
         {
           "branch": "feature/retail-private-candidate-20261112",
           "gate": {
-            "conclusion": null,
+            "conclusion": "success",
             "head_sha": "1842e18cd191f0304a59cc23b66bb58d7481fbe3",
             "matches_current_head": true,
             "run_id": 43809503223,
             "status": "LATEST_RUN",
-            "workflow_status": "in_progress"
+            "workflow_status": "completed"
           },
           "head_sha": "1842e18cd191f0304a59cc23b66bb58d7481fbe3",
           "status": "PRESENT"
@@ -2431,7 +2471,7 @@
     {
       "canonical": {
         "expected_git_blob_sha": "cb61342f9cf3c71278be61a21397068ec9de752c",
-        "head_sha": "a3ddd8b9d20fee591ad246becab2b4adc89b56d8",
+        "head_sha": "3d6fb5f5c83adbedfd62c0a1e61377e32030b421",
         "mode": "observe",
         "observed_git_blob_sha": "cb61342f9cf3c71278be61a21397068ec9de752c",
         "owner_approval_verified": false,
@@ -2442,9 +2482,14 @@
       "main": {
         "branch": "main",
         "gate": {
-          "status": "NO_RUN"
+          "conclusion": "success",
+          "head_sha": "c4d3c32dc9d336d6212e7d6aa97fe3125437e94d",
+          "matches_current_head": true,
+          "run_id": 43809933070,
+          "status": "LATEST_RUN",
+          "workflow_status": "completed"
         },
-        "head_sha": "470d868e7919638faccc963f9c64a85bdbb7f66d",
+        "head_sha": "c4d3c32dc9d336d6212e7d6aa97fe3125437e94d",
         "status": "PRESENT"
       },
       "repository": "hibi89/AI_AutoML_Analyst",
@@ -2452,9 +2497,14 @@
         {
           "branch": "feature/kmong-p6e50-owner-delivery-20261112",
           "gate": {
-            "status": "NO_RUN"
+            "conclusion": "success",
+            "head_sha": "3d6fb5f5c83adbedfd62c0a1e61377e32030b421",
+            "matches_current_head": true,
+            "run_id": 43809558179,
+            "status": "LATEST_RUN",
+            "workflow_status": "completed"
           },
-          "head_sha": "a3ddd8b9d20fee591ad246becab2b4adc89b56d8",
+          "head_sha": "3d6fb5f5c83adbedfd62c0a1e61377e32030b421",
           "status": "PRESENT"
         }
       ]
@@ -2462,7 +2512,7 @@
     {
       "canonical": {
         "expected_git_blob_sha": "b2d6bd5de2d5b74a8004d0fe5ca5643d0a94ea02",
-        "head_sha": "afe122cf7d343b01877366034981f6aecafdb8a6",
+        "head_sha": "19304c9beb4c388b5c88646314e247cad5e3ac5a",
         "mode": "enforce",
         "observed_git_blob_sha": "b2d6bd5de2d5b74a8004d0fe5ca5643d0a94ea02",
         "owner_approval_verified": false,
@@ -2473,9 +2523,14 @@
       "main": {
         "branch": "main",
         "gate": {
-          "status": "NO_RUN"
+          "conclusion": "success",
+          "head_sha": "19304c9beb4c388b5c88646314e247cad5e3ac5a",
+          "matches_current_head": true,
+          "run_id": 43809965894,
+          "status": "LATEST_RUN",
+          "workflow_status": "completed"
         },
-        "head_sha": "afe122cf7d343b01877366034981f6aecafdb8a6",
+        "head_sha": "19304c9beb4c388b5c88646314e247cad5e3ac5a",
         "status": "PRESENT"
       },
       "repository": "hibi89/astra_pdf_redesigner",
@@ -2484,13 +2539,13 @@
           "branch": "feature/astra-p71-pdf-source-parity-20261112",
           "gate": {
             "conclusion": "success",
-            "head_sha": "2503ede2659a01eba52827a920c01c4ec8b1d5e7",
+            "head_sha": "f0a7321aff1f36ecf01274e0b42b57078ceeb207",
             "matches_current_head": true,
-            "run_id": 43680155935,
+            "run_id": 43810482003,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "2503ede2659a01eba52827a920c01c4ec8b1d5e7",
+          "head_sha": "f0a7321aff1f36ecf01274e0b42b57078ceeb207",
           "status": "PRESENT"
         },
         {
@@ -2498,7 +2553,7 @@
           "gate": {
             "status": "NO_RUN"
           },
-          "head_sha": "b80830ab3219dbcf88556d60ce2c47c2dcec7764",
+          "head_sha": "bec0d03735de548e180a367f78dea5c2a149660d",
           "status": "PRESENT"
         }
       ]
@@ -2528,7 +2583,7 @@
     {
       "canonical": {
         "expected_git_blob_sha": "c50e8f998971e3938b880bdde95f725a958fdffa",
-        "head_sha": "48d84725c404fbfa6ae96d1bfe4b16f7644a1b2b",
+        "head_sha": "153b9e217840fd200c0f781a4b71c4ebf16001d2",
         "mode": "observe",
         "observed_git_blob_sha": "c50e8f998971e3938b880bdde95f725a958fdffa",
         "owner_approval_verified": false,
@@ -2539,9 +2594,14 @@
       "main": {
         "branch": "main",
         "gate": {
-          "status": "NO_RUN"
+          "conclusion": "success",
+          "head_sha": "153b9e217840fd200c0f781a4b71c4ebf16001d2",
+          "matches_current_head": true,
+          "run_id": 43809996962,
+          "status": "LATEST_RUN",
+          "workflow_status": "completed"
         },
-        "head_sha": "48d84725c404fbfa6ae96d1bfe4b16f7644a1b2b",
+        "head_sha": "153b9e217840fd200c0f781a4b71c4ebf16001d2",
         "status": "PRESENT"
       },
       "repository": "hibi89/AX_MART",
@@ -2549,9 +2609,14 @@
         {
           "branch": "feature/cube-owner-preflight-p85-20261112",
           "gate": {
-            "status": "NO_RUN"
+            "conclusion": "success",
+            "head_sha": "4031a9fae210f2394266e03bfca304e29eca3448",
+            "matches_current_head": true,
+            "run_id": 43809709662,
+            "status": "LATEST_RUN",
+            "workflow_status": "completed"
           },
-          "head_sha": "1f36b39e67914a4a24ce8d012ccdbf95e8dede4c",
+          "head_sha": "4031a9fae210f2394266e03bfca304e29eca3448",
           "status": "PRESENT"
         },
         {
@@ -2559,15 +2624,20 @@
           "gate": {
             "status": "NO_RUN"
           },
-          "head_sha": "72da39fcebda1e23f540e5381be9abf6422d1934",
+          "head_sha": "a0ad622edf4fdb5e76cf17774b191687c55fa1e5",
           "status": "PRESENT"
         },
         {
           "branch": "feature/pc-care-usb",
           "gate": {
-            "status": "NO_RUN"
+            "conclusion": "success",
+            "head_sha": "c0fa248b14b6d52e9659856b2f3692c81a5884dd",
+            "matches_current_head": true,
+            "run_id": 43810540372,
+            "status": "LATEST_RUN",
+            "workflow_status": "completed"
           },
-          "head_sha": "a1f5e96a224036697d959d143d7ffb56c116a572",
+          "head_sha": "c0fa248b14b6d52e9659856b2f3692c81a5884dd",
           "status": "PRESENT"
         }
       ]
@@ -2606,7 +2676,7 @@
     {
       "canonical": {
         "expected_git_blob_sha": "dc683d57812919bb8096ba01e73158c903632086",
-        "head_sha": "498713c871e241409ec3773081b9f7f5ba4ebe8d",
+        "head_sha": "368a8d8a22fdb282192332684bf339b78a48ba31",
         "mode": "observe",
         "observed_git_blob_sha": "dc683d57812919bb8096ba01e73158c903632086",
         "owner_approval_verified": false,
@@ -2617,9 +2687,14 @@
       "main": {
         "branch": "main",
         "gate": {
-          "status": "NO_RUN"
+          "conclusion": "success",
+          "head_sha": "368a8d8a22fdb282192332684bf339b78a48ba31",
+          "matches_current_head": true,
+          "run_id": 43809876475,
+          "status": "LATEST_RUN",
+          "workflow_status": "completed"
         },
-        "head_sha": "498713c871e241409ec3773081b9f7f5ba4ebe8d",
+        "head_sha": "368a8d8a22fdb282192332684bf339b78a48ba31",
         "status": "PRESENT"
       },
       "repository": "hibi89/candle_scraper",
@@ -2627,9 +2702,14 @@
         {
           "branch": "feature/candle-pattern-analyzer",
           "gate": {
-            "status": "NO_RUN"
+            "conclusion": "success",
+            "head_sha": "27f047ef71f5d73c3a2dea15fc5a708c1f69d53d",
+            "matches_current_head": true,
+            "run_id": 43810547505,
+            "status": "LATEST_RUN",
+            "workflow_status": "completed"
           },
-          "head_sha": "69f61eda448026b3200ec831d54f8da1f7de35c7",
+          "head_sha": "27f047ef71f5d73c3a2dea15fc5a708c1f69d53d",
           "status": "PRESENT"
         },
         {
@@ -2637,7 +2717,7 @@
           "gate": {
             "status": "NO_RUN"
           },
-          "head_sha": "a6f76576880e3dc242ea3730728e287c0914d5ee",
+          "head_sha": "de99104d5917c10209f3ce18d54d3f38ac9e4b97",
           "status": "PRESENT"
         },
         {
@@ -2653,7 +2733,7 @@
     {
       "canonical": {
         "expected_git_blob_sha": "7cd26804f5fea7ed2ec18911bb03d438a49aa646",
-        "head_sha": "0cf4adbfe745c10fdb103db09185ea495fb769aa",
+        "head_sha": "10c17490710ebe82beb9bb9ce30961b574c8f73a",
         "mode": "enforce",
         "observed_git_blob_sha": "7cd26804f5fea7ed2ec18911bb03d438a49aa646",
         "owner_approval_verified": false,
@@ -2665,13 +2745,13 @@
         "branch": "main",
         "gate": {
           "conclusion": "success",
-          "head_sha": "3400ab7eb84fb7141acacfc0df213e0b0186da83",
-          "matches_current_head": false,
-          "run_id": 43348157583,
+          "head_sha": "10c17490710ebe82beb9bb9ce30961b574c8f73a",
+          "matches_current_head": true,
+          "run_id": 43809919167,
           "status": "LATEST_RUN",
           "workflow_status": "completed"
         },
-        "head_sha": "0cf4adbfe745c10fdb103db09185ea495fb769aa",
+        "head_sha": "10c17490710ebe82beb9bb9ce30961b574c8f73a",
         "status": "PRESENT"
       },
       "repository": "hibi89/data2web_studio",
@@ -2680,39 +2760,39 @@
           "branch": "feature/final-blueprint-p85-evidence-20261113",
           "gate": {
             "conclusion": "success",
-            "head_sha": "9c8cfdcb1c10482ad6184a581991626b7e42138c",
-            "matches_current_head": false,
-            "run_id": 43647752518,
+            "head_sha": "24b7e26f82ced41209b7519b6d6bc299bd6eacdc",
+            "matches_current_head": true,
+            "run_id": 43810405921,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "1566544333472c9e1e321aabae9ba93772883a31",
+          "head_sha": "24b7e26f82ced41209b7519b6d6bc299bd6eacdc",
           "status": "PRESENT"
         },
         {
           "branch": "feature/lite-independent-migration",
           "gate": {
             "conclusion": "success",
-            "head_sha": "f613305dee8c8ceb8636632bce001b1c02532e35",
+            "head_sha": "b2c03bf28dfe299aae380fd1a946b8d18dc973b3",
             "matches_current_head": true,
-            "run_id": 43378427013,
+            "run_id": 43810551914,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "f613305dee8c8ceb8636632bce001b1c02532e35",
+          "head_sha": "b2c03bf28dfe299aae380fd1a946b8d18dc973b3",
           "status": "PRESENT"
         },
         {
           "branch": "feature/xlsx-tsv-import",
           "gate": {
             "conclusion": "success",
-            "head_sha": "0fee0f84c35f377bdfffea7b1a66e62191abb81a",
+            "head_sha": "c05b706996bf1c94673025ca9e1433c0725535a3",
             "matches_current_head": true,
-            "run_id": 43382127277,
+            "run_id": 43810558471,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "0fee0f84c35f377bdfffea7b1a66e62191abb81a",
+          "head_sha": "c05b706996bf1c94673025ca9e1433c0725535a3",
           "status": "PRESENT"
         }
       ]
@@ -2720,7 +2800,7 @@
     {
       "canonical": {
         "expected_git_blob_sha": "8e8e61f30c504fa5fe0acbaa6c85047801e921d6",
-        "head_sha": "2c58799cde343ae0a176759e195202ecab97c345",
+        "head_sha": "b8c00a64551e2ebe69c8d87cd315c7725bfb3047",
         "mode": "observe",
         "observed_git_blob_sha": "8e8e61f30c504fa5fe0acbaa6c85047801e921d6",
         "owner_approval_verified": false,
@@ -2731,9 +2811,14 @@
       "main": {
         "branch": "main",
         "gate": {
-          "status": "NO_RUN"
+          "conclusion": "success",
+          "head_sha": "b8c00a64551e2ebe69c8d87cd315c7725bfb3047",
+          "matches_current_head": true,
+          "run_id": 43809957652,
+          "status": "LATEST_RUN",
+          "workflow_status": "completed"
         },
-        "head_sha": "2c58799cde343ae0a176759e195202ecab97c345",
+        "head_sha": "b8c00a64551e2ebe69c8d87cd315c7725bfb3047",
         "status": "PRESENT"
       },
       "repository": "hibi89/DBVORA",
@@ -2742,13 +2827,13 @@
           "branch": "feature/p0-db-map",
           "gate": {
             "conclusion": "success",
-            "head_sha": "49ab1080dc8a7a28f0e1435233f51d1caff0f87a",
-            "matches_current_head": false,
-            "run_id": 43679171766,
+            "head_sha": "5d70c46cb48794b6e3e6ef232d7ce8b9c2d4ffe0",
+            "matches_current_head": true,
+            "run_id": 43810457258,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "6132d0002e28cbad814f9eee7e477223fe280c2f",
+          "head_sha": "5d70c46cb48794b6e3e6ef232d7ce8b9c2d4ffe0",
           "status": "PRESENT"
         }
       ]
@@ -2756,7 +2841,7 @@
     {
       "canonical": {
         "expected_git_blob_sha": "20b6fbdb690f6a3d032a374f773bf3f6586af2bf",
-        "head_sha": "57d5424f008b091b0f46066ef41e85f437b8dac8",
+        "head_sha": "bf1ef6ebbf2b260f6328fb02dc21233ed9ec509e",
         "mode": "observe",
         "observed_git_blob_sha": "20b6fbdb690f6a3d032a374f773bf3f6586af2bf",
         "owner_approval_verified": false,
@@ -2767,9 +2852,14 @@
       "main": {
         "branch": "main",
         "gate": {
-          "status": "NO_RUN"
+          "conclusion": "success",
+          "head_sha": "2edb309ae22efee259967f7165cde924ecdb005f",
+          "matches_current_head": true,
+          "run_id": 43809970037,
+          "status": "LATEST_RUN",
+          "workflow_status": "completed"
         },
-        "head_sha": "dea2e2d2440b510ae0ffcab247751ee4b90d39f2",
+        "head_sha": "2edb309ae22efee259967f7165cde924ecdb005f",
         "status": "PRESENT"
       },
       "repository": "hibi89/EAI",
@@ -2779,15 +2869,20 @@
           "gate": {
             "status": "NO_RUN"
           },
-          "head_sha": "57d5424f008b091b0f46066ef41e85f437b8dac8",
+          "head_sha": "bf1ef6ebbf2b260f6328fb02dc21233ed9ec509e",
           "status": "PRESENT"
         },
         {
           "branch": "feature/local-first-mvp",
           "gate": {
-            "status": "NO_RUN"
+            "conclusion": "success",
+            "head_sha": "a911540fd07b72533e215849e142148327a5adbc",
+            "matches_current_head": true,
+            "run_id": 43810585436,
+            "status": "LATEST_RUN",
+            "workflow_status": "completed"
           },
-          "head_sha": "5cf122eec9b61fc9c8cd9cc10a7ae3f4701ec5e1",
+          "head_sha": "a911540fd07b72533e215849e142148327a5adbc",
           "status": "PRESENT"
         }
       ]
@@ -2817,7 +2912,7 @@
     {
       "canonical": {
         "expected_git_blob_sha": "dee90598d9411313f644bc5e84339e38130128be",
-        "head_sha": "5f5e9ac838e3949f133dd9e055a17cd1b6857c73",
+        "head_sha": "35fb43edc5ae56c5bab924742f7455a9d48023b8",
         "mode": "enforce",
         "observed_git_blob_sha": "dee90598d9411313f644bc5e84339e38130128be",
         "owner_approval_verified": false,
@@ -2828,9 +2923,14 @@
       "main": {
         "branch": "main",
         "gate": {
-          "status": "NO_RUN"
+          "conclusion": "success",
+          "head_sha": "35fb43edc5ae56c5bab924742f7455a9d48023b8",
+          "matches_current_head": true,
+          "run_id": 43810049051,
+          "status": "LATEST_RUN",
+          "workflow_status": "completed"
         },
-        "head_sha": "5f5e9ac838e3949f133dd9e055a17cd1b6857c73",
+        "head_sha": "35fb43edc5ae56c5bab924742f7455a9d48023b8",
         "status": "PRESENT"
       },
       "repository": "hibi89/factory-ax-ecosystem",
@@ -2840,23 +2940,33 @@
           "gate": {
             "status": "NO_RUN"
           },
-          "head_sha": "f9577bbc4c798534b36ed1243e122453b5e4a4a9",
+          "head_sha": "0355c70067f61db8332c8a8b0c8482e0d216f514",
           "status": "PRESENT"
         },
         {
           "branch": "feature/hae-la",
           "gate": {
-            "status": "NO_RUN"
+            "conclusion": "success",
+            "head_sha": "224f7f787aac047e0bb90a0d645e776617505336",
+            "matches_current_head": true,
+            "run_id": 43810591200,
+            "status": "LATEST_RUN",
+            "workflow_status": "completed"
           },
-          "head_sha": "1fbccafb41b723471713c376290b34188c43a2d5",
+          "head_sha": "224f7f787aac047e0bb90a0d645e776617505336",
           "status": "PRESENT"
         },
         {
           "branch": "integration/develop",
           "gate": {
-            "status": "NO_RUN"
+            "conclusion": "success",
+            "head_sha": "4859842ee54a5f133840ac17424de739f49a8b7e",
+            "matches_current_head": true,
+            "run_id": 43810596156,
+            "status": "LATEST_RUN",
+            "workflow_status": "completed"
           },
-          "head_sha": "31b8229eedfd7bd598642a7e23f93efe5c5aa390",
+          "head_sha": "4859842ee54a5f133840ac17424de739f49a8b7e",
           "status": "PRESENT"
         }
       ]
@@ -2864,7 +2974,7 @@
     {
       "canonical": {
         "expected_git_blob_sha": "9e12d3dbd88367e405a27a59c62141ce8c6d4b31",
-        "head_sha": "204f70169d4c7bff2d1ad58d024a184c32360a50",
+        "head_sha": "4982ce06cc0e74cbb45fc161b03051b8e0fe2db7",
         "mode": "observe",
         "observed_git_blob_sha": "9e12d3dbd88367e405a27a59c62141ce8c6d4b31",
         "owner_approval_verified": false,
@@ -2876,13 +2986,13 @@
         "branch": "main",
         "gate": {
           "conclusion": "success",
-          "head_sha": "204f70169d4c7bff2d1ad58d024a184c32360a50",
+          "head_sha": "4982ce06cc0e74cbb45fc161b03051b8e0fe2db7",
           "matches_current_head": true,
-          "run_id": 43377671034,
+          "run_id": 43810053409,
           "status": "LATEST_RUN",
           "workflow_status": "completed"
         },
-        "head_sha": "204f70169d4c7bff2d1ad58d024a184c32360a50",
+        "head_sha": "4982ce06cc0e74cbb45fc161b03051b8e0fe2db7",
         "status": "PRESENT"
       },
       "repository": "hibi89/Freelancer",
@@ -2891,73 +3001,78 @@
           "branch": "product/bid-ax-public-procurement",
           "gate": {
             "conclusion": "success",
-            "head_sha": "6e644ce44c3e026882f9daf2dae7fd245a768658",
+            "head_sha": "9987bb37ed64a570d27d2b4c6e91cdcc8a005a5a",
             "matches_current_head": true,
-            "run_id": 43540765785,
+            "run_id": 43809821876,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "6e644ce44c3e026882f9daf2dae7fd245a768658",
+          "head_sha": "9987bb37ed64a570d27d2b4c6e91cdcc8a005a5a",
           "status": "PRESENT"
         },
         {
           "branch": "product/hae-la-automation",
           "gate": {
             "conclusion": "success",
-            "head_sha": "9160cf77cbb5c62e09e1f9451643b37b5ddeecbb",
+            "head_sha": "04b994c75b02306a82518cbc0ce89cceb93c0ef8",
             "matches_current_head": true,
-            "run_id": 43383446098,
+            "run_id": 43809766731,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "9160cf77cbb5c62e09e1f9451643b37b5ddeecbb",
+          "head_sha": "04b994c75b02306a82518cbc0ce89cceb93c0ef8",
           "status": "PRESENT"
         },
         {
           "branch": "product/ontoinsight-ax-data-analytics",
           "gate": {
-            "status": "NO_RUN"
+            "conclusion": "success",
+            "head_sha": "acc216a57d90b9ab85009fb702e83f64e2d9c988",
+            "matches_current_head": true,
+            "run_id": 43809817028,
+            "status": "LATEST_RUN",
+            "workflow_status": "completed"
           },
-          "head_sha": "740ca7c3c4d969b3c51d9be017d950fea50297a1",
+          "head_sha": "acc216a57d90b9ab85009fb702e83f64e2d9c988",
           "status": "PRESENT"
         },
         {
           "branch": "product/proofqa-ax-delivery-audit",
           "gate": {
             "conclusion": "success",
-            "head_sha": "2daf969d0d48afd66a35213e77e129b3ced8cdb2",
+            "head_sha": "5fdb576b205e0ee42cb39bb6bb4ba4aff299410f",
             "matches_current_head": true,
-            "run_id": 43384291708,
+            "run_id": 43809810713,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "2daf969d0d48afd66a35213e77e129b3ced8cdb2",
+          "head_sha": "5fdb576b205e0ee42cb39bb6bb4ba4aff299410f",
           "status": "PRESENT"
         },
         {
           "branch": "product/rag-enterprise-knowledge",
           "gate": {
             "conclusion": "success",
-            "head_sha": "8a84c9d373d97f46080927594c3a6ca0cb188dc5",
+            "head_sha": "2f3bcd1b1be484ad98c7b2be8254cb092c179dcc",
             "matches_current_head": true,
-            "run_id": 43541069753,
+            "run_id": 43809772913,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "8a84c9d373d97f46080927594c3a6ca0cb188dc5",
+          "head_sha": "2f3bcd1b1be484ad98c7b2be8254cb092c179dcc",
           "status": "PRESENT"
         },
         {
           "branch": "product/rea-website-rebuild",
           "gate": {
             "conclusion": "success",
-            "head_sha": "6e94d0066cbc80e91fed28b3358b36fc76235515",
+            "head_sha": "463afe1a85262c3973e9db2434ebaaff9f12a61d",
             "matches_current_head": true,
-            "run_id": 43383645708,
+            "run_id": 43809778192,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "6e94d0066cbc80e91fed28b3358b36fc76235515",
+          "head_sha": "463afe1a85262c3973e9db2434ebaaff9f12a61d",
           "status": "PRESENT"
         }
       ]
@@ -2965,7 +3080,7 @@
     {
       "canonical": {
         "expected_git_blob_sha": "1ae97c0f1bc0a4f1aba44a0e5bd1d219fb1abecd",
-        "head_sha": "63212dff011d3a0c00981e56ffda248cb108386f",
+        "head_sha": "af260b3ad71a0b80ad2205706d6999e5bf7fa7bd",
         "mode": "observe",
         "observed_git_blob_sha": "1ae97c0f1bc0a4f1aba44a0e5bd1d219fb1abecd",
         "owner_approval_verified": false,
@@ -2976,9 +3091,14 @@
       "main": {
         "branch": "main",
         "gate": {
-          "status": "NO_RUN"
+          "conclusion": "success",
+          "head_sha": "af260b3ad71a0b80ad2205706d6999e5bf7fa7bd",
+          "matches_current_head": true,
+          "run_id": 43810011917,
+          "status": "LATEST_RUN",
+          "workflow_status": "completed"
         },
-        "head_sha": "63212dff011d3a0c00981e56ffda248cb108386f",
+        "head_sha": "af260b3ad71a0b80ad2205706d6999e5bf7fa7bd",
         "status": "PRESENT"
       },
       "repository": "hibi89/frontend-foundry-ax",
@@ -2987,13 +3107,13 @@
           "branch": "feature/ffax-workbench-p85-20261112",
           "gate": {
             "conclusion": "success",
-            "head_sha": "929c0155297d2186df2d2eca03f7c32389a5cb57",
+            "head_sha": "6273704267c71fe3fe6a050ebaf2deb76e5bcc3c",
             "matches_current_head": true,
-            "run_id": 43575165278,
+            "run_id": 43810464117,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "929c0155297d2186df2d2eca03f7c32389a5cb57",
+          "head_sha": "6273704267c71fe3fe6a050ebaf2deb76e5bcc3c",
           "status": "PRESENT"
         }
       ]
@@ -3050,7 +3170,7 @@
     {
       "canonical": {
         "expected_git_blob_sha": "0d31062b0e3c6a570b37a35ace6fbfbe59ec2116",
-        "head_sha": "ff763ba8ec6002a01a0b08a02146e98193174e50",
+        "head_sha": "d7e50d11a17328f45c6626a285378cbd0d1b0aab",
         "mode": "enforce",
         "observed_git_blob_sha": "0d31062b0e3c6a570b37a35ace6fbfbe59ec2116",
         "owner_approval_verified": false,
@@ -3061,9 +3181,14 @@
       "main": {
         "branch": "main",
         "gate": {
-          "status": "NO_RUN"
+          "conclusion": "success",
+          "head_sha": "d7e50d11a17328f45c6626a285378cbd0d1b0aab",
+          "matches_current_head": true,
+          "run_id": 43809882355,
+          "status": "LATEST_RUN",
+          "workflow_status": "completed"
         },
-        "head_sha": "ff763ba8ec6002a01a0b08a02146e98193174e50",
+        "head_sha": "d7e50d11a17328f45c6626a285378cbd0d1b0aab",
         "status": "PRESENT"
       },
       "repository": "hibi89/HAE",
@@ -3084,46 +3209,66 @@
         {
           "branch": "feature/dbvora-integration",
           "gate": {
-            "status": "NO_RUN"
+            "conclusion": "success",
+            "head_sha": "fb1211f6e1b459b67a94327ad49dc301bb5c1618",
+            "matches_current_head": true,
+            "run_id": 43810600347,
+            "status": "LATEST_RUN",
+            "workflow_status": "completed"
           },
-          "head_sha": "32aea9e674231aad42ed60468aae41b56e041cef",
+          "head_sha": "fb1211f6e1b459b67a94327ad49dc301bb5c1618",
           "status": "PRESENT"
         },
         {
           "branch": "feature/la-p17-audit-evidence-20261112",
           "gate": {
             "conclusion": "success",
-            "head_sha": "6508b27b9a36567f57e926eb3613b10f3b265689",
-            "matches_current_head": false,
-            "run_id": 43346193465,
+            "head_sha": "8b8757f1b4a53a9e3e57ae0e2a250a4d89d09af2",
+            "matches_current_head": true,
+            "run_id": 43809601743,
             "status": "LATEST_RUN",
             "workflow_status": "completed"
           },
-          "head_sha": "fe0693eab0df738ee981f93169b60f95c7a63cea",
+          "head_sha": "8b8757f1b4a53a9e3e57ae0e2a250a4d89d09af2",
           "status": "PRESENT"
         },
         {
           "branch": "feature/lightning-azent",
           "gate": {
-            "status": "NO_RUN"
+            "conclusion": "success",
+            "head_sha": "0d9f9dbdab1087c109f0da4719bebe98aaa80734",
+            "matches_current_head": true,
+            "run_id": 43810625885,
+            "status": "LATEST_RUN",
+            "workflow_status": "completed"
           },
-          "head_sha": "36f9882eb50e0de9e85eedb320a5778c8321cda5",
+          "head_sha": "0d9f9dbdab1087c109f0da4719bebe98aaa80734",
           "status": "PRESENT"
         },
         {
           "branch": "feature/rea-app-kmong-owner-delivery-20261112",
           "gate": {
-            "status": "NO_RUN"
+            "conclusion": "success",
+            "head_sha": "b6b766001983e94567dc7c3fda551228f68999fe",
+            "matches_current_head": true,
+            "run_id": 43809594534,
+            "status": "LATEST_RUN",
+            "workflow_status": "completed"
           },
-          "head_sha": "fac8a9ccb67565ad56cf6d350ba82a9cfb80dc27",
+          "head_sha": "b6b766001983e94567dc7c3fda551228f68999fe",
           "status": "PRESENT"
         },
         {
           "branch": "feature/sovia-la-projection-p41-20261112",
           "gate": {
-            "status": "NO_RUN"
+            "conclusion": "success",
+            "head_sha": "a7a7f335c18483980c6dcaf8ed45742f66621fc4",
+            "matches_current_head": true,
+            "run_id": 43810633609,
+            "status": "LATEST_RUN",
+            "workflow_status": "completed"
           },
-          "head_sha": "07657271a2ab8bd622938044b56275cdca263cd1",
+          "head_sha": "a7a7f335c18483980c6dcaf8ed45742f66621fc4",
           "status": "PRESENT"
         }
       ]
@@ -3152,9 +3297,14 @@
         {
           "branch": "lead/kic",
           "gate": {
-            "status": "NO_RUN"
+            "conclusion": "success",
+            "head_sha": "43788120903b28e61ad8bf67cf469bb93982cd17",
+            "matches_current_head": true,
+            "run_id": 43810226282,
+            "status": "LATEST_RUN",
+            "workflow_status": "completed"
           },
-          "head_sha": "579d027a976ecb85ab9cfd0c3c788b2685267bee",
+          "head_sha": "43788120903b28e61ad8bf67cf469bb93982cd17",
           "status": "PRESENT"
         }
       ]
@@ -3183,9 +3333,14 @@
         {
           "branch": "lead/paypal",
           "gate": {
-            "status": "NO_RUN"
+            "conclusion": "success",
+            "head_sha": "ee33264756f6e83dd8a264eb6de8d127c287c030",
+            "matches_current_head": true,
+            "run_id": 43810231506,
+            "status": "LATEST_RUN",
+            "workflow_status": "completed"
           },
-          "head_sha": "c320382792024a30c5bc195a302a217b34f38b07",
+          "head_sha": "ee33264756f6e83dd8a264eb6de8d127c287c030",
           "status": "PRESENT"
         }
       ]
@@ -3214,9 +3369,14 @@
         {
           "branch": "lead/ugreen",
           "gate": {
-            "status": "NO_RUN"
+            "conclusion": "success",
+            "head_sha": "bb2bb13f729dd8969e98838e50646d4e06be139c",
+            "matches_current_head": true,
+            "run_id": 43810235441,
+            "status": "LATEST_RUN",
+            "workflow_status": "completed"
           },
-          "head_sha": "d6b42798c633172d6d918d00316d5e3a973be426",
+          "head_sha": "bb2bb13f729dd8969e98838e50646d4e06be139c",
           "status": "PRESENT"
         }
       ]
@@ -3224,7 +3384,7 @@
     {
       "canonical": {
         "expected_git_blob_sha": "1c12a144f8ac4fff78e2fb244b0debfe1ae50f72",
-        "head_sha": "0ddf73c36e4ae77fce37f9cf5d9a83dea713f26a",
+        "head_sha": "2aa0b86435ca4643be24087e8512babe999b7aa1",
         "mode": "enforce",
         "observed_git_blob_sha": "1c12a144f8ac4fff78e2fb244b0debfe1ae50f72",
         "owner_approval_verified": false,
@@ -3235,9 +3395,14 @@
       "main": {
         "branch": "main",
         "gate": {
-          "status": "NO_RUN"
+          "conclusion": "success",
+          "head_sha": "2aa0b86435ca4643be24087e8512babe999b7aa1",
+          "matches_current_head": true,
+          "run_id": 43810001681,
+          "status": "LATEST_RUN",
+          "workflow_status": "completed"
         },
-        "head_sha": "0ddf73c36e4ae77fce37f9cf5d9a83dea713f26a",
+        "head_sha": "2aa0b86435ca4643be24087e8512babe999b7aa1",
         "status": "PRESENT"
       },
       "repository": "hibi89/KUODRA",
@@ -3245,9 +3410,14 @@
         {
           "branch": "develop",
           "gate": {
-            "status": "NO_RUN"
+            "conclusion": "success",
+            "head_sha": "3bc418c5d43f002b3c90aef0ef2f9b40b93c302d",
+            "matches_current_head": true,
+            "run_id": 43809714823,
+            "status": "LATEST_RUN",
+            "workflow_status": "completed"
           },
-          "head_sha": "53b2262d847b40b45f5138d5f6cb4c16a8249813",
+          "head_sha": "3bc418c5d43f002b3c90aef0ef2f9b40b93c302d",
           "status": "PRESENT"
         }
       ]
@@ -3365,7 +3535,7 @@
     {
       "canonical": {
         "expected_git_blob_sha": "26b53937664dd7f11f42ee0ba6bfef93ebe50be2",
-        "head_sha": "e25b874a8322b72340fb0d897ea9c9820bf6552c",
+        "head_sha": "9fa3561d3fab508650a76e260ebc809ceb89444b",
         "mode": "enforce",
         "observed_git_blob_sha": "26b53937664dd7f11f42ee0ba6bfef93ebe50be2",
         "owner_approval_verified": false,
@@ -3376,9 +3546,14 @@
       "main": {
         "branch": "main",
         "gate": {
-          "status": "NO_RUN"
+          "conclusion": "success",
+          "head_sha": "9fa3561d3fab508650a76e260ebc809ceb89444b",
+          "matches_current_head": true,
+          "run_id": 43810007446,
+          "status": "LATEST_RUN",
+          "workflow_status": "completed"
         },
-        "head_sha": "e25b874a8322b72340fb0d897ea9c9820bf6552c",
+        "head_sha": "9fa3561d3fab508650a76e260ebc809ceb89444b",
         "status": "PRESENT"
       },
       "repository": "hibi89/prep",
@@ -3386,9 +3561,14 @@
         {
           "branch": "feature/core-extraction",
           "gate": {
-            "status": "NO_RUN"
+            "conclusion": "success",
+            "head_sha": "c2e2bdd0a6ff5fc53b4f5e2e40b4d249b50445c5",
+            "matches_current_head": true,
+            "run_id": 43809725071,
+            "status": "LATEST_RUN",
+            "workflow_status": "completed"
           },
-          "head_sha": "79f65ca284bc65c651054d281e0b9e95b04469cb",
+          "head_sha": "c2e2bdd0a6ff5fc53b4f5e2e40b4d249b50445c5",
           "status": "PRESENT"
         }
       ]
@@ -3415,9 +3595,14 @@
       "main": {
         "branch": "main",
         "gate": {
-          "status": "NO_RUN"
+          "conclusion": "success",
+          "head_sha": "692d4f95e9626d038fe0802e3d6b7618d087f7a1",
+          "matches_current_head": true,
+          "run_id": 43809962114,
+          "status": "LATEST_RUN",
+          "workflow_status": "completed"
         },
-        "head_sha": "03f3ae2e02d6cc9ad82b9abf7c8873be73fe1cda",
+        "head_sha": "692d4f95e9626d038fe0802e3d6b7618d087f7a1",
         "status": "PRESENT"
       },
       "repository": "hibi89/RAG_STUDIO",
@@ -3425,9 +3610,14 @@
         {
           "branch": "develop",
           "gate": {
-            "status": "NO_RUN"
+            "conclusion": "success",
+            "head_sha": "d92fbb662f33a91a3224f6d53eda746b4a401c62",
+            "matches_current_head": true,
+            "run_id": 43810641293,
+            "status": "LATEST_RUN",
+            "workflow_status": "completed"
           },
-          "head_sha": "bb8529ed689c1e95ccd7bbb722d4d6616eb46130",
+          "head_sha": "d92fbb662f33a91a3224f6d53eda746b4a401c62",
           "status": "PRESENT"
         },
         {
@@ -3435,15 +3625,20 @@
           "gate": {
             "status": "NO_RUN"
           },
-          "head_sha": "4669957a0f5dd8e641903bef0c0ef21d43166dcc",
+          "head_sha": "24de007fb9ab1a6a8d958586ed4bd1b9a8d87c2f",
           "status": "PRESENT"
         },
         {
           "branch": "feature/p550-mapped-cited-journey",
           "gate": {
-            "status": "NO_RUN"
+            "conclusion": "success",
+            "head_sha": "e3f9ab4c6576c3702cf167233785a55b320b4b3b",
+            "matches_current_head": true,
+            "run_id": 43810647721,
+            "status": "LATEST_RUN",
+            "workflow_status": "completed"
           },
-          "head_sha": "c5867b3951f51bfa97cadd1aad8fb13e9cf9e604",
+          "head_sha": "e3f9ab4c6576c3702cf167233785a55b320b4b3b",
           "status": "PRESENT"
         }
       ]
@@ -3451,7 +3646,7 @@
     {
       "canonical": {
         "expected_git_blob_sha": "59cae0260a494edbaa6456b8aeae4afe12e2f8ac",
-        "head_sha": "19d4759140b00d9a258071bbc37217d2492fc038",
+        "head_sha": "f90d717f5d752113a8fe14dbae20d05abc438fcc",
         "mode": "enforce",
         "observed_git_blob_sha": "59cae0260a494edbaa6456b8aeae4afe12e2f8ac",
         "owner_approval_verified": false,
@@ -3462,9 +3657,14 @@
       "main": {
         "branch": "main",
         "gate": {
-          "status": "NO_RUN"
+          "conclusion": "success",
+          "head_sha": "f90d717f5d752113a8fe14dbae20d05abc438fcc",
+          "matches_current_head": true,
+          "run_id": 43809924135,
+          "status": "LATEST_RUN",
+          "workflow_status": "completed"
         },
-        "head_sha": "19d4759140b00d9a258071bbc37217d2492fc038",
+        "head_sha": "f90d717f5d752113a8fe14dbae20d05abc438fcc",
         "status": "PRESENT"
       },
       "repository": "hibi89/REA_Web",
@@ -3513,9 +3713,14 @@
       "main": {
         "branch": "main",
         "gate": {
-          "status": "NO_RUN"
+          "conclusion": "success",
+          "head_sha": "a562e44de222b9de126b0b5da5e5ad9c02e913a2",
+          "matches_current_head": true,
+          "run_id": 43809894699,
+          "status": "LATEST_RUN",
+          "workflow_status": "completed"
         },
-        "head_sha": "68181210a34300c2788eef8d810b4fcff345991d",
+        "head_sha": "a562e44de222b9de126b0b5da5e5ad9c02e913a2",
         "status": "PRESENT"
       },
       "repository": "hibi89/SMAX",
@@ -3538,7 +3743,7 @@
     {
       "canonical": {
         "expected_git_blob_sha": "53447ab218947746adcbf588d132092606a8d2f1",
-        "head_sha": "7b4e408edf073bb530470a76791269a7cfc6cf3a",
+        "head_sha": "3f9debc7b8b83f98cc7c2cf5d8ba226110a8a5e6",
         "mode": "observe",
         "observed_git_blob_sha": "53447ab218947746adcbf588d132092606a8d2f1",
         "owner_approval_verified": false,
@@ -3549,9 +3754,14 @@
       "main": {
         "branch": "main",
         "gate": {
-          "status": "NO_RUN"
+          "conclusion": "success",
+          "head_sha": "3f9debc7b8b83f98cc7c2cf5d8ba226110a8a5e6",
+          "matches_current_head": true,
+          "run_id": 43809928738,
+          "status": "LATEST_RUN",
+          "workflow_status": "completed"
         },
-        "head_sha": "7b4e408edf073bb530470a76791269a7cfc6cf3a",
+        "head_sha": "3f9debc7b8b83f98cc7c2cf5d8ba226110a8a5e6",
         "status": "PRESENT"
       },
       "repository": "hibi89/SOVIA_sovereign",
@@ -3559,9 +3769,14 @@
         {
           "branch": "develop",
           "gate": {
-            "status": "NO_RUN"
+            "conclusion": "success",
+            "head_sha": "d33e6bc6506d049c3eb7cb5edaf3f9dc7b4e4f60",
+            "matches_current_head": true,
+            "run_id": 43810699943,
+            "status": "LATEST_RUN",
+            "workflow_status": "completed"
           },
-          "head_sha": "68953d9b1f91892e7cffa2bd28e26d938ea46069",
+          "head_sha": "d33e6bc6506d049c3eb7cb5edaf3f9dc7b4e4f60",
           "status": "PRESENT"
         },
         {
