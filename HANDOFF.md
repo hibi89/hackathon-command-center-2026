@@ -1,6 +1,18 @@
 > **[HAECHONG_PRIMARY_MISSION_LOCK_V1]** PRIMARY_MISSION=GITHUB_APP_CENTRAL_AUTOMATION_90_TO_100; `ㄱ`/`ㄱㄱ` resumes GitHub App → signed HMAC webhook → Vercel bridge → central Actions → ledger; side-product development requires an explicit NEW owner instruction. `HANDOFF` recency cannot override this lock.
 > **[HAECHONG_NEXT_GATE]** Real signed delivery/E2E and deployed Production SHA remain NOT_VERIFIED; provisional central score=90/100. When Vercel/App access is blocked, only adjacent GitHub App central verification, security, or recovery work may proceed. No automatic pivot to UPTIME OPS or other product.
 
+## [2026-11-16 15:35 KST] HAECHONG_GITHUB_APP_DRAFT_PR_AND_LEDGER_RECEIPTS — 10항
+1. **목표:** 중앙 GitHub App → HMAC webhook → 기존 Vercel → main Actions → 35repo/80ref/29product ledger 인과성 실증. 단독 `ㄱ` 임무 잠금 유지.
+2. **완료:** 원격 bot workflow_dispatch/collector 실제 기록 점검, 기능 브랜치 대 main 14커밋/10파일 차이 확인, 검토용 [Draft PR #2](https://github.com/hibi89/hackathon-command-center-2026/pull/2) 생성. main에 병합하지 않았음.
+3. **검증:** [run #43810627639](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43810627639) Python80 PASS, collector UPDATED 35/80/29, unlinked0/fingerprint0; 원장 실제 [commit 8854be39](https://github.com/hibi89/hackathon-command-center-2026/commit/8854be39d633b02f33a88c92eac92e2f0272fcc5) 원격 확인. [run #43810638420](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43810638420) deferred/scan SKIP. 기존 기능 [CI #43693953755](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43693953755) Node77+Python80=157 PASS; 새 코드/실 HMAC/Production 테스트 이번 회차 NOT_RUN.
+4. **상태:** GitHub runner collector 실업데이트 VERIFIED, 서명 웹훅↔run 원인 관계 NOT_VERIFIED, Production SHA NOT_VERIFIED, 중앙 점수 잠정 90/100 불변, 본 배포 및 main 병합 NOT_APPLIED.
+5. **오류·대안:** Vercel 원본 프로젝트 GET404, 배포 목록403 (일반 및 명시 teamId `team_oDTHTX6ht90nzgUWxnpzZxhU`); 반복 재시도 중단. 본 회차 외부 공개 GET 도구 접근 불가. 소유자 승인된 원본 Vercel 접근 및 App Recent Deliveries가 필요.
+6. **정확 대상:** `hibi89/hackathon-command-center-2026@kmong-productization` 시작 SHA `21f7c405130038b4a3925970c25792c7ffb5070b`; `main@69e584e57a3a37fa72b406d62ccddf9eef9dfcf2`; source feature `c663bc3814cff896d8efd5014117348dfd23c377`; PR #2는 14커밋·10파일, Draft, no merge. 본 HANDOFF 갱신 커밋은 GitHub 응답 SHA로 별도 확정.
+7. **Vercel:** 원본 project `prj_veZOkRkhMEMEA6h7PiEIl3IKcthn`; Production `https://kmong-hub-event-bridge.vercel.app/api/webhook`; PR 생성 후 Vercel bot에서 기존 연동의 **Preview Ready** 댓글 확인, Preview 실동작 NOT_VERIFIED. Production 미수정.
+8. **보존:** Git 원본/35·80·29원장/등록이력·공식률·29→19 SKU/인증 비밀·기존 GitHub App/Actions/본 Production 변경 없음. 비밀은 문서에 포함하지 않음.
+9. **다음 READY·승인:** PR #2 코드/워크플로 영향 검토→**OWNER GO 전 main 병합 금지**→기존 Vercel 소유 프로젝트 접근 회복·Production 호환 배포 별도 승인→실제 GitHub App Recent Deliveries UUID/서명 처리 확인→배포 SHA/Actions run/UPDATED 또는 NO_CHANGE/ledger blob 독립 일치 증명. trace flag 기본 OFF 유지.
+10. **근거 시점:** 2026-11-16 15:35 KST, GitHub 원격 refs/CI/Actions logs/collector commit/PR bot 댓글. E2E·Vercel Production 실사용·고객 환경 검증 미완료.
+
 ## [2026-11-16 KST] OWNER-DEV-EXECUTION-V2 — 10항 인수인계 / 79 of 80 tracked refs
 1. **목표/용도/확정요구/기술:** 중앙 사용자 확정 웹 GPT-6 Sol High 최초 전체 최종설계/READY 큐 → 웹 Sol Instant 백엔드·프론트엔드 대량 구현 → 구현100% 후보 후 전체 CI/결함 수정 → Codex GPT-6.1 Sol Max + Astra Max 독립 감사 → 웹 Sol High 최종 인수 → 사용자의 출시 GO 뒤 Codex Luna Extra High 크몽 상품 등록. [최신 정본](docs/strategy/OWNER_DEV_EXECUTION_CANONICAL_20261116.md).
 2. **완료 변경·선택근거:** 중앙 AGENTS/CHAT_BOOTSTRAP V2 우선순위와 구형 문서의 효력상 대체 표시, 35repo/80ref 원장에 대한 79개 `AGENTS.md` 정책/역할 게이트 GitHub 쓰기 커밋. DATA2WEB High/Codex 및 Astra 통합·AX Dev Factory 추가 작업 브랜치 역할 예외와 핵심 HANDOFF 시작 게이트. 기존 역사·원본·대회·보안 제약 보존(무차별 삭제 대신 우선순위 확정).
