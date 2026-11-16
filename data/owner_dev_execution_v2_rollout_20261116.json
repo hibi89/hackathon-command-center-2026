@@ -1,0 +1,532 @@
+{
+  "schema_version": 1,
+  "policy": "OWNER-DEV-EXECUTION-V2",
+  "date_kst": "2026-11-16",
+  "kind": "github_write_receipts_not_full_ci_attestation",
+  "source_inventory": "data/kmong_hub_auto_observations.json",
+  "tracked_inventory_repositories": 35,
+  "tracked_inventory_refs": 80,
+  "summary": {
+    "total": 80,
+    "write_commit_returned": 79,
+    "owner_approval_required": 1
+  },
+  "coverage_note": "Commit SHA is returned by the linked GitHub write API. Per-branch latest readback, CI, runtime or settings verification is NOT implied. Superseded policy files remain in history.",
+  "refs": [
+    {
+      "repository": "hibi89/ai-code-checker",
+      "branch": "main",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "45e763204146ddb26aa697a70d3c4bd97f52bb0c"
+    },
+    {
+      "repository": "hibi89/ai-code-checker",
+      "branch": "feature/retail-private-candidate-20261112",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "1842e18cd191f0304a59cc23b66bb58d7481fbe3"
+    },
+    {
+      "repository": "hibi89/AI_AutoML_Analyst",
+      "branch": "main",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "c4d3c32dc9d336d6212e7d6aa97fe3125437e94d"
+    },
+    {
+      "repository": "hibi89/AI_AutoML_Analyst",
+      "branch": "feature/kmong-p6e50-owner-delivery-20261112",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "3d6fb5f5c83adbedfd62c0a1e61377e32030b421"
+    },
+    {
+      "repository": "hibi89/astra_pdf_redesigner",
+      "branch": "main",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "19304c9beb4c388b5c88646314e247cad5e3ac5a"
+    },
+    {
+      "repository": "hibi89/astra_pdf_redesigner",
+      "branch": "feature/astra-p71-pdf-source-parity-20261112",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "f0a7321aff1f36ecf01274e0b42b57078ceeb207"
+    },
+    {
+      "repository": "hibi89/astra_pdf_redesigner",
+      "branch": "integration/astra-commercial-core",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "bec0d03735de548e180a367f78dea5c2a149660d"
+    },
+    {
+      "repository": "hibi89/astra_web_catcher",
+      "branch": "main",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "d011f6e1eb12edfd156a7164e341c112745c0768"
+    },
+    {
+      "repository": "hibi89/AX_MART",
+      "branch": "main",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "153b9e217840fd200c0f781a4b71c4ebf16001d2"
+    },
+    {
+      "repository": "hibi89/AX_MART",
+      "branch": "feature/cube-owner-preflight-p85-20261112",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "4031a9fae210f2394266e03bfca304e29eca3448"
+    },
+    {
+      "repository": "hibi89/AX_MART",
+      "branch": "feature/pc-care-p15-p18-85-20261112",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "a0ad622edf4fdb5e76cf17774b191687c55fa1e5"
+    },
+    {
+      "repository": "hibi89/AX_MART",
+      "branch": "feature/pc-care-usb",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "c0fa248b14b6d52e9659856b2f3692c81a5884dd"
+    },
+    {
+      "repository": "hibi89/Bid_Owl",
+      "branch": "main",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "bf26fc44e4d0ba796d65ea7eb9422e112daabfa3"
+    },
+    {
+      "repository": "hibi89/Bid_Owl",
+      "branch": "feature/disclosure-lightning",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "72f11aa114ce7f3dff07685a05e18d5e76552afd"
+    },
+    {
+      "repository": "hibi89/candle_scraper",
+      "branch": "main",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "368a8d8a22fdb282192332684bf339b78a48ba31"
+    },
+    {
+      "repository": "hibi89/candle_scraper",
+      "branch": "feature/candle-pattern-analyzer",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "27f047ef71f5d73c3a2dea15fc5a708c1f69d53d"
+    },
+    {
+      "repository": "hibi89/candle_scraper",
+      "branch": "feature/coin-pattern-p85-forward-eval-20261112",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "de99104d5917c10209f3ce18d54d3f38ac9e4b97"
+    },
+    {
+      "repository": "hibi89/candle_scraper",
+      "branch": "feature/kmong-collector-p95-delivery-integrity-20261112",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "a2c9676437ad0a2e36656dc48a29035ff3530a0f"
+    },
+    {
+      "repository": "hibi89/data2web_studio",
+      "branch": "main",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "10c17490710ebe82beb9bb9ce30961b574c8f73a"
+    },
+    {
+      "repository": "hibi89/data2web_studio",
+      "branch": "feature/final-blueprint-p85-evidence-20261113",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "24b7e26f82ced41209b7519b6d6bc299bd6eacdc"
+    },
+    {
+      "repository": "hibi89/data2web_studio",
+      "branch": "feature/lite-independent-migration",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "b2c03bf28dfe299aae380fd1a946b8d18dc973b3"
+    },
+    {
+      "repository": "hibi89/data2web_studio",
+      "branch": "feature/xlsx-tsv-import",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "c05b706996bf1c94673025ca9e1433c0725535a3"
+    },
+    {
+      "repository": "hibi89/DBVORA",
+      "branch": "main",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "b8c00a64551e2ebe69c8d87cd315c7725bfb3047"
+    },
+    {
+      "repository": "hibi89/DBVORA",
+      "branch": "feature/p0-db-map",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "5d70c46cb48794b6e3e6ef232d7ce8b9c2d4ffe0"
+    },
+    {
+      "repository": "hibi89/EAI",
+      "branch": "main",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "2edb309ae22efee259967f7165cde924ecdb005f"
+    },
+    {
+      "repository": "hibi89/EAI",
+      "branch": "feature/kmong-eai-85-p31-20261112",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "bf1ef6ebbf2b260f6328fb02dc21233ed9ec509e"
+    },
+    {
+      "repository": "hibi89/EAI",
+      "branch": "feature/local-first-mvp",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "a911540fd07b72533e215849e142148327a5adbc"
+    },
+    {
+      "repository": "hibi89/fable5.1_web_catcher",
+      "branch": "main",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "d214c3fe33895266437f827db06d1ad7c6ae1cf7"
+    },
+    {
+      "repository": "hibi89/factory-ax-ecosystem",
+      "branch": "main",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "35fb43edc5ae56c5bab924742f7455a9d48023b8"
+    },
+    {
+      "repository": "hibi89/factory-ax-ecosystem",
+      "branch": "feature/data-verify",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "0355c70067f61db8332c8a8b0c8482e0d216f514"
+    },
+    {
+      "repository": "hibi89/factory-ax-ecosystem",
+      "branch": "feature/hae-la",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "224f7f787aac047e0bb90a0d645e776617505336"
+    },
+    {
+      "repository": "hibi89/factory-ax-ecosystem",
+      "branch": "integration/develop",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "4859842ee54a5f133840ac17424de739f49a8b7e"
+    },
+    {
+      "repository": "hibi89/Freelancer",
+      "branch": "main",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "4982ce06cc0e74cbb45fc161b03051b8e0fe2db7"
+    },
+    {
+      "repository": "hibi89/Freelancer",
+      "branch": "product/bid-ax-public-procurement",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "9987bb37ed64a570d27d2b4c6e91cdcc8a005a5a"
+    },
+    {
+      "repository": "hibi89/Freelancer",
+      "branch": "product/hae-la-automation",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "04b994c75b02306a82518cbc0ce89cceb93c0ef8"
+    },
+    {
+      "repository": "hibi89/Freelancer",
+      "branch": "product/ontoinsight-ax-data-analytics",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "acc216a57d90b9ab85009fb702e83f64e2d9c988"
+    },
+    {
+      "repository": "hibi89/Freelancer",
+      "branch": "product/proofqa-ax-delivery-audit",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "5fdb576b205e0ee42cb39bb6bb4ba4aff299410f"
+    },
+    {
+      "repository": "hibi89/Freelancer",
+      "branch": "product/rag-enterprise-knowledge",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "2f3bcd1b1be484ad98c7b2be8254cb092c179dcc"
+    },
+    {
+      "repository": "hibi89/Freelancer",
+      "branch": "product/rea-website-rebuild",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "463afe1a85262c3973e9db2434ebaaff9f12a61d"
+    },
+    {
+      "repository": "hibi89/frontend-foundry-ax",
+      "branch": "main",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "af260b3ad71a0b80ad2205706d6999e5bf7fa7bd"
+    },
+    {
+      "repository": "hibi89/frontend-foundry-ax",
+      "branch": "feature/ffax-workbench-p85-20261112",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "6273704267c71fe3fe6a050ebaf2deb76e5bcc3c"
+    },
+    {
+      "repository": "hibi89/gongbaek-sanggwon",
+      "branch": "main",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "69f61aa51d69302c92166c8ca1b07533a635b638"
+    },
+    {
+      "repository": "hibi89/hackathon-command-center-2026",
+      "branch": "main",
+      "result": "OWNER_APPROVAL_REQUIRED",
+      "commit_sha": null
+    },
+    {
+      "repository": "hibi89/HAE",
+      "branch": "main",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "d7e50d11a17328f45c6626a285378cbd0d1b0aab"
+    },
+    {
+      "repository": "hibi89/HAE",
+      "branch": "feature/axflow-mvp",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "85b2cc1e0fffae37ce53936bdd0cafd5d784da5b"
+    },
+    {
+      "repository": "hibi89/HAE",
+      "branch": "feature/dbvora-integration",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "fb1211f6e1b459b67a94327ad49dc301bb5c1618"
+    },
+    {
+      "repository": "hibi89/HAE",
+      "branch": "feature/la-p17-audit-evidence-20261112",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "8b8757f1b4a53a9e3e57ae0e2a250a4d89d09af2"
+    },
+    {
+      "repository": "hibi89/HAE",
+      "branch": "feature/lightning-azent",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "0d9f9dbdab1087c109f0da4719bebe98aaa80734"
+    },
+    {
+      "repository": "hibi89/HAE",
+      "branch": "feature/rea-app-kmong-owner-delivery-20261112",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "b6b766001983e94567dc7c3fda551228f68999fe"
+    },
+    {
+      "repository": "hibi89/HAE",
+      "branch": "feature/sovia-la-projection-p41-20261112",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "a7a7f335c18483980c6dcaf8ed45742f66621fc4"
+    },
+    {
+      "repository": "hibi89/hibi89-kic-proofinvest",
+      "branch": "main",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "b18e2f7ac814d81beb68ed2b0b4ad33ddcff24bd"
+    },
+    {
+      "repository": "hibi89/hibi89-kic-proofinvest",
+      "branch": "lead/kic",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "43788120903b28e61ad8bf67cf469bb93982cd17"
+    },
+    {
+      "repository": "hibi89/hibi89-paypal-ai-hackathon",
+      "branch": "main",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "45405692cb4f1261d86aed5aa586e26e725d3077"
+    },
+    {
+      "repository": "hibi89/hibi89-paypal-ai-hackathon",
+      "branch": "lead/paypal",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "ee33264756f6e83dd8a264eb6de8d127c287c030"
+    },
+    {
+      "repository": "hibi89/hibi89-ugreen-nas-hackathon",
+      "branch": "main",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "de98c97418234569011b7bc4e8620e56ff1605f7"
+    },
+    {
+      "repository": "hibi89/hibi89-ugreen-nas-hackathon",
+      "branch": "lead/ugreen",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "bb2bb13f729dd8969e98838e50646d4e06be139c"
+    },
+    {
+      "repository": "hibi89/KUODRA",
+      "branch": "main",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "2aa0b86435ca4643be24087e8512babe999b7aa1"
+    },
+    {
+      "repository": "hibi89/KUODRA",
+      "branch": "develop",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "3bc418c5d43f002b3c90aef0ef2f9b40b93c302d"
+    },
+    {
+      "repository": "hibi89/NAON2-Character-Studio",
+      "branch": "main",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "ede283bbcc0924d0afa7c843c8ddd52b2e485a6a"
+    },
+    {
+      "repository": "hibi89/ohora-nail-intelligence-v4",
+      "branch": "main",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "97ddbc008eaf908bc741b6d632927b6bb9cbe024"
+    },
+    {
+      "repository": "hibi89/ohora-trend-analyzer",
+      "branch": "main",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "640d28a4bfb97459c7d2dc7790e6907eff0b4a56"
+    },
+    {
+      "repository": "hibi89/ohora-trend-catcher",
+      "branch": "main",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "185f5f42d106eb594878f249e1a41a1e7879efa9"
+    },
+    {
+      "repository": "hibi89/ohora-trend-catcher-classic",
+      "branch": "main",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "7fba1d3fd0128d46e60640a4588b3c5d62057772"
+    },
+    {
+      "repository": "hibi89/prep",
+      "branch": "main",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "9fa3561d3fab508650a76e260ebc809ceb89444b"
+    },
+    {
+      "repository": "hibi89/prep",
+      "branch": "feature/core-extraction",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "c2e2bdd0a6ff5fc53b4f5e2e40b4d249b50445c5"
+    },
+    {
+      "repository": "hibi89/project-book",
+      "branch": "main",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "7d0be94a43752296e3c5cfae44fbac58d9baf42f"
+    },
+    {
+      "repository": "hibi89/RAG_STUDIO",
+      "branch": "main",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "692d4f95e9626d038fe0802e3d6b7618d087f7a1"
+    },
+    {
+      "repository": "hibi89/RAG_STUDIO",
+      "branch": "develop",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "d92fbb662f33a91a3224f6d53eda746b4a401c62"
+    },
+    {
+      "repository": "hibi89/RAG_STUDIO",
+      "branch": "feature/p546-rag-prep-mapping",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "24de007fb9ab1a6a8d958586ed4bd1b9a8d87c2f"
+    },
+    {
+      "repository": "hibi89/RAG_STUDIO",
+      "branch": "feature/p550-mapped-cited-journey",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "e3f9ab4c6576c3702cf167233785a55b320b4b3b"
+    },
+    {
+      "repository": "hibi89/REA_Web",
+      "branch": "main",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "f90d717f5d752113a8fe14dbae20d05abc438fcc"
+    },
+    {
+      "repository": "hibi89/REA_Web",
+      "branch": "feature/website-analysis-rebuild",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "b90149fc85fbc68e4e13fbc2861a3189522d2cab"
+    },
+    {
+      "repository": "hibi89/self-hosted-n8n-reliability-lab",
+      "branch": "main",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "b8c6ed43d28118c89d49d53dd8c40c8db1d2562c"
+    },
+    {
+      "repository": "hibi89/SMAX",
+      "branch": "main",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "a562e44de222b9de126b0b5da5e5ad9c02e913a2"
+    },
+    {
+      "repository": "hibi89/SMAX",
+      "branch": "feature/prep-self-owner-mapping-p8",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "7cb1a268ad35f53ca1f6b3175448cf32de8f2b37"
+    },
+    {
+      "repository": "hibi89/SOVIA_sovereign",
+      "branch": "main",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "3f9debc7b8b83f98cc7c2cf5d8ba226110a8a5e6"
+    },
+    {
+      "repository": "hibi89/SOVIA_sovereign",
+      "branch": "develop",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "d33e6bc6506d049c3eb7cb5edaf3f9dc7b4e4f60"
+    },
+    {
+      "repository": "hibi89/SOVIA_sovereign",
+      "branch": "feature/kmong-la-review-p2-20261112",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "31ec3e2f20bbafd956c6f31ebbffb102bbea6723"
+    },
+    {
+      "repository": "hibi89/web-rea-studio",
+      "branch": "main",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "880aad36cb33b03ff4042b49fc5b3bc25cc965b3"
+    },
+    {
+      "repository": "hibi89/work-hell-dungeon",
+      "branch": "main",
+      "result": "GITHUB_WRITE_COMMIT_RETURNED",
+      "commit_sha": "14c61acef2afa971aceb975ada5434fa62541e6e"
+    }
+  ],
+  "additional_untracked_recent_refs": [
+    {
+      "repository": "hibi89/hackathon-command-center-2026",
+      "branch": "kmong-productization",
+      "status": "UPDATED_POLICY_AND_HANDOFF"
+    },
+    {
+      "repository": "hibi89/data2web_studio",
+      "branch": "work/high-data2web-security-r06-r29-20261115",
+      "latest_known_commit_sha": "09dacdcacf970536f4faaf026cbc869a7f0668a3"
+    },
+    {
+      "repository": "hibi89/data2web_studio",
+      "branch": "work/codex-data2web-to100-20261115",
+      "latest_known_commit_sha": "6d5ea74021b58edf6452efcc9e2441feabce143a"
+    },
+    {
+      "repository": "hibi89/astra_pdf_redesigner",
+      "branch": "integration/astra-final-blueprint-100-20261115",
+      "latest_known_commit_sha": "5a8d6b2ce58cc44271c85a0812142209e7dfcf24"
+    },
+    {
+      "repository": "hibi89/Freelancer",
+      "branch": "tools/ax-dev-factory-local",
+      "latest_known_commit_sha": "e4cf2a968da3b58772227829e146ec63b4ecac5f"
+    }
+  ],
+  "external_instruction_settings": {
+    "chatgpt_global": "OWNER_ACTION_REQUIRED_NOT_VERIFIED",
+    "codex_global": "OWNER_ACTION_REQUIRED_NOT_VERIFIED"
+  },
+  "central_main": {
+    "status": "OWNER_APPROVAL_REQUIRED",
+    "reason": "Central runtime main may be coupled to Actions and existing Vercel/GitHub App; only operating kmong-productization was changed."
+  }
+}
