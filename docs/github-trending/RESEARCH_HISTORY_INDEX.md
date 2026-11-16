@@ -114,3 +114,23 @@
 | GoogleChrome/modern-web-guidance-src | 2026-11-15 | https://github.com/GoogleChrome/modern-web-guidance-src | 기존 관찰 저장소 재검증: README 확인; API LICENSE Apache-2.0; 최근 커밋 확인; 최신 릴리스 미확인; 당일 Trending 순위 미확인 |
 | alibaba/open-code-review | 2026-11-15 | https://github.com/alibaba/open-code-review | 기존 관찰 저장소 재검증: README 확인; API LICENSE Apache-2.0; 최근 커밋 및 v1.13.9 릴리스 확인; 당일 Trending 순위 미확인 |
 | louislam/uptime-kuma | 2026-11-15 | https://github.com/louislam/uptime-kuma | 기존 관찰 저장소 재검증: README 확인; API LICENSE MIT; 최근 커밋 및 2.5.11 릴리스 확인; 당일 Trending 순위 미확인 |
+
+
+## 2026-11-16 검증 이력 — 신규 repo 0개 (기존 URL 12건 개별 확인)
+- **수집 한계:** https://github.com/trending?since=daily 직접 접근 실패. 2026-11-15 크롤링 표시된 GitHub 공식 Trending 검색 색인에서 12개 관찰; **11/16 공식 순위·스타 증가량 미확인**. 과거 69개 목록과 이후 누적 신규 저장소 기록을 삭제하거나 중복 추가하지 않음.
+- **검증 수준:** 아래 각 원본 URL에 대해 GitHub REST API 저장소 존재/설명/라이선스 SPDX 메타데이터, `README.md` 파일, 최신 1개 커밋, 최근 1개 릴리스(없으면 미확인)를 2026-11-16 개별 조회. LICENSE 원문/종속물·기능 실동작·상용 재배포 미검증.
+
+| 원본 GitHub URL | 재조사일 | README | API LICENSE | 최신 커밋 (UTC, 축약 SHA) | 최근 릴리스 | Trending 11/16 순위 |
+|---|---|---|---|---|---|---|
+| https://github.com/alibaba/open-code-review | 2026-11-16 | 확인 | Apache-2.0 | 7e5ce06c88de (11/15) | v1.13.10 | 미확인 |
+| https://github.com/GoogleChrome/modern-web-guidance-src | 2026-11-16 | 확인 | Apache-2.0 | 5e5cd33a7738 (11/14) | audit-data | 미확인 |
+| https://github.com/openai/codex-security | 2026-11-16 | 확인 | Apache-2.0 | 173483d7c658 (11/14) | npm-v0.10.0 | 미확인 |
+| https://github.com/ZhuLinsen/daily_stock_analysis | 2026-11-16 | 확인 | MIT | c820915ea011 (11/15) | v3.34.0 | 미확인 |
+| https://github.com/we-promise/sure | 2026-11-16 | 확인 | AGPL-3.0 | 755ce258cd5b (11/15) | v2026.11.14-alpha | 미확인 |
+| https://github.com/backnotprop/plannotator | 2026-11-16 | 확인 | Apache-2.0 | a7631326f0d2 (11/16) | v0.28.65 | 미확인 |
+| https://github.com/louislam/uptime-kuma | 2026-11-16 | 확인 | MIT | 71af278aac74 (11/16) | 2.5.11 | 미확인 |
+| https://github.com/block/buzz | 2026-11-16 | 확인 | Apache-2.0 | c75d812f809a (11/16) | desktop-v0.5.30 | 미확인 |
+| https://github.com/tradermonty/claude-trading-skills | 2026-11-16 | 확인 | MIT | 814decf8e1db (11/16) | 미확인 | 미확인 |
+| https://github.com/tailscale/tailcat | 2026-11-16 | 확인 | BSD-3-Clause | e00cdde6ff78 (11/05) | v0.7.0 | 미확인 |
+| https://github.com/Likely7/Veyra-NRVideo | 2026-11-16 | 확인 | GPL-3.0 | 9a5c9b65e603 (11/15) | v2.1.9-sources | 미확인 |
+| https://github.com/ChromeDevTools/chrome-devtools-mcp | 2026-11-16 | 확인 | Apache-2.0 | 8ba2ac945eba (11/13) | chrome-devtools-mcp-v1.13.0 | 미확인 |
