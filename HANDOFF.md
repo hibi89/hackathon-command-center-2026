@@ -1,5 +1,30 @@
 > **[HAECHONG_PRIMARY_MISSION_LOCK_V1]** PRIMARY_MISSION=GITHUB_APP_CENTRAL_AUTOMATION_90_TO_100; `ㄱ`/`ㄱㄱ` resumes GitHub App → signed HMAC webhook → Vercel bridge → central Actions → ledger; side-product development requires an explicit NEW owner instruction. `HANDOFF` recency cannot override this lock.
-> **[HAECHONG_NEXT_GATE]** Real signed delivery/E2E and deployed Production SHA remain NOT_VERIFIED; provisional central score=90/100. When Vercel/App access is blocked, only adjacent GitHub App central verification, security, or recovery work may proceed. No automatic pivot to UPTIME OPS or other product.
+> **[HAECHONG_NEXT_GATE]** Actual eligible signed Delivery → verified queue → central Actions → collector → ledger E2E remains NOT_VERIFIED; Production SHA parity PASS at main@5542fb5bf13cba5f30a374afc423b875790ff58c; `KMONG_TRACE_DELIVERY_ID_ENABLED=true` is configured for Production and applies only to the next Vercel deployment. Provisional central technical score=90/100; official final-design completion=UNASSESSED because no approved weighted acceptance matrix is recorded for this scope. No automatic pivot to UPTIME OPS or other product.
+
+## [2026-11-16 18:30 KST] HAECHONG_LIVE_DELIVERY_CAUSALITY_AUDIT
+
+- **Exact refs:** production code `main@5542fb5bf13cba5f30a374afc423b875790ff58c`; operations branch baseline `kmong-productization@f9b509e78b3e38eccd8e2119ed9d13076d02bb53`. Vercel project Production deployment was observed on the same `main` SHA.
+- **GitHub App Recent Deliveries, 17:09–17:12 KST:**
+  - 17:09:22 `06fe3420-e195-11f1-9777-b405e2044cff` push
+  - 17:09:24 `07f1f470-e195-11f1-8e71-3ec0bc7b457e` workflow_run.requested
+  - 17:09:28 `09c7ecf0-e195-11f1-883c-57311d1b8618` workflow_run.in_progress
+  - 17:09:38 `0f90ca80-e195-11f1-856b-6c42ce18f873` workflow_run.completed
+  - 17:09:57 `1c95ad04-e195-11f1-9e24-8c0ecd96c6a2` push
+  - 17:09:59 `1d559240-e195-11f1-9281-a153e7b424f4` workflow_run.requested
+  - 17:10:03 `1f011f60-e195-11f1-9983-6ab9fe8be2fe` workflow_run.in_progress
+  - 17:10:04 `200262c0-e195-11f1-8a72-bdac178133f3` workflow_run.requested
+  - 17:10:13 `24bda0e0-e195-11f1-8f46-cbd6cd6c0393` workflow_run.completed
+  - 17:10:14 `2597ad30-e195-11f1-837b-58b9ac3de3f6` workflow_run.in_progress
+  - 17:10:26 `2d7100ec-e195-11f1-8a56-4d02b971f238` push
+  - 17:12:18 `6f8b8fb0-e195-11f1-9f70-9b7aa8964a34` workflow_run.completed
+- Each inspected GitHub App detail response is HTTP 202 with body `{"status":"ignored"}`. No `queued` or `coalesced` body was found in this window. The 16:51:27 push `86a662c2-e192-11f1-87e3-c9dc90af18a1`, 17:42:35 push `ab21ab50-e199-11f1-9170-7b0a027c23f0`, and latest 17:44:58 workflow_run.completed `ffbedb60-e199-11f1-88e5-3878eb5bb0d8` also returned 202 `ignored`; the last is a `Freelancer` PR run `43833442261`, not the central hub run.
+- Vercel Request Logs show POST `/api/webhook` HTTP 202 requests aligned to the App deliveries by time: 16:51:27.103 and 17:09:21.507, 17:09:24.184, 17:09:27.913, 17:09:37.713, 17:09:57.587, 17:09:59.309, 17:10:03.478, 17:10:04.386, 17:10:13.009, 17:10:14.324, 17:10:26.238, 17:12:18.156 KST. The request-log table does not expose a Delivery UUID; this is time alignment, not a direct UUID join.
+- **Why there was no new dispatch:** inspected push payloads identify `hibi89/Freelancer` and untracked `codex/*` branches; workflow_run payloads include PR/requested/in_progress activity or non-allowlisted workflows. Main receiver code verifies HMAC before applying the repository/branch/event/workflow allowlists. These deliveries are expected `ignored` cases; absence of a new central run for them is not a queue-loss defect. No `queued` Delivery UUID exists to map to a new run.
+- **Latest central Actions state:** filtered readback `event=workflow_dispatch&branch=main` still lists run [#43824732787](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43824732787) as latest: SUCCESS, exact main SHA, created 16:33:39 KST and completed 16:36:19 KST. This predates the 17:09–17:12 deliveries and is not linked to their UUIDs.
+- **Collector/ledger readback:** run #43824732787 reported `UPDATED`; ledger commit [9044413d8a1a7337c28c7266dc7ad25ef67090e7](https://github.com/hibi89/hackathon-command-center-2026/commit/9044413d8a1a7337c28c7266dc7ad25ef67090e7). Current KProd ledger JSON readback confirms 35 repositories, 80 tracked branches, 29 product links, 0 unlinked refs, 0 blocking fingerprint issues, and `no_official_score_authorization=true`. This is a valid prior sync/readback, not an effect of the later ignored deliveries.
+- **Trace flag:** after prior owner authorization, `KMONG_TRACE_DELIVERY_ID_ENABLED=true` was saved as a non-secret Config scoped to Vercel Production. The Vercel UI confirmed a new deployment is required for changes to take effect. No deployment was triggered; current Production continues on `main@5542fb5...` without this new setting. Rollback before activation is to remove the variable (or set `false`); an active deployment only observes that rollback after a new deployment.
+- **Acceptance:** Production SHA parity PASS; actual App Delivery reception and expected ignore classification PASS; 17:09–17:12 Vercel time/status alignment PASS with UUID join NOT_VERIFIED; eligible `queued` Delivery → correlated central run → SUCCESS/preflight → same-run collector → ledger readback NOT_VERIFIED. Provisional 90/100 remains unchanged; official final-design completion is UNASSESSED under `OWNER-FINAL-BLUEPRINT-100` because approved per-requirement weights are not recorded.
+- **Next gate:** separately approved Production redeploy is needed to activate tracing, followed by a genuine eligible App Delivery from an allowlisted repository/ref and exact approved event/workflow. Do not use synthetic payloads or manually supplied UUIDs. Then verify `queued` response, UUID in run-name/input, exact run SUCCESS and preflight RUN, collector `UPDATED` or `NO_CHANGE`, and ledger before/after readback.
 
 ## [2026-11-16 16:36 KST] HAECHONG_PR2_MAIN_PRODUCTION_PARITY_AND_LEDGER_UPDATED — 10항 인수인계
 1. **목표·기술·확정 범위:** 해총 GitHub App→HMAC webhook→기존 Vercel→Actions→중앙 원장만 담당, `ㄱ` 임무 잠금. 사용자 명시 PR #2 `main` 병합 및 그에 따른 기존 Production 자동 배포 GO 수령.
