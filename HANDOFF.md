@@ -1,6 +1,18 @@
 > **[HAECHONG_PRIMARY_MISSION_LOCK_V1]** PRIMARY_MISSION=GITHUB_APP_CENTRAL_AUTOMATION_90_TO_100; `ㄱ`/`ㄱㄱ` resumes GitHub App → signed HMAC webhook → Vercel bridge → central Actions → ledger; side-product development requires an explicit NEW owner instruction. `HANDOFF` recency cannot override this lock.
 > **[HAECHONG_NEXT_GATE]** Real signed delivery/E2E and deployed Production SHA remain NOT_VERIFIED; provisional central score=90/100. When Vercel/App access is blocked, only adjacent GitHub App central verification, security, or recovery work may proceed. No automatic pivot to UPTIME OPS or other product.
 
+## [2026-11-16 16:05 KST] HAECHONG_PREVIEW_PROBE_ADVISORY_FAILURE — 10항
+1. **목표:** GitHub App 서명 Webhook → 기존 Vercel → Actions → 원장 E2E; 해총 `ㄱ` 미션 잠금 유지.
+2. **구현:** Preview GET가 401/불일치인데도 성공 표시되던 관찰 스텝 경고화. `probeRequiresAttention` 검사 및 회귀 추가; 브랜치 커밋 `76fd8add309ba377d30188dca7cefa1ef73e04f9`, 변경 2파일 `probe-production.mjs`, `test/receiver.test.js`.
+3. **검증:** PR [#43821048921](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43821048921) Node78+Python80=158 PASS, Preview GET401, `ATTENTION_REQUIRED` exit1 (advisory nonblocking). Push [#43821038717](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43821038717) 158 PASS, Production HTTP200 old SHA `2863165b06d407ba632f18ad7a85a7c98f1989af`.
+4. **완료·차단:** Draft PR #2 candidate code CI PASS, Production not deployed, Preview protected/unauthorized, real signed App Delivery causal E2E NOT_VERIFIED, provisional 90/100 unchanged.
+5. **실패·대안:** Vercel user identity/hibi89 team 확인 후 기존 원본 project ID/name 및 Vercel PR deployment ID 관리 API 모두 404; 중복 재시도 중단. 유효 소유자 계정의 Vercel 프로젝트 접근 복구·GitHub App Recent Deliveries 확인 필요.
+6. **Repo/branch/SHA:** `hibi89/hackathon-command-center-2026`; `feature/kmong-webhook-bounded-ingress-20261114@76fd8add309ba377d30188dca7cefa1ef73e04f9`; 운영 `kmong-productization` 기준 `19a72c69f552598833ee6ca9676ea294763a18b8`, 본 인수인계 최신 SHA는 원격 확인. `main@69e584e57a3a37fa72b406d62ccddf9eef9dfcf2` 보존.
+7. **Production/Preview:** `https://kmong-hub-event-bridge.vercel.app/api/webhook` HTTP200 구형 코드. PR Preview HTTP401, 인증 우회 없이 관찰만. 원본 Vercel `prj_veZOkRkhMEMEA6h7PiEIl3IKcthn`.
+8. **보존:** 원본/35repo/80ref/29products/등록이력/공식점수·main·Production·권한·비밀 모두 변경하지 않음.
+9. **다음 READY/승인:** [Draft PR #2](https://github.com/hibi89/hackathon-command-center-2026/pull/2) 리뷰 → 기존 Vercel 관리 접근 회복/원본 App Recent Deliveries → 사용자 별도 main GO 및 Production GO → 안전한 실서명 E2E 인과 관계 검증·원장 readback; 추적 flag 기본 OFF.
+10. **시점/증거:** 2026-11-16 16:05 KST, CI/GET/SSHAs 원격 실증. 사용자 Vercel 소유 계정 인증 및 Production E2E/브라우저 검증 NOT_RUN.
+
 ## [2026-11-16 KST] HAECHONG_PR_PREVIEW_GET_PROBE_VERIFIED — 10항
 1. **목표/기술:** GitHub App → HMAC 서명 웹훅 → 기존 Vercel → main Actions → 35repo/80ref/29product 원장. 해총 단독 `ㄱ`의 유일한 잠긴 임무.
 2. **실제 변경:** 기능 브랜치의 CI에 PR #2 연결 Preview의 안전한 GET 검사, `probe-production.mjs`에 Preview/Production 출력 구분 추가. 정확 기능 SHA `9db0fa79f36a1bfc0c84b9f936ca26150a95f5fb`; 2파일 수정, Author/Committer `hibi89`. 기존 PR #2는 Draft/clean, main 병합 없음.
