@@ -122,3 +122,41 @@
 
 ### 제한
 공식 2026-11-15 TOP20은 확인되지 않아 순위·스타 증가는 생성하지 않음. 코드/배포/CI/권한 변경 및 유료 API 호출 없음.
+
+
+## DAILY-2026-11-16 — 2026-11-16 09:56 KST 전후 조사 (RUN DAILY-2026-11-16)
+
+### 사실 / 공식 순위 확인 범위
+- 공식 GitHub Trending Today https://github.com/trending?since=daily **직접 접근 실패**(restricted URL). 검색엔진의 github.com/trending 공식 페이지 색인(2026-11-15 크롤링 표시)에서 12개 저장소와 표시 순서·증가량 확인. **이는 2026-11-16 실시간 공식 TOP20이 아니다**. 1~20위 공식 순위·당일 증가량 전부 미확인, 13~20번째 색인 항목도 미확인. 숫자 1~12는 색인 노출 순서이며 공식 순위로 인용 금지.
+- GitHub 원본 REST API에서 **12개 저장소 각각** 메타데이터 LICENSE SPDX ID, 최근 커밋, 릴리스 목록을 조회하고 `README.md` 파일을 개별 확인했다. 커밋 시간은 UTC, 릴리스 날짜도 UTC 기준. README 파일 존재 확인이지 전체 내용·상업 권리·의존성 감사 완료가 아니다.
+- 검색 색인의 표기 +stars today는 크롤링 날짜가 전일인 결과이므로 **2026-11-16 증가량이 아니며**, 아래 표에 참고치로만 보존. 정확한 11/16 순위/증가량을 지어내지 않는다.
+- 검색 색인 출처: https://github.com/trending ; 원본 API: `https://api.github.com/repos/{owner}/{repo}`, `/commits?per_page=1`, `/releases?per_page=1`; README 원본 `README.md`. 공식 순위의 대체 데이터는 사용하지 않음.
+
+| 색인 순서(공식 순위 미확정) | 프로젝트 | 핵심 기능 / 실용 사례 | stars today (오래된 색인 참고치) | README | LICENSE API 메타데이터 | 최근 커밋 (UTC) | 최근 릴리스 |
+|---:|---|---|---:|---|---|---|---|
+| 1 (색인 순서, **당일 공식 순위 아님**) | [alibaba/open-code-review](https://github.com/alibaba/open-code-review) | Go 정적 규칙+LLM 코드 리뷰 / 승인된 코드 품질 감사 | +215 (**날짜 미확정 색인**, 11/16 수치 아님) | 확인 | API Apache-2.0 (원문·의존성 미검증) | 7e5ce06c88de 11/15 02:16 UTC | v1.13.10 11/15 |
+| 2 (색인 순서, **당일 공식 순위 아님**) | [GoogleChrome/modern-web-guidance-src](https://github.com/GoogleChrome/modern-web-guidance-src) | 웹 에이전트 개발 모범사례 / 웹사이트 품질 검사 | +1925 (**날짜 미확정 색인**, 11/16 수치 아님) | 확인 | API Apache-2.0 (원문·의존성 미검증) | 5e5cd33a7738 11/14 01:16 UTC | audit-data 10/14 |
+| 3 (색인 순서, **당일 공식 순위 아님**) | [openai/codex-security](https://github.com/openai/codex-security) | 취약점 탐지·검증 CLI/SDK / 코드 보안 검수 | +751 (**날짜 미확정 색인**, 11/16 수치 아님) | 확인 | API Apache-2.0 (원문·의존성 미검증) | 173483d7c658 11/14 02:38 UTC | npm-v0.10.0 11/12 |
+| 4 (색인 순서, **당일 공식 순위 아님**) | [ZhuLinsen/daily_stock_analysis](https://github.com/ZhuLinsen/daily_stock_analysis) | LLM 금융시장 분석·알림 / 시장 리서치 대시보드 | +256 (**날짜 미확정 색인**, 11/16 수치 아님) | 확인 | API MIT (원문·의존성 미검증) | c820915ea011 11/15 15:47 UTC | v3.34.0 11/09 |
+| 5 (색인 순서, **당일 공식 순위 아님**) | [we-promise/sure](https://github.com/we-promise/sure) | 개인 재무 관리 / 개인용 가계부 구축 | +925 (**날짜 미확정 색인**, 11/16 수치 아님) | 확인 | API AGPL-3.0 (원문·의존성 미검증) | 755ce258cd5b 11/15 23:58 UTC | v2026.11.14-alpha 11/14 |
+| 6 (색인 순서, **당일 공식 순위 아님**) | [backnotprop/plannotator](https://github.com/backnotprop/plannotator) | AI 에이전트 계획·코드 주석 / 개발 승인 워크플로 | +108 (**날짜 미확정 색인**, 11/16 수치 아님) | 확인 | API Apache-2.0 (원문·의존성 미검증) | a7631326f0d2 11/16 00:45 UTC | v0.28.65 11/15 |
+| 7 (색인 순서, **당일 공식 순위 아님**) | [louislam/uptime-kuma](https://github.com/louislam/uptime-kuma) | 자가호스팅 서비스 감시 / NAS·서버 장애 알림 | +71 (**날짜 미확정 색인**, 11/16 수치 아님) | 확인 | API MIT (원문·의존성 미검증) | 71af278aac74 11/16 00:51 UTC | 2.5.11 11/12 |
+| 8 (색인 순서, **당일 공식 순위 아님**) | [block/buzz](https://github.com/block/buzz) | 사람·에이전트 협업 / 팀 커뮤니케이션 | +97 (**날짜 미확정 색인**, 11/16 수치 아님) | 확인 | API Apache-2.0 (원문·의존성 미검증) | c75d812f809a 11/16 00:27 UTC | desktop-v0.5.30 11/14 |
+| 9 (색인 순서, **당일 공식 순위 아님**) | [tradermonty/claude-trading-skills](https://github.com/tradermonty/claude-trading-skills) | 투자 분석 AI 스킬 / 분석 절차 보조 | +69 (**날짜 미확정 색인**, 11/16 수치 아님) | 확인 | API MIT (원문·의존성 미검증) | 814decf8e1db 11/16 00:54 UTC | 미확인 |
+| 10 (색인 순서, **당일 공식 순위 아님**) | [tailscale/tailcat](https://github.com/tailscale/tailcat) | Tailscale 데이터 경로 도구 / 사설망 통신 진단 | +256 (**날짜 미확정 색인**, 11/16 수치 아님) | 확인 | API BSD-3-Clause (원문·의존성 미검증) | e00cdde6ff78 11/05 15:10 UTC | v0.7.0 09/20 |
+| 11 (색인 순서, **당일 공식 순위 아님**) | [Likely7/Veyra-NRVideo](https://github.com/Likely7/Veyra-NRVideo) | Windows 영상 향상·캡처 / 영상 미리보기 | +256 (**날짜 미확정 색인**, 11/16 수치 아님) | 확인 | API GPL-3.0 (원문·의존성 미검증) | 9a5c9b65e603 11/15 17:14 UTC | v2.1.9-sources 11/15 |
+| 12 (색인 순서, **당일 공식 순위 아님**) | [ChromeDevTools/chrome-devtools-mcp](https://github.com/ChromeDevTools/chrome-devtools-mcp) | Chrome DevTools MCP / 브라우저 자동 QA | +67 (**날짜 미확정 색인**, 11/16 수치 아님) | 확인 | API Apache-2.0 (원문·의존성 미검증) | 8ba2ac945eba 11/13 14:26 UTC | chrome-devtools-mcp-v1.13.0 11/11 |
+
+### 분석 — 기존 기술과의 연결 (호환성/코드 통합 미검증)
+- **HAE:** plannotator 승인·검수 단계; **SOVIA:** codex-security/open-code-review의 근거형 보안 판정; **DBVORA:** sure의 데이터/재무 UI 패턴 참고(AGPL 직접 코드 결합 주의); **REA_WEB:** modern-web-guidance-src + chrome-devtools-mcp의 브라우저·접근성 점검.
+- **KIC:** daily_stock_analysis·claude-trading-skills의 데이터 리서치 흐름 참고, 투자 조언과 분리; **PayPal WORKNOVA:** plannotator 인간 승인형 계약/결제 단계 참고(실제 PayPal 연동 별도); **UGREEN:** uptime-kuma NAS 상태 관찰(실 NAS 연동 미검증); **candle_scraper:** trading-skills 분석 프로세스 참고(기존 수집기 코드 변경 없음).
+- 12개 중 이력에 이미 관찰된 저장소만 확인되어 **신규 저장소 0개**. 이전 69개 조사 이력·30개 후보 삭제/재번호 매기기 금지.
+
+### 제안 — 기존 제품 없이 독립 납품 가능한 크몽 TOP3 (가격·기간은 추정)
+1. **웹 품질·브라우저 감사** — 고객: 쇼핑몰/웹 제작사; 납품: 허가 URL별 재현 화면·접근성/성능·수정 우선순위 PDF; **7만~20만원 / 1~2일 / 중**. 원본 modern-web-guidance-src·chrome-devtools-mcp(API Apache-2.0 각각). 차별화: 모바일 재현+수정 전후 비교. 검증: 고객 URL 허가, 실제 Chrome 동작, 개인정보 비수집, LICENSE 원문·NOTICE·의존성/상표, 고객 납품 범위. 기존 REA_WEB 상품과 중복 판매 주의.
+2. **코드 품질·보안 근거 감사** — 고객: 소규모 SaaS/개발팀; 납품: 규칙별 코드 위치·오탐 검증·개선 보고서; **10만~35만원 / 2~4일 / 중상**. 원본 open-code-review·codex-security(API Apache-2.0 각각). 차별화: 정적 규칙과 AI 추정 분리, 재현 증거. 검증: 고객 소스 사용 승인·로컬 처리·외부 모델 호출 OFF·보안 재현·LICENSE/NOTICE·모델/API 약관. 기존 SOVIA·코드검수 상품과 중복 판매 주의.
+3. **NAS·서버 상태 감시 설치** — 고객: 소규모 사업장/NAS 사용자; 납품: 자가호스팅 대시보드·알림 테스트·장애 복구 문서; **12만~35만원 / 1~3일 / 중**. 원본 uptime-kuma(API MIT). 차별화: 고객 자체 서버에서 운영, 알림 실패/복구 실증. 검증: 허가된 네트워크만, 포트/계정 보안, 실기기/알림/백업·복원, LICENSE 원문·의존성. 24/7 관제/SLA 자동 보장 금지. 기존 UGREEN 제품과 다른 구매 문제인지 별도 판정.
+
+### 상업적 라이선스·제약
+- API SPDX 메타데이터만 확인: Apache-2.0/MIT/BSD-3-Clause는 일반적으로 상업적 사용을 허용하지만 저작권·고지·NOTICE·의존성 조건 확인 필요. AGPL-3.0(`we-promise/sure`)은 네트워크 제공/수정본 공개 의무를 검토해야 하며 GPL-3.0(`Likely7/Veyra-NRVideo`)은 배포 시 소스 제공 의무 등 검토 필요. **라이선스 원문·종속물·상표·모델 약관을 이번 회차 검증하지 않았으므로 번들/재배포·상용 출시 승인 아님**.
+- 공식 TOP20의 13~20위 및 전체 당일 순위 미확인. 이번 회차 **코드·CI·권한·배포·고객 데이터·유료 API 변경 없음**.
