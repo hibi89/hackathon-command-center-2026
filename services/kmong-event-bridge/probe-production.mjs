@@ -1,6 +1,7 @@
 // Read-only production probe: never dispatches events or changes deployed settings.
 const endpoint = process.env.KMONG_PROBE_URL || "https://kmong-hub-event-bridge.vercel.app/api/webhook";
 const expected = process.env.GITHUB_SHA || "";
+const targetName = process.env.KMONG_PROBE_TARGET === "preview" ? "Preview" : "Production";
 const sha40 = /^[0-9a-f]{40}$/i;
 export function classify(status, body, expectedSha) {
   if (status === 200 && body?.status === "ready") {
@@ -18,6 +19,12 @@ export function classify(status, body, expectedSha) {
   if (status === 404) return { verdict: "NOT_FOUND", source_sha: null };
   return { verdict: "UNVERIFIED_HTTP_" + status, source_sha: null };
 }
+// Preview verification is advisory, but must report failure as a failed step.
+// Production's historical GET observer remains non-blocking and unchanged.
+export function probeRequiresAttention(target, verdict) {
+  return target === "Preview" && verdict !== "READY_SHA_MATCHED";
+}
+
 async function main() {
   let result;
   try {
@@ -34,12 +41,18 @@ async function main() {
   } catch {
     result = { http_status: null, verdict: "UNREACHABLE_OR_TIMEOUT", source_sha: null };
   }
-  console.log("KMONG_PRODUCTION_GET_PROBE " + JSON.stringify(result));
-  console.log("A missing or different source SHA is NOT proof of the latest code running in Production.");
+  console.log("KMONG_" + targetName.toUpperCase() + "_GET_PROBE " + JSON.stringify(result));
+  if (probeRequiresAttention(targetName, result.verdict)) {
+    // A protected/stale Preview must not show a green verification step.
+    // The PR workflow marks the step continue-on-error, preserving the tests.
+    console.error("KMONG_PREVIEW_ATTENTION_REQUIRED: preview SHA was not independently verified.");
+    process.exitCode = 1;
+  }
+  console.log("A missing or different source SHA is NOT proof of the latest code running in " + targetName + ".");
   if (process.env.GITHUB_STEP_SUMMARY) {
     const { appendFileSync } = await import("node:fs");
     appendFileSync(process.env.GITHUB_STEP_SUMMARY,
-      "\n### Kmong bridge public Production GET probe (not a deployment gate)\n" +
+      "\n### Kmong bridge public " + targetName + " GET probe (not a deployment gate)\n" +
       "- HTTP: " + (result.http_status ?? "unreachable") + "; verdict: **" + result.verdict +
       "**; SHA: " + (result.source_sha || "unverified") + "\n" +
       "- GET only; no webhook POST, secrets, auth bypass, or Production setting changes.\n");

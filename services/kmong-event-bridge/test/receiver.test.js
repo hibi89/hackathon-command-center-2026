@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { createHmac, createPrivateKey, createPublicKey, createVerify, generateKeyPairSync } from "node:crypto";
 import { readFileSync } from "node:fs";
 import roster from "../source_repositories.json" with { type: "json" };
-import { HUB_REPO, verifySignature, eligibleEvent, signAppJwt, health, receiveWebhook, dispatchCentral, shouldCoalesceDispatch } from "../lib/receiver.js";
+import { HUB_REPO, verifySignature, eligibleEvent, signAppJwt, health, receiveWebhook, dispatchCentral, shouldCoalesceDispatch, approvedBlueprintWorkflowPath } from "../lib/receiver.js";
 
 const SOURCE = roster.repositories.find((r) => r.repository.toLowerCase() !== HUB_REPO.toLowerCase() && r.branches.length > 0);
 const HUB = roster.repositories.find((r) => r.repository.toLowerCase() === HUB_REPO.toLowerCase());
@@ -136,6 +136,230 @@ test("only final blueprint completed runs are relevant", () => {
     ...r, workflow_run: { ...r.workflow_run, path: ".github/workflows/other.yml" },
   }), false);
 });
+
+test("explicit unrelated workflow path cannot bypass event allowlist via display name", () => {
+  const tracked = {
+    repository: { full_name: SOURCE.repository },
+    action: "completed",
+    workflow_run: {
+      head_branch: SOURCE.branches[0],
+      path: SOURCE.repository + "/.github/workflows/unrelated.yml@main",
+      name: "Final blueprint completion evidence gate",
+    },
+  };
+  assert.equal(eligibleEvent("workflow_run", tracked), false);
+  assert.equal(eligibleEvent("workflow_run", {
+    ...tracked, workflow_run: { ...tracked.workflow_run,
+      path: SOURCE.repository + "/.github/workflows/final-blueprint-gate.yml@main" },
+  }), true);
+  assert.equal(eligibleEvent("workflow_run", {
+    ...tracked, workflow_run: { ...tracked.workflow_run, path: "" },
+  }), false); // no display-name fallback: must have a canonical path
+  assert.equal(eligibleEvent("workflow_run", {
+    ...tracked,
+    workflow: { path: SOURCE.repository + "/.github/workflows/final-blueprint-gate.yml@main" },
+    workflow_run: { ...tracked.workflow_run, path: "" },
+  }), true); // top-level GitHub workflow.path is an acceptable path source
+});
+
+test("workflow_run with only a matching display name fails closed", () => {
+  const signedPayload = {
+    repository: { full_name: SOURCE.repository },
+    action: "completed",
+    workflow_run: {
+      head_branch: SOURCE.branches[0],
+      name: "Final blueprint completion evidence gate",
+    },
+  };
+  assert.equal(eligibleEvent("workflow_run", signedPayload), false);
+  assert.equal(eligibleEvent("workflow_run", {
+    ...signedPayload, workflow_run: { ...signedPayload.workflow_run, path: "" },
+  }), false);
+  assert.equal(eligibleEvent("workflow_run", {
+    ...signedPayload, workflow_run: { ...signedPayload.workflow_run, path: null },
+  }), false);
+});
+
+test("signed name-only workflow_run never calls the GitHub API", async () => {
+  const { result, requests } = mockGitHub();
+  const p = {
+    installation: { id: 181468120 },
+    repository: { full_name: SOURCE.repository },
+    action: "completed",
+    workflow_run: {
+      head_branch: SOURCE.branches[0],
+      name: "Final blueprint completion evidence gate",
+    },
+  };
+  const response = await receiveWebhook(incoming("workflow_run", p), env, result);
+  assert.equal(response.status, 202);
+  assert.equal((await response.json()).status, "ignored");
+  assert.equal(requests.length, 0);
+});
+
+test("explicit run workflow path overrides conflicting top-level path", () => {
+  const base = {
+    repository: { full_name: SOURCE.repository },
+    action: "completed",
+    workflow: { path: SOURCE.repository + "/.github/workflows/final-blueprint-gate.yml@main" },
+    workflow_run: {
+      head_branch: SOURCE.branches[0],
+      name: "Final blueprint completion evidence gate",
+      path: ".github/workflows/unrelated.yml",
+    },
+  };
+  assert.equal(eligibleEvent("workflow_run", base), false);
+  assert.equal(eligibleEvent("workflow_run", {
+    ...base, workflow_run: { ...base.workflow_run, path: "" },
+  }), true);
+});
+
+test("invalid top-level workflow path cannot rescue name-only event", () => {
+  const p = {
+    repository: { full_name: SOURCE.repository },
+    action: "completed",
+    workflow: { path: "foreign/repo/.github/workflows/final-blueprint-gate.yml@main" },
+    workflow_run: { head_branch: SOURCE.branches[0],
+      name: "Final blueprint completion evidence gate" },
+  };
+  assert.equal(eligibleEvent("workflow_run", p), false);
+  assert.equal(eligibleEvent("workflow_run", {
+    ...p, workflow: { path: { malicious: true } },
+  }), false);
+});
+
+test("HMAC-signed unrelated workflow with matching display name is ignored without dispatch", async () => {
+  const { result, requests } = mockGitHub();
+  const p = {
+    repository: { full_name: SOURCE.repository },
+    action: "completed",
+    workflow_run: {
+      head_branch: SOURCE.branches[0],
+      path: SOURCE.repository + "/.github/workflows/other.yml@main",
+      name: "Final blueprint completion evidence gate",
+    },
+  };
+  const response = await receiveWebhook(incoming("workflow_run", p), env, result);
+  assert.equal(response.status, 202);
+  assert.equal((await response.json()).status, "ignored");
+  assert.equal(requests.length, 0);
+});
+
+test("workflow_run full path must resolve to configured GitHub workflow directory", () => {
+  const make = (path) => ({
+    repository: { full_name: SOURCE.repository },
+    action: "completed",
+    workflow_run: { head_branch: SOURCE.branches[0],
+      path, name: "Final blueprint completion evidence gate" },
+  });
+  for (const path of [
+    SOURCE.repository + "/docs/final-blueprint-gate.yml@main",
+    SOURCE.repository + "/arbitrary/final-blueprint-gate.yml@main",
+    ".github/workflows/final-blueprint-gate.yml.backup",
+    SOURCE.repository + "/.github/workflows-other/final-blueprint-gate.yml@main",
+  ]) assert.equal(eligibleEvent("workflow_run", make(path)), false, path);
+  for (const path of [
+    ".github/workflows/final-blueprint-gate.yml",
+    SOURCE.repository + "/.github/workflows/final-blueprint-gate.yaml@main",
+  ]) assert.equal(eligibleEvent("workflow_run", make(path)), true, path);
+});
+
+test("signed workflow_run from different head repository is ignored", async () => {
+  const { result, requests } = mockGitHub();
+  const event = {
+    repository: { full_name: SOURCE.repository },
+    action: "completed",
+    workflow_run: {
+      head_branch: SOURCE.branches[0],
+      path: SOURCE.repository + "/.github/workflows/final-blueprint-gate.yml@main",
+      head_repository: { full_name: "untrusted/fork" },
+      repository: { full_name: SOURCE.repository },
+    },
+  };
+  assert.equal(eligibleEvent("workflow_run", event), false);
+  const response = await receiveWebhook(incoming("workflow_run", event), env, result);
+  assert.equal(response.status, 202);
+  assert.equal((await response.json()).status, "ignored");
+  assert.equal(requests.length, 0);
+});
+
+test("matching source head and base repositories remain eligible", () => {
+  const event = {
+    repository: { full_name: SOURCE.repository },
+    action: "completed",
+    workflow_run: {
+      head_branch: SOURCE.branches[0],
+      path: SOURCE.repository + "/.github/workflows/final-blueprint-gate.yml@main",
+      head_repository: { full_name: SOURCE.repository },
+      repository: { full_name: SOURCE.repository },
+    },
+  };
+  assert.equal(eligibleEvent("workflow_run", event), true);
+  assert.equal(eligibleEvent("workflow_run", {
+    ...event, workflow_run: { ...event.workflow_run,
+      repository: { full_name: "untrusted/base" } },
+  }), false);
+});
+
+test("workflow path is anchored to GitHub root and the exact event repository", () => {
+  const fullName = SOURCE.repository;
+  for (const valid of [
+    ".github/workflows/final-blueprint-gate.yml",
+    ".github/workflows/final-blueprint-gate.yaml@refs/heads/main",
+    fullName + "/.github/workflows/final-blueprint-gate.yml@main",
+    fullName.toUpperCase() + "/.github/workflows/final-blueprint-gate.yml",
+  ]) assert.equal(approvedBlueprintWorkflowPath(valid, fullName), true, valid);
+  for (const invalid of [
+    "other/repository/.github/workflows/final-blueprint-gate.yml@main",
+    "nested/.github/workflows/final-blueprint-gate.yml",
+    fullName + "/nested/.github/workflows/final-blueprint-gate.yml",
+    fullName + "/.github/workflows/FINAL-BLUEPRINT-GATE.yml",
+    fullName + "/.github/workflows/final-blueprint-gate.yml@refs/heads/main@extra",
+    fullName + "/.github/workflows/final-blueprint-gate.yml\nignored",
+    ".github/workflows/final-blueprint-gate.yml.bak",
+    ".github/workflows/../workflows/final-blueprint-gate.yml",
+    "",
+  ]) assert.equal(approvedBlueprintWorkflowPath(invalid, fullName), false, invalid);
+});
+
+test("signed workflow_run whose path claims another repository cannot dispatch", async () => {
+  const { result, requests } = mockGitHub();
+  const p = {
+    repository: { full_name: SOURCE.repository },
+    action: "completed",
+    workflow_run: {
+      head_branch: SOURCE.branches[0],
+      head_repository: { full_name: SOURCE.repository },
+      repository: { full_name: SOURCE.repository },
+      path: "other/repository/.github/workflows/final-blueprint-gate.yml@main",
+      name: "Final blueprint completion evidence gate",
+    },
+  };
+  const response = await receiveWebhook(incoming("workflow_run", p), env, result);
+  assert.equal(response.status, 202);
+  assert.equal((await response.json()).status, "ignored");
+  assert.equal(requests.length, 0);
+});
+
+test("signed canonical prefixed workflow_run still dispatches through GitHub App", async () => {
+  const { result, requests } = mockGitHub();
+  const p = {
+    installation: { id: 181468120 },
+    repository: { full_name: SOURCE.repository },
+    action: "completed",
+    workflow_run: {
+      head_branch: SOURCE.branches[0],
+      head_repository: { full_name: SOURCE.repository },
+      repository: { full_name: SOURCE.repository },
+      path: SOURCE.repository + "/.github/workflows/final-blueprint-gate.yml@refs/heads/main",
+    },
+  };
+  const response = await receiveWebhook(incoming("workflow_run", p), env, result);
+  assert.equal(response.status, 202);
+  assert.equal((await response.json()).status, "queued");
+  assert.equal(requests.length, 4);
+});
+
 test("JWT is signed RS256 and has constrained lifetime", () => {
   const jwt = signAppJwt("12345", privateKey, 2000000000);
   const [head, body, sig] = jwt.split(".");
@@ -202,6 +426,68 @@ test("signed tracked push queues one hub-only Actions dispatch", async () => {
   assert.equal(requests[3].url, "https://api.github.com/repos/" + HUB_REPO + "/actions/workflows/kmong-hub-sync.yml/dispatches");
   assert.deepEqual(requests[3].body, { ref: "main", inputs: { dry_run: "false" } });
 });
+test("opt-in delivery trace sends validated signed-event UUID as a workflow input", async () => {
+  const { result, requests } = mockGitHub();
+  const response = await receiveWebhook(incoming("push", payload()),
+    { ...env, KMONG_TRACE_DELIVERY_ID_ENABLED: "true" }, result);
+  assert.equal(response.status, 202);
+  assert.equal((await response.json()).status, "queued");
+  assert.equal(requests.length, 4);
+  assert.deepEqual(requests[3].body, {
+    ref: "main", inputs: { dry_run: "false", source_delivery_id: DELIVERY },
+  });
+});
+
+test("opt-in correlation rejects direct invalid IDs before API access", async () => {
+  const { result, requests } = mockGitHub();
+  await assert.rejects(
+    dispatchCentral({ ...env, KMONG_TRACE_DELIVERY_ID_ENABLED: "true" },
+      result, 8500, undefined, "untrusted-not-a-uuid"),
+    /invalid source delivery id/,
+  );
+  assert.equal(requests.length, 0);
+});
+
+test("trace input remains absent unless explicitly enabled", async () => {
+  for (const value of [undefined, "false", "TRUE"]) {
+    const { result, requests } = mockGitHub();
+    const response = await receiveWebhook(incoming("push", payload()),
+      { ...env, KMONG_TRACE_DELIVERY_ID_ENABLED: value }, result);
+    assert.equal(response.status, 202);
+    assert.deepEqual(requests[3].body.inputs, { dry_run: "false" });
+  }
+});
+
+test("main-workflow trace contract is optional and labeled as non-proof", () => {
+  const workflow = readFileSync(
+    new URL("../../../.github/workflows/kmong-hub-sync.yml", import.meta.url), "utf8");
+  assert.match(workflow, /source_delivery_id:/);
+  assert.match(workflow, /required: false\s+default: ''/);
+  assert.match(workflow, /run-name:.*source_delivery_id/);
+  assert.match(workflow, /not evidence of a verified webhook/);
+});
+
+test("dispatch failure never writes token or untrusted exception text to logs", async () => {
+  const marker = "SENSITIVE_SIGNING_TOKEN_" + env.KMONG_WEBHOOK_SECRET;
+  const request = incoming("push", payload());
+  const log = [];
+  const original = console.error;
+  console.error = (...parts) => { log.push(parts.map(String).join(" ")); };
+  try {
+    const response = await receiveWebhook(request, env, async () => {
+      throw new Error("upstream failed: Authorization: Bearer " + marker);
+    });
+    assert.equal(response.status, 502);
+    assert.equal((await response.json()).status, "dispatch_failed");
+  } finally {
+    console.error = original;
+  }
+  assert.equal(log.length, 1);
+  assert.equal(log[0], "kmong webhook dispatch failed: upstream_unavailable");
+  assert.equal(log.join(" ").includes(marker), false);
+  assert.equal(log.join(" ").includes(env.KMONG_WEBHOOK_SECRET), false);
+});
+
 test("API failure is surfaced and does not claim queue success", async () => {
   const { result, requests } = mockGitHub({ errorAt: 3 });
   const response = await receiveWebhook(incoming("push", payload()), env, result);
@@ -285,6 +571,15 @@ test("public health response exposes only a validated deployment commit, not cre
   const disabled = await health({ ...env, KMONG_DISPATCH_ENABLED: "false", VERCEL_GIT_COMMIT_SHA: valid }).json();
   assert.deepEqual(disabled, { status: "not_configured", source_sha: valid, bridge_feature: "coalesce-v1" });
 });
+test("protected or stale Preview signals a failing advisory step; Production GET stays informational", async () => {
+  const { probeRequiresAttention } = await import("../probe-production.mjs");
+  assert.equal(probeRequiresAttention("Preview", "PROTECTED_OR_UNAUTHORIZED"), true);
+  assert.equal(probeRequiresAttention("Preview", "READY_SHA_NOT_MATCHED"), true);
+  assert.equal(probeRequiresAttention("Preview", "READY_VERSION_UNVERIFIED"), true);
+  assert.equal(probeRequiresAttention("Preview", "READY_SHA_MATCHED"), false);
+  assert.equal(probeRequiresAttention("Production", "READY_SHA_NOT_MATCHED"), false);
+});
+
 test("read-only deployment probe distinguishes SHA match from unknown and disabled", async () => {
   const { classify } = await import("../probe-production.mjs");
   const sha = "a".repeat(40);
@@ -296,4 +591,79 @@ test("read-only deployment probe distinguishes SHA match from unknown and disabl
   assert.equal(classify(503, { status: "not_configured" }, sha).verdict, "NOT_CONFIGURED");
   assert.equal(classify(403, {}, sha).verdict, "PROTECTED_OR_UNAUTHORIZED");
   assert.equal(classify(404, {}, sha).verdict, "NOT_FOUND");
+});
+
+test("forged small Content-Length on streamed oversized webhook fails before dispatch", async () => {
+  const { result, requests } = mockGitHub();
+  const raw = Buffer.from(JSON.stringify({ ...payload(), junk: "X".repeat(1048576) }));
+  const sig = "sha256=" + createHmac("sha256", env.KMONG_WEBHOOK_SECRET).update(raw).digest("hex");
+  const stream = new ReadableStream({
+    start(controller) {
+      controller.enqueue(raw.subarray(0, 524288));
+      controller.enqueue(raw.subarray(524288));
+      controller.close();
+    },
+  });
+  const req = new Request("https://bridge.invalid/api/webhook", {
+    method: "POST", duplex: "half", body: stream,
+    headers: {
+      "content-length": "1",
+      "x-hub-signature-256": sig,
+      "x-github-event": "push",
+      "x-github-delivery": DELIVERY,
+    },
+  });
+  const response = await receiveWebhook(req, env, result);
+  assert.equal(response.status, 413);
+  assert.equal((await response.json()).status, "too_large");
+  assert.equal(requests.length, 0);
+});
+
+test("single 8.5-second maximum dispatch budget fails closed on stalled GitHub call", async () => {
+  const stalled = (_, init) => new Promise((resolve, reject) => {
+    if (init.signal.aborted) return reject(init.signal.reason);
+    init.signal.addEventListener("abort", () => reject(init.signal.reason), { once: true });
+  });
+  // AbortSignal.timeout() uses unref'ed timers. Keep the synthetic stalled
+  // fetch test alive so the timeout can actually be observed in Node's test runner.
+  const keepAlive = setTimeout(() => {}, 250);
+  try {
+    await assert.rejects(dispatchCentral(env, stalled, 25), (error) => error.name === "TimeoutError");
+  } finally {
+    clearTimeout(keepAlive);
+  }
+  await assert.rejects(dispatchCentral(env, stalled, 8501), TypeError);
+});
+
+test("aborted slow upload fails closed without reaching GitHub dispatch", async () => {
+  let cancelled = false;
+  const stream = new ReadableStream({
+    pull() { return new Promise(() => {}); },
+    cancel() { cancelled = true; },
+  });
+  const controller = new AbortController();
+  const request = new Request("https://bridge.invalid/api/webhook", {
+    method: "POST", body: stream, duplex: "half", signal: controller.signal,
+    headers: { "x-github-signature-256": "sha256=" + "0".repeat(64),
+      "x-github-event": "push", "x-github-delivery": DELIVERY },
+  });
+  const { result, requests } = mockGitHub();
+  const timer = setTimeout(() => controller.abort(), 20);
+  try {
+    const response = await receiveWebhook(request, env, result);
+    assert.equal(response.status, 503);
+    assert.equal((await response.json()).status, "request_timeout");
+    assert.equal(requests.length, 0);
+    assert.equal(cancelled, true);
+  } finally {
+    clearTimeout(timer);
+  }
+});
+
+test("an already expired shared deadline prevents every API request", async () => {
+  const controller = new AbortController();
+  controller.abort();
+  const { result, requests } = mockGitHub();
+  await assert.rejects(dispatchCentral(env, result, 8500, controller.signal), /deadline exceeded/);
+  assert.equal(requests.length, 0);
 });

@@ -4,6 +4,7 @@ on:
     branches:
       - main
       - feature/kmong-realtime-webhook-20261113
+      - feature/kmong-webhook-bounded-ingress-20261114
     paths:
       - 'services/kmong-event-bridge/**'
       - 'tools/kmong_hub_sync/source_repositories.json'
@@ -34,4 +35,12 @@ jobs:
         if: github.event_name == 'push'
         env:
           KMONG_PROBE_URL: https://kmong-hub-event-bridge.vercel.app/api/webhook
+        run: node services/kmong-event-bridge/probe-production.mjs
+      - name: Observe linked PR Preview health over GET (read-only, non-blocking)
+        if: github.event_name == 'pull_request' && github.head_ref == 'feature/kmong-webhook-bounded-ingress-20261114'
+        continue-on-error: true
+        env:
+          KMONG_PROBE_TARGET: preview
+          KMONG_PROBE_URL: https://kmong-hub-event-bridge-git-feature-kmong-webhook-4e7697-hibi89.vercel.app/api/webhook
+          GITHUB_SHA: ${{ github.event.pull_request.head.sha }}
         run: node services/kmong-event-bridge/probe-production.mjs

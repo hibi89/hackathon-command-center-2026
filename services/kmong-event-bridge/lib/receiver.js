@@ -1,4 +1,5 @@
 import { createHmac, createSign, timingSafeEqual } from "node:crypto";
+import { BodyReadError, readLimitedBody } from "./body-reader.js";
 import roster from "../source_repositories.json" with { type: "json" };
 
 export const HUB_REPO = "hibi89/hackathon-command-center-2026";
@@ -18,6 +19,17 @@ export function verifySignature(raw, provided, secret) {
   const expected = createHmac("sha256", secret).update(raw).digest();
   const received = Buffer.from(provided.slice(7), "hex");
   return received.length === expected.length && timingSafeEqual(received, expected);
+}
+
+
+// A workflow_run path is either root-relative or prefixed with its exact repo.
+// A trailing @ref is common in GitHub delivery data, but arbitrary prefixes,
+// nested .github directories and case-changed filenames are not allowed.
+export function approvedBlueprintWorkflowPath(path, fullName) {
+  if (typeof path !== "string" || typeof fullName !== "string") return false;
+  const match = /^(?:([^/\s@]+\/[^/\s@]+)\/)?\.github\/workflows\/final-blueprint-gate\.ya?ml(?:@[A-Za-z0-9._/-]+)?$/.exec(path);
+  if (!match) return false;
+  return !match[1] || match[1].toLowerCase() === fullName.toLowerCase();
 }
 
 export function eligibleEvent(kind, data) {
@@ -44,9 +56,20 @@ export function eligibleEvent(kind, data) {
     if (data.action !== "completed" || !data.workflow_run) return false;
     const run = data.workflow_run;
     if (typeof run.head_branch !== "string" || !branches.has(run.head_branch)) return false;
-    const path = String(run.path || data.workflow?.path || "");
-    return /(^|\/)final-blueprint-gate\.ya?ml(?:@[^ ]*)?$/i.test(path) ||
-      run.name === "Final blueprint completion evidence gate";
+    // GitHub signs the envelope, but a workflow_run may represent a fork or
+    // different head repository whose branch name happens to match our roster.
+    // Compare both repository identities when GitHub supplies the metadata.
+    for (const origin of [run.head_repository, run.repository]) {
+      if (origin !== undefined &&
+          (typeof origin?.full_name !== "string" ||
+           origin.full_name.toLowerCase() !== fullName)) return false;
+    }
+    // Display names are not unique workflow identifiers. When the run path is
+    // missing, only an explicit canonical path in the workflow metadata is
+    // sufficient. Missing both paths must fail closed, not trust run.name.
+    // The run's own path takes precedence over the top-level metadata.
+    const path = run.path || data.workflow?.path;
+    return approvedBlueprintWorkflowPath(path, fullName);
   }
   return false;
 }
@@ -65,7 +88,8 @@ export function signAppJwt(appId, privateKey, nowSeconds = Math.floor(Date.now()
   return unsigned + "." + signer.sign(privateKey.replace(/\\n/g, "\n"), "base64url");
 }
 
-async function githubRequest(fetchImpl, path, token, method = "GET", body = undefined) {
+async function githubRequest(fetchImpl, path, token, method = "GET", body = undefined, deadline = undefined) {
+  if (deadline?.aborted) throw new Error("GitHub dispatch deadline exceeded");
   const response = await fetchImpl(API_ROOT + path, {
     method,
     headers: {
@@ -76,8 +100,9 @@ async function githubRequest(fetchImpl, path, token, method = "GET", body = unde
       "User-Agent": "kmong-event-bridge",
     },
     body: body === undefined ? undefined : JSON.stringify(body),
-    signal: AbortSignal.timeout(8000),
+    signal: deadline ? AbortSignal.any([deadline, AbortSignal.timeout(8000)]) : AbortSignal.timeout(8000),
   });
+  if (deadline?.aborted) throw new Error("GitHub dispatch deadline exceeded");
   if (!response.ok) {
     throw new Error("GitHub API returned HTTP " + response.status);
   }
@@ -115,16 +140,28 @@ export function shouldCoalesceDispatch(payload, nowMs = Date.now()) {
   return false;
 }
 
-export async function dispatchCentral(env, fetchImpl = fetch) {
+export async function dispatchCentral(env, fetchImpl = fetch, maxDurationMs = 8500,
+                                      sharedSignal = undefined, deliveryId = undefined) {
+  if (env.KMONG_TRACE_DELIVERY_ID_ENABLED === "true" &&
+      (typeof deliveryId !== "string" || !DELIVERY_RE.test(deliveryId))) {
+    // No API call when the opt-in correlation input is invalid.
+    throw new TypeError("invalid source delivery id for correlation");
+  }
+  if (!Number.isSafeInteger(maxDurationMs) || maxDurationMs < 1 || maxDurationMs > 8500) {
+    throw new TypeError("invalid dispatch time budget");
+  }
+  // Four sequential GitHub calls share a single deadline below the 10 s serverless budget.
+  const localDeadline = AbortSignal.timeout(maxDurationMs);
+  const deadline = sharedSignal ? AbortSignal.any([sharedSignal, localDeadline]) : localDeadline;
   const jwt = signAppJwt(env.KMONG_DISPATCH_APP_ID, env.KMONG_DISPATCH_APP_PRIVATE_KEY);
   const installation = await githubRequest(
-    fetchImpl, "/repos/" + HUB_REPO + "/installation", jwt);
+    fetchImpl, "/repos/" + HUB_REPO + "/installation", jwt, "GET", undefined, deadline);
   if (!Number.isInteger(installation.id) || installation.id < 1) {
     throw new Error("dispatch installation not found");
   }
   const token = await githubRequest(
     fetchImpl, "/app/installations/" + installation.id + "/access_tokens", jwt, "POST",
-    { repositories: [HUB_REPO.split("/")[1]], permissions: { actions: "write" } });
+    { repositories: [HUB_REPO.split("/")[1]], permissions: { actions: "write" } }, deadline);
   if (!token.token || !Array.isArray(token.repositories) || token.repositories.length !== 1 ||
       token.repositories[0].full_name?.toLowerCase() !== HUB_REPO.toLowerCase() ||
       token.permissions?.actions !== "write") {
@@ -132,11 +169,17 @@ export async function dispatchCentral(env, fetchImpl = fetch) {
   }
   const recent = await githubRequest(fetchImpl,
     "/repos/" + HUB_REPO + "/actions/workflows/" + HUB_WORKFLOW +
-    "/runs?event=workflow_dispatch&per_page=30", token.token);
+    "/runs?event=workflow_dispatch&per_page=30", token.token, "GET", undefined, deadline);
   if (shouldCoalesceDispatch(recent)) return "coalesced";
+  const inputs = { dry_run: "false" };
+  // Off by default: only enable after the existing main workflow explicitly
+  // declares source_delivery_id. The UUID is a trace hint, not HMAC proof.
+  if (env.KMONG_TRACE_DELIVERY_ID_ENABLED === "true") {
+    inputs.source_delivery_id = deliveryId.toLowerCase();
+  }
   await githubRequest(fetchImpl,
     "/repos/" + HUB_REPO + "/actions/workflows/" + HUB_WORKFLOW + "/dispatches",
-    token.token, "POST", { ref: "main", inputs: { dry_run: "false" } });
+    token.token, "POST", { ref: "main", inputs }, deadline);
   return "queued";
 }
 
@@ -159,10 +202,15 @@ export function health(env) {
 
 export async function receiveWebhook(request, env, fetchImpl = fetch) {
   if (!env.KMONG_WEBHOOK_SECRET) return answer(503, { status: "not_configured" });
-  const providedLength = Number(request.headers.get("content-length") || 0);
-  if (providedLength > MAX_BODY) return answer(413, { status: "too_large" });
-  const raw = Buffer.from(await request.arrayBuffer());
-  if (raw.length > MAX_BODY) return answer(413, { status: "too_large" });
+  // One end-to-end deadline includes slow/chunked body upload and all GitHub calls.
+  const deadline = AbortSignal.any([AbortSignal.timeout(8500), request.signal]);
+  let raw;
+  try {
+    raw = await readLimitedBody(request, MAX_BODY, deadline);
+  } catch (error) {
+    if (error instanceof BodyReadError) return answer(error.status, { status: error.code });
+    throw error;
+  }
   if (!verifySignature(raw, request.headers.get("x-hub-signature-256"),
                        env.KMONG_WEBHOOK_SECRET)) {
     return answer(401, { status: "invalid_signature" });
@@ -192,11 +240,13 @@ export async function receiveWebhook(request, env, fetchImpl = fetch) {
     return answer(503, { status: "dispatch_not_configured" });
   }
   try {
-    const status = await dispatchCentral(env, fetchImpl);
+    const status = await dispatchCentral(env, fetchImpl, 8500, deadline, delivery);
     // A 204 means queued; coalesced means NO dispatch, neither implies a completed sync.
     return answer(202, { status });
-  } catch (error) {
-    console.error("kmong webhook dispatch failed:", error instanceof Error ? error.message : "unknown");
+  } catch {
+    // Never log thrown error messages: fetch/response exceptions may contain
+    // Authorization headers, App tokens, or user-supplied webhook data.
+    console.error("kmong webhook dispatch failed: upstream_unavailable");
     return answer(502, { status: "dispatch_failed" });
   }
 }
