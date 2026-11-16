@@ -19,6 +19,12 @@ export function classify(status, body, expectedSha) {
   if (status === 404) return { verdict: "NOT_FOUND", source_sha: null };
   return { verdict: "UNVERIFIED_HTTP_" + status, source_sha: null };
 }
+// Preview verification is advisory, but must report failure as a failed step.
+// Production's historical GET observer remains non-blocking and unchanged.
+export function probeRequiresAttention(target, verdict) {
+  return target === "Preview" && verdict !== "READY_SHA_MATCHED";
+}
+
 async function main() {
   let result;
   try {
@@ -36,6 +42,12 @@ async function main() {
     result = { http_status: null, verdict: "UNREACHABLE_OR_TIMEOUT", source_sha: null };
   }
   console.log("KMONG_" + targetName.toUpperCase() + "_GET_PROBE " + JSON.stringify(result));
+  if (probeRequiresAttention(targetName, result.verdict)) {
+    // A protected/stale Preview must not show a green verification step.
+    // The PR workflow marks the step continue-on-error, preserving the tests.
+    console.error("KMONG_PREVIEW_ATTENTION_REQUIRED: preview SHA was not independently verified.");
+    process.exitCode = 1;
+  }
   console.log("A missing or different source SHA is NOT proof of the latest code running in " + targetName + ".");
   if (process.env.GITHUB_STEP_SUMMARY) {
     const { appendFileSync } = await import("node:fs");

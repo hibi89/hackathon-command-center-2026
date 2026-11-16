@@ -571,6 +571,15 @@ test("public health response exposes only a validated deployment commit, not cre
   const disabled = await health({ ...env, KMONG_DISPATCH_ENABLED: "false", VERCEL_GIT_COMMIT_SHA: valid }).json();
   assert.deepEqual(disabled, { status: "not_configured", source_sha: valid, bridge_feature: "coalesce-v1" });
 });
+test("protected or stale Preview signals a failing advisory step; Production GET stays informational", async () => {
+  const { probeRequiresAttention } = await import("../probe-production.mjs");
+  assert.equal(probeRequiresAttention("Preview", "PROTECTED_OR_UNAUTHORIZED"), true);
+  assert.equal(probeRequiresAttention("Preview", "READY_SHA_NOT_MATCHED"), true);
+  assert.equal(probeRequiresAttention("Preview", "READY_VERSION_UNVERIFIED"), true);
+  assert.equal(probeRequiresAttention("Preview", "READY_SHA_MATCHED"), false);
+  assert.equal(probeRequiresAttention("Production", "READY_SHA_NOT_MATCHED"), false);
+});
+
 test("read-only deployment probe distinguishes SHA match from unknown and disabled", async () => {
   const { classify } = await import("../probe-production.mjs");
   const sha = "a".repeat(40);
