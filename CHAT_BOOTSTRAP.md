@@ -1,3 +1,13 @@
+# 해총 중앙 — 최신 시작점 (OWNER-DEV-EXECUTION-V2 / 2026-11-16 KST)
+**현재 유효 정본:** [High 설계 → Instant 대량구현 → 후행 CI → Codex 독립검수 → High 인수 → 승인 후 Luna Extra High 등록](docs/strategy/OWNER_DEV_EXECUTION_CANONICAL_20261116.md). 기존 2026-10-28/10-31 '4슬롯만 활성', High가 직접 모든 코딩, 매작업 전체 CI, 2026-11-14 Codex 중간 UX/코딩 순서는 **당시 이력이며 현행 일반 개발 지시가 아니다**. 최종설계·보안·권리·대회 제출·외부승인 게이트는 유지한다.
+
+**임무 잠금:** 해총 중앙 `ㄱ`/`ㄱㄱ`은 [명시된 중앙 GitHub App 미션](data/haechong_active_mission_20261115.json)만 재개한다. 제품 채팅의 `ㄱ`은 그 제품 저장소/브랜치 READY 큐를 이어간다. 채팅/브랜치 지정 없이 HANDOFF의 옛 '다음 작업'만 따라 다른 제품으로 이동하지 않는다.
+
+**올바른 자료/권위 처리:** ① 현재 역할/대상 repo·branch를 먼저 확정 ② `AGENTS.md`의 최신 정책 우선순위 확인 ③ 실제 브랜치 HEAD 확인 ④ `HANDOFF.md → STATUS.md → REQUIREMENTS.md → 최종설계 → 소스/테스트`를 대조 ⑤ 사용자가 고정한 최초설계가 없다면 웹 Sol High 설계 시작, 있으면 Sol Instant가 READY를 실제 구현. HANDOFF/STATUS는 역사/진척 증거이지 정책 개정 문서가 아니다. 예상 %와 검증 공식 % 분리.
+
+---
+## 아래는 2026-10-31 이전 역사적 부트스트랩이며 현재 우선순위가 아님
+
 > **2026-10-31 새 채팅 최우선 추가 지침:** [BACKEND-FIRST 48H 실행 정본](docs/strategy/20261031_OWNER_BACKEND_FIRST_48H_EXECUTION_PROTOCOL.md). 제품·기술스택·기존 프로그램/레포 의존성·API 계약을 먼저 고정하고 **각 대회 메인 레포 백엔드부터 구현**한다. CI는 비차단 추적/독립 작업 병행하되 릴리스 전 필수 검증은 통과시킨다. 이 중앙 공시가 개별 리드 코드/CI 작업을 자동 수행한 것은 아니다.
 
 > **2026-10-29 사용자 추가 결정 — 개인 소버린 AI / FrontierOR 2027 실전 검증:** [공개 해총 도전 계획](docs/research/20261029_FRONTIEROR_2027_CHALLENGE_TARGET.md) → [PRIVATE HAE 상세](https://github.com/hibi89/HAE/blob/main/docs/research/20261029_SOVEREIGN_AI_FRONTIEROR_2027_PLAN.md). **별도 로컬 소버린 AI(이름 미정)는 기존 AI 역공학 기술 REA_AI와 다른 프로젝트다.** LA 검증 후 12월 공식 연습 6종·2 vCPU/4GB 오프라인 시험, 2027-01-04 FrontierOR 60문제 예선 도전 목표. 60문제 완주 ≠ 결선 자동 진출; 진출 팀 수 미발표. **기록만 완료**: 개발·대회 등록·신규 레포·출품·수상 증거 없음. 현재 3해커톤의 우선순위 변경 금지.
