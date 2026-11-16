@@ -86,3 +86,14 @@
 - [수익화 아이디어 통합 마스터](MONETIZATION_IDEAS_MASTER.md)
 - [일간 정본](https://github.com/hibi89/hackathon-command-center-2026/blob/github-trending-daily/docs/github-trending/2026-11/DAILY.md)
 - [주간 정본](https://github.com/hibi89/hackathon-command-center-2026/blob/github-trending-weekly/docs/github-trending/2026-11/WEEKLY.md)
+
+
+## 2026-11-16 신규 관찰 (기존 69개 보존; 공식 주간 순위 미확인)
+| 저장소 | 발견일(KST) | URL | 출처·검증 |
+|---|---|---|---|
+| morluto/rea | 2026-11-16 | https://github.com/morluto/rea | trend.ondo.sh 11/15 대체 7일 성장순서; README/LICENSE/커밋 미확인 |
+| debpalash/VoiceStudio | 2026-11-16 | https://github.com/debpalash/VoiceStudio | 대체 7일 성장순서; GitHub API AGPL-3.0·pushed_at 확인, 원문 미확인 |
+| stablyai/orca | 2026-11-16 | https://github.com/stablyai/orca | 대체 7일 성장순서; GitHub API MIT·pushed_at 확인, 원문 미확인 |
+| NVIDIA/SkillEvaluator | 2026-11-16 | https://github.com/NVIDIA/SkillEvaluator | 11/15 대체 일간 신규 관찰; GitHub API Apache-2.0·pushed_at 확인, 원문 미확인 |
+| elementalsouls/Claude-BugHunter | 2026-11-16 | https://github.com/elementalsouls/Claude-BugHunter | 11/15 대체 일간 신규 관찰, 개별 미확인 |
+| ggml-org/ggml | 2026-11-16 | https://github.com/ggml-org/ggml | 11/15 대체 일간 신규 관찰, 개별 미확인 |
