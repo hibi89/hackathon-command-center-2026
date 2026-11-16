@@ -1,6 +1,19 @@
 > **[HAECHONG_PRIMARY_MISSION_LOCK_V1]** PRIMARY_MISSION=GITHUB_APP_CENTRAL_AUTOMATION_90_TO_100; `ㄱ`/`ㄱㄱ` resumes GitHub App → signed HMAC webhook → Vercel bridge → central Actions → ledger; side-product development requires an explicit NEW owner instruction. `HANDOFF` recency cannot override this lock.
 > **[HAECHONG_NEXT_GATE]** Real signed delivery/E2E and deployed Production SHA remain NOT_VERIFIED; provisional central score=90/100. When Vercel/App access is blocked, only adjacent GitHub App central verification, security, or recovery work may proceed. No automatic pivot to UPTIME OPS or other product.
 
+## [2026-11-16 KST] OWNER-KMONG-IMPLEMENT-FIRST-QA-LAST-V1 — 10-item handoff (policy only)
+
+1. **목표·기술·범위:** 사용자 명시 지시로 크몽 29원천→19SKU 개발 역할/실행 순서를 교체. Sol High 웹 구현 집중 → 전체 CI/수정 → Codex Sol Max + Astra Max 독립 감사 → Sol High 최종 검토 → Codex Luna Extra High 크몽 등록. 세부 [최신 정본](docs/strategy/KMONG_SOL_HIGH_IMPLEMENT_FIRST_QA_LAST_PROTOCOL_20261116.md).
+2. **확정 변경·근거:** 구현률·공식 검증률·상용 준비·실등록 구분; 매 회차 전체 CI 대기 대신 묶음 구현, P1 종료 후 일괄 회귀. 기존 위험 변경의 안전검증, 필수 CI, 개인정보·보안·권리·사용자 GO는 유지. 구 11/14 GPT-only 역할 절차에 대체 배너 삽입, AGENTS 최상위 링크 반영.
+3. **테스트/검증:** 중앙 정책 문서 GitHub 생성/수정; 정확 blob·읽기 회신을 확인할 것. 이번 회차 제품 코드·CI·브라우저·Production·크몽 실게시 **NOT_RUN**; PASS/FAIL/SKIP 수치를 새로 부여하지 않음.
+4. **완료/진행/대기:** 중앙 정책 작성 및 운영 AGENTS/STATUS/HANDOFF 개정 DONE; 개별 19SKU 원천 저장소 적용 **NOT_APPLIED**; 실제 100% 제품/모델 교차 감사/크몽 등록 **NOT_RUN**, RELEASE HOLD 유지.
+5. **오류/차단/대안:** 이전 11/14 담당 순서가 최신 사용자 방침과 충돌해 참조 우선순위만 조정. CI 지연은 안전과 충돌하지 않는 개발 단계로 분리하여 회피; 모델 계정/외부 자동 호출은 실제 가능성 미검증. 보안 체크 비활성화·허위 진척 부여 금지.
+6. **저장소·브랜치·SHA:** `hibi89/hackathon-command-center-2026@kmong-productization`. 정책 신규 SHA `73833d1ae3a409e1ed34f2574313286f5ac463fb`; AGENTS `f6dab93a7051ed67d4bf1a54c39b4f911c1f7620`; 구 프로토콜 우선순위 `b32fd4616a67029ada9befd220f26484789a1c16`; STATUS `8b9811b126b621adb4391ed0e6aa6b747a8f0628`. HANDOFF 커밋 SHA는 반영 후 원격 확인. 사용자 지시 없이 `main` 수정 금지.
+7. **Production/Vercel/실행 환경:** 이번 작업은 정책 수정이라 배포 **N/A**. 기존 해총 GitHub App Production 원본 `https://kmong-hub-event-bridge.vercel.app/api/webhook`은 이 작업에서 수정·검증하지 않음. 중앙 GitHub App 90/100 잠정, signed webhook/Production SHA 차단 상태 유지.
+8. **원본·백업·인증:** Git 이전 커밋으로 정책 롤백 가능; 29원천→19SKU, 등록 이력, 공식 가중치·점수, 제품별 AGENTS/REQU­IREMENTS/소스, main, Actions, 비밀키/환경변수, 상품 고객 정보 불변. 비밀·고객 원본을 public central repo에 쓰지 않음.
+9. **다음 절차·승인:** 사용자 별도 지시로 제품별 원천 브랜치 담당자에게 6단계 체계 적용. Sol High는 전체 설계 REQ-ID 기준 실제 구현을 크게 묶어 진행, P1 종료 후 필수 전체 CI/실기능 검증, 이후 독립 모델 검수·최종 GO 후 Luna 등록. 모델 접근 불가·외부 승인/권리/실기기 차단은 HOLD. 별도 AX Dev Factory (`hibi89/Freelancer@tools/ax-dev-factory-local`) 지시문은 채팅에서 제공; 자동 편입 금지.
+10. **시간/증거 기준:** 2026-11-16 KST, GitHub 정책 원격 커밋/문서 readback만 기준; CI/실서비스 검증 포함하지 않음. 본 문서는 기존 해총 임무 잠금을 대체하지 않으며, `ㄱ` 단독 입력 시 중앙 GitHub App 자동화 90→100을 재개.
+
 ## [2026-11-15 17:19 KST] HAECHONG_WORKFLOW_RUN_PATH_REQUIRED_CI_20261115 — 10-part continuation
 
 1. **Mission/tech:** GitHub App source event → raw HMAC webhooks → existing Vercel → central workflow_dispatch → 35repo/80ref/29product ledger; `ㄱ` resumes only this mission.
