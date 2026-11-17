@@ -1,4 +1,5 @@
 > **[OWNER-DEV-EXECUTION-V2 OVERRIDE | 2026-11-16]** [최신 사용자 확정 실행·모델 분담·부트스트랩 정본](OWNER_DEV_EXECUTION_CANONICAL_20261116.md): **웹 Sol High 최초설계/큐 → 웹 Sol Instant BE/FE 구현100% 후보 → 후행 전체 CI/수정 → Codex Sol Max+Astra Max 독립 검수 → 웹 Sol High 최종 인수 → OWNER GO 후 Codex Luna Extra High 등록.** 아래 문서의 기존 상충하는 모델 역할·중간 검수 시점·4개 슬롯 제한·매회 전체 CI 등은 **역사/이전 정책**으로 보존하며 더 이상 현행 일반 실행 지침으로 사용하지 않는다. 안전/기밀/권리/원본·상용 승인 조건은 유효.
+> **[OWNER-P1-BROWSER-DEFERRAL-20261117 | NEWER OVERRIDE]** [중앙 V2.1 §0B](OWNER_DEV_EXECUTION_CANONICAL_20261116.md): P1 실제 BE/FE 코드·흐름 구현이 완료되면 브라우저·Playwright E2E·화면 클릭/시각/반응형/a11y/로그인 실행이 없어도 `IMPLEMENTATION_100_CANDIDATE` 판단 가능. 브라우저/실기기·전체 회귀는 P2 검증완료율. 모바일 외출 중 인증창/OTP/브라우저 재시도 루프에 P1 중단 금지; 검증은 `DEFERRED_TO_P2`, 안전 필수 검사 차단은 해당 작업 HOLD 후 독립 READY. 필수 CI/고위험 검사·고객원본/배포·유료 승인 유지.
 
 # 크몽 19 SKU — Sol High 구현 집중 / CI 일괄 / 독립검수 / 최종 등록 프로토콜
 > OWNER APPROVED 2026-11-16 KST | ID: KMONG-IMPLEMENT-FIRST-QA-LAST-V1
