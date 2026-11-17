@@ -96,6 +96,18 @@ class DriftTests(unittest.TestCase):
         self.assertEqual(report["profile_results"]["codex"]["status"], "SNAPSHOT_RULES_MATCH")
         self.assertFalse(report["profile_results"]["codex"]["account_settings_independently_verified"])
 
+    def test_summary_lists_missing_known_rule_ids_not_private_snapshot_values(self):
+        report = audit(self.registry(), "latest", {"chatgpt": {"rules": {}}})
+        summary = to_markdown(report)
+        self.assertIn("미제공 규칙 ID: `P2_OWNER`", summary)
+        self.assertIn("비교 미완료", summary)
+        self.assertNotIn("SNAPSHOT_RULES_MATCH", summary)
+
+    def test_summary_explicitly_marks_absent_account_instructions_unverified(self):
+        summary = to_markdown(audit(self.registry(), "latest"))
+        self.assertIn("NOT_VERIFIED_NO_SNAPSHOT", summary)
+        self.assertIn("사본이 없어 실제 충돌 여부를 판정하지 못했습니다", summary)
+
     def test_missing_rule_detected(self):
         report = audit(self.registry(), "latest", {"chatgpt": {"rules": {}}})
         self.assertEqual(report["profile_results"]["chatgpt"]["status"], "INCOMPLETE_SNAPSHOT")
