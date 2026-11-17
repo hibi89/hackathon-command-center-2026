@@ -1,5 +1,17 @@
 > **[HAECHONG_PRIMARY_MISSION_LOCK_V1]** PRIMARY_MISSION=GITHUB_APP_CENTRAL_AUTOMATION_90_TO_100; `ㄱ`/`ㄱㄱ` resumes GitHub App → signed HMAC webhook → Vercel bridge → central Actions → ledger; side-product development requires an explicit NEW owner instruction. `HANDOFF` recency cannot override this lock.
 > **[HAECHONG_NEXT_GATE]** One real signed GitHub App Delivery -> existing Production main@5542fb5 -> bot Actions #43859747199 -> collector NO_CHANGE -> ledger readback is E2E PASS (2026-11-16; Delivery response Work-attested, GitHub/Vercel execution independently cross-checked). Whole-design weighted verification UNASSESSED; historical provisional engineering score 90/100 is NOT official completion. RELEASE HOLD; retain GitHub App mission, no side-product switch, main merge or Production change without owner GO.
+## [2026-11-17 KST] HAECHONG_GUARD_CI_RECOVERY_HANDOFF
+1. 목표: GitHub App→HMAC→기존 Vercel→Actions→중앙 원장 임무 고정 및 보호 CI 복구.
+2. 변경: AGENTS/STATUS/HANDOFF의 보호 MARKER+NEXT 첫 두 줄 순서 복구; 나머지 원문 보존. compose.py 및 test_compose.py 안전 삽입 함수·테스트 추가.
+3. 검사: 실패 #44021782986 STATUS, #44021831419 HANDOFF. 복구 #44022041391 PASS(18), 안전 함수 #44022303295 PASS(24). PR #5 보강 #44022139595 PASS(103).
+4. 상태: 운영 mission-lock 회복; PR #5 미병합·명시적 GO 필요. 계정 지침 비교 NOT_VERIFIED, 새 Production/Ping E2E NOT_RUN.
+5. 원인/대안: 인수인계 문구를 보호 첫 두 줄 사이에 잘못 삽입. guard를 약화하지 않고 문서 원복+안전 구성 함수를 추가.
+6. repo/SHA: hibi89/hackathon-command-center-2026; 운영 브랜치 kmong-productization의 도구/README 기준 eec57124f92caf22d92d927b842bead4a93f3abf; main 6fdbc1d4ee223e53cd9a6cefa3bf3a8f39d7f437; PR #5 head cecd6522f19c452a6b95d14e27d85b44b992b765.
+7. Production: https://kmong-hub-event-bridge.vercel.app/api/webhook; 실제 배포 상태 이 회차 미검증·권한/설정 변경 없음.
+8. 원본/인증: 기존 HMAC 비밀·고객자료·원장·Git 이력 보호, main/Production 신규 변경 없음.
+9. 다음 READY: PR #5 명시 GO 이후에만 main 반영, 인계 후 새 SHA의 동기화 증거 검증. 계정 지침은 비민감 규칙 사본 승인 전 미판정.
+10. 갱신: 2026-11-17 KST; 실제 CI #44022303295 / #44022139595. 공식 검증률 UNASSESSED, 출시 HOLD.
+
 ## [2026-11-17 KST] HAECHONG_INSTRUCTION_ADVISORY_LIVE_HANDBACK
 1. **목표·기술·확정 요구:** 현재 채팅 임무는 **GitHub App→서명 HMAC→기존 Vercel→Actions→중앙 원장**. 승인된 자동 원장 동기화의 최신 `main` 실행 증거와 개인지침 권고 기능을 점검; 제품·해커톤 개발 임의 전환 없음.
 2. **완료 기능·변경 근거:** 기존 `main@6fdbc1d4ee223e53cd9a6cefa3bf3a8f39d7f437`의 [Actions #44020977616](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/44020977616)에서 Collector UPDATED 35/80/29, 봇 원장 커밋 `9a8c6ca177ee85b1679192d1472ac0de460bbaf8` 및 지침 감시 단계 `policy_source_status=CURRENT` **실행** 확인. 지침 사본이 없어 ChatGPT/Codex 실계정의 충돌 판정은 둘 다 `NOT_VERIFIED_NO_SNAPSHOT`. 개선 코드 [PR #5](https://github.com/hibi89/hackathon-command-center-2026/pull/5)에 더 명확한 누락 규칙 안내 구현, 안전 검증 후 **main 미병합**. 상세 [감사](docs/audits/HAECHONG_INSTRUCTION_ADVISORY_LIVE_SYNC_20261117.md).
