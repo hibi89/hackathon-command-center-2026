@@ -4,6 +4,7 @@ import argparse
 import hashlib
 import json
 import os
+import re
 from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
@@ -21,24 +22,36 @@ def blob_sha(contents):
 
 
 def load_registry(path=CONFIG):
+    """Public policy rules are version-pinned; never interpret malformed input."""
     obj = json.loads(Path(path).read_text(encoding="utf-8"))
-    if (not isinstance(obj, dict) or obj.get("schema_version") != 1 or not isinstance(obj.get("policy_id"), str)
+    if (not isinstance(obj, dict) or type(obj.get("schema_version")) is not int
+            or obj["schema_version"] != 1
+            or not isinstance(obj.get("policy_id"), str)
+            or not re.fullmatch(r"[A-Z][A-Z0-9_.-]{2,80}", obj["policy_id"])
             or not isinstance(obj.get("policy_blob_sha"), str)
-            or not isinstance(obj.get("rules"), list)):
+            or not re.fullmatch(r"[a-f0-9]{40}", obj["policy_blob_sha"])
+            or not isinstance(obj.get("rules"), list) or not obj["rules"]):
         raise ValueError("Invalid instruction alignment registry")
     keys = set()
     for rule in obj["rules"]:
         if not isinstance(rule, dict):
             raise ValueError("Invalid alignment rule")
-        applies = rule.get("applies_to", [])
-        if (not isinstance(rule, dict) or not isinstance(rule.get("id"), str)
-                or not isinstance(rule.get("expected"), str)
-                or not isinstance(rule.get("recommendation"), str)
-                or not isinstance(applies, list)
-                or not all(isinstance(value, str) and value in PROFILES for value in applies)
-                or not applies or rule["id"] in keys):
+        applies = rule.get("applies_to")
+        key = rule.get("id")
+        expected = rule.get("expected")
+        recommendation = rule.get("recommendation")
+        if (not isinstance(key, str) or not re.fullmatch(r"[A-Z][A-Z0-9_]{1,63}", key)
+                or not isinstance(expected, str)
+                or not re.fullmatch(r"[a-z][a-z0-9_]{0,63}", expected)
+                or not isinstance(recommendation, str)
+                or not 1 <= len(recommendation) <= 512
+                or any(c in recommendation for c in "\\r\\n")
+                or not isinstance(applies, list) or not applies
+                or any(not isinstance(p, str) or p not in PROFILES for p in applies)
+                or len(set(applies)) != len(applies)
+                or key in keys):
             raise ValueError("Invalid or duplicate alignment rule")
-        keys.add(rule["id"])
+        keys.add(key)
     return obj
 
 
@@ -55,17 +68,33 @@ def fetch_policy():
 
 
 def parse_snapshot(contents):
+    """Accept only normalized, non-sensitive rule IDs: never raw instruction text.
+
+    This does not attest to the actual ChatGPT/Codex account settings; it is an
+    owner-provided *declaration* of the state the owner checked independently.
+    """
     if len(contents) > 32768:
         raise ValueError("Instruction snapshot too large")
     obj = json.loads(contents)
-    if not isinstance(obj, dict) or obj.get("schema_version") != 1:
+    if (not isinstance(obj, dict) or type(obj.get("schema_version")) is not int
+            or obj["schema_version"] != 1 or set(obj) != {"schema_version", "profiles"}):
         raise ValueError("Invalid instruction snapshot schema")
     profiles = obj.get("profiles")
-    if not isinstance(profiles, dict) or set(profiles) - set(PROFILES):
+    if (not isinstance(profiles, dict) or not profiles
+            or any(not isinstance(name, str) or name not in PROFILES for name in profiles)):
         raise ValueError("Invalid instruction profiles")
     for item in profiles.values():
-        if not isinstance(item, dict) or not isinstance(item.get("rules"), dict):
+        if not isinstance(item, dict) or set(item) != {"rules"}:
+            raise ValueError("Invalid instruction profile object")
+        values = item["rules"]
+        if not isinstance(values, dict):
             raise ValueError("Invalid instruction profile rule mapping")
+        for key, value in values.items():
+            if (not isinstance(key, str)
+                    or not re.fullmatch(r"[A-Z][A-Z0-9_]{1,63}", key)
+                    or not isinstance(value, str)
+                    or not re.fullmatch(r"[a-z][a-z0-9_]{0,63}", value)):
+                raise ValueError("Snapshot must contain only short normalized rule IDs/values")
     return profiles
 
 
