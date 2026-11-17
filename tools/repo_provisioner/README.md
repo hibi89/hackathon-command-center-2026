@@ -1,6 +1,6 @@
 # Haechong Repository Provisioner — owner-only PUBLIC GitHub repository creation
 
-Development candidate only. **The workflow is not operational until the feature branch is reviewed/merged to kmong-productization and separate credential setup is completed.** No repositories were actually created by this candidate. No main merge, Vercel/Production changes or sensitive credential updates were done.
+**PUBLIC-only provisioning is operational on `kmong-productization` for the owner-attributed GitHub file-request path.** Actual synthetic E2E and same-request safe rerun PASS (2026-11-18 KST): [Actions #44140981604](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/44140981604), [PUBLIC test repository](https://github.com/hibi89/haechong-provisioner-e2e-20261118-02), source/policy SHA `09bd637e1bce4441b56263f51a19b05c8de20548`, created repo `main` SHA `20639517ee6eaeaae74bfae0f41f1bc8dc4d714f`. Initial job result `CREATED`, rerun result `RESUMED`, both PASS. No existing main merge or Vercel/Production change. Implementation/verification % `UNASSESSED` (denominator not established).
 
 ## Intended mobile-first operation
 
