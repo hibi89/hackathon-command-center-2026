@@ -118,7 +118,13 @@ const DISPATCH_BOT = "kmong-hub-dispatcher[bot]";
 // It is not an atomic distributed lock: simultaneous webhook requests may race.
 export function shouldCoalesceDispatch(payload, nowMs = Date.now()) {
   const runs = payload?.workflow_runs;
-  if (!Array.isArray(runs) || runs.length > 30 || !Number.isFinite(nowMs)) {
+  // GitHub's REST response includes total_count. A partial or malformed first
+  // page cannot establish the absence of a recent bot run: never dispatch.
+  const total = payload?.total_count;
+  if (!Array.isArray(runs) || runs.length > 30 ||
+      !Number.isSafeInteger(total) || total < runs.length ||
+      (runs.length < 30 && total !== runs.length) ||
+      !Number.isFinite(nowMs)) {
     throw new Error("invalid central workflow dispatch history");
   }
   const bucket = Math.floor(nowMs / DISPATCH_BUCKET_MS);
