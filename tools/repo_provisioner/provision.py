@@ -128,9 +128,19 @@ class GitHub:
 
 def put_new(client, name, branch, filename, data):
     path = f"/repos/{OWNER}/{urllib.parse.quote(name)}/contents/{filename}"
-    status, _ = client.api("GET", path)
+    status, existing = client.api("GET", path)
     if status == 200:
+        # A resumed request must not silently accept modified bootstrap documents.
+        # Existing content stays untouched; the mismatch requires manual review.
+        try:
+            current = base64.b64decode(existing["content"]).decode("utf-8")
+        except (KeyError, TypeError, ValueError, UnicodeError):
+            raise ProvisionError("existing bootstrap file unreadable: " + filename) from None
+        if current != data:
+            raise ProvisionError("existing bootstrap content conflict; preserved: " + filename)
         return "PRESERVED"
+    if status != 404:
+        raise ProvisionError("unexpected bootstrap lookup status: " + filename)
     status, _ = client.api("PUT", path, {
         "message": "docs(bootstrap): add " + filename,
         "content": base64.b64encode(data.encode()).decode(),
