@@ -1,4 +1,5 @@
 > **[OWNER-DEV-EXECUTION-V2 OVERRIDE | 2026-11-16]** [최신 사용자 확정 실행·모델 분담·부트스트랩 정본](OWNER_DEV_EXECUTION_CANONICAL_20261116.md): **웹 Sol High 최초설계/큐 → 웹 Sol Instant BE/FE 구현100% 후보 → 후행 전체 CI/수정 → Codex Sol Max+Astra Max 독립 검수 → 웹 Sol High 최종 인수 → OWNER GO 후 Codex Luna Extra High 등록.** 아래 문서의 기존 상충하는 모델 역할·중간 검수 시점·4개 슬롯 제한·매회 전체 CI 등은 **역사/이전 정책**으로 보존하며 더 이상 현행 일반 실행 지침으로 사용하지 않는다. 안전/기밀/권리/원본·상용 승인 조건은 유효.
+> **[OWNER-P1-BROWSER-DEFERRAL-20261117 | NEWER OVERRIDE]** [중앙 V2.1 §0B](OWNER_DEV_EXECUTION_CANONICAL_20261116.md): P1 구현완료율에는 실제 브라우저/Playwright E2E·화면 클릭/시각·반응형/a11y·로그인 검증을 포함하지 않는다. BE/FE 코드/연결·REQ/정확 SHA와 필수 문법/타입·국소·고위험 안전 검사로 구현 후보 판단. 외출 중 승인·OTP/브라우저 검증은 `DEFERRED_TO_P2`, 차단 작업 격리 후 독립 READY 계속. 실 브라우저/UX/전체 CI·회귀는 P2에 일괄. 기존 필수 CI·보안·권한 GO 불변.
 
 # High 설계 → Instant 고속 구현 → High 최종 인수 (2026-11-16)
 > 사용자 신규 운영 선택 / 정책: KMONG-HIGH-TO-INSTANT-V1 / `hibi89/hackathon-command-center-2026@kmong-productization`.
