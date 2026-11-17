@@ -35,6 +35,15 @@ def _unique_object_pairs(pairs):
     return obj
 
 
+def _decode_strict_json(contents):
+    try:
+        return json.loads(contents, object_pairs_hook=_unique_object_pairs)
+    except RecursionError:
+        # Deeply nested owner data must be a sanitized input error, not a CLI
+        # traceback or a guessed account verification result.
+        raise ValueError("JSON nesting limit exceeded") from None
+
+
 def blob_sha(contents):
     data = contents.encode("utf-8")
     return hashlib.sha1(b"blob " + str(len(data)).encode("ascii") + b"\0" + data).hexdigest()
@@ -42,8 +51,7 @@ def blob_sha(contents):
 
 def load_registry(path=CONFIG):
     """Public policy rules are version-pinned; never interpret malformed input."""
-    obj = json.loads(Path(path).read_text(encoding="utf-8"),
-                     object_pairs_hook=_unique_object_pairs)
+    obj = _decode_strict_json(Path(path).read_text(encoding="utf-8"))
     if (not isinstance(obj, dict) or type(obj.get("schema_version")) is not int
             or obj["schema_version"] != 1
             or not isinstance(obj.get("policy_id"), str)
@@ -105,7 +113,7 @@ def parse_snapshot(contents):
     """
     if len(contents) > 32768:
         raise ValueError("Instruction snapshot too large")
-    obj = json.loads(contents, object_pairs_hook=_unique_object_pairs)
+    obj = _decode_strict_json(contents)
     if (not isinstance(obj, dict) or type(obj.get("schema_version")) is not int
             or obj["schema_version"] != 1 or set(obj) != {"schema_version", "profiles"}):
         raise ValueError("Invalid instruction snapshot schema")
@@ -129,7 +137,12 @@ def parse_snapshot(contents):
 
 
 def load_snapshot(path):
-    return parse_snapshot(Path(path).read_bytes()) if path else None
+    if not path:
+        return None
+    # Read at most one byte beyond the public 32 KiB schema limit. Never load
+    # an arbitrary-sized owner-supplied file into memory before validating it.
+    with open(path, "rb") as stream:
+        return parse_snapshot(stream.read(32769))
 
 
 def load_env_snapshot():

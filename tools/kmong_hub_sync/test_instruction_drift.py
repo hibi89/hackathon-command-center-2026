@@ -138,6 +138,18 @@ class DriftTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             parse_snapshot(json.dumps(obj).encode())
 
+    def test_deep_snapshot_json_fails_with_sanitized_schema_error(self):
+        deeply_nested = ("[" * 1200 + "0" + "]" * 1200).encode("ascii")
+        with self.assertRaisesRegex(ValueError, "JSON nesting limit exceeded"):
+            parse_snapshot(deeply_nested)
+
+    def test_snapshot_file_read_is_bounded_by_schema_limit(self):
+        with TemporaryDirectory() as td:
+            path = Path(td) / "oversized.json"
+            path.write_bytes(b"x" * 65536)
+            with self.assertRaisesRegex(ValueError, "Instruction snapshot too large"):
+                load_snapshot(str(path))
+
     def test_valid_minimal_snapshot_and_partial_profile(self):
         obj = {"schema_version": 1, "profiles": {"chatgpt": {"rules": {"P2_OWNER": "legacy_owner"}}}}
         parsed = parse_snapshot(json.dumps(obj).encode("utf-8"))
