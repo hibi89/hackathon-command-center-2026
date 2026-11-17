@@ -156,6 +156,46 @@ class DriftTests(unittest.TestCase):
         self.assertEqual(report["profile_results"]["codex"]["status"], "SNAPSHOT_RULES_MATCH")
         self.assertFalse(report["profile_results"]["codex"]["account_settings_independently_verified"])
 
+    def test_summary_owner_checklist_is_explicitly_unverified(self):
+        registry = self.registry()
+        report = audit(registry, "latest")
+        summary = to_markdown(report, registry)
+        self.assertIn("소유자 수동 점검 목록", summary)
+        self.assertIn("P2_OWNER (chatgpt, codex)", summary)
+        self.assertIn("기대 규칙", summary)
+        self.assertIn("실제 계정 설정은 미조회", summary)
+
+    def test_summary_checklist_restricted_to_missing_rules(self):
+        registry = self.registry()
+        declaration = {"chatgpt": {"rules": {"P2_OWNER": "codex_sol_max"}},
+                       "codex": {"rules": {}}}
+        report = audit(registry, "latest", declaration)
+        summary = to_markdown(report, registry)
+        self.assertIn("P2_OWNER (codex)", summary)
+        self.assertNotIn("P2_OWNER (chatgpt, codex)", summary)
+        self.assertEqual(report["action"], "COMPLETE_OWNER_RULE_SNAPSHOT")
+
+    def test_summary_skips_checklist_when_snapshot_rules_match(self):
+        registry = self.registry()
+        declaration = {"chatgpt": {"rules": {"P2_OWNER": "codex_sol_max"}},
+                       "codex": {"rules": {"P2_OWNER": "codex_sol_max"}}}
+        report = audit(registry, "latest", declaration)
+        self.assertEqual(report["action"], "SNAPSHOT_RULES_MATCH_ACCOUNT_UNVERIFIED")
+        self.assertNotIn("소유자 수동 점검 목록", to_markdown(report, registry))
+
+    def test_summary_does_not_apply_stale_policy_checklist(self):
+        registry = self.registry()
+        report = audit(registry, "changed-policy")
+        self.assertEqual(report["action"], "UPDATE_RULE_BASELINE_AND_REVIEW_INSTRUCTIONS")
+        self.assertNotIn("소유자 수동 점검 목록", to_markdown(report, registry))
+
+    def test_conflict_action_prioritized_over_missing_snapshot(self):
+        registry = self.registry()
+        declaration = {"chatgpt": {"rules": {"P2_OWNER": "legacy_owner"}}}
+        report = audit(registry, "latest", declaration)
+        self.assertEqual(report["action"], "REVIEW_DECLARED_CONFLICTS")
+        self.assertNotIn("legacy_owner", to_markdown(report, registry))
+
     def test_summary_lists_missing_known_rule_ids_not_private_snapshot_values(self):
         report = audit(self.registry(), "latest", {"chatgpt": {"rules": {}}})
         summary = to_markdown(report)
