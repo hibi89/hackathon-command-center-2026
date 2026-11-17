@@ -16,6 +16,16 @@ POLICY_URL = ("https://raw.githubusercontent.com/hibi89/hackathon-command-center
 PROFILES = ("chatgpt", "codex")
 
 
+def _unique_object_pairs(pairs):
+    """Reject ambiguous duplicate JSON keys without exposing their values."""
+    obj = {}
+    for key, value in pairs:
+        if key in obj:
+            raise ValueError("Duplicate JSON object key")
+        obj[key] = value
+    return obj
+
+
 def blob_sha(contents):
     data = contents.encode("utf-8")
     return hashlib.sha1(b"blob " + str(len(data)).encode("ascii") + b"\0" + data).hexdigest()
@@ -23,18 +33,25 @@ def blob_sha(contents):
 
 def load_registry(path=CONFIG):
     """Public policy rules are version-pinned; never interpret malformed input."""
-    obj = json.loads(Path(path).read_text(encoding="utf-8"))
+    obj = json.loads(Path(path).read_text(encoding="utf-8"),
+                     object_pairs_hook=_unique_object_pairs)
     if (not isinstance(obj, dict) or type(obj.get("schema_version")) is not int
             or obj["schema_version"] != 1
             or not isinstance(obj.get("policy_id"), str)
             or not re.fullmatch(r"[A-Z][A-Z0-9_.-]{2,80}", obj["policy_id"])
             or not isinstance(obj.get("policy_blob_sha"), str)
             or not re.fullmatch(r"[a-f0-9]{40}", obj["policy_blob_sha"])
-            or not isinstance(obj.get("rules"), list) or not obj["rules"]):
+            or not isinstance(obj.get("rules"), list) or not obj["rules"]
+            or set(obj) - {"schema_version", "policy_id", "policy_path",
+                           "policy_blob_sha", "rules"}
+            or ("policy_path" in obj and
+                (not isinstance(obj["policy_path"], str)
+                 or not re.fullmatch(r"docs/strategy/[A-Z0-9_]+\.md", obj["policy_path"])))):
         raise ValueError("Invalid instruction alignment registry")
     keys = set()
     for rule in obj["rules"]:
-        if not isinstance(rule, dict):
+        if not isinstance(rule, dict) or set(rule) - {
+                "id", "expected", "applies_to", "recommendation", "policy_anchor"}:
             raise ValueError("Invalid alignment rule")
         applies = rule.get("applies_to")
         key = rule.get("id")
@@ -43,14 +60,14 @@ def load_registry(path=CONFIG):
         anchor = rule.get("policy_anchor")
         if (anchor is not None and
                 (not isinstance(anchor, str) or not 1 <= len(anchor) <= 240
-                 or any(ord(c) in (10, 13) for c in anchor))):
+                 or not anchor.isprintable())):
             raise ValueError("Invalid policy rule anchor")
         if (not isinstance(key, str) or not re.fullmatch(r"[A-Z][A-Z0-9_]{1,63}", key)
                 or not isinstance(expected, str)
                 or not re.fullmatch(r"[a-z][a-z0-9_]{0,63}", expected)
                 or not isinstance(recommendation, str)
                 or not 1 <= len(recommendation) <= 512
-                or any(ord(c) in (10, 13) for c in recommendation)
+                or not recommendation.isprintable()
                 or not isinstance(applies, list) or not applies
                 or any(not isinstance(p, str) or p not in PROFILES for p in applies)
                 or len(set(applies)) != len(applies)
@@ -80,7 +97,7 @@ def parse_snapshot(contents):
     """
     if len(contents) > 32768:
         raise ValueError("Instruction snapshot too large")
-    obj = json.loads(contents)
+    obj = json.loads(contents, object_pairs_hook=_unique_object_pairs)
     if (not isinstance(obj, dict) or type(obj.get("schema_version")) is not int
             or obj["schema_version"] != 1 or set(obj) != {"schema_version", "profiles"}):
         raise ValueError("Invalid instruction snapshot schema")

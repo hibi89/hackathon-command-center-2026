@@ -15,6 +15,50 @@ class DriftTests(unittest.TestCase):
                            "applies_to": ["chatgpt", "codex"],
                            "recommendation": "P2는 Codex Sol Max가 담당"}]}
 
+    def test_duplicate_snapshot_keys_fail_closed_at_every_depth(self):
+        samples = (
+            '{"schema_version":1,"schema_version":1,"profiles":{"chatgpt":{"rules":{}}}}',
+            '{"schema_version":1,"profiles":{"chatgpt":{"rules":{}},"chatgpt":{"rules":{}}}}',
+            '{"schema_version":1,"profiles":{"chatgpt":{"rules":{"P2_OWNER":"legacy","P2_OWNER":"codex_sol_max"}}}}',
+            '{"schema_version":1,"profiles":{"chatgpt":{"rules":{},"rules":{}}}}',
+        )
+        for sample in samples:
+            with self.subTest(sample=sample), self.assertRaisesRegex(
+                    ValueError, "Duplicate JSON object key"):
+                parse_snapshot(sample.encode("utf-8"))
+
+    def test_registry_rejects_duplicate_keys_and_unrecognized_fields(self):
+        with TemporaryDirectory() as td:
+            p = Path(td) / "rules.json"
+            original = (Path(__file__).parent / "instruction_alignment_rules.json").read_text(
+                encoding="utf-8")
+            p.write_text(original.replace('"schema_version": 1,',
+                                          '"schema_version": 1, "schema_version": 1,', 1),
+                         encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "Duplicate JSON object key"):
+                load_registry(p)
+            for extra_scope in ("top", "rule"):
+                obj = load_registry()
+                if extra_scope == "top":
+                    obj["unexpected_payload"] = "SYNTHETIC_TEST_VALUE"
+                else:
+                    obj["rules"][0]["unexpected_payload"] = "SYNTHETIC_TEST_VALUE"
+                p.write_text(json.dumps(obj), encoding="utf-8")
+                with self.subTest(extra_scope=extra_scope), self.assertRaises(ValueError):
+                    load_registry(p)
+
+    def test_registry_rejects_controls_in_public_guidance(self):
+        with TemporaryDirectory() as td:
+            p = Path(td) / "rules.json"
+            for field in ("policy_anchor", "recommendation"):
+                for control in (chr(27) + "[31m", chr(0x2028), chr(9)):
+                    obj = load_registry()
+                    obj["rules"][0][field] += control
+                    p.write_text(json.dumps(obj), encoding="utf-8")
+                    with self.subTest(field=field, control=repr(control)):
+                        with self.assertRaises(ValueError):
+                            load_registry(p)
+
     def test_missing_snapshot_generates_notice_not_false_conflict(self):
         report = audit(self.registry(), "latest")
         messages = annotation_messages(report)
