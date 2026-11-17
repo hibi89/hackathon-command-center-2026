@@ -128,12 +128,24 @@ export function shouldCoalesceDispatch(payload, nowMs = Date.now()) {
     throw new Error("invalid central workflow dispatch history");
   }
   const bucket = Math.floor(nowMs / DISPATCH_BUCKET_MS);
+  let previousCreated = Infinity;
   for (const run of runs) {
-    const created = Date.parse(run?.created_at);
-    if (!Number.isFinite(created) || created > nowMs + 60000) {
-      throw new Error("invalid central workflow run timestamp");
+    // A list filtered by workflow_dispatch must consist solely of full run
+    // records, newest first. Missing actors/events or unsorted pages make
+    // 'no prior bot run' unsafe; fail closed before any dispatch POST.
+    if (!run || typeof run !== "object" || Array.isArray(run) ||
+        run.event !== "workflow_dispatch" ||
+        typeof run.actor?.login !== "string" || !run.actor.login ||
+        typeof run.created_at !== "string") {
+      throw new Error("invalid central workflow dispatch record");
     }
-    if (run.event === "workflow_dispatch" && run.actor?.login === DISPATCH_BOT &&
+    const created = Date.parse(run.created_at);
+    if (!Number.isFinite(created) || created > nowMs + 60000 ||
+        created > previousCreated) {
+      throw new Error("invalid central workflow run timestamp or order");
+    }
+    previousCreated = created;
+    if (run.actor.login === DISPATCH_BOT &&
         run.conclusion !== "cancelled" && Math.floor(created / DISPATCH_BUCKET_MS) === bucket) {
       return true;
     }

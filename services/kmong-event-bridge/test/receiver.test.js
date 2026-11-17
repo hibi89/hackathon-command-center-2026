@@ -597,6 +597,31 @@ test("untracked hub ledger push is ignored irrespective of commit message", asyn
   }
 });
 
+test("malformed or unsorted webhook dispatch history fails closed", async () => {
+  const now = Date.parse("2026-11-14T03:01:00Z");
+  const valid = { event: "workflow_dispatch", actor: { login: "hibi89" },
+    created_at: "2026-11-14T02:59:59Z" };
+  const invalid = [
+    [{ ...valid, event: "schedule" }],
+    [{ ...valid, actor: null }],
+    [{ ...valid, actor: { login: 9 } }],
+    [{ ...valid, created_at: null }],
+    [valid, { ...valid, created_at: "2026-11-14T03:00:01Z" }],
+    [null],
+  ];
+  for (const rows of invalid) {
+    assert.throws(() => shouldCoalesceDispatch(
+      { total_count: rows.length, workflow_runs: rows }, now));
+  }
+  assert.equal(shouldCoalesceDispatch(
+    { total_count: 1, workflow_runs: [valid] }, now), false);
+  const { result, requests } = mockGitHub({ workflowRuns: [{ ...valid, actor: null }] });
+  const response = await receiveWebhook(incoming("push", payload()), env, result);
+  assert.equal(response.status, 502);
+  assert.equal((await response.json()).status, "dispatch_failed");
+  assert.equal(requests.length, 3);
+});
+
 test("GitHub history GET failure stops dispatch fail-closed", async () => {
   const { result, requests } = mockGitHub({ errorAt: 3 });
   const response = await receiveWebhook(incoming("push", payload()), env, result);

@@ -54,6 +54,12 @@ def bot_is_first_eligible_run(payload, current_run_id):
     if not str(current_run_id).isdigit():
         raise GuardError("invalid current workflow run id")
     runs = payload["workflow_runs"]
+    total = payload.get("total_count")
+    # Missing/partial history must defer the scan: a bot run could be hidden
+    # from the short page, even if the current run is present.
+    if (type(total) is not int or len(runs) > 100 or total < len(runs)
+            or (len(runs) < 100 and total != len(runs))):
+        return None
     own = next((r for r in runs if isinstance(r, dict) and r.get("id") == int(current_run_id)), None)
     if own is None:
         # A busy/lagged GitHub first page cannot prove this run is first.
@@ -61,17 +67,27 @@ def bot_is_first_eligible_run(payload, current_run_id):
         return None
     if own.get("event") != "workflow_dispatch":
         raise GuardError("unexpected current workflow event")
-    if own.get("actor", {}).get("login") != BOT_ACTOR:
+    if not isinstance(own.get("actor"), dict) or own["actor"].get("login") != BOT_ACTOR:
         raise GuardError("unexpected bot dispatch actor")
     own_bucket = utc_epoch(own.get("created_at")) // BURST_WINDOW_SECONDS
     for prior in runs:
-        if (not isinstance(prior, dict) or prior.get("event") != "workflow_dispatch"
-                or prior.get("actor", {}).get("login") != BOT_ACTOR
-                or prior.get("conclusion") == "cancelled"
+        # Ignore only *verified* unrelated actors, not malformed history rows
+        # whose identity/event/timestamp are unknown.
+        if (not isinstance(prior, dict)
                 or type(prior.get("id")) is not int
-                or prior["id"] >= int(current_run_id)):
-            continue
-        if utc_epoch(prior.get("created_at")) // BURST_WINDOW_SECONDS == own_bucket:
+                or prior["id"] < 1 or prior.get("event") != "workflow_dispatch"
+                or not isinstance(prior.get("actor"), dict)
+                or not isinstance(prior["actor"].get("login"), str)
+                or not prior["actor"]["login"]):
+            return None
+        try:
+            prior_bucket = utc_epoch(prior.get("created_at")) // BURST_WINDOW_SECONDS
+        except GuardError:
+            return None
+        if (prior["actor"]["login"] == BOT_ACTOR
+                and prior.get("conclusion") != "cancelled"
+                and prior["id"] < int(current_run_id)
+                and prior_bucket == own_bucket):
             return False
     # If 100 runs filled the API page within one bucket, do not assert uniqueness.
     if len(runs) == 100 and utc_epoch(runs[-1].get("created_at")) // BURST_WINDOW_SECONDS >= own_bucket:

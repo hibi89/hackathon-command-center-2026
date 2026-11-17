@@ -13,6 +13,10 @@ def run(number, created, actor=BOT_ACTOR, conclusion=None):
             "conclusion": conclusion}
 
 
+def history(rows, total=None):
+    return {"workflow_runs": rows, "total_count": len(rows) if total is None else total}
+
+
 class QuotaGuardTests(unittest.TestCase):
     def test_rate_budget_valid(self):
         self.assertEqual(core_budget({"resources": {"core": {"remaining": 500, "reset": 1795000000}}}), (500, 1795000000))
@@ -32,34 +36,34 @@ class QuotaGuardTests(unittest.TestCase):
         self.assertEqual(decide(800, "workflow_dispatch", "hibi89"), "RUN")
 
     def test_bot_first_run_in_fixed_bucket_allowed(self):
-        payload = {"workflow_runs": [run(101, "2026-11-14T02:05:10Z"),
-                                     run(100, "2026-11-14T01:59:59Z")]}
+        payload = history([run(101, "2026-11-14T02:05:10Z"),
+                           run(100, "2026-11-14T01:59:59Z")])
         self.assertTrue(bot_is_first_eligible_run(payload, 101))
         self.assertEqual(decide(800, "workflow_dispatch", BOT_ACTOR, 101, payload), "RUN")
 
     def test_bot_burst_second_run_deferred(self):
-        payload = {"workflow_runs": [run(102, "2026-11-14T02:08:00Z"),
-                                     run(101, "2026-11-14T02:05:10Z")]}
+        payload = history([run(102, "2026-11-14T02:08:00Z"),
+                           run(101, "2026-11-14T02:05:10Z")])
         self.assertFalse(bot_is_first_eligible_run(payload, 102))
         self.assertEqual(decide(800, "workflow_dispatch", BOT_ACTOR, 102, payload), "DEFERRED_BOT_BURST")
 
     def test_new_bucket_can_run(self):
-        payload = {"workflow_runs": [run(103, "2026-11-14T02:30:00Z"),
-                                     run(102, "2026-11-14T02:29:59Z")]}
+        payload = history([run(103, "2026-11-14T02:30:00Z"),
+                           run(102, "2026-11-14T02:29:59Z")])
         self.assertTrue(bot_is_first_eligible_run(payload, 103))
 
     def test_cancelled_prior_does_not_starve_new_run(self):
-        payload = {"workflow_runs": [run(102, "2026-11-14T02:08:00Z"),
-                                     run(101, "2026-11-14T02:05:10Z", conclusion="cancelled")]}
+        payload = history([run(102, "2026-11-14T02:08:00Z"),
+                           run(101, "2026-11-14T02:05:10Z", conclusion="cancelled")])
         self.assertTrue(bot_is_first_eligible_run(payload, 102))
 
     def test_untrusted_actor_not_used_as_bot_reference(self):
-        payload = {"workflow_runs": [run(102, "2026-11-14T02:08:00Z"),
-                                     run(101, "2026-11-14T02:05:10Z", actor="someone-else")]}
+        payload = history([run(102, "2026-11-14T02:08:00Z"),
+                           run(101, "2026-11-14T02:05:10Z", actor="someone-else")])
         self.assertTrue(bot_is_first_eligible_run(payload, 102))
 
     def test_missing_current_run_deferred_without_false_success(self):
-        payload = {"workflow_runs": [run(101, "2026-11-14T02:05:10Z")]}
+        payload = history([run(101, "2026-11-14T02:05:10Z")])
         self.assertIsNone(bot_is_first_eligible_run(payload, 102))
         self.assertEqual(
             decide(800, "workflow_dispatch", BOT_ACTOR, 102, payload),
@@ -68,14 +72,43 @@ class QuotaGuardTests(unittest.TestCase):
 
     def test_capped_history_missing_current_run_deferred(self):
         # Simulate the exact live failure: first 100 are newer than this run.
-        payload = {"workflow_runs": [
+        payload = history([
             run(500 - i, "2026-11-14T05:03:40Z") for i in range(100)
-        ]}
+        ])
         self.assertIsNone(bot_is_first_eligible_run(payload, 399))
         self.assertEqual(
             decide(800, "workflow_dispatch", BOT_ACTOR, 399, payload),
             "DEFERRED_BOT_HISTORY_UNVERIFIED",
         )
+
+    def test_truncated_or_ambiguous_history_defers(self):
+        current = run(102, "2026-11-14T02:08:00Z")
+        for payload in (
+            {"workflow_runs": [current]},
+            history([current], total=2),
+            history([current], total=0),
+            {"workflow_runs": [current], "total_count": "1"},
+        ):
+            with self.subTest(payload=payload):
+                self.assertIsNone(bot_is_first_eligible_run(payload, 102))
+                self.assertEqual(decide(800, "workflow_dispatch", BOT_ACTOR, 102, payload),
+                                 "DEFERRED_BOT_HISTORY_UNVERIFIED")
+
+    def test_malformed_prior_run_cannot_authorize_scan(self):
+        current = run(102, "2026-11-14T02:08:00Z")
+        for malformed in (
+            {"id": 101, "event": "workflow_dispatch", "actor": None,
+             "created_at": "2026-11-14T02:05:10Z"},
+            {"id": 101, "event": "schedule", "actor": {"login": "someone"},
+             "created_at": "2026-11-14T02:05:10Z"},
+            {"id": 101, "event": "workflow_dispatch", "actor": {"login": BOT_ACTOR},
+             "created_at": "not-a-date"},
+            None,
+        ):
+            with self.subTest(malformed=malformed):
+                payload = history([current, malformed])
+                self.assertEqual(decide(800, "workflow_dispatch", BOT_ACTOR, 102, payload),
+                                 "DEFERRED_BOT_HISTORY_UNVERIFIED")
 
     def test_missing_history_also_defers(self):
         self.assertEqual(
@@ -84,13 +117,13 @@ class QuotaGuardTests(unittest.TestCase):
         )
 
     def test_present_run_wrong_actor_or_event_still_rejected(self):
-        bad_actor = {"workflow_runs": [run(102, "2026-11-14T02:05:10Z", actor="other")]}
+        bad_actor = history([run(102, "2026-11-14T02:05:10Z", actor="other")])
         with self.assertRaises(GuardError):
             bot_is_first_eligible_run(bad_actor, 102)
         wrong_event = run(102, "2026-11-14T02:05:10Z")
         wrong_event["event"] = "schedule"
         with self.assertRaises(GuardError):
-            bot_is_first_eligible_run({"workflow_runs": [wrong_event]}, 102)
+            bot_is_first_eligible_run(history([wrong_event]), 102)
 
     def test_invalid_timestamps_fail_closed(self):
         for x in ("2026-11-14T02:05:10", "not-time", None):
