@@ -168,8 +168,8 @@ def input_error_note(summary_path):
     print(message)
     if summary_path:
         with open(summary_path, "a", encoding="utf-8") as stream:
-            stream.write("### Instruction advisory: NOT_EVALUATED_INPUT_ERROR\\n"
-                         "- Policy/account comparison was skipped. Check the non-sensitive rule format without pasting secret values into logs.\\n")
+            stream.write("### Instruction advisory: NOT_EVALUATED_INPUT_ERROR\n"
+                         "- Policy/account comparison was skipped. Check the non-sensitive rule format without pasting secret values into logs.\n")
 
 
 def main():
