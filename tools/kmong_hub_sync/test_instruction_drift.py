@@ -2,7 +2,7 @@ import json
 import os
 import unittest
 from unittest.mock import patch
-from instruction_drift import audit, blob_sha, to_markdown, load_snapshot, load_registry, load_env_snapshot, annotation_messages, input_error_note
+from instruction_drift import audit, blob_sha, to_markdown, load_snapshot, load_registry, load_env_snapshot, annotation_messages, input_error_note, parse_snapshot
 from pathlib import Path
 from tempfile import TemporaryDirectory
 
@@ -61,6 +61,64 @@ class DriftTests(unittest.TestCase):
             self.assertIn("NOT_EVALUATED_INPUT_ERROR", summary)
             self.assertEqual(len(summary.splitlines()), 2)
             self.assertNotIn("rule_snapshot_raw", b.getvalue() + summary)
+
+    def test_malformed_snapshot_top_level_types_fail_closed(self):
+        for invalid in (b"null", b"[]", b"true", b'"raw private instruction text"',
+                        b'{"schema_version":true,"profiles":{"chatgpt":{"rules":{}}}}'):
+            with self.subTest(invalid=invalid), self.assertRaises(ValueError):
+                parse_snapshot(invalid)
+
+    def test_malformed_snapshot_profile_shapes_fail_closed(self):
+        samples = (
+            {"schema_version": 1, "profiles": []},
+            {"schema_version": 1, "profiles": {}},
+            {"schema_version": 1, "profiles": ["chatgpt"]},
+            {"schema_version": 1, "profiles": {"chatgpt": []}},
+            {"schema_version": 1, "profiles": {"chatgpt": {"rules": []}}},
+            {"schema_version": 1, "profiles": {"chatgpt": {"rules": {"P2_OWNER": None}}}},
+            {"schema_version": 1, "profiles": {"chatgpt": {"rules": {"P2_OWNER": 1}}}},
+            {"schema_version": 1, "profiles": {"chatgpt": {"rules": {"P2_OWNER": "raw personal information with spaces"}}}},
+            {"schema_version": 1, "profiles": {"chatgpt": {"rules": {"P2_OWNER": "x" * 65}}}},
+            {"schema_version": 1, "profiles": {"chatgpt": {"rules": {}}, "profile_text": "sensitive"}},
+            {"schema_version": 1, "profiles": {"chatgpt": {"rules": {}, "raw_instructions": "PRIVATE"}}},
+            {"schema_version": 1, "profiles": {"chatgpt": {"rules": {"P2 OWNER": "valid"}}}},
+        )
+        for obj in samples:
+            with self.subTest(obj_type=type(obj.get("profiles")).__name__, obj=str(obj)[:120]):
+                with self.assertRaises(ValueError):
+                    parse_snapshot(json.dumps(obj).encode("utf-8"))
+
+    def test_malformed_snapshot_extra_top_level_field_rejected(self):
+        obj = {"schema_version": 1, "profiles": {"chatgpt": {"rules": {}}},
+               "raw_account_text": "do not send"}
+        with self.assertRaises(ValueError):
+            parse_snapshot(json.dumps(obj).encode())
+
+    def test_valid_minimal_snapshot_and_partial_profile(self):
+        obj = {"schema_version": 1, "profiles": {"chatgpt": {"rules": {"P2_OWNER": "legacy_owner"}}}}
+        parsed = parse_snapshot(json.dumps(obj).encode("utf-8"))
+        self.assertEqual(parsed["chatgpt"]["rules"]["P2_OWNER"], "legacy_owner")
+
+    def test_registry_rejects_multiline_and_duplicate_public_rules(self):
+        with TemporaryDirectory() as td:
+            p = Path(td) / "rules.json"
+            for mutation in ("newline", "duplicate", "sha", "list", "empty", "bad_id"):
+                obj = load_registry()
+                if mutation == "newline":
+                    obj["rules"][0]["recommendation"] += chr(10) + "unauthorized"
+                elif mutation == "duplicate":
+                    obj["rules"].append(dict(obj["rules"][0]))
+                elif mutation == "sha":
+                    obj["policy_blob_sha"] = "0" * 39
+                elif mutation == "list":
+                    obj["rules"][0]["applies_to"] = ["chatgpt", "chatgpt"]
+                elif mutation == "empty":
+                    obj["rules"] = []
+                else:
+                    obj["rules"][0]["id"] = "id with spaces"
+                p.write_text(json.dumps(obj), encoding="utf-8")
+                with self.subTest(mutation=mutation), self.assertRaises(ValueError):
+                    load_registry(p)
 
     def test_registry_has_public_rules(self):
         self.assertEqual(len(load_registry()["rules"]), 10)
