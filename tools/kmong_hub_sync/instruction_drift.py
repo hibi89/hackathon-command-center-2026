@@ -21,12 +21,14 @@ def blob_sha(contents):
 
 def load_registry(path=CONFIG):
     obj = json.loads(Path(path).read_text(encoding="utf-8"))
-    if (obj.get("schema_version") != 1 or not isinstance(obj.get("policy_id"), str)
+    if (not isinstance(obj, dict) or obj.get("schema_version") != 1 or not isinstance(obj.get("policy_id"), str)
             or not isinstance(obj.get("policy_blob_sha"), str)
             or not isinstance(obj.get("rules"), list)):
         raise ValueError("Invalid instruction alignment registry")
     keys = set()
     for rule in obj["rules"]:
+        if not isinstance(rule, dict):
+            raise ValueError("Invalid alignment rule")
         applies = rule.get("applies_to", [])
         if (not isinstance(rule, dict) or not isinstance(rule.get("id"), str)
                 or not isinstance(rule.get("expected"), str)
