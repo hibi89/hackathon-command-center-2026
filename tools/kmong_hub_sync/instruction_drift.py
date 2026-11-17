@@ -40,6 +40,11 @@ def load_registry(path=CONFIG):
         key = rule.get("id")
         expected = rule.get("expected")
         recommendation = rule.get("recommendation")
+        anchor = rule.get("policy_anchor")
+        if (anchor is not None and
+                (not isinstance(anchor, str) or not 1 <= len(anchor) <= 240
+                 or any(ord(c) in (10, 13) for c in anchor))):
+            raise ValueError("Invalid policy rule anchor")
         if (not isinstance(key, str) or not re.fullmatch(r"[A-Z][A-Z0-9_]{1,63}", key)
                 or not isinstance(expected, str)
                 or not re.fullmatch(r"[a-z][a-z0-9_]{0,63}", expected)
@@ -112,6 +117,12 @@ def audit(registry, source, snapshots=None):
     source_sha = blob_sha(source) if source is not None else None
     source_status = ("UNAVAILABLE" if source is None else
                      "CURRENT" if source_sha == expected_sha else "CHANGED_REVIEW_REQUIRED")
+    # Anchors locate obvious rule changes; their presence never proves semantic equivalence.
+    missing_anchors = ([rule["id"] for rule in registry["rules"]
+                        if rule.get("policy_anchor") and source is not None
+                        and rule["policy_anchor"] not in source])
+    if source_status == "CURRENT" and missing_anchors:
+        source_status = "RULE_ANCHOR_MISMATCH"
     by_profile = {}
     for name in PROFILES:
         if source_status != "CURRENT":
@@ -146,9 +157,11 @@ def audit(registry, source, snapshots=None):
         "policy_source_status": source_status,
         "expected_policy_blob_sha": expected_sha,
         "observed_policy_blob_sha": source_sha,
+        "potential_rule_review_ids": missing_anchors,
         "profile_results": by_profile,
         "actual_account_settings_access": "UNAVAILABLE",
         "action": ("UPDATE_RULE_BASELINE_AND_REVIEW_INSTRUCTIONS" if source_status == "CHANGED_REVIEW_REQUIRED"
+                   else "REVIEW_RULE_ANCHOR_MISMATCH" if source_status == "RULE_ANCHOR_MISMATCH"
                    else "RETRY_POLICY_SOURCE" if source_status == "UNAVAILABLE"
                    else "REVIEW_DECLARED_CONFLICTS" if any(v["status"] == "DECLARED_CONFLICT" for v in by_profile.values())
                    else "COMPLETE_OWNER_RULE_SNAPSHOT" if any(v["status"] == "INCOMPLETE_SNAPSHOT" for v in by_profile.values())
@@ -163,6 +176,13 @@ def to_markdown(report, registry=None):
             f"- 정책 정본: `{report['policy_id']}` / 원격 상태: `{report['policy_source_status']}`",
             f"- 실제 계정 설정 직접 읽기: `{report['actual_account_settings_access']}`",
             f"- 권고: `{report['action']}`"]
+    if report["policy_source_status"] != "CURRENT":
+        candidates = report.get("potential_rule_review_ids", [])
+        rows.append("- 원격 정본 변경/조회 실패 상태에서는 계정 지침 일치를 판정하지 않습니다.")
+        if candidates:
+            rows.append("- 우선 재검토할 공개 규칙 ID: " +
+                        ", ".join("`" + key + "`" for key in candidates))
+        rows.append("- **앵커 검사는 보조 신호일 뿐입니다.** 누락된 앵커가 없어도 정책 문구가 변경되었다면 모든 관련 규칙을 수동 검토하세요.")
     for name, item in report["profile_results"].items():
         rows.append(f"- {name}: `{item['status']}`; 충돌 규칙: "
                     + (", ".join(f"`{v}`" for v in item["conflicts"]) or "없음/미확인"))
@@ -200,6 +220,8 @@ def to_markdown(report, registry=None):
 def annotation_messages(report):
     """Sanitized, actionable Actions annotations; never include supplied rule values."""
     status = report["policy_source_status"]
+    if status == "RULE_ANCHOR_MISMATCH":
+        return ["::warning title=Instruction policy registry mismatch::Expected public rule anchors do not match the pinned policy; no account check was made"]
     if status != "CURRENT":
         return ["::warning title=Instruction policy review::Canonical policy changed or is unavailable; review rule baseline before comparing account settings"]
     profiles = report["profile_results"]
