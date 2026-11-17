@@ -45,7 +45,7 @@ def load_registry(path=CONFIG):
                 or not re.fullmatch(r"[a-z][a-z0-9_]{0,63}", expected)
                 or not isinstance(recommendation, str)
                 or not 1 <= len(recommendation) <= 512
-                or any(c in recommendation for c in "\\r\\n")
+                or any(ord(c) in (10, 13) for c in recommendation)
                 or not isinstance(applies, list) or not applies
                 or any(not isinstance(p, str) or p not in PROFILES for p in applies)
                 or len(set(applies)) != len(applies)
