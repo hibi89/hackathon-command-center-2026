@@ -131,6 +131,50 @@ class DriftTests(unittest.TestCase):
         self.assertEqual(report["profile_results"]["chatgpt"]["status"], "NOT_VERIFIED_NO_SNAPSHOT")
         self.assertEqual(report["profile_results"]["codex"]["status"], "NOT_VERIFIED_NO_SNAPSHOT")
 
+    def test_policy_rule_anchor_present_has_no_candidates(self):
+        registry = self.registry()
+        registry["rules"][0]["policy_anchor"] = "latest"
+        report = audit(registry, "latest")
+        self.assertEqual(report["policy_source_status"], "CURRENT")
+        self.assertEqual(report["potential_rule_review_ids"], [])
+
+    def test_policy_change_missing_anchor_flags_candidate_and_never_verifies(self):
+        registry = self.registry()
+        registry["rules"][0]["policy_anchor"] = "latest"
+        report = audit(registry, "changed", {"codex": {"rules": {"P2_OWNER": "codex_sol_max"}}})
+        self.assertEqual(report["policy_source_status"], "CHANGED_REVIEW_REQUIRED")
+        self.assertEqual(report["potential_rule_review_ids"], ["P2_OWNER"])
+        self.assertEqual(report["profile_results"]["codex"]["status"], "NOT_EVALUATED_POLICY_UNCURRENT")
+        self.assertIn("P2_OWNER", to_markdown(report, registry))
+        self.assertIn("앵커 검사는 보조 신호", to_markdown(report, registry))
+
+    def test_policy_change_with_anchor_still_requires_manual_review(self):
+        registry = self.registry()
+        registry["rules"][0]["policy_anchor"] = "unchanged_anchor"
+        report = audit(registry, "changed unchanged_anchor")
+        self.assertEqual(report["policy_source_status"], "CHANGED_REVIEW_REQUIRED")
+        self.assertEqual(report["potential_rule_review_ids"], [])
+        self.assertIn("모든 관련 규칙을 수동 검토", to_markdown(report, registry))
+
+    def test_policy_current_with_missing_anchor_is_not_misreported_match(self):
+        registry = self.registry()
+        registry["rules"][0]["policy_anchor"] = "not_in_latest"
+        report = audit(registry, "latest", {"codex": {"rules": {"P2_OWNER": "codex_sol_max"}}})
+        self.assertEqual(report["policy_source_status"], "RULE_ANCHOR_MISMATCH")
+        self.assertEqual(report["action"], "REVIEW_RULE_ANCHOR_MISMATCH")
+        self.assertEqual(report["profile_results"]["codex"]["status"], "NOT_EVALUATED_POLICY_UNCURRENT")
+        self.assertTrue(any("registry mismatch" in x for x in annotation_messages(report)))
+
+    def test_registry_rejects_invalid_rule_anchor(self):
+        with TemporaryDirectory() as td:
+            p = Path(td) / "rules.json"
+            for invalid in (123, [], "", "x" * 241, "a" + chr(10) + "b"):
+                obj = load_registry()
+                obj["rules"][0]["policy_anchor"] = invalid
+                p.write_text(json.dumps(obj), encoding="utf-8")
+                with self.subTest(anchor_type=type(invalid).__name__), self.assertRaises(ValueError):
+                    load_registry(p)
+
     def test_policy_change_detected(self):
         self.assertEqual(audit(self.registry(), "different")["policy_source_status"], "CHANGED_REVIEW_REQUIRED")
 
