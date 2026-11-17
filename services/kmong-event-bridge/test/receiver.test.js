@@ -52,7 +52,10 @@ function mockGitHub(overrides = {}) {
         token: "fake-one-hour-token",
         repositories: [{ full_name: HUB_REPO }],
         permissions: { actions: overrides.actions || "write" },
-      } : counter === 3 ? { workflow_runs: overrides.workflowRuns ?? [] } : null;
+      } : counter === 3 ? {
+        total_count: overrides.totalCount ?? (overrides.workflowRuns ?? []).length,
+        workflow_runs: overrides.workflowRuns ?? [],
+      } : null;
     return new Response(body === null ? null : JSON.stringify(body), {
       status: code, headers: body ? { "content-type": "application/json" } : {},
     });
@@ -536,12 +539,12 @@ test("fixed 30-minute UTC buckets match the existing collector burst guard", () 
   const nowMs = Date.parse("2026-11-14T03:01:00Z");
   const bot = (date) => ({ event: "workflow_dispatch", actor: { login: "kmong-hub-dispatcher[bot]" },
     created_at: date });
-  assert.equal(shouldCoalesceDispatch({ workflow_runs: [bot("2026-11-14T03:00:00Z")] }, nowMs), true);
-  assert.equal(shouldCoalesceDispatch({ workflow_runs: [bot("2026-11-14T02:59:59Z")] }, nowMs), false);
-  assert.equal(shouldCoalesceDispatch({ workflow_runs: [] }, nowMs), false);
-  assert.throws(() => shouldCoalesceDispatch({ workflow_runs: "unexpected" }, nowMs));
-  assert.throws(() => shouldCoalesceDispatch({ workflow_runs: [bot("not-a-date")] }, nowMs));
-  assert.throws(() => shouldCoalesceDispatch({ workflow_runs: [bot("2026-11-14T03:10:00Z")] }, nowMs));
+  assert.equal(shouldCoalesceDispatch({ total_count: 1, workflow_runs: [bot("2026-11-14T03:00:00Z")] }, nowMs), true);
+  assert.equal(shouldCoalesceDispatch({ total_count: 1, workflow_runs: [bot("2026-11-14T02:59:59Z")] }, nowMs), false);
+  assert.equal(shouldCoalesceDispatch({ total_count: 0, workflow_runs: [] }, nowMs), false);
+  assert.throws(() => shouldCoalesceDispatch({ total_count: 0, workflow_runs: "unexpected" }, nowMs));
+  assert.throws(() => shouldCoalesceDispatch({ total_count: 1, workflow_runs: [bot("not-a-date")] }, nowMs));
+  assert.throws(() => shouldCoalesceDispatch({ total_count: 1, workflow_runs: [bot("2026-11-14T03:10:00Z")] }, nowMs));
 });
 
 test("ambiguous full GitHub history page fails closed to prevent bot burst", () => {
@@ -550,7 +553,73 @@ test("ambiguous full GitHub history page fails closed to prevent bot burst", () 
     event: "workflow_dispatch", actor: { login: "hibi89" },
     created_at: "2026-11-14T03:00:30Z", id: n + 1,
   }));
-  assert.equal(shouldCoalesceDispatch({ workflow_runs: page }, nowMs), true);
+  assert.equal(shouldCoalesceDispatch({ total_count: 50, workflow_runs: page }, nowMs), true);
+});
+
+test("malformed or partial GitHub history never authorizes dispatch", async () => {
+  const nowMs = Date.parse("2026-11-14T03:01:00Z");
+  const other = { event: "workflow_dispatch", actor: { login: "hibi89" },
+    created_at: "2026-11-14T02:59:59Z" };
+  for (const history of [
+    { workflow_runs: [] },
+    { total_count: 2, workflow_runs: [other] },
+    { total_count: 0, workflow_runs: [other] },
+    { total_count: "1", workflow_runs: [other] },
+    { total_count: -1, workflow_runs: [] },
+  ]) {
+    assert.throws(() => shouldCoalesceDispatch(history, nowMs),
+      /invalid central workflow dispatch history/);
+  }
+  // A complete short page still authorizes the normal no-duplicate path.
+  assert.equal(shouldCoalesceDispatch({ total_count: 1, workflow_runs: [other] }, nowMs), false);
+  const { result, requests } = mockGitHub({ workflowRuns: [other], totalCount: 2 });
+  const response = await receiveWebhook(incoming("push", payload()), env, result);
+  assert.equal(response.status, 502);
+  assert.equal((await response.json()).status, "dispatch_failed");
+  assert.equal(requests.length, 3);
+});
+
+test("untracked hub ledger push is ignored irrespective of commit message", async () => {
+  for (const message of [
+    "chore(kmong): refresh read-only GitHub evidence snapshot [skip ci]",
+    "docs: incident recovery",
+    "feat: other unrelated changes",
+    "",
+  ]) {
+    const p = payload(HUB_REPO, "kmong-productization");
+    p.head_commit.message = message;
+    assert.equal(eligibleEvent("push", p), false);
+    const { result, requests } = mockGitHub();
+    const response = await receiveWebhook(incoming("push", p), env, result);
+    assert.equal(response.status, 202);
+    assert.equal((await response.json()).status, "ignored");
+    assert.equal(requests.length, 0);
+  }
+});
+
+test("malformed or unsorted webhook dispatch history fails closed", async () => {
+  const now = Date.parse("2026-11-14T03:01:00Z");
+  const valid = { event: "workflow_dispatch", actor: { login: "hibi89" },
+    created_at: "2026-11-14T02:59:59Z" };
+  const invalid = [
+    [{ ...valid, event: "schedule" }],
+    [{ ...valid, actor: null }],
+    [{ ...valid, actor: { login: 9 } }],
+    [{ ...valid, created_at: null }],
+    [valid, { ...valid, created_at: "2026-11-14T03:00:01Z" }],
+    [null],
+  ];
+  for (const rows of invalid) {
+    assert.throws(() => shouldCoalesceDispatch(
+      { total_count: rows.length, workflow_runs: rows }, now));
+  }
+  assert.equal(shouldCoalesceDispatch(
+    { total_count: 1, workflow_runs: [valid] }, now), false);
+  const { result, requests } = mockGitHub({ workflowRuns: [{ ...valid, actor: null }] });
+  const response = await receiveWebhook(incoming("push", payload()), env, result);
+  assert.equal(response.status, 502);
+  assert.equal((await response.json()).status, "dispatch_failed");
+  assert.equal(requests.length, 3);
 });
 
 test("GitHub history GET failure stops dispatch fail-closed", async () => {

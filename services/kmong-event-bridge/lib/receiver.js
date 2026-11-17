@@ -118,16 +118,34 @@ const DISPATCH_BOT = "kmong-hub-dispatcher[bot]";
 // It is not an atomic distributed lock: simultaneous webhook requests may race.
 export function shouldCoalesceDispatch(payload, nowMs = Date.now()) {
   const runs = payload?.workflow_runs;
-  if (!Array.isArray(runs) || runs.length > 30 || !Number.isFinite(nowMs)) {
+  // GitHub's REST response includes total_count. A partial or malformed first
+  // page cannot establish the absence of a recent bot run: never dispatch.
+  const total = payload?.total_count;
+  if (!Array.isArray(runs) || runs.length > 30 ||
+      !Number.isSafeInteger(total) || total < runs.length ||
+      (runs.length < 30 && total !== runs.length) ||
+      !Number.isFinite(nowMs)) {
     throw new Error("invalid central workflow dispatch history");
   }
   const bucket = Math.floor(nowMs / DISPATCH_BUCKET_MS);
+  let previousCreated = Infinity;
   for (const run of runs) {
-    const created = Date.parse(run?.created_at);
-    if (!Number.isFinite(created) || created > nowMs + 60000) {
-      throw new Error("invalid central workflow run timestamp");
+    // A list filtered by workflow_dispatch must consist solely of full run
+    // records, newest first. Missing actors/events or unsorted pages make
+    // 'no prior bot run' unsafe; fail closed before any dispatch POST.
+    if (!run || typeof run !== "object" || Array.isArray(run) ||
+        run.event !== "workflow_dispatch" ||
+        typeof run.actor?.login !== "string" || !run.actor.login ||
+        typeof run.created_at !== "string") {
+      throw new Error("invalid central workflow dispatch record");
     }
-    if (run.event === "workflow_dispatch" && run.actor?.login === DISPATCH_BOT &&
+    const created = Date.parse(run.created_at);
+    if (!Number.isFinite(created) || created > nowMs + 60000 ||
+        created > previousCreated) {
+      throw new Error("invalid central workflow run timestamp or order");
+    }
+    previousCreated = created;
+    if (run.actor.login === DISPATCH_BOT &&
         run.conclusion !== "cancelled" && Math.floor(created / DISPATCH_BUCKET_MS) === bucket) {
       return true;
     }
