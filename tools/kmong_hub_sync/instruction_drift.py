@@ -34,8 +34,9 @@ def load_registry(path=CONFIG):
         if (not isinstance(rule, dict) or not isinstance(rule.get("id"), str)
                 or not isinstance(rule.get("expected"), str)
                 or not isinstance(rule.get("recommendation"), str)
-                or not isinstance(applies, list) or not set(applies) <= set(PROFILES)
-                or rule["id"] in keys):
+                or not isinstance(applies, list)
+                or not all(isinstance(value, str) and value in PROFILES for value in applies)
+                or not applies or rule["id"] in keys):
             raise ValueError("Invalid or duplicate alignment rule")
         keys.add(rule["id"])
     return obj
@@ -139,6 +140,32 @@ def to_markdown(report):
     return "\n".join(rows) + "\n"
 
 
+def annotation_messages(report):
+    """Sanitized, actionable Actions annotations; never include supplied rule values."""
+    status = report["policy_source_status"]
+    if status != "CURRENT":
+        return ["::warning title=Instruction policy review::Canonical policy changed or is unavailable; review rule baseline before comparing account settings"]
+    profiles = report["profile_results"]
+    messages = []
+    if any(profile["status"] == "DECLARED_CONFLICT" for profile in profiles.values()):
+        messages.append("::warning title=Instruction alignment recommendation::Declared instruction rule conflicts exist; see the job summary for fixed replacement guidance")
+    if any(profile["status"] == "INCOMPLETE_SNAPSHOT" for profile in profiles.values()):
+        messages.append("::notice title=Instruction comparison incomplete::One or more declared rules are missing from the provided snapshot")
+    if any(profile["status"] == "NOT_VERIFIED_NO_SNAPSHOT" for profile in profiles.values()):
+        messages.append("::notice title=Personal instruction verification pending::Current ChatGPT or Codex account instructions cannot be read; owner-supplied non-sensitive rule snapshot is needed")
+    return messages
+
+
+def input_error_note(summary_path):
+    """Never reflect untrusted secret input in annotations or job summaries."""
+    message = "::warning title=Instruction advisory input error::Invalid policy rule registry or owner snapshot; no account settings were checked"
+    print(message)
+    if summary_path:
+        with open(summary_path, "a", encoding="utf-8") as stream:
+            stream.write("### Instruction advisory: NOT_EVALUATED_INPUT_ERROR\\n"
+                         "- Policy/account comparison was skipped. Check the non-sensitive rule format without pasting secret values into logs.\\n")
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--snapshot", help="Optional local minimal rule-ID export; never raw instruction text")
@@ -149,17 +176,15 @@ def main():
         # No profile source configured means NOT_VERIFIED, never an inferred match.
         snapshot = load_snapshot(args.snapshot) if args.snapshot else load_env_snapshot()
         report = audit(registry, fetch_policy(), snapshot)
-    except (ValueError, OSError, json.JSONDecodeError):
-        print("INSTRUCTION_ALIGNMENT_INPUT_ERROR")
+    except (ValueError, TypeError, OSError, json.JSONDecodeError):
+        input_error_note(args.summary)
         raise SystemExit(2)
     print(json.dumps(report, ensure_ascii=False, sort_keys=True))
     if args.summary:
         with open(args.summary, "a", encoding="utf-8") as stream:
             stream.write(to_markdown(report))
-    if report["policy_source_status"] != "CURRENT":
-        print("::warning title=Instruction policy review::Canonical policy changed or unavailable; do not claim personal instructions match")
-    elif any(x["status"] == "DECLARED_CONFLICT" for x in report["profile_results"].values()):
-        print("::warning title=Instruction alignment recommendation::Review declared rule conflicts")
+    for message in annotation_messages(report):
+        print(message)
 
 
 if __name__ == "__main__":
