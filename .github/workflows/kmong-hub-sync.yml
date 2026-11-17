@@ -99,4 +99,6 @@ jobs:
         run: python3 -B tools/kmong_hub_sync/sync.py
       - name: Advise owner of ChatGPT and Codex instruction drift (read-only)
         if: ${{ !cancelled() }}
+        env:
+          HAECHONG_INSTRUCTION_RULE_SNAPSHOT_JSON: ${{ secrets.HAECHONG_INSTRUCTION_RULE_SNAPSHOT_JSON }}
         run: python3 -B tools/kmong_hub_sync/instruction_drift.py --summary "$GITHUB_STEP_SUMMARY"
