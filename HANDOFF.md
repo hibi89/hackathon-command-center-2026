@@ -1,5 +1,16 @@
 > **[HAECHONG_PRIMARY_MISSION_LOCK_V1]** PRIMARY_MISSION=GITHUB_APP_CENTRAL_AUTOMATION_90_TO_100; `ㄱ`/`ㄱㄱ` resumes GitHub App → signed HMAC webhook → Vercel bridge → central Actions → ledger; side-product development requires an explicit NEW owner instruction. `HANDOFF` recency cannot override this lock.
 > **[HAECHONG_NEXT_GATE]** One real signed GitHub App Delivery -> existing Production main@5542fb5 -> bot Actions #43859747199 -> collector NO_CHANGE -> ledger readback is E2E PASS (2026-11-16; Delivery response Work-attested, GitHub/Vercel execution independently cross-checked). Whole-design weighted verification UNASSESSED; historical provisional engineering score 90/100 is NOT official completion. RELEASE HOLD; retain GitHub App mission, no side-product switch, main merge or Production change without owner GO.
+## [2026-11-17 KST] HAECHONG_PR5_JSON_STRICT_LONG_ROUND_124_PASS
+1. 목표·정본: 현재 채팅 임무는 GitHub App→HMAC→기존 Vercel→GitHub Actions→중앙 원장. 본체·원본·이력 보존, GO 없는 main/Production/권한/Secret 변경 금지.
+2. 코드: PR #5 `feature/haechong-instruction-advisory-visibility-20261117@c797999a3b25196fb3b677face815ad388cbae0a`에서 중복 JSON 키 fail-closed, 공개 레지스트리 예상 외 필드/경로/제어문자 거부를 구현. `instruction_drift.py`, `test_instruction_drift.py`, `INSTRUCTION_ALIGNMENT_README.md` 3파일만 단일 커밋.
+3. 검사: [observer 단위 테스트 124/124 PASS 및 policy CURRENT](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/44024744197), [final blueprint gate PASS](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/44024744268). 이전 운영 미션 잠금 24/24 PASS는 역사적 증거. 새 Production 실서명 Ping/E2E NOT_RUN, 계정 지침 실제 비교 NOT_VERIFIED.
+4. 상태: PR #5 OPEN/mergeable, main `6fdbc1d4ee223e53cd9a6cefa3bf3a8f39d7f437` 미변경; 공식 분모 UNASSESSED, RELEASE HOLD.
+5. 병목: 기존 Python json.loads 중복 키 묵인(마지막 값 선택) → 전 깊이 duplicate-key 거부로 개선. 운영 branch 작업 직전 자동 원장 갱신으로 HEAD 변동 확인, 다른 작업 덮어쓰기 없이 최신 원장 SHA를 재조회한 뒤 문서 작업만 분리함.
+6. repo/branch/SHA: `hibi89/hackathon-command-center-2026`; feature HEAD `c797999a3b25196fb3b677face815ad388cbae0a`; 인계 기록 직전 운영 HEAD `84b0cd318f03d054d4070a750d01a078191b4b4b`; 위 3개 코드 경로만 수정.
+7. Production: `https://kmong-hub-event-bridge.vercel.app/api/webhook`; 배포 SHA 현장 재검증 NOT_VERIFIED, Ping 200 NOT_RUN, 설정/권한 변경 없음.
+8. 원본/비밀/원장: 봇 최신 쓰기 `84b0cd318f03d054d4070a750d01a078191b4b4b`; 원장 blob `a17de22ea99fcddf7fc5316ce722f4fc34e9cd4e` readback, 35/80/29·미연결0·경고0. 계정 지침 원문·비밀의 공개 GitHub 저장 금지, 기존 Git 이력 불변.
+9. 다음 READY: PR #5 별도 GO 시에만 main 병합; 그 뒤 새 정책 권고 실운영 Summary 확인. Webhook 자체 동기화 커밋 무시의 push-message 조건이 기타 변경을 함께 무시할 가능성은 독립 테스트 필요(운영 보안 경로 변경은 High 판단 및 승인 전 HOLD). 스냅샷 등록/Production E2E 별도 GO.
+10. 갱신: 2026-11-17 KST, 코드/CI 기준 `c797999a` 및 44024744197·44024744268; 보호 MARKER·NEXT 두 줄 그대로, 문서 갱신은 구현률 가산 아님.
 ## [2026-11-17 KST] HAECHONG_INSTRUCTION_ADVISORY_LONG_ROUND_121_PASS
 1. 목표/정본: 해총 GitHub App→HMAC→Vercel→Actions→중앙 원장 임무 유지. 사용자 요청으로 단회 짧은 보고 대신 PR #5 내 독립 보안/기능 개선 묶음 수행.
 2. 완료 기능: 10개 공개 규칙의 정본 anchor 확인과 변경 후보 ID 보고, 정본 SHA 불일치에서 계정 일치 평가 차단, 실제 계정 미조회 상태의 owner 규칙 체크리스트, input JSON/registry 형식·값·개행·비밀 노출 방어, CLI Summary 회귀. 변경 파일 4개, 본체 Collector/HMAC/Production 불변.
