@@ -67,7 +67,9 @@ jobs:
             echo '::error::Dedicated provisioner GitHub App credentials are not configured.'
             exit 1
           fi
-      # Dedicated App has only repository_creation:write + contents:write.\n      # Action v2 lacks explicit permission-repository-creation input.\n      - name: Mint limited GitHub App token
+      # Dedicated App has only repository_creation:write + contents:write.
+      # Action v2 lacks explicit permission-repository-creation input.
+      - name: Mint limited GitHub App token
         id: token
         uses: actions/create-github-app-token@v2
         with:
