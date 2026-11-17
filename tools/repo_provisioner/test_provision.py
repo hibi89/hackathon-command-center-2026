@@ -16,7 +16,7 @@ def example():
         "request_id": "req-evidence-auditor-abc-20261118",
         "owner": "hibi89",
         "names": ["REQ-Evidence-Auditor-A", "REQ-Evidence-Auditor-B", "REQ-Evidence-Auditor-C"],
-        "project": "REQ Evidence Auditor", "private": True,
+        "project": "REQ Evidence Auditor", "visibility": "public",
         "approval": "owner-requested-create-and-bootstrap-only",
     }
 
@@ -25,7 +25,7 @@ POLICY_SHA = "f" * 40
 
 
 class FakeClient:
-    def __init__(self, existing=False, private=True):
+    def __init__(self, existing=False, private=False):
         self.existing = existing
         self.private = private
         self.files = {}
@@ -36,7 +36,7 @@ class FakeClient:
             return (200, {"private": self.private, "default_branch": "main"}) if self.existing else (404, None)
         if method == "POST" and path == "/user/repos":
             self.creation_payload = body
-            return 201, {"private": True, "default_branch": "main", "full_name": "hibi89/REQ-Evidence-Auditor-A"}
+            return 201, {"private": False, "default_branch": "main", "full_name": "hibi89/REQ-Evidence-Auditor-A"}
         if "/contents/" in path:
             filename = path.split("/contents/")[-1]
             if method == "GET":
@@ -56,12 +56,12 @@ class ProvisionerTest(unittest.TestCase):
         files = documents(r, r["names"][0], POLICY_SHA)
         self.assertEqual(len(files), 5)
         self.assertIn("UNASSESSED", files["STATUS.md"])
-        self.assertIn(POLICY_SHA, files["AGENTS.md"])
+        self.assertIn(POLICY_SHA, files["AGENTS.md"])\n        self.assertIn("PUBLIC", files["AGENTS.md"])\n        self.assertEqual(json.loads(files[".haechong-provisioner.json"])["visibility"], "public")
 
     def test_invalid_names_or_approval(self):
         cases = [("names", ["../escape"]), ("names", ["a", "A"]),
                  ("names", ["a", "b", "c", "d"]), ("names", []),
-                 ("private", False), ("owner", "attacker"),
+                 ("visibility", "private"), ("visibility", True), ("visibility", "Public"), ("owner", "attacker"),
                  ("approval", "no")]
         for key, val in cases:
             q = example()
@@ -84,12 +84,12 @@ class ProvisionerTest(unittest.TestCase):
                 self.assertEqual(main(["--request", str(p), "--policy-sha", POLICY_SHA,
                                        "--execute", "--confirm", example()["request_id"]]), 2)
 
-    def test_create_private_five_documents(self):
+    def test_create_public_five_documents(self):
         c = FakeClient()
         r = create_one(c, example(), example()["names"][0], POLICY_SHA)
         self.assertEqual(r["result"], "CREATED")
-        self.assertTrue(c.creation_payload["private"])
-        self.assertEqual(len(c.files), 5)
+        self.assertIs(c.creation_payload["private"], False)
+        self.assertEqual(len(c.files), 5)\n        self.assertEqual(r["visibility"], "public")
 
     def test_resume_only_with_exact_marker(self):
         c = FakeClient(existing=True)
@@ -101,11 +101,11 @@ class ProvisionerTest(unittest.TestCase):
         self.assertEqual(result["result"], "RESUMED")
         self.assertEqual(c.files["AGENTS.md"], "customer edits")
 
-    def test_existing_public_refused(self):
+    def test_existing_private_refused(self):
         with self.assertRaises(ProvisionError):
-            create_one(FakeClient(existing=True, private=False), example(), example()["names"][0], POLICY_SHA)
+            create_one(FakeClient(existing=True, private=True), example(), example()["names"][0], POLICY_SHA)
 
-    def test_push_owner_path_guard(self):
+    def test_private_request_rejected(self):\n        q = example()\n        q["visibility"] = "private"\n        with self.assertRaises(ProvisionError):\n            validate(q)\n\n    def test_push_owner_path_guard(self):
         self.assertFalse(eligible("requests/repo_provisioner/../../evil.json"))
         with self.assertRaises(ValueError):
             get_new_request("a" * 40, "b" * 40, "someone-else")

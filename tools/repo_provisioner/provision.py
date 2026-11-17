@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Create up to three PRIVATE repos from a validated owner request, then bootstrap policy.
+"""Create up to three PUBLIC repos from a validated owner request, then bootstrap policy.
 Dry run by default. No deletion, rename, visibility changes or file overwrites.
 """
 import argparse
@@ -18,7 +18,7 @@ CENTRAL = "hibi89/hackathon-command-center-2026"
 NAME = re.compile(r"^[A-Za-z][A-Za-z0-9._-]{0,69}$")
 REQ_ID = re.compile(r"^[a-z0-9][a-z0-9-]{3,79}$")
 SHA = re.compile(r"^[0-9a-f]{40}$")
-KEYS = {"schema_version", "request_id", "owner", "names", "project", "private", "approval"}
+KEYS = {"schema_version", "request_id", "owner", "names", "project", "visibility", "approval"}
 
 
 class ProvisionError(Exception):
@@ -28,8 +28,8 @@ class ProvisionError(Exception):
 def validate(req):
     if not isinstance(req, dict) or set(req) != KEYS or type(req["schema_version"]) is not int or req["schema_version"] != 1:
         raise ProvisionError("invalid request schema")
-    if req["owner"] != OWNER or req["private"] is not True or type(req["private"]) is not bool:
-        raise ProvisionError("only hibi89 PRIVATE repositories are permitted")
+    if req["owner"] != OWNER or req["visibility"] != "public" or type(req["visibility"]) is not str:
+        raise ProvisionError("only hibi89 PUBLIC repositories are permitted")
     if req["approval"] != "owner-requested-create-and-bootstrap-only":
         raise ProvisionError("owner approval marker missing")
     if not isinstance(req["request_id"], str) or not REQ_ID.fullmatch(req["request_id"]):
@@ -53,7 +53,7 @@ def documents(req, name, policy_sha):
     prov = dict(schema_version=1, request_id=req["request_id"],
                 repository=OWNER + "/" + name, project=req["project"],
                 policy_repo=CENTRAL, policy_branch="kmong-productization",
-                policy_sha=policy_sha, product_implementation="NOT_STARTED",
+                policy_sha=policy_sha, visibility="public", product_implementation="NOT_STARTED",
                 product_verification="UNASSESSED")
     agents = f"""# AGENTS — {name}
 
@@ -71,7 +71,7 @@ Use SWU-CPAA for critical-path and dependency-aware READY selection and SWU-WE f
 On actual no-progress failure: two attempts -> ISOLATED_REDESIGN_PENDING, redesigned two further attempts -> SOLMAX_BATCH_PENDING. Essential high-risk blockage may request expertise earlier. Documentation/CI polling do not count as implementation. P1 syntax/type/smoke and urgent safety gates remain; P2 full CI, integration, security, browser, recovery and independent audit are NOT automatically done.
 
 ## Safety
-No paid calls, customer data export, privilege expansion, secrets, destructive database writes, force push, main merge, Production, domain, commercial release or deletion without explicit owner approval. Protect original code, backup and history. Unrun checks must be NOT_RUN; unknown implementation or verification rate must be UNASSESSED. Exact branch/SHA and paths are required for progress reporting.
+All new repos are PUBLIC. Never publish secrets, non-public designs, customer files or personal data.\nNo paid calls, customer data export, privilege expansion, secrets, destructive database writes, force push, main merge, Production, domain, commercial release or deletion without explicit owner approval. Protect original code, backup and history. Unrun checks must be NOT_RUN; unknown implementation or verification rate must be UNASSESSED. Exact branch/SHA and paths are required for progress reporting.
 """
     handoff = f"""# HANDOFF — {name}
 
@@ -148,13 +148,13 @@ def create_one(client, req, name, policy_sha):
     created = status == 404
     if created:
         _, current = client.api("POST", "/user/repos", {
-            "name": name, "private": True, "auto_init": True,
-            "description": req["project"] + " — independent Haechong P1 work area"})
-        if current.get("full_name", "").lower() != f"{OWNER}/{name}".lower() or current.get("private") is not True:
+            "name": name, "private": False, "auto_init": True,
+            "description": req["project"] + " — public Haechong development workspace"})
+        if current.get("full_name", "").lower() != f"{OWNER}/{name}".lower() or current.get("private") is not False:
             raise ProvisionError("unexpected create response; inspect manually")
     else:
-        if current.get("private") is not True:
-            raise ProvisionError("existing repo must remain untouched: " + name)
+        if current.get("private") is not False:
+            raise ProvisionError("existing non-public repo must remain untouched: " + name)
         markpath = path + "/contents/.haechong-provisioner.json"
         s, marker = client.api("GET", markpath)
         if s != 200:
@@ -173,7 +173,7 @@ def create_one(client, req, name, policy_sha):
         put_new(client, name, branch, filename, content)
     return {"repository": OWNER + "/" + name,
             "url": f"https://github.com/{OWNER}/{name}",
-            "result": "CREATED" if created else "RESUMED"}
+            "visibility": "public", "result": "CREATED" if created else "RESUMED"}
 
 
 def main(argv=None):
@@ -190,10 +190,10 @@ def main(argv=None):
         req = validate(json.loads(reqfile.read_text(encoding="utf-8")))
         documents(req, req["names"][0], args.policy_sha)
         if not args.execute:
-            print(json.dumps({"result": "DRY_RUN", "writes": False, "names": req["names"]},
+            print(json.dumps({"result": "DRY_RUN", "writes": False, "visibility": "public", "names": req["names"]},
                              ensure_ascii=False))
             return 0
-        if args.confirm != req["request_id"] or os.getenv("HAECHONG_PROVISIONER_ENABLE") != "YES_CREATE_PRIVATE_REPOS":
+        if args.confirm != req["request_id"] or os.getenv("HAECHONG_PROVISIONER_ENABLE") != "YES_CREATE_PUBLIC_REPOS":
             raise ProvisionError("execution requires explicit matching confirmation and enabled gate")
         client = GitHub(os.getenv("GH_REPO_PROVISIONER_TOKEN"))
         completed = 0

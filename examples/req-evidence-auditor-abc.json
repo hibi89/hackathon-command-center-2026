@@ -8,6 +8,6 @@
     "REQ-Evidence-Auditor-C"
   ],
   "project": "REQ Evidence Auditor",
-  "private": true,
-  "approval": "owner-requested-create-and-bootstrap-only"
+  "approval": "owner-requested-create-and-bootstrap-only",
+  "visibility": "public"
 }
