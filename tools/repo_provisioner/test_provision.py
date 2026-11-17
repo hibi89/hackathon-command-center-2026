@@ -56,7 +56,9 @@ class ProvisionerTest(unittest.TestCase):
         files = documents(r, r["names"][0], POLICY_SHA)
         self.assertEqual(len(files), 5)
         self.assertIn("UNASSESSED", files["STATUS.md"])
-        self.assertIn(POLICY_SHA, files["AGENTS.md"])\n        self.assertIn("PUBLIC", files["AGENTS.md"])\n        self.assertEqual(json.loads(files[".haechong-provisioner.json"])["visibility"], "public")
+        self.assertIn(POLICY_SHA, files["AGENTS.md"])
+        self.assertIn("PUBLIC", files["AGENTS.md"])
+        self.assertEqual(json.loads(files[".haechong-provisioner.json"])["visibility"], "public")
 
     def test_invalid_names_or_approval(self):
         cases = [("names", ["../escape"]), ("names", ["a", "A"]),
@@ -89,7 +91,8 @@ class ProvisionerTest(unittest.TestCase):
         r = create_one(c, example(), example()["names"][0], POLICY_SHA)
         self.assertEqual(r["result"], "CREATED")
         self.assertIs(c.creation_payload["private"], False)
-        self.assertEqual(len(c.files), 5)\n        self.assertEqual(r["visibility"], "public")
+        self.assertEqual(len(c.files), 5)
+        self.assertEqual(r["visibility"], "public")
 
     def test_resume_only_with_exact_marker(self):
         c = FakeClient(existing=True)
@@ -105,7 +108,13 @@ class ProvisionerTest(unittest.TestCase):
         with self.assertRaises(ProvisionError):
             create_one(FakeClient(existing=True, private=True), example(), example()["names"][0], POLICY_SHA)
 
-    def test_private_request_rejected(self):\n        q = example()\n        q["visibility"] = "private"\n        with self.assertRaises(ProvisionError):\n            validate(q)\n\n    def test_push_owner_path_guard(self):
+    def test_private_request_rejected(self):
+        q = example()
+        q["visibility"] = "private"
+        with self.assertRaises(ProvisionError):
+            validate(q)
+
+    def test_push_owner_path_guard(self):
         self.assertFalse(eligible("requests/repo_provisioner/../../evil.json"))
         with self.assertRaises(ValueError):
             get_new_request("a" * 40, "b" * 40, "someone-else")
