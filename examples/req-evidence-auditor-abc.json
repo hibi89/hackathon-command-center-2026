@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "request_id": "req-evidence-auditor-abc-20261118",
+  "owner": "hibi89",
+  "names": [
+    "REQ-Evidence-Auditor-A",
+    "REQ-Evidence-Auditor-B",
+    "REQ-Evidence-Auditor-C"
+  ],
+  "project": "REQ Evidence Auditor",
+  "approval": "owner-requested-create-and-bootstrap-only",
+  "visibility": "public"
+}
