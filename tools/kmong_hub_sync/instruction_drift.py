@@ -3,6 +3,7 @@
 import argparse
 import hashlib
 import json
+import os
 from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
@@ -52,10 +53,7 @@ def fetch_policy():
         return None
 
 
-def load_snapshot(path):
-    if path is None:
-        return None
-    contents = Path(path).read_bytes()
+def parse_snapshot(contents):
     if len(contents) > 32768:
         raise ValueError("Instruction snapshot too large")
     obj = json.loads(contents)
@@ -68,6 +66,15 @@ def load_snapshot(path):
         if not isinstance(item, dict) or not isinstance(item.get("rules"), dict):
             raise ValueError("Invalid instruction profile rule mapping")
     return profiles
+
+
+def load_snapshot(path):
+    return parse_snapshot(Path(path).read_bytes()) if path else None
+
+
+def load_env_snapshot():
+    raw = os.environ.get("HAECHONG_INSTRUCTION_RULE_SNAPSHOT_JSON", "")
+    return parse_snapshot(raw.encode("utf-8")) if raw else None
 
 
 def audit(registry, source, snapshots=None):
@@ -135,7 +142,9 @@ def main():
     args = parser.parse_args()
     try:
         registry = load_registry()
-        report = audit(registry, fetch_policy(), load_snapshot(args.snapshot))
+        # No profile source configured means NOT_VERIFIED, never an inferred match.
+        snapshot = load_snapshot(args.snapshot) if args.snapshot else load_env_snapshot()
+        report = audit(registry, fetch_policy(), snapshot)
     except (ValueError, OSError, json.JSONDecodeError):
         print("INSTRUCTION_ALIGNMENT_INPUT_ERROR")
         raise SystemExit(2)
