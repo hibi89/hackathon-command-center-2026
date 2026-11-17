@@ -1,6 +1,6 @@
 # Kmong event-driven GitHub observer bridge
 
-**Status (2026-11-15):** isolated webhook code passes CI and existing central Actions has real dispatcher-bot runs; their origin as **live signed webhook deliveries is NOT VERIFIED**. The connected Vercel account cannot currently read the **existing** bridge project (prior 404), and Production GET serves an older SHA. No replacement project, secret, permission or Production change is authorized.
+**Current evidence (2026-11-17):** A real signed GitHub App Delivery → existing Vercel Production → central Actions → observer ledger chain was attested on **2026-11-16** (bot [run #43859747199](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43859747199), collector `NO_CHANGE` and ledger readback). A later central [run #44020977616](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/44020977616) independently showed `UPDATED` (35 repositories/80 refs/29 products). **These are dated receipts, not proof of the current Production source SHA or a new signed Ping 200.** The current Vercel deployment SHA remains `NOT_VERIFIED` in this review, and this PR #6 code is feature-only, **not deployed**. No replacement project, secret, permission or Production change is authorized.
 
 ## Decision / alternatives
 
@@ -58,7 +58,7 @@ The isolated branch CI verifies the exact 35-repo allowlist against the collecto
 ## Rollback
 
 1. In Vercel, set `KMONG_DISPATCH_ENABLED=false` (or disable source App Webhook Active). Do not uninstall the already-proven source read App or delete its PEM secret.
-2. Original daily `cron: '10 2 * * *'` and existing manual `dry_run=true/false` collector continue unaffected. Prior snapshot and Git SHA history remain available.
+2. The current **hourly** `cron: '23 * * * *'` and existing manual `dry_run=true/false` collector remain separate from the bridge; the schedule is best effort and can be delayed or skipped. Prior snapshot and Git SHA history remain available. Do not alter Production or workflow scheduling without owner GO.
 3. If needed, revert only event bridge / bridge-test commits from the integration branch; never force push or rewrite central product history. Re-enable only after signature/auth/run acceptance succeeds.
 
 ## Proven boundaries as of 2026-11-13 KST
@@ -98,6 +98,15 @@ Two evidence methods were evaluated: (A) timestamp + bot actor matching (no new 
 
 A name-only event previously fell back to `run.name = Final blueprint completion evidence gate` if both `workflow_run.path` and `workflow.path` were missing. Workflow display names are not unique; this creates an avoidable non-target workflow dispatch risk. Two approaches: A retain name-only compatibility (risks unintended cross-workflow scans), B require the precise allowlisted `.github/workflows/final-blueprint-gate.yml` or `.yaml` path from either run or workflow metadata (adopted). The run path takes precedence; if both are absent, return `202 ignored` with zero GitHub API calls. Canonical paths and HMAC, repository, branch and installation restrictions remain unchanged. This may omit an event whose GitHub webhook provides no path; hourly scheduled reconciliation remains available, and the trade-off is recorded rather than claiming zero false negatives. This code is **not deployed** and requires the existing owner approval process for merging/deployment.
 
+
+### Decision: history ambiguity versus duplicate dispatch
+
+| Candidate | Behavior on incomplete GitHub Actions history | Cost/safety | Decision |
+|---|---|---|---|
+| Continue and queue anyway | Fast if API is partially unavailable | May repeat a run, causing extra API usage and ambiguous receipts | Rejected |
+| **Fail closed and rely on reconciling scan / owner redelivery** | Return `502` at bridge, defer internal bot scan on invalid history | Uses existing infrastructure but freshness can lag | Selected |
+
+The two guards operate at distinct layers: bridge gate suppresses a duplicate `workflow_dispatch` request; Actions gate suppresses a redundant **collector scan** if multiple dispatches raced. Neither is an atomic lock or guarantees exactly-once processing. A `502` is not proof of an event permanently lost; automatic schedule and owner-initiated safe redelivery are separate recovery paths, with their own limits.
 
 ## 2026-11-17 isolated dispatch-history defense (PR #6, not deployed)
 
