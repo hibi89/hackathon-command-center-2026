@@ -164,6 +164,25 @@ class DriftTests(unittest.TestCase):
                 with self.subTest(mutation=mutation), self.assertRaises(ValueError):
                     load_registry(p)
 
+    def test_registry_cannot_silently_remove_or_replace_approved_rule(self):
+        with TemporaryDirectory() as td:
+            p = Path(td) / "rules.json"
+            for mutation in ("missing", "unexpected", "no_anchor", "wrong_path", "no_path"):
+                obj = load_registry()
+                if mutation == "missing":
+                    obj["rules"].pop()
+                elif mutation == "unexpected":
+                    obj["rules"][0]["id"] = "AN_UNAPPROVED_RULE"
+                elif mutation == "no_anchor":
+                    del obj["rules"][0]["policy_anchor"]
+                elif mutation == "wrong_path":
+                    obj["policy_path"] = "docs/strategy/OTHER_POLICY.md"
+                else:
+                    del obj["policy_path"]
+                p.write_text(json.dumps(obj), encoding="utf-8")
+                with self.subTest(mutation=mutation), self.assertRaises(ValueError):
+                    load_registry(p)
+
     def test_registry_has_pinned_anchors_for_every_operating_rule(self):
         registry = load_registry()
         self.assertEqual(len(registry["rules"]), 10)

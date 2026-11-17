@@ -14,6 +14,15 @@ CONFIG = HERE / "instruction_alignment_rules.json"
 POLICY_URL = ("https://raw.githubusercontent.com/hibi89/hackathon-command-center-2026/"
               "kmong-productization/docs/strategy/OWNER_DEV_EXECUTION_CANONICAL_20261116.md")
 PROFILES = ("chatgpt", "codex")
+# Policy v2.1 cannot silently omit an approved rule or switch its source
+# without a reviewed code change. This list is public and contains no account data.
+REQUIRED_RULE_IDS = frozenset((
+    "P0_DESIGN_OWNER", "P1_IMPLEMENTATION_OWNER", "P2_VALIDATION_OWNER",
+    "P3_ASTRA_ROLE", "P4_POST_ASTRA_REVIEW", "P1_BROWSER_DEFERRAL",
+    "BOTTLENECK_REPLAN", "PROGRESS_METRICS", "MISSION_LOCK",
+    "OWNER_APPROVAL",
+))
+POLICY_PATH = "docs/strategy/OWNER_DEV_EXECUTION_CANONICAL_20261116.md"
 
 
 def _unique_object_pairs(pairs):
@@ -44,9 +53,7 @@ def load_registry(path=CONFIG):
             or not isinstance(obj.get("rules"), list) or not obj["rules"]
             or set(obj) - {"schema_version", "policy_id", "policy_path",
                            "policy_blob_sha", "rules"}
-            or ("policy_path" in obj and
-                (not isinstance(obj["policy_path"], str)
-                 or not re.fullmatch(r"docs/strategy/[A-Z0-9_]+\.md", obj["policy_path"])))):
+            or obj.get("policy_path") != POLICY_PATH):
         raise ValueError("Invalid instruction alignment registry")
     keys = set()
     for rule in obj["rules"]:
@@ -58,9 +65,8 @@ def load_registry(path=CONFIG):
         expected = rule.get("expected")
         recommendation = rule.get("recommendation")
         anchor = rule.get("policy_anchor")
-        if (anchor is not None and
-                (not isinstance(anchor, str) or not 1 <= len(anchor) <= 240
-                 or not anchor.isprintable())):
+        if (not isinstance(anchor, str) or not 1 <= len(anchor) <= 240
+                or not anchor.isprintable()):
             raise ValueError("Invalid policy rule anchor")
         if (not isinstance(key, str) or not re.fullmatch(r"[A-Z][A-Z0-9_]{1,63}", key)
                 or not isinstance(expected, str)
@@ -74,6 +80,8 @@ def load_registry(path=CONFIG):
                 or key in keys):
             raise ValueError("Invalid or duplicate alignment rule")
         keys.add(key)
+    if keys != REQUIRED_RULE_IDS:
+        raise ValueError("Incomplete or unexpected instruction alignment rule IDs")
     return obj
 
 
