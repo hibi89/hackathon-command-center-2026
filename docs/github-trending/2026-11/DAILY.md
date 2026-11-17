@@ -160,3 +160,41 @@
 ### 상업적 라이선스·제약
 - API SPDX 메타데이터만 확인: Apache-2.0/MIT/BSD-3-Clause는 일반적으로 상업적 사용을 허용하지만 저작권·고지·NOTICE·의존성 조건 확인 필요. AGPL-3.0(`we-promise/sure`)은 네트워크 제공/수정본 공개 의무를 검토해야 하며 GPL-3.0(`Likely7/Veyra-NRVideo`)은 배포 시 소스 제공 의무 등 검토 필요. **라이선스 원문·종속물·상표·모델 약관을 이번 회차 검증하지 않았으므로 번들/재배포·상용 출시 승인 아님**.
 - 공식 TOP20의 13~20위 및 전체 당일 순위 미확인. 이번 회차 **코드·CI·권한·배포·고객 데이터·유료 API 변경 없음**.
+
+
+## DAILY-2026-11-17 (2026-11-17 09:57~10:00 KST, 자동 조사)
+
+### 사실 — 공식 GitHub Trending 색인, 원본 검증 수준
+- 공식 URL: https://github.com/trending?since=daily . 직접 열람은 restricted URL 오류. GitHub 공식 도메인의 검색 색인 https://github.com/trending (2026-11-17 'Crawled: today')에서 **12개 순서 및 'stars today'** 텍스트 확보. **아래 번호는 공식 페이지 검색 색인의 표시 순서이며, 해당 시각의 공식 실시간 순위 확정값이 아님**. 공식 당일 1~20위 전체 순위와 13~20위는 **미확인**. 공식 GitHub 주간/월간 TOP30도 이번 회차 검증 대상이 아니므로 미확인. 외부 집계 https://trend.ondo.sh/github/en.html 및 https://github.com/jastfan/github-trending 는 공식 순위와 혼합하지 않음.
+- 표시된 스타 증가량은 검색 색인 표시값이며 직접 실시간 수집한 값이 아님. 정확한 당일 기준 시각·변동 여부 미확인. GitHub 원본 API에서 저장소 메타데이터 SPDX, 최신 커밋 및 릴리스(있을 경우)를 개별 확인했고 **README.md는 각 저장소 파일 SHA 직접 확인**. **LICENSE 원문/NOTICE/의존성/상표/모델·서비스 약관은 미감사**, SPDX=NOASSERTION은 미확인. 날짜는 최근 커밋 UTC를 KST로 변환한 달력일.
+
+| 공식 색인 표시 순서 (당일 확정 순위 아님) | 원본 GitHub URL | 핵심 기능 / 실용 사례 | 색인 stars today | README 파일 | LICENSE API SPDX (원문 미감사) | 최신 커밋 SHA / KST 일자 | 최신 릴리스 API |
+|---:|---|---|---:|---|---|---|---|
+| 1 | [dream-num/univer](https://github.com/dream-num/univer) | AI 문서·스프레드시트·협업 SDK / DBVORA/PayPal 문서 UI | +988 (색인) | 확인 | Apache-2.0 | `582f0c25898a` (2026-11-17) | v1.5.2 |
+| 2 | [ag-ui-protocol/ag-ui](https://github.com/ag-ui-protocol/ag-ui) | AI 에이전트와 프론트엔드 간 상호작용 프로토콜 / HAE/SOVIA 승인형 UI | +355 (색인) | 확인 | MIT | `79530a25f347` (2026-11-17) | release/2026-11-13 |
+| 3 | [google-labs-code/stitch-skills](https://github.com/google-labs-code/stitch-skills) | Stitch MCP 기반 UI 디자인 Agent Skills / REA_WEB/FFAX UI | +247 (색인) | 확인 | Apache-2.0 | `0337446dadde` (2026-08-18) | v1.0 |
+| 4 | [backnotprop/plannotator](https://github.com/backnotprop/plannotator) | 에이전트 계획·코드 리뷰·인간 피드백 / HAE/PayPal 검수 | +866 (색인) | 확인 | Apache-2.0 | `5fb90d0fb5d8` (2026-11-17) | v0.28.66 |
+| 5 | [ChromeDevTools/chrome-devtools-mcp](https://github.com/ChromeDevTools/chrome-devtools-mcp) | 에이전트 브라우저 디버깅·성능 점검 / REA_WEB 품질 감사 | +717 (색인) | 확인 | Apache-2.0 | `dc0055828a9f` (2026-11-17) | chrome-devtools-mcp-v1.13.0 |
+| 6 | [alibaba/open-code-review](https://github.com/alibaba/open-code-review) | 규칙+LLM 코드 리뷰·보안 취약점 점검 / SOVIA/코드감사 | +691 (색인) | 확인 | Apache-2.0 | `dd1a7e12a356` (2026-11-16) | v1.13.10 |
+| 7 | [Tencent/LoopForge](https://github.com/Tencent/LoopForge) | 로컬·자가호스팅 코딩 에이전트 워크플로 / HAE/AX Dev Factory | +423 (색인) | 확인 | NOASSERTION | `69e4bf093cf2` (2026-11-17) | v0.3.8 |
+| 8 | [ggml-org/ggml](https://github.com/ggml-org/ggml) | 로컬 머신러닝 텐서 연산 라이브러리 / 로컬 모델·DBVORA | +43 (색인) | 확인 | MIT | `d9fe7bff3d2b` (2026-11-16) | v1.0.0 |
+| 9 | [elementalsouls/Claude-BugHunter](https://github.com/elementalsouls/Claude-BugHunter) | 보안 버그 탐지·취약점 연구 스킬 묶음 / SOVIA 보안 QA | +98 (색인) | 확인 | MIT | `64410edb7f44` (2026-11-17) | v2.1 |
+| 10 | [GoogleChrome/modern-web-guidance-src](https://github.com/GoogleChrome/modern-web-guidance-src) | 웹 개발 모범사례 에이전트 가이드 / REA_WEB 웹 감사 | +1219 (색인) | 확인 | Apache-2.0 | `268fb9ea69b6` (2026-11-17) | 미확인 |
+| 11 | [tradermonty/claude-trading-skills](https://github.com/tradermonty/claude-trading-skills) | 주식 분석·차트·전략 에이전트 스킬 / KIC/candle_scraper | +706 (색인) | 확인 | MIT | `60399452891e` (2026-11-17) | 미확인 |
+| 12 | [NVIDIA/SkillEvaluator](https://github.com/NVIDIA/SkillEvaluator) | AI 스킬 품질·중복·합성 평가 프레임워크 / HAE/UGREEN 검증 | +122 (색인) | 확인 | Apache-2.0 | `a9097b68da8b` (2026-11-17) | v0.9.0 |
+
+**공식 13~20위:** 8개 모두 미확인 (자리·저장소·당일 증가량 임의 생성 금지). 검색 색인 12개를 공식 TOP20 확정으로 오인하지 말 것. **별도 대체사이트 순위:** https://trend.ondo.sh/github/2026-11-16/en.html 은 전일 11/16 기록이며 오늘의 공식 순위에 포함하지 않음.
+
+### 분석 — 기존 hibi89 제품 연계 (제안, 통합 미실행)
+- **HAE:** ag-ui 승인형 FE, plannotator 검수, LoopForge 워크플로, SkillEvaluator 스킬 게이트. **SOVIA:** open-code-review/Claude-BugHunter 보안·감사 증거, ag-ui 승인 UI. **DBVORA:** Univer 데이터/문서 UI, ggml 로컬 추론 실험. **REA_WEB:** Chrome DevTools MCP + modern-web-guidance + stitch-skills로 품질/디자인 감사.
+- **KIC:** trading-skills의 리서치 체크리스트를 재무 근거 검토에 참고. **PayPal:** Univer 계약서/스프레드시트 및 ag-ui 승인형 워크플로 참고(실결제/개인정보 접근 금지). **UGREEN:** SkillEvaluator 스킬 품질 게이트·LoopForge 로컬 흐름 참고(실 NAS 미검증). **candle_scraper:** trading-skills 차트/리서치 프로세스 참고(수집기와 금융데이터 원본 유지).
+- 위는 기존 저장소와의 **연계 분석**이지 실제 호환성, 상업 라이선스, 기능 구현·CI PASS 증거가 아님. 기존 중앙 SVC-14/SVC-07/UPTIME OPS 후보와 중복되는 새 SKU 자동 생성 금지.
+
+### 제안 — 기존 hibi89 저장소 없이 독립 납품 가능한 TOP3 (가격·기간은 추정)
+1. **AI 문서·스프레드시트 업무 도구 설치·맞춤화** — 원본 [Univer](https://github.com/dream-num/univer), 색인 1위. 고객: 중소기업 운영팀/회계·영업 담당자. 납품: 고객 소유 환경의 문서·표 편집기, 샘플 데이터 연동, 설치·운영 설명서. **18만~60만원 / 2~5일 / 중상 (추정)**. 라이선스 GitHub API Apache-2.0, 원문·NOTICE·상업 SDK/추가 모듈·상표·의존성 계약 확인 필수. 차별화: 오프라인·로컬 우선, 템플릿/승인형 업무 흐름. 필수 검증: 실제 Windows 브라우저 편집·내보내기, 데이터 격리·저장·복구, SDK 배포 권리·유료 기능 의존성, 고객 데이터 비전송.
+2. **AI 에이전트 승인·진행상황 대시보드 구축** — 원본 [AG-UI](https://github.com/ag-ui-protocol/ag-ui), [Plannotator](https://github.com/backnotprop/plannotator), 색인 2/4. 고객: 사내 에이전트·자동화 운영팀. 납품: 승인/거부·작업 진행·검수 UI와 합성 워크플로 데모·운영서. **15만~50만원 / 2~4일 / 중상 (추정)**. API SPDX MIT/Apache-2.0, 원문·NOTICE·종속 라이선스/연결 모델 약관 별도 확인. 차별화: 작업 승인·감사 추적, 무단 자동 실행 차단. 필수 검증: 이벤트/권한 경계·중복 실행·복구·접근성·비용/모델 사용·고객 네트워크.
+3. **AI 스킬·코딩 에이전트 품질 평가 리포트** — 원본 [NVIDIA SkillEvaluator](https://github.com/NVIDIA/SkillEvaluator), 색인 12. 고객: AI 에이전트 도입 스타트업·개발팀. 납품: 스킬 충돌/중복 분석·합성 평가 결과·수정 우선순위·재검증 체크리스트. **10만~35만원 / 1~3일 / 중 (추정)**. API SPDX Apache-2.0, LICENSE 원문·NOTICE·모델·데이터셋 권리 및 종속물 별도 확인. 차별화: 합성 데이터·재현 가능한 품질 게이트·로컬 우선. 필수 검증: 실제 스킬 호환, 평가 재현성, 비밀정보 외부 전송 0, API 비용 0, 오탐/평가편향, 권리.
+
+### 라이선스·보안·검증 한계
+- MIT/Apache-2.0은 통상 상업 이용 가능하나 라이선스 고지/NOTICE·상표·의존성·SDK/클라우드 별도 약관이 남는다. Tencent/LoopForge의 GitHub API SPDX **NOASSERTION**은 상업 이용 권리 미확인으로 취급, 원문 검토 전 재배포 보류. 공개 저장소라는 이유만으로 상업 재배포를 허용한다고 추정 금지.
+- GitHub 원본 메타데이터/README 파일/커밋/릴리스 읽기만 수행. 고객·비공개 코드 공개, 유료 API, CI, 코드, 권한, 배포 변경 **NOT_RUN**. 신규 7개 저장소 이력은 별도 RESEARCH_HISTORY_INDEX에 URL·검증 수준 기록.
