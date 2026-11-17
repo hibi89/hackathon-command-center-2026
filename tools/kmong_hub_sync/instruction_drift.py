@@ -84,6 +84,10 @@ def audit(registry, source, snapshots=None):
                      "CURRENT" if source_sha == expected_sha else "CHANGED_REVIEW_REQUIRED")
     by_profile = {}
     for name in PROFILES:
+        if source_status != "CURRENT":
+            by_profile[name] = {"status": "NOT_EVALUATED_POLICY_UNCURRENT", "conflicts": [],
+                                "missing_rule_ids": [], "recommendations": []}
+            continue
         record = (snapshots or {}).get(name)
         if record is None:
             by_profile[name] = {"status": "NOT_VERIFIED_NO_SNAPSHOT", "conflicts": [],
