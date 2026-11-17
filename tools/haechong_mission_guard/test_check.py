@@ -41,8 +41,22 @@ class GuardTests(unittest.TestCase):
         self.mutate_policy({"resume_scope":"LATEST_HANDOFF_ITEM"})
     def test_no_unapproved_side_product(self):
         self.mutate_policy({"side_product_development_allowed":True})
-    def test_no_fabricated_live_hmac_progress(self):
-        self.mutate_policy({"signed_live_hmac_e2e_verified":True})
+    def test_verified_live_hmac_receipt_cannot_revert(self):
+        self.mutate_policy({"signed_live_hmac_e2e_verified":False})
+    def test_required_e2e_receipt_cannot_be_removed(self):
+        self.mutate_policy({"e2e_evidence":{}})
+    def test_e2e_delivery_uuid_cannot_be_forged(self):
+        receipt=json.loads(self.data[POLICY_PATH])["e2e_evidence"].copy()
+        receipt["delivery_id"]="00000000-0000-0000-0000-000000000000"
+        self.mutate_policy({"e2e_evidence":receipt})
+    def test_e2e_actions_run_cannot_be_forged(self):
+        receipt=json.loads(self.data[POLICY_PATH])["e2e_evidence"].copy()
+        receipt["workflow_run_id"]=1
+        self.mutate_policy({"e2e_evidence":receipt})
+    def test_e2e_ledger_blob_cannot_be_forged(self):
+        receipt=json.loads(self.data[POLICY_PATH])["e2e_evidence"].copy()
+        receipt["ledger_blob_sha"]="0"*40
+        self.mutate_policy({"e2e_evidence":receipt})
     def test_no_score_inflation(self):
         self.mutate_policy({"current_provisional_score":100})
     def test_no_forged_switch_approval(self):

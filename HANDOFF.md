@@ -1,5 +1,18 @@
 > **[HAECHONG_PRIMARY_MISSION_LOCK_V1]** PRIMARY_MISSION=GITHUB_APP_CENTRAL_AUTOMATION_90_TO_100; `ㄱ`/`ㄱㄱ` resumes GitHub App → signed HMAC webhook → Vercel bridge → central Actions → ledger; side-product development requires an explicit NEW owner instruction. `HANDOFF` recency cannot override this lock.
-> **[HAECHONG_NEXT_GATE]** Real signed delivery/E2E and deployed Production SHA remain NOT_VERIFIED; provisional central score=90/100. When Vercel/App access is blocked, only adjacent GitHub App central verification, security, or recovery work may proceed. No automatic pivot to UPTIME OPS or other product.
+> **[HAECHONG_NEXT_GATE]** One real signed GitHub App Delivery -> existing Production main@5542fb5 -> bot Actions #43859747199 -> collector NO_CHANGE -> ledger readback is E2E PASS (2026-11-16; Delivery response Work-attested, GitHub/Vercel execution independently cross-checked). Whole-design weighted verification UNASSESSED; historical provisional engineering score 90/100 is NOT official completion. RELEASE HOLD; retain GitHub App mission, no side-product switch, main merge or Production change without owner GO.
+
+## [2026-11-17 KST] HAECHONG_FINAL_E2E_RECONCILIATION — 독립 검수 및 임무 상태 교정
+
+1. **목표·확정 요구:** GitHub App -> HMAC webhook -> 기존 Vercel Production -> Actions -> 중앙 관측 원장. 범위는 `hibi89/hackathon-command-center-2026`, 운영 `kmong-productization` 및 기존 Production `main`만; `ㄱ`은 해총 중앙 임무만 재개한다.
+2. **구현·근거:** Work가 GitHub App 실제 Delivery `083bddec-e190-11f1-978d-156991bf2ef1`의 HTTP 202 `queued`와 Vercel request `r2g5s-1794829197598-6a1fe727f93c`을 원본 관리 UI에서 확인. Vercel 로그의 GitHub-Hookshot POST202, 실제 GitHub API workflow dispatch 호출과 Production deployment `dpl_8n5GXuNFEX4hZNcSL6sfgJfCbjBj` 확인. receiver 코드의 HMAC 검증 선행 조건을 대조함. 이 관리 UI 원본 상세는 Work가 직접 관찰했으며, 독립 검수에서는 연결된 Vercel 로그·GitHub run을 재확인함.
+3. **테스트·검증:** [GitHub Actions #43859747199](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/43859747199) 실 `workflow_dispatch`, bot actor, run-name에 정확 UUID, `main@5542fb5bf13cba5f30a374afc423b875790ff58c`, SUCCESS, preflight RUN, Python 80/80 PASS. Collector `NO_CHANGE`는 실제 스캔 완료로 `DEFERRED`와 구분; 35 repos/80 refs/29 products, unlinked0/fingerprint0, 공식 점수 무변경. 새 임무 잠금 검사 CI는 변경 커밋 SHA별로 확인해야 하며 기존 CI PASS를 새 커밋의 PASS로 재사용하지 않는다.
+4. **진행·대기:** 한 건의 실제 서명 Delivery 인과성 **E2E PASS**. 전체 최종설계 공식 승인 가중치·분모가 없어 공식 검증률 `UNASSESSED`; 상용 출시 `RELEASE HOLD`. 미래 전달의 SLA·exactly-once는 입증되지 않음.
+5. **오류·조치:** 기존 최상단 NEXT_GATE와 잠금 JSON/검사가 과거 `NOT_VERIFIED`·Vercel 접근 `BLOCKED` 상태를 고정하는 모순을 수정. 과거 실패한 Draft PR #3은 최신 운영 증거의 정본이 아니므로 병합 금지/종결 대상; Git 이력은 보존.
+6. **저장소·SHA·경로:** 기준 운영 HEAD `90910af2a097585fdacab7dc7fcbbd98b3df1a3c`, Production `main@5542fb5bf13cba5f30a374afc423b875790ff58c`; 현재 수정 대상 `AGENTS.md`, `STATUS.md`, `HANDOFF.md`, `data/haechong_active_mission_20261115.json`, `tools/haechong_mission_guard/{check.py,test_check.py,README.md}`. 원장 `data/kmong_hub_auto_observations.json`은 무변경.
+7. **Production·환경:** 기존 `https://kmong-hub-event-bridge.vercel.app/api/webhook` HTTP200 ready/source SHA 일치. Work에 의해 동일 main SHA 재배포가 된 기록은 보존. 이번 정리에서 Vercel 환경변수·권한·빌드 설정·Production 배포에 접근하거나 수정하지 않음. Ignore Build Step 장래 설정 상태는 별도 운영 확인 대상으로 남음.
+8. **원본·백업·인증:** Git 부모 SHA와 이전 운영 커밋으로 복구 가능. 서명·Secret·App PEM·토큰·고객 데이터 및 payload는 저장/출력하지 않음. 19SKU·제품 공식 점수·등록 이력 보존.
+9. **다음 READY·수용:** 신규 기능 개발이나 동일 E2E 반복 금지. 본 문서·임무 잠금의 새 GitHub CI를 확인하고, 실패 시 격리 수정. Draft PR #3을 역사 보존 상태로 닫는다. 전체 사용자 승인 가중치가 확정되기 전 100% 공식 인수 또는 판매 GO 금지.
+10. **기준일·검증 범위:** 2026-11-17 KST, GitHub main/운영 HEAD·run/jobs/logs·원장 blob 및 이전 Work Vercel/App 실화면 증거를 교차검증. 본 엔트리는 기준 운영 SHA `90910af2a097585fdacab7dc7fcbbd98b3df1a3c`에서 변경을 준비했고 최종 커밋 SHA·CI는 해당 실행 증거로 별도 확인한다.
 
 ## [2026-11-16 20:43 KST] HAECHONG_SIGNED_HMAC_DELIVERY_E2E_PASS_NO_CHANGE — 최종 E2E 인수인계
 
