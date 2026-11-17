@@ -1,4 +1,5 @@
 # GPT-6 Sol High 기준 표준작업단위(SWU) 산정 규격 — 2026-11-17 KST
+> **[SOLMAX_REQUEST_OWNERSHIP_CORRECTION · 2026-11-17 KST]** 필수 차단 즉시 사용자 요청과 2+2 소진 후 Codex GPT-6.1 Sol Max 배치 의뢰는 **각 제품에서 그 SWU를 실제 구현하는 작업자**의 책임이다. MLA는 MLA 담당자, EAI는 EAI 담당자가 최신 코드/의존성/차단 근거를 직접 확인한 뒤 해당 개발 채팅에서 요청한다. 해총은 범용 실패 규칙만 배포·관리하며 타 제품 대신 투입 요청·승인·검수를 수행하지 않는다. 후보 상태는 미확정으로 구분한다.
 
 ## 0C. OWNER-RETRY-2+2-SOLMAX-ESCALATION — 2026-11-17 KST (최신 공통 실행 규칙)
 
