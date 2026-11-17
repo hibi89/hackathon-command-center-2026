@@ -143,6 +143,11 @@ class DriftTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "JSON nesting limit exceeded"):
             parse_snapshot(deeply_nested)
 
+    def test_json_nesting_guard_does_not_count_quoted_brackets(self):
+        from instruction_drift import _decode_strict_json
+        obj = _decode_strict_json('{"value":"' + "[" * 1000 + '"}')
+        self.assertEqual(len(obj["value"]), 1000)
+
     def test_snapshot_file_read_is_bounded_by_schema_limit(self):
         with TemporaryDirectory() as td:
             path = Path(td) / "oversized.json"

@@ -36,11 +36,30 @@ def _unique_object_pairs(pairs):
 
 
 def _decode_strict_json(contents):
+    # Reject excessive structural depth independently of Python/JSON decoder
+    # recursion limits. Brackets inside quoted strings are not structural.
+    source = contents.decode("utf-8") if isinstance(contents, bytes) else contents
+    quoted = escaped = False
+    depth = 0
+    for char in source:
+        if quoted:
+            if escaped:
+                escaped = False
+            elif char == "\\":
+                escaped = True
+            elif char == '"':
+                quoted = False
+        elif char == '"':
+            quoted = True
+        elif char in "[{":
+            depth += 1
+            if depth > 64:
+                raise ValueError("JSON nesting limit exceeded")
+        elif char in "]}":
+            depth -= 1
     try:
-        return json.loads(contents, object_pairs_hook=_unique_object_pairs)
+        return json.loads(source, object_pairs_hook=_unique_object_pairs)
     except RecursionError:
-        # Deeply nested owner data must be a sanitized input error, not a CLI
-        # traceback or a guessed account verification result.
         raise ValueError("JSON nesting limit exceeded") from None
 
 
