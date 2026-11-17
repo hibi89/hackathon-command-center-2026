@@ -98,11 +98,17 @@ class ProvisionerTest(unittest.TestCase):
         c = FakeClient(existing=True)
         with self.assertRaises(ProvisionError):
             create_one(c, example(), example()["names"][0], POLICY_SHA)
-        c.files[".haechong-provisioner.json"] = documents(example(), example()["names"][0], POLICY_SHA)[".haechong-provisioner.json"]
+        expected = documents(example(), example()["names"][0], POLICY_SHA)
+        c.files[".haechong-provisioner.json"] = expected[".haechong-provisioner.json"]
         c.files["AGENTS.md"] = "customer edits"
+        with self.assertRaisesRegex(ProvisionError, "content conflict"):
+            create_one(c, example(), example()["names"][0], POLICY_SHA)
+        self.assertEqual(c.files["AGENTS.md"], "customer edits")
+        c.files["AGENTS.md"] = expected["AGENTS.md"]
         result = create_one(c, example(), example()["names"][0], POLICY_SHA)
         self.assertEqual(result["result"], "RESUMED")
-        self.assertEqual(c.files["AGENTS.md"], "customer edits")
+        self.assertEqual(c.files["AGENTS.md"], expected["AGENTS.md"])
+        self.assertEqual(len(c.files), 5)
 
     def test_existing_private_refused(self):
         with self.assertRaises(ProvisionError):
