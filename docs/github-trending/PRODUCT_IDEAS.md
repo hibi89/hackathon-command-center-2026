@@ -55,3 +55,20 @@
 - **코드 품질·보안 감사 (기존 후보)** — 원본 [alibaba/open-code-review](https://github.com/alibaba/open-code-review) (2026-11-14 관찰) + [openai/codex-security](https://github.com/openai/codex-security) (2026-11-12 기록). 고객: 소규모 SaaS·개발팀. 납품: 정적 규칙/AI 판정 구분·오탐 재검증·수정 가이드. **10만~35만원 / 2~4일 / 중상 (추정)**. 둘 다 API LICENSE SPDX **Apache-2.0**, README·최근 커밋·릴리스 조회 완료. 차별화: 위치·재현 증거. 검증: 소스 소유자 승인·외부 모델/유료 API OFF·민감정보 보호·LICENSE/NOTICE·모델 서비스 약관·취약점 공개 정책. 기존 SOVIA/코드검수/SVC-07과 중복 주의.
 - **NAS·서버 가동률 감시 설치 (기존 후보)** — 원본 [louislam/uptime-kuma](https://github.com/louislam/uptime-kuma) (2026-11-14 관찰). 고객: NAS 운영자·소형 사업장. 납품: 자체 서버 모니터링·알림/복구 테스트·운영서. **12만~35만원 / 1~3일 / 중 (추정)**. API LICENSE SPDX **MIT**, README·최근 커밋·릴리스 2.5.11 조회 완료. 차별화: 로컬 운영·장애 복구 실증. 검증: 설치 권한·실 NAS/Windows·알림/백업 복구·네트워크 보안·라이선스 원문·종속물. 24/7 보장 금지, 기존 UGREEN과 다른 고객 구매 목적. 신규 서비스/등록 여부는 중앙 원장 별도 승인 필요.
 - **검증 한계:** 2026-11-16 공식 GitHub Trending 실시간 순위/증가량 미확인. 위는 과거 후보의 원본 GitHub 메타데이터 재확인으로 실제 상업적 수요·재배포 권리·완성품 검증을 뜻하지 않음. 다른 AGPL-3.0/GPL-3.0 프로젝트는 해당 배포·네트워크 의무 검토 전 상용 번들 제외.
+
+
+## 2026-11-17 일간 발견 — 기존 후보 중복 제거 및 독립 납품 가설 (2026-11-17 KST)
+
+> **추정/제안**이며 상용화 승인 아님. GitHub 공식 Trending 직접 열람 불가; 공식 GitHub 검색 색인 표시 12개 순서만 확인. 오늘의 확정 TOP20 순위가 아님. 이전 30개 후보와 기존 69개 조사 이력, 기존 8개 요약 후보, 11/13~16 추가 기록 모두 보존. 새 후보와 기존 후보의 동일성은 고객 납품물 기준으로 판정한다.
+
+| 독립 판매 후보·중복 판단 | 원본 프로젝트·발견일 | 타깃 고객·납품물 | 가격/기간 추정·난이도 | 라이선스 메타데이터 / 상업 이용 위험 | 차별화·필수 검증 |
+|---|---|---|---|---|---|
+| **AI 문서·스프레드시트 편집기 설치·맞춤화** (기존 CSV/Excel 로컬 분석 후보와 목적·납품물 다름, **신규 연구 후보 1**) | [dream-num/univer](https://github.com/dream-num/univer), **2026-11-17** | 중소기업 영업·운영팀 / 고객 소유 환경 문서·표 편집기·템플릿·설치·복구서 | **180,000~600,000원 / 2~5일 / 중상** | GitHub API SPDX Apache-2.0. 원문/NOTICE·상용 SDK·추가 모듈·상표·종속물 미감사. 고객 원본·유료 서비스 미사용 | 로컬 우선 업무 템플릿. 실제 브라우저 편집·저장·내보내기·백업/복구·권한·오프라인 동작/라이선스 검증 필수 |
+| **에이전트 승인·진행상황 UI** (기존 AI 개발환경·스킬 검증과 다른 UI 납품, **신규 연구 후보 2**) | [ag-ui-protocol/ag-ui](https://github.com/ag-ui-protocol/ag-ui), [backnotprop/plannotator](https://github.com/backnotprop/plannotator), **2026-11-17** | 자동화 운영팀 / 승인·거부·진행상태·감사 UI 및 합성 데모 | **150,000~500,000원 / 2~4일 / 중상** | API SPDX MIT/Apache-2.0. 원문·NOTICE·종속물·모델/API 서비스 계약 미감사 | 사람이 최종 승인하는 에이전트. 권한 분리·중복실행·감사로그·오류복구·접근성·외부 전송/모델 비용 검증 필수 |
+| **AI 스킬 품질·중복 평가 서비스** (**기존 AI 개발환경·스킬 검증 후보의 고급 옵션으로 흡수, 중복 신규 상품 아님**) | [NVIDIA/SkillEvaluator](https://github.com/NVIDIA/SkillEvaluator), **2026-11-17** | AI 에이전트 개발팀 / 합성 평가 결과·충돌 분석·수정 우선순위 보고 | **100,000~350,000원 / 1~3일 / 중** | API SPDX Apache-2.0. 원문·NOTICE·평가 데이터·모델 약관 미감사 | 합성 데이터·재현 가능한 평가. 스킬 호환·재현성·오탐·민감정보 외부 전송/유료 API 0 검증 필수 |
+
+### 이번 날짜 기존 후보 재사용 및 권리 주의
+- 기존 **웹 품질 감사**는 ChromeDevTools/chrome-devtools-mcp + GoogleChrome/modern-web-guidance-src의 SVC-14 고도화 참고. 기존 **코드 보안 감사**는 alibaba/open-code-review + elementalsouls/Claude-BugHunter의 SVC-07 고도화 참고. 신규 중복 SKU 추가 금지.
+- [google-labs-code/stitch-skills](https://github.com/google-labs-code/stitch-skills)는 REA_WEB/FFAX UI 고도화 참고; [ggml-org/ggml](https://github.com/ggml-org/ggml)는 로컬 추론 연구, [tradermonty/claude-trading-skills](https://github.com/tradermonty/claude-trading-skills)는 KIC/candle_scraper 분석 체크리스트 참고.
+- [Tencent/LoopForge](https://github.com/Tencent/LoopForge)는 HAE/AX Dev Factory 워크플로 연구에 적합하나 GitHub SPDX **NOASSERTION**으로 라이선스·상업 재배포 권리 미확인. 원문 검증 전 소스 통합/재배포 보류.
+- 위 3개 TOP 추천 중 신규 연구 후보는 2개, 기존 후보 기능 보강 1개. 실제 크몽 판매 등록·중앙 원장 변경·구현·고객 수요 검증·배포는 **하지 않음**. 이 문서는 브랜치 내 후보 아이디어만 누적.
