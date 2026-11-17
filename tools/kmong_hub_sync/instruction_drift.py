@@ -134,6 +134,12 @@ def to_markdown(report):
     for name, item in report["profile_results"].items():
         rows.append(f"- {name}: `{item['status']}`; 충돌 규칙: "
                     + (", ".join(f"`{v}`" for v in item["conflicts"]) or "없음/미확인"))
+        missing = item.get("missing_rule_ids", [])
+        if missing:
+            rows.append("  - 미제공 규칙 ID: " + ", ".join(f"`{v}`" for v in missing)
+                        + " (비교 미완료, 일치 판정 아님)")
+        if item["status"] == "NOT_VERIFIED_NO_SNAPSHOT":
+            rows.append("  - 계정 지침 사본이 없어 실제 충돌 여부를 판정하지 못했습니다.")
         for fix in item["recommendations"]:
             rows.append(f"  - `{fix['rule_id']}`: {fix['text']}")
     rows.append("- 주의: 지침 원문은 수집·저장·출력하지 않으며, 사본 일치는 계정 실제 적용을 증명하지 않습니다.")
