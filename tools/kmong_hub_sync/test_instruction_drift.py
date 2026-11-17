@@ -57,8 +57,10 @@ class DriftTests(unittest.TestCase):
             b = StringIO()
             with redirect_stdout(b):
                 input_error_note(str(p))
-            self.assertIn("NOT_EVALUATED_INPUT_ERROR", p.read_text(encoding="utf-8"))
-            self.assertNotIn("rule_snapshot_raw", b.getvalue() + p.read_text(encoding="utf-8"))
+            summary = p.read_text(encoding="utf-8")
+            self.assertIn("NOT_EVALUATED_INPUT_ERROR", summary)
+            self.assertEqual(len(summary.splitlines()), 2)
+            self.assertNotIn("rule_snapshot_raw", b.getvalue() + summary)
 
     def test_registry_has_public_rules(self):
         self.assertEqual(len(load_registry()["rules"]), 10)
