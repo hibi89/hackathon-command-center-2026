@@ -1,6 +1,37 @@
 # OWNER DEV EXECUTION CANONICAL V2.1 — 구현 100% 후보 → Codex 검증 → Astra 고도화 → 최종 인수
 
-## 0H. 최우선 실패 처리 단계 — EAI에서 검증된 owner 2+2 · Sol Max 이관
+## 0I. SWU-CPAA — SWU 임계경로 기반 동적 모델 배정 (2026-11-17 KST)
+
+**정책 ID:** `SWU-CPAA-20261117` | **효력:** V2.1의 P1 실행 최적화 하위 규칙. P0 High 최종설계/승인 고정, Instant 기본 구현, 2+2 실패 처리, Codex·Astra 독립 검수, High 인수, 사용자 GO는 유지한다. 프로젝트 고유 규정·안전 조건을 우선한다. 이 조항으로 제품 코드·브랜치·Production이 자동 수정되지 않는다.
+
+**목표:** 최종설계의 모든 P1 기능이 `IMPLEMENTATION_100_CANDIDATE`에 도달할 때까지 **실제 총 경과시간**을 안전·품질·비용·사용가능량 제약 안에서 최소화한다. SWU 크기는 계속 **웹 GPT-6 Sol High 한 번의 의미 있는 기능 구현 코딩 용량**이며, 모델 교체/속도 차이로 크기·REQ/SWU 매핑·수용조건·분모를 변경하지 않는다. 한 모델이 한 회차에 3 SWU를 코딩하면 3개로 기록한다. 기존 이력/고유 SWU 의존성·allowed_paths 보존.
+
+### 0I-1. High P0 분석 및 작업 배정
+
+1. 최신 `repo@branch@HEAD`, `AGENTS.md`, 최종설계·REQ, 실제 소스, 활성 SWU 큐를 기준으로 **P1 코드 의존성 DAG**와 별도 **실운용 승인/보안 의존성**을 나눈다. 순환 의존성/누락 간선은 해결 전 `BLOCKED_DESIGN`; 권한·원본·보안 우회로 READY를 만들지 않는다.
+2. 각 SWU에 `swu_id, req_ids, depends_on, allowed_paths, acceptance, S/C/I/D/U, risk, downstream_block_count, dependency_depth, critical_path_role, implementation_gap, owner, evidence_sha, status`를 확인한다. 모델 배정·우선순위·추정 자료는 **기존 큐에 선택적 메타데이터로만 추가**하고 확정 필드를 덮지 않는다. 메타데이터 없다고 새 SWU/REQ 분모를 만들지 않는다.
+3. **전체 100% 후보를 결정하는 가장 긴 잔여 의존 경로와 후속 차단**을 우선한다. `expected_total_delay_reduction = estimated_instant_completion_time - (estimated_specialist_completion_time + handoff + queue_wait + integration/rework/conflict)`를 참고하되, 실제 측정 근거 없으면 `ESTIMATE_UNCERTAIN`으로 기록하고 허위 정밀도/자동 퍼센트를 사용하지 않는다. 예상 완료시간·모델 성공확률·가용 토큰/제한·비용·P2 결함 위험을 함께 비교한다.
+4. 원칙은 **Instant가 일반 BE/FE/DB/API/CLI/Controller 실코딩을 빠르게 처리**하는 것. 핵심 병목·복잡한 원자성/신뢰 경계·고위험 알고리즘/디버깅처럼 **사전 상위 모델 배정의 기대 순이익이 합리적으로 큰 작업**은 **Codex GPT-6.1 Sol Max를 실패 이전부터 직접 구현자로 요청 가능**. 이것은 2+2 규칙의 우회가 아닌 **사전 역할 배정**으로, 실제 제품 개발 작업자가 최신 근거를 보고 사용자에게 요청하고 가용성·비용/GO를 확인한다. 전 SWU를 고정적으로 Sol Max에 배정하거나 '80–90% 도달 시 자동 교체'하지 않는다.
+5. **Codex/ChatGPT Work 선택**은 기존 실행 수단 라우팅대로: 코드·DB·보안·CI/브랜치 작업은 Codex 우선, 실제 로그인 UI·브라우저/서비스 콘솔·현장 E2E는 Work 우선. Work에서 지정 Sol Max 모델 사용 가능 여부 미확인 시 `MODEL_UNVERIFIED`; Work 자체를 Sol Max와 동일시하지 않는다. E2E 전수 검증은 여전히 P2.
+6. 고위험 설계/안전 변경의 High 판단과 사용자 승인·원본/외부전송/유료·Production GO는 상위 게이트다. 모델 능력이 권한이 되지 않는다.
+
+### 0I-2. P1 실행·병렬·통합
+
+- `ㄱ` 실행자는 **현재 채팅에 잠긴 해당 제품**의 READY를 재평가한다. 임계경로의 첫 차단 해제와 안전한 독립 READY 다수를 같이 진행한다. 4–6개 묶음은 처리량 목표일 뿐 강제 조건이 아니다. 실제 활용 가능한 인력/도구/모델이 없는 경우 순차 작업한다.
+- 병렬은 **동일 출발 SHA**, 분리 브랜치/작업환경, 충돌 없는 `allowed_paths`, SWU·REQ별 소유자 1명, 통합 담당 1명, 수정/검사 SHA 및 독립 검증 기록이 있을 때만 사용. 필요시 먼저 의존 인터페이스를 고정한다. 서로 같은 파일/계약을 만지거나 분리·인수인계 비용이 이득보다 크면 순차 실행한다.
+- 통합 전 HEAD/권한·변경 경로·필수 안전검사를 재확인하고 정상 커밋/이력 유지. 사용자 GO 없는 main 병합·force push·Production 변경 금지. 모델이 직접 작성한 코드는 `IMPLEMENTED_UNVERIFIED`; 동일 모델 자체 감사는 독립 P2 검수로 간주 금지.
+- **실패 처리 별도:** 일반 SWU는 첫 2회의 근거 있는 무진전 실패→해당 SWU만 격리·원인 재설계→방법이 다른 추가 2회→4회 무진전 시 `SOLMAX_BATCH_PENDING`; 필수 임계 차단이면 0회 실패라도 즉시 담당 제품 작업자가 사용자에게 요청(`IMMEDIATE_OWNER_SOLMAX_REQUEST`). 사전 Sol Max 배정은 일반 실패 카운트 0회를 2/4회로 위조하지 않는다.
+
+### 0I-3. 상태·실측·적용 한계
+
+- 실제 완료 후보는 **코드 입력→callee→처리→출력/상태·정상/거부 실패 경로**가 연결되고 SWU 수용 기준·수정 소스 경로·정확 SHA 및 필요한 최소 syntax/type/smoke/고위험 즉시 안전 검사로 근거가 있을 때만 인정. 단순 문서/mock/Preview/HOLD/테스트 개수는 진척 아님. 공식 가중치·REQ 분모 불충분하면 `완료 SWU/전체 SWU`와 `UNASSESSED`를 병기하고 **SWU 비율을 공식 구현률이라 부르지 않는다**.
+- **P2는 별도:** 전체 CI·테스트/보안/통합·회귀·브라우저·실기기·수정·독립 감사 및 Astra UI/UX는 기존 P2/P3 게이트로. 기존 필수 CI/브랜치 보호·최소 국소 검사·DB/인증/비밀/F18/원본·권리·허가 조건은 유지.
+- 실제 성능 측정: ①P1 100% 후보까지 총 경과시간 ②SWU별 실제 작업시간·시도/재작업 ③임계 차단 해제시간 ④P2 결함/재검증 비용 ⑤Instant/Sol Max/Work 사용량·전환비용 ⑥병렬 충돌/통합 실패. **동일 난이도·의존성이 아니면 단순 전후 비교를 속도 개선 인과증거로 쓰지 않는다**. 수치 미측정 시 `SPEED_EFFECT=UNMEASURED`.
+- EAI 사례: `69987ec4455c9caadd7de8a632cb0b62a1f2ee3b`는 소스 변경 사실, `0462463a23db0d7baf67fadc94d7198e404337e1`는 후속 직렬화 수정 사실만 확인. 8건 재실행 PASS와 전체 시간 단축은 **NOT_VERIFIED/UNMEASURED**. 본 정책을 근거로 EAI·MLA·FFAX·DATA2WEB·DBVORA·AX Dev Factory의 개별 큐/브랜치가 이미 수정됐다고 주장하지 않는다.
+- **효력 충돌 해소:** 이전 문서의 'P1 동안 Codex는 구현 불가/반드시 Instant 실패 후에만 호출'이라는 해석은 본 0I에 의해 대체. 'Instant 기본 구현, High 설계, Codex P2 검증, Astra 독립 UI, High 최종 인수, 소유자 GO'는 그대로. 해총 단독 `ㄱ`은 **GitHub App→HMAC→Vercel→Actions→중앙 원장 고유 임무**이지 다른 제품으로의 자동 전환이 아니다.
+
+
+## 0H. 최우선 실패 처리 단계 — EAI에서 도입한 owner 2+2 · Sol Max 이관
 
 1. 최초 2회: 서로 다른 의미 있는 실제 코드/개선 시도만 누적하고, 증거와 원인·SHA 기록. 진전 없는 2회 뒤 해당 SWU만 `ISOLATED_REDESIGN_PENDING` 격리.
 2. 원인 분석/재설계 후 추가 최대 2회 실제 다른 방법을 적용. 이전 시도는 새 채팅/작업ID로 초기화하지 않음. 다른 독립 READY는 계속.
