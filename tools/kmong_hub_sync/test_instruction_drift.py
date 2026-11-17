@@ -29,6 +29,11 @@ class DriftTests(unittest.TestCase):
     def test_policy_change_detected(self):
         self.assertEqual(audit(self.registry(), "different")["policy_source_status"], "CHANGED_REVIEW_REQUIRED")
 
+    def test_stale_policy_blocks_false_snapshot_match(self):
+        profiles = {"codex": {"rules": {"P2_OWNER": "codex_sol_max"}}}
+        result = audit(self.registry(), "changed", profiles)
+        self.assertEqual(result["profile_results"]["codex"]["status"], "NOT_EVALUATED_POLICY_UNCURRENT")
+
     def test_unavailable_policy_not_marked_current(self):
         self.assertEqual(audit(self.registry(), None)["policy_source_status"], "UNAVAILABLE")
 
