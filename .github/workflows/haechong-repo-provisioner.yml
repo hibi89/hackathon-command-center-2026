@@ -1,0 +1,88 @@
+name: Haechong private repository provisioner
+
+on:
+  push:
+    branches: [kmong-productization]
+    paths:
+      - 'requests/repo_provisioner/*.json'
+  pull_request:
+    branches: [kmong-productization]
+    paths:
+      - 'tools/repo_provisioner/**'
+      - '.github/workflows/haechong-repo-provisioner.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: haechong-repo-provisioner-${ github.repository }}
+  cancel-in-progress: false
+
+jobs:
+  offline-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run focused validation and mock API tests
+        run: python3 -B -m unittest discover -s tools/repo_provisioner -p 'test_*.py' -v
+
+  provision:
+    if: github.event_name == 'push' && github.actor == 'hibi89'
+    needs: offline-tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Require one new owner-submitted request
+        id: request
+        env:
+          GITHUB_BEFORE: ${ github.event.before }}
+          GITHUB_SHA: ${ github.sha }}
+          GITHUB_ACTOR: ${ github.actor }}
+        run: python3 -B tools/repo_provisioner/from_push.py
+      - name: Offline request preflight
+        env:
+          REQUEST_FILE: ${ steps.request.outputs.request }}
+        run: |
+          python3 -B tools/repo_provisioner/provision.py \
+            --request "$REQUEST_FILE" --policy-sha "$GITHUB_SHA"
+      - name: Require provisioner-only app credentials
+        env:
+          PROVISIONER_APP_ID: ${ secrets.REPO_PROVISIONER_APP_ID }}
+          PROVISIONER_APP_PRIVATE_KEY: ${ secrets.REPO_PROVISIONER_PRIVATE_KEY }}
+        run: |
+          if [ -z "$PROVISIONER_APP_ID" ] || [ -z "$PROVISIONER_APP_PRIVATE_KEY" ]; then
+            echo '::error::Dedicated provisioner GitHub App credentials are not configured.'
+            exit 1
+          fi
+      - name: Mint limited GitHub App token
+        id: token
+        uses: actions/create-github-app-token@v2
+        with:
+          app-id: ${ secrets.REPO_PROVISIONER_APP_ID }}
+          private-key: ${ secrets.REPO_PROVISIONER_PRIVATE_KEY }}
+          owner: hibi89
+          permission-repository-creation: write
+          permission-contents: write
+      - name: Create up to three PRIVATE repos and bootstrap
+        env:
+          REQUEST_FILE: ${ steps.request.outputs.request }}
+          GH_REPO_PROVISIONER_TOKEN: ${ steps.token.outputs.token }}
+          HAECHONG_PROVISIONER_ENABLE: YES_CREATE_PRIVATE_REPOS
+        run: |
+          request_id=$(python3 -c 'import json,os; print(json.load(open(os.environ["REQUEST_FILE"]))["request_id"])')
+          python3 -B tools/repo_provisioner/provision.py \
+            --request "$REQUEST_FILE" --policy-sha "$GITHUB_SHA" \
+            --execute --confirm "$request_id"
