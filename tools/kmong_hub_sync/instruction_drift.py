@@ -150,12 +150,15 @@ def audit(registry, source, snapshots=None):
         "actual_account_settings_access": "UNAVAILABLE",
         "action": ("UPDATE_RULE_BASELINE_AND_REVIEW_INSTRUCTIONS" if source_status == "CHANGED_REVIEW_REQUIRED"
                    else "RETRY_POLICY_SOURCE" if source_status == "UNAVAILABLE"
-                   else "OWNER_PROVIDE_RULE_SNAPSHOT" if snapshots is None
-                   else "REVIEW_PROFILE_RECOMMENDATIONS"),
+                   else "REVIEW_DECLARED_CONFLICTS" if any(v["status"] == "DECLARED_CONFLICT" for v in by_profile.values())
+                   else "COMPLETE_OWNER_RULE_SNAPSHOT" if any(v["status"] == "INCOMPLETE_SNAPSHOT" for v in by_profile.values())
+                   else "OWNER_PROVIDE_RULE_SNAPSHOT" if any(v["status"] == "NOT_VERIFIED_NO_SNAPSHOT" for v in by_profile.values())
+                   else "SNAPSHOT_RULES_MATCH_ACCOUNT_UNVERIFIED"),
     }
 
 
-def to_markdown(report):
+def to_markdown(report, registry=None):
+    """Explain known public rules; never infer or echo private account instructions."""
     rows = ["### 해총 개인지침·Codex 지침 충돌 권고 (advisory)",
             f"- 정책 정본: `{report['policy_id']}` / 원격 상태: `{report['policy_source_status']}`",
             f"- 실제 계정 설정 직접 읽기: `{report['actual_account_settings_access']}`",
@@ -171,6 +174,25 @@ def to_markdown(report):
             rows.append("  - 계정 지침 사본이 없어 실제 충돌 여부를 판정하지 못했습니다.")
         for fix in item["recommendations"]:
             rows.append(f"  - `{fix['rule_id']}`: {fix['text']}")
+    if registry is not None and report["policy_source_status"] == "CURRENT":
+        unresolved = {}
+        for rule in registry["rules"]:
+            names = []
+            for name in rule["applies_to"]:
+                profile = report["profile_results"][name]
+                if profile["status"] == "NOT_VERIFIED_NO_SNAPSHOT":
+                    names.append(name)
+                elif rule["id"] in profile.get("missing_rule_ids", []):
+                    names.append(name)
+            if names:
+                unresolved[rule["id"]] = (names, rule)
+        if unresolved:
+            rows.extend(["", "#### 소유자 수동 점검 목록 — 실제 계정 설정은 미조회",
+                         "아래는 현재 정본의 **기대 규칙**이며 적용 여부를 확인한 결과가 아닙니다. "
+                         "계정 지침을 직접 확인한 뒤 비민감 규칙 ID/값만 등록하세요."])
+            for key, (names, rule) in unresolved.items():
+                rows.append("- [ ] " + key + " (" + ", ".join(names) + "): "
+                            + rule["recommendation"] + " — 기준 " + rule["expected"])
     rows.append("- 주의: 지침 원문은 수집·저장·출력하지 않으며, 사본 일치는 계정 실제 적용을 증명하지 않습니다.")
     return "\n".join(rows) + "\n"
 
@@ -217,7 +239,7 @@ def main():
     print(json.dumps(report, ensure_ascii=False, sort_keys=True))
     if args.summary:
         with open(args.summary, "a", encoding="utf-8") as stream:
-            stream.write(to_markdown(report))
+            stream.write(to_markdown(report, registry))
     for message in annotation_messages(report):
         print(message)
 
