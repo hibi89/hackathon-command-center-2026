@@ -2,7 +2,7 @@ import json
 import os
 import unittest
 from unittest.mock import patch
-from instruction_drift import audit, blob_sha, to_markdown, load_snapshot, load_registry, load_env_snapshot
+from instruction_drift import audit, blob_sha, to_markdown, load_snapshot, load_registry, load_env_snapshot, annotation_messages, input_error_note
 from pathlib import Path
 from tempfile import TemporaryDirectory
 
@@ -14,6 +14,51 @@ class DriftTests(unittest.TestCase):
                 "rules": [{"id": "P2_OWNER", "expected": "codex_sol_max",
                            "applies_to": ["chatgpt", "codex"],
                            "recommendation": "P2는 Codex Sol Max가 담당"}]}
+
+    def test_missing_snapshot_generates_notice_not_false_conflict(self):
+        report = audit(self.registry(), "latest")
+        messages = annotation_messages(report)
+        self.assertEqual(len(messages), 1)
+        self.assertIn("::notice title=Personal instruction verification pending", messages[0])
+        self.assertNotIn("conflict", messages[0].lower())
+
+    def test_malformed_registry_rule_arrays_rejected(self):
+        with TemporaryDirectory() as td:
+            p = Path(td) / "rules.json"
+            invalid = self.registry()
+            invalid["schema_version"] = 1
+            invalid["rules"][0]["applies_to"] = [["chatgpt"]]
+            p.write_text(json.dumps(invalid), encoding="utf-8")
+            with self.assertRaises(ValueError):
+                load_registry(p)
+
+    def test_conflict_annotation_never_contains_original_value(self):
+        profiles = {"chatgpt": {"rules": {"P2_OWNER": "actual_secret_policy"}}}
+        report = audit(self.registry(), "latest", profiles)
+        messages = annotation_messages(report)
+        self.assertTrue(any("::warning title=Instruction alignment recommendation" in x for x in messages))
+        self.assertNotIn("actual_secret_policy", "\\n".join(messages))
+
+    def test_incomplete_snapshot_generates_notice(self):
+        report = audit(self.registry(), "latest", {"codex": {"rules": {}}})
+        self.assertTrue(any("comparison incomplete" in x for x in annotation_messages(report)))
+
+    def test_policy_uncurrent_blocks_all_account_notifications(self):
+        report = audit(self.registry(), "old", {"codex": {"rules": {"P2_OWNER": "old"}}})
+        messages = annotation_messages(report)
+        self.assertEqual(len(messages), 1)
+        self.assertIn("Canonical policy changed", messages[0])
+
+    def test_invalid_input_note_does_not_leak_values(self):
+        from contextlib import redirect_stdout
+        from io import StringIO
+        with TemporaryDirectory() as td:
+            p = Path(td) / "summary.md"
+            b = StringIO()
+            with redirect_stdout(b):
+                input_error_note(str(p))
+            self.assertIn("NOT_EVALUATED_INPUT_ERROR", p.read_text(encoding="utf-8"))
+            self.assertNotIn("rule_snapshot_raw", b.getvalue() + p.read_text(encoding="utf-8"))
 
     def test_registry_has_public_rules(self):
         self.assertEqual(len(load_registry()["rules"]), 10)
