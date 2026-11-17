@@ -1,4 +1,6 @@
-# 해총 중앙 — 최신 시작점 (OWNER-DEV-EXECUTION-V2 / 2026-11-16 KST)
+# 해총 중앙 — 최신 시작점 (OWNER-DEV-EXECUTION-V2.1 + SWU-CPAA / 2026-11-17 KST)
+**[SWU-CPAA-20261117]** P1 SWU 크기·REQ·2+2 보존. Instant 기본 구현, 고난도/필수 임계경로는 제품 개발자가 0회 실패부터 Codex GPT-6.1 Sol Max 직접 구현을 요청 가능. 비용·가용성·의존성/병렬 충돌과 총완료시간을 판단하고 `Codex|Work`를 지정한다. [V2.1 §0I](docs/strategy/OWNER_DEV_EXECUTION_CANONICAL_20261116.md)와 [공통 SWU §0D](docs/strategy/GPT6_HIGH_STANDARD_WORK_UNIT_20261117.md)가 우선한다. 해총 단독 `ㄱ`은 GitHub App 고정 임무. P1 정책 코드 변경에 따른 제품 진척 +0, 속도 효과 `UNMEASURED`.
+
 **현재 유효 정본:** [High 설계 → Instant 대량구현 → 후행 CI → Codex 독립검수 → High 인수 → 승인 후 Luna Extra High 등록](docs/strategy/OWNER_DEV_EXECUTION_CANONICAL_20261116.md). 기존 2026-10-28/10-31 '4슬롯만 활성', High가 직접 모든 코딩, 매작업 전체 CI, 2026-11-14 Codex 중간 UX/코딩 순서는 **당시 이력이며 현행 일반 개발 지시가 아니다**. 최종설계·보안·권리·대회 제출·외부승인 게이트는 유지한다.
 
 **임무 잠금:** 해총 중앙 `ㄱ`/`ㄱㄱ`은 [명시된 중앙 GitHub App 미션](data/haechong_active_mission_20261115.json)만 재개한다. 제품 채팅의 `ㄱ`은 그 제품 저장소/브랜치 READY 큐를 이어간다. 채팅/브랜치 지정 없이 HANDOFF의 옛 '다음 작업'만 따라 다른 제품으로 이동하지 않는다.
