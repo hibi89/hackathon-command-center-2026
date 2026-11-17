@@ -1169,7 +1169,7 @@
       "gate": {
         "status": "NO_RUN"
       },
-      "head_sha": "ab57a4849cb535fcd297f64b922dab68e829fb7e",
+      "head_sha": "30d33643abaea5ee2b92b78ae02794486b7d6562",
       "machine_evidence_score": {
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
@@ -1197,7 +1197,7 @@
           "blueprint": {
             "branch": "feature/kmong-eai-85-p31-20261112",
             "git_blob_sha": "41a34d63794d6f099ce8a4055f0da0a8e3367377",
-            "head_sha": "ab57a4849cb535fcd297f64b922dab68e829fb7e",
+            "head_sha": "30d33643abaea5ee2b92b78ae02794486b7d6562",
             "path": "REQUIREMENTS.md",
             "repository": "hibi89/EAI"
           },
@@ -1212,7 +1212,7 @@
           "implementation": {
             "branch": "feature/kmong-eai-85-p31-20261112",
             "git_blob_sha": "44b77d0e66c56a56f174bc91c6c667c64fe60781",
-            "head_sha": "ab57a4849cb535fcd297f64b922dab68e829fb7e",
+            "head_sha": "30d33643abaea5ee2b92b78ae02794486b7d6562",
             "path": "scripts/accept_windows_candidate.py",
             "repository": "hibi89/EAI"
           }
@@ -2856,7 +2856,7 @@
     {
       "canonical": {
         "expected_git_blob_sha": "20b6fbdb690f6a3d032a374f773bf3f6586af2bf",
-        "head_sha": "ab57a4849cb535fcd297f64b922dab68e829fb7e",
+        "head_sha": "30d33643abaea5ee2b92b78ae02794486b7d6562",
         "mode": "observe",
         "observed_git_blob_sha": "41a34d63794d6f099ce8a4055f0da0a8e3367377",
         "owner_approval_verified": false,
@@ -2884,7 +2884,7 @@
           "gate": {
             "status": "NO_RUN"
           },
-          "head_sha": "ab57a4849cb535fcd297f64b922dab68e829fb7e",
+          "head_sha": "30d33643abaea5ee2b92b78ae02794486b7d6562",
           "status": "PRESENT"
         },
         {
@@ -3168,7 +3168,7 @@
     {
       "canonical": {
         "expected_git_blob_sha": "521ba0cb458bea384639a0ef897ce7500d33b8f1",
-        "head_sha": "6fdbc1d4ee223e53cd9a6cefa3bf3a8f39d7f437",
+        "head_sha": "e9a2b7e7afc3ebfc677b95730c214bcd9b732ceb",
         "mode": "observe",
         "observed_git_blob_sha": "521ba0cb458bea384639a0ef897ce7500d33b8f1",
         "owner_approval_verified": false,
@@ -3180,13 +3180,13 @@
         "branch": "main",
         "gate": {
           "conclusion": "success",
-          "head_sha": "6fdbc1d4ee223e53cd9a6cefa3bf3a8f39d7f437",
+          "head_sha": "e9a2b7e7afc3ebfc677b95730c214bcd9b732ceb",
           "matches_current_head": true,
-          "run_id": 44019968694,
+          "run_id": 44033439750,
           "status": "LATEST_RUN",
           "workflow_status": "completed"
         },
-        "head_sha": "6fdbc1d4ee223e53cd9a6cefa3bf3a8f39d7f437",
+        "head_sha": "e9a2b7e7afc3ebfc677b95730c214bcd9b732ceb",
         "status": "PRESENT"
       },
       "repository": "hibi89/hackathon-command-center-2026",
