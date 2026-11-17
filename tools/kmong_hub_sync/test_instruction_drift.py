@@ -2,7 +2,7 @@ import json
 import os
 import unittest
 from unittest.mock import patch
-from instruction_drift import audit, blob_sha, to_markdown, load_snapshot, load_registry, load_env_snapshot, annotation_messages, input_error_note, parse_snapshot
+from instruction_drift import audit, blob_sha, to_markdown, load_snapshot, load_registry, load_env_snapshot, annotation_messages, input_error_note, parse_snapshot, main
 from pathlib import Path
 from tempfile import TemporaryDirectory
 
@@ -119,6 +119,47 @@ class DriftTests(unittest.TestCase):
                 p.write_text(json.dumps(obj), encoding="utf-8")
                 with self.subTest(mutation=mutation), self.assertRaises(ValueError):
                     load_registry(p)
+
+    def test_registry_has_pinned_anchors_for_every_operating_rule(self):
+        registry = load_registry()
+        self.assertEqual(len(registry["rules"]), 10)
+        self.assertTrue(all(rule.get("policy_anchor") for rule in registry["rules"]))
+
+    def test_cli_summary_end_to_end_when_accounts_unavailable(self):
+        from contextlib import redirect_stdout
+        from io import StringIO
+        with TemporaryDirectory() as td:
+            summary = Path(td) / "summary.md"
+            stdout = StringIO()
+            with (patch("instruction_drift.load_registry", return_value=self.registry()),
+                  patch("instruction_drift.fetch_policy", return_value="latest"),
+                  patch("sys.argv", ["advisory", "--summary", str(summary)]),
+                  patch.dict(os.environ, {"HAECHONG_INSTRUCTION_RULE_SNAPSHOT_JSON": ""}),
+                  redirect_stdout(stdout)):
+                main()
+            obj = json.loads(stdout.getvalue().splitlines()[0])
+            self.assertEqual(obj["policy_source_status"], "CURRENT")
+            self.assertEqual(obj["profile_results"]["chatgpt"]["status"], "NOT_VERIFIED_NO_SNAPSHOT")
+            self.assertIn("Personal instruction verification pending", stdout.getvalue())
+            self.assertIn("NOT_VERIFIED_NO_SNAPSHOT", summary.read_text(encoding="utf-8"))
+
+    def test_cli_input_error_no_secret_echo_or_false_success(self):
+        from contextlib import redirect_stdout
+        from io import StringIO
+        with TemporaryDirectory() as td:
+            summary = Path(td) / "summary.md"
+            stdout = StringIO()
+            with (patch("instruction_drift.load_registry", return_value=self.registry()),
+                  patch("instruction_drift.fetch_policy", return_value="latest"),
+                  patch("sys.argv", ["advisory", "--summary", str(summary)]),
+                  patch.dict(os.environ, {"HAECHONG_INSTRUCTION_RULE_SNAPSHOT_JSON":
+                                           '{"schema_version":1,"profiles":{"chatgpt":{"raw_instructions":"PRIVATE_TOKEN_VALUE","rules":{}}}}'}),
+                  redirect_stdout(stdout)):
+                with self.assertRaises(SystemExit) as raised:
+                    main()
+            self.assertEqual(raised.exception.code, 2)
+            self.assertIn("NOT_EVALUATED_INPUT_ERROR", summary.read_text(encoding="utf-8"))
+            self.assertNotIn("PRIVATE_TOKEN_VALUE", stdout.getvalue() + summary.read_text(encoding="utf-8"))
 
     def test_registry_has_public_rules(self):
         self.assertEqual(len(load_registry()["rules"]), 10)
