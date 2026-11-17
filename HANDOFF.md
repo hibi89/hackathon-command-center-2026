@@ -1,5 +1,16 @@
 > **[HAECHONG_PRIMARY_MISSION_LOCK_V1]** PRIMARY_MISSION=GITHUB_APP_CENTRAL_AUTOMATION_90_TO_100; `ㄱ`/`ㄱㄱ` resumes GitHub App → signed HMAC webhook → Vercel bridge → central Actions → ledger; side-product development requires an explicit NEW owner instruction. `HANDOFF` recency cannot override this lock.
 > **[HAECHONG_NEXT_GATE]** One real signed GitHub App Delivery -> existing Production main@5542fb5 -> bot Actions #43859747199 -> collector NO_CHANGE -> ledger readback is E2E PASS (2026-11-16; Delivery response Work-attested, GitHub/Vercel execution independently cross-checked). Whole-design weighted verification UNASSESSED; historical provisional engineering score 90/100 is NOT official completion. RELEASE HOLD; retain GitHub App mission, no side-product switch, main merge or Production change without owner GO.
+## [2026-11-17 KST] OWNER-P1-BROWSER-DEFERRAL — 구현단계 브라우저 병목 제거 정책 (최신)
+1. **목표/확정 요구:** 해총 `kmong-productization` 중앙 공통 개발 절차에서 **P1 구현완료율의 분자/완료기준에 브라우저·Playwright E2E·화면 클릭·시각/스크린샷·반응형/접근성·실로그인 검증을 포함하지 않음**. P1은 BE/FE 필수 코드/API/DB/UI 연결·테스트 하네스 실제 구현, REQ-ID/경로/정확 SHA 근거만 집계하고 P2에서 브라우저 전체 검증을 실시. [정본 V2.1 `0B](docs/strategy/OWNER_DEV_EXECUTION_CANONICAL_20261116.md).
+2. **변경 근거:** `docs/strategy/OWNER_DEV_EXECUTION_CANONICAL_20261116.md`, `AGENTS.md`, `docs/strategy/HIGH_BLUEPRINT_INSTANT_EXECUTION_V1_20261116.md`, `docs/strategy/KMONG_SOL_HIGH_IMPLEMENT_FIRST_QA_LAST_PROTOCOL_20261116.md`, `STATUS.md`, 이 `HANDOFF.md`를 중앙 정책·안전·재개 자료로 정렬. 외출/모바일·승인팝업/OTP·브라우저 검증 차단이면 `DEFERRED_TO_P2 / NOT_RUN`으로 분리하고 다른 독립 READY 구현 지속. 무단 자동 로그인·승인 우회 금지.
+3. **테스트 증거:** GitHub Contents 문서 쓰기·최신 HEAD readback만 실행. Python/CI/Playwright/실브라우저/실기기·제품 기능 테스트는 이 정책 변경에서 `NOT_RUN`; 기존 과거 PASS·GitHub App 실제 E2E 증거를 수정·소급하지 않음.
+4. **진행/차단:** 구현완료율 정의 변경이 실제 REQ 구현/산정 분모·가중치 변경을 뜻하지 않음. P1 문법·타입/국소 스모크·최소 빌드 및 인증·인가·결제·권한·비밀·개인/고객/원본/DB 손실·F18 즉시 보안 검사, 기존 필수 CI·브랜치 보호는 유지. 고위험 **필수 검사**에 브라우저/승인이 필요해 차단되면 해당 위험 작업만 `BLOCKED_EXTERNAL/OWNER_ACTION_REQUIRED/HOLD`; 검증을 완료/안전으로 간주하지 않고 독립 READY 계속.
+5. **원인/대안:** 외출 중 브라우저/OTP·화면공유 승인을 P1의 선행조건으로 삼는 반복 병목을 해소. P2 실제 실행이 불가능하면 `NOT_RUN/BLOCKED`, HTTP·코드 확인만으로 브라우저 PASS 금지.
+6. **repo/branch/SHA:** `hibi89/hackathon-command-center-2026@kmong-productization`; 이 HANDOFF 직전 중앙 정책/STATUS 최신 확인 커밋 `68eae6c30641de22b02a651dd568685ec2873636`. 본 HANDOFF 커밋 이후 HEAD는 재조회. `main@5542fb5bf13cba5f30a374afc423b875790ff58c`·기존 중앙 E2E/원장·각 제품 원본 브랜치 변경 없음.
+7. **Production:** 기존 Vercel Production/CI 워크플로·보안 설정·실 고객 자료/크몽 상품화 작업 미수정. P1 웹 검증은 기본 보류, P2에서 실제 브라우저·Playwright/E2E/반응형/a11y/보안·권한을 정확 SHA로 검사.
+8. **원본/비밀/백업:** 비공개 고객 자료·토큰/.env 등을 공개 저장소에 추가하지 않음. Git 이력 유지, 유료/권한/원본 수정·배포/main 병합·자동 승인 없음.
+9. **다음 READY:** 개발 담당자는 현재 repo/branch/AGENTS/확정 설계→REQ/READY를 확인해 P1 BE/FE 코딩 지속. 각 제품 브랜치에 이 정책이 자동 전파됐다고 주장하지 않으며 필요 시 별도 안전 동기화·SHA 증빙. P1 100% 후보+High 게이트 후 Codex P2 전체 CI·실브라우저·회귀·보안 일괄 검증. 해총 단독 `ㄱ`은 계속 GitHub App→HMAC→Vercel→Actions→중앙 원장 임무만 재개.
+10. **갱신:** 2026-11-17 KST. 중앙 정책 문서 반영·GitHub readback 한정. 기능 구현률·검증완료율·출시·등록 상태 상승/변경 0. 기존 인수인계 사실과 임무 잠금 보존.
 
 ## [2026-11-17 KST] HAECHONG_FIXED_TECH_RUBRIC_AUDIT — 7항 기술 수용 완료 후보, 공식 검증 UNASSESSED
 
