@@ -20,6 +20,8 @@
 - 실행: `python3 -B tools/kmong_hub_sync/instruction_drift.py --summary "$GITHUB_STEP_SUMMARY"`
 - 기존 `kmong-hub-sync.yml`의 완료/연기 결과 **뒤에서** 별도 읽기 전용 단계로 실행하도록 준비. 기존 동기화의 권한·출처·동작을 변경하지 않는다.
 - GitHub Actions 사용자 알림은 계정 설정에 따라 다르므로 **Summary/annotation 생성만 보장**한다. Issue 생성·외부 메시지 전송·계정 지침 자동 수정을 하지 않는다.
+- 선택적 자동 비교 입력: 소유자가 별도 승인 후, **원문이 아닌 비민감 규칙 ID/값 JSON만** GitHub Actions secret `HAECHONG_INSTRUCTION_RULE_SNAPSHOT_JSON`으로 직접 등록하면 해당 워크플로 단계만 런타임에 읽는다. 현재 secret 생성·값 등록은 **NOT_RUN**. secret이 없으면 두 지침 모두 `NOT_VERIFIED_NO_SNAPSHOT`.
+- 자동 비교는 최신 정책 blob SHA와 레지스트리 핀이 일치할 때만 수행한다. 원격 정책 변경/조회 실패 시 `NOT_EVALUATED_POLICY_UNCURRENT`로 방어한다. 이 권고 스텝의 입력 오류가 기존 Collector 성공을 FAIL로 바꾸지 않도록 `continue-on-error`를 사용한다.
 
 ## 선택적 구조화 사본
 
