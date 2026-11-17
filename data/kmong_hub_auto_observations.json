@@ -1169,7 +1169,7 @@
       "gate": {
         "status": "NO_RUN"
       },
-      "head_sha": "2f1a4e0053231524b353145d81c1db0333ef3c6a",
+      "head_sha": "1bb57934be3a914dbb88741f96807215ad90a399",
       "machine_evidence_score": {
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
@@ -1197,7 +1197,7 @@
           "blueprint": {
             "branch": "feature/kmong-eai-85-p31-20261112",
             "git_blob_sha": "41a34d63794d6f099ce8a4055f0da0a8e3367377",
-            "head_sha": "2f1a4e0053231524b353145d81c1db0333ef3c6a",
+            "head_sha": "1bb57934be3a914dbb88741f96807215ad90a399",
             "path": "REQUIREMENTS.md",
             "repository": "hibi89/EAI"
           },
@@ -1212,7 +1212,7 @@
           "implementation": {
             "branch": "feature/kmong-eai-85-p31-20261112",
             "git_blob_sha": "44b77d0e66c56a56f174bc91c6c667c64fe60781",
-            "head_sha": "2f1a4e0053231524b353145d81c1db0333ef3c6a",
+            "head_sha": "1bb57934be3a914dbb88741f96807215ad90a399",
             "path": "scripts/accept_windows_candidate.py",
             "repository": "hibi89/EAI"
           }
@@ -2856,7 +2856,7 @@
     {
       "canonical": {
         "expected_git_blob_sha": "20b6fbdb690f6a3d032a374f773bf3f6586af2bf",
-        "head_sha": "2f1a4e0053231524b353145d81c1db0333ef3c6a",
+        "head_sha": "1bb57934be3a914dbb88741f96807215ad90a399",
         "mode": "observe",
         "observed_git_blob_sha": "41a34d63794d6f099ce8a4055f0da0a8e3367377",
         "owner_approval_verified": false,
@@ -2884,7 +2884,7 @@
           "gate": {
             "status": "NO_RUN"
           },
-          "head_sha": "2f1a4e0053231524b353145d81c1db0333ef3c6a",
+          "head_sha": "1bb57934be3a914dbb88741f96807215ad90a399",
           "status": "PRESENT"
         },
         {
