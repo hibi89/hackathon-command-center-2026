@@ -27,6 +27,12 @@ class QuotaGuardTests(unittest.TestCase):
             with self.subTest(payload=payload), self.assertRaises(GuardError):
                 core_budget(payload)
 
+    def test_invalid_rate_resources_fail_with_guard_error(self):
+        for payload in ({"resources": None}, {"resources": []},
+                        {"resources": "invalid"}, {"resources": {"core": []}}):
+            with self.subTest(payload=payload), self.assertRaises(GuardError):
+                core_budget(payload)
+
     def test_primary_exhausted_deferred_before_bot_query(self):
         self.assertEqual(decide(0, "workflow_dispatch", BOT_ACTOR), "DEFERRED_PRIMARY_BUDGET")
         self.assertEqual(decide(CORE_RESERVE-1, "schedule", ""), "DEFERRED_PRIMARY_BUDGET")
@@ -107,6 +113,16 @@ class QuotaGuardTests(unittest.TestCase):
         ):
             with self.subTest(malformed=malformed):
                 payload = history([current, malformed])
+                self.assertEqual(decide(800, "workflow_dispatch", BOT_ACTOR, 102, payload),
+                                 "DEFERRED_BOT_HISTORY_UNVERIFIED")
+
+    def test_duplicate_or_out_of_order_history_defers_without_scanning(self):
+        newest = run(102, "2026-11-14T02:08:00Z")
+        prior = run(101, "2026-11-14T02:05:10Z", actor="someone-else")
+        for payload in (history([newest, prior, newest]),
+                        history([prior, newest]),
+                        history([newest, newest])):
+            with self.subTest(payload=payload):
                 self.assertEqual(decide(800, "workflow_dispatch", BOT_ACTOR, 102, payload),
                                  "DEFERRED_BOT_HISTORY_UNVERIFIED")
 

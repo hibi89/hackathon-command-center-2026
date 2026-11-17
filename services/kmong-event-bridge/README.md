@@ -97,3 +97,11 @@ Two evidence methods were evaluated: (A) timestamp + bot actor matching (no new 
 ## 2026-11-15 workflow_run path fail-closed candidate (isolated branch)
 
 A name-only event previously fell back to `run.name = Final blueprint completion evidence gate` if both `workflow_run.path` and `workflow.path` were missing. Workflow display names are not unique; this creates an avoidable non-target workflow dispatch risk. Two approaches: A retain name-only compatibility (risks unintended cross-workflow scans), B require the precise allowlisted `.github/workflows/final-blueprint-gate.yml` or `.yaml` path from either run or workflow metadata (adopted). The run path takes precedence; if both are absent, return `202 ignored` with zero GitHub API calls. Canonical paths and HMAC, repository, branch and installation restrictions remain unchanged. This may omit an event whose GitHub webhook provides no path; hourly scheduled reconciliation remains available, and the trade-off is recorded rather than claiming zero false negatives. This code is **not deployed** and requires the existing owner approval process for merging/deployment.
+
+
+## 2026-11-17 isolated dispatch-history defense (PR #6, not deployed)
+
+- The event bridge requires a complete, correctly shaped first page of GitHub Actions dispatch history. Missing `total_count`, partial short pages, absent actor/event metadata, and unordered timestamps result in safe `502 dispatch_failed` without posting another run.
+- The Actions collector's own budget/duplicate gate independently rejects incomplete, malformed, duplicate-ID or out-of-order bot history and reports `DEFERRED_BOT_HISTORY_UNVERIFIED` instead of starting a scan. These checks use existing read-only API calls and introduce no new secrets/services or atomic locking claims.
+- The `kmong-productization` observer-ledger push is outside the allowlist regardless of commit message, preserving loop isolation. Cases are covered by synthetic tests; the two gate layers are **not** an exactly-once guarantee. Existing hourly schedule/redelivery recovery remains best effort.
+- PR #6 is on a feature branch only. Main, Vercel Production, GitHub App permissions, workflow configuration, ledger and official completion are unchanged. User GO is separately required for main/Production rollout; this document is not live deployment proof.

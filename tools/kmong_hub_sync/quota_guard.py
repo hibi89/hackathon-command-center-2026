@@ -39,7 +39,10 @@ def utc_epoch(value):
 def core_budget(payload):
     if not isinstance(payload, dict):
         raise GuardError("invalid rate limit response")
-    core = payload.get("resources", {}).get("core")
+    resources = payload.get("resources")
+    if not isinstance(resources, dict):
+        raise GuardError("invalid rate limit resources")
+    core = resources.get("core")
     if not isinstance(core, dict):
         raise GuardError("missing core rate budget")
     remaining, reset = core.get("remaining"), core.get("reset")
@@ -51,7 +54,7 @@ def core_budget(payload):
 def bot_is_first_eligible_run(payload, current_run_id):
     if not isinstance(payload, dict) or not isinstance(payload.get("workflow_runs"), list):
         raise GuardError("invalid workflow run list")
-    if not str(current_run_id).isdigit():
+    if not str(current_run_id).isdigit() or int(current_run_id) < 1:
         raise GuardError("invalid current workflow run id")
     runs = payload["workflow_runs"]
     total = payload.get("total_count")
@@ -70,6 +73,8 @@ def bot_is_first_eligible_run(payload, current_run_id):
     if not isinstance(own.get("actor"), dict) or own["actor"].get("login") != BOT_ACTOR:
         raise GuardError("unexpected bot dispatch actor")
     own_bucket = utc_epoch(own.get("created_at")) // BURST_WINDOW_SECONDS
+    last_created = None
+    seen_ids = set()
     for prior in runs:
         # Ignore only *verified* unrelated actors, not malformed history rows
         # whose identity/event/timestamp are unknown.
@@ -81,9 +86,17 @@ def bot_is_first_eligible_run(payload, current_run_id):
                 or not prior["actor"]["login"]):
             return None
         try:
-            prior_bucket = utc_epoch(prior.get("created_at")) // BURST_WINDOW_SECONDS
+            prior_created = utc_epoch(prior.get("created_at"))
         except GuardError:
             return None
+        # GitHub returns newest first. An unordered/duplicated page makes the
+        # oldest-entry pagination cutoff untrustworthy: defer, do not scan.
+        if ((last_created is not None and prior_created > last_created)
+                or prior["id"] in seen_ids):
+            return None
+        last_created = prior_created
+        seen_ids.add(prior["id"])
+        prior_bucket = prior_created // BURST_WINDOW_SECONDS
         if (prior["actor"]["login"] == BOT_ACTOR
                 and prior.get("conclusion") != "cancelled"
                 and prior["id"] < int(current_run_id)
