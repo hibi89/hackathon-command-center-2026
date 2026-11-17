@@ -15,3 +15,11 @@ Limitations: The check guards document priority and policy metadata, **not the m
 The guard pins the exact source SHA, delivery UUID, run ID, request ID, and ledger blob as an immutable historical receipt. Its pass result certifies local policy/document consistency, **not** replayed cryptographic verification or future delivery uptime. A new official acceptance decision requires a separate evidence review.
 
 Run offline: `python3 -B tools/haechong_mission_guard/check.py` and `python3 -B -m unittest discover -s tools/haechong_mission_guard -p 'test_*.py' -v`.
+
+## Append-only governance updates without CI regression (2026-11-17)
+
+**Protected invariant:** Every `AGENTS.md`, `STATUS.md` and `HANDOFF.md` on the operating branch must start with the exact two lines `MARKER` and `NEXT` defined by `check.py`. The first two lines are **not available for the latest note**. Write new notes starting at line 3; never insert after only the first line. Only use SHA-checked GitHub file updates and read back the result.
+
+Following two CI failures caused by putting new STATUS/HANDOFF notes between the locked first two lines, the headers were restored with commits `0ce35f5e` (AGENTS), `c40717d4` (STATUS), `3e93784f` (HANDOFF). [Run #44022041391](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/44022041391) **PASS, 18 guard tests**, keeping the original guard strict.
+
+The **pure** `compose.insert_after_mission_lock(source, addendum)` helper returns properly ordered content (or rejects bad headers/duplicate messages) without writing or exposing files. Its tests include idempotency, no override of the top two lines and unsafe inputs. No automatic production deployment/permission changes are associated with this helper.
