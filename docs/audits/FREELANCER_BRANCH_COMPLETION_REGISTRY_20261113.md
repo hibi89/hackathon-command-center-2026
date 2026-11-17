@@ -78,9 +78,18 @@
 | PAWTALK | `product/echohome-pawtalk-local-ai` | UNASSESSED | 미등록·HOLD | 반려동물 놀이형 음성대화 설계, 앱 미검증 |
 | MYRADIO AI | `product/myradio-ai-dj` | UNASSESSED | 미등록·HOLD | 오프라인 WAV 시제품, 실 Windows/상용권리 미검증 |
 | AXNODE | `product/axnode-sector-runtime` | UNASSESSED | 미등록·HOLD | 사용자 A안 독자 바이너리 `.axnode` 최종설계 R01~R29, 별도 로컬 POC 19 PASS; GitHub 브랜치에 실행 소스/CI 미반영, 원격/3GB/Windows 미검증 |
+| **AX ZERO (내부 R&D, 신규 상품 SKU 아님)** | `product/ax-zero-local` | **UNASSESSED (P1 구현 0/36 REQ; P2 NOT_RUN)** | **미등록·RELEASE HOLD** | [2026-11-17 확정 최종설계 36 REQ](https://github.com/hibi89/Freelancer/blob/product/ax-zero-local/docs/FINAL_BLUEPRINT.md) · [GitHub 커밋 `3f55a831cb7f`](https://github.com/hibi89/Freelancer/commit/3f55a831cb7f8ab85cd49bc3cee8470d0310d5ac); 사용자 원래 5단계+AI 호출 제거율/드리프트·선택 재컴파일/독립 검증/MLA·EAI·선택 AXNODE. P1 18작업·P2 9검증 정의, 실행 코드/CI/Windows 미구현·미검증 |
 | WORKNOVA Desk **[작업중]** | `product/worknova-desk-local` | **UNASSESSED** (P85 엔지니어링 Linux 52 PASS/Tk E2E PASS, 공식 85% 미달성·미확정) | 크몽 **미등록·RELEASE HOLD** | Private [P85 소스 `106e6a8f`](https://github.com/hibi89/Freelancer/commit/106e6a8f3c0b2b547344b8ef40dcf15c22b0529a) / docs `7fdea1bf`, [상세](WORKNOVA_DESK_P85_EVIDENCE_20261113.md). DOCX/PDF·SHA-verified Windows Python portable candidate, actual Windows/고객/법률/상업권리/정식 EXE NOT_RUN; P70 역사 보존 |
 
 **현재 GitHub 확인: product/* 10개 브랜치 / 대응 제품 11개(공유 브랜치 ECHOHOME+PAWTALK 포함, BID AX·WORKNOVA Desk 신규 생성).** 이전 8개/9개는 초기 등록 이력이다. ECHOHOME과 PAWTALK는 같은 브랜치를 사용하므로 브랜치 1개=상품 1개로 가정하지 않는다. 모든 행은 현재 확인된 GitHub 브랜치와 Freelancer `main/docs/PRODUCT_INDEX.md`·`HANDOFF.md`를 기준으로 등록했다. 등록완료는 실제 크몽 게시 증거가 있을 때만 기록한다.
+
+## [2026-11-17 KST] AX ZERO 신규 독립 개발 브랜치 등록
+
+- 안정 식별자 `Freelancer/product/ax-zero-local/AX-ZERO`; 별도 AXNODE 제품으로 혼합하지 않음. 사용자 명시 지시로 `hibi89/Freelancer@product/ax-zero-local` 생성, 시작 main `4982ce06cc0e74cbb45fc161b03051b8e0fe2db7`, 문서 HEAD `3f55a831cb7f8ab85cd49bc3cee8470d0310d5ac` 확인. 최종설계/README/AGENTS/REQ/STATUS/HANDOFF/큐 등 15파일 readback 15/15, REQ-01~36 매핑, P1 18·P2 9.
+- **분류:** 내부 로컬 R&D 후보/향후 기술 자산, 신규 크몽 판매 SKU 즉시 추가 아님. 기존 원천29종·판매 서비스19종·실등록완료 이력의 **분모/상태/과거 수치 불변**. 별도 내부 기술 브랜치 기록. 위 2026-11-13 과거 누적 브랜치 집계는 당시 스냅샷이고 이번 증가를 소급 반영하지 않는다.
+- **상태:** 설계 확정·기능 0/36 구현, P1 후보 미달, 공식 검증 가중치 미승인 `UNASSESSED`, P2 NOT_RUN, 제품/고객/브라우저/Windows/비용절감 실증 0, `RELEASE HOLD`/미등록. 가상 AI 호출 제거율 72%를 실측 성능으로 사용 금지.
+- **안전/권한:** GitHub 기본/타 product·AXNODE·EAI·My Local AI 원본/기존 Production·중앙 GitHub App 자동화 코드는 이번 신규 설계에서 변경하지 않음. 외부 모델·유료/민감 데이터·권한·판매는 별도 승인. 중앙 해총의 단독 `ㄱ` GitHub App 임무 잠금은 그대로.
+- 본 등록은 **담당자 수동 동기화**이며 신규브랜치 webhook 무인 자동 발견/등록 성공을 입증하지 않음.
 
 ## 앞으로의 자동 등록 규칙 (정책 확정, 무인 실행은 미구현)
 
