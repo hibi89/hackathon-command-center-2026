@@ -134,3 +134,20 @@
 | https://github.com/tailscale/tailcat | 2026-11-16 | 확인 | BSD-3-Clause | e00cdde6ff78 (11/05) | v0.7.0 | 미확인 |
 | https://github.com/Likely7/Veyra-NRVideo | 2026-11-16 | 확인 | GPL-3.0 | 9a5c9b65e603 (11/15) | v2.1.9-sources | 미확인 |
 | https://github.com/ChromeDevTools/chrome-devtools-mcp | 2026-11-16 | 확인 | Apache-2.0 | 8ba2ac945eba (11/13) | chrome-devtools-mcp-v1.13.0 | 미확인 |
+
+
+## 2026-11-17 신규 조사 프로젝트 (KST)
+
+> GitHub 공식 Trending 직접 페이지 접근 제한. GitHub 공식 도메인 검색 색인에 2026-11-17 조회 시 표시된 저장소 중 **기존 이력 URL에 없는 프로젝트만** 누적. 공식 1~20위 당일 실시간 순위 확정 아님. 원본 GitHub API 메타데이터, README.md SHA, 최근 커밋·릴리스 개별 확인. SPDX는 GitHub API 메타데이터이고 LICENSE/NOTICE 원문·의존성·상업권은 **미감사**.
+
+| 원본 GitHub URL | 조사일 | 검증 수준 | GitHub API SPDX | 최신 커밋 SHA(12자) | 릴리스 확인 |
+|---|---|---|---|---|---|
+| https://github.com/dream-num/univer | 2026-11-17 | 공식 검색 색인 관찰·README SHA 확인·API 메타데이터/커밋/릴리스 조회, 실시간 순위 미확인 | Apache-2.0 | `582f0c25898a` | v1.5.2 |
+| https://github.com/ag-ui-protocol/ag-ui | 2026-11-17 | 공식 검색 색인 관찰·README SHA 확인·API 메타데이터/커밋/릴리스 조회, 실시간 순위 미확인 | MIT | `79530a25f347` | release/2026-11-13 |
+| https://github.com/google-labs-code/stitch-skills | 2026-11-17 | 공식 검색 색인 관찰·README SHA 확인·API 메타데이터/커밋/릴리스 조회, 실시간 순위 미확인 | Apache-2.0 | `0337446dadde` | v1.0 |
+| https://github.com/Tencent/LoopForge | 2026-11-17 | 공식 검색 색인 관찰·README SHA 확인·API 메타데이터/커밋/릴리스 조회, 실시간 순위 미확인 | NOASSERTION | `69e4bf093cf2` | v0.3.8 |
+| https://github.com/ggml-org/ggml | 2026-11-17 | 공식 검색 색인 관찰·README SHA 확인·API 메타데이터/커밋/릴리스 조회, 실시간 순위 미확인 | MIT | `d9fe7bff3d2b` | v1.0.0 |
+| https://github.com/elementalsouls/Claude-BugHunter | 2026-11-17 | 공식 검색 색인 관찰·README SHA 확인·API 메타데이터/커밋/릴리스 조회, 실시간 순위 미확인 | MIT | `64410edb7f44` | v2.1 |
+| https://github.com/NVIDIA/SkillEvaluator | 2026-11-17 | 공식 검색 색인 관찰·README SHA 확인·API 메타데이터/커밋/릴리스 조회, 실시간 순위 미확인 | Apache-2.0 | `a9097b68da8b` | v0.9.0 |
+
+기존 이력에 이미 있는 5개: backnotprop/plannotator, ChromeDevTools/chrome-devtools-mcp, alibaba/open-code-review, GoogleChrome/modern-web-guidance-src, tradermonty/claude-trading-skills (중복 신규 행 없음). 2026-11-13 기준 과거 69개 원본 기록·기존 이후 조사 이력 그대로 보존.
