@@ -1,6 +1,8 @@
 import json
+import os
 import unittest
-from instruction_drift import audit, blob_sha, to_markdown, load_snapshot, load_registry
+from unittest.mock import patch
+from instruction_drift import audit, blob_sha, to_markdown, load_snapshot, load_registry, load_env_snapshot
 from pathlib import Path
 from tempfile import TemporaryDirectory
 
@@ -58,6 +60,24 @@ class DriftTests(unittest.TestCase):
             p.write_text(json.dumps({"schema_version": 1, "profiles": {
                 "chatgpt": {"rules": {"P2_OWNER": "legacy"}}}}), encoding="utf-8")
             self.assertEqual(load_snapshot(str(p))["chatgpt"]["rules"]["P2_OWNER"], "legacy")
+
+    def test_absent_optional_secret_is_unverified(self):
+        with patch.dict(os.environ, {"HAECHONG_INSTRUCTION_RULE_SNAPSHOT_JSON": ""}):
+            self.assertIsNone(load_env_snapshot())
+
+    def test_owner_provided_secret_snapshot_is_parsed_without_logging(self):
+        value = {"schema_version": 1, "profiles": {"codex": {
+            "rules": {"P2_OWNER": "legacy_owner"}}}}
+        with patch.dict(os.environ, {"HAECHONG_INSTRUCTION_RULE_SNAPSHOT_JSON": json.dumps(value)}):
+            parsed = load_env_snapshot()
+        result = audit(self.registry(), "latest", parsed)
+        self.assertEqual(result["profile_results"]["codex"]["status"], "DECLARED_CONFLICT")
+        self.assertNotIn("legacy_owner", json.dumps(result))
+
+    def test_oversize_secret_snapshot_rejected(self):
+        with patch.dict(os.environ, {"HAECHONG_INSTRUCTION_RULE_SNAPSHOT_JSON": "x" * 32769}):
+            with self.assertRaises(ValueError):
+                load_env_snapshot()
 
     def test_reject_unsupported_profile(self):
         with TemporaryDirectory() as td:
