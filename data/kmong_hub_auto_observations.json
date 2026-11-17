@@ -1169,7 +1169,7 @@
       "gate": {
         "status": "NO_RUN"
       },
-      "head_sha": "bf1ef6ebbf2b260f6328fb02dc21233ed9ec509e",
+      "head_sha": "e8a7ca7f34e417a0483d371b014724c95a572ff9",
       "machine_evidence_score": {
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
@@ -1196,8 +1196,8 @@
         "proof": {
           "blueprint": {
             "branch": "feature/kmong-eai-85-p31-20261112",
-            "git_blob_sha": "20b6fbdb690f6a3d032a374f773bf3f6586af2bf",
-            "head_sha": "bf1ef6ebbf2b260f6328fb02dc21233ed9ec509e",
+            "git_blob_sha": "2da1bcd6829f49941a89df62dd5d3d3ca759db63",
+            "head_sha": "e8a7ca7f34e417a0483d371b014724c95a572ff9",
             "path": "REQUIREMENTS.md",
             "repository": "hibi89/EAI"
           },
@@ -1212,7 +1212,7 @@
           "implementation": {
             "branch": "feature/kmong-eai-85-p31-20261112",
             "git_blob_sha": "44b77d0e66c56a56f174bc91c6c667c64fe60781",
-            "head_sha": "bf1ef6ebbf2b260f6328fb02dc21233ed9ec509e",
+            "head_sha": "e8a7ca7f34e417a0483d371b014724c95a572ff9",
             "path": "scripts/accept_windows_candidate.py",
             "repository": "hibi89/EAI"
           }
@@ -2856,13 +2856,13 @@
     {
       "canonical": {
         "expected_git_blob_sha": "20b6fbdb690f6a3d032a374f773bf3f6586af2bf",
-        "head_sha": "bf1ef6ebbf2b260f6328fb02dc21233ed9ec509e",
+        "head_sha": "e8a7ca7f34e417a0483d371b014724c95a572ff9",
         "mode": "observe",
-        "observed_git_blob_sha": "20b6fbdb690f6a3d032a374f773bf3f6586af2bf",
+        "observed_git_blob_sha": "2da1bcd6829f49941a89df62dd5d3d3ca759db63",
         "owner_approval_verified": false,
         "path": "REQUIREMENTS.md",
         "ref": "feature/kmong-eai-85-p31-20261112",
-        "status": "MATCHED"
+        "status": "DRIFT_REVIEW_REQUIRED"
       },
       "main": {
         "branch": "main",
@@ -2884,7 +2884,7 @@
           "gate": {
             "status": "NO_RUN"
           },
-          "head_sha": "bf1ef6ebbf2b260f6328fb02dc21233ed9ec509e",
+          "head_sha": "e8a7ca7f34e417a0483d371b014724c95a572ff9",
           "status": "PRESENT"
         },
         {
@@ -3916,7 +3916,7 @@
   "scope": "Read-only refs, workflow metadata, canonical digests and approved pinned-scorecard CI replay",
   "summary": {
     "blocking_fingerprint_issues": 0,
-    "canonical_matched": 31,
+    "canonical_matched": 30,
     "canonical_not_configured": 4,
     "historical_worker_reports": 16,
     "pinned_rubrics_current_head_verified": 0,
