@@ -78,3 +78,38 @@
 - 신규 main HMAC 서명 Ping 및 배포 후 전체 E2E: **NOT_RUN**.
 - 공식 전체 구현/검증 가중치 분모: **UNASSESSED**. 출시/운영 최종 인수: **HOLD**.
 - 이번 회차는 읽기 검증과 본 감사 기록만 수행. Production, GitHub main, Secrets, HMAC, 설치 권한, 원장 스키마, 다른 프로젝트 설정은 변경하지 않음.
+
+
+## 12. Owner-browser Production parity and live E2E (2026-11-17 KST)
+
+### Existing Vercel owner access and configuration
+- The signed-in owner browser showed Vercel user `godls5898-7447`; team `hibi89` membership is `OWNER`. No team membership, permissions, Secrets, environment variables, domains, or project settings were changed. Vercel API connector calls still return project/deployment 404 and deployment-list 403, but the owner browser can read the existing project.
+- Existing project only: `kmong-hub-event-bridge`, project ID `prj_veZOkRkhMEMEA6h7PiEIl3IKcthn`. Git connection `hibi89/hackathon-command-center-2026`; Production branch `main` (project overview says to update Production by pushing to main).
+- Root Directory `services/kmong-event-bridge`; include files outside Root Directory **enabled**; skip deployments when root/dependencies are unchanged **enabled**. Ignored Build behavior **Only build production**; displayed command exits 1 for `VERCEL_ENV=production` (build) and 0 otherwise (skip). No build-setting change was made.
+- Current Production deployment observed in the owner dashboard: ID `4avFGgsA9c8Znb3vanPKvwB5FtJs`, Ready, source branch `main`, Git SHA `e9a2b7e7afc3ebfc677b95730c214bcd9b732ceb`. Production GET at 2026-11-17 10:15:37 UTC returned HTTP 200: `{"status":"ready","source_sha":"e9a2b7e7afc3ebfc677b95730c214bcd9b732ceb","bridge_feature":"coalesce-v1"}`. SHA equals requested main, so **no redeployment** was performed.
+
+### Production request results
+
+| Check | Evidence | Result |
+|---|---|---|
+| Anonymous GET source parity | Production URL, 2026-11-17 10:15:37 UTC | **PASS** — HTTP 200; source SHA equals main |
+| Unsigned Ping-shaped synthetic POST | Delivery UUID `44444444-4444-4444-8444-444444444444`; first urllib request timed out, curl retry returned `{"status":"invalid_signature"}` | **PASS** — HTTP 401 |
+| Wrong-signature Ping-shaped synthetic POST | Delivery UUID `33333333-3333-4333-8333-333333333333`; all-zero synthetic SHA-256 signature | **PASS** — HTTP 401 `invalid_signature` |
+| Signed non-target Delivery | `65510570-e26c-11f1-83b4-92254672e097`, `workflow_run.completed`; `hibi89/my_local_ai`, branch `dev/instant-implementation-v1`, path `.github/workflows/ci.yml` | **PASS** — Production returned HTTP 202 `{"status":"ignored"}`; no collector run followed from this non-target event |
+| Valid Ping | No Ping among the latest 800 App delivery entries inspected; no App settings were saved or changed to generate another Ping | **NOT_RUN** — do not infer HTTP 200 from source code or another event |
+
+### Correlated Delivery → Actions → collector → ledger readback
+
+- GitHub App source Delivery `a0a4b174-e255-11f1-9978-dcf471fd6007` (2026-11-17 16:08:06 KST): `push` to tracked branch `hibi89/EAI:feature/kmong-eai-85-p31-20261112`, commit `c093fcb9d5e73871fcde5309a3062b96e7d9c7d7`. GitHub Recent Deliveries shows the Production response HTTP 202 `{"status":"queued"}`.
+- Exact source-delivery correlation: [Actions run #44036352165](https://github.com/hibi89/hackathon-command-center-2026/actions/runs/44036352165), `workflow_dispatch`, run name contains the same Delivery UUID, branch `main`, head SHA `e9a2b7e7afc3ebfc677b95730c214bcd9b732ceb`, conclusion **success**; sync job `133880042994` succeeded.
+- Job log reports **KMONG HUB SYNC: UPDATED**, 35 repositories, 80 tracked branches, 29 product records, 29 linked refs, 0 unlinked refs, 0 fingerprint alerts, official scores **UNMODIFIED**. Collector wrote hub commit `28281a00eba554e81a4ba49db9de9082412f6b8f`.
+- Readback of `data/kmong_hub_auto_observations.json` at that exact commit succeeded: blob SHA `992d1b89e544c68afb492ed2c10a7bd734537ca4`; summary records 35 repositories, 80 tracked branches, 29 products/links, 0 unlinked refs, 0 blocking fingerprint issues, 0 provisional official certifications, and `no_official_score_authorization=true`.
+- A second main push Delivery `51e9d152-e252-11f1-8752-051e5609b25c` returned `202 queued` and correlated to run #44033444369, but that run ended `DEFERRED_BOT_BURST`; it is **not** counted as an additional collector update.
+- The GitHub Delivery response does not expose a Vercel Deployment ID. The current owner-dashboard Production deployment ID and current Production SHA are verified separately above; the signed Delivery UUID is correlated to its Actions run and source SHA. Do not present the HTTP delivery record alone as the per-request Vercel Deployment ID.
+
+### Updated state
+- Current Production/main SHA parity: **PASS**, no deployment needed.
+- Unsigned/tampered signature rejection and signed non-target ignore: **PASS**.
+- Actual queued Delivery → successful collector update → exact ledger readback: **PASS**.
+- Valid Ping HTTP 200 and per-request Vercel deployment ID from the Delivery response: **NOT_RUN / NOT_EXPOSED**.
+- Official weighted verification completion and final operational acceptance remain **UNASSESSED / HOLD** until the Ping 200 check and remaining acceptance matrix are resolved. No secret, token, or signature value was recorded.
