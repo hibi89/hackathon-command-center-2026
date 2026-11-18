@@ -72,3 +72,20 @@
 - [google-labs-code/stitch-skills](https://github.com/google-labs-code/stitch-skills)는 REA_WEB/FFAX UI 고도화 참고; [ggml-org/ggml](https://github.com/ggml-org/ggml)는 로컬 추론 연구, [tradermonty/claude-trading-skills](https://github.com/tradermonty/claude-trading-skills)는 KIC/candle_scraper 분석 체크리스트 참고.
 - [Tencent/LoopForge](https://github.com/Tencent/LoopForge)는 HAE/AX Dev Factory 워크플로 연구에 적합하나 GitHub SPDX **NOASSERTION**으로 라이선스·상업 재배포 권리 미확인. 원문 검증 전 소스 통합/재배포 보류.
 - 위 3개 TOP 추천 중 신규 연구 후보는 2개, 기존 후보 기능 보강 1개. 실제 크몽 판매 등록·중앙 원장 변경·구현·고객 수요 검증·배포는 **하지 않음**. 이 문서는 브랜치 내 후보 아이디어만 누적.
+
+
+## 2026-11-18 일간 조사 — 신규 독립 후보 및 기존 후보 중복 방지
+
+> **공식 11/18 Trending TOP20 순위 미확인.** 아래는 2026-11-18 GitHub 저장소 메타데이터 재조회 기반의 **연구 아이디어**이며 매출·고객 수요·구현·라이선스 원문 검증·판매 등록은 미확인. 기존 2026-11-13 후보 30개와 이후 기록은 보존한다.
+
+| 중복 판단 / 독립 판매 후보 | 원본 프로젝트·발견일 | 타깃·납품물 | 가격·기간·난이도 (추정) | 라이선스/상업 이용 위험 | 차별화·필수 검증 |
+|---|---|---|---|---|---|
+| **Docker 자가호스팅 운영 환경 점검·대시보드 구축** — 기존 UGREEN/NAS 상태 감시와 Docker 운영·복구라는 별도 구매 목적 검토; **신규 연구 후보**, SKU 미등록 | [getarcaneapp/arcane](https://github.com/getarcaneapp/arcane), **2026-11-18** | 소형 서버 운영팀·개인 호스팅 / 고객 승인 환경의 Docker 상태 대시보드·보안/백업·복구서 | **120,000~400,000원 / 1~3일 / 중상** | GitHub API SPDX BSD-3-Clause. 원문·NOTICE·의존성·상표·Docker 접근 권한 미감사. 공개/상업 배포 승인 아님 | 고객 장비 소유·권한 최소화, 데이터 무손실·복구 시연. 실제 Docker 버전/접근제어·네트워크 노출·라이선스 확인 |
+| **최근 30일 근거형 시장·콘텐츠 리서치** — 기존 금융·코드 분석과 다른 고객 납품물; **신규 연구 후보**, SKU 미등록 | [mvanhorn/last30days-skill](https://github.com/mvanhorn/last30days-skill), **2026-11-18** | 소상공인·마케팅팀 / 출처 URL·기간·반례·요약 PDF/CSV | **70,000~250,000원 / 1~2일 / 중** | GitHub API SPDX MIT. 원문/플랫폼 데이터 수집·API·재배포/인용권·유료 사용 미감사 | 최신 날짜/출처 검증과 무단 수집 차단. Reddit/X/YouTube/웹 약관, 비용 0, 저작권, 환각·개인정보 검증 |
+| **AI 연구·보고서 작성 프로세스 품질 감사** — 기존 코드 보안감사·SOVIA와 다른 연구 근거 검수; **신규 연구 후보**, SKU 미등록 | [google-research/paper-orchestra](https://github.com/google-research/paper-orchestra), **2026-11-18** | 스타트업 R&D·기술기획 / 인용·출처·주장 근거 감사표·수정 체크리스트 | **120,000~350,000원 / 2~4일 / 중상** | GitHub API SPDX Apache-2.0. 원문·NOTICE·모델/데이터셋·서비스 약관 미감사 | 논문 생성 판매보다 독립 근거 검수. 원문 재현·인용·저작권/표절·모델 비용·독립 정확도 검증 |
+
+### 기존 후보와 연계·중복 통제
+- [ag-ui-protocol/ag-ui](https://github.com/ag-ui-protocol/ag-ui), [dream-num/univer](https://github.com/dream-num/univer)은 **2026-11-17 이미 등록된 에이전트 승인 UI/문서 편집기 후보를 재검토**; 신규 중복 후보 아님.
+- [google-labs-code/stitch-skills](https://github.com/google-labs-code/stitch-skills)는 REA_WEB/FFAX 참고, [sveltejs/svelte](https://github.com/sveltejs/svelte)는 웹 FE 기술 참고; 별도 신규 판매 SKU 아님.
+- [Tencent/LoopForge](https://github.com/Tencent/LoopForge)는 HAE/개발 자동화 참고만; API SPDX **NOASSERTION**이므로 상업권 미확인, 원문 검증 전 코드 통합/재배포 금지.
+- 공식 11/18 GitHub Trending 1~20위와 당일 스타 증가량 전부 미확인. 위 원본 8개 GitHub API metadata 조회만 완료, README·LICENSE 원문·최신 커밋·릴리스·실행·상품 시장성은 **NOT_RUN/미확인**. 유료 API/고객 원본/권한/배포/코드/CI 변경 없음.
