@@ -127,3 +127,55 @@ flowchart TD
 4. **미래 확장:** 도구/리포지토리를 더 들여오기 전 실제 결함률·모델 절감·유지보수 비용이 개선되는지 평가. 실측 이득 없는 외부 프레임워크는 도입 보류.
 
 **이번 2026-11-18 검토의 실행 결과:** 중앙 목표 문서 보강만 수행. 제품 코드 변경 0, 설치 0, 모델 교체 0, 전체 CI/실환경/독립 감사 NOT_RUN, 실측 절감 UNMEASURED, `main`/Production/권한/유료/외부전송 미변경. 해총 단독 `ㄱ` 고유 임무 잠금 불변.
+
+
+---
+
+## 9. Astra Max 최종설계 전용 참고자료 패킷 — 사용자 지정 (2026-11-18)
+
+> **사용자 최종설계 담당 의향:** 향후 AX 개발 생태계의 **최종설계는 Astra Max가 주관**한다. 아래 공개 레퍼런스와 개선 후보를 Astra Max에게 모두 제공하되, **채택·수정·배제·대체안 결정은 Astra Max의 설계 검토**에 맡긴다. 본 공시는 레퍼런스 전달이며, 현재 확정된 웹 Sol High의 P0/P1 담당 정책·각 제품 정본·모델 권한을 즉시 변경하는 실행 명령은 아니다. 실제 미래 담당 전환은 사용자의 프로젝트별 승인과 모델 가용성 확인 후 적용한다.
+
+### 9A. Astra Max에 전달할 입력 문서와 검토 순서
+
+1. **우선 읽기:** 본 문서 전체 §0~§9 → 해총 `AGENTS.md` → `docs/strategy/OWNER_DEV_EXECUTION_CANONICAL_20261116.md` §0J → `docs/strategy/GPT6_HIGH_STANDARD_WORK_UNIT_20261117.md` §0E → 대상 제품의 최신 HEAD, `AGENTS.md`, 최종설계·REQ·HANDOFF/STATUS·소스.
+2. **목표:** '최초 1회 고품질 최종설계 + FE 레퍼런스 → MLA·EAI·FFAX 실제 기능 구현 → REQ Auditor·GitHub Actions 검증 → 독립 감사'를 최소한의 도구/토큰/클릭으로 구현 가능한 **미래 시스템 설계**로 정리. 기존 기능 축소 없이 Windows 11 GTX1050 Ti/16 GB, 무료·로컬 우선, 사용자 모바일 `ㄱ` 중심 작업을 고려.
+3. **대조:** 기존 코드에서 이미 작동하는 것 / 설계만 있는 것 / 미구현·고위험 차단을 나눠 새 중복 제품을 만들지 말 것. FFAX는 주로 React/Web FE; 네이티브 EXE UI는 공유 토큰·계약 가능 여부와 별도 렌더러 필요성을 명시.
+4. **제안 방식:** 각 참고 저장소에서 **재사용 가능한 원리**, 구체적인 MLA/FFAX/EAI/REQ Auditor/해총 배치, 도입 장단점, 비용·권한·유지보수 위험, 채택/보류/배제를 판정하고 근거를 남긴다. '유명 프로젝트라서 설치'는 금지.
+5. **최종 산출물 제안:** (a) 그림/상태표를 포함한 시스템 아키텍처, (b) P0 설계 매니페스트·FFAX 디자인 계약 스키마·BE/FE/API 계약, (c) 안전한 SWU 실행·변경 영향/재시도·GitHub 반영 계약, (d) P1/P2 구분·독립 감사·GO 게이트, (e) 로컬/Instant/Max 사용량·성공률 비교 실험, (f) 채택한 외부 아이디어·제외 이유·선행 조건·REQ/SWU 후보. 설계 검토는 제품 코드 구현/검증 완료와 구분한다.
+
+### 9B. 참고 저장소 전수 목록 (Astra Max 판단자료)
+
+| 영역 | 참고 리포지토리 / 자료 | Astra Max가 확인할 핵심 질문 | 설계 후보 배치 |
+|---|---|---|---|
+| 트렌드 발견 | [GitHub Trending](https://github.com/trending) | 최신 참고 후보가 실제 유지관리·라이선스·보안 근거를 갖췄나? 당일 인기와 품질을 혼동하지 않는가? | 해총 조사/후보 선별 |
+| 사양 중심 개발 | [GitHub Spec Kit](https://github.com/github/spec-kit) | `specify/plan/tasks/implement/converge` 중 기존 REQ·SWU·CPAA 계약에 누락된 최소 수렴 게이트는 무엇인가? | MLA + REQ Auditor |
+| 사양 변경 통제 | [Fission-AI/OpenSpec](https://github.com/Fission-AI/OpenSpec) | 확정 설계의 안전한 delta·영향 추적·보관을 기존 repo 구조에 어떻게 최소 구현할 것인가? | MLA 변경 매니페스트 |
+| 디자인 토큰 | [Google Labs DESIGN.md](https://github.com/google-labs-code/design.md) | Astra의 UI 레퍼런스와 토큰·이유·컴포넌트·a11y 기준을 FFAX가 검증 가능한 계약으로 읽고 비교할 수 있나? 규격 변동성은? | Astra → FFAX |
+| 프론트엔드 고도화 | [pbakaus/impeccable](https://github.com/pbakaus/impeccable) | `critique/audit/polish/harden/adapt` 중 FFAX 자동 수정·시각 회귀에 유용한 절차는? 미학 판단의 한계는? | FFAX + Astra 독립 UX 검수 |
+| 스킬 형식 표준 | [agentskills/agentskills](https://github.com/agentskills/agentskills) | `SKILL.md` 입력·출력·권한·버전·지연 로딩·참고자료 구조를 MLA에 어떻게 안전하게 수용할까? | MLA / AXZERO |
+| 작업 스킬 검증 | [obra/superpowers](https://github.com/obra/superpowers) | 스킬 자체의 품질·회귀·효과 실험과 과도한 절차 비용을 어떻게 판정할까? | MLA 스킬 평가 |
+| 코드 검수 | [alibaba/open-code-review](https://github.com/alibaba/open-code-review) | 정적 규칙/테스트와 LLM 결함 진단을 어떻게 분리하고 허위 PASS와 과다 호출을 막을까? | Actions + REQ Auditor + EAI |
+| 격리 코딩·SOP | [Tencent/LoopForge](https://github.com/Tencent/LoopForge) | 낮은 로컬 자원 소비로 SHA 고정·경로 제한·체크포인트·사용자 승인 게이트를 구현할 수 있나? | MLA 안전 실행기 |
+| UI 에이전트 스킬 | [google-labs-code/stitch-skills](https://github.com/google-labs-code/stitch-skills) | FFAX 참고 워크플로로서 유용한가? 외부 서비스 의존·원본 전송·비용 위험을 제거할 수 있는가? | FFAX 후보, 외부 연동 기본 HOLD |
+
+**연관 기존 문서:** 본 문서 §8A(보강 후보 5개), §8B(계약·안전 경계 7개), §8C(원본 리포지토리별 특징/라이선스), §8D(단계별 도입 순서). 링크는 **학습·비교 참고 자료**이며 최신 README/릴리스/라이선스·실제 코드·보안·유지관리 상태를 Astra Max가 새 설계 시점에 재확인해야 한다. 이전 조사상의 라이선스나 기능 설명만으로 재사용 권한·호환성을 확정하지 않는다.
+
+### 9C. Astra Max 검토 의사결정 카드 (모든 후보 공통)
+
+| 필드 | 기록 기준 |
+|---|---|
+| `reference_url` / `source_commit_or_release` | 공식 원본 URL과 설계 시점 확인한 정확 버전. 미확인 시 `UNVERIFIED` |
+| `problem` / `existing_owner` | 해결할 실제 병목과 이미 소유한 MLA·EAI·FFAX·REQ·해총 구성요소 |
+| `decision` | `ADOPT_IDEA` / `ADAPT_PATTERN` / `DEFER` / `REJECT`; 자동 설치·코드 복사 아님 |
+| `benefit_evidence` | 고정 태스크 대비 개선을 입증할 검사·지표; 추정이면 `UNMEASURED` |
+| `costs_and_risks` | 모델 호출량·로컬 RAM/VRAM·Windows 호환성·유지관리·외부전송·권한·라이선스 |
+| `implementation_boundary` | 대상 repo·허용경로·API 계약·REQ/SWU·선행 의존·P1/P2 게이트 |
+| `fallback` / `rollback` | 보수적 동작, 오류 격리, 이전 설계·코드·기록 보존 |
+| `owner_go` | 유료·비밀·고객 원본/외부 업로드·권한·main/Production·출시는 반드시 별도 승인 |
+
+### 9D. 설계상 강제 보존 사항
+
+- **현재 정책 고정:** 오늘 이 문서 갱신으로 P0/P1 담당·AGENTS·SWU 규격·2+2·고유 보안·필수 CI·P2·독립 감사·제품별 최종설계와 REQ 범위를 변경하지 않는다. 향후 Astra 최종설계 주관은 **목표 역할**로 기록하며 실제 전환은 사용자 별도 GO가 필요하다.
+- **Astra에게 위임하는 것은 설계 판단이며 상용·보안·원본 권한이 아니다.** FFAX가 자동 생성한 레퍼런스 확정/권한 변경, 외부 Stitch 호출, 모델 유료 구독, 위험 DB·Production 작업은 설계 추천만으로 실행하지 않는다.
+- **출처 보존:** 참조 자료 원본 URL/버전/라이선스·해석·선택 이유를 남기고 GitHub 공개 코드·Agent Skills의 프롬프트/스크립트를 신뢰된 명령으로 취급하지 않는다. Code execution 또는 외부 네트워크 연결은 별도 신뢰·권한·비용 검토가 필요하다.
+- **이번 작업은 참고자료 공시만:** 설치/코딩/테스트/도입/모델 검수 실행 `NOT_RUN`, 기능·검증 진척 0, 성능/토큰 절감 `UNMEASURED`, 제품 repo/main/Production 무변경.
