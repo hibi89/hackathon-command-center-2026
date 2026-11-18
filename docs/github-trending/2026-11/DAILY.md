@@ -198,3 +198,38 @@
 ### 라이선스·보안·검증 한계
 - MIT/Apache-2.0은 통상 상업 이용 가능하나 라이선스 고지/NOTICE·상표·의존성·SDK/클라우드 별도 약관이 남는다. Tencent/LoopForge의 GitHub API SPDX **NOASSERTION**은 상업 이용 권리 미확인으로 취급, 원문 검토 전 재배포 보류. 공개 저장소라는 이유만으로 상업 재배포를 허용한다고 추정 금지.
 - GitHub 원본 메타데이터/README 파일/커밋/릴리스 읽기만 수행. 고객·비공개 코드 공개, 유료 API, CI, 코드, 권한, 배포 변경 **NOT_RUN**. 신규 7개 저장소 이력은 별도 RESEARCH_HISTORY_INDEX에 URL·검증 수준 기록.
+
+
+## DAILY-2026-11-18 (2026-11-18 09:59 KST)
+
+### 사실 — 공식 순위 확인 범위
+- GitHub 공식 https://github.com/trending?since=daily 직접 접근: **restricted URL / 실패**. 2026-11-18 공식 Today 1~20위와 stars today 증가량 **전부 미확인**. 공식 weekly/monthly 1~30위도 이번 회차 직접 확인하지 못했으므로 미확인.
+- 공식 순위·스타 증가량을 **임의로 재구성하지 않음**. 2026-11-17 수집된 외부 [Equibles](https://equibles.com/trackers/81573f88-3039-465f-9d39-f022b9e242f6/github-trending-repositories-with-language-and-star-counts) 캡처에는 15개 목록·일부 증가량이 있으나 **11/18 당일 GitHub 공식 TOP20이 아님**. 11/17 [githubtrending.today](https://githubtrending.today/)와 [repocharts](https://repocharts.com/)도 공식 순위와 분리.
+- 아래 8개는 **전일 외부 관찰/기존 연구에서 선정한 개별 GitHub 원본 API 재조회 목록**이다. 번호는 순위가 아니다. 2026-11-18 KST GitHub 저장소 API에서 이름·설명·LICENSE SPDX 메타데이터·현재 전체 stars를 확인. README 파일·LICENSE 원문/NOTICE/의존성·최근 커밋·릴리스는 이번 조회에서 **미확인**. `updated_at`은 커밋 시각이 아니며 현재 총 stars는 stars today가 아니다.
+
+| 관찰 저장소(공식 순위 아님) | 핵심 기능 / 실용 사례 | GitHub 총 stars (시점값, 증가량 아님) | README | LICENSE API SPDX (원문 미확인) | 최신 커밋/릴리스 |
+|---|---|---:|---|---|---|
+| [google-research/paper-orchestra](https://github.com/google-research/paper-orchestra) | 다중 에이전트 연구 논문 작성 / 문헌 조사 초안 검수 | 3,002 | 미확인 | Apache-2.0 | 미확인/미확인 |
+| [getarcaneapp/arcane](https://github.com/getarcaneapp/arcane) | Docker 관리 UI / 자가호스팅 운영 | 9,329 | 미확인 | BSD-3-Clause | 미확인/미확인 |
+| [mvanhorn/last30days-skill](https://github.com/mvanhorn/last30days-skill) | 여러 공개 소스의 최근 30일 조사·요약 / 마케팅 리서치 | 69,065 | 미확인 | MIT | 미확인/미확인 |
+| [sveltejs/svelte](https://github.com/sveltejs/svelte) | 웹 프레임워크 / 반응형 프론트엔드 개발 | 89,598 | 미확인 | MIT | 미확인/미확인 |
+| [ag-ui-protocol/ag-ui](https://github.com/ag-ui-protocol/ag-ui) | 에이전트-프론트엔드 통신 / 승인형 AI UI | 19,999 | 미확인 | MIT | 미확인/미확인 |
+| [dream-num/univer](https://github.com/dream-num/univer) | 문서·스프레드시트 SDK / 업무용 편집기 | 28,900 | 미확인 | Apache-2.0 | 미확인/미확인 |
+| [Tencent/LoopForge](https://github.com/Tencent/LoopForge) | 자가호스팅 코딩 에이전트 워크플로 / 인간 승인 | 3,146 | 미확인 | NOASSERTION (상업권 미확인) | 미확인/미확인 |
+| [google-labs-code/stitch-skills](https://github.com/google-labs-code/stitch-skills) | Stitch MCP 에이전트 UI 스킬 / 디자인 자동화 | 10,105 | 미확인 | Apache-2.0 | 미확인/미확인 |
+
+**11/18 공식 순위 1~20 및 stars today:** 20개 모두 미확인. 원본 API 조회는 저장소가 당일 공식 Trending에 포함되었다는 증거가 아니다.
+
+### 분석 — 기존 제품 연계 (실제 통합/호환성 미검증)
+- HAE: LoopForge 승인형 워크플로, AG-UI 진행상태 UI; SOVIA: paper-orchestra의 출처·검증 워크플로; DBVORA: Univer 문서·표 UI; REA_WEB: Svelte·Stitch Skills 디자인/구현 연구.
+- KIC: last30days-skill 자료 출처 확인 방식 참고(투자 조언 아님); PayPal: AG-UI 승인/Univer 문서 워크플로(실결제/원본 접근 금지); UGREEN: Arcane Docker 관리의 자체 운영 패턴(실 NAS 미검증); candle_scraper: 최근 30일 리서치와 데이터 수집 정확성 구분.
+- 기존 SVC-07/14, UGREEN, REA_WEB 및 11/17 독립 후보와 고객 납품물이 겹치는 경우 **중복 상품 생성 금지**. 기존 30개 후보/69개 연구 기록은 보존.
+
+### 제안 — 독립 납품 TOP3 (당일 Trending 순위 TOP3 아님, 가격·기간 추정)
+1. **Docker 자가호스팅 운영 환경 점검·대시보드 구축** — 원본 [Arcane](https://github.com/getarcaneapp/arcane), **고객:** 소규모 서비스 운영팀/개인 서버 운영자. **납품:** 허가된 고객 서버의 Docker 관리 UI, 읽기전용 상태 보고, 백업/복구·보안 점검서. **12만~40만원 / 1~3일 / 중상 (추정)**. SPDX BSD-3-Clause(원문/종속물/상표 미감사); 차별화: 권한 최소화·복구 시연. 필수: 실제 Docker 권한/네트워크·컨테이너 데이터 보호·원격 노출 금지·라이선스/NOTICE 검증. UGREEN/NAS 상품과 별도 고객 문제인지 확인.
+2. **최근 30일 근거형 시장·콘텐츠 리서치 리포트** — 원본 [last30days-skill](https://github.com/mvanhorn/last30days-skill), **고객:** 소상공인/마케팅팀. **납품:** 허가된 공개 소스별 링크·날짜·주제·반례를 포함한 PDF/CSV·재현 방법. **7만~25만원 / 1~2일 / 중 (추정)**. SPDX MIT(원문·플랫폼 약관/유료 API/재배포 권리 미감사); 차별화: 인용·기간 검증, 로컬 무료 수집 범위만. 필수: Reddit/X/YouTube 등 API/약관·비용·개인정보·원문 인용권·환각 검사. 기존 KIC 금융 리서치와 분리.
+3. **AI 연구·보고서 작성 프로세스 품질 감사** — 원본 [paper-orchestra](https://github.com/google-research/paper-orchestra), **고객:** 스타트업 R&D·기술기획팀. **납품:** 합성/공개 자료로 작성한 출처 검증·인용 오류·중복 주장·수정 체크리스트. **12만~35만원 / 2~4일 / 중상 (추정)**. SPDX Apache-2.0(원문·NOTICE·모델/데이터셋/외부 서비스 약관 미감사); 차별화: 논문 자동생성 자체가 아닌 출처·정확도 독립 검수. 필수: 실제 README/실행환경·저작권·표절/인용·외부 API 비용·독립 평가. 기존 SOVIA 보안감사와 목적 구분.
+
+### 검증·안전 결론
+- GitHub API SPDX만으로 상용 배포·재배포 권리 확정 불가. LoopForge NOASSERTION은 원문 확인 전 코드 결합·재판매 보류. 고객 데이터·비공개 코드·유료 API·CI/권한·기존 제품/Production 변경 **NOT_RUN**.
+- **수집 품질:** 공식 당일 TOP20 미확인, 8개 원본 저장소 메타데이터 확인, README/라이선스 원문/최근 커밋/릴리스 미확인. 8개는 공식 Trending 당일 후보로 확정하지 않는다.
