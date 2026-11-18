@@ -1169,7 +1169,7 @@
       "gate": {
         "status": "NO_RUN"
       },
-      "head_sha": "dfdd9cec52d3c0f018d03f35b7d3e0f1aac916ba",
+      "head_sha": "5bd01f2d7132d7e17fc5c216e867a84ce9a3a81b",
       "machine_evidence_score": {
         "percent": null,
         "reason": "No approved pinned 100-point scorecard + exact-SHA CI evidence",
@@ -1196,8 +1196,8 @@
         "proof": {
           "blueprint": {
             "branch": "feature/kmong-eai-85-p31-20261112",
-            "git_blob_sha": "10650d78bd5d6f44af0384d63fe06418d0a1ff62",
-            "head_sha": "dfdd9cec52d3c0f018d03f35b7d3e0f1aac916ba",
+            "git_blob_sha": "f8d596422062e359bcf718771d7665b91dbc2954",
+            "head_sha": "5bd01f2d7132d7e17fc5c216e867a84ce9a3a81b",
             "path": "REQUIREMENTS.md",
             "repository": "hibi89/EAI"
           },
@@ -1212,7 +1212,7 @@
           "implementation": {
             "branch": "feature/kmong-eai-85-p31-20261112",
             "git_blob_sha": "44b77d0e66c56a56f174bc91c6c667c64fe60781",
-            "head_sha": "dfdd9cec52d3c0f018d03f35b7d3e0f1aac916ba",
+            "head_sha": "5bd01f2d7132d7e17fc5c216e867a84ce9a3a81b",
             "path": "scripts/accept_windows_candidate.py",
             "repository": "hibi89/EAI"
           }
@@ -2856,9 +2856,9 @@
     {
       "canonical": {
         "expected_git_blob_sha": "20b6fbdb690f6a3d032a374f773bf3f6586af2bf",
-        "head_sha": "dfdd9cec52d3c0f018d03f35b7d3e0f1aac916ba",
+        "head_sha": "5bd01f2d7132d7e17fc5c216e867a84ce9a3a81b",
         "mode": "observe",
-        "observed_git_blob_sha": "10650d78bd5d6f44af0384d63fe06418d0a1ff62",
+        "observed_git_blob_sha": "f8d596422062e359bcf718771d7665b91dbc2954",
         "owner_approval_verified": false,
         "path": "REQUIREMENTS.md",
         "ref": "feature/kmong-eai-85-p31-20261112",
@@ -2884,7 +2884,7 @@
           "gate": {
             "status": "NO_RUN"
           },
-          "head_sha": "dfdd9cec52d3c0f018d03f35b7d3e0f1aac916ba",
+          "head_sha": "5bd01f2d7132d7e17fc5c216e867a84ce9a3a81b",
           "status": "PRESENT"
         },
         {
