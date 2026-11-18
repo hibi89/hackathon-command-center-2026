@@ -151,3 +151,18 @@
 | https://github.com/NVIDIA/SkillEvaluator | 2026-11-17 | 공식 검색 색인 관찰·README SHA 확인·API 메타데이터/커밋/릴리스 조회, 실시간 순위 미확인 | Apache-2.0 | `a9097b68da8b` | v0.9.0 |
 
 기존 이력에 이미 있는 5개: backnotprop/plannotator, ChromeDevTools/chrome-devtools-mcp, alibaba/open-code-review, GoogleChrome/modern-web-guidance-src, tradermonty/claude-trading-skills (중복 신규 행 없음). 2026-11-13 기준 과거 69개 원본 기록·기존 이후 조사 이력 그대로 보존.
+
+
+## 2026-11-18 개별 원본 API 재조사 — 공식 당일 순위 미확인
+
+- 2026-11-18 09:59 KST. 공식 https://github.com/trending?since=daily 접근 제한. **당일 공식 1~20위 및 stars today 미확인**. 아래는 전일 외부 관찰/기존 조사에서 선정한 8개를 GitHub 원본 API로 재조회한 결과로 공식 Trending 순위 인증이 아니다.
+- 원본 API: 저장소 존재·설명·라이선스 SPDX·현재 총 stars 확인. README, LICENSE/NOTICE 원문·의존성·최근 커밋·릴리스는 이번 조사 미확인. API SPDX는 상업 이용 최종 허가가 아니다.
+- **신규 조사 이력 URL 4개:** google-research/paper-orchestra, getarcaneapp/arcane, mvanhorn/last30days-skill, sveltejs/svelte.
+
+| 새 URL | 최초 조사일 | 검증 수준 |
+|---|---|---|
+| https://github.com/google-research/paper-orchestra | 2026-11-18 | GitHub API repo/description/license SPDX Apache-2.0; README/원문/커밋/릴리스 미확인, Trending 순위 미확인 |
+| https://github.com/getarcaneapp/arcane | 2026-11-18 | GitHub API repo/description/license SPDX BSD-3-Clause; README/원문/커밋/릴리스 미확인, Trending 순위 미확인 |
+| https://github.com/mvanhorn/last30days-skill | 2026-11-18 | GitHub API repo/description/license SPDX MIT; README/원문/커밋/릴리스 미확인, Trending 순위 미확인 |
+| https://github.com/sveltejs/svelte | 2026-11-18 | GitHub API repo/description/license SPDX MIT; README/원문/커밋/릴리스 미확인, Trending 순위 미확인 |
+- 기존 URL 재조사: ag-ui-protocol/ag-ui, dream-num/univer, Tencent/LoopForge, google-labs-code/stitch-skills. 과거 69개 원본과 2026-11-13 기준 30개 상품 후보·이후 누적 이력 보존. 순위·스타 증가량을 API 총 star 수로 대체하지 않음.
