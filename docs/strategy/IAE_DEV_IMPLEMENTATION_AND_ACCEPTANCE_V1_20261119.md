@@ -1,7 +1,7 @@
-# IAE_dev — P1 REQ·SWU 구현·P2 수용 계획 v1.0
+# IAE_dev — P1 REQ·SWU 구현·P2 수용 계획 v1.1
 
 > 2026-11-19 KST · **IAE_dev 신규 프로그램 전용 계획/설계 기준선**. 상위: [IAE_dev 통합 최종설계](IAE_DEV_FINAL_BLUEPRINT_V1_20261119.md).  
-> **현재:** 전용 repo/코드 미생성, 아래 모든 ID는 계획 수용조건. 구현·검증 **NOT_RUN**, 공식률 **UNASSESSED**, 출시 HOLD. 문서 28 REQ/22 SWU/9 P2 게이트는 **타 제품 분모에 합산하거나 완료로 인정하지 않음**. 개발 repo 출범 시 동일 ID·기능 범위·계약을 이식하고 SHA·실제 코드 증거로 상태 재산정.  
+> **현재:** 전용 공개 repo·P0 브랜치·초기 큐 생성 완료 / 실제 앱 소스 코드 미생성, 아래 모든 ID는 계획 수용조건. 구현·검증 **NOT_RUN**, 공식률 **UNASSESSED**, 출시 HOLD. 문서 28 REQ/22 SWU/9 P2 게이트는 **타 제품 분모에 합산하거나 완료로 인정하지 않음**. 개발 repo 출범 시 동일 ID·기능 범위·계약을 이식하고 SHA·실제 코드 증거로 상태 재산정.  
 > **원칙:** 현행 중앙 `AGENTS.md`, `OWNER_DEV_EXECUTION_CANONICAL_20261116.md` `0J, `GPT6_HIGH_STANDARD_WORK_UNIT_20261117.md` `0E, 원본 제품별 AGENTS·최종설계가 우선. 신규 계획이 MLA/FFAX/REQ/AXZERO/EAI의 기존 SWU·안전·상품 범위를 변경하지 않는다.
 
 ## 0. 단계 잠금과 수치
@@ -142,9 +142,29 @@ flowchart TD
 
 ## 6. 작업자용 재개·인계 계약
 
-1. 해총 최신 원격 HEAD/`AGENTS`, 본 정본과 기존 목표문서 대조. 실제 신규 IAE_dev repo를 만들기 전에는 **설계만**; repo를 승인된 위치에 생성 후 `repo/branch/SHA`와 `AGENTS/HANDOFF/STATUS/REQUIREMENTS/P1·P2 JSON 원장` 초기화.
+1. 해총 최신 원격 HEAD/`AGENTS`, 본 정본과 기존 목표문서 대조. 신규 `hibi89/IAE_dev` repo와 설계/코딩/검증 브랜치 및 `AGENTS/HANDOFF/STATUS/REQUIREMENTS/P1·P2 JSON 원장` 초기화 완료. 앱 실제 소스 코드는 아직 미구현이며, 다음 `ㄱ`에서는 `dev` 브랜치 최신 HEAD/안전·실제 READY 확인 후 코딩.
 2. 시작 wave에서 현재 HEAD, ID/S-C-I-D-U, `depends_on`, `allowed_paths`, 실제 READY, 승인·신뢰 차단 및 기존 제품 상태를 재판정한다. 계획 `PLANNED_NOT_READY`를 CODE_READY라 부르지 않는다.
 3. 실제 수직 기능·정상 및 핵심 오류 경로→필수 국소 문법·타입·스모크·고위험 안전 검사→GitHub 고유 소스 SHA 기록. 매번 모든 P2 CI를 수동 폴링하지 않는다.
 4. 실패 초기 2회→`ISOLATED_REDESIGN_PENDING`, 대안 2회→`SOLMAX_BATCH_PENDING`. 고위험 신뢰 과제는 코드와 원인 검토 후 즉시 전문 지원 요청 가능. Sol Max 실제 모델 가용성 미확인 시 `MODEL_UNVERIFIED`; Code/Work 실행 표면 구분.
 5. 보고: 신규 완료 IAE SWU/총계, P1 source 후보 vs P2 게이트/독립감사/GO, 작업 정확 SHA/파일, local PASS/FAIL/SKIP/NOT_RUN, 격리/승인·다음 READY, 기록 기준 KST. 기존 MLA/FFAX/AXZERO/REQ 숫자와 합쳐 전체 완료 %를 내지 않는다.
 6. 이 문서 커밋만으로 **소스·모델·테스트·배포·사용자 OS·외부 연동을 실행한 것이 아니다**. 새 repo 생성, 유료/외부 전송/원본·권한·main·Production·실사용 승인은 별도 처리한다.
+
+
+## 7. 2026-11-20 Flash/Hydrogen 수용조건 세분화 (분모 28/22/9 불변)
+
+[외부 AI 상세 정책](../EXTERNAL_AI_ROUTING_V1_20261120.md)은 IAE-REQ-05/09/10/17/26/27/28에 귀속한다. **새 SWU·P2 게이트를 가짜 추가하거나 완성률을 소급하지 않는다.**
+
+| 기존 작업 ID | 추가 기능·검증 조건 |
+|---|---|
+| IAE-SWU-006 | provider capability/free-tier/RPM·TPM·RPD와 Gemini 3.5 Flash의 3.6 Flash 이관, 모델 실제 ID·버전 불일치·기본 OFF |
+| IAE-SWU-007 | MLA 권한/F18 요청·응답 계약: 모델은 UNTRUSTED_PROPOSAL, 별도 승인 없는 외부 송신·실행 차단 |
+| IAE-SWU-018 | 비밀·private/customer data egress 차단, per-call 승인, 401/403/429/유료 전환/OOD fail-closed, Flash 에러시 Hydrogen 자동 전환 금지 |
+| IAE-SWU-019 | Hydrogen rolling24h 20회 제한·긴급예약 4·동시1/작업당1, 원자 예약/중복요청/전송불명 UNKNOWN_CONSUMED/재시작 복구·비용 원장 |
+| IAE-SWU-020 | Qwen·Flash·Hydrogen 실제 모델 ID/승인·무료 tier/쿼터 검증/Used·Reserved·Remaining/429·차단 상태 UI |
+| IAE-P2-05 | 비밀 유출·위조 승인·계정 무료 미확인·20번째/21번째 경계·예약 4·모델명 이동·HTTP 401/403/429/503, 차단 결과 |
+| IAE-P2-06 | SQLite 원자 quota reservation·동일 request_id·중복실행·전원손실·다중 프로젝트 소진량·불확실한 전송 회계·복구 |
+| IAE-P2-09 | provider 전부 OFF 기본 E2E, Flash 정상/429 mock·Hydrogen 특별 승인/자동승격 금지 mock, API 라이브 NOT_RUN 구분 |
+
+모든 외부 API는 `external_enabled=false, max_spend_usd=0` 기본값에서 시작한다. 사용자 계정 무료 등급·RPD/RPM/TPM 및 비민감 입력 전송의 **구체적 GO 없으면 live call 금지**. 타 제품의 F18·Owner·원본/CI/권한 유지. 본 설계 수정으로 P1/P2 수용 증가 0.
+
+> **IAE_dev 원본 P0 기준:** https://github.com/hibi89/IAE_dev/blob/design/iae-dev-final-v1/docs/strategy/IAE_DEV_IMPLEMENTATION_AND_ACCEPTANCE_V1_20261119.md (2026-11-20 동기화; 제품 자체 정본이 우선이며 해총 GitHub App 고유 임무 불변).
