@@ -1,5 +1,8 @@
 # IAE_dev — IAE 비전의 첫 번째 작업 생태계 (목표 설계)
 
+> **[2026-11-20 · IAE_dev P0 v1.1 외부 AI 라우팅 확정]** 현재 제품 원본 정본: [IAE_dev 최종설계 v1.1](https://github.com/hibi89/IAE_dev/blob/design/iae-dev-final-v1/docs/strategy/IAE_DEV_FINAL_BLUEPRINT_V1_20261119.md). [Flash 일반 지원·Hydrogen 특수 rolling24h 20회](../EXTERNAL_AI_ROUTING_V1_20261120.md)와 [기계 정책](../../data/EXTERNAL_AI_ROUTING_POLICY_V1.json)을 포함한다. 외부 모델 API 기본 OFF, 무료/계정 한도 미검증, 구현·P2·출시 미완, 해총 GitHub App 임무 불변.
+
+
 > **[2026-11-19 KST · P0 통합 최종설계 확정 / 기존 목표 기록 보존]** 이 문서는 이전 TARGET_ONLY 목표·조사 이력을 원문 그대로 보존한다. 사용자 확정 요청에 따라 통합 구조·실제 구현 기술·AXZERO/MLA/REQ 경계·패키징·단계·승인 기준의 **현행 IAE_dev 설계 정본**은 [IAE_dev 통합 최종설계 v1.0](IAE_DEV_FINAL_BLUEPRINT_V1_20261119.md)이며, 전용 [28 REQ / 22 P1 SWU / 9 P2 수용계획](IAE_DEV_IMPLEMENTATION_AND_ACCEPTANCE_V1_20261119.md)을 따른다. 문서 확정은 IAE_dev 앱/EXE·코드·검증 완료가 아니며, 해총 GitHub App 임무/원본 제품 정본·안전 게이트/승인 정책을 변경하지 않는다.
 
 
