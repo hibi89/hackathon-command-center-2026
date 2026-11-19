@@ -233,3 +233,47 @@
 ### 검증·안전 결론
 - GitHub API SPDX만으로 상용 배포·재배포 권리 확정 불가. LoopForge NOASSERTION은 원문 확인 전 코드 결합·재판매 보류. 고객 데이터·비공개 코드·유료 API·CI/권한·기존 제품/Production 변경 **NOT_RUN**.
 - **수집 품질:** 공식 당일 TOP20 미확인, 8개 원본 저장소 메타데이터 확인, README/라이선스 원문/최근 커밋/릴리스 미확인. 8개는 공식 Trending 당일 후보로 확정하지 않는다.
+
+
+## DAILY-2026-11-19
+
+- 조사 시각: 2026-11-19 10:01 KST. **공식 GitHub Trending Today 원본 접근 실패**(restricted URL). 따라서 **2026-11-19 공식 TOP20 순위·stars today 모두 미확인**. 아래 표의 순번은 **2026-11-18 제3자 기록의 순서**로서 11/19 공식 순위가 아니다. 출처: https://trend.ondo.sh/github/en.html (페이지에 Wednesday 2026-11-18 명시). 외부 데이터와 공식 순위 분리.
+- 주간·월간 공식 TOP30도 이번 회차 조회·검증하지 않음. 당일 신규 등장 여부 미확인. 표시 스타 증가량 전부 미확인.
+
+### 사실 — 전일 외부 기록 20개 (11/19 공식 순위 아님)
+| 외부 11/18 순번 | 원본 프로젝트 | 기능·실용 사례(개략) | 11/19 공식 stars today | 원본 개별 검증 |
+|---:|---|---|---|---|
+| 1 | [elementalsouls/Claude-BugHunter](https://github.com/elementalsouls/Claude-BugHunter) | AI 보안 스킬 | 미확인 | README 미확인 / LICENSE 미확인 / 커밋·릴리스 미확인 |
+| 2 | [cursor/plugins](https://github.com/cursor/plugins) | Cursor 플러그인 모음 | 미확인 | README 미확인 / LICENSE 미확인 / 커밋·릴리스 미확인 |
+| 3 | [HKUDS/CLI-Anything](https://github.com/HKUDS/CLI-Anything) | 에이전트용 CLI 생성 | 미확인 | README 확인 / LICENSE 확인 / 커밋·릴리스 미확인 |
+| 4 | [mvanhorn/last30days-skill](https://github.com/mvanhorn/last30days-skill) | 최근 30일 조사 | 미확인 | README 미확인 / LICENSE 미확인 / 커밋·릴리스 미확인 |
+| 5 | [getarcaneapp/arcane](https://github.com/getarcaneapp/arcane) | Docker 관리 | 미확인 | README 확인 / LICENSE 확인 / 커밋·릴리스 미확인 |
+| 6 | [NVIDIA/SkillEvaluator](https://github.com/NVIDIA/SkillEvaluator) | 에이전트 스킬 평가 | 미확인 | README 확인 / LICENSE 확인 / 커밋·릴리스 미확인 |
+| 7 | [nvm-sh/nvm](https://github.com/nvm-sh/nvm) | Node 버전 관리 | 미확인 | README 미확인 / LICENSE 미확인 / 커밋·릴리스 미확인 |
+| 8 | [astral-sh/uv](https://github.com/astral-sh/uv) | Python 패키지 관리 | 미확인 | README 미확인 / LICENSE 미확인 / 커밋·릴리스 미확인 |
+| 9 | [google-research/paper-orchestra](https://github.com/google-research/paper-orchestra) | 논문 작성 프레임워크 | 미확인 | README 미확인 / LICENSE 미확인 / 커밋·릴리스 미확인 |
+| 10 | [google-labs-code/stitch-skills](https://github.com/google-labs-code/stitch-skills) | UI 스킬 | 미확인 | README 미확인 / LICENSE 미확인 / 커밋·릴리스 미확인 |
+| 11 | [sveltejs/svelte](https://github.com/sveltejs/svelte) | 웹 UI 프레임워크 | 미확인 | README 미확인 / LICENSE 미확인 / 커밋·릴리스 미확인 |
+| 12 | [jquery/jquery](https://github.com/jquery/jquery) | DOM 라이브러리 | 미확인 | README 미확인 / LICENSE 미확인 / 커밋·릴리스 미확인 |
+| 13 | [appwrite/appwrite](https://github.com/appwrite/appwrite) | 자가호스팅 백엔드 | 미확인 | README 미확인 / LICENSE 미확인 / 커밋·릴리스 미확인 |
+| 14 | [openvinotoolkit/openvino](https://github.com/openvinotoolkit/openvino) | AI 추론 최적화 | 미확인 | README 미확인 / LICENSE 미확인 / 커밋·릴리스 미확인 |
+| 15 | [obra/superpowers](https://github.com/obra/superpowers) | 코딩 에이전트 스킬 | 미확인 | README 미확인 / LICENSE 미확인 / 커밋·릴리스 미확인 |
+| 16 | [affaan-m/ECC](https://github.com/affaan-m/ECC) | 코딩 에이전트 최적화 | 미확인 | README 미확인 / LICENSE 미확인 / 커밋·릴리스 미확인 |
+| 17 | [DeanChensj/jiangshan-map](https://github.com/DeanChensj/jiangshan-map) | 역사지도 | 미확인 | README 미확인 / LICENSE 미확인 / 커밋·릴리스 미확인 |
+| 18 | [n8n-io/n8n](https://github.com/n8n-io/n8n) | 워크플로 자동화 | 미확인 | README 미확인 / LICENSE 미확인 / 커밋·릴리스 미확인 |
+| 19 | [solidjs/solid](https://github.com/solidjs/solid) | 반응형 UI | 미확인 | README 미확인 / LICENSE 미확인 / 커밋·릴리스 미확인 |
+| 20 | [punkpeye/awesome-mcp-servers](https://github.com/punkpeye/awesome-mcp-servers) | MCP 서버 목록 | 미확인 | README 미확인 / LICENSE 미확인 / 커밋·릴리스 미확인 |
+
+- GitHub 원본 README 및 LICENSE 직접 조회 성공: HKUDS/CLI-Anything (README SHA 8a78b5420911, Apache-2.0 LICENSE SHA ee86799f79a1), NVIDIA/SkillEvaluator (README SHA 00ccbe42b38e, Apache-2.0 LICENSE SHA b43024732d67), getarcaneapp/arcane (README SHA 94063cc0583a, BSD-3-Clause LICENSE SHA 141b82f44811). 최근 커밋·릴리스는 3개 모두 NOT_RUN. 나머지 17개 README·LICENSE·커밋·릴리스 이번 회차 미확인. 개별 repo 실제 Trending 순위는 확인하지 못함.
+
+### 분석 — 기존 자산 연계 (통합·고객수요 미검증)
+- HAE: SkillEvaluator 스킬 품질 게이트 및 CLI-Anything 명령형 자동화; SOVIA: 스킬 감사·근거 기록; DBVORA: 데이터 CLI 진단; REA_WEB: Svelte/Solid UI 연구; KIC: 출처 기반 리서치(투자 조언 금지); PayPal: Appwrite 연계 검토만(실결제 금지); UGREEN: Arcane의 Docker 운영·복구(장비 실검증 없음); candle_scraper: n8n 작업흐름 및 데이터 수집 재현성. 이들은 기술 연계 아이디어이며 기존 제품 기능 구현 증거가 아니다.
+
+### 제안 — 독립 납품 TOP3 (외부 11/18 순위 TOP3와 다름, 가격·기간은 추정)
+1. **AI 에이전트 스킬 품질 감사 패키지** — 원본 https://github.com/NVIDIA/SkillEvaluator (발견 2026-11-19); 고객: 사내 에이전트·스킬 운영팀; 납품: 공개/합성 스킬 품질·보안·중복·호환성 평가 리포트, 수정 체크리스트; **15만~45만원 / 2~4일 / 중상**. Apache-2.0 LICENSE 원문 확인, NOTICE·종속물·모델/외부 API 약관 미감사. 차별화: 실제 전후 성능 근거 및 수동 독립 판정. 필수: 무료·로컬 재현, 악성 스킬 격리, 비공개 소스 반출 금지, 오탐 검증. 기존 SOVIA 코드 보안감사와 범위 구분.
+2. **업무용 앱 CLI 자동화 도입·검수** — 원본 https://github.com/HKUDS/CLI-Anything (발견 2026-11-19); 고객: 반복 업무가 있는 1인 기업·소규모 개발팀; 납품: 고객 승인 공개/로컬 앱의 제한적 CLI 래퍼·사용 매뉴얼·안전 테스트; **18만~55만원 / 2~5일 / 상**. Apache-2.0 LICENSE 원문 확인, 대상 소프트웨어의 별도 라이선스·자동화 약관·종속물 미감사. 차별화: 실행 권한 최소화·dry-run·로그/복구. 필수: 실제 앱별 CLI 정확성, 파일 손실 방지, 무단 로그인/권한 우회 금지. HAE 내부 자동화와 달리 독립 고객 앱 납품.
+3. **Docker 자가호스팅 운영·복구 점검** — 원본 https://github.com/getarcaneapp/arcane (기존 후보 2026-11-18 재검토, 중복 신규 등록 금지); 고객: 소형 서버 운영자; 납품: 관리 UI·읽기전용 점검표·백업/복구 절차; **12만~40만원 / 1~3일 / 중상**. BSD-3-Clause LICENSE 원문 확인, 종속물·상표·운영 접근권 미감사. 차별화: 원격 노출 최소화·복구 시연. 필수: Docker 소켓 권한·실제 복구·네트워크 격리·UGREEN/NAS 상품과 중복 판정.
+
+### 안전·검증 결론
+- **2026-11-19 공식 일간 순위와 stars today 미확인**; 전일 제3자 순서를 공식 순위로 승격하지 않음. README/LICENSE 확인 3개, 최근 커밋/릴리스 0개. 라이선스 확인은 무조건적인 상업 재판매 허가가 아님.
+- 코드·CI·권한·고객 자료·유료 API·배포 변경 NOT_RUN. 기존 후보 30개·기존 연구 69개 보존.
