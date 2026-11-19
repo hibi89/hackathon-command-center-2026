@@ -166,3 +166,20 @@
 | https://github.com/mvanhorn/last30days-skill | 2026-11-18 | GitHub API repo/description/license SPDX MIT; README/원문/커밋/릴리스 미확인, Trending 순위 미확인 |
 | https://github.com/sveltejs/svelte | 2026-11-18 | GitHub API repo/description/license SPDX MIT; README/원문/커밋/릴리스 미확인, Trending 순위 미확인 |
 - 기존 URL 재조사: ag-ui-protocol/ag-ui, dream-num/univer, Tencent/LoopForge, google-labs-code/stitch-skills. 과거 69개 원본과 2026-11-13 기준 30개 상품 후보·이후 누적 이력 보존. 순위·스타 증가량을 API 총 star 수로 대체하지 않음.
+
+
+## 2026-11-19 조사 이력 — 외부 11/18 목록 기반, 공식 11/19 순위 미확인
+- 외부 기록 https://trend.ondo.sh/github/en.html 의 2026-11-18 20개 순서를 참고했으며 2026-11-19 공식 순위로 인증하지 않음. 신규 URL만 아래에 기록하고 기존 URL은 중복 생성하지 않음.
+- GitHub 원본 README/LICENSE 직접 확인: HKUDS/CLI-Anything (Apache-2.0), NVIDIA/SkillEvaluator (Apache-2.0), getarcaneapp/arcane (BSD-3-Clause, 기존 이력). 세 프로젝트 최근 커밋/릴리스 미확인. 나머지 원본 검증 미실행.
+
+| 신규 URL | 최초 조사일 | 검증 수준 | 라이선스 |
+|---|---|---|---|
+| https://github.com/cursor/plugins | 2026-11-19 | 외부 2026-11-18 목록 관찰; 11/19 공식 순위·스타 증가 미확인; README/LICENSE/커밋/릴리스 미확인 | 미확인 |
+| https://github.com/HKUDS/CLI-Anything | 2026-11-19 | 외부 2026-11-18 목록 관찰; 11/19 공식 순위·스타 증가 미확인; GitHub README/LICENSE 원문 확인 | Apache-2.0 (원문 확인) |
+| https://github.com/astral-sh/uv | 2026-11-19 | 외부 2026-11-18 목록 관찰; 11/19 공식 순위·스타 증가 미확인; README/LICENSE/커밋/릴리스 미확인 | 미확인 |
+| https://github.com/jquery/jquery | 2026-11-19 | 외부 2026-11-18 목록 관찰; 11/19 공식 순위·스타 증가 미확인; README/LICENSE/커밋/릴리스 미확인 | 미확인 |
+| https://github.com/appwrite/appwrite | 2026-11-19 | 외부 2026-11-18 목록 관찰; 11/19 공식 순위·스타 증가 미확인; README/LICENSE/커밋/릴리스 미확인 | 미확인 |
+| https://github.com/openvinotoolkit/openvino | 2026-11-19 | 외부 2026-11-18 목록 관찰; 11/19 공식 순위·스타 증가 미확인; README/LICENSE/커밋/릴리스 미확인 | 미확인 |
+| https://github.com/n8n-io/n8n | 2026-11-19 | 외부 2026-11-18 목록 관찰; 11/19 공식 순위·스타 증가 미확인; README/LICENSE/커밋/릴리스 미확인 | 미확인 |
+| https://github.com/solidjs/solid | 2026-11-19 | 외부 2026-11-18 목록 관찰; 11/19 공식 순위·스타 증가 미확인; README/LICENSE/커밋/릴리스 미확인 | 미확인 |
+| https://github.com/punkpeye/awesome-mcp-servers | 2026-11-19 | 외부 2026-11-18 목록 관찰; 11/19 공식 순위·스타 증가 미확인; README/LICENSE/커밋/릴리스 미확인 | 미확인 |
