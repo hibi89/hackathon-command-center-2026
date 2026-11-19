@@ -241,3 +241,10 @@ flowchart TD
 - 구매자마다 자신만의 로컬 레퍼런스 라이브러리·프로젝트·사용권·평가 DB·이식/백업/삭제를 가지며, 판매자의 개인 취향 DB나 권리 없는 외부 디자인 자산을 기본 포함하지 않는다.
 - 이번 문서 변경만으로 IAE_dev 통합 프로그램·디자인 라이브러리·추천 UI·FFAX 95% 재현 기능이 구현되거나 검증된 것은 아니다. **IAE_dev 구현률/검증률 UNASSESSED, 신규 코드 진척 0, 독립 감사 NOT_RUN, 출시 HOLD.** 고객 원본/비밀/권한/유료 API/외부 전송/상용화/main 병합/Production 변경은 사용자 별도 승인.
 
+
+### 9.6 FFAX 제품별 최종설계 연결 (2026-11-19 확정)
+
+- **제품 원본 정본:** [FFAX V3 Reference Fidelity First 최종설계](https://github.com/hibi89/frontend-foundry-ax/blob/feature/ffax-reference-fidelity-20261118/docs/FINAL_BLUEPRINT_FFAX_V3_FIDELITY_FIRST_20261119.md). FFAX가 선택된 외부 레퍼런스를 관측/수동 보정 가능한 nested scene graph로 분해하고, 실제 React/TSX·CSS 생성→동일 viewport/DPR 렌더→영역별 비교→격리 후보 수정 및 사용자 시각 승인까지 맡는다.
+- **IAE_dev 책임 경계:** 레퍼런스 출처/권리·태그·프로젝트별 추천/선택·개인 경험 축적과 FFAX 입출력 어댑터만 맡고 FFAX의 복원/렌더링 엔진을 중복 구현하지 않는다. 사용자 기본 탐색 16개는 경량 썸네일이며, 선택 이미지 정밀 복원에 자원을 집중한다.
+- **95점은 달성 조건이 아닌 목표:** F95>=95/100은 사용자 이미지의 사전 정의된 시각품질 지표 목표다. FFAX의 기존 REQ-01..12/AC 100점이나 전체 구현/검증률, 실제 모든 이미지의 픽셀 95% 복원 성공률이 아니다. P2 외부 원본 실증/사용자 승인 전에는 NOT_VERIFIED. 기존 FFAX 25/25 SWU 코드 후보/합성 CI 증거는 보존하되 V3 신규 코드 범위를 소급 100%로 표시하지 않는다.
+- **설계 변경 외 실행 없음:** 이 연결 문서 추가는 해총 중앙 정책·FFAX 실행 소스·main·Production·권한·원본·유료/외부 API·상용 배포 변경/승인이 아니다. IAE_dev/P1/P2 공식률 UNASSESSED, RELEASE HOLD.
