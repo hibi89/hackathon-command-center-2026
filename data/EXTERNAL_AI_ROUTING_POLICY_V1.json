@@ -1,0 +1,102 @@
+{
+  "schema": "iae-dev-external-ai-policy/v1",
+  "revision_kst": "2026-11-20",
+  "state": "DESIGN_ONLY_NO_API_CALLS",
+  "priority": [
+    "AXZERO_VERIFIED_IF_AVAILABLE",
+    "MLA_LOCAL_QWEN3_4B",
+    "FLASH_EXTERNAL_OPT_IN",
+    "HYDROGEN_CRITICAL_SPECIAL_ONLY",
+    "OWNER_REVIEW"
+  ],
+  "defaults": {
+    "external_enabled": false,
+    "network_egress": "DENY",
+    "max_spend_usd": 0,
+    "owner_approval_required": true,
+    "data_classes_allowed": [
+      "PUBLIC_RIGHTS_CLEARED",
+      "SYNTHETIC_NON_SENSITIVE"
+    ],
+    "free_tier_verified": false
+  },
+  "flash": {
+    "display_role": "Gemini 3.5 Flash user preference",
+    "deprecated_alias": "gemini-3.5-flash",
+    "proposed_api_model": "gemini-3.6-flash",
+    "alternate_requires_owner_verification": "gemini-3.8-flash",
+    "enabled": false,
+    "api_account_verified": false,
+    "free_tier_verified": false,
+    "rpm": null,
+    "tpm": null,
+    "rpd": null,
+    "auto_escalate_on_error": false
+  },
+  "hydrogen": {
+    "model": "gemini-4-hydrogen",
+    "enabled": false,
+    "account_verified": false,
+    "free_tier_verified": false,
+    "user_internal_max_per_rolling24h": 20,
+    "reserved_critical": 4,
+    "general_special_before_critical_reserved": 16,
+    "max_requests_per_task": 1,
+    "max_concurrent": 1,
+    "automatic_retries": 0,
+    "unknown_send_outcome": "UNKNOWN_CONSUMED",
+    "other_clients_usage": "UNKNOWN",
+    "auto_escalate_from_flash_429": false
+  },
+  "ledger": {
+    "storage": "IAE_dev SQLite WAL",
+    "atomic_reserve_before_send": true,
+    "shared_across_local_iae_dev_projects": true,
+    "request_fields": [
+      "request_id",
+      "provider",
+      "account_project",
+      "effective_model_id",
+      "payload_sha",
+      "owner_approval_id",
+      "attempt_state",
+      "consumption_state",
+      "timestamp_utc",
+      "tokens",
+      "estimated_cost_usd",
+      "actual_cost_usd"
+    ]
+  },
+  "untrusted_model_response": true,
+  "authority": "MLA_OWNER_F18",
+  "live_api": "NOT_RUN",
+  "acceptance": {
+    "req": [
+      "IAE-REQ-05",
+      "IAE-REQ-09",
+      "IAE-REQ-10",
+      "IAE-REQ-17",
+      "IAE-REQ-26",
+      "IAE-REQ-27",
+      "IAE-REQ-28"
+    ],
+    "swu": [
+      "IAE-SWU-006",
+      "IAE-SWU-007",
+      "IAE-SWU-018",
+      "IAE-SWU-019",
+      "IAE-SWU-020"
+    ],
+    "p2": [
+      "IAE-P2-05",
+      "IAE-P2-06",
+      "IAE-P2-09"
+    ]
+  },
+  "sources": [
+    "https://ai.google.dev/gemini-api/docs/changelog",
+    "https://ai.google.dev/gemini-api/docs/models",
+    "https://ai.google.dev/gemini-api/docs/rate-limits",
+    "https://ai.google.dev/gemini-api/docs/pricing"
+  ]
+}
