@@ -1,4 +1,6 @@
 # AX 작업 생태계 — 향후 작업 로직도(목표)
+> **IAE 전체 비전의 첫 번째 작업 생태계는 IAE_dev다.** 단일 Windows 앱·통합 대시보드·MLA/FFAX/REQ/Actions/해총 연결, 전체 흐름·복구·단계별 구축은 [IAE_dev 전용 목표 로직도](IAE_DEV_FIRST_WORK_ECOSYSTEM_TARGET_20261119.md)를 참조한다. 이 페이지는 공통 개발 흐름 요약으로 유지한다.
+
 
 **기준:** 2026-11-19 KST · **상태:** `TARGET_ONLY` (미구현 통합 목표, 현행 실행 정책 변경 아님)
 
