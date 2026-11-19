@@ -89,3 +89,13 @@
 - [google-labs-code/stitch-skills](https://github.com/google-labs-code/stitch-skills)는 REA_WEB/FFAX 참고, [sveltejs/svelte](https://github.com/sveltejs/svelte)는 웹 FE 기술 참고; 별도 신규 판매 SKU 아님.
 - [Tencent/LoopForge](https://github.com/Tencent/LoopForge)는 HAE/개발 자동화 참고만; API SPDX **NOASSERTION**이므로 상업권 미확인, 원문 검증 전 코드 통합/재배포 금지.
 - 공식 11/18 GitHub Trending 1~20위와 당일 스타 증가량 전부 미확인. 위 원본 8개 GitHub API metadata 조회만 완료, README·LICENSE 원문·최신 커밋·릴리스·실행·상품 시장성은 **NOT_RUN/미확인**. 유료 API/고객 원본/권한/배포/코드/CI 변경 없음.
+
+
+## 2026-11-19 독립 판매 후보 갱신 (당일 공식 Trending 순위 미확인)
+| 중복 통제 / 후보 | 원본·발견일 | 타깃·납품물 | 가격·기간·난이도 (추정) | 라이선스·위험 | 차별화·필수 검증 |
+|---|---|---|---|---|---|
+| 신규 연구: 에이전트 스킬 품질 감사 (기존 SOVIA 코드감사와 별도) | [NVIDIA/SkillEvaluator](https://github.com/NVIDIA/SkillEvaluator), 2026-11-19 | 사내 AI 운영팀 / 품질·보안·중복·전후 성능 감사표 | 15~45만원 / 2~4일 / 중상 | Apache-2.0 LICENSE 원문 확인, 종속물·모델/서비스 약관 미감사 | 공개/합성 데이터, 로컬 재현·오탐 검증, 비공개 소스 미반출 |
+| 신규 연구: 업무용 앱 CLI 자동화 납품 (HAE 내부 자동화와 별도) | [HKUDS/CLI-Anything](https://github.com/HKUDS/CLI-Anything), 2026-11-19 | 소기업 / 제한적 CLI 래퍼·가이드·테스트 | 18~55만원 / 2~5일 / 상 | Apache-2.0 LICENSE 원문 확인, 대상 앱 약관·종속물 미감사 | dry-run·권한 최소화·파일 복구·앱별 동작 검증 |
+| 기존 후보 재검토, **중복 신규 생성 안 함**: Docker 운영·복구 점검 | [getarcaneapp/arcane](https://github.com/getarcaneapp/arcane), 최초 2026-11-18, 재검토 2026-11-19 | 소형 서버 운영자 / UI·점검·복구 절차 | 12~40만원 / 1~3일 / 중상 | BSD-3-Clause LICENSE 원문 확인, 종속물·상표 미감사 | 권한/네트워크·복구 실증, UGREEN 상품과 중복 점검 |
+
+모두 수요·매출·실제 구현 미검증, 크몽 등록 아님. 기존 30개 및 이후 후보 원문 보존. 공식 11/19 순위·stars today 미확인.
