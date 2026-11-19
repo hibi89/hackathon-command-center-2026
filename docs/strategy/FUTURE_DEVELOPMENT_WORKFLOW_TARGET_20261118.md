@@ -1,4 +1,7 @@
 # AX 작업 생태계 — 향후 작업 로직도(목표)
+
+> **[2026-11-19 KST · IAE_dev 정본 연결]** IAE_dev 1차 작업 생태계의 최신 P0 확정 설계는 [통합 최종설계](IAE_DEV_FINAL_BLUEPRINT_V1_20261119.md), 실기능 계획·수용조건은 [28 REQ / 22 SWU / 9 P2 게이트](IAE_DEV_IMPLEMENTATION_AND_ACCEPTANCE_V1_20261119.md)를 우선 참조한다. 아래는 과거 공통 목표 요약으로 보존하며 원본 제품·해총 고유 임무·승인 범위를 변경하지 않는다.
+
 > **IAE 전체 비전의 첫 번째 작업 생태계는 IAE_dev다.** 단일 Windows 앱·통합 대시보드·MLA/FFAX/REQ/Actions/해총 연결, 전체 흐름·복구·단계별 구축은 [IAE_dev 전용 목표 로직도](IAE_DEV_FIRST_WORK_ECOSYSTEM_TARGET_20261119.md)를 참조한다. 이 페이지는 공통 개발 흐름 요약으로 유지한다.
 
 
