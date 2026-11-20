@@ -277,3 +277,44 @@
 ### 안전·검증 결론
 - **2026-11-19 공식 일간 순위와 stars today 미확인**; 전일 제3자 순서를 공식 순위로 승격하지 않음. README/LICENSE 확인 3개, 최근 커밋/릴리스 0개. 라이선스 확인은 무조건적인 상업 재판매 허가가 아님.
 - 코드·CI·권한·고객 자료·유료 API·배포 변경 NOT_RUN. 기존 후보 30개·기존 연구 69개 보존.
+
+
+## DAILY-2026-11-20 — 2026-11-20 10:03 KST / 외부 스냅샷 00:00 UTC
+### 사실·출처·검증 범위
+- **GitHub 공식 Trending 원문 https://github.com/trending?since=daily 접근 실패(restricted URL)**. 공식 일간 TOP20의 실제 순위와 GitHub 화면 표시 stars today는 1~20위 모두 **미확인**. 공식 주간·월간 TOP30도 미확인. 아래 표의 1~16은 **외부 사이트의 'stars today' 정렬 순서**로 GitHub 공식 순위가 아님. 외부 사이트가 수집한 당일 스타 증가량이며 GitHub 공식 표시 증가량으로 인증하지 않음. 17~20위는 외부 스냅샷에 없어 미확인.
+- 외부 관찰: https://trending.ddewhurst.com/ (2026-11-20 00:00 UTC, 16개, 외부 스타 증가량). 별도 외부 2026-11-19 기록 https://trend.ondo.sh/github/en.html 은 전일 자료이며 오늘 공식 순위 아님.
+- README·LICENSE 원본 직접 조회 4개: mjmirza/app-store-compliance, Tracer-Cloud/opensre, zhouxiaoka/autoclip, cathrynlavery/diagram-design. 최근 커밋 URL 확인 3개(app-store-compliance, opensre, autoclip). 릴리스 확인 0개. README/라이선스 확인은 의존성·상업 재배포 검증이 아님.
+
+### 외부 관찰 16개 (공식 순위 아님)
+| 외부 stars 증가순 | 프로젝트·URL | 핵심 기능·실용 사례 | 외부 스타 증가량 | README / LICENSE / 최근 커밋 / 릴리스 |
+|---:|---|---|---:|---|
+| 1 | [obra/superpowers](https://github.com/obra/superpowers) | 에이전트 개발 스킬 | +2,028 (외부 11/20 00:00 UTC 스냅샷) | README·LICENSE·최근 커밋·릴리스 이번 회차 미확인 |
+| 2 | [elementalsouls/Claude-BugHunter](https://github.com/elementalsouls/Claude-BugHunter) | AI 보안 검사 스킬 | +1,349 (외부 11/20 00:00 UTC 스냅샷) | README·LICENSE·최근 커밋·릴리스 이번 회차 미확인 |
+| 3 | [mvanhorn/last30days-skill](https://github.com/mvanhorn/last30days-skill) | 최근 30일 리서치 | +954 (외부 11/20 00:00 UTC 스냅샷) | README·LICENSE·최근 커밋·릴리스 이번 회차 미확인 |
+| 4 | [HKUDS/CLI-Anything](https://github.com/HKUDS/CLI-Anything) | 앱 CLI 자동 생성 | +898 (외부 11/20 00:00 UTC 스냅샷) | README/LICENSE Apache-2.0 전일 확인; 오늘 재조회 미실행; 커밋·릴리스 미확인 |
+| 5 | [firecrawl/firecrawl](https://github.com/firecrawl/firecrawl) | 웹 수집·검색 API | +825 (외부 11/20 00:00 UTC 스냅샷) | README·LICENSE·최근 커밋·릴리스 이번 회차 미확인 |
+| 6 | [cursor/plugins](https://github.com/cursor/plugins) | Cursor 플러그인 | +384 (외부 11/20 00:00 UTC 스냅샷) | README·LICENSE·최근 커밋·릴리스 이번 회차 미확인 |
+| 7 | [mjmirza/app-store-compliance](https://github.com/mjmirza/app-store-compliance) | 앱스토어 제출 전 점검 | +377 (외부 11/20 00:00 UTC 스냅샷) | README 확인; LICENSE OpenRoots ORA-2.3 원문 포인터 확인; 최근 커밋 확인; 릴리스 미확인 |
+| 8 | [XiaoYouChR/Ghost-Downloader-3](https://github.com/XiaoYouChR/Ghost-Downloader-3) | 다운로드 관리자 | +341 (외부 11/20 00:00 UTC 스냅샷) | README·LICENSE·최근 커밋·릴리스 이번 회차 미확인 |
+| 9 | [google-labs-code/stitch-skills](https://github.com/google-labs-code/stitch-skills) | UI 제작 스킬 | +302 (외부 11/20 00:00 UTC 스냅샷) | README·LICENSE·최근 커밋·릴리스 이번 회차 미확인 |
+| 10 | [cathrynlavery/diagram-design](https://github.com/cathrynlavery/diagram-design) | 다이어그램 생성 스킬 | +271 (외부 11/20 00:00 UTC 스냅샷) | README 확인; LICENSE MIT 원문 확인; 최근 커밋 미확인; 릴리스 미확인 |
+| 11 | [openvinotoolkit/openvino](https://github.com/openvinotoolkit/openvino) | AI 추론 최적화 | +246 (외부 11/20 00:00 UTC 스냅샷) | README·LICENSE·최근 커밋·릴리스 이번 회차 미확인 |
+| 12 | [jingyaogong/minimind](https://github.com/jingyaogong/minimind) | 소형 LLM 학습 | +238 (외부 11/20 00:00 UTC 스냅샷) | README·LICENSE·최근 커밋·릴리스 이번 회차 미확인 |
+| 13 | [toeverything/AFFiNE](https://github.com/toeverything/AFFiNE) | 로컬 지식관리 | +182 (외부 11/20 00:00 UTC 스냅샷) | README·LICENSE·최근 커밋·릴리스 이번 회차 미확인 |
+| 14 | [zhouxiaoka/autoclip](https://github.com/zhouxiaoka/autoclip) | 긴 영상→쇼츠 편집 | +126 (외부 11/20 00:00 UTC 스냅샷) | README 확인; LICENSE MIT 원문 확인; 최근 커밋 확인; 릴리스 미확인 |
+| 15 | [nginx/nginx](https://github.com/nginx/nginx) | 웹서버/프록시 | +73 (외부 11/20 00:00 UTC 스냅샷) | README·LICENSE·최근 커밋·릴리스 이번 회차 미확인 |
+| 16 | [Tracer-Cloud/opensre](https://github.com/Tracer-Cloud/opensre) | CI 장애 원인 분석 | +38 (외부 11/20 00:00 UTC 스냅샷) | README 확인; LICENSE Apache-2.0 원문 확인; 최근 커밋 확인; 릴리스 미확인 |
+| 17~20 | **미확인** | 외부 스냅샷 16개뿐; 공식 TOP20 불가 | 미확인 | 전부 미확인 |
+
+### 분석 — 기존 자산 연계(기술적 가능성, 실제 연동 NOT_RUN)
+- HAE: opensre의 CI 장애 분류·원인 분석, CLI-Anything의 안전한 명령형 인터페이스. SOVIA: Claude-BugHunter·app-store-compliance의 정적 감사/근거 분류. DBVORA: CLI-Anything으로 DB 진단 CLI UX 참고(실제 DB 변경 금지). REA_WEB: diagram-design의 HTML/SVG 출력, AFFiNE의 지식관리 UI 연구. KIC: last30days-skill의 출처/시점 검증. PayPal: 앱 제출 전 결제 정책 점검 아이디어(실결제/스토어 배포 금지). UGREEN: nginx/opensre 운영 상태 가시화. candle_scraper: firecrawl의 출처·robots·약관 준수 데이터 수집 연구(유료 API 호출 금지).
+- 기존 HAE/SOVIA 등의 기능 완료·연동 완료 증거가 아니며, 독립 상품과 별도로 관리.
+
+### 제안 — 기존 저장소 없이 독립 납품 TOP3 (가격·기간 추정, 수요 미검증)
+1. **모바일 앱 사전 제출 규정·거절 위험 점검** — 원본 https://github.com/mjmirza/app-store-compliance (첫 조사 2026-11-20); 고객: 1인 앱 개발자·소형 앱사; 납품: 승인된 공개/로컬 프로젝트 정적 점검표, 개인정보·스토어 정책 체크리스트, 근거 링크·수정 권고서; **12~35만원 / 1~3일 / 중상**. LICENSE는 **OpenRoots Agent License 2.3(비표준 LicenseRef-OpenRoots-ORA-2.3)**이며 원본 LICENSE는 canonical 전문이 아닌 포인터. 매출 한도·AI 학습 별도 권리 등 조건 확인 필요; 재배포/상업 서비스 법적 범위 미확인 → **원본 코드 포함 판매 HOLD**, 독립 작성 체크리스트 서비스만 연구. 차별화: Apple/Google 실제 정책 URL·기준일·수동 재검토. 필수: 최신 공식 정책·오탐/누락·개인정보·약관·라이선스 법적 검토, 스토어 승인 보장 금지.
+2. **CI 장애 원인 진단 리포트** — 원본 https://github.com/Tracer-Cloud/opensre (첫 조사 2026-11-20); 고객: 소규모 개발팀; 납품: 고객 제공 비밀 제거된 실패 로그/공개 합성 CI 기반 원인분류·재현 가이드·복구 체크리스트; **15~45만원 / 1~3일 / 중상**. LICENSE Apache-2.0 원문 확인, NOTICE·의존성·외부 모델 API/고객 데이터 처리 조건 미검증. 차별화: 실패 증거/재현 커맨드/복구 검증 구분. 필수: 로그 비밀정보 마스킹, 원본 repo 수정 없이 진단, 로컬 모델 무료 실행 검증, 권한 없는 CI 실행 금지.
+3. **긴 영상→쇼츠 편집·자막 납품** — 원본 https://github.com/zhouxiaoka/autoclip (첫 조사 2026-11-20); 고객: 강의자·팟캐스터·소상공인; 납품: 고객 권리 확인 영상에서 3~5개 세로 쇼츠 MP4·자막 SRT·썸네일·작업 명세; **8~25만원 / 1~2일 / 중**. LICENSE MIT 원문 확인, 저작권 표시·종속 모델/코덱·플랫폼 이용약관·유료 클라우드 옵션 미검증. 차별화: 한국어 자막 검수·저사양 로컬 렌더링·고객 콘텐츠 보존. 필수: 고객 영상 이용권·음악 라이선스·무료 로컬 처리·영상 품질/자막 정확도·Windows 실기기 테스트.
+
+### 안전·상태
+- 신규 제안은 기존 2026-11-13 후보 30개와 이후 후보의 동일 SKU 중복을 피하기 위한 연구 단계; 크몽 등록/판매/실구현 아님.
+- 코드·배포·CI·권한·고객/비공개 소스·유료 API 변경 NOT_RUN. 공식 TOP20/주간·월간 TOP30 미확인. 외부 수치를 공식 순위로 대체하지 않음.
