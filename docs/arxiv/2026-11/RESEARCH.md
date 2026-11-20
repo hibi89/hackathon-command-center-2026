@@ -59,3 +59,40 @@
 - 논문 14개 공식 초록/접수일과 코드를 공개한 2개 GitHub 페이지(README·라이선스 메타데이터) 확인; 다른 논문의 원본 소스·LICENSE·모델 재현성은 **미확인**.
 - GitHub 코드 가져오기·사본 생성·모델 다운로드·외부 고객 코드/비밀 업로드·유료 AI 호출·크몽 등록·배포·CI **하지 않음**.
 - 차기 주기: 최신 발표분에 날짜 필터를 적용하고 이번 14개 `arXiv ID`를 `RESEARCH_HISTORY_INDEX.md`에서 중복 검사한다. 새 논문이 없으면 문서의 새 조사 결과를 허위로 늘리지 않고 `NO_NEW_RELEVANT`로 기록.
+
+
+## ARXIV-2026-11-20
+
+- **run_id:** `ARXIV-2026-11-20-1130-KST`; 조사일 2026-11-20 KST; 공식 arXiv cs.AI 2026-11-19 발표 목록에서 선별. 아래 5편 최초 제출일은 모두 11/18 UTC이며 **발표 목록 날짜 11/19와 구분**.
+- 이전 14개 ID와 중복 없음. 논문 원문 초록·submission history 확인; 저자 코드 GitHub URL, README, LICENSE 원문, NOTICE, 의존 라이선스는 **전부 미확인**. arXiv 원문 라이선스는 구현 코드 상업 라이선스가 아님.
+- 연구 수치 전부 **저자 보고**. GTX1050Ti/16GB Windows 재현·실제품 기능·고객 데이터 실험 **NOT_RUN**.
+
+| arXiv ID / 공식 발표 / 최초 제출(UTC) | 정확한 제목 | 저자 결과 및 한계 | 코드 권리 |
+|---|---|---|---|
+| [2611.24324](https://arxiv.org/abs/2611.24324) / 2026-11-19 / 2026-11-18 12:26 UTC | Reducing Inference Cost of Coding Agents with Timeout Cascades | 36 open-weight models; up to 33% GPU-hour reduction; 16.4% on SWE-bench Verified; author report, not local reproduction | GitHub·README·LICENSE·NOTICE·의존권리 미확인 |
+| [2611.24357](https://arxiv.org/abs/2611.24357) / 2026-11-19 / 2026-11-18 12:49 UTC | Semantic Context Handoff with On-Demand Evidence for Long-Horizon Agents | 150-task controlled study Pass@1 80.0→86.9%; full comparison -43% tokens, -41% time; author report | GitHub·README·LICENSE·NOTICE·의존권리 미확인 |
+| [2611.23990](https://arxiv.org/abs/2611.23990) / 2026-11-19 / 2026-11-18 07:33 UTC | SCAFFOLD: Toward Warrant-Preserving Evidence Transport for Reusable LLM-Agent Skills | Formal proposal; no implemented verifier or empirical superiority | GitHub·README·LICENSE·NOTICE·의존권리 미확인 |
+| [2611.24867](https://arxiv.org/abs/2611.24867) / 2026-11-19 / 2026-11-18 18:20 UTC | Choosing What to Observe: Budget-Paired Counterfactual Audits for Credible Evaluation of Visual Agents | 40 paired routing anchors described; full numerical outcomes not independently extracted | GitHub·README·LICENSE·NOTICE·의존권리 미확인 |
+| [2611.24619](https://arxiv.org/abs/2611.24619) / 2026-11-19 / 2026-11-18 15:37 UTC | GateWatch: Low-Overhead LLM Monitoring with Boolean Circuits | 24 Gemma-2-9B tasks: mean accuracy 80.49%, probe memory -99.98%; vLLM throughput 97–98% of baseline; author report | GitHub·README·LICENSE·NOTICE·의존권리 미확인 |
+
+### TOP5: 기존 기능 대비 합성 MVP 가설
+
+| 우선 | 관련 제품/차별화 | 합성 MVP 공수 추정(인시, 실측 아님) | 검증·안전 게이트 |
+|---|---|---|---|
+| 1 SCH 2611.24357 | MLA/EAI/HAE/SOVIA: 상태 요약과 SHA 연결 원본 증거를 분리, 필요시 로컬 재조회. 기존 기억 기능의 증거 재진입 옵션 | 8~20 | 합성 20작업, 근거 회수율/토큰/시간 ON-OFF, 민감정보 마스킹·원본 보존 |
+| 2 Timeout Cascades 2611.24324 | MLA/FFAX: 무료 로컬 Qwen 선행→실패 기준에 따른 승인된 모델 전환; 유료 자동 호출 금지 | 8~18 | 합성 20 코딩 과제, 정확도/지연/추론 횟수, 무료 경계·시간제한·fallback 검증 |
+| 3 SCAFFOLD 2611.23990 | EAI/HAE/REQ 감사: 스킬/검증 근거를 SHA·권한·환경에 결속, 변경 시 신뢰 재판정. 논문은 개념 제안 | 10~24 | 합성 버전 변경 20건, 구근거 오인수 0, 권한·서명·원본 불변 |
+| 4 Visual Audit 2611.24867 | REA_WEB/FFAX/DATA2WEB: 관찰 예산 동일 조건 UI 비교 평가. 기존 브라우저 P2 확장 | 10~24 | 합성 화면 20개, 동일 예산/관찰 경로 로그, 실브라우저 독립 검증 |
+| 5 GateWatch 2611.24619 | MLA/SOVIA: 실행 전 규칙형 경량 경고의 아이디어만 참조. SAE/vLLM 원 논문 재현은 GTX1050Ti에 부적합 가능 | 6~16 | 합성 금지명령 30개, 오탐/미탐, Qwen 모델 활성값 접근 불명; 안전성 보증 금지 |
+
+**적용 범위:** DBVORA의 SQL 안전 옵션, KIC·PayPal·UGREEN의 제출/거래 자료, candle_scraper의 수집 규칙은 기존 고유 승인·권리 경계를 유지. 이 논문들만으로 해당 제품의 성능 향상을 주장하지 않는다. 추정 공수는 Python/SQLite/로컬 합성 시나리오이며 모델 통합·고객 인수·보안 감사는 별도.
+
+### 상품화 TOP3 — 기존 19 SKU 중복 방지
+
+| 후보 | 고객·독립 납품물 | 기존 SKU 중복 / 가격·기간·난이도(가설) | 차별화·상업권리·고객 인수 |
+|---|---|---|---|
+| 증거 기반 작업 인계 | 외주 개발팀: SHA 연결 작업요약·근거 회수 JSON/HTML·사용설명서 | 기존 SVC-07 코드검수 및 MLA/EAI **EXTENSION**, 신규 SKU 아님 / 10~30만원·2~4일·중 | SCH 원리 자체 구현, 고객 코드 로컬 보관, 라이선스/의존권리 확인, 합성 회귀+고객 승인 |
+| 로컬 모델 비용 라우터 | 소규모 개발자: 무료 모델 선택 규칙·실패 fallback 로그·설정 파일 | MLA/FFAX **EXTENSION** / 8~25만원·2~4일·중 | 유료 API 자동호출 없음, 고객별 GPU/시간 측정, 모델 가중치 상업 이용조건 확인 |
+| 재사용 스킬 증거 검수 | 자동화 운영팀: 스킬 SHA·권한·검증 근거 유효성 보고 | SVC-07/EAI/HAE **EXTENSION** / 12~35만원·3~6일·중상 | 개념 논문 기반 자체 구현, 안전 인증 아님, 권한 변경 승인·오탐 재검수·보안 인수 필요 |
+
+세 제안 모두 **NOT_BUILT / NOT_VERIFIED / RELEASE HOLD / NOT_REGISTERED**. 가격·납기는 시장검증 전 추정이며 원저자 코드/데이터를 상품에 포함하지 않는다.
