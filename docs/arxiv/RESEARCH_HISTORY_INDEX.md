@@ -22,3 +22,11 @@
 **첫 번째 run:** `ARXIV-2026-11-17-INITIAL`, 보고서 [2026-11/RESEARCH.md](2026-11/RESEARCH.md).
 
 **예약 실행 표식:** `SCHEDULED_END_TO_END_NOT_VERIFIED` — 2026-11-17 직접 사용자가 요청한 수동 GitHub 기록 완료와 향후 예약 자동 실행은 별도 검증.
+
+| [2611.24324](https://arxiv.org/abs/2611.24324) | 2026-11-20 | coding cost | 공식 cs.AI 2026-11-19 발표, arXiv 초록·v1 제출이력 확인; 코드/README/LICENSE/NOTICE/의존권리 미확인 |
+| [2611.24357](https://arxiv.org/abs/2611.24357) | 2026-11-20 | agent memory | 공식 cs.AI 2026-11-19 발표, arXiv 초록·v1 제출이력 확인; 코드/README/LICENSE/NOTICE/의존권리 미확인 |
+| [2611.23990](https://arxiv.org/abs/2611.23990) | 2026-11-20 | agent evidence | 공식 cs.AI 2026-11-19 발표, arXiv 초록·v1 제출이력 확인; 코드/README/LICENSE/NOTICE/의존권리 미확인 |
+| [2611.24867](https://arxiv.org/abs/2611.24867) | 2026-11-20 | visual audit | 공식 cs.AI 2026-11-19 발표, arXiv 초록·v1 제출이력 확인; 코드/README/LICENSE/NOTICE/의존권리 미확인 |
+| [2611.24619](https://arxiv.org/abs/2611.24619) | 2026-11-20 | LLM monitoring | 공식 cs.AI 2026-11-19 발표, arXiv 초록·v1 제출이력 확인; 코드/README/LICENSE/NOTICE/의존권리 미확인 |
+
+**예약 자동 실행 검증 대상:** `ARXIV-2026-11-20-1130-KST`; 5개 신규 ID. 원격 readback 성공 시에만 GitHub 자동 저장 검증 인정.
