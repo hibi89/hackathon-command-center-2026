@@ -183,3 +183,19 @@
 | https://github.com/n8n-io/n8n | 2026-11-19 | 외부 2026-11-18 목록 관찰; 11/19 공식 순위·스타 증가 미확인; README/LICENSE/커밋/릴리스 미확인 | 미확인 |
 | https://github.com/solidjs/solid | 2026-11-19 | 외부 2026-11-18 목록 관찰; 11/19 공식 순위·스타 증가 미확인; README/LICENSE/커밋/릴리스 미확인 | 미확인 |
 | https://github.com/punkpeye/awesome-mcp-servers | 2026-11-19 | 외부 2026-11-18 목록 관찰; 11/19 공식 순위·스타 증가 미확인; README/LICENSE/커밋/릴리스 미확인 | 미확인 |
+
+
+## 2026-11-20 조사 이력 — 공식 Trending 미확인
+- 외부 2026-11-20 00:00 UTC https://trending.ddewhurst.com/ 16개 stars today 정렬. 공식 GitHub 순위/표시 스타 증가량 인증 아님. 17~20 미확인. 신규 URL만 아래 누적.
+| 신규 URL | 최초 조사일 | 검증 수준 |
+|---|---|---|
+| https://github.com/firecrawl/firecrawl | 2026-11-20 | 외부 관찰; README/LICENSE/커밋/릴리스 미확인; 공식 순위 미확인 |
+| https://github.com/mjmirza/app-store-compliance | 2026-11-20 | 외부 관찰; README 확인; LICENSE OpenRoots ORA-2.3 원문 포인터 확인; 최근 커밋 확인; 릴리스 미확인; 공식 순위 미확인 |
+| https://github.com/XiaoYouChR/Ghost-Downloader-3 | 2026-11-20 | 외부 관찰; README/LICENSE/커밋/릴리스 미확인; 공식 순위 미확인 |
+| https://github.com/cathrynlavery/diagram-design | 2026-11-20 | 외부 관찰; README 확인; LICENSE MIT 원문 확인; 최근 커밋 미확인; 릴리스 미확인; 공식 순위 미확인 |
+| https://github.com/jingyaogong/minimind | 2026-11-20 | 외부 관찰; README/LICENSE/커밋/릴리스 미확인; 공식 순위 미확인 |
+| https://github.com/toeverything/AFFiNE | 2026-11-20 | 외부 관찰; README/LICENSE/커밋/릴리스 미확인; 공식 순위 미확인 |
+| https://github.com/zhouxiaoka/autoclip | 2026-11-20 | 외부 관찰; README 확인; LICENSE MIT 원문 확인; 최근 커밋 확인; 릴리스 미확인; 공식 순위 미확인 |
+| https://github.com/nginx/nginx | 2026-11-20 | 외부 관찰; README/LICENSE/커밋/릴리스 미확인; 공식 순위 미확인 |
+| https://github.com/Tracer-Cloud/opensre | 2026-11-20 | 외부 관찰; README 확인; LICENSE Apache-2.0 원문 확인; 최근 커밋 확인; 릴리스 미확인; 공식 순위 미확인 |
+- 2026-11-13 기준 69개 기존 기록 및 이후 모든 행 보존. 신규 URL 9개.
