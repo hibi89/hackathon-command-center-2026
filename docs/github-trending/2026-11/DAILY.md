@@ -318,3 +318,43 @@
 ### 안전·상태
 - 신규 제안은 기존 2026-11-13 후보 30개와 이후 후보의 동일 SKU 중복을 피하기 위한 연구 단계; 크몽 등록/판매/실구현 아님.
 - 코드·배포·CI·권한·고객/비공개 소스·유료 API 변경 NOT_RUN. 공식 TOP20/주간·월간 TOP30 미확인. 외부 수치를 공식 순위로 대체하지 않음.
+
+
+## DAILY-2026-11-21 — RUN-20261121-0956-KST
+
+### 사실·출처·검증 경계
+- 조회 시각 2026-11-21 09:56~10:00 KST. GitHub 공식 Trending https://github.com/trending?since=daily 접근 제한/robots 차단. **공식 Today TOP20 순위·표시 스타 증가량 및 주간/월간 TOP30 전부 미확인**. 공식 순위라고 주장하지 않는다.
+- 대체 관찰: https://trending.ddewhurst.com/ 의 **2026-11-21 00:00 UTC 차트**, stars today 내림차순 **16개**. 제3자 집계이며 GitHub 공식 표시 순서 아님. 외부 17~20도 미확인. 출처는 GitHub Trending/API를 사용한다고 밝히지만 직접 공식 확인을 대체하지 않는다.
+- 아래 숫자는 외부 사이트 표시 스타 증가량. README·LICENSE·최근 커밋/릴리스는 **이번 실행 개별 재검증 NOT_RUN**, 이전 날짜에 확인한 항목만 명시. 라이선스 미확인 프로젝트의 상업 이용 가능성은 추정하지 않는다.
+
+| 외부 스타 증가 순서(공식 아님) | 프로젝트 URL | 핵심 기능·실용 사례 | 외부 증가량 | README / LICENSE / 커밋 / 릴리스 |
+|---:|---|---|---:|---|
+| 1 | [elementalsouls/Claude-BugHunter](https://github.com/elementalsouls/Claude-BugHunter) | AI 보안 점검 스킬 | +1,622 (외부) | README/LICENSE/최근 커밋 미확인; 릴리스 미확인 |
+| 2 | [firecrawl/firecrawl](https://github.com/firecrawl/firecrawl) | 웹 수집·검색 API | +1,241 (외부) | README/LICENSE/최근 커밋 미확인; 릴리스 미확인 |
+| 3 | [XiaoYouChR/Ghost-Downloader-3](https://github.com/XiaoYouChR/Ghost-Downloader-3) | 파일 다운로드 | +1,082 (외부) | README/LICENSE/최근 커밋 미확인; 릴리스 미확인 |
+| 4 | [zhouxiaoka/autoclip](https://github.com/zhouxiaoka/autoclip) | 긴 영상 쇼츠 자동 편집 | +979 (외부) | README·MIT LICENSE·최근 커밋: 11/20 확인, 11/21 재검증 NOT_RUN; 릴리스 미확인 |
+| 5 | [obra/superpowers](https://github.com/obra/superpowers) | AI 코딩 워크플로 | +890 (외부) | README/LICENSE/최근 커밋 미확인; 릴리스 미확인 |
+| 6 | [mjmirza/app-store-compliance](https://github.com/mjmirza/app-store-compliance) | 앱스토어 정책 점검 | +869 (외부) | README·비표준 LICENSE 포인터·최근 커밋: 11/20 확인, 11/21 재검증 NOT_RUN; 릴리스 미확인 |
+| 7 | [jingyaogong/minimind](https://github.com/jingyaogong/minimind) | 소형 LLM 학습 | +847 (외부) | README/LICENSE/최근 커밋 미확인; 릴리스 미확인 |
+| 8 | [HKUDS/CLI-Anything](https://github.com/HKUDS/CLI-Anything) | 소프트웨어 CLI 자동화 | +773 (외부) | README·Apache-2.0 LICENSE: 11/19 확인, 최근 커밋 미확인; 릴리스 미확인 |
+| 9 | [mvanhorn/last30days-skill](https://github.com/mvanhorn/last30days-skill) | 최근 30일 조사 | +681 (외부) | README/LICENSE/최근 커밋 미확인; 릴리스 미확인 |
+| 10 | [toeverything/AFFiNE](https://github.com/toeverything/AFFiNE) | 지식관리·화이트보드 | +676 (외부) | README/LICENSE/최근 커밋 미확인; 릴리스 미확인 |
+| 11 | [cathrynlavery/diagram-design](https://github.com/cathrynlavery/diagram-design) | HTML/SVG 다이어그램 | +636 (외부) | README·MIT LICENSE: 11/20 확인, 커밋 미확인; 릴리스 미확인 |
+| 12 | [Tracer-Cloud/opensre](https://github.com/Tracer-Cloud/opensre) | CI/CD 장애 진단 | +466 (외부) | README·Apache-2.0 LICENSE·최근 커밋: 11/20 확인, 11/21 재검증 NOT_RUN; 릴리스 미확인 |
+| 13 | [google-labs-code/stitch-skills](https://github.com/google-labs-code/stitch-skills) | Stitch UI 스킬 | +315 (외부) | README/LICENSE/최근 커밋 미확인; 릴리스 미확인 |
+| 14 | [cursor/plugins](https://github.com/cursor/plugins) | Cursor 플러그인 | +299 (외부) | README/LICENSE/최근 커밋 미확인; 릴리스 미확인 |
+| 15 | [nginx/nginx](https://github.com/nginx/nginx) | 웹 서버 | +246 (외부) | README/LICENSE/최근 커밋 미확인; 릴리스 미확인 |
+| 16 | [openvinotoolkit/openvino](https://github.com/openvinotoolkit/openvino) | AI 추론 최적화 | +217 (외부) | README/LICENSE/최근 커밋 미확인; 릴리스 미확인 |
+
+### 분석 — 기존 저장소 연계 (실제 통합·호환성 검증 아님)
+- HAE: superpowers/CLI-Anything 개발 자동화; SOVIA: Claude-BugHunter 보안 증거 및 opensre 진단; DBVORA: CLI-Anything 데이터 진단 인터페이스; REA_WEB: diagram-design 및 stitch-skills UI 참고.
+- KIC: last30days-skill의 출처 검증; PayPal: app-store-compliance 결제/개인정보 심사 점검(실결제 미수행); UGREEN: nginx/opensre 운영 점검; candle_scraper: firecrawl의 수집 설계·출처/약관 검증(유료 API 미호출).
+
+### 제안 — 독립 납품 TOP3 (기존 저장소 없이 가능; 기존 후보 재평가, 중복 신규 SKU 없음)
+1. **쇼츠 편집·자막 납품** — 원본 https://github.com/zhouxiaoka/autoclip; 고객 강의자·팟캐스터; 납품 세로 MP4 3~5개/SRT/썸네일; **8~25만원, 1~2일, 난이도 중(추정)**. 11/20 MIT 원문 확인, 11/21 재확인 NOT_RUN; 원본 코드 사용 시 저작권 고지·종속 라이선스 확인. 차별화: 한국어 수동 자막 검수/로컬 저사양 처리. 검증: 영상·음악 권리, Windows 렌더, 자막 정확도, 유료 서비스 종속성.
+2. **CI 장애 원인·복구 진단** — 원본 https://github.com/Tracer-Cloud/opensre; 고객 소형 개발팀; 납품 비밀 제거된 로그 원인 분석/재현/복구 체크리스트; **15~45만원, 1~3일, 중상(추정)**. 11/20 Apache-2.0 원문 확인, 종속물·NOTICE·외부 모델 비용 미검증. 차별화: 읽기전용 근거 기반 재현·복구. 검증: 로그 비밀 마스킹, 실제 실패 재현, 무료 로컬 구동.
+3. **앱 제출 정책 사전 점검** — 원본 https://github.com/mjmirza/app-store-compliance; 고객 1인 앱 개발자; 납품 정책 기준일·위험·수정 권고 리포트; **12~35만원, 1~3일, 중상(추정)**. 비표준 OpenRoots ORA-2.3 법률 전문 미검토로 원본 코드 포함 판매 HOLD. 독립 작성 점검표 서비스만 연구. 차별화: Apple/Google 정책 공식 링크와 재검토. 검증: 라이선스 법적 사용권·최신 정책·오탐·개인정보.
+
+### 실행 안전
+- 오늘 공식 순위/스타 증가 및 README·LICENSE·최근 커밋·릴리스 개별 재검증: 미확인/NOT_RUN. 가격·기간은 수요 검증 전 추정.
+- 코드·배포·권한·CI·고객 자료·유료 API 변경 없음. 과거 30개 상품/69개 프로젝트 원장 보존.
