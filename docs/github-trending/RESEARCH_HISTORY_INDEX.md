@@ -199,3 +199,8 @@
 | https://github.com/nginx/nginx | 2026-11-20 | 외부 관찰; README/LICENSE/커밋/릴리스 미확인; 공식 순위 미확인 |
 | https://github.com/Tracer-Cloud/opensre | 2026-11-20 | 외부 관찰; README 확인; LICENSE Apache-2.0 원문 확인; 최근 커밋 확인; 릴리스 미확인; 공식 순위 미확인 |
 - 2026-11-13 기준 69개 기존 기록 및 이후 모든 행 보존. 신규 URL 9개.
+
+
+## 2026-11-21 조사 이력 — RUN-20261121-0956-KST
+- 외부 https://trending.ddewhurst.com/ 2026-11-21 00:00 UTC 목록 16개를 기존 URL과 대조: **신규 URL 0개**, 모두 11/20 이전 원장에 등장. 공식 Trending 직접 조회 차단, 공식 순위 미확인.
+- 기존 프로젝트별 README/LICENSE/최근 커밋/릴리스 11/21 신규 개별 검증 NOT_RUN. 과거 확인 사항은 해당 날짜 원장 참조. 2026-11-13 기준 69개 기존 기록 보존.
