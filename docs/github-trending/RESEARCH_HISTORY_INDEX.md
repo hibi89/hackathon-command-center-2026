@@ -204,3 +204,9 @@
 ## 2026-11-21 조사 이력 — RUN-20261121-0956-KST
 - 외부 https://trending.ddewhurst.com/ 2026-11-21 00:00 UTC 목록 16개를 기존 URL과 대조: **신규 URL 0개**, 모두 11/20 이전 원장에 등장. 공식 Trending 직접 조회 차단, 공식 순위 미확인.
 - 기존 프로젝트별 README/LICENSE/최근 커밋/릴리스 11/21 신규 개별 검증 NOT_RUN. 과거 확인 사항은 해당 날짜 원장 참조. 2026-11-13 기준 69개 기존 기록 보존.
+
+
+## 2026-11-22 조사 이력 — RUN-20261122-1000-KST
+- https://trending.ddewhurst.com/ 2026-11-22 00:00 UTC 비공식 16개 URL을 기존 조사 이력과 대조: **신규 URL 0개**. GitHub 공식 일간/주간/월간 순위 미확인. 2026-11-13 기준 기존 69개 및 이후 이력 보존.
+- 2026-11-22 개별 GitHub README/LICENSE/커밋/릴리스 4종 확인: https://github.com/zhouxiaoka/autoclip (MIT, cd8e6bed, v1.5.8); https://github.com/Tracer-Cloud/opensre (Apache-2.0, 34743ae0, v0.1.2026.11.22); https://github.com/mjmirza/app-store-compliance (OpenRoots ORA-2.3 포인터, 45248a77, v2.5.0). 라이선스 종속물/법률 검토 별도 미완.
+- 그 외 13개 저장소의 오늘 README/LICENSE/최근 커밋/릴리스 개별 검증 NOT_RUN.
