@@ -97,3 +97,25 @@
 | NVIDIA/SkillEvaluator | 2026-11-16 | https://github.com/NVIDIA/SkillEvaluator | 11/15 대체 일간 신규 관찰; GitHub API Apache-2.0·pushed_at 확인, 원문 미확인 |
 | elementalsouls/Claude-BugHunter | 2026-11-16 | https://github.com/elementalsouls/Claude-BugHunter | 11/15 대체 일간 신규 관찰, 개별 미확인 |
 | ggml-org/ggml | 2026-11-16 | https://github.com/ggml-org/ggml | 11/15 대체 일간 신규 관찰, 개별 미확인 |
+
+
+## 2026-11-23 신규 관찰 (기존 69개 및 이후 이력 보존, 공식 순위 아님)
+| 저장소 | 발견일(KST) | 원본 URL | 관찰·검증 |
+|---|---|---|---|
+| BaaRai/ARTEX | 2026-11-23 | https://github.com/BaaRai/ARTEX | 외부 zhuikan 주간 성장 관찰; README/최근 커밋/릴리스 미확인; LICENSE API AGPL-3.0 (원문 미확인) |
+| Ebony-Vinyl/dsh-our-free-model | 2026-11-23 | https://github.com/Ebony-Vinyl/dsh-our-free-model | 외부 zhuikan 주간 성장 관찰; README/최근 커밋/릴리스 미확인; LICENSE 미확인 (원문 미확인) |
+| storytold/craft-anything | 2026-11-23 | https://github.com/storytold/craft-anything | 외부 zhuikan 주간 성장 관찰; README/최근 커밋/릴리스 미확인; LICENSE 미확인 (원문 미확인) |
+| boykopovar/AnyPS5 | 2026-11-23 | https://github.com/boykopovar/AnyPS5 | 외부 zhuikan 주간 성장 관찰; README/최근 커밋/릴리스 미확인; LICENSE 미확인 (원문 미확인) |
+| ccch1mneyyy/dsh-Go | 2026-11-23 | https://github.com/ccch1mneyyy/dsh-Go | 외부 zhuikan 주간 성장 관찰; README/최근 커밋/릴리스 미확인; LICENSE 미확인 (원문 미확인) |
+| anefzaoui/misterdownloadmanager | 2026-11-23 | https://github.com/anefzaoui/misterdownloadmanager | 외부 zhuikan 주간 성장 관찰; README/최근 커밋/릴리스 미확인; LICENSE 미확인 (원문 미확인) |
+| DietrichGebert/ponytail | 2026-11-23 | https://github.com/DietrichGebert/ponytail | 외부 zhuikan 주간 성장 관찰; README/최근 커밋/릴리스 미확인; LICENSE 미확인 (원문 미확인) |
+| nexu-io/html-anything | 2026-11-23 | https://github.com/nexu-io/html-anything | 외부 zhuikan 주간 성장 관찰; README/최근 커밋/릴리스 미확인; LICENSE 미확인 (원문 미확인) |
+| ItsNotRexed/Leonida | 2026-11-23 | https://github.com/ItsNotRexed/Leonida | 외부 zhuikan 주간 성장 관찰; README/최근 커밋/릴리스 미확인; LICENSE 미확인 (원문 미확인) |
+| mvanhorn/last30days-skill | 2026-11-23 | https://github.com/mvanhorn/last30days-skill | 외부 zhuikan 주간 성장 관찰; README/최근 커밋/릴리스 미확인; LICENSE 미확인 (원문 미확인) |
+| libracoder/kiri | 2026-11-23 | https://github.com/libracoder/kiri | 외부 zhuikan 주간 성장 관찰; README/최근 커밋/릴리스 미확인; LICENSE 미확인 (원문 미확인) |
+| Leonxlnx/taste-skill | 2026-11-23 | https://github.com/Leonxlnx/taste-skill | 외부 zhuikan 주간 성장 관찰; README/최근 커밋/릴리스 미확인; LICENSE 미확인 (원문 미확인) |
+| deepseek-ai/deepseek-harness | 2026-11-23 | https://github.com/deepseek-ai/deepseek-harness | 외부 zhuikan 주간 성장 관찰; README/최근 커밋/릴리스 미확인; LICENSE 미확인 (원문 미확인) |
+| HKUDS/CLI-Anything | 2026-11-23 | https://github.com/HKUDS/CLI-Anything | 외부 zhuikan 주간 성장 관찰; README/최근 커밋/릴리스 미확인; LICENSE 미확인 (원문 미확인) |
+| google-research/paper-orchestra | 2026-11-23 | https://github.com/google-research/paper-orchestra | 외부 zhuikan 주간 성장 관찰; README/최근 커밋/릴리스 미확인; LICENSE 미확인 (원문 미확인) |
+| erkamyaman/rust-anything | 2026-11-23 | https://github.com/erkamyaman/rust-anything | 외부 zhuikan 주간 성장 관찰; README/최근 커밋/릴리스 미확인; LICENSE 미확인 (원문 미확인) |
+| kajisho5/ffmpeg-skill | 2026-11-23 | https://github.com/kajisho5/ffmpeg-skill | 외부 zhuikan 주간 성장 관찰; README/최근 커밋/릴리스 미확인; LICENSE API MIT (원문 미확인) |
