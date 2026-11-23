@@ -45,3 +45,61 @@
 
 ### 변경 및 보존
 - 2026-11-13 기준 후보 30개·기존 연구 69개 보존. 신규 조사 repo는 RESEARCH_HISTORY_INDEX.md에 별도 추가; 신규 독립 아이디어는 PRODUCT_IDEAS.md에 중복을 피하여 추가. GitHub 코드/배포/CI/권한 변경 없음.
+
+
+## WEEKLY-2026-11-23 — RUN WEEKLY-2026-11-23-1029-KST
+
+### 사실 — 공식·대체 자료 분리
+- 공식 GitHub Trending https://github.com/trending?since=weekly 직접 접근: restricted URL. **공식 주간 TOP30, 일간 TOP20, 월간 TOP30 및 공식 표시 stars this week/today/month 전부 미확인.** 외부 순번을 공식 순위로 인용하지 않는다.
+- **대체 독립 관측** https://zhuikan.com/b/weekly (2026-11-23 표기, UTC 02:00/14:00 스냅샷 기반 주간 별 차이). 아래 1~30은 **대체 사이트 자체 주간 성장순**이며 GitHub 공식 Trending 순위가 아니다. 수치는 변동 가능하며 원본 GitHub의 공식 주간 증가량과 동일하다고 단정할 수 없다.
+- github-trending-daily 브랜치 2026-11 DAILY.md의 11/17~11/23 기록 읽기 전용 비교. 11/23 일간도 공식 순위 접근 실패, 외부 ddewhurst 16개 관찰. 순위 직접 비교는 불가.
+- 아래 README/Licensing/커밋/릴리스는 **이번 주간 실행에서의 개별 검증**만 기재한다. 이전 일간 검증은 이번 주간 PASS로 재사용하지 않는다.
+
+| 대체 성장순(공식 아님) | 저장소 URL | 핵심 기능 / 실용 사례 | 외부 7일 별 증가 | 이번 회차 개별 확인 상태 |
+|---:|---|---|---:|---|
+| 1 | [morluto/rea](https://github.com/morluto/rea) | 역공학 에이전트 / 승인된 바이너리 분석 | +12,328 (외부) | README 미확인; LICENSE 미확인; 최근 커밋 미확인; 릴리스 미확인 |
+| 2 | [BaaRai/ARTEX](https://github.com/BaaRai/ARTEX) | 자동 침투테스트 / 승인된 보안 평가 | +11,877 (외부) | README 미확인; LICENSE API AGPL-3.0 (원문 미확인); 최근 커밋 미확인(pushed_at 11/22 UTC); 릴리스 미확인 |
+| 3 | [elementalsouls/Claude-BugHunter](https://github.com/elementalsouls/Claude-BugHunter) | 취약점 조사 스킬 / 코드 보안 검수 | +10,616 (외부) | README 미확인; LICENSE 미확인; 최근 커밋 미확인; 릴리스 미확인 |
+| 4 | [pingdotgg/t3code](https://github.com/pingdotgg/t3code) | 코딩 에이전트 원격 제어 / 개발 운영 | +10,025 (외부) | README 미확인; LICENSE 미확인; 최근 커밋 미확인; 릴리스 미확인 |
+| 5 | [Ebony-Vinyl/dsh-our-free-model](https://github.com/Ebony-Vinyl/dsh-our-free-model) | 모델 접근 플러그인 / 개인 실험 | +7,302 (외부) | README 미확인; LICENSE 미확인; 최근 커밋 미확인; 릴리스 미확인 |
+| 6 | [stablyai/orca](https://github.com/stablyai/orca) | 다중 에이전트 운영 / 개발팀 작업 관리 | +7,221 (외부) | README 미확인; LICENSE 미확인; 최근 커밋 미확인; 릴리스 미확인 |
+| 7 | [storytold/craft-anything](https://github.com/storytold/craft-anything) | 소프트웨어 분석 / 재구현 연구 | +6,880 (외부) | README 미확인; LICENSE 미확인; 최근 커밋 미확인; 릴리스 미확인 |
+| 8 | [obra/superpowers](https://github.com/obra/superpowers) | 개발 스킬 프레임워크 / 표준 개발 | +6,062 (외부) | README 미확인; LICENSE 미확인; 최근 커밋 미확인; 릴리스 미확인 |
+| 9 | [boykopovar/AnyPS5](https://github.com/boykopovar/AnyPS5) | 게임 실행파일 포팅 / 권리 확인된 연구 | +6,020 (외부) | README 미확인; LICENSE 미확인; 최근 커밋 미확인; 릴리스 미확인 |
+| 10 | [ccch1mneyyy/dsh-Go](https://github.com/ccch1mneyyy/dsh-Go) | 모바일 에이전트 / PC 원격 제어 | +5,886 (외부) | README 미확인; LICENSE 미확인; 최근 커밋 미확인; 릴리스 미확인 |
+| 11 | [anefzaoui/misterdownloadmanager](https://github.com/anefzaoui/misterdownloadmanager) | 다운로드 관리자 / 파일 관리 | +5,731 (외부) | README 미확인; LICENSE 미확인; 최근 커밋 미확인; 릴리스 미확인 |
+| 12 | [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail) | 코딩 스킬 / 불필요한 코드 감소 | +5,478 (외부) | README 미확인; LICENSE 미확인; 최근 커밋 미확인; 릴리스 미확인 |
+| 13 | [mattpocock/skills](https://github.com/mattpocock/skills) | 개발자 스킬 / 코드 작성 절차 | +5,377 (외부) | README 미확인; LICENSE 미확인; 최근 커밋 미확인; 릴리스 미확인 |
+| 14 | [nexu-io/html-anything](https://github.com/nexu-io/html-anything) | 편집 가능한 모션그래픽 / 쇼츠 제작 | +5,254 (외부) | README 미확인; LICENSE 미확인; 최근 커밋 미확인; 릴리스 미확인 |
+| 15 | [debpalash/VoiceStudio](https://github.com/debpalash/VoiceStudio) | 로컬 음성 생성·전사 / 영상 자막 | +5,226 (외부) | README 미확인; LICENSE 미확인; 최근 커밋 미확인; 릴리스 미확인 |
+| 16 | [affaan-m/ECC](https://github.com/affaan-m/ECC) | 에이전트 성능 최적화 / 개발 절차 | +5,186 (외부) | README 미확인; LICENSE 미확인; 최근 커밋 미확인; 릴리스 미확인 |
+| 17 | [ItsNotRexed/Leonida](https://github.com/ItsNotRexed/Leonida) | 게임 재컴파일 / 권리 확인된 연구 | +5,175 (외부) | README 미확인; LICENSE 미확인; 최근 커밋 미확인; 릴리스 미확인 |
+| 18 | [firecrawl/firecrawl](https://github.com/firecrawl/firecrawl) | 웹 수집 API / 허가된 데이터 추출 | +4,882 (외부) | README 미확인; LICENSE 미확인; 최근 커밋 미확인; 릴리스 미확인 |
+| 19 | [mvanhorn/last30days-skill](https://github.com/mvanhorn/last30days-skill) | 최근 동향 리서치 / 근거 조사 | +4,853 (외부) | README 미확인; LICENSE 미확인; 최근 커밋 미확인; 릴리스 미확인 |
+| 20 | [libracoder/kiri](https://github.com/libracoder/kiri) | 컨테이너 런타임 / 로컬 개발 | +4,702 (외부) | README 미확인; LICENSE 미확인; 최근 커밋 미확인; 릴리스 미확인 |
+| 21 | [dream-num/univer](https://github.com/dream-num/univer) | 문서·시트 SDK / 업무 UI | +4,499 (외부) | README 미확인; LICENSE 미확인; 최근 커밋 미확인; 릴리스 미확인 |
+| 22 | [pbakaus/impeccable](https://github.com/pbakaus/impeccable) | 디자인 검수 스킬 / UI QA | +4,300 (외부) | README 미확인; LICENSE 미확인; 최근 커밋 미확인; 릴리스 미확인 |
+| 23 | [Nutlope/hallmark](https://github.com/Nutlope/hallmark) | 디자인 품질 스킬 / UI 개선 | +4,068 (외부) | README 미확인; LICENSE 미확인; 최근 커밋 미확인; 릴리스 미확인 |
+| 24 | [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) | 레퍼런스 기반 UI 스킬 / FE 제작 | +3,964 (외부) | README 미확인; LICENSE 미확인; 최근 커밋 미확인; 릴리스 미확인 |
+| 25 | [deepseek-ai/deepseek-harness](https://github.com/deepseek-ai/deepseek-harness) | 에이전트 플러그인 실행기 / 개발 자동화 | +3,954 (외부) | README 미확인; LICENSE 미확인; 최근 커밋 미확인; 릴리스 미확인 |
+| 26 | [cloudflare/security-audit-skill](https://github.com/cloudflare/security-audit-skill) | 보안 감사 스킬 / 검증 보고 | +3,940 (외부) | README 미확인; LICENSE 미확인; 최근 커밋 미확인; 릴리스 미확인 |
+| 27 | [HKUDS/CLI-Anything](https://github.com/HKUDS/CLI-Anything) | 앱 CLI 생성 / 업무 자동화 | +3,918 (외부) | README 미확인; LICENSE 미확인; 최근 커밋 미확인; 릴리스 미확인 |
+| 28 | [google-research/paper-orchestra](https://github.com/google-research/paper-orchestra) | 논문 작성 에이전트 / 연구 지원 | +3,896 (외부) | README 미확인; LICENSE 미확인; 최근 커밋 미확인; 릴리스 미확인 |
+| 29 | [erkamyaman/rust-anything](https://github.com/erkamyaman/rust-anything) | 행동 비교 기반 Rust 변환 / 레거시 이전 | +3,822 (외부) | README 미확인; LICENSE 미확인; 최근 커밋 미확인; 릴리스 미확인 |
+| 30 | [Graphify-Labs/graphify](https://github.com/Graphify-Labs/graphify) | 코드·SQL 지식그래프 / 구조 분석 | +3,687 (외부) | README 미확인; LICENSE 미확인; 최근 커밋 미확인; 릴리스 미확인 |
+
+- **추가 관찰(대체 30위 밖)**: [kajisho5/ffmpeg-skill](https://github.com/kajisho5/ffmpeg-skill) 대체 37위 +3,552; 로컬 FFmpeg 기반 자막·쇼츠·리프레임. GitHub API SPDX MIT, pushed_at 2026-11-23 00:22 UTC; README/최근 커밋 SHA/릴리스 원문 미확인. [nexu-io/html-anything](https://github.com/nexu-io/html-anything)은 GitHub API 메타데이터 응답에서 라이선스·설명 확인 불가이므로 상업 재배포 권리 미확인.
+- BaaRai/ARTEX는 GitHub API SPDX AGPL-3.0, pushed_at 2026-11-22 22:01 UTC 확인. LICENSE 원문/종속물·최근 커밋 SHA/릴리스 미확인. 위 표의 나머지 개별 검사는 NOT_RUN. **모든 저장소를 검증 완료로 주장하지 않음**.
+
+### 분석 — 최근 7일 및 일간 대비 새 흐름
+- 11/23 일간 외부 목록의 Claude-BugHunter, firecrawl, superpowers, CLI-Anything가 주간 대체 상위 30에도 등장한다. 주간에는 t3code/orca/dsh-Go 등의 **다중·원격 에이전트 운영**, impeccable/hallmark/taste-skill 등의 **디자인 품질 스킬**, html-anything/VoiceStudio의 **편집 가능한 영상·음성**이 추가로 부각된다. 이는 GitHub 별 증가 관측이지 구매 수요 실증이 아니다.
+- HAE: t3code/orca/CLI-Anything 승인형 작업관리 참고. SOVIA: Claude-BugHunter/security-audit-skill의 재현 근거 검수. DBVORA: Graphify의 SQL 구조 그래프. REA_WEB: impeccable/taste-skill 레퍼런스 UI QA. KIC: last30days-skill 출처 기록. PayPal: 승인형 에이전트 작업 추적. UGREEN: kiri의 로컬 런타임 연구. candle_scraper: firecrawl의 허가된 수집·출처 추적. **전부 분석만 수행, 기존 저장소에 코드 결합 없음.**
+- 게임 포팅/역공학/자동 침투 테스트는 별도 소프트웨어 권리·대상 소유자 허가·공격 범위·AGPL 의무 때문에 즉시 크몽 상품화에서 제외. 무료 모델 무제한 주장도 실제 약관·비용 검증 전 채택하지 않는다.
+
+### 제안 — 기존 저장소 없이 독립 납품 TOP3 (추정, 미출시)
+1. **한국어 쇼츠·자막 로컬 제작 패키지**: 고객 강의자·팟캐스터·소규모 마케터; 납품 MP4 3~5개, SRT, 썸네일, 재편집 설명서. **8만~25만원 / 1~2일 / 난이도 중 (추정)**. 원본 https://github.com/kajisho5/ffmpeg-skill (GitHub API MIT, 원문 미검증), https://github.com/nexu-io/html-anything (라이선스 미확인); 후자 소스 번들/상업 재배포 HOLD. 차별화 한국어 수동 교정·무료 로컬 렌더·수정 가능한 납품. 필수 Windows 1050Ti 실제 렌더, 음원/영상 권리, 폰트·코덱, 자막 싱크, FFmpeg 종속 라이선스. 기존 autoclip·Handy/VoiceStudio 후보와 **중복 통합**.
+2. **레퍼런스 UI 품질 감사·개선 보고**: 고객 쇼핑몰·소형 웹 제작사; 납품 화면별 차이표·반응형 캡처·수정 우선순위·검증 보고. **7만~25만원 / 1~3일 / 난이도 중 (추정)**. 원본 https://github.com/pbakaus/impeccable , https://github.com/Leonxlnx/taste-skill (LICENSE 원문·상업 권리 미확인, 직접 재배포 HOLD). 차별화 레퍼런스 대비 실측·모바일 재현·기능 검수 분리. 필수 고객 사이트 허가, 이미지/폰트 권리, 브라우저 실측, 개인정보 비수집. REA_WEB·FFAX와 별도 독립 **감사 서비스**로만 검토.
+3. **로컬 코드·SQL 구조 시각화 보고서**: 고객 프리랜서 개발자·레거시 인수팀; 납품 읽기전용 의존성·SQL 관계 그래프, HTML/PDF, 위험·미확인 목록. **10만~35만원 / 1~3일 / 난이도 중상 (추정)**. 원본 https://github.com/Graphify-Labs/graphify , https://github.com/HKUDS/CLI-Anything (라이선스 원문·종속물 미확인, 재배포 HOLD). 차별화 외부 업로드 0·근거 파일 위치·수동 확인. 필수 고객 소스 취급 동의, 로컬 오프라인 검증, 정확성·대용량 성능, SQL 비밀 마스킹. DBVORA/SOVIA/기존 Graphify 후보와 중복 방지.
+
+### 안전·보존
+- 기존 2026-11-13 기준 상품 30개·조사 이력 69개 및 11/16 기록 보존. 기존 코드/CI/권한/배포/고객 자료·유료 API 변경 없음. 주간 브랜치 이외 쓰기 없음. 공식 순위와 상업 이용 권리 미확인은 그대로 미확인 처리.
