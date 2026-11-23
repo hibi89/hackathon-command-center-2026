@@ -38,3 +38,13 @@
 | 2026-11-16 | AI 스킬 품질·중복 검수 (기존 AI 개발환경·스킬 검증의 **고도화**, 신규 중복 상품 ID 생성 금지) | AI 자동화 팀 | 충돌 매트릭스·재현 테스트·근거 보고 | 12만~40만원 / 2~4일 | https://github.com/NVIDIA/SkillEvaluator ; API Apache-2.0, 원문·NOTICE·의존성 미검증 | 실행 전후 효과 검증·권한 통제 | 모델 비용 0원 경로, 고객 스킬 반출 방지, 격리 실행, 라이선스 본문 |
 | 2026-11-16 | 로컬 음성·자막 자동화 (기존 Handy 후보 **통합 검토**) | 교육·영상 제작자 | 오프라인 설치·SRT·더빙·매뉴얼 | 15만~45만원 / 2~5일 | https://github.com/debpalash/VoiceStudio ; API AGPL-3.0, 원문·모델 권리 미검증 | 한국어·비반출 | AGPL 의무·모델 사용권·목소리 동의·Windows 테스트 |
 | 2026-11-16 | 다중 코딩 에이전트 운영환경 (HAE/EAI와 중복 검토) | 1인·소형 개발팀 | worktree 격리·승인·복구 가이드 | 15만~50만원 / 2~5일 | https://github.com/stablyai/orca ; API MIT, 원문·종속물 미검증 | 사람 승인·실패 복구·비용 통제 | 구독비·실기기·Git 권한·보안·중복 실행 |
+
+
+## 2026-11-23 주간 독립 납품 아이디어 재평가 (기존 후보 중복 통합, 미출시)
+| 발견일 | 후보·중복 판단 | 타깃 | 납품물 | 예상 가격·기간·난이도 | 원본·권리 | 차별화 | 필수 검증 |
+|---|---|---|---|---|---|---|---|
+| 2026-11-23 | 한국어 쇼츠·자막 로컬 제작 (기존 autoclip/Handy/VoiceStudio 후보에 통합) | 강의자·팟캐스터·마케터 | MP4 3~5개·SRT·썸네일·매뉴얼 | 8만~25만원 / 1~2일 / 중, 추정 | https://github.com/kajisho5/ffmpeg-skill GitHub API MIT(원문 미확인), https://github.com/nexu-io/html-anything 라이선스 미확인·번들 HOLD | 한국어 교정·무료 로컬 렌더 | 1050Ti 실기기·음원/영상/폰트/코덱 권리·자막 싱크·종속물 |
+| 2026-11-23 | 레퍼런스 UI 감사 (기존 웹 품질·REA_WEB/FFAX 후보와 중복 심사) | 쇼핑몰·웹 제작사 | 화면 차이표·반응형 캡처·수정 보고 | 7만~25만원 / 1~3일 / 중, 추정 | https://github.com/pbakaus/impeccable ; https://github.com/Leonxlnx/taste-skill ; LICENSE 원문 미확인·재배포 HOLD | 레퍼런스 실측·모바일 재현 | 고객 허가·저작권·실브라우저·개인정보 |
+| 2026-11-23 | 로컬 코드·SQL 구조 보고 (기존 Graphify/DBVORA 후보 고도화) | 레거시 인수팀·개발자 | 의존성·SQL 그래프·HTML/PDF·위험 목록 | 10만~35만원 / 1~3일 / 중상, 추정 | https://github.com/Graphify-Labs/graphify ; https://github.com/HKUDS/CLI-Anything ; LICENSE/종속물 미확인·재배포 HOLD | 외부 전송 0·근거 위치 표시 | 소스 동의·비밀 마스킹·대형 코드 성능·정확성 |
+
+- 위 항목은 독립 납품 **서비스 가설**이며 신규 중복 SKU 자동 생성·출시 승인 아님. 출처: 2026-11-23 외부 https://zhuikan.com/b/weekly ; 공식 GitHub Trending 순위 미확인.
