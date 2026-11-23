@@ -210,3 +210,9 @@
 - https://trending.ddewhurst.com/ 2026-11-22 00:00 UTC 비공식 16개 URL을 기존 조사 이력과 대조: **신규 URL 0개**. GitHub 공식 일간/주간/월간 순위 미확인. 2026-11-13 기준 기존 69개 및 이후 이력 보존.
 - 2026-11-22 개별 GitHub README/LICENSE/커밋/릴리스 4종 확인: https://github.com/zhouxiaoka/autoclip (MIT, cd8e6bed, v1.5.8); https://github.com/Tracer-Cloud/opensre (Apache-2.0, 34743ae0, v0.1.2026.11.22); https://github.com/mjmirza/app-store-compliance (OpenRoots ORA-2.3 포인터, 45248a77, v2.5.0). 라이선스 종속물/법률 검토 별도 미완.
 - 그 외 13개 저장소의 오늘 README/LICENSE/최근 커밋/릴리스 개별 검증 NOT_RUN.
+
+
+## 2026-11-23 조사 이력 — RUN-20261123-0957-KST
+- https://trending.ddewhurst.com/ 2026-11-23 00:00 UTC 외부 16개 URL을 기존 조사 이력과 대조: **신규 URL 0개**. 공식 daily/weekly/monthly 순위 및 공식 스타 증가량 미확인; 외부 17~20위 미표시.
+- 11/23 개별 GitHub README/LICENSE/최근 커밋/릴리스 4종 재조회: https://github.com/zhouxiaoka/autoclip (MIT, 39c856b0, v1.5.9); https://github.com/Tracer-Cloud/opensre (Apache-2.0, 75f248fe, v0.1.2026.11.22); https://github.com/mjmirza/app-store-compliance (OpenRoots ORA-2.3 포인터, ad76746e, v2.5.1). 나머지 13개 11/23 개별 검증 NOT_RUN. 비표준 라이선스 상업권·종속물 미확인.
+- 2026-11-13 기준 기존 69개 및 이후 전체 조사 기록 보존. 신규 URL 중복 행 추가 없음.
