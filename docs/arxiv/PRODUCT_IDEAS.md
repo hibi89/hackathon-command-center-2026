@@ -25,3 +25,10 @@
 - **기존 ARXIV-IDEA-WEB-AGENT-QA-01 재검토:** [Visual Audit 2611.24867](https://arxiv.org/abs/2611.24867)의 동일 관찰 예산 비교를 SVC-14/REA_WEB 옵션으로 검토. 추정 12~35만원·2~5일·중상.
 - **GateWatch 2611.24619:** MLA/SOVIA 규칙 기반 모니터링의 연구 참고만. Gemma/vLLM/SAE 실험 수치는 GTX1050Ti에서 미재현. 모델·데이터·의존권리 미확인.
 - **고객 인수/권리:** 로컬 합성 QA, 원본 불변, 명시적 권한, 민감정보 비전송, LICENSE/NOTICE/모델/데이터 상업권리 개별 확인 필수. 신규 19 SKU 변경·크몽 등록·출시·실구현 **없음**.
+
+
+## 2026-11-24 research review — ARXIV-2026-11-24-1130-KST
+- ARXIV-IDEA-REQ-QA-01: [2611.27112](https://arxiv.org/abs/2611.27112), [2611.26666](https://arxiv.org/abs/2611.26666), [2611.27829](https://arxiv.org/abs/2611.27829): existing SVC-07 option, independent policy enforcement and version-bound evidence/contract checks; KRW 120k–350k / 2–5 days / medium-high.
+- ARXIV-RD-HARNESS-01: [2611.27090](https://arxiv.org/abs/2611.27090): recovery test pack and state reconciliation, existing internal research only, MLA/EAI HOLD; hypothetical KRW 100k–300k / 2–5 days / medium-high.
+- ARXIV-IDEA-SQL-MEM-01: [2611.26665](https://arxiv.org/abs/2611.26665): DBVORA read-only ledger consistency audit extension; KRW 150k–400k / 3–6 days / medium-high.
+- Existing customer problems retained, no new candidate IDs/SKUs. Full catalog not independently re-read. Prices unvalidated. Customer-authorized local data, disposable fixtures, independent acceptance, commercial LICENSE/NOTICE/dependency/model/data rights review required. No code reuse, implementation, registration or release.
