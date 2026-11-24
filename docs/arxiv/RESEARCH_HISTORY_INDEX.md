@@ -30,3 +30,11 @@
 | [2611.24619](https://arxiv.org/abs/2611.24619) | 2026-11-20 | LLM monitoring | 공식 cs.AI 2026-11-19 발표, arXiv 초록·v1 제출이력 확인; 코드/README/LICENSE/NOTICE/의존권리 미확인 |
 
 **예약 자동 실행 검증 대상:** `ARXIV-2026-11-20-1130-KST`; 5개 신규 ID. 원격 readback 성공 시에만 GitHub 자동 저장 검증 인정.
+
+| [2611.27112](https://arxiv.org/abs/2611.27112) | 2026-11-24 | agent security | Official cs.SE announcement 2026-11-23; abstract and v1 history checked; code/README/LICENSE/NOTICE/dependencies unverified |
+| [2611.27090](https://arxiv.org/abs/2611.27090) | 2026-11-24 | recovery | Official cs.SE announcement 2026-11-23; abstract and v1 history checked; code/README/LICENSE/NOTICE/dependencies unverified |
+| [2611.26666](https://arxiv.org/abs/2611.26666) | 2026-11-24 | evidence revalidation | Official cs.SE announcement 2026-11-23; abstract and v1 history checked; code/README/LICENSE/NOTICE/dependencies unverified |
+| [2611.26665](https://arxiv.org/abs/2611.26665) | 2026-11-24 | ledger integrity | Official cs.SE announcement 2026-11-23; abstract and v1 history checked; code/README/LICENSE/NOTICE/dependencies unverified |
+| [2611.27829](https://arxiv.org/abs/2611.27829) | 2026-11-24 | requirements consistency | Official cs.SE announcement 2026-11-23; abstract and v1 history checked; code/README/LICENSE/NOTICE/dependencies unverified |
+
+Run: `ARXIV-2026-11-24-1130-KST`; 5 new IDs.
