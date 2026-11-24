@@ -96,3 +96,38 @@
 | 재사용 스킬 증거 검수 | 자동화 운영팀: 스킬 SHA·권한·검증 근거 유효성 보고 | SVC-07/EAI/HAE **EXTENSION** / 12~35만원·3~6일·중상 | 개념 논문 기반 자체 구현, 안전 인증 아님, 권한 변경 승인·오탐 재검수·보안 인수 필요 |
 
 세 제안 모두 **NOT_BUILT / NOT_VERIFIED / RELEASE HOLD / NOT_REGISTERED**. 가격·납기는 시장검증 전 추정이며 원저자 코드/데이터를 상품에 포함하지 않는다.
+
+
+## ARXIV-2026-11-24
+
+- run_id: `ARXIV-2026-11-24-1130-KST`. Official [cs.SE](https://arxiv.org/list/cs.SE/recent) and [cs.AI](https://arxiv.org/list/cs.AI/recent) lists checked; selected five cs.SE papers announced 2026-11-23, after previous run. Not exhaustive; cs.DB/cs.CL not separately screened. Abstract and v1 history checked, full text not audited. New IDs: 5. All numerical findings are author reports, not local reproduction. GitHub code URL, README, LICENSE original, NOTICE, dependency/model/data rights individually unverified for all five; no code imported.
+
+| ID | Announcement / v1 UTC | Exact title | Author findings and limits |
+|---|---|---|---|
+| [2611.27112](https://arxiv.org/abs/2611.27112) | 2026-11-23 / 2026-11-20 04:35:33 | Markdown Is Not a Firewall: four coding agents, one rules file, four boundaries | 20 small repos; pooled hidden-test pass 98.2→90.9%; 5/90 gated boundary attempts blocked. Vendor permission prompts disabled and HTTP arm confounded by script error; not a general model ranking. |
+| [2611.27090](https://arxiv.org/abs/2611.27090) | 2026-11-23 / 2026-11-20 04:05:35 | Exercised, Rarely Recovered: What Public Reports Say About Recovery in 50 AI Agent Harnesses and Runtimes | 128 public reports, 19 full recoveries; checkpoint/resume 1/27, rollback 1/15. Observational reporting bias; not population failure rates. Dataset DOI https://doi.org/10.5281/zenodo.24122560 (rights unverified). |
+| [2611.26666](https://arxiv.org/abs/2611.26666) | 2026-11-23 / 2026-11-19 09:15:09 | Which Archived Results Survive a Rule Change? A Case Study in Revalidating Decisions | 11/312 paired records would change fields after parser migration; matching values can still lack current approval. Single case study. |
+| [2611.26665](https://arxiv.org/abs/2611.26665) | 2026-11-23 / 2026-11-19 09:15:07 | Testing Settlement Flags after Late Evidence and Process Restart | 504 synthetic histories, 672 controlled exits; file implementation missed 54 identity/date conflicts, 27 early credits. Single writer and controlled environment; not production proof. |
+| [2611.27829](https://arxiv.org/abs/2611.27829) | 2026-11-23 / 2026-11-20 16:52:00 | From Correctness to Consistency: Redefining Reliability for the Agentware Era | Differential Logic Analysis detects contradictions in preliminary simulations; abstract gives no quantitative effect or production validation. |
+
+### TOP5 — application hypotheses, not implementation
+
+| Priority / paper | Existing project comparison | Synthetic MVP person-hours (estimate) | Acceptance gate |
+|---|---|---|---|
+| 1 / 2611.27112 | REQ Evidence Auditor / HAE / FFAX: AGENTS.md policy is advisory; enforce allowed paths and tool permissions outside model, independent test oracle | 8–20 | 20 synthetic allowed/denied operations; zero unauthorized writes, independent hidden tests; no permission changes |
+| 2 / 2611.27090 | MLA/EAI checkpoint and resume: verify actual restored state rather than success flag; both projects currently HOLD | 10–24 | 20 interruption cases, idempotent resume, no duplicate side effects, Windows process termination tests |
+| 3 / 2611.26666 | EAI/HAE/REQ auditor: bind evidence to policy version and SHA; invalidate only affected approvals | 8–18 | 20 policy changes, stale approval rejection, preserve originals |
+| 4 / 2611.26665 | DBVORA/DATA2WEB: SQLite transaction and identity-keyed reconciliation; PayPal/candle_scraper only synthetic event replay, no real transactions | 10–24 | 30 duplicate/late/restart cases, integrity and balance invariants, backup/restore |
+| 5 / 2611.27829 | FFAX/REQ auditor: compare requirement and API contracts for contradiction before acceptance | 6–16 | 20 synthetic contracts, 5 planted contradictions, measure false positives and missed defects; independent correctness tests remain required |
+
+Estimates assume small Python/SQLite fixtures on Windows 11, GTX1050Ti/16GB, CPU-first, no training or paid API. Actual integration, security review, packaging and customer acceptance excluded. Benefits hypothesized: fewer false PASS, safer recovery and less repeated validation; unmeasured. Existing product comparisons based on prior research ledger and known design context, not fresh product-source audit. SOVIA/REA_WEB may reuse evidence gates; KIC/UGREEN submission rules unchanged. MLA/EAI HOLD unchanged.
+
+### Commercial TOP3 — existing options only
+
+| Existing candidate | Customer / independent deliverable | Price / delivery / difficulty (estimate) | Differentiation and acceptance |
+|---|---|---|---|
+| ARXIV-IDEA-REQ-QA-01 / SVC-07 | Outsourcing buyer: independent policy-boundary and requirement consistency report, reproducible fixtures | KRW 120k–350k / 2–5 days / medium-high | External enforcement rather than prompt-only; customer-authorized local source, independent oracle, rights review |
+| ARXIV-RD-HARNESS-01 / existing internal option | Automation operator: restart/recovery test pack and evidence report | KRW 100k–300k / 2–5 days / medium-high | Actual state reconciliation, not success flags; no live side effects, customer acceptance on disposable profile; MLA/EAI HOLD |
+| ARXIV-IDEA-SQL-MEM-01 / DBVORA existing option | Small business DB administrator: read-only ledger consistency and restart audit report | KRW 150k–400k / 3–6 days / medium-high | Identity and late-event checks; synthetic SQLite, backup and read-only access, no financial operations |
+
+All EXTENSION or internal research, no new SKU or candidate ID. Full 19-SKU catalog not independently re-read; no claim of exhaustive catalog comparison. Commercial code/data/model rights unverified; independently implement principles only after review. No customer data, paid API, product source, CI, deployment, registration or release changes. NOT_BUILT / NOT_VERIFIED / RELEASE HOLD.
