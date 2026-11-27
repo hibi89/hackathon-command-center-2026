@@ -216,3 +216,12 @@
 - https://trending.ddewhurst.com/ 2026-11-23 00:00 UTC 외부 16개 URL을 기존 조사 이력과 대조: **신규 URL 0개**. 공식 daily/weekly/monthly 순위 및 공식 스타 증가량 미확인; 외부 17~20위 미표시.
 - 11/23 개별 GitHub README/LICENSE/최근 커밋/릴리스 4종 재조회: https://github.com/zhouxiaoka/autoclip (MIT, 39c856b0, v1.5.9); https://github.com/Tracer-Cloud/opensre (Apache-2.0, 75f248fe, v0.1.2026.11.22); https://github.com/mjmirza/app-store-compliance (OpenRoots ORA-2.3 포인터, ad76746e, v2.5.1). 나머지 13개 11/23 개별 검증 NOT_RUN. 비표준 라이선스 상업권·종속물 미확인.
 - 2026-11-13 기준 기존 69개 및 이후 전체 조사 기록 보존. 신규 URL 중복 행 추가 없음.
+
+
+## 2026-11-27 조사 이력 — RUN-20261127-1004-KST
+외부 16개 URL 대조, 신규 0개. 공식 순위 미확인.
+
+- https://github.com/cathrynlavery/diagram-design | 2026-11-27 | README 확인; MIT LICENSE 확인; 커밋 795eec47fd376e5dda0b9e056a49520060cd2f13; 릴리스 미확인
+- https://github.com/HKUDS/CLI-Anything | 2026-11-27 | README 확인; Apache-2.0 LICENSE 확인; 커밋 34f519533bc175d2fe287ab8316b0dd99bb9cc43; 릴리스 미확인
+- https://github.com/zhouxiaoka/autoclip | 2026-11-27 | README 확인; MIT LICENSE 확인; 커밋 559f01900aed62ca8bc9244d7bd7092ab29bd82e; 릴리스 미확인
+기존 기록 보존.
