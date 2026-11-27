@@ -38,3 +38,12 @@
 | [2611.27829](https://arxiv.org/abs/2611.27829) | 2026-11-24 | requirements consistency | Official cs.SE announcement 2026-11-23; abstract and v1 history checked; code/README/LICENSE/NOTICE/dependencies unverified |
 
 Run: `ARXIV-2026-11-24-1130-KST`; 5 new IDs.
+
+
+| [2611.34875](https://arxiv.org/abs/2611.34875) | 2026-11-27 | code scope | Official announcement 2026-11-26, abstract/v1 checked; code/README/LICENSE/NOTICE/dependencies unverified |
+| [2611.34617](https://arxiv.org/abs/2611.34617) | 2026-11-27 | test selection | Official announcement 2026-11-26, abstract/v1 checked; code/README/LICENSE/NOTICE/dependencies unverified |
+| [2611.34624](https://arxiv.org/abs/2611.34624) | 2026-11-27 | memory | Official announcement 2026-11-26, abstract/v1 checked; author GitHub README and license metadata checked; original LICENSE/NOTICE/dependencies unverified |
+| [2611.34327](https://arxiv.org/abs/2611.34327) | 2026-11-27 | routing | Official announcement 2026-11-26, abstract/v1 checked; code/README/LICENSE/NOTICE/dependencies unverified |
+| [2611.32636](https://arxiv.org/abs/2611.32636) | 2026-11-27 | regression | Official announcement 2026-11-25, abstract/v1 checked; code/README/LICENSE/NOTICE/dependencies unverified |
+
+Run: `ARXIV-2026-11-27-1130-KST`; 5 new IDs.
