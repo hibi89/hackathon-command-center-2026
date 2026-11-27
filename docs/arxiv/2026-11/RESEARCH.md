@@ -131,3 +131,40 @@ Estimates assume small Python/SQLite fixtures on Windows 11, GTX1050Ti/16GB, CPU
 | ARXIV-IDEA-SQL-MEM-01 / DBVORA existing option | Small business DB administrator: read-only ledger consistency and restart audit report | KRW 150k–400k / 3–6 days / medium-high | Identity and late-event checks; synthetic SQLite, backup and read-only access, no financial operations |
 
 All EXTENSION or internal research, no new SKU or candidate ID. Full 19-SKU catalog not independently re-read; no claim of exhaustive catalog comparison. Commercial code/data/model rights unverified; independently implement principles only after review. No customer data, paid API, product source, CI, deployment, registration or release changes. NOT_BUILT / NOT_VERIFIED / RELEASE HOLD.
+
+
+## ARXIV-2026-11-27
+
+- run_id: `ARXIV-2026-11-27-1130-KST`. Official https://arxiv.org/list/cs.SE/recent and https://arxiv.org/list/cs.AI/recent screened selectively, not exhaustive; cs.DB/cs.CL not separately screened. Five new IDs, abstract and v1 history verified; full paper audit NOT_RUN. All results are author reports.
+
+| ID | Announcement / v1 UTC | Exact title | Findings and limits |
+|---|---|---|---|
+| [2611.34875](https://arxiv.org/abs/2611.34875) | 2026-11-26 / 2026-11-25 18:37:06 | How Much Do Coding Agents Over-Edit, and Why? An Empirical Study of Unneeded Edits in Repository-Level Agent Patches | 7,660 resolved trajectories, 18 models; 11% of code units unnecessary on SWE-bench Verified; pruning precision 46%, recall 67%; resolved-only sample and test oracle limitations. |
+| [2611.34617](https://arxiv.org/abs/2611.34617) | 2026-11-26 / 2026-11-25 16:05:46 | Evaluating More with Less: Black-Box Test Selection for AI Agents | 10 benchmarks; 100/500 tasks cost $47 vs $225, estimation error 0.8 percentage points in one Codex experiment; no universal best strategy; sampling is not acceptance. |
+| [2611.34624](https://arxiv.org/abs/2611.34624) | 2026-11-26 / 2026-11-25 16:11:53 | HoMe: Toward Practical Harness Optimization of Memory Systems for AI Assistants | Six formal candidate evaluations per benchmark after baseline; author README reports +2.8/+5.4 percentage points and query tokens -59.2%/-40.7% on two memory evaluations; not local hardware proof. |
+| [2611.34327](https://arxiv.org/abs/2611.34327) | 2026-11-26 / 2026-11-25 13:09:13 | MeterRouter: Budget-Aware Dynamic Routing for Multi-Agent Systems | Five benchmarks, three-tier model pool; authors report 82% lower cost vs strongest MAS router at comparable accuracy; trained router, not a free local reproduction. |
+| [2611.32636](https://arxiv.org/abs/2611.32636) | 2026-11-25 / 2026-11-24 13:57:27 | Generating Property-Based Regression Tests from Source Code Semantics | Java study: EqBench mutation score 63.8% vs 55.2% EvoSuite; TOGBench 48.6% vs 50.9%, validated properties only 2.8% of methods; limited coverage. |
+
+Code: HoMe author-linked https://github.com/agentscope-ai/ReMe public README checked, Apache-2.0 metadata visible; LICENSE original, NOTICE, dependencies/model/data rights not checked. Other four: GitHub URL, README, LICENSE original, NOTICE and dependency rights individually unverified. No code imported.
+
+### TOP5 application hypotheses
+
+| Priority | Existing feature comparison and proposed experiment | Synthetic MVP person-hours | Gate |
+|---|---|---|---|
+| 1 test selection | REQ Evidence Auditor / HAE TruthGate / FFAX: stratify early smoke tests by REQ/risk; preserve full P2 | 6–12 | 30 fixtures, compare random vs stratified failure detection; mandatory security and full acceptance unchanged |
+| 2 over-edit | FFAX / REQ auditor: allowed-path and diff necessity report, no automatic pruning | 8–16 | 20 patches with planted unrelated edits, independent oracle; no deletion of original |
+| 3 property tests | DBVORA/DATA2WEB: SQLite invariants; HAE typed claims; PayPal/candle_scraper synthetic only | 8–20 | 30 generated cases, seeded faults, no live transactions; independent requirements prevent preserving existing bugs |
+| 4 HoMe | MLA/EAI existing memory and evidence ledger: versioned retrieval configurations, replay and token budget | 10–24 | 20 synthetic sessions, source SHA, stale memory rejection, no sensitive data; HOLD unchanged |
+| 5 MeterRouter | MLA/FFAX/HAE: rule-based budget and termination, no RL training | 6–12 | 20 synthetic tasks, hard zero paid API budget, measure latency/quality; no claim of 82% local saving |
+
+Estimates assume CPU-first Python/SQLite, GTX1050Ti/16GB Windows, small fixtures and existing interfaces; no Docker, model training, paid API or live customer data. Integration, independent audit and packaging excluded; benefits unmeasured. SOVIA/REA_WEB may reuse risk-based QA; KIC/UGREEN rules unchanged. Product comparison uses existing research ledger, not fresh source audit.
+
+### Commercial TOP3 (existing options only)
+
+| Existing candidate | Customer and independent deliverable | Price / delivery / difficulty estimate | Differentiation and acceptance |
+|---|---|---|---|
+| ARXIV-IDEA-REQ-QA-01 / SVC-07 | SW buyer: risk-stratified test plan, diff scope and reproducible defect report | KRW 100k–300k / 2–4 days / medium-high | early failure detection, independent full acceptance, authorized local source |
+| ARXIV-IDEA-SQL-MEM-01 / DBVORA | DB administrator: invariant test pack and read-only integrity report | KRW 100k–300k / 2–5 days / medium-high | generated edge cases, disposable SQLite, backup and customer signoff |
+| ARXIV-RD-HARNESS-01 | automation developer: memory replay and budget comparison report/config | KRW 80k–250k / 2–4 days / medium | internal research extension only, no new SKU; local synthetic data, no paid calls |
+
+Existing customer problems retained; full 19 SKU catalog not independently reread. Commercial LICENSE/NOTICE/dependency/model/data rights must be cleared before reuse; no author code bundled. Prices unvalidated. NOT_BUILT / NOT_VERIFIED / RELEASE HOLD / NOT_REGISTERED.
