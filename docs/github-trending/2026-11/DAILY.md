@@ -434,3 +434,34 @@
 2. CI 장애 진단: https://github.com/Tracer-Cloud/opensre (최초 발견 2026-11-20). 고객 소규모 개발팀, 납품 마스킹된 로그 원인·재현·복구 보고, 15~45만원/1~3일/중상. Apache-2.0 원문 확인; NOTICE·종속물·외부 모델 비용 미검증. 차별화 읽기전용 증거 기반. 필수 비밀 마스킹·실제 재현·오탐 검사.
 3. 앱스토어 제출 전 점검: https://github.com/mjmirza/app-store-compliance (최초 발견 2026-11-20). 고객 앱 개발자, 납품 공식 정책 링크·거절 위험·수정 권고 보고, 12~35만원/1~3일/중상. OpenRoots ORA-2.3 비표준 LICENSE 포인터 확인, 상업 재배포 권한 미확정으로 원본 코드 판매 HOLD. 차별화 독립 체크리스트. 필수 법률·정책 최신성·오탐·개인정보 검증.
 - 가격·기간·수요·판매 가능성 추정, 실사용/실판매/출시 NOT_RUN. 2026-11-13 기존 30개 후보·69개 프로젝트 및 이후 기록 삭제 금지. 코드·배포·권한·CI·고객 원본·유료 API 변경 없음.
+
+
+## DAILY-2026-11-27 — RUN-20261127-1004-KST
+### 사실
+공식 daily/weekly/monthly 접근 제한, 순위 및 공식 스타 증가 미확인. 외부 https://trending.ddewhurst.com/ 2026-11-27 00:00 UTC, 16개, 표시 합계 10641. 외부 17~20 미표시.
+| 외부 순번 | URL | 증가 | 기능 | 사례 | 검증 |
+|---|---|---:|---|---|---|
+| 1 | https://github.com/elementalsouls/Claude-BugHunter | +1597 | 보안 감사 | 허가된 코드 점검 | README/LICENSE/커밋/릴리스 NOT_RUN |
+| 2 | https://github.com/firecrawl/firecrawl | +1046 | 웹 수집 | 허가된 자료 정리 | README/LICENSE/커밋/릴리스 NOT_RUN |
+| 3 | https://github.com/cathrynlavery/diagram-design | +955 | HTML/SVG 도식 | 기술 구성도 | README 확인; MIT LICENSE 확인; 커밋 795eec47fd376e5dda0b9e056a49520060cd2f13; 릴리스 미확인 |
+| 4 | https://github.com/XiaoYouChR/Ghost-Downloader-3 | +889 | 다운로드 관리 | 파일 관리 | README/LICENSE/커밋/릴리스 NOT_RUN |
+| 5 | https://github.com/obra/superpowers | +854 | 개발 스킬 | 개발 절차 표준화 | README/LICENSE/커밋/릴리스 NOT_RUN |
+| 6 | https://github.com/zhouxiaoka/autoclip | +774 | 영상 편집 | 쇼츠 제작 | README 확인; MIT LICENSE 확인; 커밋 559f01900aed62ca8bc9244d7bd7092ab29bd82e; 릴리스 미확인 |
+| 7 | https://github.com/mvanhorn/last30days-skill | +759 | 최근 자료 조사 | 시장 조사 | README/LICENSE/커밋/릴리스 NOT_RUN |
+| 8 | https://github.com/HKUDS/CLI-Anything | +746 | CLI 생성 | 업무 자동화 | README 확인; Apache-2.0 LICENSE 확인; 커밋 34f519533bc175d2fe287ab8316b0dd99bb9cc43; 릴리스 미확인 |
+| 9 | https://github.com/jingyaogong/minimind | +702 | 소형 LLM 학습 | 교육 | README/LICENSE/커밋/릴리스 NOT_RUN |
+| 10 | https://github.com/mjmirza/app-store-compliance | +562 | 앱 정책 점검 | 심사 준비 | README/LICENSE/커밋/릴리스 NOT_RUN |
+| 11 | https://github.com/toeverything/AFFiNE | +525 | 지식관리 | 팀 문서 | README/LICENSE/커밋/릴리스 NOT_RUN |
+| 12 | https://github.com/Tracer-Cloud/opensre | +327 | CI 장애 진단 | 복구 보고 | README/LICENSE/커밋/릴리스 NOT_RUN |
+| 13 | https://github.com/google-labs-code/stitch-skills | +309 | UI 스킬 | 시안 제작 | README/LICENSE/커밋/릴리스 NOT_RUN |
+| 14 | https://github.com/cursor/plugins | +270 | 플러그인 | 개발 환경 확장 | README/LICENSE/커밋/릴리스 NOT_RUN |
+| 15 | https://github.com/openvinotoolkit/openvino | +176 | 추론 최적화 | CPU 추론 | README/LICENSE/커밋/릴리스 NOT_RUN |
+| 16 | https://github.com/nginx/nginx | +150 | 웹 서버 | 프록시 | README/LICENSE/커밋/릴리스 NOT_RUN |
+### 분석
+HAE CLI-Anything; SOVIA Claude-BugHunter; DBVORA CLI-Anything; REA_WEB diagram-design; KIC last30days-skill; PayPal app-store-compliance; UGREEN opensre; candle_scraper firecrawl. 연계 제안, 실제 호환성 미검증.
+### 제안
+- 기술 문서 시각화: https://github.com/cathrynlavery/diagram-design (조사 최초 2026-11-20). 개발팀/제안서 작성자; SVG/HTML/PNG 구성도 5~10개; 5~20만원, 1~2일, 중하. MIT 원문 확인; 고지·폰트·종속물·SVG 보안·출력 검증. 한국어·오프라인 편집 차별화.
+- CLI 자동화: https://github.com/HKUDS/CLI-Anything (2026-11-19). 소기업/개발팀; CLI 래퍼·매뉴얼·테스트; 18~55만원, 2~5일, 상. Apache-2.0 원문 확인; NOTICE·앱 약관·종속물·권한·복구 검증. dry-run 차별화.
+- 쇼츠 자막: https://github.com/zhouxiaoka/autoclip (2026-11-20). 강의자/소상공인; MP4 3~5개·SRT·썸네일; 8~25만원, 1~2일, 중. MIT 원문 확인; 고지·저작권·종속물·로컬 렌더·자막 정확도 검증. 한국어 수동 검수 차별화.
+가격/기간 추정, 실제 판매 및 종속 라이선스 미검증. 기존 저장소 없이 독립 납품.
+
