@@ -32,3 +32,10 @@
 - ARXIV-RD-HARNESS-01: [2611.27090](https://arxiv.org/abs/2611.27090): recovery test pack and state reconciliation, existing internal research only, MLA/EAI HOLD; hypothetical KRW 100k–300k / 2–5 days / medium-high.
 - ARXIV-IDEA-SQL-MEM-01: [2611.26665](https://arxiv.org/abs/2611.26665): DBVORA read-only ledger consistency audit extension; KRW 150k–400k / 3–6 days / medium-high.
 - Existing customer problems retained, no new candidate IDs/SKUs. Full catalog not independently re-read. Prices unvalidated. Customer-authorized local data, disposable fixtures, independent acceptance, commercial LICENSE/NOTICE/dependency/model/data rights review required. No code reuse, implementation, registration or release.
+
+
+## 2026-11-27 research review — ARXIV-2026-11-27-1130-KST
+- ARXIV-IDEA-REQ-QA-01: [2611.34617](https://arxiv.org/abs/2611.34617), [2611.34875](https://arxiv.org/abs/2611.34875): SVC-07 early risk-stratified tests and diff-scope report; KRW 100k–300k / 2–4 days / medium-high. Full independent acceptance remains mandatory.
+- ARXIV-IDEA-SQL-MEM-01: [2611.32636](https://arxiv.org/abs/2611.32636): DBVORA invariant test extension, read-only report; KRW 100k–300k / 2–5 days / medium-high.
+- ARXIV-RD-HARNESS-01: [2611.34624](https://arxiv.org/abs/2611.34624), [2611.34327](https://arxiv.org/abs/2611.34327): memory replay and budget comparison, internal research only; KRW 80k–250k / 2–4 days / medium, MLA/EAI HOLD.
+- No new customer problem IDs or SKU. Full catalog not reread; prices unvalidated. Customer-authorized local data, independent acceptance, commercial LICENSE/NOTICE/dependency/model/data rights review required. No implementation, registration or release.
