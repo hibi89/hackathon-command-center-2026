@@ -140,3 +140,11 @@
 | CI 장애 진단 | https://github.com/Tracer-Cloud/opensre · 2026-11-20 | 개발팀 / 비밀 마스킹 로그 원인·재현·복구 보고 | 15~45만원·1~3일·중상 | Apache-2.0 LICENSE 11/23 확인; NOTICE·종속물·모델 비용 미검증 | 읽기전용·실제 장애 재현·오탐·비밀정보 제거 |
 | 앱 심사 점검 | https://github.com/mjmirza/app-store-compliance · 2026-11-20 | 앱 개발자 / 정책 근거·거절 위험·수정 권고 | 12~35만원·1~3일·중상 | OpenRoots ORA-2.3 LICENSE 포인터 11/23 확인; 원본 코드 상업 재배포 HOLD | 독립 작성 점검표·법적 사용권·정책 최신성·오탐 |
 - 기존 30개+이후 후보 원문 보존. 원본 3개 README/LICENSE/커밋/릴리스 11/23 개별 재조회; 공식 Trending 순위 미확인.
+
+
+## 2026-11-27 재평가 — RUN-20261127-1004-KST
+기존 후보 재평가 및 시각화 후보 검토(동일 SKU 추가 금지). 원본 발견일 유지.
+- 기술 문서 시각화: https://github.com/cathrynlavery/diagram-design (조사 최초 2026-11-20). 개발팀/제안서 작성자; SVG/HTML/PNG 구성도 5~10개; 5~20만원, 1~2일, 중하. MIT 원문 확인; 고지·폰트·종속물·SVG 보안·출력 검증. 한국어·오프라인 편집 차별화.
+- CLI 자동화: https://github.com/HKUDS/CLI-Anything (2026-11-19). 소기업/개발팀; CLI 래퍼·매뉴얼·테스트; 18~55만원, 2~5일, 상. Apache-2.0 원문 확인; NOTICE·앱 약관·종속물·권한·복구 검증. dry-run 차별화.
+- 쇼츠 자막: https://github.com/zhouxiaoka/autoclip (2026-11-20). 강의자/소상공인; MP4 3~5개·SRT·썸네일; 8~25만원, 1~2일, 중. MIT 원문 확인; 고지·저작권·종속물·로컬 렌더·자막 정확도 검증. 한국어 수동 검수 차별화.
+가격/기간 추정, 실제 판매 및 종속 라이선스 미검증. 기존 저장소 없이 독립 납품.
