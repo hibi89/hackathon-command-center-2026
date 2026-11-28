@@ -225,3 +225,12 @@
 - https://github.com/HKUDS/CLI-Anything | 2026-11-27 | README 확인; Apache-2.0 LICENSE 확인; 커밋 34f519533bc175d2fe287ab8316b0dd99bb9cc43; 릴리스 미확인
 - https://github.com/zhouxiaoka/autoclip | 2026-11-27 | README 확인; MIT LICENSE 확인; 커밋 559f01900aed62ca8bc9244d7bd7092ab29bd82e; 릴리스 미확인
 기존 기록 보존.
+
+
+## 2026-11-28 조사 이력 — RUN-20261128-1001-KST
+외부 16개 URL 대조, 신규 0개. 공식 순위 미확인.
+
+- https://github.com/cathrynlavery/diagram-design | 2026-11-28 | README 확인; MIT LICENSE 확인; HEAD 795eec47fd376e5dda0b9e056a49520060cd2f13; 릴리스 NOT_RUN
+- https://github.com/HKUDS/CLI-Anything | 2026-11-28 | README 확인; Apache-2.0 LICENSE 확인; HEAD 34f519533bc175d2fe287ab8316b0dd99bb9cc43; 릴리스 NOT_RUN
+- https://github.com/zhouxiaoka/autoclip | 2026-11-28 | README 확인; MIT LICENSE 확인; HEAD d840e67d2ce43b18c7a31e238bf18e105fe4e69a; 릴리스 NOT_RUN
+기존 기록 보존.
